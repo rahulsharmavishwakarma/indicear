@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint, lock and generated files
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - name: Lockfile matches pyproject.toml
+        run: uv lock --check
+      - name: Ruff
+        run: uv run --locked --only-group lint ruff check .
+      - name: Notebooks and Colab requirements are regenerated from source
+        run: |
+          uv run --no-project python notebooks/make_notebooks.py
+          uv export --locked --no-dev --no-hashes --no-emit-project --format requirements-txt -o requirements-colab.txt
+          git diff --exit-code -- notebooks requirements-colab.txt
+
+  test:
+    # macOS: CPU/MPS torch wheels are small; the Linux wheels pull several GB of CUDA libraries.
+    # The suite runs on the training interpreter (free-threaded 3.14t, .python-version) without network.
+    name: Tests (3.14t)
+    runs-on: macos-latest
+    timeout-minutes: 30
+    env:
+      HF_HUB_OFFLINE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run --locked pytest -q
+
+  package:
+    name: Wheel on Python ${{ matrix.python }}
+    runs-on: macos-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
+      - run: uv build
+      - run: uvx twine@7.0.0 check --strict dist/*
+      - name: Install the wheel in a clean environment and run the CLIs
+        run: |
+          uv venv --python ${{ matrix.python }} "$RUNNER_TEMP/clean"
+          uv pip install --python "$RUNNER_TEMP/clean" dist/*.whl
+          "$RUNNER_TEMP/clean/bin/indicear-transcribe" --help
+          "$RUNNER_TEMP/clean/bin/indicear-export" --help
+          "$RUNNER_TEMP/clean/bin/indicear-decode" --help

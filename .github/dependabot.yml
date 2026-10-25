@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # Python dependencies are pinned to the versions the released results were produced with
+  # (uv.lock); they are updated deliberately, not by bot.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
