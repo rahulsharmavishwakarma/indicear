@@ -107,7 +107,10 @@ def test_export_verify_transcribe_round_trip_with_lid(tmp_path, tiny_tower, tok_
     assert manifest["languages"] == ["en", "hi", "kn", "ta"]  # the pilot mixture's languages
     files = set(manifest["files"])
     assert {"heads.safetensors", "adapters.safetensors", "variant.json", "lid.json", "README.md",
-            "tokenizer/aggregate.json", "training/result.json", "training/command.sh"} <= files
+            "tokenizer/aggregate.json", "training/result.json", "training/command.sh", "LICENSE", "NOTICE"} <= files
+    command = (out / "training" / "command.sh").read_text()
+    assert command.startswith("#!/usr/bin/env bash\n# Historical record") and command.endswith("ablate --root R train\n")
+    assert (out / "NOTICE").read_text().startswith("IndicEAR")
     assert not any(name.endswith(".pt") for name in files)
     card = (out / "README.md").read_text()
     for needle in ("Reverberation", "Hindi and Urdu", "Apache-2.0", "data-licenses.md", "| hi | 12.5 | 30.1 |"):

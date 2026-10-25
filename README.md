@@ -47,7 +47,7 @@ with Transcriber("rahulsharmavishwakarma/vesper-indicEAR") as model:
     print(result["text"], result["language"]["top"])
 ```
 
-The model package (627 MiB) includes the encoder's audio tower, byte-identical to Google's checkpoint, so nothing else is downloaded. Device `auto` picks CUDA, then Apple MPS, then the CPU.
+The model package (627 MiB) includes the encoder's audio tower with its tensor values unchanged from Google's checkpoint, so nothing else is downloaded. Device `auto` picks CUDA, then Apple MPS, then the CPU.
 
 ## Train
 
@@ -85,4 +85,4 @@ The project was called Sangam until 25 October 2026; run logs and records under 
 
 ## Licence
 
-Code and trained weights: [Apache-2.0](LICENSE). The bundled EmbeddingGemma 2 audio tower is Google's, under Apache-2.0, unchanged. Figures use Bricolage Grotesque (SIL Open Font License, `docs/figures/fonts/`). Training data are CC BY (2.0–4.0) and CC0 sources; see [NOTICE](NOTICE) and [docs/data-licenses.md](docs/data-licenses.md).
+Code and trained weights: [Apache-2.0](LICENSE). The bundled EmbeddingGemma 2 audio tower is Google's, under Apache-2.0: its tensors are extracted from the checkpoint with values unchanged (see [NOTICE](NOTICE)). Figures use Bricolage Grotesque (SIL Open Font License, `docs/figures/fonts/`). Training data are CC BY (2.0–4.0) and CC0 sources; see [NOTICE](NOTICE) and [docs/data-licenses.md](docs/data-licenses.md).

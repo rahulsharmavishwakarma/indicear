@@ -21,11 +21,13 @@ The package (`FORMAT`):
     variant.json, lid.json the model configuration (lid.json only with LID heads)
     tokenizer/             aggregate.json + one SentencePiece model per script
     training/              result.json, config.json (trainer config, hash, git) and command.sh
-                           when the run has them
+                           (with a historical-record header) when the run has them
+    LICENSE, NOTICE        Apache-2.0 and the attribution notice, from the IndicEAR distribution
 
-    encoder/               optional (`--with-encoder`): the pinned EmbeddingGemma 2 audio tower,
-                           extracted with every tensor byte-identical (config.json, model.safetensors,
-                           preprocessor_config.json; Apache-2.0); no text or vision weights
+    encoder/               optional (`--with-encoder`): the pinned EmbeddingGemma 2 audio tower
+                           (config.json, model.safetensors, preprocessor_config.json; Apache-2.0):
+                           every audio_tower tensor with values unchanged, keys without the
+                           "audio_tower." prefix; nothing else from the checkpoint
 
 No checkpoint or optimizer state is copied. Without `encoder/`, only the audio tower of the full
 pinned EmbeddingGemma 2 checkpoint is used, downloaded at load time and never modified.
@@ -72,6 +74,12 @@ ENCODER_LICENSE = "Apache-2.0"
 LICENSE_ID = "apache-2.0"
 WINDOW_SECONDS = 30.0  # the Gemma 4 feature extractor's max_length (480 000 samples)
 FORBIDDEN_SUFFIXES = (".pt", ".pth", ".ckpt", ".bin")
+LICENSE_FILES = ("LICENSE", "NOTICE")  # Apache-2.0 4(a)/(d): the licence and notices travel with the weights
+HISTORICAL_HEADER = (
+    "# Historical record: the command this run was launched with, kept unchanged below. The project was\n"
+    "# then called Sangam (module `sangam`, now `indicear`) and the paths are the original training VM's.\n"
+    "# To reproduce the run, use the commands in docs/training-recipe.md of the IndicEAR repository.\n"
+)
 
 
 # ---------------------------------------------------------------- model construction
@@ -390,7 +398,9 @@ def export(run: str | Path, tok: str | Path, out: str | Path, checkpoint: str | 
                 {"config": provenance["config"], "config_hash": provenance["config_hash"], "git": provenance["git"]},
                 indent=2, default=str), encoding="utf-8")
         if (run / "command.sh").is_file():
-            shutil.copyfile(run / "command.sh", training_dir / "command.sh")
+            (training_dir / "command.sh").write_text(_historical_command(run / "command.sh"), encoding="utf-8")
+        for name in LICENSE_FILES:
+            shutil.copyfile(_license_file(name), staging / name)
         mixture = mixture_info(result)
         name = run.name
         variant_name = variant.name + ("+lid" if lid_config is not None and not lid_config.only else "")
@@ -436,8 +446,9 @@ def export(run: str | Path, tok: str | Path, out: str | Path, checkpoint: str | 
             _stage_encoder(staging / ENCODER_DIR)
             manifest["encoder"]["bundled"] = ENCODER_DIR
             manifest["encoder"]["note"] = ("Only the audio tower of the pinned checkpoint is used, never modified. "
-                                           f"It is included in {ENCODER_DIR}/ with every tensor byte-identical to "
-                                           "the checkpoint; the text and vision weights are not.")
+                                           f"{ENCODER_DIR}/ holds every audio_tower tensor of the checkpoint with its "
+                                           "values unchanged and the 'audio_tower.' key prefix removed; the rest of "
+                                           "the checkpoint is not included.")
         if model_name:
             manifest["name"] = model_name
         held_out_text = Path(held_out).expanduser().read_text(encoding="utf-8") if held_out else None
@@ -471,6 +482,30 @@ def export(run: str | Path, tok: str | Path, out: str | Path, checkpoint: str | 
         shutil.rmtree(staging, ignore_errors=True)
         raise
     return manifest
+
+
+def _historical_command(path: Path) -> str:
+    """A run's command.sh with a header: it records the run as it was launched, under the project's
+    former name (Sangam) and the original VM's paths, so it is not meant to be rerun as is."""
+    lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+    shebang = lines.pop(0) if lines and lines[0].startswith("#!") else ""
+    return shebang + HISTORICAL_HEADER + "".join(lines)
+
+
+def _license_file(name: str) -> Path:
+    """LICENSE or NOTICE: from the source checkout, or from the installed wheel's metadata."""
+    source = Path(__file__).resolve().parents[1] / name
+    if source.is_file():
+        return source
+    from importlib.metadata import PackageNotFoundError, distribution
+
+    try:
+        for file in distribution("indicear").files or []:
+            if file.name == name and "licenses" in file.parts:
+                return Path(file.locate())
+    except PackageNotFoundError:
+        pass
+    raise SystemExit(f"{name} not found next to the indicear sources or in its installed metadata")
 
 
 def _lid_langs() -> tuple[str, ...]:
@@ -713,7 +748,7 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--force", action="store_true", help="replace an existing package at --out")
     parser.add_argument("--verify", type=Path, metavar="PACKAGE", help="verify a package's file hashes and exit")
     parser.add_argument("--with-encoder", action="store_true",
-                        help="include the pinned audio tower as encoder/ (about 582 MiB, byte-identical)")
+                        help="include the pinned audio tower as encoder/ (about 582 MiB, tensor values unchanged)")
     parser.add_argument("--held-out", type=Path, metavar="MD", help="Markdown of held-out results for the model card")
     parser.add_argument("--name", help="model name in the manifest (default: the variant)")
     parser.add_argument("--card", type=Path, metavar="MD", help="Markdown body of the model card (front matter is generated)")

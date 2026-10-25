@@ -6,8 +6,12 @@ Licensed under the Apache License, Version 2.0 (see LICENSE).
 This project uses, unmodified, the audio encoder of EmbeddingGemma 2
 (google/embeddinggemma-2, revision 914f7f89142e33e77833254d9c9b90c3cef7303b),
 Copyright Google LLC, licensed under the Apache License, Version 2.0. The released
-model weights include a copy of that audio encoder's weights, extracted without
-modification; the text and vision parts of EmbeddingGemma 2 are not included.
+model package includes that audio encoder in encoder/model.safetensors: every
+audio_tower tensor of the checkpoint, with its values unchanged and the "audio_tower."
+prefix removed from its name. The rest of the checkpoint (the text and vision parts
+and the audio embedding projection) is not included. Google's model card asks that
+deployments adhere to the Gemma Prohibited Use Policy
+(https://ai.google.dev/gemma/prohibited_use_policy).
 
 indicear/resources/english_words.tsv is derived from SCOWL (Spell Checker Oriented
 Word Lists); its copyright notice and licence are in

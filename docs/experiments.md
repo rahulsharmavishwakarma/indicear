@@ -61,6 +61,6 @@ About 55 Colab units for the pilot (A100 High-RAM at 6.77 units/h), plus about 2
 
 ## Release
 
-- **Model:** [`rahulsharmavishwakarma/vesper-indicEAR`](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR): the trained adapters, heads and tokenizers (45.2 MiB), the EmbeddingGemma 2 audio tower bundled unchanged (Apache-2.0, every tensor byte-identical to Google's checkpoint), and a sha256 manifest of every file (`indicear-export --verify`).
+- **Model:** [`rahulsharmavishwakarma/vesper-indicEAR`](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR): the trained adapters, heads and tokenizers (45.2 MiB), the EmbeddingGemma 2 audio tower bundled with its tensor values unchanged (Apache-2.0; extracted from Google's checkpoint, keys without the `audio_tower.` prefix), LICENSE and NOTICE, and a sha256 manifest of every file (`indicear-export --verify`).
 - **Benchmark:** [`rahulsharmavishwakarma/vesper-indic-bench`](https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench): per-clip transcripts and scores of every system on identical clips.
 - **Data licences** per source: `docs/data-licenses.md`. MUCS (CC BY-SA) is eval-only, and no non-commercial data was used.
