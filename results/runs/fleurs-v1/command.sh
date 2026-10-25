@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Historical record: the command this run was launched with, kept unchanged below. The project was
+# then called Sangam (module `sangam`, now `indicear`) and the paths are the original training VM's.
+# To reproduce the run, use the commands in docs/training-recipe.md of the IndicEAR repository.
 # Original command for run v1; written by sangam.ablate. Safe to rerun: every step resumes.
 set -euo pipefail
 export CODE=/content/sangam-asr/train

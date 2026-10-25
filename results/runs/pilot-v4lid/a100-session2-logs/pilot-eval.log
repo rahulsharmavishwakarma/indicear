@@ -1,45 +1,0 @@
-ready: /content/pilot/pilot/train.DONE
-pilot eval: started 2026-10-24 10:56:19
-[10:56:21] python 3.14.8, GIL off, torch threads 6
-[10:56:22] eval sets: fleurs_dev (1314), indiccontext_hi (2913), indiccontext_hi_code_mixed (1822), indicvoices_valid_hi (4986), indicvoices_valid_kn (3594), indicvoices_valid_ta (4801), kathbath_clean_test_known_hi (2521), kathbath_clean_test_known_kn (1505), kathbath_clean_test_known_ta (2242), kathbath_clean_test_unknown_hi (1881), kathbath_clean_test_unknown_kn (1218), kathbath_clean_test_unknown_ta (1454), kathbath_noisy_test_known_hi (2322), kathbath_noisy_test_known_kn (1313), kathbath_noisy_test_known_ta (2168), kathbath_noisy_test_unknown_hi (783), kathbath_noisy_test_unknown_kn (1418), kathbath_noisy_test_unknown_ta (1096), librispeech_test_clean (2528), librispeech_test_other (2893), mucs_test_hi (3099), svarah (6117), vaani_test_en (2658), vaani_test_hi (2542), vaani_test_kn (1462), vaani_test_ta (2960), voxpopuli_accented (1905), voxpopuli_test (1671), cs_dev (400), neg_dev (100), robust_noise_10 (400), robust_noise_5 (400), robust_babble_10 (400), robust_reverb_0.6 (400), robust_reverb_0.9 (400), robust_reverb_0.6+pointnoise_10 (400)
-Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]Loading weights:  43%|████▎     | 593/1376 [00:00<00:00, 5827.06it/s]Loading weights:  85%|████████▌ | 1176/1376 [00:00<00:00, 1522.00it/s]Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 1484.00it/s]
-[10:58:15] features: GPU log-mel vs Hugging Face extractor on the first batch max |diff| = 4.77e-07, mask equal
-[10:58:36] fleurs_dev: v4+lid in 25 s
-[10:59:04] indiccontext_hi: v4+lid in 27 s
-[10:59:21] indiccontext_hi_code_mixed: v4+lid in 18 s
-[10:59:53] indicvoices_valid_hi: v4+lid in 31 s
-[11:00:26] indicvoices_valid_kn: v4+lid in 34 s
-[11:01:09] indicvoices_valid_ta: v4+lid in 43 s
-[11:01:22] kathbath_clean_test_known_hi: v4+lid in 13 s
-[11:01:37] kathbath_clean_test_known_kn: v4+lid in 15 s
-[11:01:56] kathbath_clean_test_known_ta: v4+lid in 19 s
-[11:02:06] kathbath_clean_test_unknown_hi: v4+lid in 10 s
-[11:02:18] kathbath_clean_test_unknown_kn: v4+lid in 12 s
-[11:02:30] kathbath_clean_test_unknown_ta: v4+lid in 13 s
-[11:02:43] kathbath_noisy_test_known_hi: v4+lid in 12 s
-[11:02:55] kathbath_noisy_test_known_kn: v4+lid in 13 s
-[11:03:15] kathbath_noisy_test_known_ta: v4+lid in 20 s
-[11:03:19] kathbath_noisy_test_unknown_hi: v4+lid in 4 s
-[11:03:33] kathbath_noisy_test_unknown_kn: v4+lid in 14 s
-[11:03:43] kathbath_noisy_test_unknown_ta: v4+lid in 10 s
-[11:03:59] librispeech_test_clean: v4+lid in 16 s
-[11:04:16] librispeech_test_other: v4+lid in 17 s
-[11:04:33] mucs_test_hi: v4+lid in 17 s
-[11:05:02] svarah: v4+lid in 29 s
-[11:05:12] vaani_test_en: v4+lid in 10 s
-[11:05:24] vaani_test_hi: v4+lid in 12 s
-[11:05:39] vaani_test_kn: v4+lid in 15 s
-[11:05:56] vaani_test_ta: v4+lid in 17 s
-[11:06:11] voxpopuli_accented: v4+lid in 15 s
-[11:06:23] voxpopuli_test: v4+lid in 12 s
-[11:06:28] cs_dev: v4+lid in 5 s
-[11:06:29] neg_dev: v4+lid in 1 s
-[11:06:34] robust_noise_10: v4+lid in 6 s
-[11:06:40] robust_noise_5: v4+lid in 5 s
-[11:06:44] robust_babble_10: v4+lid in 5 s
-[11:06:49] robust_reverb_0.6: v4+lid in 4 s
-[11:06:53] robust_reverb_0.9: v4+lid in 5 s
-[11:06:59] robust_reverb_0.6+pointnoise_10: v4+lid in 6 s
-[11:06:59] GPU utilization: mean 34%, at or above 80% for 15% of 105 samples, peak memory 10818 MiB
-[11:06:59] results/eval_summary.md: 67 rows
-pilot eval: DONE
