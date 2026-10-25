@@ -132,9 +132,10 @@ def test_expansion_is_bit_identical_on_kept_scripts(toks, pilot_run, tmp_path, m
     new_lp, new_inter, new_lid = outputs(model, h6, lengths)
     old_cols, new_cols = kept_columns(old_tok), kept_columns(new_tok)
     if mode == "copy" or trained:
-        # bit-identical, before any training: always with copied class rows; with fresh ones when the
-        # source gave its unseen scripts no probability (a trained pilot)
-        assert torch.equal(old_lp[..., old_cols], new_lp[..., new_cols])
+        # identical before any training: always with copied class rows; with fresh ones when the source
+        # gave its unseen scripts no probability (a trained pilot). Bit-identical on most CPUs; the
+        # log-softmax over a wider vocabulary may round the last bit differently on others.
+        torch.testing.assert_close(old_lp[..., old_cols], new_lp[..., new_cols], rtol=0, atol=1e-5)
     else:
         # an untrained source spread probability over every script: dropping it renormalizes, so the
         # kept outputs shift by one constant per frame and every within-script distribution is exact

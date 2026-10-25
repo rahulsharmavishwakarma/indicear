@@ -41,6 +41,7 @@ jobs:
     timeout-minutes: 30
     env:
       HF_HUB_OFFLINE: "1"
+      INDICEAR_TEST_SKIP_MPS: "1"  # the runner's virtual GPU reports MPS but computes wrong values
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:

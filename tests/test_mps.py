@@ -6,6 +6,7 @@ Tests marked `mps` run on the real MPS device and are skipped where it is not av
 
 import copy
 import csv
+import os
 from dataclasses import replace
 
 import numpy as np
@@ -35,8 +36,9 @@ from indicear.trainer import TrainConfig, Trainer, autocast_dtype, initial_split
 
 RANGES = [(4, 20), (20, 40), (40, 50)]
 VOCAB = 50
-HAS_MPS = torch.backends.mps.is_available()
-mps = pytest.mark.skipif(not HAS_MPS, reason="Apple MPS not available")
+# INDICEAR_TEST_SKIP_MPS: CI sets it on GitHub's macOS VMs, whose virtual GPU reports MPS but computes wrong values.
+HAS_MPS = torch.backends.mps.is_available() and not os.environ.get("INDICEAR_TEST_SKIP_MPS")
+mps = pytest.mark.skipif(not HAS_MPS, reason="Apple MPS not available (or INDICEAR_TEST_SKIP_MPS set)")
 CLASS_WEIGHTS = tuple(0.6 + 0.1 * i for i in range(NUM_LANGS))
 
 

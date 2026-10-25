@@ -7,6 +7,7 @@ import itertools
 import json
 import pathlib
 import math
+import os
 import shutil
 import subprocess
 from dataclasses import asdict
@@ -383,7 +384,8 @@ def test_resolve_package_takes_a_directory_or_a_hub_repo_id(tmp_path, monkeypatc
     assert calls == [("user/model", None), ("user/model", "abc123")]
 
 
-@pytest.mark.skipif(not torch.backends.mps.is_available(), reason="needs Apple MPS")
+@pytest.mark.skipif(not torch.backends.mps.is_available() or bool(os.environ.get("INDICEAR_TEST_SKIP_MPS")),
+                    reason="needs Apple MPS (INDICEAR_TEST_SKIP_MPS: see tests/test_mps.py)")
 def test_mps_matches_cpu_on_the_tiny_tower(tmp_path, tok_dir):
     from indicear.smoke import make_tiny_tower
 

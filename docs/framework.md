@@ -574,7 +574,7 @@ Every report states which definition it uses.
 
 - **Full warm-started run** (tests/test_warmstart.py, test_full_warm.py, test_loanwords.py, the new cases in test_gpu_augment.py):
   - `AggregateTokenizer.extend` keeps the kept scripts' models byte for byte and the script order;
-  - head expansion: blank and kept-script log-probabilities, the phonetic heads and the LID heads are bit-identical after expansion (copied class rows; fresh ones for a source that gives the new scripts no probability), and within-script distributions are exact otherwise; fresh rows get gradient; checkpoint sources; the structure check; a resumed warm-started run needs only its record;
+  - head expansion: blank and kept-script log-probabilities, the phonetic heads and the LID heads are identical after expansion (bit-identical on most CPUs, within 1e-5 on others; copied class rows; fresh ones for a source that gives the new scripts no probability), and within-script distributions are exact otherwise; fresh rows get gradient; checkpoint sources; the structure check; a resumed warm-started run needs only its record;
   - `RowLr` equals a separate parameter at 3× the LR over five AdamW steps; the optimizer groups, the warmup peak and the cosine floor; unchanged config hashes for the old options (the pilot's checkpoint still hashes to `34ad89478fc81611`);
   - the `full_warm` mixture: licence-verified training sources, the eval sets per language, row draws matching the pinned shares (±0.6 points), the Kathbath weight, the processed-hours targets, disjoint code-mixed pools, and the pilot's stream weights unchanged;
   - loanword rewrites in training rows (native form kept in `refs`) and eval rows (rewrite as the alternative), only for the named sources;
