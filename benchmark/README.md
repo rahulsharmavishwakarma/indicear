@@ -4,7 +4,7 @@ Scripts that build **Vesper Indic Bench** (every system's per-clip transcripts o
 
 | File | What it does |
 |---|---|
-| `build_bench.py` | Builds the dataset: `data/clips.jsonl`, `data/transcripts.jsonl`, `summary.json` from the evaluation outputs. No audio; clips are referenced by source, revision and id. |
+| `build_bench.py` | Builds the dataset: `data/clips.parquet`, `data/transcripts.parquet`, `data/vesper_asr_benchmark_slice.parquet` and `summary.json` from the evaluation outputs. No audio; clips are referenced by source, revision and id. |
 | `vesper_slice.py` | Writes eval manifests for the clips of [Vesper's ASR benchmark](https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-asr-benchmark) that the model covers (FLEURS Hindi and US English, Svarah, MUCS). |
 | `score_vesper.py` | Scores Vesper-IndicEAR and every Vesper speech model on those clips with one scorer; writes `results/vesper-benchmark/`. |
 | `fill_tables.py` | Fills the result tables of the dataset card from the evaluation outputs. |

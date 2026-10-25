@@ -12,6 +12,8 @@ import argparse
 import json
 from pathlib import Path
 
+import pyarrow.parquet as pq
+
 FAMILIES = [
     ("kathbath_clean_test_unknown", "Kathbath clean, unseen speakers"),
     ("kathbath_clean_test_known", "Kathbath clean, test-known speakers"),
@@ -150,14 +152,15 @@ def main() -> None:
         report = put(report, "HELDOUT_TABLE", "\n".join(heldout))
         report = put(report, "VESPER_SECTION", "\n".join(vesper_section(args.vesper)))
         args.report.write_text(report, encoding="utf-8")
-    clips = [json.loads(line) for line in (args.bench_dir / "data" / "clips.jsonl").read_text(encoding="utf-8").splitlines()]
-    transcripts = sum(1 for _ in (args.bench_dir / "data" / "transcripts.jsonl").open(encoding="utf-8"))
-    slice_path = args.bench_dir / "data" / "vesper_asr_benchmark_slice.jsonl"
+    data = args.bench_dir / "data"
+    clips = pq.read_table(data / "clips.parquet", columns=["set", "seconds"]).to_pylist()
+    transcripts = pq.read_metadata(data / "transcripts.parquet").num_rows
+    slice_path = data / "vesper_asr_benchmark_slice.parquet"
     card = put(args.card.read_text(encoding="utf-8"), "RESULTS", "\n".join(heldout[:len(heldout) - len(language_tables(args.results))]))
     args.card.write_text(card, encoding="utf-8")
     counts = {"{{SETS}}": str(len({c["set"] for c in clips})), "{{CLIPS}}": f"{len(clips):,}",
               "{{HOURS}}": f"{sum(c['seconds'] for c in clips) / 3600:.1f}", "{{TRANSCRIPTS}}": f"{transcripts:,}",
-              "{{SLICE}}": f"{sum(1 for _ in slice_path.open()) if slice_path.exists() else 0:,}"}
+              "{{SLICE}}": f"{pq.read_metadata(slice_path).num_rows if slice_path.exists() else 0:,}"}
     for key, val in counts.items():
         card = card.replace(key, val)
     args.out.mkdir(parents=True, exist_ok=True)

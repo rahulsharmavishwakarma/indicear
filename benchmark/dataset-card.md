@@ -29,15 +29,15 @@ configs:
   default: true
   data_files:
   - split: test
-    path: data/clips.jsonl
+    path: data/clips.parquet
 - config_name: transcripts
   data_files:
   - split: test
-    path: data/transcripts.jsonl
+    path: data/transcripts.parquet
 - config_name: vesper_asr_benchmark_slice
   data_files:
   - split: test
-    path: data/vesper_asr_benchmark_slice.jsonl
+    path: data/vesper_asr_benchmark_slice.parquet
 ---
 
 <p align="center">
@@ -88,14 +88,14 @@ Over 65 (set, language) pairs, Vesper-IndicEAR is lower than the better of the t
 
 | File | Rows | Contents |
 |---|---:|---|
-| `data/clips.jsonl` | {{CLIPS}} | one row per (set, clip) |
-| `data/transcripts.jsonl` | {{TRANSCRIPTS}} | one row per (set, clip, system) |
-| `data/vesper_asr_benchmark_slice.jsonl` | {{SLICE}} | Vesper-IndicEAR on the clips of Vesper's [ASR benchmark](https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-asr-benchmark) it covers, keyed by that dataset's `sample_id` |
+| `data/clips.parquet` | {{CLIPS}} | one row per (set, clip) |
+| `data/transcripts.parquet` | {{TRANSCRIPTS}} | one row per (set, clip, system) |
+| `data/vesper_asr_benchmark_slice.parquet` | {{SLICE}} | Vesper-IndicEAR on the clips of Vesper's [ASR benchmark](https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-asr-benchmark) it covers, keyed by that dataset's `sample_id` |
 | `summary.json` | | per system, set and language: CER, WER and their script-normalised forms |
 
-**`clips.jsonl`:** `set`, `key` (source / language / split / id), `lang`, `source`, `source_repo`, `source_revision`, `source_licence`, `split`, `seconds`, `audio_sha1`, `code_mixed`, `reference`, `reference_alternatives` (the same sentence with English words in native script, where the source provides one), `reference_withheld` (why the reference is not published).
+**`clips.parquet`:** `set`, `key` (source / language / split / id), `lang`, `source`, `source_repo`, `source_revision`, `source_licence`, `split`, `seconds`, `audio_sha1`, `code_mixed`, `reference`, `reference_alternatives` (the same sentence with English words in native script, where the source provides one), `reference_withheld` (why the reference is not published).
 
-**`transcripts.jsonl`:** `set`, `key`, `lang`, `system`, `hypothesis`, `detected_language` (Vesper-IndicEAR only), `cer`, `wer`, `cer_script_normalised` (per clip, in %).
+**`transcripts.parquet`:** `set`, `key`, `lang`, `system`, `hypothesis`, `detected_language` (Vesper-IndicEAR only), `cer`, `wer`, `cer_script_normalised` (per clip, in %).
 
 ## Metrics
 
