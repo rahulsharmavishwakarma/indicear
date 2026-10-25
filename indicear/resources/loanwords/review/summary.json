@@ -1,0 +1,95 @@
+{
+ "review_state_fingerprint": "760402c230f697b0d7d5902e536f2c821cd5bd3d0f57556f79a1542e9451f41c",
+ "review_state": "lexicon.json + params.json as shipped, before allow.json and block.json (which hold the fixes for the errors found here)",
+ "text": "Kathbath train split, text column, a few shards per language (ai4bharat/Kathbath@5b9e9284)",
+ "langs": {
+  "bn": {
+   "words": 69132,
+   "rewrites": 1725,
+   "per_1000_words": 24.95,
+   "types": 425,
+   "sampled": 100,
+   "precision": 100.0
+  },
+  "gu": {
+   "words": 81629,
+   "rewrites": 1298,
+   "per_1000_words": 15.9,
+   "types": 521,
+   "sampled": 100,
+   "precision": 98.0
+  },
+  "hi": {
+   "words": 268266,
+   "rewrites": 7125,
+   "per_1000_words": 26.56,
+   "types": 949,
+   "sampled": 100,
+   "precision": 99.0
+  },
+  "kn": {
+   "words": 112250,
+   "rewrites": 1601,
+   "per_1000_words": 14.26,
+   "types": 486,
+   "sampled": 100,
+   "precision": 100.0
+  },
+  "ml": {
+   "words": 44626,
+   "rewrites": 1080,
+   "per_1000_words": 24.2,
+   "types": 403,
+   "sampled": 100,
+   "precision": 99.0
+  },
+  "mr": {
+   "words": 73555,
+   "rewrites": 849,
+   "per_1000_words": 11.54,
+   "types": 372,
+   "sampled": 100,
+   "precision": 98.0
+  },
+  "or": {
+   "words": 79995,
+   "rewrites": 1554,
+   "per_1000_words": 19.43,
+   "types": 424,
+   "sampled": 100,
+   "precision": 100.0
+  },
+  "pa": {
+   "words": 95575,
+   "rewrites": 3202,
+   "per_1000_words": 33.5,
+   "types": 694,
+   "sampled": 100,
+   "precision": 99.0
+  },
+  "ta": {
+   "words": 153319,
+   "rewrites": 1253,
+   "per_1000_words": 8.17,
+   "types": 373,
+   "sampled": 100,
+   "precision": 100.0
+  },
+  "te": {
+   "words": 69452,
+   "rewrites": 2448,
+   "per_1000_words": 35.25,
+   "types": 770,
+   "sampled": 100,
+   "precision": 99.0
+  },
+  "ur": {
+   "words": 97176,
+   "rewrites": 2993,
+   "per_1000_words": 30.8,
+   "types": 551,
+   "sampled": 100,
+   "precision": 97.0
+  }
+ }
+}

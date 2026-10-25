@@ -1,0 +1,98 @@
+{
+  "en": {
+    "wer": 29.2,
+    "cer": 11.94,
+    "utterances": 300,
+    "words": 5432,
+    "script_error_rate": 0.0,
+    "wer_script_normalised": 29.2,
+    "cer_script_normalised": 11.94,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.538
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "en": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "en": {
+        "en": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 7,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 150,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 85,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 58,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "librispeech_test_other",
+  "utterances": 300,
+  "hours": 0.54,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

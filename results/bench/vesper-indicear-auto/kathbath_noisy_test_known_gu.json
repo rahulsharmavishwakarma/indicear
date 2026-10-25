@@ -1,0 +1,133 @@
+{
+  "gu": {
+    "wer": 58.58,
+    "cer": 32.26,
+    "utterances": 300,
+    "words": 3573,
+    "script_error_rate": 11.84,
+    "wer_script_normalised": 57.74,
+    "cer_script_normalised": 30.64,
+    "rows_with_alternative_ref": 44,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.518
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "gu": {
+        "gu": 299,
+        "mr": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 79,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 215,
+        "accuracy": 99.53
+      },
+      "10-20s": {
+        "utterances": 6,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_gu",
+  "utterances": 300,
+  "hours": 0.52,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 291,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/gu/noisy_test_known/844424930608449-757-m",
+      "constrained": "aaપારીઓ અને ખરીદદારો ઓછા પ્રમાણમાં આવતા પતંગ ઉત્પાનમાં break વાગી છે",
+      "unconstrained": "परరంతు यावर सेवे व्यापरियों અને ખરીદદારો ઓછા પ્રમાણમાં આવતા પતંગ ઉત્પાનમાં break વાગી છે",
+      "hinted": "aaપારીઓ અને ખરીદદારો ઓછા પ્રમાણમાં આવતા પતંગ ઉત્પાનમાં break વાગી છે"
+    },
+    {
+      "key": "kathbath_test/gu/noisy_test_known/844424930298753-332-f",
+      "constrained": "આ લાોડાનમાં સુઈ રહેલા માણસો ગોડાાઉનમાંથી બહાર નીકળી ગયા હતા",
+      "unconstrained": "आ लागताজ গোડાનમાં સુઈ રહેલા માણસો ગોડાાઉનમાંથી બહાર નીકળી ગયા હતા",
+      "hinted": "આ લાોડાનમાં સુઈ રહેલા માણસો ગોડાાઉનમાંથી બહાર નીકળી ગયા હતા"
+    },
+    {
+      "key": "kathbath_test/gu/noisy_test_known/844424933317672-597-m",
+      "constrained": "a ગામ લોકો મુખ્ય્યવસાયેતી ખેત મજૂરી તેમજ જ પશુપાલન છે",
+      "unconstrained": "আলம்பपुर গামना લોકો মুখ્યવસાયેતી ખેત મજૂરી તેમજ જ પશુપાલન છે",
+      "hinted": "a ગામ લોકો મુખ્ય્યવસાયેતી ખેત મજૂરી તેમજ જ પશુપાલન છે"
+    },
+    {
+      "key": "kathbath_test/gu/noisy_test_known/844424931323526-856-f",
+      "constrained": "ro સૌથી સામાન્ય કારણ શામ માટે નખ ભૂરે છે",
+      "unconstrained": "੍ਰੋਮਾ સૌથી સામાન્ય કારણ શામ માટે નખ ભૂરે છે",
+      "hinted": "ro સૌથી સામાન્ય કારણ શામ માટે નખ ભૂરે છે"
+    },
+    {
+      "key": "kathbath_test/gu/noisy_test_known/844424930850139-1140-f",
+      "constrained": "n court આ મા તમામ પક્ષસોને notice પણ ફટકારકાર હતી",
+      "unconstrained": "ਆ ఉਾਂਟ courtटे आ मामलेले તમામ પક્ષસોને notice પણ ફટકારકાર હતી",
+      "hinted": "n court આ મા તમામ પક્ષસોને notice પણ ફટકારકાર હતી"
+    }
+  ]
+}

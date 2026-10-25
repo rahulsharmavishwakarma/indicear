@@ -1,0 +1,134 @@
+{
+  "gu": {
+    "wer": 56.9,
+    "cer": 33.64,
+    "utterances": 300,
+    "words": 3487,
+    "script_error_rate": 13.48,
+    "wer_script_normalised": 55.81,
+    "cer_script_normalised": 32.17,
+    "rows_with_alternative_ref": 51,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.538
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 98.0,
+    "macro_f1": 98.99,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 98.0,
+        "f1": 98.99,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "gu": {
+        "gu": 294,
+        "hi": 3,
+        "mr": 3
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 49,
+        "accuracy": 91.84
+      },
+      "5-10s": {
+        "utterances": 240,
+        "accuracy": 99.17
+      },
+      "10-20s": {
+        "utterances": 11,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_gu",
+  "utterances": 300,
+  "hours": 0.54,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 285,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/gu/clean_test_unknown/844424930317780-642-f",
+      "constrained": "અનેરણિશ્ર થતોને શોભાારીના કૃતિ ઉત્પાદન જ ઉો છે",
+      "unconstrained": "ਏ्रहकमाल અનેરણિશ્ર થતોને શોભાારીના કૃતિ ઉત્પાદન જ ઉો છે",
+      "hinted": "અનેરણિશ્ર થતોને શોભાારીના કૃતિ ઉત્પાદન જ ઉો છે"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_unknown/844424930303427-284-f",
+      "constrained": "આવી ચડતા થોડા સમય માટે ooting areaમાં o હલનો માહલ બની ગયો હતો",
+      "unconstrained": "આવી ચડતા થોડા સમય માટેooting areaમાંওয়া हल्लનો માહલ બની ગયો હતો",
+      "hinted": "આવી ચડતા થોડા સમય માટે ooting areaમાં o હલનો માહલ બની ગયો હતો"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_unknown/844424930330236-115-m",
+      "constrained": "આ ફિલ્મ ilm indian armyએ કરેલી સર્ અરજી ical strike પર આધારરિત છે",
+      "unconstrained": "ఆ ફિલ્મilm indian armyએ કરેલી સર્ અરજીical strike પર આધારરિત છે",
+      "hinted": "આ ફિલ્મ ilm indian armyએ કરેલી સર્ અરજી ical strike પર આધારરિત છે"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_unknown/844424930485607-322-f",
+      "constrained": "વાર પછી એ પ્રકાશ એકદમ તવ્ર બની ગયો અને અચાાનક એમાંથી ભગવાન પ્રગટ થ",
+      "unconstrained": "ਥੋਡ ਵਾਰ প एक પ્રકાશ એકદમ তব્ર બની ગયો અને અચાાનક એમાંથી ભગવાન પ્રગટ થ",
+      "hinted": "વાર પછી એ પ્રકાશ એકદમ તવ્ર બની ગયો અને અચાાનક એમાંથી ભગવાન પ્રગટ થ"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_unknown/844424931535424-25-m",
+      "constrained": "દે સાથે ભીલ પણ પહોંચાા હતા",
+      "unconstrained": "अजैन ग करें सनी देल સાથે ભીिલ પણ પહોંચાા હતા",
+      "hinted": "દે સાથે ભીલ પણ પહોંચાા હતા"
+    }
+  ]
+}

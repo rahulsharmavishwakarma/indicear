@@ -1,0 +1,140 @@
+{
+  "en": {
+    "wer": 30.09,
+    "cer": 16.06,
+    "utterances": 300,
+    "words": 3214,
+    "script_error_rate": 0.27,
+    "wer_script_normalised": 30.09,
+    "cer_script_normalised": 16.06,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.329
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 97.67,
+    "macro_f1": 98.82,
+    "per_lang": {
+      "en": {
+        "precision": 100.0,
+        "recall": 97.67,
+        "f1": 98.82,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "en": {
+        "bn": 1,
+        "en": 293,
+        "hi": 2,
+        "or": 2,
+        "ur": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 32,
+        "accuracy": 96.88
+      },
+      "2-5s": {
+        "utterances": 201,
+        "accuracy": 98.01
+      },
+      "5-10s": {
+        "utterances": 65,
+        "accuracy": 98.46
+      },
+      "10-20s": {
+        "utterances": 2,
+        "accuracy": 50.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_en",
+  "utterances": 300,
+  "hours": 0.33,
+  "seconds": 18,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 77,
+  "changed_examples": [
+    {
+      "key": "vaani/en/test/IISc_VaaniProject_K_ArunachalPradesh_PapumPare_PapumPare844425030219752_050_PapumPare-SPECIFIC_01365_10370_13054",
+      "constrained": "notic many lights onp",
+      "unconstrained": "ந notic many lights onp",
+      "hinted": "notic many lights onp"
+    },
+    {
+      "key": "vaani/en/test/IISc_VaaniProject_K_ArunachalPradesh_PapumPare_PapumPare844425030220086_013_PapumPare-SPECIFIC_00489_3138_6730",
+      "constrained": "on poster it a welcome to monday marketola",
+      "unconstrained": "অ poster it a welcome to monday market जोला",
+      "hinted": "on poster it a welcome to monday marketola"
+    },
+    {
+      "key": "vaani/en/test/IISc_VaaniProject_K_ArunachalPradesh_PapumPare_PapumPare844425030220086_053_PapumPare-SPECIFIC_01700_5512_9694",
+      "constrained": "on which a man wearing black coat is tping something on it",
+      "unconstrained": "और which a man wearing black coat is tping something on it",
+      "hinted": "on which a man wearing black coat is tping something on it"
+    },
+    {
+      "key": "vaani/en/test/IISc_VaaniProject_K_ArunachalPradesh_PapumPare_PapumPare844425030219752_022_GENERIC_1039_8994_11710",
+      "constrained": "bes main road i can see many wire",
+      "unconstrained": "বিসা main road i can see many wire",
+      "hinted": "bes main road i can see many wire"
+    },
+    {
+      "key": "vaani/en/test/IISc_VaaniProject_K_ArunachalPradesh_PapumPare_PapumPare844425030219752_043_PapumPare-SPECIFIC_00870_13186_17120",
+      "constrained": "sofa i one box where a b c d has been written",
+      "unconstrained": "నేను sofa i one box where a b c d has been written",
+      "hinted": "sofa i one box where a b c d has been written"
+    }
+  ]
+}

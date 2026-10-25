@@ -1,0 +1,159 @@
+2026-10-23 20:36:15 autotune: capacity 26.4 GiB (share 0.333)
+2026-10-23 20:36:17 autotune: 4000 frames -> peak 16.0% of device memory
+2026-10-23 20:36:18 autotune: 5200 frames -> peak 19.5% of device memory
+2026-10-23 20:36:19 autotune: 6760 frames -> peak 24.6% of device memory
+2026-10-23 20:36:19 autotune: 8788 frames -> peak 31.4% of device memory
+2026-10-23 20:36:21 autotune: 11424 frames -> peak 39.9% of device memory
+2026-10-23 20:36:22 autotune: 14851 frames -> peak 51.8% of device memory
+2026-10-23 20:36:24 autotune: 19306 frames -> peak 67.1% of device memory
+2026-10-23 20:36:26 autotune: 25097 frames -> peak 87.5% of device memory
+2026-10-23 20:36:29 autotune: 24226 frames -> peak 84.1% of device memory
+2026-10-23 20:36:29 autotune: fixed frame budget 24226 (84.1% peak)
+2026-10-23 20:36:29 run v2: 28110 examples, budget 24226 frames, lr 1.10e-03, 3540 steps, starting at 0, config bc75903156dcc9e8
+2026-10-23 20:36:56 torch.compile: CTCOutput compiled
+2026-10-23 20:37:45 step=25 epoch=0 loss=47.9183 ctc=47.9183 phonetic=nan rnnt=nan consistency=nan lr=9.538e-05 frames_per_s=11396 peak_gib=22.2 splits=1 elapsed_s=48
+2026-10-23 20:38:17 step=50 epoch=0 loss=19.1026 ctc=19.1026 phonetic=nan rnnt=nan consistency=nan lr=1.871e-04 frames_per_s=16993 peak_gib=22.2 splits=1 elapsed_s=80
+2026-10-23 20:38:51 step=75 epoch=0 loss=8.1323 ctc=8.1323 phonetic=nan rnnt=nan consistency=nan lr=2.788e-04 frames_per_s=14692 peak_gib=22.2 splits=1 elapsed_s=115
+2026-10-23 20:39:26 step=100 epoch=0 loss=7.5931 ctc=7.5931 phonetic=nan rnnt=nan consistency=nan lr=3.705e-04 frames_per_s=16635 peak_gib=22.2 splits=1 elapsed_s=150
+2026-10-23 20:39:51 step=125 epoch=0 loss=7.0166 ctc=7.0166 phonetic=nan rnnt=nan consistency=nan lr=4.622e-04 frames_per_s=21386 peak_gib=22.2 splits=1 elapsed_s=175
+2026-10-23 20:40:23 step=150 epoch=0 loss=5.8506 ctc=5.8506 phonetic=nan rnnt=nan consistency=nan lr=5.540e-04 frames_per_s=17119 peak_gib=22.2 splits=1 elapsed_s=207
+2026-10-23 20:40:58 step=175 epoch=0 loss=4.9751 ctc=4.9751 phonetic=nan rnnt=nan consistency=nan lr=6.457e-04 frames_per_s=16828 peak_gib=22.2 splits=1 elapsed_s=242
+2026-10-23 20:41:31 step=200 epoch=0 loss=4.3604 ctc=4.3604 phonetic=nan rnnt=nan consistency=nan lr=7.374e-04 frames_per_s=14908 peak_gib=22.2 splits=1 elapsed_s=275
+2026-10-23 20:42:06 step=225 epoch=0 loss=3.5723 ctc=3.5723 phonetic=nan rnnt=nan consistency=nan lr=8.291e-04 frames_per_s=16904 peak_gib=22.2 splits=1 elapsed_s=309
+2026-10-23 20:42:39 step=250 epoch=0 loss=3.2344 ctc=3.2344 phonetic=nan rnnt=nan consistency=nan lr=9.208e-04 frames_per_s=16957 peak_gib=22.2 splits=1 elapsed_s=343
+2026-10-23 20:43:14 step=275 epoch=0 loss=3.0208 ctc=3.0208 phonetic=nan rnnt=nan consistency=nan lr=1.013e-03 frames_per_s=17026 peak_gib=22.2 splits=1 elapsed_s=378
+2026-10-23 20:43:49 step=300 epoch=0 loss=2.8506 ctc=2.8506 phonetic=nan rnnt=nan consistency=nan lr=1.101e-03 frames_per_s=16906 peak_gib=22.2 splits=1 elapsed_s=413
+2026-10-23 20:44:19 step=325 epoch=0 loss=2.507 ctc=2.507 phonetic=nan rnnt=nan consistency=nan lr=1.100e-03 frames_per_s=18679 peak_gib=22.2 splits=1 elapsed_s=443
+2026-10-23 20:44:54 step=350 epoch=0 loss=2.5453 ctc=2.5453 phonetic=nan rnnt=nan consistency=nan lr=1.100e-03 frames_per_s=16925 peak_gib=22.2 splits=1 elapsed_s=477
+2026-10-23 20:45:27 step=375 epoch=1 loss=2.4373 ctc=2.4373 phonetic=nan rnnt=nan consistency=nan lr=1.099e-03 frames_per_s=16850 peak_gib=22.2 splits=1 elapsed_s=511
+2026-10-23 20:45:58 step=400 epoch=1 loss=2.1919 ctc=2.1919 phonetic=nan rnnt=nan consistency=nan lr=1.098e-03 frames_per_s=16879 peak_gib=22.2 splits=1 elapsed_s=542
+2026-10-23 20:46:33 step=425 epoch=1 loss=2.3017 ctc=2.3017 phonetic=nan rnnt=nan consistency=nan lr=1.097e-03 frames_per_s=16295 peak_gib=22.2 splits=1 elapsed_s=576
+2026-10-23 20:46:56 step=450 epoch=1 loss=2.1613 ctc=2.1613 phonetic=nan rnnt=nan consistency=nan lr=1.095e-03 frames_per_s=23832 peak_gib=22.2 splits=1 elapsed_s=600
+2026-10-23 20:47:30 step=475 epoch=1 loss=2.4587 ctc=2.4587 phonetic=nan rnnt=nan consistency=nan lr=1.093e-03 frames_per_s=16720 peak_gib=22.2 splits=1 elapsed_s=634
+2026-10-23 20:48:02 step=500 epoch=1 loss=2.0573 ctc=2.0573 phonetic=nan rnnt=nan consistency=nan lr=1.091e-03 frames_per_s=16822 peak_gib=22.2 splits=1 elapsed_s=666
+2026-10-23 20:48:37 step=525 epoch=1 loss=2.0283 ctc=2.0283 phonetic=nan rnnt=nan consistency=nan lr=1.088e-03 frames_per_s=16747 peak_gib=22.2 splits=1 elapsed_s=700
+2026-10-23 20:49:11 step=550 epoch=1 loss=2.1073 ctc=2.1073 phonetic=nan rnnt=nan consistency=nan lr=1.085e-03 frames_per_s=16958 peak_gib=22.2 splits=1 elapsed_s=735
+2026-10-23 20:49:43 step=575 epoch=1 loss=2.3012 ctc=2.3012 phonetic=nan rnnt=nan consistency=nan lr=1.082e-03 frames_per_s=16865 peak_gib=22.2 splits=1 elapsed_s=767
+2026-10-23 20:50:17 step=600 epoch=1 loss=1.934 ctc=1.934 phonetic=nan rnnt=nan consistency=nan lr=1.079e-03 frames_per_s=16802 peak_gib=22.2 splits=1 elapsed_s=801
+2026-10-23 20:50:49 step=625 epoch=1 loss=1.8832 ctc=1.8832 phonetic=nan rnnt=nan consistency=nan lr=1.075e-03 frames_per_s=17176 peak_gib=22.2 splits=1 elapsed_s=833
+2026-10-23 20:51:24 step=650 epoch=1 loss=2.0605 ctc=2.0605 phonetic=nan rnnt=nan consistency=nan lr=1.071e-03 frames_per_s=16773 peak_gib=22.2 splits=1 elapsed_s=867
+2026-10-23 20:51:57 step=675 epoch=1 loss=1.9023 ctc=1.9023 phonetic=nan rnnt=nan consistency=nan lr=1.066e-03 frames_per_s=16968 peak_gib=22.2 splits=1 elapsed_s=901
+2026-10-23 20:52:30 step=700 epoch=1 loss=1.9156 ctc=1.9156 phonetic=nan rnnt=nan consistency=nan lr=1.062e-03 frames_per_s=16853 peak_gib=22.2 splits=1 elapsed_s=933
+2026-10-23 20:53:03 step=725 epoch=2 loss=1.7257 ctc=1.7257 phonetic=nan rnnt=nan consistency=nan lr=1.057e-03 frames_per_s=16677 peak_gib=22.2 splits=1 elapsed_s=967
+2026-10-23 20:53:36 step=750 epoch=2 loss=1.7328 ctc=1.7328 phonetic=nan rnnt=nan consistency=nan lr=1.052e-03 frames_per_s=16938 peak_gib=22.2 splits=1 elapsed_s=999
+2026-10-23 20:54:08 step=775 epoch=2 loss=1.706 ctc=1.706 phonetic=nan rnnt=nan consistency=nan lr=1.046e-03 frames_per_s=16941 peak_gib=22.2 splits=1 elapsed_s=1032
+2026-10-23 20:54:40 step=800 epoch=2 loss=1.6894 ctc=1.6894 phonetic=nan rnnt=nan consistency=nan lr=1.040e-03 frames_per_s=16720 peak_gib=22.2 splits=1 elapsed_s=1064
+2026-10-23 20:55:14 step=825 epoch=2 loss=1.7094 ctc=1.7094 phonetic=nan rnnt=nan consistency=nan lr=1.034e-03 frames_per_s=16812 peak_gib=22.2 splits=1 elapsed_s=1098
+2026-10-23 20:55:48 step=850 epoch=2 loss=1.7214 ctc=1.7214 phonetic=nan rnnt=nan consistency=nan lr=1.028e-03 frames_per_s=16986 peak_gib=22.2 splits=1 elapsed_s=1132
+2026-10-23 20:56:22 step=875 epoch=2 loss=1.7686 ctc=1.7686 phonetic=nan rnnt=nan consistency=nan lr=1.021e-03 frames_per_s=16842 peak_gib=22.2 splits=1 elapsed_s=1165
+2026-10-23 20:56:57 step=900 epoch=2 loss=1.7886 ctc=1.7886 phonetic=nan rnnt=nan consistency=nan lr=1.015e-03 frames_per_s=16727 peak_gib=22.2 splits=1 elapsed_s=1200
+2026-10-23 20:57:28 step=925 epoch=2 loss=1.7592 ctc=1.7592 phonetic=nan rnnt=nan consistency=nan lr=1.007e-03 frames_per_s=16819 peak_gib=22.2 splits=1 elapsed_s=1232
+2026-10-23 20:58:01 step=950 epoch=2 loss=1.7803 ctc=1.7803 phonetic=nan rnnt=nan consistency=nan lr=1.000e-03 frames_per_s=16826 peak_gib=22.2 splits=1 elapsed_s=1265
+2026-10-23 20:58:36 step=975 epoch=2 loss=1.6599 ctc=1.6599 phonetic=nan rnnt=nan consistency=nan lr=9.926e-04 frames_per_s=16636 peak_gib=22.2 splits=1 elapsed_s=1300
+2026-10-23 20:59:11 step=1000 epoch=2 loss=1.7449 ctc=1.7449 phonetic=nan rnnt=nan consistency=nan lr=9.847e-04 frames_per_s=16860 peak_gib=22.2 splits=1 elapsed_s=1334
+2026-10-23 20:59:15 step 1000: dev metric 37.127
+2026-10-23 20:59:48 step=1025 epoch=2 loss=1.6784 ctc=1.6784 phonetic=nan rnnt=nan consistency=nan lr=9.766e-04 frames_per_s=13720 peak_gib=22.2 splits=1 elapsed_s=1372
+2026-10-23 21:00:23 step=1050 epoch=2 loss=1.7139 ctc=1.7139 phonetic=nan rnnt=nan consistency=nan lr=9.683e-04 frames_per_s=16863 peak_gib=22.2 splits=1 elapsed_s=1407
+2026-10-23 21:00:55 step=1075 epoch=3 loss=1.5552 ctc=1.5552 phonetic=nan rnnt=nan consistency=nan lr=9.598e-04 frames_per_s=17261 peak_gib=22.2 splits=1 elapsed_s=1439
+2026-10-23 21:01:26 step=1100 epoch=3 loss=1.4737 ctc=1.4737 phonetic=nan rnnt=nan consistency=nan lr=9.510e-04 frames_per_s=16839 peak_gib=22.2 splits=1 elapsed_s=1470
+2026-10-23 21:02:00 step=1125 epoch=3 loss=1.6568 ctc=1.6568 phonetic=nan rnnt=nan consistency=nan lr=9.421e-04 frames_per_s=16756 peak_gib=22.2 splits=1 elapsed_s=1503
+2026-10-23 21:02:32 step=1150 epoch=3 loss=1.5822 ctc=1.5822 phonetic=nan rnnt=nan consistency=nan lr=9.329e-04 frames_per_s=17720 peak_gib=22.2 splits=1 elapsed_s=1536
+2026-10-23 21:03:04 step=1175 epoch=3 loss=1.6735 ctc=1.6735 phonetic=nan rnnt=nan consistency=nan lr=9.235e-04 frames_per_s=16595 peak_gib=22.2 splits=1 elapsed_s=1567
+2026-10-23 21:03:38 step=1200 epoch=3 loss=1.5674 ctc=1.5674 phonetic=nan rnnt=nan consistency=nan lr=9.138e-04 frames_per_s=16950 peak_gib=22.2 splits=1 elapsed_s=1602
+2026-10-23 21:04:13 step=1225 epoch=3 loss=1.6362 ctc=1.6362 phonetic=nan rnnt=nan consistency=nan lr=9.040e-04 frames_per_s=17012 peak_gib=22.2 splits=1 elapsed_s=1637
+2026-10-23 21:04:45 step=1250 epoch=3 loss=1.4852 ctc=1.4852 phonetic=nan rnnt=nan consistency=nan lr=8.940e-04 frames_per_s=16771 peak_gib=22.2 splits=1 elapsed_s=1669
+2026-10-23 21:05:17 step=1275 epoch=3 loss=1.4568 ctc=1.4568 phonetic=nan rnnt=nan consistency=nan lr=8.839e-04 frames_per_s=16859 peak_gib=22.2 splits=1 elapsed_s=1701
+2026-10-23 21:05:51 step=1300 epoch=3 loss=1.4657 ctc=1.4657 phonetic=nan rnnt=nan consistency=nan lr=8.735e-04 frames_per_s=16739 peak_gib=22.2 splits=1 elapsed_s=1734
+2026-10-23 21:06:21 step=1325 epoch=3 loss=1.6463 ctc=1.6463 phonetic=nan rnnt=nan consistency=nan lr=8.630e-04 frames_per_s=16598 peak_gib=22.2 splits=1 elapsed_s=1765
+2026-10-23 21:06:56 step=1350 epoch=3 loss=1.5739 ctc=1.5739 phonetic=nan rnnt=nan consistency=nan lr=8.523e-04 frames_per_s=16916 peak_gib=22.2 splits=1 elapsed_s=1800
+2026-10-23 21:07:29 step=1375 epoch=3 loss=1.505 ctc=1.505 phonetic=nan rnnt=nan consistency=nan lr=8.414e-04 frames_per_s=16918 peak_gib=22.2 splits=1 elapsed_s=1833
+2026-10-23 21:08:04 step=1400 epoch=3 loss=1.4825 ctc=1.4825 phonetic=nan rnnt=nan consistency=nan lr=8.304e-04 frames_per_s=17019 peak_gib=22.2 splits=1 elapsed_s=1868
+2026-10-23 21:08:39 step=1425 epoch=4 loss=1.3377 ctc=1.3377 phonetic=nan rnnt=nan consistency=nan lr=8.192e-04 frames_per_s=17063 peak_gib=22.2 splits=1 elapsed_s=1902
+2026-10-23 21:09:12 step=1450 epoch=4 loss=1.4172 ctc=1.4172 phonetic=nan rnnt=nan consistency=nan lr=8.079e-04 frames_per_s=16949 peak_gib=22.2 splits=1 elapsed_s=1936
+2026-10-23 21:09:47 step=1475 epoch=4 loss=1.4952 ctc=1.4952 phonetic=nan rnnt=nan consistency=nan lr=7.964e-04 frames_per_s=16416 peak_gib=22.2 splits=1 elapsed_s=1971
+2026-10-23 21:10:19 step=1500 epoch=4 loss=1.3732 ctc=1.3732 phonetic=nan rnnt=nan consistency=nan lr=7.849e-04 frames_per_s=17299 peak_gib=22.2 splits=1 elapsed_s=2003
+2026-10-23 21:10:53 step=1525 epoch=4 loss=1.4041 ctc=1.4041 phonetic=nan rnnt=nan consistency=nan lr=7.732e-04 frames_per_s=16375 peak_gib=22.2 splits=1 elapsed_s=2036
+2026-10-23 21:11:26 step=1550 epoch=4 loss=1.3178 ctc=1.3178 phonetic=nan rnnt=nan consistency=nan lr=7.614e-04 frames_per_s=16790 peak_gib=22.2 splits=1 elapsed_s=2070
+2026-10-23 21:11:59 step=1575 epoch=4 loss=1.424 ctc=1.424 phonetic=nan rnnt=nan consistency=nan lr=7.494e-04 frames_per_s=16843 peak_gib=22.2 splits=1 elapsed_s=2102
+2026-10-23 21:12:33 step=1600 epoch=4 loss=1.3793 ctc=1.3793 phonetic=nan rnnt=nan consistency=nan lr=7.374e-04 frames_per_s=17102 peak_gib=22.2 splits=1 elapsed_s=2136
+2026-10-23 21:13:06 step=1625 epoch=4 loss=1.3201 ctc=1.3201 phonetic=nan rnnt=nan consistency=nan lr=7.253e-04 frames_per_s=16909 peak_gib=22.2 splits=1 elapsed_s=2170
+2026-10-23 21:13:37 step=1650 epoch=4 loss=1.4139 ctc=1.4139 phonetic=nan rnnt=nan consistency=nan lr=7.131e-04 frames_per_s=16775 peak_gib=22.2 splits=1 elapsed_s=2201
+2026-10-23 21:14:10 step=1675 epoch=4 loss=1.353 ctc=1.353 phonetic=nan rnnt=nan consistency=nan lr=7.008e-04 frames_per_s=16985 peak_gib=22.2 splits=1 elapsed_s=2234
+2026-10-23 21:14:44 step=1700 epoch=4 loss=1.3651 ctc=1.3651 phonetic=nan rnnt=nan consistency=nan lr=6.885e-04 frames_per_s=16576 peak_gib=22.2 splits=1 elapsed_s=2268
+2026-10-23 21:15:18 step=1725 epoch=4 loss=1.3802 ctc=1.3802 phonetic=nan rnnt=nan consistency=nan lr=6.761e-04 frames_per_s=16795 peak_gib=22.2 splits=1 elapsed_s=2301
+2026-10-23 21:15:51 step=1750 epoch=4 loss=1.3425 ctc=1.3425 phonetic=nan rnnt=nan consistency=nan lr=6.636e-04 frames_per_s=16826 peak_gib=22.2 splits=1 elapsed_s=2334
+2026-10-23 21:16:24 step=1775 epoch=5 loss=1.3103 ctc=1.3103 phonetic=nan rnnt=nan consistency=nan lr=6.511e-04 frames_per_s=16735 peak_gib=22.2 splits=1 elapsed_s=2368
+2026-10-23 21:16:57 step=1800 epoch=5 loss=1.1528 ctc=1.1528 phonetic=nan rnnt=nan consistency=nan lr=6.385e-04 frames_per_s=16832 peak_gib=22.2 splits=1 elapsed_s=2401
+2026-10-23 21:17:32 step=1825 epoch=5 loss=1.3049 ctc=1.3049 phonetic=nan rnnt=nan consistency=nan lr=6.259e-04 frames_per_s=16847 peak_gib=22.2 splits=1 elapsed_s=2436
+2026-10-23 21:18:07 step=1850 epoch=5 loss=1.2939 ctc=1.2939 phonetic=nan rnnt=nan consistency=nan lr=6.133e-04 frames_per_s=16909 peak_gib=22.2 splits=1 elapsed_s=2471
+2026-10-23 21:18:40 step=1875 epoch=5 loss=1.2922 ctc=1.2922 phonetic=nan rnnt=nan consistency=nan lr=6.006e-04 frames_per_s=16734 peak_gib=22.2 splits=1 elapsed_s=2503
+2026-10-23 21:19:12 step=1900 epoch=5 loss=1.2627 ctc=1.2627 phonetic=nan rnnt=nan consistency=nan lr=5.879e-04 frames_per_s=16840 peak_gib=22.2 splits=1 elapsed_s=2536
+2026-10-23 21:19:45 step=1925 epoch=5 loss=1.2253 ctc=1.2253 phonetic=nan rnnt=nan consistency=nan lr=5.753e-04 frames_per_s=16928 peak_gib=22.2 splits=1 elapsed_s=2569
+2026-10-23 21:20:16 step=1950 epoch=5 loss=1.1681 ctc=1.1681 phonetic=nan rnnt=nan consistency=nan lr=5.626e-04 frames_per_s=17087 peak_gib=22.2 splits=1 elapsed_s=2600
+2026-10-23 21:20:49 step=1975 epoch=5 loss=1.1833 ctc=1.1833 phonetic=nan rnnt=nan consistency=nan lr=5.499e-04 frames_per_s=16382 peak_gib=22.2 splits=1 elapsed_s=2633
+2026-10-23 21:21:22 step=2000 epoch=5 loss=1.3174 ctc=1.3174 phonetic=nan rnnt=nan consistency=nan lr=5.373e-04 frames_per_s=17328 peak_gib=22.2 splits=1 elapsed_s=2666
+2026-10-23 21:21:27 step 2000: dev metric 33.728
+2026-10-23 21:22:02 step=2025 epoch=5 loss=1.2487 ctc=1.2487 phonetic=nan rnnt=nan consistency=nan lr=5.247e-04 frames_per_s=14135 peak_gib=22.2 splits=1 elapsed_s=2705
+2026-10-23 21:22:34 step=2050 epoch=5 loss=1.2476 ctc=1.2476 phonetic=nan rnnt=nan consistency=nan lr=5.121e-04 frames_per_s=16940 peak_gib=22.2 splits=1 elapsed_s=2738
+2026-10-23 21:23:07 step=2075 epoch=5 loss=1.288 ctc=1.288 phonetic=nan rnnt=nan consistency=nan lr=4.995e-04 frames_per_s=16821 peak_gib=22.2 splits=1 elapsed_s=2771
+2026-10-23 21:23:41 step=2100 epoch=5 loss=1.1718 ctc=1.1718 phonetic=nan rnnt=nan consistency=nan lr=4.870e-04 frames_per_s=16945 peak_gib=22.2 splits=1 elapsed_s=2805
+2026-10-23 21:24:14 step=2125 epoch=6 loss=1.1627 ctc=1.1627 phonetic=nan rnnt=nan consistency=nan lr=4.746e-04 frames_per_s=17216 peak_gib=22.2 splits=1 elapsed_s=2838
+2026-10-23 21:24:47 step=2150 epoch=6 loss=1.2389 ctc=1.2389 phonetic=nan rnnt=nan consistency=nan lr=4.622e-04 frames_per_s=17021 peak_gib=22.2 splits=1 elapsed_s=2871
+2026-10-23 21:25:19 step=2175 epoch=6 loss=1.1377 ctc=1.1377 phonetic=nan rnnt=nan consistency=nan lr=4.499e-04 frames_per_s=16856 peak_gib=22.2 splits=1 elapsed_s=2903
+2026-10-23 21:25:49 step=2200 epoch=6 loss=1.2582 ctc=1.2582 phonetic=nan rnnt=nan consistency=nan lr=4.376e-04 frames_per_s=17539 peak_gib=22.2 splits=1 elapsed_s=2933
+2026-10-23 21:26:22 step=2225 epoch=6 loss=1.0545 ctc=1.0545 phonetic=nan rnnt=nan consistency=nan lr=4.254e-04 frames_per_s=16844 peak_gib=22.2 splits=1 elapsed_s=2966
+2026-10-23 21:26:55 step=2250 epoch=6 loss=1.1762 ctc=1.1762 phonetic=nan rnnt=nan consistency=nan lr=4.134e-04 frames_per_s=16803 peak_gib=22.2 splits=1 elapsed_s=2999
+2026-10-23 21:27:29 step=2275 epoch=6 loss=1.2684 ctc=1.2684 phonetic=nan rnnt=nan consistency=nan lr=4.014e-04 frames_per_s=16441 peak_gib=22.2 splits=1 elapsed_s=3033
+2026-10-23 21:27:59 step=2300 epoch=6 loss=1.1727 ctc=1.1727 phonetic=nan rnnt=nan consistency=nan lr=3.895e-04 frames_per_s=16827 peak_gib=22.2 splits=1 elapsed_s=3063
+2026-10-23 21:28:33 step=2325 epoch=6 loss=1.1582 ctc=1.1582 phonetic=nan rnnt=nan consistency=nan lr=3.778e-04 frames_per_s=16960 peak_gib=22.2 splits=1 elapsed_s=3097
+2026-10-23 21:29:07 step=2350 epoch=6 loss=1.1619 ctc=1.1619 phonetic=nan rnnt=nan consistency=nan lr=3.661e-04 frames_per_s=16984 peak_gib=22.2 splits=1 elapsed_s=3131
+2026-10-23 21:29:41 step=2375 epoch=6 loss=1.2409 ctc=1.2409 phonetic=nan rnnt=nan consistency=nan lr=3.546e-04 frames_per_s=16980 peak_gib=22.2 splits=1 elapsed_s=3165
+2026-10-23 21:30:15 step=2400 epoch=6 loss=1.1494 ctc=1.1494 phonetic=nan rnnt=nan consistency=nan lr=3.432e-04 frames_per_s=16911 peak_gib=22.2 splits=1 elapsed_s=3199
+2026-10-23 21:30:50 step=2425 epoch=6 loss=1.1853 ctc=1.1853 phonetic=nan rnnt=nan consistency=nan lr=3.319e-04 frames_per_s=16850 peak_gib=22.2 splits=1 elapsed_s=3233
+2026-10-23 21:31:24 step=2450 epoch=6 loss=1.0938 ctc=1.0938 phonetic=nan rnnt=nan consistency=nan lr=3.208e-04 frames_per_s=16849 peak_gib=22.2 splits=1 elapsed_s=3267
+2026-10-23 21:31:58 step=2475 epoch=6 loss=1.1579 ctc=1.1579 phonetic=nan rnnt=nan consistency=nan lr=3.099e-04 frames_per_s=16476 peak_gib=22.2 splits=1 elapsed_s=3301
+2026-10-23 21:32:29 step=2500 epoch=7 loss=1.1811 ctc=1.1811 phonetic=nan rnnt=nan consistency=nan lr=2.991e-04 frames_per_s=16971 peak_gib=22.2 splits=1 elapsed_s=3333
+2026-10-23 21:33:05 step=2525 epoch=7 loss=1.1744 ctc=1.1744 phonetic=nan rnnt=nan consistency=nan lr=2.884e-04 frames_per_s=16389 peak_gib=22.2 splits=1 elapsed_s=3369
+2026-10-23 21:33:39 step=2550 epoch=7 loss=1.1635 ctc=1.1635 phonetic=nan rnnt=nan consistency=nan lr=2.780e-04 frames_per_s=16890 peak_gib=22.2 splits=1 elapsed_s=3403
+2026-10-23 21:34:13 step=2575 epoch=7 loss=1.0754 ctc=1.0754 phonetic=nan rnnt=nan consistency=nan lr=2.677e-04 frames_per_s=16817 peak_gib=22.2 splits=1 elapsed_s=3436
+2026-10-23 21:34:46 step=2600 epoch=7 loss=1.0505 ctc=1.0505 phonetic=nan rnnt=nan consistency=nan lr=2.576e-04 frames_per_s=16956 peak_gib=22.2 splits=1 elapsed_s=3470
+2026-10-23 21:35:20 step=2625 epoch=7 loss=1.183 ctc=1.183 phonetic=nan rnnt=nan consistency=nan lr=2.476e-04 frames_per_s=16906 peak_gib=22.2 splits=1 elapsed_s=3504
+2026-10-23 21:35:51 step=2650 epoch=7 loss=0.6912 ctc=0.6912 phonetic=nan rnnt=nan consistency=nan lr=2.379e-04 frames_per_s=17082 peak_gib=22.2 splits=1 elapsed_s=3535
+2026-10-23 21:36:26 step=2675 epoch=7 loss=1.1212 ctc=1.1212 phonetic=nan rnnt=nan consistency=nan lr=2.284e-04 frames_per_s=16862 peak_gib=22.2 splits=1 elapsed_s=3569
+2026-10-23 21:36:58 step=2700 epoch=7 loss=1.0797 ctc=1.0797 phonetic=nan rnnt=nan consistency=nan lr=2.191e-04 frames_per_s=16888 peak_gib=22.2 splits=1 elapsed_s=3602
+2026-10-23 21:37:31 step=2725 epoch=7 loss=1.0017 ctc=1.0017 phonetic=nan rnnt=nan consistency=nan lr=2.099e-04 frames_per_s=17127 peak_gib=22.2 splits=1 elapsed_s=3634
+2026-10-23 21:38:04 step=2750 epoch=7 loss=1.0849 ctc=1.0849 phonetic=nan rnnt=nan consistency=nan lr=2.010e-04 frames_per_s=16995 peak_gib=22.2 splits=1 elapsed_s=3667
+2026-10-23 21:38:36 step=2775 epoch=7 loss=1.0408 ctc=1.0408 phonetic=nan rnnt=nan consistency=nan lr=1.924e-04 frames_per_s=16904 peak_gib=22.2 splits=1 elapsed_s=3700
+2026-10-23 21:39:09 step=2800 epoch=7 loss=1.1967 ctc=1.1967 phonetic=nan rnnt=nan consistency=nan lr=1.839e-04 frames_per_s=16736 peak_gib=22.2 splits=1 elapsed_s=3733
+2026-10-23 21:39:42 step=2825 epoch=7 loss=1.1214 ctc=1.1214 phonetic=nan rnnt=nan consistency=nan lr=1.757e-04 frames_per_s=16812 peak_gib=22.2 splits=1 elapsed_s=3766
+2026-10-23 21:40:16 step=2850 epoch=8 loss=1.0953 ctc=1.0953 phonetic=nan rnnt=nan consistency=nan lr=1.677e-04 frames_per_s=16884 peak_gib=22.2 splits=1 elapsed_s=3800
+2026-10-23 21:40:50 step=2875 epoch=8 loss=1.0765 ctc=1.0765 phonetic=nan rnnt=nan consistency=nan lr=1.600e-04 frames_per_s=16900 peak_gib=22.2 splits=1 elapsed_s=3833
+2026-10-23 21:41:24 step=2900 epoch=8 loss=1.0424 ctc=1.0424 phonetic=nan rnnt=nan consistency=nan lr=1.525e-04 frames_per_s=16727 peak_gib=22.2 splits=1 elapsed_s=3868
+2026-10-23 21:41:58 step=2925 epoch=8 loss=1.0741 ctc=1.0741 phonetic=nan rnnt=nan consistency=nan lr=1.453e-04 frames_per_s=16848 peak_gib=22.2 splits=1 elapsed_s=3902
+2026-10-23 21:42:33 step=2950 epoch=8 loss=1.137 ctc=1.137 phonetic=nan rnnt=nan consistency=nan lr=1.383e-04 frames_per_s=16725 peak_gib=22.2 splits=1 elapsed_s=3937
+2026-10-23 21:43:05 step=2975 epoch=8 loss=1.0226 ctc=1.0226 phonetic=nan rnnt=nan consistency=nan lr=1.315e-04 frames_per_s=16870 peak_gib=22.2 splits=1 elapsed_s=3969
+2026-10-23 21:43:39 step=3000 epoch=8 loss=1.0598 ctc=1.0598 phonetic=nan rnnt=nan consistency=nan lr=1.251e-04 frames_per_s=17557 peak_gib=22.2 splits=1 elapsed_s=4003
+2026-10-23 21:43:43 step 3000: dev metric 31.954
+2026-10-23 21:44:19 step=3025 epoch=8 loss=1.0764 ctc=1.0764 phonetic=nan rnnt=nan consistency=nan lr=1.189e-04 frames_per_s=14253 peak_gib=22.2 splits=1 elapsed_s=4043
+2026-10-23 21:44:52 step=3050 epoch=8 loss=1.0703 ctc=1.0703 phonetic=nan rnnt=nan consistency=nan lr=1.129e-04 frames_per_s=16738 peak_gib=22.2 splits=1 elapsed_s=4075
+2026-10-23 21:45:26 step=3075 epoch=8 loss=1.151 ctc=1.151 phonetic=nan rnnt=nan consistency=nan lr=1.073e-04 frames_per_s=16808 peak_gib=22.2 splits=1 elapsed_s=4110
+2026-10-23 21:45:58 step=3100 epoch=8 loss=1.0384 ctc=1.0384 phonetic=nan rnnt=nan consistency=nan lr=1.019e-04 frames_per_s=16886 peak_gib=22.2 splits=1 elapsed_s=4142
+2026-10-23 21:46:27 step=3125 epoch=8 loss=1.0954 ctc=1.0954 phonetic=nan rnnt=nan consistency=nan lr=9.679e-05 frames_per_s=16608 peak_gib=22.2 splits=1 elapsed_s=4171
+2026-10-23 21:46:58 step=3150 epoch=8 loss=1.1326 ctc=1.1326 phonetic=nan rnnt=nan consistency=nan lr=9.197e-05 frames_per_s=16777 peak_gib=22.2 splits=1 elapsed_s=4202
+2026-10-23 21:47:31 step=3175 epoch=8 loss=1.0443 ctc=1.0443 phonetic=nan rnnt=nan consistency=nan lr=8.743e-05 frames_per_s=17276 peak_gib=22.2 splits=1 elapsed_s=4235
+2026-10-23 21:48:06 step=3200 epoch=9 loss=1.0661 ctc=1.0661 phonetic=nan rnnt=nan consistency=nan lr=8.318e-05 frames_per_s=16780 peak_gib=22.2 splits=1 elapsed_s=4270
+2026-10-23 21:48:39 step=3225 epoch=9 loss=1.0497 ctc=1.0497 phonetic=nan rnnt=nan consistency=nan lr=7.923e-05 frames_per_s=16975 peak_gib=22.2 splits=1 elapsed_s=4302
+2026-10-23 21:49:10 step=3250 epoch=9 loss=1.0886 ctc=1.0886 phonetic=nan rnnt=nan consistency=nan lr=7.556e-05 frames_per_s=17601 peak_gib=22.2 splits=1 elapsed_s=4334
+2026-10-23 21:49:43 step=3275 epoch=9 loss=0.9943 ctc=0.9943 phonetic=nan rnnt=nan consistency=nan lr=7.219e-05 frames_per_s=16753 peak_gib=22.2 splits=1 elapsed_s=4367
+2026-10-23 21:50:16 step=3300 epoch=9 loss=0.9741 ctc=0.9741 phonetic=nan rnnt=nan consistency=nan lr=6.912e-05 frames_per_s=16947 peak_gib=22.2 splits=1 elapsed_s=4400
+2026-10-23 21:50:50 step=3325 epoch=9 loss=1.0095 ctc=1.0095 phonetic=nan rnnt=nan consistency=nan lr=6.635e-05 frames_per_s=16938 peak_gib=22.2 splits=1 elapsed_s=4433
+2026-10-23 21:51:24 step=3350 epoch=9 loss=1.0288 ctc=1.0288 phonetic=nan rnnt=nan consistency=nan lr=6.388e-05 frames_per_s=16771 peak_gib=22.2 splits=1 elapsed_s=4467
+2026-10-23 21:51:54 step=3375 epoch=9 loss=1.0124 ctc=1.0124 phonetic=nan rnnt=nan consistency=nan lr=6.171e-05 frames_per_s=16802 peak_gib=22.2 splits=1 elapsed_s=4498
+2026-10-23 21:52:29 step=3400 epoch=9 loss=1.0093 ctc=1.0093 phonetic=nan rnnt=nan consistency=nan lr=5.984e-05 frames_per_s=16950 peak_gib=22.2 splits=1 elapsed_s=4533
+2026-10-23 21:53:03 step=3425 epoch=9 loss=1.133 ctc=1.133 phonetic=nan rnnt=nan consistency=nan lr=5.828e-05 frames_per_s=16911 peak_gib=22.2 splits=1 elapsed_s=4566
+2026-10-23 21:53:36 step=3450 epoch=9 loss=1.0155 ctc=1.0155 phonetic=nan rnnt=nan consistency=nan lr=5.702e-05 frames_per_s=17079 peak_gib=22.2 splits=1 elapsed_s=4600
+2026-10-23 21:54:11 step=3475 epoch=9 loss=1.1116 ctc=1.1116 phonetic=nan rnnt=nan consistency=nan lr=5.607e-05 frames_per_s=16217 peak_gib=22.2 splits=1 elapsed_s=4634
+2026-10-23 21:54:43 step=3500 epoch=9 loss=1.0496 ctc=1.0496 phonetic=nan rnnt=nan consistency=nan lr=5.542e-05 frames_per_s=17274 peak_gib=22.2 splits=1 elapsed_s=4667
+2026-10-23 21:55:17 step=3525 epoch=9 loss=1.0513 ctc=1.0513 phonetic=nan rnnt=nan consistency=nan lr=5.508e-05 frames_per_s=16319 peak_gib=22.2 splits=1 elapsed_s=4700
+2026-10-23 21:55:36 step=3540 epoch=9 loss=1.0183 ctc=1.0183 phonetic=nan rnnt=nan consistency=nan lr=5.503e-05 frames_per_s=16867 peak_gib=22.2 splits=1 elapsed_s=4720
+2026-10-23 21:55:37 GPU utilization: mean 99%, at or above 80% for 99% of 938 samples, peak memory 75928 MiB

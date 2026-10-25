@@ -1,0 +1,132 @@
+{
+  "or": {
+    "wer": 60.71,
+    "cer": 26.99,
+    "utterances": 300,
+    "words": 3324,
+    "script_error_rate": 9.27,
+    "wer_script_normalised": 59.24,
+    "cer_script_normalised": 25.19,
+    "rows_with_alternative_ref": 66,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.508
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "or": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "or": {
+        "or": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 81,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 214,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 5,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_or",
+  "utterances": 300,
+  "hours": 0.51,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 276,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/or/clean_test_known/844424930765982-824-m",
+      "constrained": "ବି helmet scooty ଚଳାଇ ରାସ୍ତାରେ ଯାଉଥିବା ବେଳେ traffic police ତାଙ୍କର ଚାଲଣ କାଟିଥିବା ଜଣା ପଡ଼ିଛି",
+      "unconstrained": "बिನ್ನ helmet scooty ଚଳାଇ ରାସ୍ତାରେ ଯାଉଥିବା ବେଳେ trafficୁ ତାଙ୍କର ଚାଲଣ କାଟିଥିବା ଜଣା ପଡ଼ିଛି",
+      "hinted": "ବି helmet scooty ଚଳାଇ ରାସ୍ତାରେ ଯାଉଥିବା ବେଳେ traffic police ତାଙ୍କର ଚାଲଣ କାଟିଥିବା ଜଣା ପଡ଼ିଛି"
+    },
+    {
+      "key": "kathbath_test/or/clean_test_known/844424932892289-97-m",
+      "constrained": "ଯଦି ଗାଡ଼ି ତ୍ରୃଟିଲା ତେବେେ ଗ୍ରହଣରାହଙ୍କ ଗାଡ଼ିର ବୀମା ଦ୍ଵାରା ହିଁ ସୁଦାରିପାରିବ",
+      "unconstrained": "ज ଗାଡ଼ି ତ୍ରୃଟିଲା ତେବେେ ଗ୍ରହଣରାହଙ୍କ ଗାଡ଼ିର ବୀମା ଦ୍ଵାରା ହିଁ ସୁଦାରିପାରିବ",
+      "hinted": "ଯଦି ଗାଡ଼ି ତ୍ରୃଟିଲା ତେବେେ ଗ୍ରହଣରାହଙ୍କ ଗାଡ଼ିର ବୀମା ଦ୍ଵାରା ହିଁ ସୁଦାରିପାରିବ"
+    },
+    {
+      "key": "kathbath_test/or/clean_test_known/844424930583557-840-f",
+      "constrained": "ତାଙ୍କୁ indiam men ମଧ୍ୟ ବାହାର କରିବା ସମ୍ଭାବନା ରହିଛି ବୋଲି ସେ କହି କହିଛନ୍ତି",
+      "unconstrained": "తం ఎన్ఎम menರು ମଧ୍ୟ ବାହାର କରିବା ସମ୍ଭାବନା ରହିଛି ବୋଲି ସେ କହି କହିଛନ୍ତି",
+      "hinted": "ତାଙ୍କୁ indiam men ମଧ୍ୟ ବାହାର କରିବା ସମ୍ଭାବନା ରହିଛି ବୋଲି ସେ କହି କହିଛନ୍ତି"
+    },
+    {
+      "key": "kathbath_test/or/clean_test_known/844424932697916-97-m",
+      "constrained": "ଏହି ଘଟଣାର ବିଚା କରି courtର୍ ତାଙ୍କୁ ଦୋଶ ସାବେସ୍ତ କରିବା ସହିତ ଆଜି ଜୀବନେଲ ଦଣ୍ଡା ଦେଶତ୍ କରିଛନ୍ତି",
+      "unconstrained": "এই ଘଟଣାର ବିଚା କରି courtର୍ ତାଙ୍କୁ ଦୋଶ ସାବେସ୍ତ କରିବା ସହିତ ଆଜି ଜୀବନେଲ ଦଣ୍ଡା ଦେଶତ୍ କରିଛନ୍ତି",
+      "hinted": "ଏହି ଘଟଣାର ବିଚା କରି courtର୍ ତାଙ୍କୁ ଦୋଶ ସାବେସ୍ତ କରିବା ସହିତ ଆଜି ଜୀବନେଲ ଦଣ୍ଡା ଦେଶତ୍ କରିଛନ୍ତି"
+    },
+    {
+      "key": "kathbath_test/or/clean_test_known/844424931151634-955-m",
+      "constrained": "reve ସା ଯେଉଁ କ୍ଷତି ରହିଛି ତାକୁ ଆଗକୁ ନେବା ଏକ ବଡ଼ challenge ହେବ",
+      "unconstrained": "েভন ସା ଯେଉଁ କ୍ଷତି ରହିଛି ତାକୁ ଆଗକୁ ନେବା ଏକ ବଡ଼ challenge ହେବ",
+      "hinted": "reve ସା ଯେଉଁ କ୍ଷତି ରହିଛି ତାକୁ ଆଗକୁ ନେବା ଏକ ବଡ଼ challenge ହେବ"
+    }
+  ]
+}

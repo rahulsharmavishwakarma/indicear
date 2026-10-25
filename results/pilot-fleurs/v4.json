@@ -1,0 +1,238 @@
+{
+  "variant": {
+    "name": "v4",
+    "adapters": true,
+    "phonetic": true,
+    "factored": true,
+    "cr_ctc": false,
+    "transducer": false,
+    "adapter_rank": 128,
+    "inter_layers": [
+      6,
+      9
+    ],
+    "inter_weight": 0.3,
+    "ctc_weight": 0.3,
+    "cr_weight": 0.2,
+    "cr_time_scale": 2.5,
+    "specaugment": true,
+    "checkpoint": false
+  },
+  "train": {
+    "steps": 4080,
+    "total_steps": 4080,
+    "frame_budget": 20871,
+    "lr": 0.0010215429506388854,
+    "splits": 1,
+    "config_hash": "9244f6cc62a4cf2e",
+    "seconds": 5453,
+    "examples": 28110,
+    "dropped": {
+      "ctc_infeasible:ta": 1,
+      "ctc_infeasible:te": 1
+    },
+    "train_hours": 88.04
+  },
+  "metrics": {
+    "ctc": {
+      "bn": {
+        "wer": 56.69,
+        "cer": 21.45,
+        "utterances": 374,
+        "words": 6624,
+        "script_error_rate": 3.59,
+        "oov_recall": 11.38,
+        "oov_words": 1520
+      },
+      "cs:bn+en": {
+        "wer": 53.48,
+        "cer": 23.92,
+        "utterances": 100,
+        "words": 3908,
+        "script_error_rate": 1.89,
+        "span_accuracy": 98.0,
+        "span_cer_mean": 25.48,
+        "order_accuracy": 100.0,
+        "span_cer_threshold": 0.5
+      },
+      "cs:hi+en": {
+        "wer": 49.79,
+        "cer": 26.88,
+        "utterances": 100,
+        "words": 4288,
+        "script_error_rate": 7.16,
+        "span_accuracy": 89.0,
+        "span_cer_mean": 28.62,
+        "order_accuracy": 99.0,
+        "span_cer_threshold": 0.5
+      },
+      "cs:hi+kn": {
+        "wer": 62.53,
+        "cer": 30.4,
+        "utterances": 100,
+        "words": 3344,
+        "script_error_rate": 13.19,
+        "span_accuracy": 82.0,
+        "span_cer_mean": 35.31,
+        "order_accuracy": 100.0,
+        "span_cer_threshold": 0.5
+      },
+      "cs:kn+en": {
+        "wer": 61.19,
+        "cer": 27.46,
+        "utterances": 100,
+        "words": 3481,
+        "script_error_rate": 7.36,
+        "span_accuracy": 94.5,
+        "span_cer_mean": 28.82,
+        "order_accuracy": 100.0,
+        "span_cer_threshold": 0.5
+      },
+      "cs:ta+en": {
+        "wer": 63.6,
+        "cer": 28.31,
+        "utterances": 100,
+        "words": 3462,
+        "script_error_rate": 3.74,
+        "span_accuracy": 95.5,
+        "span_cer_mean": 29.27,
+        "order_accuracy": 100.0,
+        "span_cer_threshold": 0.5
+      },
+      "cs:te+en": {
+        "wer": 62.26,
+        "cer": 27.48,
+        "utterances": 100,
+        "words": 3646,
+        "script_error_rate": 4.6,
+        "span_accuracy": 92.5,
+        "span_cer_mean": 28.53,
+        "order_accuracy": 100.0,
+        "span_cer_threshold": 0.5
+      },
+      "cs:ur+en": {
+        "wer": 76.34,
+        "cer": 51.69,
+        "utterances": 100,
+        "words": 4602,
+        "script_error_rate": 47.63,
+        "span_accuracy": 30.5,
+        "span_cer_mean": 59.62,
+        "order_accuracy": 60.0,
+        "span_cer_threshold": 0.5
+      },
+      "en": {
+        "wer": 49.69,
+        "cer": 23.43,
+        "utterances": 388,
+        "words": 8015,
+        "script_error_rate": 0.57,
+        "oov_recall": 9.78,
+        "oov_words": 1156
+      },
+      "gu": {
+        "wer": 60.36,
+        "cer": 27.01,
+        "utterances": 428,
+        "words": 8334,
+        "script_error_rate": 14.24,
+        "oov_recall": 14.86,
+        "oov_words": 1998
+      },
+      "hi": {
+        "wer": 49.25,
+        "cer": 27.63,
+        "utterances": 234,
+        "words": 5210,
+        "script_error_rate": 13.4,
+        "oov_recall": 14.83,
+        "oov_words": 600
+      },
+      "kn": {
+        "wer": 75.59,
+        "cer": 28.21,
+        "utterances": 342,
+        "words": 4826,
+        "script_error_rate": 16.52,
+        "oov_recall": 18.39,
+        "oov_words": 2017
+      },
+      "ml": {
+        "wer": 78.5,
+        "cer": 26.08,
+        "utterances": 356,
+        "words": 4638,
+        "script_error_rate": 9.97,
+        "oov_recall": 16.35,
+        "oov_words": 2110
+      },
+      "mr": {
+        "wer": 66.62,
+        "cer": 27.98,
+        "utterances": 407,
+        "words": 6897,
+        "script_error_rate": 8.17,
+        "oov_recall": 14.14,
+        "oov_words": 1853
+      },
+      "negatives": {
+        "clips": 100,
+        "false_output_rate": 0.0,
+        "words_per_clip": 0.0
+      },
+      "or": {
+        "wer": 69.95,
+        "cer": 33.39,
+        "utterances": 376,
+        "words": 6686,
+        "script_error_rate": 14.2,
+        "oov_recall": 9.11,
+        "oov_words": 1823
+      },
+      "pa": {
+        "wer": 55.09,
+        "cer": 30.51,
+        "utterances": 245,
+        "words": 5516,
+        "script_error_rate": 9.77,
+        "oov_recall": 9.45,
+        "oov_words": 741
+      },
+      "ta": {
+        "wer": 77.02,
+        "cer": 29.45,
+        "utterances": 350,
+        "words": 5122,
+        "script_error_rate": 8.1,
+        "oov_recall": 11.74,
+        "oov_words": 2011
+      },
+      "te": {
+        "wer": 73.75,
+        "cer": 28.6,
+        "utterances": 308,
+        "words": 4746,
+        "script_error_rate": 11.02,
+        "oov_recall": 13.52,
+        "oov_words": 1568
+      },
+      "ur": {
+        "wer": 99.51,
+        "cer": 81.73,
+        "utterances": 261,
+        "words": 6557,
+        "script_error_rate": 89.1,
+        "oov_recall": 0.57,
+        "oov_words": 871
+      }
+    }
+  },
+  "environment": {
+    "runtime": "python 3.14.8, GIL off",
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "encoder": "google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd"
+  },
+  "notes": "FLEURS dev; FLEURS test never read. CS set is synthetic inter-sentential concatenation."
+}

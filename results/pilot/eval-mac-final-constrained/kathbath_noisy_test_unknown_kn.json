@@ -1,0 +1,195 @@
+{
+  "kn": {
+    "wer": 61.02,
+    "cer": 21.18,
+    "utterances": 600,
+    "words": 6473,
+    "script_error_rate": 4.89,
+    "wer_script_normalised": 61.02,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 1.449
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "kn": {
+        "hi": 2,
+        "kn": 598
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 29,
+        "accuracy": 93.1
+      },
+      "5-10s": {
+        "utterances": 399,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 172,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_kn",
+  "utterances": 600,
+  "hours": 1.45,
+  "seconds": 42,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 372,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933075861-418-f",
+      "constrained": "ಈ ಸಂಬಂಧಿಲ್ಲಿ ವರಿಷ್ ರೊಮದಿಗೆ ಚರ್ಚ ನಡೆಸೀರ್ಮಾನ ಮಾಡಲಾಗುವುದೆಂದು ಅವರು ಹೇಳಿದರು",
+      "unconstrained": "इस ಸಂಬಂಧಿ दिल्ली ವರಿಷ್ ರೊಮದಿಗೆ ಚರ್ಚ ನಡೆಸೀರ್ಮಾನ ಮಾಡಲಾಗುವುದೆಂದು ಅವರು ಹೇಳಿದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933083888-1153-f",
+      "constrained": "ನಟ್ಟಿರೋಪಿಗಳ ನಯಂಗ ಬನದ ಅವಧ ಮುಕ್ತಾಯೊಂದ ಹಿನ್ನಲೆಯಲ್ಲಿ ಮಂಗಳ ವಾಾರ ಪೊಲರುೀರು ಆೋಪಿಗಳನ್ನುಯಲಲಿಕ್ಕೆ ಹಜರು ಪಿದ್ದ",
+      "unconstrained": "मोहम्मद நल மட்டிராೋಪಿಗಳ ನಯಂಗ ಬನದ ಅವಧ ಮುಕ್ತಾಯೊಂದ ಹಿನ್ನಲೆಯಲ್ಲಿ ಮಂಗಳ ವಾಾರ ಪೊಲರುೀರು ಆೋಪಿಗಳನ್ನುಯಲಲಿಕ್ಕೆ ಹಜರು ಪಿದ್ದ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933155941-1168-m",
+      "constrained": "ಬೇರೆ ಬೇರೆ ರಾಜ್ಯಗಳು ಎಷ್ಟಿಷ್ಟು test ಮಾಡವೆ ಎನ್ನುವ ನಿಮ್ಮ ಕುತುಹಲಕ್ಕೆ ಇಲ್ಲಿದೆ ನೋಡಿ ಉತ್ತರ",
+      "unconstrained": "ಬೇರೆ बड़ेे राज्यಗಳು ಎಷ್ಟಿಷ್ಟು test ಮಾಡವೆ ಎನ್ನುವ ನಿಮ್ಮ ಕುತುಹಲಕ್ಕೆ ಇಲ್ಲಿದೆ ನೋಡಿ ಉತ್ತರ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930511426-217-f",
+      "constrained": "ವಿಜ್ಞನಿಕ ಹಾಗೂ ವೈಚಾಿಕ ನಿಲುವನ್ನು ಹೊಂದುವ ಮೂಲಕ ಸ್ವಸ್ಥಸ್ತಯ ಸಾಮಾನ್ಮಾಕ್ಕೆ ಎಲ್ಲರೂ ಕೈಜ ಜೋಡಿಸಿ ಎಂದು ಹೇಳಿದರು",
+      "unconstrained": "ೈಜ್ಞನಿಕ ಹಾಗೂ ವೈಚಾಿಕ ನಿಲುವನ್ನು ಹೊಂದುವ ಮೂಲಕ ಸ್ವಸ್ಥಸ್ತಯ ಸಾಮಾನ್ निर्मान के ಎಲ್ಲರೂ ಕೈಜ ಜೋಡಿಸಿ ಎಂದು ಹೇಳಿದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933083921-1153-f",
+      "constrained": "ಸುಕ್ರುವಾರ ನಡೆದ ಮೊದಲ ಪಂದ್ಯದಲ್ಲಿ ಭಾರತ ಒಲಂಪೀಕ್ಸ್ಲ್ಲಿ ಸರ್ಣಪಪದಕ ವಿಜ ಜ gರ್ಮ ವಿರುಢಾಾಡಿತ್ತು",
+      "unconstrained": "शುಕ್रವಾರ ನಡೆದ ಮೊದಲ ಪಂದ್ಯದಲ್ಲಿ ಭಾರತ ಒಲಂಪೀಕ್ಸ್ಲ್ಲಿ ಸರ್ಣಪಪದಕ ವಿಜ ಜ gರ್ಮ ವಿರುಢಾಾಡಿತ್ತು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933294350-206-m",
+      "constrained": "ಗಾವಗರವು ಸಾಮ್ಜ್ಯದ ರಾಜ್ಯಜಧನಿಯಾಗಿಿದ್ದರುಿಂಬ shopಕ್ಷವಾಗಿಯ್ಯತ್ತ ಸ್ಥಾನಣ ಪಡದಿತ್ತು",
+      "unconstrained": "ಾவ நகரಗರವು ಸಾಮ್ಜ್ಯದ ರಾಜ್ಯಜಧನಿಯಾಗಿಿದ್ದರುಿಂಬ shopೇಕ್ಷವಾಗಿಯ್ಯತ್ತ ಸ್ಥಾನಣ ಪಡದಿತ್ತು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933294308-206-m",
+      "constrained": "ಎಲ್ಲದಿಿಂತ ಹೆಚ್ಚಾಗಿ ಪ್ರವೇಶವು ಸಾಮಾನ್ಯ ನಿರ್ಣಯಕ್ಕೆ ಬರಲು ಪ್ರಯತ್ಿದರೆ ಸದಶ್ ನಿರದ್ಧಷ್ಟಣಿ ನಿರ್ಣಯಕ್ಕೆ ಬರಲು ಪ್ರಯಂತಸುತ್ತದೆ",
+      "unconstrained": "என்னல்லதிಿಂತ ಹೆಚ್ಚಾಗಿ ಪ್ರವೇಶವು ಸಾಮಾನ್ಯ ನಿರ್ಣಯಕ್ಕೆ ಬರಲು ಪ್ರಯತ್ಿದರೆ ಸದಶ್ ನಿರದ್ಧಷ್ಟಣಿ ನಿರ್ಣಯಕ್ಕೆ ಬರಲು ಪ್ರಯಂತಸುತ್ತದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930979582-863-f",
+      "constrained": "ಈ ಬಗ್ಗೆ ಖಚಿತ ಮಾಹಿತಿ ಪಡೆದು ದಾಳಿ ನಡೆಸದಂಧಸಲಾಯಿತು ಎಂದು ಸಿ b ಅಧಿಕಾರಿಗಳು ಹೇಳಿದ್ದಾರೆ",
+      "unconstrained": "ಈ ಬಗ್ಗೆ ಖಚಿತ ಮಾಹಿತಿ ಪಡೆದು ದಾಳಿ ನಡೆಸದಂಧಸಲಾಯಿತು ಎಂದು ಸಿ bಿ ಅಧಿಕಾರಿಗಳು ಹೇಳಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933176143-78-m",
+      "constrained": "ಕಚೇರಿ ಒಂದು ವಾಣಿಜ ಬೀದಿಯಲ್ಲಿ ಬಹಳಷ್ಟು ಅಂಗಡಿಗಳು ಮತ್ತು ಕಾಲುದರಿಗಳುೊಂದಿಗೆ ಇದೆೇದಲ್ಲಿ ಇದು ಕಾರ್ಯನಿರವಹಸುತ್ತದೆ",
+      "unconstrained": "கचೇರಿ ಒಂದು ವಾಣಿಜ ಬೀದಿಯಲ್ಲಿ ಬಹಳಷ್ಟು ಅಂಗಡಿಗಳು ಮತ್ತು ಕಾಲುದರಿಗಳುೊಂದಿಗೆ ಇದೆೇದಲ್ಲಿ ಇದು ಕಾರ್ಯನಿರವಹಸುತ್ತದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933163888-78-m",
+      "constrained": "ಆದರೆ ತಾವು ಮಾತ್ರ high ಖಾಸಗಿ ಆಸ್ಪತ್ರೆಗೆ ಹೋಗಿ ರವಿ adit",
+      "unconstrained": "ಆದರೆ ತ தாவு ಮಾತ್ರ high ಖಾಸಗಿ ಆಸ್ಪತ್ರೆಗೆ ಹೋಗಿ रविव adit आಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933106595-1153-f",
+      "constrained": "ರಾಪಕ್ೊಲಸರು ಇದ್ದರೂ ಕೂಡ ಈ ಜ ಎಂದು traffic ಹೀಗೆ ಇರುತ್ತದೆ",
+      "unconstrained": "्रफिक पुलिसಸರು ಇದ್ದರೂ ಕೂಡ ಈ ಜ ಎಂದು traffic ಹೀಗೆ ಇರುತ್ತದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930516557-217-f",
+      "constrained": "ಇನ್ನುೋಗಳು bನ್ನ s ಮತ್ತುಿ in processist",
+      "unconstrained": "இோಗಳು bನ್ನs ಮತ್ತುಿன processistொந்திரு"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930941608-863-f",
+      "constrained": "ಡಿಕಿವುಮಾರ್ ಅವರ ತಮ್ಮನ್ನು ಅಧ್ಯಕ್ಷನಾಗಿ ಮಾಡಿ ಎಂದು ಸುಿದ್ದರಾಮಯ ಬಳಿ ಮನವಿ ಮಾಡದಿದರು",
+      "unconstrained": "ಡಿಕಿವುಮಾರ್ அவர் தம்ನ್ನು ಅಧ್ಯಕ್ಷನಾಗಿ ಮಾಡಿ ಎಂದು ಸುಿದ್ದರಾಮಯ ಬಳಿ ಮನವಿ ಮಾಡದಿದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930684981-413-f",
+      "constrained": "ವಿಮಾನ ರತ್ಪಡಿಸಿದರೆ ಅದರಲ್ಲಿ companyನಿಯು ತನ್ನ ಹಣ ಟಿಕೆಟ್ ಖೀದಿ ಖು ಪ್ರಯಾಣಿಕ ಮರಲುಿಿದೆ",
+      "unconstrained": "विಮಾನ ರತ್ಪಡಿಸಿದರೆ ಅದರಲ್ಲಿ companyನಿಯು ತನ್ನ ಹಣ ಟಿಕೆಟ್ ಖೀದಿ ಖು ಪ್ರಯಾण का मरलरಿಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930990848-863-f",
+      "constrained": "ಆದರೆ ಇದೀಗ ಬೆಚ್ಚ ಬ ಬೆಳೆಸ ವಿಷಯವೆಂದರೆ ಮಂಗಳೂರ ಒಬ್ಬ shopoter ಅನ್ನು ಬೆಳಗವಿೊಲರುಂಧಿಸಿದ್ದಾರೆ",
+      "unconstrained": "ಆದರೆ ಇದೀಗ ಬೆಚ್ಚ ಬ ಬೆಳೆಸ ವಿಷಯವೆಂದರೆ ಮಂಗಳೂರ ಒಬ್ಬ shopoter ಅನ್ನು ಬೆಳಗவிೊಲರುಂಧಿಸಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933171980-640-m",
+      "constrained": "ಜಸ್ ಮಾತ್ರ ಅಲ್ಪಸಂಕ್ಯಾತರ ಬಗ್ಗೆ ವಿಶೇಷ ಕಾಳಜಿ ಹೊಂದಿದೆ ಎಂದರು",
+      "unconstrained": "जेडஸ் मात्र ಅಲ್ಪಸಂಕ್ಯಾತರ ಬಗ್ಗೆ ವಿಶೇಷ ಕಾಳಜಿ ಹೊಂದಿದೆ ಎಂದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424933176130-78-m",
+      "constrained": "ನೀವು ವಿ ಮತ್ತು ವಿಷಯವನ್ನು ನಿಮ್ಮ ಸೈಟ್ ಹೊರಗುತ್ತಿಗೆ ಯೋಜನೆ ಸಹ ಮುಖ್ಯ",
+      "unconstrained": "நீ विन ಮತ್ತು ವಿಷಯವನ್ನು ನಿಮ್ಮ ಸೈಟ್ ಹೊರಗುತ್ತಿಗೆ ಯೋಜನೆ ಸಹ ಮುಖ್ಯ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424930516541-217-f",
+      "constrained": "ಜತಿಗಳಿಗೆ ಜನಸಂಖ್ಯೆಯರು ಒಳ್ಳೆಯ ಮೀಸಲಾತಿ ವರ್ಗಿೀಕರಣಕ್ಕಾಗಿ ಮೂರು ದಶಕಗಳಿಂದಲೂ ನಿರಂತರವಾಗಿ ಹೋರಾಟ ನಡೆದದಿದೆ",
+      "unconstrained": "िसषಾತಿಗಳಿಗೆ ಜನಸಂಖ್ಯೆಯರು ಒಳ್ಳೆಯ ಮೀಸಲಾತಿ ವರ್ಗಿೀಕರಣಕ್ಕಾಗಿ ಮೂರು ದಶಕಗಳಿಂದಲೂ ನಿರಂತರವಾಗಿ ಹೋರಾಟ ನಡೆದದಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424931147293-863-f",
+      "constrained": "ಅರ್ವತ್ತರ ದಶಕದಲ್ಲಿ ಮಾರಾಟರಗಾರನಾಗಿರುವ ವಿಳಿಮನ್ ವಿಫಲ ವ್ಯಾಪಾರಿ ವ್ಯವಹಾರದ ಮನೆಗೆ ಹಿಂದಿರುಗುತ್ತನೆ",
+      "unconstrained": "ಅर्ವತ್ತರ ದಶಕದಲ್ಲಿ ಮಾರಾಟರಗಾರನಾಗಿರುವ ವಿಳಿಮನ್ ವಿஃபಲ ವ್ಯಾಪಾರಿ ವ್ಯವಹಾರದ ಮನೆಗೆ ಹಿಂದಿರುಗುತ್ತನೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_unknown/844424931049452-863-f",
+      "constrained": "ಮತ್ತು dress ಎಂಬೋಗಗಳೋಂಕುಗಳಿಂದಲೂ ಈ ಕಾಯಿಲೆ ಎಜರಾಗಬಹುದು",
+      "unconstrained": "हापस ಮತ್ತುெஸ் ಎಂಬೋಗಗಳೋಂಕುಗಳಿಂದಲೂ ಈ ಕಾಯಿಲೆ ಎಜರಾಗಬಹುದು"
+    }
+  ]
+}

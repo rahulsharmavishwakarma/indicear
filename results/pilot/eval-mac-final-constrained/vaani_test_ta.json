@@ -1,0 +1,202 @@
+{
+  "ta": {
+    "wer": 47.57,
+    "cer": 21.53,
+    "utterances": 600,
+    "words": 4721,
+    "script_error_rate": 0.48,
+    "wer_script_normalised": 47.34,
+    "rows_with_alternative_ref": 477,
+    "cm_utterances": 477,
+    "cm_spans": 1902,
+    "cm_span_accuracy": 81.39,
+    "cm_span_cer_mean": 27.18,
+    "cm_span_accuracy_by_lang": {
+      "en": 79.31,
+      "ta": 82.85
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.588
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "ta": {
+        "kn": 2,
+        "ta": 598
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 94,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 400,
+        "accuracy": 99.5
+      },
+      "5-10s": {
+        "utterances": 102,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 4,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_ta",
+  "utterances": 600,
+  "hours": 0.59,
+  "seconds": 22,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 157,
+  "changed_examples": [
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217551_038_Nilgiris-SPECIFIC_00577_622_5596",
+      "constrained": "இந்த picture ஒரு shop shopடு ms",
+      "unconstrained": "இந்த picture ஒரு shop shopோட ms"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217551_041_Nilgiris-SPECIFIC_01342_4452_9300",
+      "constrained": "அந்த hall நெறைய memberம்ப s இருக்காங்க எல்லாோருமே sittingtஸில் உட்ந்துருக்காங்க",
+      "unconstrained": "அந்த hall நெறைய memberம்பs இருக்காங்க எல்லாோருமே sittingtெஸில் உட்ந்துருக்காங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217551_046_Nilgiris-SPECIFIC_00547_12518_16148",
+      "constrained": "shop name உள்ள light wireருக்கு",
+      "unconstrained": "shopோட name உள்ள light wireருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217551_055_Nilgiris-SPECIFIC_00413_6596_9246",
+      "constrained": "நெறைய bikes இருக்கு autos இருக்கு",
+      "unconstrained": "ನ bikes இருக்கு autos இருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217551_058_Nilgiris-SPECIFIC_01717_1240_4809",
+      "constrained": "இந்த pictureச்ச ஒரு பெரிய ram இருக்கு ri இருக்கு",
+      "unconstrained": "இந்த pictureச்ச ஒரு பெரியram இருக்குri இருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217572_004_GENERIC_0190_6498_9388",
+      "constrained": "ச வந்து குழந்தை வளறதுக்கு வந்து நிறைய பொருள் வந்து வச்சுருக்காங்க",
+      "unconstrained": "यहाँ पेச வந்து குழந்தை வளறதுக்கு வந்து நிறைய பொருள் வந்து வச்சுருக்காங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217572_033_GENERIC_0130_802_4820",
+      "constrained": "இது பா அப்படின்னா வந்து ஒரு workoப்பில் வந்து இன்னை வந்து கட்டிட் இருக்காங்க",
+      "unconstrained": "இது பா அப்படின்னா வந்து ஒரு workாப்பில் வந்து இன்னை வந்து கட்டிட் இருக்காங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217572_059_Nilgiris-SPECIFIC_00550_3524_5062",
+      "constrained": "ஒருல பாத்தன ஒரு யானருக்கு",
+      "unconstrained": "ஒரு ತರ பாத்தன ஒரு யானருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217352_035_Nilgiris-SPECIFIC_01845_1088_6140",
+      "constrained": "இது ஒரு busar இந்த bazரில் ம sதி ஒன்னு அந்த பக்கத்துல இருக்கு",
+      "unconstrained": "இது ஒரு busar இந்த bazாரில் மsதி ஒன்னு அந்த பக்கத்துல இருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217352_040_GENERIC_1179_1194_5178",
+      "constrained": "டத்து ஒரு பெரிய ஒரு lock வச்சிருக்காங்க",
+      "unconstrained": "सड़कடத்து ஒரு பெரிய ஒருlock வச்சிருக்காங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217352_047_Nilgiris-SPECIFIC_00085_10580_14900",
+      "constrained": "nineing hallல எட்டு chair போட்டு ஒரு பெரிய timing table ஒன்னு இருக்கு",
+      "unconstrained": "nineingால எட்டு chair போட்டு ஒரு பெரிய timing table ஒன்னு இருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217352_051_Nilgiris-SPECIFIC_00613_20442_24192",
+      "constrained": "இல்லை எ ergenc hit ஒன்னு இருக்கு பக்கத்தில் switch போ ts எல்லாமே",
+      "unconstrained": "ಅಲ್ಲ எergencிit ஒன்னு இருக்கு பக்கத்தில் switch போts எல்லாமே"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217615_044_Nilgiris-SPECIFIC_01076_16528_19468",
+      "constrained": "ஆ windowஸ்லாம் பார்த்தீங்கன்னா glass type கொடுத்துருக்காங்க",
+      "unconstrained": "ಆ windowஸ்லாம் பார்த்தீங்கன்னா glass type கொடுத்துருக்காங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217615_054_GENERIC_1018_3770_5820",
+      "constrained": "ரெண்டு bike ஒன்னு நிட்ருக்க முன்னாடி",
+      "unconstrained": "ಅದರ ரெண்டு bike ஒன்னு நிட்ருக்க முன்னாடி"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217628_029_Nilgiris-SPECIFIC_01945_834_4756",
+      "constrained": "இங்க ஒரு வீடுடோட photo கொடுத்துருக்காங்க முன்னாடி டூ wheல er ஒன்னு இருக்கு",
+      "unconstrained": "இங்க ஒரு வீடுடோட photo கொடுத்துருக்காங்க முன்னாடி டூ wheலer ஒன்னு இருக்கு"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030217650_018_Nilgiris-SPECIFIC_01149_770_3102",
+      "constrained": "தூ பாி நிறையா மரம் இருக்குது",
+      "unconstrained": "दो பாி நிறையா மரம் இருக்குது"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030592769_038_GENERIC_0775_5706_8806",
+      "constrained": "ம colour yellow colour வெ colour போட்டு அங்கே வச்சுருக்குாங்க",
+      "unconstrained": "மಂ colour yellow colour வெ colour போட்டு அங்கே வச்சுருக்குாங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030592780_023_GENERIC_0218_3135_5406",
+      "constrained": "இது ஒரு un road",
+      "unconstrained": "இது ஒருun road"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030592832_003_Nilgiris-SPECIFIC_00626_9034_11694",
+      "constrained": "trainining table chair போட்டு வச்சிருக்காங்க",
+      "unconstrained": "ಿ trainining table chair போட்டு வச்சிருக்காங்க"
+    },
+    {
+      "key": "vaani/ta/test/IISc_VaaniProject_K_TamilNadu_Nilgiris_Nilgiris844425030592832_034_Nilgiris-SPECIFIC_01113_9654_14738",
+      "constrained": "பச்ச ஒரு seat போட்டு ஒரு இடருக்கு அதுக்கு கீழ ஒரு dining table மாதிரி ஒன்னு",
+      "unconstrained": "की பச்ச है ஒரு seat போட்டு ஒரு இடருக்கு அதுக்கு கீழ ஒரு dining table மாதிரி ஒன்னு"
+    }
+  ]
+}

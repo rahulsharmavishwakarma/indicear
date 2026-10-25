@@ -1,0 +1,133 @@
+{
+  "ta": {
+    "wer": 62.54,
+    "cer": 18.95,
+    "utterances": 300,
+    "words": 3155,
+    "script_error_rate": 3.53,
+    "wer_script_normalised": 62.16,
+    "cer_script_normalised": 18.6,
+    "rows_with_alternative_ref": 25,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.592
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ta": {
+        "ta": 299,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 28,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 246,
+        "accuracy": 99.59
+      },
+      "10-20s": {
+        "utterances": 26,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_ta",
+  "utterances": 300,
+  "hours": 0.59,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 177,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ta/noisy_test_unknown/844424930458027-556-f",
+      "constrained": "கட அல்லது படிவயோ இருவரும் க கண்டிப்பாகக வெண்பயான மடம்க்கத்தில் a வித perfbங்கள்",
+      "unconstrained": "కడవరు అ படிவயோ இருவரும் க கண்டிப்பாகக வெண்பயான மடம்യക്കത്തിൽ ആളത്തും விധപാട pർfbുകളെ പു",
+      "hinted": "கட அல்லது படிவயோ இருவரும் க கண்டிப்பாகக வெண்பயான மடம்க்கத்தில் a வித perfbங்கள்"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_unknown/844424930584021-1009-f",
+      "constrained": "wall அரையில் எத்தனைத்த பொருட்களட்கள் சதுர அல்லது சுற்று அல்லதுது கனமானவே என்பதை குழந்தையில் கேட்க",
+      "unconstrained": "వాల్క அரையில் எத்தனைத்த பொருட்களட்கள் சதுர அல்லது சுற்று அல்லதுது கனமானவே என்பதை குழந்தையில் கேட்க",
+      "hinted": "wall அரையில் எத்தனைத்த பொருட்களட்கள் சதுர அல்லது சுற்று அல்லதுது கனமானவே என்பதை குழந்தையில் கேட்க"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_unknown/844424930490980-1009-f",
+      "constrained": "சி ingல மொழியில் மாத்திரம் தேசியீதம் பாடப்படுகின்றமை குறித்து அலஸ் விளக்கம்",
+      "unconstrained": "ింల மொழியில் மாத்திரம் தேசியீதம் பாடப்படுகின்றமை குறித்து அலஸ் விளக்கம்",
+      "hinted": "சி ingல மொழியில் மாத்திரம் தேசியீதம் பாடப்படுகின்றமை குறித்து அலஸ் விளக்கம்"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_unknown/844424933243265-85-m",
+      "constrained": "இ கிராமத்தி ஒரு நனக்காக போராடிய சுங்கி போராட்ட வீரர் பாட்டக்குடிாணிியல் என்ற கற்பற்பணயான சுயசரிதை",
+      "unconstrained": "ఇప్పటి கிராமத்தி ஒரு நனக்காக போராடிய சுங்கி போராட்ட வீரர் பாட்டக்குடிாணிியல் என்ற கற்பற்பணயான சுயசரிதை",
+      "hinted": "இ கிராமத்தி ஒரு நனக்காக போராடிய சுங்கி போராட்ட வீரர் பாட்டக்குடிாணிியல் என்ற கற்பற்பணயான சுயசரிதை"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_unknown/844424930455384-471-f",
+      "constrained": "இந்தய்ற்கு பலரும் மீ எதிர் தெரிவித்ததால் குடித்த செய்தியை நீக்கத்தோடு மண்ணப்பும் கேட்டது",
+      "unconstrained": "இந்த చైற்கு பலரும் மீ எதிர் தெரிவித்ததால் குடித்த செய்தியை நீக்கத்தோடு மண்ணப்பும் கேட்டது",
+      "hinted": "இந்தய்ற்கு பலரும் மீ எதிர் தெரிவித்ததால் குடித்த செய்தியை நீக்கத்தோடு மண்ணப்பும் கேட்டது"
+    }
+  ]
+}

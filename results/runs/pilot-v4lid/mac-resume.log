@@ -1,0 +1,146 @@
+2026-10-24 11:19:54 resume_local: ~/workspace/sangam-asr/train/.venv/bin/python -m sangam.ablate --root ~/workspace/sangam-pilot-root train --lower live --variants v4+lid --train-hours 4700 --device mps --precision fp16
+[11:19:54] python 3.14.7, GIL off
+W1024 11:19:55.355000 34182 .venv/lib/python3.14t/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 53701.58it/s]
+[11:20:23] stream plan: indicvoices/hi 0.125, vaani/hi 0.087, kathbath/hi 0.037, indicvoices/ta 0.173, vaani/ta 0.018, kathbath/ta 0.038, indicvoices/kn 0.122, vaani/kn 0.069, kathbath/kn 0.038, librispeech/en 0.056, peoples_speech/en 0.056, voxpopuli/en 0.049, vaani/en 0.026, vaani/hi/cm 0.050, vaani/kn/cm 0.034, negative-floor/none/local 0.007, negative-hum/none/local 0.007, negative-synthetic-brown/none/local 0.002, negative-synthetic-pink/none/local 0.002, negative-synthetic-white/none/local 0.002
+[11:20:23] host: Apple M5 Pro (MPS), device mps, precision fp16, torch 2.14.1
+[11:20:23] augmentation in the main process on cpu (model on mps): 50% of rows, weights {'noise': 0.25, 'babble': 0.2, 'reverb': 0.175, 'reverb_pointnoise': 0.175, 'speed': 0.15, 'tel8k': 0.05}; codecs ['opus'] of ['gsm', 'opus', 'amr'] available on this host, on 15% of clips in 8 stream workers
+[11:20:23] WARNING: ffmpeg here cannot encode ['amr', 'gsm']; codec draws go to ['opus'] instead, so codec augmentation differs from a host that has them
+[11:20:23] python 3.14.7, GIL off; live training of v4+lid on pilot (620 h planned, target 4700 h of audio)
+[11:20:23] resuming from ckpt-00003788.pt (step 3788)
+[11:20:23] micro-batches: 4 per step of 67045 frames (auto for mps fp16; the checkpoint has 1 (cuda, auto)); losses normalized by the whole batch, so the accumulated gradient equals the one-piece gradient
+[11:20:23] rng: the checkpoint's CUDA generator state (1 device(s)) cannot be restored without CUDA; device-side randomness (SpecAugment masks) differs from the CUDA run
+[11:20:23] rng: no MPS generator state in the checkpoint; MPS generator seeded with 1831558866 (derived from the checkpoint's CPU generator state, so this resume is reproducible)
+[11:20:53] stream: 283 MB fetched, 9.3 MB/s (wall), 9.4 MB/s (while fetching), cache 0.3/40 GiB
+~/.local/share/uv/python/cpython-3.14.7+freethreaded-macos-aarch64-none/lib/python3.14t/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-5j8m52m0'}
+  warnings.warn(
+2026-10-24 11:38:59 resume_local: ~/workspace/sangam-asr/train/.venv/bin/python -m sangam.ablate --root ~/workspace/sangam-pilot-root train --lower live --variants v4+lid --train-hours 4700 --device mps --precision fp16
+[11:38:59] python 3.14.7, GIL off
+W1024 11:39:00.791000 40869 .venv/lib/python3.14t/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 49269.35it/s]
+[11:39:29] stream plan: indicvoices/hi 0.125, vaani/hi 0.087, kathbath/hi 0.037, indicvoices/ta 0.173, vaani/ta 0.018, kathbath/ta 0.038, indicvoices/kn 0.122, vaani/kn 0.069, kathbath/kn 0.038, librispeech/en 0.056, peoples_speech/en 0.056, voxpopuli/en 0.049, vaani/en 0.026, vaani/hi/cm 0.050, vaani/kn/cm 0.034, negative-floor/none/local 0.007, negative-hum/none/local 0.007, negative-synthetic-brown/none/local 0.002, negative-synthetic-pink/none/local 0.002, negative-synthetic-white/none/local 0.002
+[11:39:29] host: Apple M5 Pro (MPS), device mps, precision fp16, torch 2.14.1
+[11:39:29] augmentation in the main process on cpu (model on mps): 50% of rows, weights {'noise': 0.25, 'babble': 0.2, 'reverb': 0.175, 'reverb_pointnoise': 0.175, 'speed': 0.15, 'tel8k': 0.05}; codecs ['opus'] of ['gsm', 'opus', 'amr'] available on this host, on 15% of clips in 8 stream workers
+[11:39:29] WARNING: ffmpeg here cannot encode ['amr', 'gsm']; codec draws go to ['opus'] instead, so codec augmentation differs from a host that has them
+[11:39:29] python 3.14.7, GIL off; live training of v4+lid on pilot (620 h planned, target 4700 h of audio)
+[11:39:29] resuming from ckpt-00003788.pt (step 3788)
+[11:39:29] micro-batches: 4 per step of 67045 frames (auto for mps fp16; the checkpoint has 1 (cuda, auto)); losses normalized by the whole batch, so the accumulated gradient equals the one-piece gradient
+[11:39:29] rng: the checkpoint's CUDA generator state (1 device(s)) cannot be restored without CUDA; device-side randomness (SpecAugment masks) differs from the CUDA run
+[11:39:29] rng: no MPS generator state in the checkpoint; MPS generator seeded with 1831558866 (derived from the checkpoint's CPU generator state, so this resume is reproducible)
+[11:39:29] stream: 283 MB fetched, 2465.8 MB/s (wall), 253453.4 MB/s (while fetching), cache 0.3/40 GiB
+[11:40:34] stream: 1170 MB fetched, 17.9 MB/s (wall), 17.9 MB/s (while fetching), cache 1.1/40 GiB
+[11:41:39] stream: 2079 MB fetched, 15.9 MB/s (wall), 15.9 MB/s (while fetching), cache 1.9/40 GiB
+[11:42:54] stream: 2921 MB fetched, 14.2 MB/s (wall), 14.3 MB/s (while fetching), cache 2.7/40 GiB
+[11:47:03] stream: 6648 MB fetched, 14.6 MB/s (wall), 14.7 MB/s (while fetching), cache 6.2/40 GiB
+[11:48:26] stream: 7670 MB fetched, 14.3 MB/s (wall), 14.3 MB/s (while fetching), cache 7.1/40 GiB
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "~/workspace/sangam-asr/train/sangam/ablate.py", line 1121, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "~/workspace/sangam-asr/train/sangam/ablate.py", line 1116, in main
+    {"prep": cmd_prep, "cache": cmd_cache, "train": cmd_train, "eval": cmd_eval,
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     "report": cmd_report}[args.command](args)
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "~/workspace/sangam-asr/train/sangam/ablate.py", line 622, in cmd_train
+    return cmd_train_live(args)
+  File "~/workspace/sangam-asr/train/sangam/ablate.py", line 870, in cmd_train_live
+    summaries = LiveGroup(trainers).run()
+  File "~/workspace/sangam-asr/train/sangam/trainer.py", line 840, in run
+    return self._run(stop)
+           ~~~~~~~~~^^^^^^
+  File "~/workspace/sangam-asr/train/sangam/trainer.py", line 886, in _run
+    lead.stream.load_state_dict(first["sampler"]["stream"])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/workspace/sangam-asr/train/sangam/stream_train.py", line 300, in load_state_dict
+    self.loader.planner.load_state(state)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "~/workspace/sangam-asr/train/sangam/stream.py", line 601, in load_state
+    fetched[name] = stream.fetch(items)
+                    ~~~~~~~~~~~~^^^^^^^
+  File "~/workspace/sangam-asr/train/sangam/stream.py", line 420, in fetch
+    raise RuntimeError(f"{self.spec.name}: buffered row {(epoch, pos, row)} no longer reads back")
+RuntimeError: kathbath/hi: buffered row (2, 5, 1468) no longer reads back
+2026-10-24 11:51:33 resume_local: ~/workspace/sangam-asr/train/.venv/bin/python -m sangam.ablate --root ~/workspace/sangam-pilot-root train --lower live --variants v4+lid --train-hours 4700 --device mps --precision fp16 --lenient-stream-restore
+[11:51:33] python 3.14.7, GIL off
+W1024 11:51:34.397000 46012 .venv/lib/python3.14t/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 44974.57it/s]
+[11:52:02] stream plan: indicvoices/hi 0.125, vaani/hi 0.087, kathbath/hi 0.037, indicvoices/ta 0.173, vaani/ta 0.018, kathbath/ta 0.038, indicvoices/kn 0.122, vaani/kn 0.069, kathbath/kn 0.038, librispeech/en 0.056, peoples_speech/en 0.056, voxpopuli/en 0.049, vaani/en 0.026, vaani/hi/cm 0.050, vaani/kn/cm 0.034, negative-floor/none/local 0.007, negative-hum/none/local 0.007, negative-synthetic-brown/none/local 0.002, negative-synthetic-pink/none/local 0.002, negative-synthetic-white/none/local 0.002
+[11:52:02] host: Apple M5 Pro (MPS), device mps, precision fp16, torch 2.14.1
+[11:52:02] augmentation in the main process on cpu (model on mps): 50% of rows, weights {'noise': 0.25, 'babble': 0.2, 'reverb': 0.175, 'reverb_pointnoise': 0.175, 'speed': 0.15, 'tel8k': 0.05}; codecs ['opus'] of ['gsm', 'opus', 'amr'] available on this host, on 15% of clips in 8 stream workers
+[11:52:02] WARNING: ffmpeg here cannot encode ['amr', 'gsm']; codec draws go to ['opus'] instead, so codec augmentation differs from a host that has them
+[11:52:02] python 3.14.7, GIL off; live training of v4+lid on pilot (620 h planned, target 4700 h of audio)
+[11:52:02] resuming from ckpt-00003788.pt (step 3788)
+[11:52:02] micro-batches: 4 per step of 67045 frames (auto for mps fp16; the checkpoint has 1 (cuda, auto)); losses normalized by the whole batch, so the accumulated gradient equals the one-piece gradient
+[11:52:02] rng: the checkpoint's CUDA generator state (1 device(s)) cannot be restored without CUDA; device-side randomness (SpecAugment masks) differs from the CUDA run
+[11:52:02] rng: no MPS generator state in the checkpoint; MPS generator seeded with 1831558866 (derived from the checkpoint's CPU generator state, so this resume is reproducible)
+[11:52:26] stream: 283 MB fetched, 11.5 MB/s (wall), 11.6 MB/s (while fetching), cache 0.3/40 GiB
+[11:53:59] stream: 1711 MB fetched, 14.6 MB/s (wall), 14.6 MB/s (while fetching), cache 1.6/40 GiB
+[11:55:31] stream: 2921 MB fetched, 14.0 MB/s (wall), 14.0 MB/s (while fetching), cache 2.7/40 GiB
+~/.local/share/uv/python/cpython-3.14.7+freethreaded-macos-aarch64-none/lib/python3.14t/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-w6djdgrk'}
+  warnings.warn(
+2026-10-24 12:03:22 resume_local: ~/workspace/sangam-asr/train/.venv/bin/python -m sangam.ablate --root ~/workspace/sangam-pilot-root train --lower live --variants v4+lid --train-hours 4700 --device mps --precision fp16 --lenient-stream-restore
+[12:03:23] python 3.14.7, GIL off
+W1024 12:03:24.373000 50963 .venv/lib/python3.14t/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+
+Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 58820.63it/s]
+[12:03:52] stream plan: indicvoices/hi 0.125, vaani/hi 0.087, kathbath/hi 0.037, indicvoices/ta 0.173, vaani/ta 0.018, kathbath/ta 0.038, indicvoices/kn 0.122, vaani/kn 0.069, kathbath/kn 0.038, librispeech/en 0.056, peoples_speech/en 0.056, voxpopuli/en 0.049, vaani/en 0.026, vaani/hi/cm 0.050, vaani/kn/cm 0.034, negative-floor/none/local 0.007, negative-hum/none/local 0.007, negative-synthetic-brown/none/local 0.002, negative-synthetic-pink/none/local 0.002, negative-synthetic-white/none/local 0.002
+[12:03:52] host: Apple M5 Pro (MPS), device mps, precision fp16, torch 2.14.1
+[12:03:52] augmentation in the main process on cpu (model on mps): 50% of rows, weights {'noise': 0.25, 'babble': 0.2, 'reverb': 0.175, 'reverb_pointnoise': 0.175, 'speed': 0.15, 'tel8k': 0.05}; codecs ['opus'] of ['gsm', 'opus', 'amr'] available on this host, on 15% of clips in 8 stream workers
+[12:03:52] WARNING: ffmpeg here cannot encode ['amr', 'gsm']; codec draws go to ['opus'] instead, so codec augmentation differs from a host that has them
+[12:03:52] python 3.14.7, GIL off; live training of v4+lid on pilot (620 h planned, target 4700 h of audio)
+[12:03:52] resuming from ckpt-00003788.pt (step 3788)
+[12:03:52] micro-batches: 4 per step of 67045 frames (auto for mps fp16; the checkpoint has 1 (cuda, auto)); losses normalized by the whole batch, so the accumulated gradient equals the one-piece gradient
+[12:03:52] rng: the checkpoint's CUDA generator state (1 device(s)) cannot be restored without CUDA; device-side randomness (SpecAugment masks) differs from the CUDA run
+[12:03:52] rng: no MPS generator state in the checkpoint; MPS generator seeded with 1831558866 (derived from the checkpoint's CPU generator state, so this resume is reproducible)
+[12:03:52] stream: 283 MB fetched, 2403.9 MB/s (wall), 244327.0 MB/s (while fetching), cache 0.3/40 GiB
+[12:06:23] stream: 6648 MB fetched, 44.0 MB/s (wall), 44.1 MB/s (while fetching), cache 6.2/40 GiB
+[12:07:49] stream: 8155 MB fetched, 34.5 MB/s (wall), 34.6 MB/s (while fetching), cache 7.6/40 GiB
+[12:07:49] stream restore: 1 of 183 buffered rows are rejected by this host's filters and left out (by stream and reason: {'kathbath/hi:excluded_speaker': 1}); later batches differ from the original host's
+[12:07:49] run v4+lid: streamed data (live lower; group: v4+lid), budget 67045 frames, lr 1.83e-03, 7423 steps, starting at 3788, config 34ad89478fc81611
+[12:07:49] torch.compile (MPS): 12 tower layers and 3 heads, static frame buckets of 48 frames, dynamic batch; first steps per bucket include compilation
+[12:08:55] stream: 9413 MB fetched, 31.1 MB/s (wall), 23.4 MB/s (while fetching), cache 12.9/40 GiB
+[12:09:55] stream: 10275 MB fetched, 28.3 MB/s (wall), 20.2 MB/s (while fetching), cache 13.8/40 GiB
+[12:11:14] stream: 11235 MB fetched, 25.4 MB/s (wall), 17.4 MB/s (while fetching), cache 14.5/40 GiB
+[12:11:21] stream: 1 batches, 0.27 h of audio (2x real time), buffer 653/1800 s, consumer waited 212 s, eval-audio drops 0; network 25.0 MB/s, cache 14.5/40 GiB
+[12:11:27] features: GPU log-mel vs Hugging Face extractor on the first batch max |diff| = 4.77e-07, mask equal
+W1024 12:11:38.737000 50963 .venv/lib/python3.14t/site-packages/torch/_inductor/utils.py:1806] [0/0] Not enough SMs to use max_autotune_gemm mode
+[12:12:27] stream: 7 batches, 2.46 h of audio (17x real time), buffer 584/1800 s, consumer waited 214 s, eval-audio drops 0; network 23.8 MB/s, cache 15.4/40 GiB
+[12:12:51] stream: 12756 MB fetched, 23.7 MB/s (wall), 10.4 MB/s (while fetching), cache 15.4/40 GiB
+[12:13:32] stream: 13 batches, 4.76 h of audio (30x real time), buffer 898/1800 s, consumer waited 214 s, eval-audio drops 0; network 22.0 MB/s, cache 15.5/40 GiB
+[12:13:47] step=3800 epoch=0 loss=1.9448 ctc=1.8949 phonetic=1.7862 rnnt=nan consistency=nan lid_utt=0.6357 lid_frame=0.1888 lr=9.848e-04 frames_per_s=1097 peak_gib=13.54 splits=4 elapsed_s=358
+[12:15:29] stream: 13341 MB fetched, 19.1 MB/s (wall), 9.1 MB/s (while fetching), cache 15.5/40 GiB
+[12:20:43] stream: 13750 MB fetched, 13.6 MB/s (wall), 6.8 MB/s (while fetching), cache 15.9/40 GiB
+[12:25:39] received signal 15: checkpointing after this step
+[12:26:53] stream: 14234 MB fetched, 10.3 MB/s (wall), 5.0 MB/s (while fetching), cache 16.3/40 GiB
+[12:29:19] stream: 14605 MB fetched, 9.6 MB/s (wall), 4.0 MB/s (while fetching), cache 16.8/40 GiB
+[12:29:27] stream: 21 batches, 7.52 h of audio (18x real time), buffer 1737/1800 s, consumer waited 1129 s, eval-audio drops 0; network 9.5 MB/s, cache 17.2/40 GiB
+Error while downloading from https://huggingface.co/datasets/ai4bharat/Kathbath/resolve/5b9e92849222026d9141acba4e8434fe816396bf/kannada/train-00022-of-00033.parquet: peer closed connection without sending complete message body (received 93126487 bytes, expected 504952821)
+Trying to resume download...
+Error while downloading from https://huggingface.co/datasets/ai4bharat/Kathbath/resolve/5b9e92849222026d9141acba4e8434fe816396bf/kannada/train-00022-of-00033.parquet: peer closed connection without sending complete message body (received 82304265 bytes, expected 421066741)
+Trying to resume download...
+Error while downloading from https://huggingface.co/datasets/ai4bharat/Kathbath/resolve/5b9e92849222026d9141acba4e8434fe816396bf/kannada/train-00022-of-00033.parquet: peer closed connection without sending complete message body (received 82388971 bytes, expected 347666421)
+Trying to resume download...
+~/.local/share/uv/python/cpython-3.14.7+freethreaded-macos-aarch64-none/lib/python3.14t/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-pt7a4msq'}
+  warnings.warn(
+2026-10-24 13:13:03 resume_local: MPS cap 42 GiB (watermarks 0.810/0.710), torch threads 10 + 4 stream workers, nice 10, swap limit 8 GiB
+2026-10-24 13:13:03 resume_local: first ~/workspace/sangam-asr/train/.venv/bin/python -m sangam.ablate --root ~/workspace/sangam-pilot-root train --lower live --variants v4+lid --train-hours 4700 --prefetch-pool 
+2026-10-24 13:13:03 resume_local: ~/workspace/sangam-asr/train/.venv/bin/python -m sangam.ablate --root ~/workspace/sangam-pilot-root train --lower live --variants v4+lid --train-hours 4700 --device mps --precision fp16 --stream-workers 4 --keep-shards --lenient-stream-restore
+[13:13:04] python 3.14.7, GIL off, torch threads 10
+[13:13:04] stream plan: indicvoices/hi 0.125, vaani/hi 0.087, kathbath/hi 0.037, indicvoices/ta 0.173, vaani/ta 0.018, kathbath/ta 0.038, indicvoices/kn 0.122, vaani/kn 0.069, kathbath/kn 0.038, librispeech/en 0.056, peoples_speech/en 0.056, voxpopuli/en 0.049, vaani/en 0.026, vaani/hi/cm 0.050, vaani/kn/cm 0.034, negative-floor/none/local 0.007, negative-hum/none/local 0.007, negative-synthetic-brown/none/local 0.002, negative-synthetic-pink/none/local 0.002, negative-synthetic-white/none/local 0.002
+[13:13:04] pool: 10/152 shards, 5.5/67.9 GiB, 260775.3 MB/s (including files already present)
+[13:13:04] pool: 20/152 shards, 9.4/67.9 GiB, 445692.4 MB/s (including files already present)
+[13:13:04] pool: 30/152 shards, 13.7/67.9 GiB, 649418.4 MB/s (including files already present)
+[13:16:01] pool: 40/152 shards, 18.1/67.9 GiB, 109.9 MB/s (including files already present)
+[13:24:35] pool: 50/152 shards, 22.4/67.9 GiB, 34.7 MB/s (including files already present)
+[13:30:02] pool: 60/152 shards, 26.1/67.9 GiB, 27.5 MB/s (including files already present)
+[13:35:02] pool: 70/152 shards, 30.5/67.9 GiB, 24.8 MB/s (including files already present)

@@ -1,0 +1,201 @@
+{
+  "hi": {
+    "wer": 19.21,
+    "cer": 10.51,
+    "utterances": 600,
+    "words": 6762,
+    "script_error_rate": 0.57,
+    "wer_script_normalised": 19.12,
+    "rows_with_alternative_ref": 365,
+    "cm_utterances": 365,
+    "cm_spans": 1489,
+    "cm_span_accuracy": 91.74,
+    "cm_span_cer_mean": 13.09,
+    "cm_span_accuracy_by_lang": {
+      "en": 87.1,
+      "hi": 94.78
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.659
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 600
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 600,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 600,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 600,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 55,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 409,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 131,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 5,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_hi",
+  "utterances": 600,
+  "hours": 0.66,
+  "seconds": 23,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 66,
+  "changed_examples": [
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384934_053_Shamli-SPECIFIC_01971_9858_12164",
+      "constrained": "और बच्चे है और पर",
+      "unconstrained": "ஒரு बच्चे है ஒரு पर"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384944_019_Shamli-SPECIFIC_01822_3437_6176",
+      "constrained": "bike के पास में कुछ व्यक्ति खड़े हैं",
+      "unconstrained": "bikeों के पास में कुछ व्यक्ति खड़े हैं"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384972_030_Shamli-SPECIFIC_00378_10823_16138",
+      "constrained": "यहां पर दीवार पर एक l c c d लगी है जो कि camera से t",
+      "unconstrained": "यहां पर दीवार पर एक l c c d लगी है जो कि camera सेt"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384974_011_Shamli-SPECIFIC_00015_1798_11422",
+      "constrained": "कहीं सारी दुकान है दुकान पर एक दुकान paint हुआ है पीले colour का एक banner रखा हुआ है can सारे re है",
+      "unconstrained": "कहीं सारी दुकान है दुकान पर एक दुकान paint हुआ है पीले colour का एक banner रखा हुआ है can सारेre है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384982_021_Shamli-SPECIFIC_00484_8656_12047",
+      "constrained": "राबर में एक गाड़ी खड़ी हुई है",
+      "unconstrained": "ಒಬ್ಬರबर में एक गाड़ी खड़ी हुई है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030385008_027_GENERIC_0598_1922_5702",
+      "constrained": "चित्र में हमको बहुत सारे कपड़े दिखाई दे रहे है",
+      "unconstrained": "ಚಿತ್ರ में हमको बहुत सारे कपड़े दिखाई दे रहे है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030385008_054_Shamli-SPECIFIC_01560_7798_15412",
+      "constrained": "और यहां पर computer भी दरा हुआ है और light भी यहाँ पर लग रही है और पीछे यहाँ पर ool भी पड़ा हुआ है",
+      "unconstrained": "और यहां पर computer भी दरा हुआ है और light भी यहाँ पर लग रही है और पीछे यहाँ परool भी पड़ा हुआ है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384961_023_GENERIC_1025_322_6662",
+      "constrained": "वहां एक station और सामने एक train खड़ी हुई है",
+      "unconstrained": "वहां एक station್ಯಾ और सामने एक train खड़ी हुई है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384961_025_GENERIC_0326_7252_11182",
+      "constrained": "person सामने काफी सारे व्यक्ति दिख रही है",
+      "unconstrained": "பெரு सामने काफी सारे व्यक्ति दिख रही है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384961_027_GENERIC_0378_4344_10440",
+      "constrained": "b vi saree कुर्सियां रखी हुई है काफी विचारी में रखी हुई है",
+      "unconstrained": "b viಾ ಕುರ್ಚಿ रखी हुई है काफी विचारी में रखी हुई है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030605283_054_GENERIC_0509_5316_11308",
+      "constrained": "जैसे ano और भी तबब और कुछ सामान भी संगीत का रखा है",
+      "unconstrained": "जैसेano और भी तबब और कुछ सामान भी संगीत का रखा है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030605252_029_GENERIC_0157_5907_10878",
+      "constrained": "नीचे लाल रंग का carpet बिछा हुआ है सामने लोहे की riy लगी हुई है",
+      "unconstrained": "नीचे लाल रंग का carpet बिछा हुआ है सामने लोहे कीriy लगी हुई है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030605252_042_GENERIC_0411_7669_14988",
+      "constrained": "पीछे बहोत बड़ा ग घर दिखाई दे रहा है उस पर पीला और नीले रंग का colour किया हुआ है नीचे यहाँ पर पत्थर लगा हुआ",
+      "unconstrained": "पीछेಗೆ बहोत बड़ा ग घर दिखाई दे रहा है उस पर पीला और नीले रंग का colour किया हुआ है नीचे यहाँ पर पत्थर लगा हुआ"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030605283_019_Shamli-SPECIFIC_01974_8732_18675",
+      "constrained": "और इस त पर कुछ में मिठाइँ के डिब्बे रख रखे हैं ज्यादातर इसमें मिठाइय में so पापड़ दिखाई पड़ती है",
+      "unconstrained": "और इस त पर कुछ में मिठाइँ के डिब्बे रख रखे हैं ज्यादातर इसमें मिठाइय में soं पापड़ दिखाई पड़ती है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030605211_037_Shamli-SPECIFIC_00009_10690_17120",
+      "constrained": "बल भी लगा हुआ है और यहां पर बिजली तार भी जा",
+      "unconstrained": "ಬಲೀಲದ हुआ है और यहां पर बिजली तार भी जा"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384831_030_Shamli-SPECIFIC_01991_130_8510",
+      "constrained": "photo अंदर एक जिम का चित्र दिखाया गया है जिसमें सामने की तरफ कुछ व्यक्ति दिखाया गया हैं और नीचे एक mat बि जो का लाल और काले colour के line से बनी हुई है",
+      "unconstrained": "photo अंदर एक जिम का चित्र दिखाया गया है जिसमें सामने की तरफ कुछ व्यक्ति दिखाया गया हैं और नीचे एक mat बि जो का लाल और काले colour के lineों से बनी हुई है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030605211_058_GENERIC_1145_11946_16752",
+      "constrained": "में ये एक लल्ली yul पैूक खड़ा हुआ है",
+      "unconstrained": "में ये एक लल्लीyुल पैूक खड़ा हुआ है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384831_024_Shamli-SPECIFIC_01382_11970_16798",
+      "constrained": "और सामने की तरफ एक कुर्सी बड़ी जिस पर एक लड़का बैठा है और side में दीवारों प an लगी हुई है",
+      "unconstrained": "और सामने की तरफ एक कुर्सी बड़ी जिस पर एक लड़का बैठा है और side में दीवारों पan लगी हुई है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384195_014_Shamli-SPECIFIC_01693_6760_10615",
+      "constrained": "arow कीिशा में सामने की ओर एक बड़ा सा घना पेड़ है",
+      "unconstrained": "aो कीिशा में सामने की ओर एक बड़ा सा घना पेड़ है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384357_008_GENERIC_1300_13506_15988",
+      "constrained": "छतों में design भी बने हुए हैं",
+      "unconstrained": "ஒரு छतों में design भी बने हुए हैं"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+ "note": "Audio examples on the Hugging Face model card (samples/<name>.mp3, 16 kHz mono 48 kb/s, cut from the listed Vesper Indic Bench clips; no audio is stored in this repository). output and cer are Vesper-IndicEAR's, automatic language.",
+ "hi_read_kathbath": {
+  "set": "kathbath_clean_test_unknown_hi",
+  "key": "kathbath_test/hi/clean_test_unknown/844424930927698-574-f",
+  "source_repo": "https://github.com/AI4Bharat/IndicSUPERB",
+  "licence": "CC-BY-4.0",
+  "seconds": 7.546,
+  "reference": "रामलाल कहते हैं किसी तरह पीड़िता को मदद मिल गई इसका उन्हें संतोष है",
+  "output": "रामल कहते हैं किसी तरह पीढ़ता को मदद मिल गई इसका उन्हेंने संतोष है",
+  "language": "hi",
+  "cer": 8.96
+ },
+ "hi_spontaneous_indicvoices": {
+  "set": "indicvoices_valid_hi",
+  "key": "indicvoices/hi/valid/5348024557878871_chunk_18",
+  "source_repo": "ai4bharat/IndicVoices",
+  "licence": "CC-BY-4.0",
+  "seconds": 7.95,
+  "reference": "इसका मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता है इस वजह से ये भी एक अपराध ही है",
+  "output": "मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता इस वजह से ये भी एक अपधी है",
+  "language": "hi",
+  "cer": 10.43
+ },
+ "hi_en_photo_vaani": {
+  "set": "vaani_test_hi",
+  "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384831_033_Shamli-SPECIFIC_01797_66_6430",
+  "source_repo": "ARTPARK-IISc/Vaani-transcription-part",
+  "licence": "CC-BY-4.0",
+  "seconds": 6.364,
+  "reference": "इस फोटो के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे पहिए बने हुए हैं",
+  "output": "इस photo के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे पइिया बने हुए हैं",
+  "language": "hi",
+  "cer": 7.34
+ },
+ "hi_en_technical_indiccontext": {
+  "set": "indiccontext_hi_code_mixed",
+  "key": "indiccontext_eval/hi/test/7318349394490472_0_3",
+  "source_repo": "ai4bharat/IndicContextEval",
+  "licence": "CC-BY-4.0",
+  "seconds": 7.552,
+  "reference": "अब ये forces market को काफ़ी complete बनाती है जहाँ differentiation और cost का leadership दोनों पे pressure होता है",
+  "output": "अब ये foodurces market को काफ़ी comp बनाती है जहाँ differenceiiation और cost leadersship दोनों पर presure है",
+  "language": "hi",
+  "cer": 18.26
+ }
+}

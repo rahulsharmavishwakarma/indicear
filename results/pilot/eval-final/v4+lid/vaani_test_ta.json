@@ -1,0 +1,115 @@
+{
+  "kind": "eval",
+  "system": "v4+lid",
+  "set": "vaani_test_ta",
+  "condition": null,
+  "notes": "",
+  "utterances": 2960,
+  "hours": 3.001,
+  "metrics": {
+    "ctc": {
+      "ta": {
+        "wer": 52.27,
+        "cer": 23.67,
+        "utterances": 2960,
+        "words": 24377,
+        "script_error_rate": 3.46,
+        "wer_script_normalised": 52.06,
+        "rows_with_alternative_ref": 2347,
+        "cm_utterances": 2346,
+        "cm_spans": 9547,
+        "cm_span_accuracy": 79.5,
+        "cm_span_cer_mean": 29.37,
+        "cm_span_accuracy_by_lang": {
+          "en": 77.07,
+          "ta": 81.19
+        },
+        "span_cer_threshold": 0.5,
+        "oov_recall": 3.74,
+        "oov_words": 1069,
+        "hours": 3.001
+      }
+    }
+  },
+  "lid": {
+    "utterance": {
+      "utterances": 2960,
+      "accuracy": 99.7,
+      "macro_f1": 99.85,
+      "per_lang": {
+        "ta": {
+          "precision": 100.0,
+          "recall": 99.7,
+          "f1": 99.85,
+          "support": 2960
+        }
+      },
+      "confusion": {
+        "ta": {
+          "en": 2,
+          "kn": 7,
+          "ta": 2951
+        }
+      },
+      "pairs": {
+        "hi/ur": {
+          "hi->ur": 0,
+          "ur->hi": 0,
+          "hi_utterances": 0,
+          "ur_utterances": 0,
+          "hi_as_ur_rate": null,
+          "ur_as_hi_rate": null
+        },
+        "hi/mr": {
+          "hi->mr": 0,
+          "mr->hi": 0,
+          "hi_utterances": 0,
+          "mr_utterances": 0,
+          "hi_as_mr_rate": null,
+          "mr_as_hi_rate": null
+        },
+        "pa/hi": {
+          "pa->hi": 0,
+          "hi->pa": 0,
+          "pa_utterances": 0,
+          "hi_utterances": 0,
+          "pa_as_hi_rate": null,
+          "hi_as_pa_rate": null
+        }
+      },
+      "by_duration": {
+        "0-2s": {
+          "utterances": 347,
+          "accuracy": 100.0
+        },
+        "2-5s": {
+          "utterances": 2065,
+          "accuracy": 99.61
+        },
+        "5-10s": {
+          "utterances": 532,
+          "accuracy": 99.81
+        },
+        "10-20s": {
+          "utterances": 16,
+          "accuracy": 100.0
+        }
+      }
+    },
+    "spans": {
+      "utterances": 2346,
+      "spans": 9547,
+      "span_accuracy": 31.47,
+      "sequence_accuracy": 4.82,
+      "frame_accuracy": null
+    }
+  },
+  "environment": {
+    "runtime": "python 3.14.8, GIL off",
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "encoder": "google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd"
+  },
+  "frame_budget": 67045
+}

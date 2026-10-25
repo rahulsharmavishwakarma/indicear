@@ -1,0 +1,813 @@
+{
+ "lang": "gu",
+ "words": 81629,
+ "rewrites": 1298,
+ "per_1000_words": 15.9,
+ "types": 521,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "હોમવર્ક",
+   "en": "homework",
+   "path": "lexicon",
+   "row": 6842,
+   "context": "તમે આ વાત પર હોમવર્ક કરીએ છીએ",
+   "verdict": "correct"
+  },
+  {
+   "native": "પેસેન્જર",
+   "en": "passenger",
+   "path": "lexicon",
+   "row": 1601,
+   "context": "ઉપરાંત સેન્ટ્રલ રેલવે પેસેન્જર એસોસિયેશનનાં હોદ્દેદાર તરીકે કામગીરીનો",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફિલ્મ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 6822,
+   "context": "આ ફિલ્મ પર પ્રાથમિક કામ શરૂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઇલેક્ટ્રોનિક",
+   "en": "electronic",
+   "path": "lexicon",
+   "row": 5811,
+   "context": "ઇલેક્ટ્રોનિક એસ્પ્રીટર ઉપકરણનો આ પ્રકાર",
+   "verdict": "correct"
+  },
+  {
+   "native": "અપડેટ",
+   "en": "update",
+   "path": "lexicon",
+   "row": 1946,
+   "context": "જો અપડેટ ઉપલબ્ધ હોય તો તેને",
+   "verdict": "correct"
+  },
+  {
+   "native": "મેસેજ",
+   "en": "message",
+   "path": "lexicon",
+   "row": 5341,
+   "context": "શેર કરી એક ઈમોશનલ મેસેજ લખ્યો",
+   "verdict": "correct"
+  },
+  {
+   "native": "બોમ્બ",
+   "en": "bomb",
+   "path": "lexicon",
+   "row": 6719,
+   "context": "પોલીસ કમિશ્નર ઇ રાધાક્રિષ્ણને બોમ્બ લેટરની તપાસ ક્રાઇમ બ્રાન્ચને",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફિલ્મ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 5776,
+   "context": "સલમાન ખાનની ફિલ્મ ઈદ પર નહીં આવે",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટિકીટ",
+   "en": "ticket",
+   "path": "lexicon",
+   "row": 193,
+   "context": "સમક્ષ પણ સિટીંગ એમએલએને ટિકીટ નહી આપવાની રજુઆત કરી",
+   "verdict": "correct"
+  },
+  {
+   "native": "મીડિયા",
+   "en": "media",
+   "path": "lexicon",
+   "row": 6115,
+   "context": "સોશિયલ મીડિયા પર એક્ટ્રેસિસને ઘણી વાર",
+   "verdict": "correct"
+  },
+  {
+   "native": "બ્લડ",
+   "en": "blood",
+   "path": "lexicon",
+   "row": 47,
+   "context": "કે ખાવાનું પચવાની પ્રક્રિયા બ્લડ ગ્રુપ પર જ નિર્ભર",
+   "verdict": "correct"
+  },
+  {
+   "native": "બર્થડે",
+   "en": "birthday",
+   "path": "lexicon",
+   "row": 6525,
+   "context": "આજે તેના બર્થડે પર જાણો એવી વાતો",
+   "verdict": "correct"
+  },
+  {
+   "native": "નંબર",
+   "en": "number",
+   "path": "lexicon",
+   "row": 6537,
+   "context": "ધ્યાનમાં રાખવું જોઈએ કે નંબર સાત પૂર્ણ કરવાની સંખ્યા",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઓફિશિયલ",
+   "en": "official",
+   "path": "lexicon",
+   "row": 2111,
+   "context": "સાનિયાએ આ વીડિયોને પોતાના ઓફિશિયલ ઈન્સ્ટાગ્રામ અકાઉંટ પર શેર",
+   "verdict": "correct"
+  },
+  {
+   "native": "સ્ટાર",
+   "en": "star",
+   "path": "lexicon",
+   "row": 6477,
+   "context": "સ્ટાર પ્લસના શો યે હૈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "રિલાયન્સ",
+   "en": "reliance",
+   "path": "lexicon",
+   "row": 5385,
+   "context": "જ્યારથી રિલાયન્સ જિયો લોન્ચ થયું છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "મીડિયા",
+   "en": "media",
+   "path": "lexicon",
+   "row": 22,
+   "context": "એક પોસ્ટ માટે સોશિયલ મીડિયા પર ઘણી ચર્ચામાં રહી",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફિલ્મ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 928,
+   "context": "ફિલ્મ આખી વાતને અલગ અંદાજથી",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઇન્ટરવ્યૂ",
+   "en": "interview",
+   "path": "lexicon",
+   "row": 5444,
+   "context": "ઇન્ટરવ્યૂ લેનારી વ્યક્તિની ચાલાકી છતાં",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટાર્ગેટ",
+   "en": "target",
+   "path": "lexicon",
+   "row": 1924,
+   "context": "એકઠી કરવાનો રાજ્ય સરકારે ટાર્ગેટ નક્કિ કર્યો છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "રજિસ્ટર",
+   "en": "register",
+   "path": "lexicon",
+   "row": 6532,
+   "context": "પછી તમે કાનૂની એન્ટિટી રજિસ્ટર કરવાની જરૂર છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "લાઈટ",
+   "en": "light",
+   "path": "lexicon",
+   "row": 2210,
+   "context": "હોવા છતાં પાલિકાના સતાવાળાઓને લાઈટ ચાલુ કરવાની ફૂરસદ મળી",
+   "verdict": "correct"
+  },
+  {
+   "native": "મોડલ્સ",
+   "en": "models",
+   "path": "lexicon",
+   "row": 5808,
+   "context": "આકૃતિના પ્રકાર પર આધારિત મોડલ્સ પસંદ કરી શકે છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "નેટવર્ક",
+   "en": "network",
+   "path": "lexicon",
+   "row": 5662,
+   "context": "માથાભારે ઇસમે ખનીજ ચોરી નેટવર્ક ઉભુ કર્યુ હોવાનુ લોકોનુ",
+   "verdict": "correct"
+  },
+  {
+   "native": "આર્ટિકલ",
+   "en": "article",
+   "path": "lexicon",
+   "row": 809,
+   "context": "કારણે બીએસપીએ સંસદમાં આ આર્ટિકલ હટાવવાનું સમર્થન કર્યું છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટેરેસ",
+   "en": "terrace",
+   "path": "lexicon",
+   "row": 3898,
+   "context": "ટેરેસ દક્ષીણ ટેરેસ પૂર્વ ટેરેસ અને પશ્ચિમ ટેરેસ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઇન્ટરનેટ",
+   "en": "internet",
+   "path": "lexicon",
+   "row": 5445,
+   "context": "ભંડોળને માત્ર ઇન્ટરનેટ પર જ નહીં પણ",
+   "verdict": "correct"
+  },
+  {
+   "native": "મીડિયા",
+   "en": "media",
+   "path": "lexicon",
+   "row": 5480,
+   "context": "સોનમે સોશિયલ મીડિયા પર નામ બદલીને ઝોયા",
+   "verdict": "correct"
+  },
+  {
+   "native": "સોફ્ટ",
+   "en": "soft",
+   "path": "lexicon",
+   "row": 6053,
+   "context": "સોફ્ટ રમકડાં અને યાર્ન બને",
+   "verdict": "correct"
+  },
+  {
+   "native": "શોર્ટ",
+   "en": "short",
+   "path": "lexicon",
+   "row": 653,
+   "context": "નિફ્ટી પુટ ઓપ્શનમાં શોર્ટ પોઝિશન ન લેવાનું હિતાવહ",
+   "verdict": "correct"
+  },
+  {
+   "native": "રેસ્ટોરેન્ટ",
+   "en": "restaurant",
+   "path": "lexicon",
+   "row": 4061,
+   "context": "આ રેસ્ટોરેન્ટ્સ માં માર્સ રેસ્ટોરેન્ટ ના સંજય નારંગ સાથે",
+   "verdict": "correct"
+  },
+  {
+   "native": "પ્રોટીન",
+   "en": "protein",
+   "path": "lexicon",
+   "row": 1428,
+   "context": "તો દરેક પ્રકારનાં કઠોળમાં પ્રોટીન ભારોભાર હોય છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "વીડિયો",
+   "en": "video",
+   "path": "lexicon",
+   "row": 1565,
+   "context": "જેનો વીડિયો કોઈએ શૂટ કરી સોશિયલ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફિલ્મ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 1195,
+   "context": "ફિલ્મ સ્ટાર અવની મોદીની વિશેષ",
+   "verdict": "correct"
+  },
+  {
+   "native": "મેડમ",
+   "en": "madam",
+   "path": "lexicon",
+   "row": 255,
+   "context": "કામવાળીની વાત સાંભળીને મેડમ ઉતાવળે બાલ્કની તરફ દોડ્યા",
+   "verdict": "correct"
+  },
+  {
+   "native": "વોટર",
+   "en": "water",
+   "path": "lexicon",
+   "row": 4432,
+   "context": "જ્યારે વોટર સ્પોર્ટસનું આયોજન વેલચેરી એક્વાટીક",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઈસ્ટ",
+   "en": "east",
+   "path": "lexicon",
+   "row": 2676,
+   "context": "આ અધિનિયમ દ્વારા ઈસ્ટ ઈન્ડિયા કંપનીની તમામ વ્યાપારિક",
+   "verdict": "correct"
+  },
+  {
+   "native": "જ્યૂસ",
+   "en": "juice",
+   "path": "lexicon",
+   "row": 6742,
+   "context": "કોઈપણ ફળો અથવા શાકભાજીમાંથી જ્યૂસ બનાવી શકાય છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "ગાર્ડન",
+   "en": "garden",
+   "path": "lexicon",
+   "row": 6240,
+   "context": "ગાર્ડન ફેંગ શુઇ તમારા બગીચામાં",
+   "verdict": "correct"
+  },
+  {
+   "native": "સેવન",
+   "en": "seven",
+   "path": "lexicon",
+   "row": 4456,
+   "context": "પેશીઓનું સર્જન કરવા ડ્રગ્સનું સેવન કર્યું હતું",
+   "verdict": "wrong",
+   "note": "સેવન = consumption (ડ્રગ્સનું સેવન), not 'seven'"
+  },
+  {
+   "native": "ટ્રાફિક",
+   "en": "traffic",
+   "path": "lexicon",
+   "row": 302,
+   "context": "તમામ રાજમાર્ગો પર રિતસર ટ્રાફિક જામ જેવા દ્રશ્યો સર્જાયા",
+   "verdict": "correct"
+  },
+  {
+   "native": "વેબસાઈટ",
+   "en": "website",
+   "path": "lexicon",
+   "row": 4303,
+   "context": "કોઈ જાહેરખબરની કંપની બે વેબસાઈટ પર બેનરો મુકે તો",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટાર્ગેટ",
+   "en": "target",
+   "path": "lexicon",
+   "row": 5062,
+   "context": "માટે પોલિસ્ટ્રીન પેકિંગ મોટો ટાર્ગેટ છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઓફર",
+   "en": "offer",
+   "path": "lexicon",
+   "row": 2185,
+   "context": "કરતા ઘણી મોટી રકમ ઓફર કરી છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "વીડિયો",
+   "en": "video",
+   "path": "lexicon",
+   "row": 5807,
+   "context": "સાથે અશ્લીલ ફોટો અને વીડિયો બનાવ્યા હતા",
+   "verdict": "correct"
+  },
+  {
+   "native": "પ્લાન્ટ",
+   "en": "plant",
+   "path": "lexicon",
+   "row": 965,
+   "context": "રૂપિયાનાં ખર્ચે વોટર ટ્રીટમેન્ટ પ્લાન્ટ બનાવવામાં આવ્યો હતો",
+   "verdict": "correct"
+  },
+  {
+   "native": "વેબસાઇટ્સ",
+   "en": "websites",
+   "path": "lexicon",
+   "row": 6280,
+   "context": "આ કંપનીઓના વેબસાઇટ્સ પર તમે તેમના સાધનો",
+   "verdict": "correct"
+  },
+  {
+   "native": "શેમ્પુ",
+   "en": "shampoo",
+   "path": "lexicon",
+   "row": 138,
+   "context": "હોટલના રુમમાંથી શેમ્પુ અને ટૂવાલ ચોરી થવા",
+   "verdict": "correct"
+  },
+  {
+   "native": "જનરલ",
+   "en": "general",
+   "path": "lexicon",
+   "row": 786,
+   "context": "જનરલ એસેમ્બલી અંદાજપત્રને મંજૂરી આપે",
+   "verdict": "correct"
+  },
+  {
+   "native": "ડાઉનલોડ",
+   "en": "download",
+   "path": "lexicon",
+   "row": 1537,
+   "context": "તેમાં તમે ડાઉનલોડ કરેલી તમામ એપ્સની યાદી",
+   "verdict": "correct"
+  },
+  {
+   "native": "વીડિયો",
+   "en": "video",
+   "path": "lexicon",
+   "row": 7063,
+   "context": "અમદાવાદમાં આરોપીએ લોકઅપમાં વીડિયો બનાવ્યાની ઘટના સામે આવી",
+   "verdict": "correct"
+  },
+  {
+   "native": "પ્રીમિયમ",
+   "en": "premium",
+   "path": "lexicon",
+   "row": 929,
+   "context": "જણાવશે ફીડ પસંદગી સુપર પ્રીમિયમ વ્યાવસાયિક બ્રાન્ડ પસંદગી આપવી",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફ્રેન્ડ",
+   "en": "friend",
+   "path": "lexicon",
+   "row": 6210,
+   "context": "પાંડે સુહાનાની ઘણી સારી ફ્રેન્ડ છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "વેબસાઇટ",
+   "en": "website",
+   "path": "lexicon",
+   "row": 5748,
+   "context": "ઇ કોમર્સ વેબસાઇટ એમેઝોન ફેબ ફોન ફેસ્ટ",
+   "verdict": "correct"
+  },
+  {
+   "native": "સ્માર્ટ",
+   "en": "smart",
+   "path": "lexicon",
+   "row": 337,
+   "context": "રૂપાળી અને ખૂબ જ સ્માર્ટ લાગતી હતી",
+   "verdict": "correct"
+  },
+  {
+   "native": "સ્ટેટ",
+   "en": "state",
+   "path": "lexicon",
+   "row": 3281,
+   "context": "ગામમાં પોસ્ટ ઓફિસ તથા સ્ટેટ બેન્ક ઓફ ઇન્ડિયાની શાખા",
+   "verdict": "correct"
+  },
+  {
+   "native": "પ્રોજેક્ટ",
+   "en": "project",
+   "path": "lexicon",
+   "row": 2404,
+   "context": "આ પ્રોજેક્ટ મહિલા જીવનચરિત્ર મહિલા કાર્યો",
+   "verdict": "correct"
+  },
+  {
+   "native": "એલર્ટ",
+   "en": "alert",
+   "path": "lexicon",
+   "row": 4123,
+   "context": "અને લોકશાહી માટે વ્યાપારિક એલર્ટ અભિયાનો",
+   "verdict": "correct"
+  },
+  {
+   "native": "નેશનલ",
+   "en": "national",
+   "path": "lexicon",
+   "row": 4671,
+   "context": "તેમણે નેશનલ નેગ્રો બિઝનેસ લીગનું સર્જન",
+   "verdict": "correct"
+  },
+  {
+   "native": "કોર્પોરેશન",
+   "en": "corporation",
+   "path": "lexicon",
+   "row": 5395,
+   "context": "તુર્કીની મદદ સાથે આ કોર્પોરેશન મોટા ફલીટ તૈયાર કરશે",
+   "verdict": "correct"
+  },
+  {
+   "native": "રિવર",
+   "en": "river",
+   "path": "lexicon",
+   "row": 6196,
+   "context": "જેમાં બજરંગદળના કાર્યકર્તાઓએ રિવર ફ્રન્ટ પર બેઠેલા કપલને",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફિલ્મ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 7133,
+   "context": "પંચે પીએમ નરેન્દ્ર મોદી ફિલ્મ જોઈ હતી",
+   "verdict": "correct"
+  },
+  {
+   "native": "અપલોડ",
+   "en": "upload",
+   "path": "lexicon",
+   "row": 5292,
+   "context": "પુત્ર શિવમે ઇંસ્ટાગ્રામ પર અપલોડ કરતાં ખુબ વાયરલ થયો",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઈમોશનલ",
+   "en": "emotional",
+   "path": "lexicon",
+   "row": 5341,
+   "context": "તસવીર શેર કરી એક ઈમોશનલ મેસેજ લખ્યો",
+   "verdict": "correct"
+  },
+  {
+   "native": "કાર્ડ",
+   "en": "card",
+   "path": "lexicon",
+   "row": 365,
+   "context": "સાથે એક સાથે મેમરી કાર્ડ પણ વાપરી શકાય છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "સિસ્ટમ",
+   "en": "system",
+   "path": "lexicon",
+   "row": 2033,
+   "context": "આ માહોલમાં અમેરિકાએ જનરલાઈઝ્ડ સિસ્ટમ ઓફ પ્રેફરન્સને પણ હથિયાર",
+   "verdict": "correct"
+  },
+  {
+   "native": "બોક્સ",
+   "en": "box",
+   "path": "lexicon",
+   "row": 6327,
+   "context": "ક્લબમાં યોજાયેલી ઇજીએમમાં બેલેટ બોક્સ ઉછળ્યા હતા અને બોગસ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ગર્લ્સ",
+   "en": "girls",
+   "path": "lexicon",
+   "row": 3689,
+   "context": "તેમનું ભણતર પાનબજાર ગર્લ્સ હાઇ સ્કૂલમાં થયું હતું",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફિલ્મ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 6918,
+   "context": "બન્ને ગુજરાતી ફિલ્મોએ ગુજરાતી ફિલ્મ ઈન્ડસ્ટ્રીઝમાં ડંકો વગાડ્યો છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટેક્સ્ટ",
+   "en": "text",
+   "path": "lexicon",
+   "row": 1460,
+   "context": "એક સંગઠિત અને આનંદપ્રદ ટેક્સ્ટ વાંચવા માટે ખાતરી કરો",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઈન્સ્ટાગ્રામ",
+   "en": "instagram",
+   "path": "lexicon",
+   "row": 4918,
+   "context": "વીડિયો રિષભ પંતે તેના ઈન્સ્ટાગ્રામ પર પોસ્ટ કર્યો છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "પ્રાઇમરી",
+   "en": "primary",
+   "path": "lexicon",
+   "row": 3040,
+   "context": "આ પ્રણાલિમાં પ્રાઇમરી જુનિયર સેકન્ડરી સ્કૂલ જેએસએસ",
+   "verdict": "correct"
+  },
+  {
+   "native": "કેબલ",
+   "en": "cable",
+   "path": "lexicon",
+   "row": 3376,
+   "context": "પિન્ટર કોમ્પ્યુટરની સાથે પ્રિન્ટર કેબલ અથવા યુ એસે બી",
+   "verdict": "correct"
+  },
+  {
+   "native": "ઓટોમેટિક",
+   "en": "automatic",
+   "path": "lexicon",
+   "row": 5467,
+   "context": "કહી શકો એટલે કે ઓટોમેટિક ગાઇડેડ વેહિકલ્સ",
+   "verdict": "correct"
+  },
+  {
+   "native": "મીડિયા",
+   "en": "media",
+   "path": "lexicon",
+   "row": 1209,
+   "context": "તૈમુરની દરેક એક્ટિવિટી સોશિયલ મીડિયા પર વાઈરલ થઈ જાય",
+   "verdict": "correct"
+  },
+  {
+   "native": "ડ્રાઇવ",
+   "en": "drive",
+   "path": "lexicon",
+   "row": 931,
+   "context": "મરીન ડ્રાઇવ પોલીસ આ વિશે ઍક્સિડન્ટનો",
+   "verdict": "correct"
+  },
+  {
+   "native": "કેમેરા",
+   "en": "camera",
+   "path": "lexicon",
+   "row": 5938,
+   "context": "કારણ કે બ્લ્યૂટૂથ અને કેમેરા બંને ફટાફટ બેટરી ડ્રેઇન",
+   "verdict": "correct"
+  },
+  {
+   "native": "હોસ્પિટલ",
+   "en": "hospital",
+   "path": "lexicon",
+   "row": 56,
+   "context": "પરિવારનાં લોકોએ હોસ્પિટલ અને ડોક્ટર પર કાર્યવાહી",
+   "verdict": "correct"
+  },
+  {
+   "native": "નંબર",
+   "en": "number",
+   "path": "lexicon",
+   "row": 2160,
+   "context": "શહેરીજનો માટે ટોલ ફ્રી નંબર જાહેર કરવામાં આવ્યો છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "સ્કૂલ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 7159,
+   "context": "છે કે તેમણે પ્રાઈવેટ સ્કૂલ ક્યાં આધાર ઉપર ચાલવા",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફેશન",
+   "en": "fashion",
+   "path": "lexicon",
+   "row": 5404,
+   "context": "સર્જનાત્મક બ્રાન્ડ માર્ક જેકબ ફેશન પ્રકાશકોમાં રસ ધરાવે છે",
+   "verdict": "correct"
+  },
+  {
+   "native": "નેટવર્ક",
+   "en": "network",
+   "path": "lexicon",
+   "row": 1148,
+   "context": "તમે નેટવર્ક કન્ટ્રોલ પેનલમાં ફરી આ",
+   "verdict": "correct"
+  },
+  {
+   "native": "એડવાન્સ",
+   "en": "advance",
+   "path": "lexicon",
+   "row": 5894,
+   "context": "કંપનીઓના મોટાભાગના કર્મચારીઓ અમેરિકાની એડવાન્સ ડિગ્રી ધરાવતા હોતા નથી",
+   "verdict": "correct"
+  },
+  {
+   "native": "હાર્ડ",
+   "en": "hard",
+   "path": "lexicon",
+   "row": 242,
+   "context": "હાર્ડ ચીઝ અને લેક્ટોઝ ફ્રી",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટ્રાફિક",
+   "en": "traffic",
+   "path": "lexicon",
+   "row": 3656,
+   "context": "ટ્રાફિક ઓછો કરવા માટે એક",
+   "verdict": "correct"
+  },
+  {
+   "native": "ક્લબ",
+   "en": "club",
+   "path": "lexicon",
+   "row": 6670,
+   "context": "જર્મનીમાં સારી ક્લબ માટે રમી રહ્યો હતો",
+   "verdict": "correct"
+  },
+  {
+   "native": "વોટર",
+   "en": "water",
+   "path": "lexicon",
+   "row": 1307,
+   "context": "હુસેનાબીબીને આધાર કાર્ડ અને વોટર આઈડી પણ આપ્યું છે",
+   "verdict": "wrong",
+   "note": "વોટર here is 'voter' (વોટર આઈડી), not 'water'"
+  },
+  {
+   "native": "એન્ડ",
+   "en": "and",
+   "path": "lexicon",
+   "row": 1943,
+   "context": "ઇમારત કોલેજ ઓફ આર્ટસ એન્ડ સાયન્સીઝ તેમજ માર્કકુલા સેન્ટર",
+   "verdict": "correct"
+  },
+  {
+   "native": "મીડિયા",
+   "en": "media",
+   "path": "lexicon",
+   "row": 1452,
+   "context": "સોશિયલ મીડિયા પર હાલમાં એક વીડિયો",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફાર્મ",
+   "en": "farm",
+   "path": "lexicon",
+   "row": 6421,
+   "context": "આથી બકરાપાલકોએ તેમના ફાર્મ પર નીચે આપેલી દૈનિક",
+   "verdict": "correct"
+  },
+  {
+   "native": "વાલ્વ",
+   "en": "valve",
+   "path": "lexicon",
+   "row": 3484,
+   "context": "એન્ટીસર્જ ડાઇવર્ટર બાયપાસ બ્લોઓફ વાલ્વ બીઓવી અથવા ડમ્પ વાલ્વ",
+   "verdict": "correct"
+  },
+  {
+   "native": "મેસેજ",
+   "en": "message",
+   "path": "lexicon",
+   "row": 908,
+   "context": "કોશિશ જેવી થશે ગ્રાહકને મેસેજ મળી જશે",
+   "verdict": "correct"
+  },
+  {
+   "native": "બ્લોક",
+   "en": "block",
+   "path": "lexicon",
+   "row": 5032,
+   "context": "આ જોયું તો તેને બ્લોક કરી દીધો",
+   "verdict": "correct"
+  },
+  {
+   "native": "સ્ટુડિયો",
+   "en": "studio",
+   "path": "lexicon",
+   "row": 552,
+   "context": "સ્ટુડિયો નિયંત્રણ ખંડમાંથી દૂરસ્થ નિયંત્રણ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ક્લબ",
+   "en": "club",
+   "path": "lexicon",
+   "row": 3983,
+   "context": "શેફિલ્ડ ફૂટબોલ ક્લબ એક પ્રખ્યાત અંગ્રેજી ફૂટબોલ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફર્સ્ટ",
+   "en": "first",
+   "path": "lexicon",
+   "row": 3064,
+   "context": "હેડસેટ્સ ફર્સ્ટ અને બિઝનેસ ક્લાસના મુસાફરો",
+   "verdict": "correct"
+  },
+  {
+   "native": "ટેબલ",
+   "en": "table",
+   "path": "lexicon",
+   "row": 4861,
+   "context": "અહીં ઓસ્ટ્રેલિયામાં એડિડાસ તેમના ટેબલ ટેનિસ જૂતા માટે જાણીતા",
+   "verdict": "correct"
+  },
+  {
+   "native": "સેકટર",
+   "en": "sector",
+   "path": "lexicon",
+   "row": 767,
+   "context": "ભારતમાં તમામ સેકટર કૃષિ સેકટરને આધારીત જોવા",
+   "verdict": "correct"
+  },
+  {
+   "native": "મીડિયા",
+   "en": "media",
+   "path": "lexicon",
+   "row": 2259,
+   "context": "પ્રેમ આપવા માટે અમે મીડિયા અને ચાહકોનો પણ આભાર",
+   "verdict": "correct"
+  },
+  {
+   "native": "ફ્રેક્ચર",
+   "en": "fracture",
+   "path": "lexicon",
+   "row": 5249,
+   "context": "સિગફ્રાઇડ તેને અને જીત ફ્રેક્ચર દુષ્ટ જાદુગર પાંખ સાથે",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 98.0
+}

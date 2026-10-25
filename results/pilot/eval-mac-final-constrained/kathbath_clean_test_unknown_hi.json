@@ -1,0 +1,194 @@
+{
+  "hi": {
+    "wer": 35.13,
+    "cer": 15.82,
+    "utterances": 600,
+    "words": 7029,
+    "script_error_rate": 2.85,
+    "wer_script_normalised": 35.13,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.922
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 600
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 600,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 600,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 600,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 228,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 369,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 3,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_hi",
+  "utterances": 600,
+  "hours": 0.92,
+  "seconds": 28,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 136,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424933454606-288-m",
+      "constrained": "उन्होंनेने का अधिकारीिक रूप से तलाक नहीं लिया",
+      "unconstrained": "ोने का अधिकारीिक रूप से तलाक नहीं लिया"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930621896-620-f",
+      "constrained": "राज छोड़ने वाले स्थानीयियों लोगों की ट ticket को कैती बा माना जाएगा",
+      "unconstrained": "ा छोड़ने वाले स्थानीयियों लोगों की ट ticketिक को कैती बा माना जाएगा"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424932406215-532-m",
+      "constrained": "उे लगातार ternet connectivity के बिना पुरा नहीं हो सकता",
+      "unconstrained": "उे लगातारternet connectivity के बिना पुरा नहीं हो सकता"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424932410135-267-f",
+      "constrained": "मुख्य नियमों और विनमों के एक न का पालनन करने के लिए है",
+      "unconstrained": "ಮುಖ್ಯ ಬಾತ್ नಯಮों और विनमों के एक न का पालनन करने के लिए है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930621922-620-f",
+      "constrained": "तस्वीरसीदारर ने जमीननों केि reportट तैयार कर collectर के पास भेज है",
+      "unconstrained": "तस्वीरसीदारर ने जमीननों केि reportोट तैयार कर collectर के पास भेज है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930966738-564-f",
+      "constrained": "धोका धड़ी जबलपुर नू s जबुललपुर तार््जा समााचार जबलपुर न news हिंदी क्षेत्री समाजाचार",
+      "unconstrained": "धोका धड़ी जबलपुर नूs जबुललपुर तार््जा समााचार जबलपुर न news हिंदी क्षेत्री समाजाचार"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930325484-497-f",
+      "constrained": "और इस तरफ प पीुश ग गयाल ने पूरे देश को किया सरप्र se",
+      "unconstrained": "और इस तरफ प पीुश ग गयाल ने पूरे देश को किया सरप्रse"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424932314848-730-m",
+      "constrained": "सूत्रों के मुताबविक्रृगट का mannderer को हटाना इस मामले को ठंडा करने की कोशिश है",
+      "unconstrained": "सूत्रों के मुताबविक्रृगट काmannderer को हटाना इस मामले को ठंडा करने की कोशिश है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930570514-160-f",
+      "constrained": "बताया जा रहा है कि touristस्ट की हत्या तीर मार कर er की गई है",
+      "unconstrained": "बताया जा रहा है कि toूरistस्ट की हत्या तीर मार करer की गई है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930634258-620-f",
+      "constrained": "रिलीिस से पहले आमरान किया saf की इस फिल्म m का भी review",
+      "unconstrained": "ರಿಲೀिಸ್ से पहले आमरान किया saf की इस फिल्मm का भी review"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930918906-564-f",
+      "constrained": "इस योजना का संचालन एसास project के जरियिए होगा",
+      "unconstrained": "इस योजना का संचालन एसास project्ट के जरियिए होगा"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930929554-1190-f",
+      "constrained": "जो प्लाज़माा बचता है उसको फ farmaटिकल कंपनियों को बे बेच दिया जाता है",
+      "unconstrained": "जो प्लाज़माा बचता है उसको फ farmaूटिकल कंपनियों को बे बेच दिया जाता है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424931190209-526-m",
+      "constrained": "जाम लगा रहे छात्रों ने किया पुलिस पर पथराव",
+      "unconstrained": "ஜ जाम लगा रहे छात्रों ने किया पुलिस पर पथराव"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424933470001-312-m",
+      "constrained": "ये ज़्यादातर्रिटि ra bench ज gर्मन uch और नारववे के हैं",
+      "unconstrained": "ये ज़्यादातर्रिटिra bench ज gर्मनuch और नारववे के हैं"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930929596-1190-f",
+      "constrained": "होलंड ने भी अबद तक खित किताब नहीं जीता है",
+      "unconstrained": "ಹ होलंड ने भी अबद तक खित किताब नहीं जीता है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424930570583-160-f",
+      "constrained": "कश्मरियों के आत निर्ण की अधिका पर कुठाारााँत हो रहा है",
+      "unconstrained": "ಕಾश्மरियों के आत निर्ण की अधिका पर कुठाारााँत हो रहा है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424933474135-540-m",
+      "constrained": "हाइब्रिड थियरी की तरह ही अनंदत मिटोा साबित हुआ",
+      "unconstrained": "ஹ हाइब्रिड थियरी की तरह ही अनंदत मिटोा साबित हुआ"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424932919585-1202-f",
+      "constrained": "पाटीी का केवल एक हि हैक्ष है विधानसभा चुनाव की जीत",
+      "unconstrained": "ರ್ಟಿಕ केवल एक हि हैक्ष है विधानसभा चुनाव की जीत"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424933474168-540-m",
+      "constrained": "पुंजी बाजार में लंबी अौध के निवेश के b पोषन के लिए बनाया गया",
+      "unconstrained": "ूंजी बाजार में लंबी अौध के निवेश के b पोषन के लिए बनाया गया"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_unknown/844424933471306-312-m",
+      "constrained": "शरीर मेंोध न ही जमता पर शरीर से बाहर में निकलते हैंु झमे लगता है",
+      "unconstrained": "ச शरीर मेंोध न ही जमता पर शरीर से बाहर में निकलते हैंु झमे लगता है"
+    }
+  ]
+}

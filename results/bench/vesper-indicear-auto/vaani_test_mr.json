@@ -1,0 +1,143 @@
+{
+  "mr": {
+    "wer": 57.19,
+    "cer": 26.76,
+    "utterances": 300,
+    "words": 4387,
+    "script_error_rate": 1.11,
+    "wer_script_normalised": 57.17,
+    "cer_script_normalised": 26.73,
+    "rows_with_alternative_ref": 213,
+    "cm_utterances": 213,
+    "cm_spans": 1036,
+    "cm_span_accuracy": 76.54,
+    "cm_span_cer_mean": 32.04,
+    "cm_span_accuracy_by_lang": {
+      "en": 82.84,
+      "mr": 71.95
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.506
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 96.67,
+    "macro_f1": 98.31,
+    "per_lang": {
+      "mr": {
+        "precision": 100.0,
+        "recall": 96.67,
+        "f1": 98.31,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "mr": {
+        "bn": 5,
+        "hi": 2,
+        "mr": 290,
+        "or": 1,
+        "pa": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 2,
+        "hi_utterances": 0,
+        "mr_utterances": 300,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": 0.67
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 16,
+        "accuracy": 93.75
+      },
+      "2-5s": {
+        "utterances": 110,
+        "accuracy": 92.73
+      },
+      "5-10s": {
+        "utterances": 140,
+        "accuracy": 99.29
+      },
+      "10-20s": {
+        "utterances": 34,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_mr",
+  "utterances": 300,
+  "hours": 0.51,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 157,
+  "changed_examples": [
+    {
+      "key": "vaani/mr/test/IISc_VaaniProject_S_Jharkhand_Sahebganj_88927_10569095_GENERIC_0932_9216_19959",
+      "constrained": "त्या दप्तरांमधी रंगभी रंग colour से दप्तर राहेत आजूबाला एक building आहे ती building पांढऱ्या रंगचे आहे आणि ते buildinging खूप मोठी आहे वती निळा रंगाचा आका आहे",
+      "unconstrained": "त्या दप्तरांमधी रंगभी रंग colour से दप्तर राहेत आजूबाला एक building आहे ती building पांढऱ्या रंगचे आहे आणि ते buildingिंग खूप मोठी आहे वती निळा रंगाचा आका आहे",
+      "hinted": "त्या दप्तरांमधी रंगभी रंग colour से दप्तर राहेत आजूबाला एक building आहे ती building पांढऱ्या रंगचे आहे आणि ते buildinging खूप मोठी आहे वती निळा रंगाचा आका आहे"
+    },
+    {
+      "key": "vaani/mr/test/IISc_VaaniProject_M_Karnataka_Belgaum_45526388_1341390000_Belgaum-SPECIFIC_00709_1824_5770",
+      "constrained": "वाता झालं आहे पावसच्या शक्य दिसतत",
+      "unconstrained": "ఉండ ക वाता झालं आहे पावसच्या शक्य दिसतत",
+      "hinted": "वाता झालं आहे पावसच्या शक्य दिसतत"
+    },
+    {
+      "key": "vaani/mr/test/IISc_VaaniProject_M_Karnataka_Belgaum_45526388_1304370000_Belgaum-SPECIFIC_00393_1600_12256",
+      "constrained": "glass ofe of सफाई चालू आहे दोन वे दोनिस er class मधून आतीतध्ये येत आहेत त्या classस्यामधोर एकाच building दिसतीह त्या खाली stand हैहे आण्याला",
+      "unconstrained": "glass ofe of सफाई चालू आहे दोन वे दोनिसer class मधून आतीतध्ये येत आहेत त्या classस्यामधोर एकाच buildingिसतीह त्या खाली stand हैहे आण्याला",
+      "hinted": "glass ofe of सफाई चालू आहे दोन वे दोनिस er class मधून आतीतध्ये येत आहेत त्या classस्यामधोर एकाच building दिसतीह त्या खाली stand हैहे आण्याला"
+    },
+    {
+      "key": "vaani/mr/test/IISc_VaaniProject_M_Karnataka_Belgaum_45526388_1321560000_Belgaum-SPECIFIC_00878_480_7424",
+      "constrained": "ma बाजार भरले आहे असेी समुदतूरिक घेऊन येऊन इथे weekकलीतेहे",
+      "unconstrained": "మాंचा बाजार भरले आहे असेी समुदतूरिक घेऊन येऊन इथे weekकलीतेहे",
+      "hinted": "ma बाजार भरले आहे असेी समुदतूरिक घेऊन येऊन इथे weekकलीतेहे"
+    },
+    {
+      "key": "vaani/mr/test/IISc_VaaniProject_M_Karnataka_Belgaum_Pooj61913_1615300000_GENERIC_0230_7674_13537",
+      "constrained": "प कष्ट करूनस्थ la होण्यासाठी प्रयत्न करात आहे",
+      "unconstrained": "ूप कष्ट करूनस्थla होण्यासाठी प्रयत्न करात आहे",
+      "hinted": "प कष्ट करूनस्थ la होण्यासाठी प्रयत्न करात आहे"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "gu": {
+    "wer": 42.5,
+    "cer": 21.89,
+    "utterances": 300,
+    "words": 5045,
+    "script_error_rate": 1.77,
+    "wer_script_normalised": 42.42,
+    "cer_script_normalised": 21.82,
+    "rows_with_alternative_ref": 146,
+    "cm_utterances": 141,
+    "cm_spans": 706,
+    "cm_span_accuracy": 76.91,
+    "cm_span_cer_mean": 30.69,
+    "cm_span_accuracy_by_lang": {
+      "en": 70.81,
+      "gu": 81.37
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.615
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 94.67,
+    "macro_f1": 97.26,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 94.67,
+        "f1": 97.26,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "gu": {
+        "bn": 2,
+        "gu": 284,
+        "hi": 2,
+        "ml": 1,
+        "mr": 7,
+        "te": 2,
+        "ur": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 53,
+        "accuracy": 77.36
+      },
+      "2-5s": {
+        "utterances": 42,
+        "accuracy": 92.86
+      },
+      "5-10s": {
+        "utterances": 126,
+        "accuracy": 99.21
+      },
+      "10-20s": {
+        "utterances": 79,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_gu",
+  "utterances": 300,
+  "hours": 0.61,
+  "seconds": 25,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": "the row's language"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "ml": {
+    "wer": 84.06,
+    "cer": 30.78,
+    "utterances": 300,
+    "words": 3206,
+    "script_error_rate": 17.03,
+    "wer_script_normalised": 82.63,
+    "cer_script_normalised": 29.43,
+    "rows_with_alternative_ref": 58,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.809
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "ml": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ml": {
+        "ml": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 2,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 169,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 129,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_ml",
+  "utterances": 300,
+  "hours": 0.81,
+  "seconds": 26,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 287,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ml/clean_test_known/844424930336740-985-m",
+      "constrained": "പ്ര or brand വെളിാക്കിിയ രകസ്യംൂ upപ്ര ra ശുപദനാക്കുകയും അദ്ദേഹം നാട്ടിലേക്ക് തിരിക്കാൻാൻ പതിതിുകയും ചെയ്യുന്നു",
+      "unconstrained": "ప్రవர் brand വെളിാക്കിിയ രകസ്യംൂupപ്രra ശുപദനാക്കുകയും അദ്ദേഹം നാട്ടിലേക്ക് തിരിക്കാൻാൻ പതിതിുകയും ചെയ്യുന്നു",
+      "hinted": "പ്ര or brand വെളിാക്കിിയ രകസ്യംൂ upപ്ര ra ശുപദനാക്കുകയും അദ്ദേഹം നാട്ടിലേക്ക് തിരിക്കാൻാൻ പതിതിുകയും ചെയ്യുന്നു"
+    },
+    {
+      "key": "kathbath_test/ml/clean_test_known/844424930520220-1145-m",
+      "constrained": "കാണുന്നതിനാൾ വലിയ vote കച്ചവടം നടതിന്െളിാണ് ബിജ പിയുടെ നില",
+      "unconstrained": "புறமே കാണുന്നതിനാൾ വലിയ vote കച്ചവടം നടതിന്െളിാണ് ബിജ പിയുടെ നില",
+      "hinted": "കാണുന്നതിനാൾ വലിയ vote കച്ചവടം നടതിന്െളിാണ് ബിജ പിയുടെ നില"
+    },
+    {
+      "key": "kathbath_test/ml/clean_test_known/844424930985283-187-f",
+      "constrained": "super captain eon മോ gan പന്തൽപ്പിച്ചപ്പോൾ കൃത്യമായ plannങ്ങോയാണ് താൻ ball ചെയ്തതെന്ന് locky വെളിടപ്പെടുത്തത്തി",
+      "unconstrained": "superਪవਵിൽ capਪtain eon മോgan పന്തൽപ്പിച്ചപ്പോൾ കൃത്യമായ plannങ്ങോയാണ് താൻ ball ചെയ്തതെന്ന് locky വെളിടപ്പെടുത്തത്തി",
+      "hinted": "super captain eon മോ gan പന്തൽപ്പിച്ചപ്പോൾ കൃത്യമായ plannങ്ങോയാണ് താൻ ball ചെയ്തതെന്ന് locky വെളിടപ്പെടുത്തത്തി"
+    },
+    {
+      "key": "kathbath_test/ml/clean_test_known/844424931292558-420-f",
+      "constrained": "പ്രവർത്തനാഹുല്യത്തിൽ മൂല്യങ്ങൾ നഷ്പ്പെടരത്തു നല്ല മാതൃകകളാണ് ഈ കാലഘട്ടത്തിൻ്റെ ആവശ്യമെന്ന മ mararവാണിയുറക്കൽ സചിപ്പിച്ച",
+      "unconstrained": "ప్రవർത്തతനാഹുല്യത്തിൽ മൂല്യങ്ങൾ നഷ്പ്പെടരത്തു നല്ല മാതൃകകളാണ് ഈ കാലഘട്ടത്തിൻ്റെ ആവശ്യമെന്ന മ mararവാണിയുറക്കൽ സചിപ്പിച്ച",
+      "hinted": "പ്രവർത്തനാഹുല്യത്തിൽ മൂല്യങ്ങൾ നഷ്പ്പെടരത്തു നല്ല മാതൃകകളാണ് ഈ കാലഘട്ടത്തിൻ്റെ ആവശ്യമെന്ന മ mararവാണിയുറക്കൽ സചിപ്പിച്ച"
+    },
+    {
+      "key": "kathbath_test/ml/clean_test_known/844424931115418-653-f",
+      "constrained": "carortണിലൂടെ കുരഷിനെയാണ് അവഹേളിച്ചതെന്ന് march ഉദ്ഗാടനം ചെയ്തകൊണ്ട തൃശൂർ അതരൂപത സഹായ എത്രത്രാൻ tony നീലങ്കിൽ പറഞ്ഞു",
+      "unconstrained": "carর্tోണിലൂടെ കുരഷിനെയാണ് അവഹേളിച്ചതെന്ന് march ഉദ്ഗാടനം ചെയ്തകൊണ്ട തൃശൂർ അതരൂപത സഹായ എത്രത്രാൻ tony നീലങ്കിൽ പറഞ്ഞു",
+      "hinted": "carortണിലൂടെ കുരഷിനെയാണ് അവഹേളിച്ചതെന്ന് march ഉദ്ഗാടനം ചെയ്തകൊണ്ട തൃശൂർ അതരൂപത സഹായ എത്രത്രാൻ tony നീലങ്കിൽ പറഞ്ഞു"
+    }
+  ]
+}

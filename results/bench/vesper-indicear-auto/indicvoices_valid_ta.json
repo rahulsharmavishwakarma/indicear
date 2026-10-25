@@ -1,0 +1,148 @@
+{
+  "ta": {
+    "wer": 57.21,
+    "cer": 24.17,
+    "utterances": 300,
+    "words": 3763,
+    "script_error_rate": 1.95,
+    "wer_script_normalised": 57.21,
+    "cer_script_normalised": 24.15,
+    "rows_with_alternative_ref": 150,
+    "cm_utterances": 138,
+    "cm_spans": 653,
+    "cm_span_accuracy": 71.98,
+    "cm_span_cer_mean": 36.14,
+    "cm_span_accuracy_by_lang": {
+      "en": 72.97,
+      "ta": 71.15
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.497
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 90.33,
+    "macro_f1": 94.92,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 90.33,
+        "f1": 94.92,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ta": {
+        "bn": 5,
+        "gu": 1,
+        "hi": 1,
+        "kn": 1,
+        "ml": 9,
+        "or": 1,
+        "pa": 2,
+        "ta": 271,
+        "te": 8,
+        "ur": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 74,
+        "accuracy": 67.57
+      },
+      "2-5s": {
+        "utterances": 70,
+        "accuracy": 92.86
+      },
+      "5-10s": {
+        "utterances": 99,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 57,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_ta",
+  "utterances": 300,
+  "hours": 0.5,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 149,
+  "changed_examples": [
+    {
+      "key": "indicvoices/ta/valid/3096224744085317_chunk_1",
+      "constrained": "சின்ன குழந்தைழயாக இருக்க முதலன்னு சின்ன வயசு வந்து நான் வந்து gardenனி ing வந்து தோட்டன்றறதுக்கு வந்து orangeஞ்சுட்டேன் ஏ எப்படி எனக்கு செடிவில் வந்து அப்போலேமே ரொம்ப பிடிக்கும் அதே மாதிரி வந்து",
+      "unconstrained": "તમે சின்ன குழந்தைழயாக இருக்க முதலன்னு சின்ன வயசு வந்து நான் வந்து gardenனிing வந்து தோட்டன்றறதுக்கு வந்து orangeஞ்சுட்டேன் ஏ எப்படி எனக்கு செடிவில் வந்து அப்போலேமே ரொம்ப பிடிக்கும் அதே மாதிரி வந்து",
+      "hinted": "சின்ன குழந்தைழயாக இருக்க முதலன்னு சின்ன வயசு வந்து நான் வந்து gardenனி ing வந்து தோட்டன்றறதுக்கு வந்து orangeஞ்சுட்டேன் ஏ எப்படி எனக்கு செடிவில் வந்து அப்போலேமே ரொம்ப பிடிக்கும் அதே மாதிரி வந்து"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744204666_chunk_1",
+      "constrained": "for time வந்து நாங்கள் வந்துெல் போயிருந்தோம் அப்போ வந்து போயிட்டுருக்கு போது சென்னை வரைக்கும் வரைக்கும் அதுவு தெரிய வைல டெல் போக",
+      "unconstrained": "पर time வந்து நாங்கள் வந்துெல் போயிருந்தோம் அப்போ வந்து போயிட்டுருக்கு போது சென்னை வரைக்கும் வரைக்கும் அதுவு தெரிய வைல டெல் போக",
+      "hinted": "for time வந்து நாங்கள் வந்துெல் போயிருந்தோம் அப்போ வந்து போயிட்டுருக்கு போது சென்னை வரைக்கும் வரைக்கும் அதுவு தெரிய வைல டெல் போக"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744204666_chunk_3",
+      "constrained": "புாமல் இருக்கும் போது என்ன பண்ணுறதேனே தெரியல அப்புறம் எங்கள் reட்டி வந்து ஒரு எங்கள் மாமா இருந்தா",
+      "unconstrained": "ਪੁாமல் இருக்கும் போது என்ன பண்ணுறதேனே தெரியல அப்புறம் எங்கள் reட்டி வந்து ஒரு எங்கள் மாமா இருந்தா",
+      "hinted": "புாமல் இருக்கும் போது என்ன பண்ணுறதேனே தெரியல அப்புறம் எங்கள் reட்டி வந்து ஒரு எங்கள் மாமா இருந்தா"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744152416_chunk_2",
+      "constrained": "குறிப்பிட்ட timeக்கு அளவான சாப்பாடு தான் சாப்பிடணும் தண்ணி அதிகமாக குடிக்கணும் அப்படிங்கிற மாதிரி நிறைய உடலாோக்கத்துக்கு சம்மந்தமான நிறைய நல்ல கருத்துழ வந்துட்டு எங்களுக்கு சொல்லி கொடுத்தாங்க",
+      "unconstrained": "ಕುರುಪட்ட timeுக்கு அளவான சாப்பாடு தான் சாப்பிடணும் தண்ணி அதிகமாக குடிக்கணும் அப்படிங்கிற மாதிரி நிறைய உடலாோக்கத்துக்கு சம்மந்தமான நிறைய நல்ல கருத்துழ வந்துட்டு எங்களுக்கு சொல்லி கொடுத்தாங்க",
+      "hinted": "குறிப்பிட்ட timeக்கு அளவான சாப்பாடு தான் சாப்பிடணும் தண்ணி அதிகமாக குடிக்கணும் அப்படிங்கிற மாதிரி நிறைய உடலாோக்கத்துக்கு சம்மந்தமான நிறைய நல்ல கருத்துழ வந்துட்டு எங்களுக்கு சொல்லி கொடுத்தாங்க"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_2",
+      "constrained": "ஆ இங்கே பல்டத்து இருந்து பேசுகிறங்க",
+      "unconstrained": "ஆ ಹ పల్లடத்து இருந்து பேசுகிறங்க",
+      "hinted": "ஆ இங்கே பல்டத்து இருந்து பேசுகிறங்க"
+    }
+  ]
+}

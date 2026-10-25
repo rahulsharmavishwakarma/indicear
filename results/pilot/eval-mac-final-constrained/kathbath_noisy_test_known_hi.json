@@ -1,0 +1,194 @@
+{
+  "hi": {
+    "wer": 37.33,
+    "cer": 17.11,
+    "utterances": 600,
+    "words": 7232,
+    "script_error_rate": 3.57,
+    "wer_script_normalised": 37.33,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.984
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 600
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 600,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 600,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 600,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 210,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 375,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 15,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_hi",
+  "utterances": 600,
+  "hours": 0.98,
+  "seconds": 27,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 165,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930588012-252-f",
+      "constrained": "सामने वाले की आँखों में आखे डालकरुलॉन fidडेंस के साथ बात करना चाहिए",
+      "unconstrained": "सामने वाले की आँखों में आखे डालकरुलॉनfidडेंस के साथ बात करना चाहिए"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424933559060-558-m",
+      "constrained": "पीप पररत है सर हो रखा हुआ है",
+      "unconstrained": "पीपற பरत है सर हो रखा हुआ है"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931082360-736-f",
+      "constrained": "प्रसााध नेॉ ckdnन को लेकर लाहुल गाधी पर झूट फैलाने का रोप लगा",
+      "unconstrained": "प्रसााध नेॉckdnन को लेकर लाहुल गाधी पर झूट फैलाने का रोप लगा"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930325015-261-f",
+      "constrained": "इसके अलावा अन्य विभागों में भी बड़ी संख्या मैंने निवासी चिकित्सक है",
+      "unconstrained": "इसके अलावा अन्य विभाಾಗगों में भी बड़ी संख्या मैंने निवासी चिकित्सक है"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931184530-261-f",
+      "constrained": "ब्लैक पावर movementमेंट का आधार शिलाश्वक्षा के लिए blackक पेंथर partर्टी y थी",
+      "unconstrained": "ब्लैक पावರ್ movementमेंट का आधार शिलाश्वक्षा के लिए blackक पेंथर partर्टीy थी"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424932607761-727-f",
+      "constrained": "चीन के द दीग्गजच शल्ररिैन ren open में उठलटेर शिकार हो गए",
+      "unconstrained": "चीन के द दीग्गजच शल्ररिैनren open में उठलटेर शिकार हो गए"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931177508-164-f",
+      "constrained": "सममक्षा को समझने के लिए स्वादिष्ट एक या अन्य aयर lineन feed में मदद मिलेगी",
+      "unconstrained": "सममक्षा को समझने के लिए स्वादिष्ट एक या अन्य aयरlineन feed में मदद मिलेगी"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930651455-929-m",
+      "constrained": "विडियो में मोदी बीच पर फैला कचड़ा उठाकर एकत्र करते दिख रहे हैं",
+      "unconstrained": "ीडियो में मोदी बीच पर फैला कचड़ा उठाकर एकत्र करते दिख रहे हैं"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931226822-164-f",
+      "constrained": "स pqस्थिति की मांग कर कर रहा है विपक्ष",
+      "unconstrained": "சதன்மை பிஎம்கிस्थिति की मांग कर कर रहा है विपक्ष"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930660848-929-m",
+      "constrained": "इसको बनाने में ईवांका ट्र rमप ने महत्वपूर्णण भूमा अदा की थी",
+      "unconstrained": "इसको बनाने में ईवांका ट्रrमप ने महत्वपूर्णण भूमा अदा की थी"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424932349807-384-f",
+      "constrained": "कुछ लोगों में selfie का नशाशा होता है वे कई बार selfie लेते हैं",
+      "unconstrained": "कुछ लोगों में selfीe का नशाशा होता है वे कई बार selfie लेते हैं"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931194283-1059-m",
+      "constrained": "मुख्यंत्री नेरा मिल अदान को सुपष सोण अभिन के लिए दिया",
+      "unconstrained": "मुख्यंत्रಂತ್ರಿ नेರ್रा मिल अदान को सुपष सोण अभिन के लिए दिया"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931038802-1059-m",
+      "constrained": "राधिा अपटेक को सुप star रजनान के oppo opposit fil मिल गई है",
+      "unconstrained": "राधिा अपटेक को सुपstar रजनान के oppo opposit fil मिल गई है"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931162198-164-f",
+      "constrained": "एक सुशन सिंह राजजपूत कीौत से हर कोई सदमे में हैं है",
+      "unconstrained": "ಆಕ್ सुशन सिंह राजजपूत कीौत से हर कोई सदमे में हैं है"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930940252-252-f",
+      "constrained": "सोध ने जानकारी के बदत्कारियों को फटार लगाई है",
+      "unconstrained": "சோனிய காध ने जानकारी के बदत्कारियों को फटार लगाई है"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931153814-164-f",
+      "constrained": "कैरीियाई द धमाकेदार बल्लेबाज क्रिस गेल पहले ही विवादों में चल रहे हैं",
+      "unconstrained": "ಕ ಕೆರಿಿई द धमाकेदार बल्लेबाज क्रिस गेल पहले ही विवादों में चल रहे हैं"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930553024-261-f",
+      "constrained": "मुंई आतंवादी हमो के मामले रहना को ही जल",
+      "unconstrained": "ಮುंई आतंवादी हमो के मामले रहना को ही जल"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424930875008-1059-m",
+      "constrained": "वाट्सप लोगों के बीच सबसे ज़्यादा पसंद किए जाने वाले आप है",
+      "unconstrained": "ाट्सप लोगों के बीच सबसे ज़्यादा पसंद किए जाने वाले आप है"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931220692-164-f",
+      "constrained": "सभी खुशी कपूर के acting क्षेत्र में आने का बे service से इंतजार कर रही हैं",
+      "unconstrained": "सभी खुशी कपूर के act्टing क्षेत्र में आने का बे service से इंतजार कर रही हैं"
+    },
+    {
+      "key": "kathbath_test/hi/noisy_test_known/844424931162225-164-f",
+      "constrained": "सा तौर परऋण की मांग में तिमााई के अंत में तेजी आती है",
+      "unconstrained": "ಸಾಮಾನ तौर परऋण की मांग में तिमााई के अंत में तेजी आती है"
+    }
+  ]
+}

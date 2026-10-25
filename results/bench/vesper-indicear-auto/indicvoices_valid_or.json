@@ -1,0 +1,148 @@
+{
+  "or": {
+    "wer": 54.87,
+    "cer": 28.58,
+    "utterances": 300,
+    "words": 2916,
+    "script_error_rate": 3.06,
+    "wer_script_normalised": 54.8,
+    "cer_script_normalised": 28.5,
+    "rows_with_alternative_ref": 76,
+    "cm_utterances": 75,
+    "cm_spans": 303,
+    "cm_span_accuracy": 68.98,
+    "cm_span_cer_mean": 41.03,
+    "cm_span_accuracy_by_lang": {
+      "en": 63.11,
+      "or": 72.93
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.383
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 91.67,
+    "macro_f1": 95.65,
+    "per_lang": {
+      "or": {
+        "precision": 100.0,
+        "recall": 91.67,
+        "f1": 95.65,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "or": {
+        "bn": 4,
+        "gu": 3,
+        "hi": 4,
+        "kn": 2,
+        "ml": 2,
+        "or": 275,
+        "pa": 2,
+        "ta": 2,
+        "te": 4,
+        "ur": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 121,
+        "accuracy": 81.82
+      },
+      "2-5s": {
+        "utterances": 82,
+        "accuracy": 97.56
+      },
+      "5-10s": {
+        "utterances": 53,
+        "accuracy": 98.11
+      },
+      "10-20s": {
+        "utterances": 44,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_or",
+  "utterances": 300,
+  "hours": 0.38,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 140,
+  "changed_examples": [
+    {
+      "key": "indicvoices/or/valid/1688849860265745_chunk_1",
+      "constrained": "ମାନେ ବିଶ୍ୱସ କରନ୍ତି ଯେ ଉକ୍ତ ଆକକ୍ରମରଣ ପାଇଁ oଲ୍ାଇଲା ଯାଇ ଯାହା ଚେପନର ଲୋକଙ୍କର ପ୍ରାନ ନେଇଥିଲା ଏବଂ ପ୍ରାୟ ତିନିଶହଙ୍କୁ ଆହତ କରିଥିଲା",
+      "unconstrained": "और મને ବିଶ୍ୱସ କରନ୍ତି ଯେ ଉକ୍ତ ଆকକ୍ରମରଣ ପାଇଁ oଲ୍ାଇଲା ଯାଇ ଯାହା ଚେପନର ଲୋକଙ୍କର ପ୍ରାନ ନେଇଥିଲା ଏବଂ ପ୍ରାୟ ତିନିଶହଙ୍କୁ ଆହତ କରିଥିଲା",
+      "hinted": "ମାନେ ବିଶ୍ୱସ କରନ୍ତି ଯେ ଉକ୍ତ ଆକକ୍ରମରଣ ପାଇଁ oଲ୍ାଇଲା ଯାଇ ଯାହା ଚେପନର ଲୋକଙ୍କର ପ୍ରାନ ନେଇଥିଲା ଏବଂ ପ୍ରାୟ ତିନିଶହଙ୍କୁ ଆହତ କରିଥିଲା"
+    },
+    {
+      "key": "indicvoices/or/valid/1688849860614633_chunk_1",
+      "constrained": "ଗ୍ରାମ କୃଷି କୃଷିରେ କୁଷଳମି ଖୋଜିବା",
+      "unconstrained": "ഗ്രാമീ କୃଷି କୃଷିରେ କୁଷଳମି ଖୋଜିବା",
+      "hinted": "ଗ୍ରାମ କୃଷି କୃଷିରେ କୁଷଳମି ଖୋଜିବା"
+    },
+    {
+      "key": "indicvoices/or/valid/1688849860614633_chunk_6",
+      "constrained": "ଜାରି ରଖିବା",
+      "unconstrained": "জাରି ରଖିବା",
+      "hinted": "ଜାରି ରଖିବା"
+    },
+    {
+      "key": "indicvoices/or/valid/1688849860614633_chunk_9",
+      "constrained": "ଆଜି ଆଜିକାଲି ସମୟ",
+      "unconstrained": "आज ଆଜିକାଲି ସମୟ",
+      "hinted": "ଆଜି ଆଜିକାଲି ସମୟ"
+    },
+    {
+      "key": "indicvoices/or/valid/1688849860614633_chunk_10",
+      "constrained": "ପରିବର୍ତ୍ତନ ಹೆಚ್ಚತ್ತು",
+      "unconstrained": "ପରିବର୍ତ୍ତନ ಹೆಚ್ಚತ್ತು",
+      "hinted": "ପରିବର୍ତ୍ତନ ହେ"
+    }
+  ]
+}

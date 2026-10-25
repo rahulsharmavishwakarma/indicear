@@ -1,0 +1,132 @@
+{
+  "te": {
+    "wer": 66.29,
+    "cer": 21.73,
+    "utterances": 300,
+    "words": 3257,
+    "script_error_rate": 7.21,
+    "wer_script_normalised": 64.38,
+    "cer_script_normalised": 19.66,
+    "rows_with_alternative_ref": 81,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.633
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "te": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "te": {
+        "te": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 31,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 226,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 43,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_te",
+  "utterances": 300,
+  "hours": 0.63,
+  "seconds": 23,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 154,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/te/noisy_test_known/844424930397662-1103-f",
+      "constrained": "ఈ కథ కొత్తరితో చేస్తే బాగుంని వారికి నటనలతోెలకులో నేర్ించడం జ జరిగింది",
+      "unconstrained": "ಈ కథ కొత్తరితో చేస్తే బాగుంని వారికి నటనలతోెలకులో నేర్ించడం జ జరిగింది",
+      "hinted": "ఈ కథ కొత్తరితో చేస్తే బాగుంని వారికి నటనలతోెలకులో నేర్ించడం జ జరిగింది"
+    },
+    {
+      "key": "kathbath_test/te/noisy_test_known/844424933507669-958-m",
+      "constrained": "వాయ ఇందన బయర్లర్లో బర్ nనర్ లో గాలిని వయను మిశ్రించి pరష్ను అంతా వ్యాపించలా చేసి మండత",
+      "unconstrained": "ವಾయು ఇందన బయర్లర్లో బర్nనర్ లో గాలిని వయను మిశ్రించి pరష్ను అంతా వ్యాపించలా చేసి మండత",
+      "hinted": "వాయ ఇందన బయర్లర్లో బర్ nనర్ లో గాలిని వయను మిశ్రించి pరష్ను అంతా వ్యాపించలా చేసి మండత"
+    },
+    {
+      "key": "kathbath_test/te/noisy_test_known/844424933588724-902-m",
+      "constrained": "నగ్లు రూపంది జున on cinema ప్రదర్శనతో ఉత్సవం ప్రారంభైంది",
+      "unconstrained": "शाममெனగ్లు రూపంది జునon cinema ప్రదర్శనతో ఉత్సవం ప్రారంభైంది",
+      "hinted": "నగ్లు రూపంది జున on cinema ప్రదర్శనతో ఉత్సవం ప్రారంభైంది"
+    },
+    {
+      "key": "kathbath_test/te/noisy_test_known/844424932688150-1057-f",
+      "constrained": "అయితే హడా ఉడిగా కాకుండా కాస్త నిదాధనంగా stateలె ction కమషన్ జాబితా రూపం ఇస్తుంది",
+      "unconstrained": "అయితే హడా ఉడిగా కాకుండా కాస్త నిదాధనంగా stateలెction కమషన్ జాబితా రూపం ఇస్తుంది",
+      "hinted": "అయితే హడా ఉడిగా కాకుండా కాస్త నిదాధనంగా stateలె ction కమషన్ జాబితా రూపం ఇస్తుంది"
+    },
+    {
+      "key": "kathbath_test/te/noisy_test_known/844424933578461-183-m",
+      "constrained": "తల్లదండ్లు కూడా అనుమానం రావడంతో పెళ్ళకి ఏట్లు చేస్తారు",
+      "unconstrained": "ೆಿಸಿ ತಲೆదండ్లు కూడా అనుమానం రావడంతో పెళ్ళకి ఏట్లు చేస్తారు",
+      "hinted": "తల్లదండ్లు కూడా అనుమానం రావడంతో పెళ్ళకి ఏట్లు చేస్తారు"
+    }
+  ]
+}

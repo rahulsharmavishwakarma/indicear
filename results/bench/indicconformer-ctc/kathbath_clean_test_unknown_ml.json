@@ -1,0 +1,39 @@
+{
+  "kind": "eval",
+  "system": "indicconformer-ctc",
+  "set": "kathbath_clean_test_unknown_ml",
+  "condition": null,
+  "notes": "",
+  "utterances": 300,
+  "hours": 0.748,
+  "metrics": {
+    "ctc": {
+      "ml": {
+        "wer": 25.09,
+        "cer": 3.58,
+        "utterances": 300,
+        "words": 3272,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 25.09,
+        "cer_script_normalised": 3.58,
+        "rows_with_alternative_ref": 59,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "hours": 0.748
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ai4bharat/indic-conformer-600m-multilingual",
+    "revision": "2a77d305038dfc502fd9464e7d028b90381976cb",
+    "decoder": "ctc",
+    "notes": "ONNX via the repo's model_onnx.py; English unsupported",
+    "languages_scored": [
+      "ml"
+    ]
+  }
+}

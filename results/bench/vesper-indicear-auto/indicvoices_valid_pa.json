@@ -1,0 +1,142 @@
+{
+  "pa": {
+    "wer": 30.87,
+    "cer": 16.33,
+    "utterances": 300,
+    "words": 6158,
+    "script_error_rate": 0.71,
+    "wer_script_normalised": 30.72,
+    "cer_script_normalised": 16.26,
+    "rows_with_alternative_ref": 201,
+    "cm_utterances": 198,
+    "cm_spans": 1012,
+    "cm_span_accuracy": 84.58,
+    "cm_span_cer_mean": 23.15,
+    "cm_span_accuracy_by_lang": {
+      "en": 78.49,
+      "pa": 89.22
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.659
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 98.67,
+    "macro_f1": 99.33,
+    "per_lang": {
+      "pa": {
+        "precision": 100.0,
+        "recall": 98.67,
+        "f1": 99.33,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "pa": {
+        "bn": 1,
+        "hi": 2,
+        "pa": 296,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 2,
+        "hi->pa": 0,
+        "pa_utterances": 300,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": 0.67,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 39,
+        "accuracy": 92.31
+      },
+      "2-5s": {
+        "utterances": 29,
+        "accuracy": 96.55
+      },
+      "5-10s": {
+        "utterances": 144,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 88,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_pa",
+  "utterances": 300,
+  "hours": 0.66,
+  "seconds": 25,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 138,
+  "changed_examples": [
+    {
+      "key": "indicvoices/pa/valid/5066549580876388_chunk_2",
+      "constrained": "food pਥਾ bank ਵਿੱਚ ਮੇਰੇ bank ਖਾਤੇ ਚਾਰ ਸੱਤ ਦੋ ਛੇ ਦੋ ਦੋ ਅੱਠ ਤਿੰਨ ਅੱਠ ਚਾਰ ਇੱਕ ਵਿੱਚ c credit ਹੋਈ ਹੈ",
+      "unconstrained": "പൊமை pਥਾ bank ਵਿੱਚ ਮੇਰੇ bank ਖਾਤੇ ਚਾਰ ਸੱਤ ਦੋ ਛੇ ਦੋ ਦੋ ਅੱਠ ਤਿੰਨ ਅੱਠ ਚਾਰ ਇੱਕ ਵਿੱਚ c credit ਹੋਈ ਹੈ",
+      "hinted": "food pਥਾ bank ਵਿੱਚ ਮੇਰੇ bank ਖਾਤੇ ਚਾਰ ਸੱਤ ਦੋ ਛੇ ਦੋ ਦੋ ਅੱਠ ਤਿੰਨ ਅੱਠ ਚਾਰ ਇੱਕ ਵਿੱਚ c credit ਹੋਈ ਹੈ"
+    },
+    {
+      "key": "indicvoices/pa/valid/5066549581060339_chunk_2",
+      "constrained": "ਇਹ s ਸਰੀਰ ਕ ਨਹੀਂ ਸੋਂ ਮੇਰੇ ਮਨ ਸਰੀਰ ਅਤੇ ਆਤਮਾ ਨੂੰ ਜੁੜਨ ਦਾ ਇੱਕ ਇੱਕ ਸ਼ਕਤੀਸ਼ਾਲੀ ਤਰੀਕ ਬਣ ਗਿਆ ਹੈ",
+      "unconstrained": "এই s ਸਰੀਰ کات ہی ن सੋਂ मेरे ਮਨ ਸਰੀਰ ਅਤੇ ਆਤਮਾ ਨੂੰ ਜੁੜਨ ਦਾ ਇੱਕ ਇੱਕ ਸ਼ਕਤੀਸ਼ਾਲੀ ਤਰੀਕ ਬਣ ਗਿਆ ਹੈ",
+      "hinted": "ਇਹ s ਸਰੀਰ ਕ ਨਹੀਂ ਸੋਂ ਮੇਰੇ ਮਨ ਸਰੀਰ ਅਤੇ ਆਤਮਾ ਨੂੰ ਜੁੜਨ ਦਾ ਇੱਕ ਇੱਕ ਸ਼ਕਤੀਸ਼ਾਲੀ ਤਰੀਕ ਬਣ ਗਿਆ ਹੈ"
+    },
+    {
+      "key": "indicvoices/pa/valid/5066549581060339_chunk_3",
+      "constrained": "ਸਰੀਰ ਤੌਰ ਤੇ ਮੈਂ ਆਪਣੇ ਲਕਤਾ ਵਿੱਚ ਬਹੁਤ ਸਧਾਰ ਦੇਖਿਆ ਹੈ ਪਹਿਲਾਂ ਮੈਂ ਕੁਝ ਆਸਣ ਕਰਨ ਵਿੱਚ ਸਮਰਥ ਸੀ ਪਰ ਹੁਣ ਮੈਂ ਆਸਾਨੀ ਨਾਲ ਕਰ ਸਕਦਾ ਹਾਂ ਮੇਰੀ ਤਾਕਤ ਵੀ ਵਧੀਆ ਹੈ ਖਾਸ ਕਰਕੇ ਮੇਰੇ",
+      "unconstrained": "शरीरौरते میں ਆਪਣੇ ਲਕਤਾ ਵਿੱਚ ਬਹੁਤ ਸਧਾਰ ਦੇਖਿਆ ਹੈ ਪਹਿਲਾਂ ਮੈਂ ਕੁਝ ਆਸਣ ਕਰਨ ਵਿੱਚ ਸਮਰਥ ਸੀ ਪਰ ਹੁਣ ਮੈਂ ਆਸਾਨੀ ਨਾਲ ਕਰ ਸਕਦਾ ਹਾਂ ਮੇਰੀ ਤਾਕਤ ਵੀ ਵਧੀਆ ਹੈ ਖਾਸ ਕਰਕੇ ਮੇਰੇ",
+      "hinted": "ਸਰੀਰ ਤੌਰ ਤੇ ਮੈਂ ਆਪਣੇ ਲਕਤਾ ਵਿੱਚ ਬਹੁਤ ਸਧਾਰ ਦੇਖਿਆ ਹੈ ਪਹਿਲਾਂ ਮੈਂ ਕੁਝ ਆਸਣ ਕਰਨ ਵਿੱਚ ਸਮਰਥ ਸੀ ਪਰ ਹੁਣ ਮੈਂ ਆਸਾਨੀ ਨਾਲ ਕਰ ਸਕਦਾ ਹਾਂ ਮੇਰੀ ਤਾਕਤ ਵੀ ਵਧੀਆ ਹੈ ਖਾਸ ਕਰਕੇ ਮੇਰੇ"
+    },
+    {
+      "key": "indicvoices/pa/valid/5066549581060339_chunk_4",
+      "constrained": "coਰ ਮਾੇਸ਼ੀਆਂ ਵਿੱਚ ਮੈਂ ਹੁਣ ਵਧੇਰੇਊਰਜਾਬਾਰਹਿਸੂਸ ਕਰਦਾ ਹਾਂ ਅਤੇ ਮੇਰੀ ਨੀਦ ਵੀ ਬਿਹਤਰ ਹੋ ਗਈ ਹੈ",
+      "unconstrained": "ੋਰ ਮਾੇਸ਼ੀਆਂ ਵਿੱਚ ਮੈਂ ਹੁਣ ਵਧੇਰੇਊਰਜਾਬਾਰਹਿਸੂਸ ਕਰਦਾ ਹਾਂ ਅਤੇ ਮੇਰੀ ਨੀਦ ਵੀ ਬਿਹਤਰ ਹੋ ਗਈ ਹੈ",
+      "hinted": "coਰ ਮਾੇਸ਼ੀਆਂ ਵਿੱਚ ਮੈਂ ਹੁਣ ਵਧੇਰੇਊਰਜਾਬਾਰਹਿਸੂਸ ਕਰਦਾ ਹਾਂ ਅਤੇ ਮੇਰੀ ਨੀਦ ਵੀ ਬਿਹਤਰ ਹੋ ਗਈ ਹੈ"
+    },
+    {
+      "key": "indicvoices/pa/valid/5066549581060339_chunk_6",
+      "constrained": "ਨਸਿਕ ਤੌਰ ਤੇ ਯੋਗ ਨੇ ਮੈਨੂੰ ਤਣਾਅ ਵਿੱਚ ਚਿੰਤਾ ਤੋਂ ਮੁਕਤ ਕਰਨ ਵਿੱਚ ਮਤ ਕੀਤੀ ਹੈ ਮੈਂ ਉਹਨੂੰ ਬ ਵਧੇਰੇ ਸ਼ਾਾਂ ਅਤੇ ਸੰਤੁਲਿਤ ਮਹਿਸੂਸ ਕਰਦਾ ਹਾਂ ਯੋਗ ਨੇ ਮੇਰੇ ਮਨ ਨੂੰ ਸ਼ਾਂਤ ਕਰਨ ਵਿੱਚ ਮਦਦੱਧ ਕੀਤਾ ਹੈ",
+      "unconstrained": "मानਨसਿਕ तौ طورते ਯੋਗ ਨੇ ਮੈਨੂੰ ਤਣਾਅ ਵਿੱਚ ਚਿੰਤਾ ਤੋਂ ਮੁਕਤ ਕਰਨ ਵਿੱਚ ਮਤ ਕੀਤੀ ਹੈ ਮੈਂ ਉਹਨੂੰ ਬ ਵਧੇਰੇ ਸ਼ਾਾਂ ਅਤੇ ਸੰਤੁਲਿਤ ਮਹਿਸੂਸ ਕਰਦਾ ਹਾਂ ਯੋਗ ਨੇ ਮੇਰੇ ਮਨ ਨੂੰ ਸ਼ਾਂਤ ਕਰਨ ਵਿੱਚ ਮਦਦੱਧ ਕੀਤਾ ਹੈ",
+      "hinted": "ਨਸਿਕ ਤੌਰ ਤੇ ਯੋਗ ਨੇ ਮੈਨੂੰ ਤਣਾਅ ਵਿੱਚ ਚਿੰਤਾ ਤੋਂ ਮੁਕਤ ਕਰਨ ਵਿੱਚ ਮਤ ਕੀਤੀ ਹੈ ਮੈਂ ਉਹਨੂੰ ਬ ਵਧੇਰੇ ਸ਼ਾਾਂ ਅਤੇ ਸੰਤੁਲਿਤ ਮਹਿਸੂਸ ਕਰਦਾ ਹਾਂ ਯੋਗ ਨੇ ਮੇਰੇ ਮਨ ਨੂੰ ਸ਼ਾਂਤ ਕਰਨ ਵਿੱਚ ਮਦਦੱਧ ਕੀਤਾ ਹੈ"
+    }
+  ]
+}

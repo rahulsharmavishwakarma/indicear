@@ -1,0 +1,95 @@
+{
+  "ml": {
+    "wer": 69.05,
+    "cer": 31.35,
+    "utterances": 300,
+    "words": 2808,
+    "script_error_rate": 6.62,
+    "wer_script_normalised": 68.77,
+    "cer_script_normalised": 30.7,
+    "rows_with_alternative_ref": 211,
+    "cm_utterances": 210,
+    "cm_spans": 846,
+    "cm_span_accuracy": 66.78,
+    "cm_span_cer_mean": 49.53,
+    "cm_span_accuracy_by_lang": {
+      "en": 62.43,
+      "ml": 69.8
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.433
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.33,
+    "macro_f1": 99.67,
+    "per_lang": {
+      "ml": {
+        "precision": 100.0,
+        "recall": 99.33,
+        "f1": 99.67,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ml": {
+        "ml": 298,
+        "ta": 1,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 165,
+        "accuracy": 98.79
+      },
+      "5-10s": {
+        "utterances": 135,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_ml",
+  "utterances": 300,
+  "hours": 0.43,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

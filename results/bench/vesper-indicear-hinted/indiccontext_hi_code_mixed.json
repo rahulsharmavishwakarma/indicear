@@ -1,0 +1,106 @@
+{
+  "hi": {
+    "wer": 42.82,
+    "cer": 25.53,
+    "utterances": 120,
+    "words": 2688,
+    "script_error_rate": 7.74,
+    "wer_script_normalised": 42.78,
+    "cer_script_normalised": 25.51,
+    "rows_with_alternative_ref": 77,
+    "cm_utterances": 77,
+    "cm_spans": 608,
+    "cm_span_accuracy": 85.2,
+    "cm_span_cer_mean": 26.16,
+    "cm_span_accuracy_by_lang": {
+      "en": 81.0,
+      "hi": 88.75
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.341
+  },
+  "lid": {
+    "utterances": 120,
+    "accuracy": 77.5,
+    "macro_f1": 87.32,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 77.5,
+        "f1": 87.32,
+        "support": 120
+      }
+    },
+    "confusion": {
+      "hi": {
+        "gu": 1,
+        "hi": 93,
+        "mr": 1,
+        "or": 1,
+        "ur": 24
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 24,
+        "ur->hi": 0,
+        "hi_utterances": 120,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 20.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 1,
+        "mr->hi": 0,
+        "hi_utterances": 120,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.83,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 120,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 6,
+        "accuracy": 50.0
+      },
+      "5-10s": {
+        "utterances": 57,
+        "accuracy": 78.95
+      },
+      "10-20s": {
+        "utterances": 57,
+        "accuracy": 78.95
+      }
+    }
+  },
+  "eval_set": "indiccontext_hi_code_mixed",
+  "utterances": 120,
+  "hours": 0.34,
+  "seconds": 12,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": "the row's language"
+  }
+}

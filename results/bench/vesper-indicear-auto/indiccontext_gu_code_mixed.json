@@ -1,0 +1,129 @@
+{
+  "gu": {
+    "wer": 68.43,
+    "cer": 37.53,
+    "utterances": 229,
+    "words": 5363,
+    "script_error_rate": 24.33,
+    "wer_script_normalised": 68.43,
+    "cer_script_normalised": 37.53,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.858
+  },
+  "lid": {
+    "utterances": 229,
+    "accuracy": 99.13,
+    "macro_f1": 99.56,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 99.13,
+        "f1": 99.56,
+        "support": 229
+      }
+    },
+    "confusion": {
+      "gu": {
+        "gu": 227,
+        "pa": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "5-10s": {
+        "utterances": 36,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 193,
+        "accuracy": 98.96
+      }
+    }
+  },
+  "eval_set": "indiccontext_gu_code_mixed",
+  "utterances": 229,
+  "hours": 0.86,
+  "seconds": 26,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 218,
+  "changed_examples": [
+    {
+      "key": "indiccontext_eval/gu/test/7318349394492911_0_0",
+      "constrained": "સંિત comer carg band અને ગતન",
+      "unconstrained": "संतुलित کم कमर पटो ਕਾਰਜ਼ੂਰਕ band અને ગતન",
+      "hinted": "સંિત comer carg band અને ગતન"
+    },
+    {
+      "key": "indiccontext_eval/gu/test/7318349394480358_0_0",
+      "constrained": "ચોક્કસ recipeનેસરીને મેંિમી એમાં તૈયાર કરી સખત હલાવીનેોશ ર રહીિત સુસંગતતા જ્યારેુસળતાૂર્વક પસંદ કરેલા એલના નાજુક ધૂ દૂર સાથે સુળ ભર્યું સંતુલન બનાવ્યો",
+      "unconstrained": "চক recipeনেસરીને મેંિમી એમાં તૈયાર કરી સખત હલાવીનેોશ ર રહીિત સુસંગતता सुन सुनिश्चित करेंे જ્યારેુસળતાૂર્વક પસંદ કરેલા એલના નાજુક ધૂ દૂર સાથે સુળ ભર્યું સંતુલન બનાવ્યો",
+      "hinted": "ચોક્કસ recipeનેસરીને મેંિમી એમાં તૈયાર કરી સખત હલાવીનેોશ ર રહીિત સુસંગતતા જ્યારેુસળતાૂર્વક પસંદ કરેલા એલના નાજુક ધૂ દૂર સાથે સુળ ભર્યું સંતુલન બનાવ્યો"
+    },
+    {
+      "key": "indiccontext_eval/gu/test/7318349394492387_0_0",
+      "constrained": "kક mw nj roશળતાથી તૈયાર કરેલા ટોફોની creamમ રચનામાં ખાવારો વિરોદદાભાષ ઉમે છે જ્યારે શા ke mis glaની સુક્ષ્મ મીઠશ તપેલીમાંેેલા તાાઈને રાંણ કરવાનીરાણી પરપપૂર્ણતા સુધી લઈ જાય છે",
+      "unconstrained": "का ਜੀूरक मेळवेळ नाजुक रो कुशळताથી તૈયાર કરેલા ટોફોની creamमी ਰਚਨਾਵਾਂ खाਰਾਸ਼ਵਾਰਰੋਂ ਵਿਰੋਧભાષ ઉમે છે જ્યારે সাকে মিশিত গलेनी સુક્ષ્મ મ मिठस तપેલીમાં सेેલા તાાઈને રાંણ કરવાનીરાણી પરપપૂર્ણता સુધી લઈ જાય છે",
+      "hinted": "kક mw nj roશળતાથી તૈયાર કરેલા ટોફોની creamમ રચનામાં ખાવારો વિરોદદાભાષ ઉમે છે જ્યારે શા ke mis glaની સુક્ષ્મ મીઠશ તપેલીમાંેેલા તાાઈને રાંણ કરવાનીરાણી પરપપૂર્ણતા સુધી લઈ જાય છે"
+    },
+    {
+      "key": "indiccontext_eval/gu/test/7318349394492381_0_0",
+      "constrained": "loupy salvજનોુંકન કાપડની એક ગુણવત્તા અનેથિરતા નક્કી કરવામાં મદદ કરે છે swimminging slipઝનું મૂલ્યાંકન કાપડની સિમની મજબૂતાાઈ અને ટકાઉઓ પણણ નક્કી કરવા કરવામાં મદદ કરે છે",
+      "unconstrained": "loupy salvજનો ਮੁਲਿਆਕਨ કાપਰण એક ગુણવત્તत्तા અનેથિરતા નક્કી કરવામાં મદદ કરે છે swimmingિંગ slipઝનું મૂલ્યાંકન કાપડની સિમની મજબૂતાાઈ અને ટકાઉઓ પણણ નક્કી કરવા કરવામાં મદદ કરે છે",
+      "hinted": "loupy salvજનોુંકન કાપડની એક ગુણવત્તા અનેથિરતા નક્કી કરવામાં મદદ કરે છે swimminging slipઝનું મૂલ્યાંકન કાપડની સિમની મજબૂતાાઈ અને ટકાઉઓ પણણ નક્કી કરવા કરવામાં મદદ કરે છે"
+    },
+    {
+      "key": "indiccontext_eval/gu/test/7318349394487737_0_0",
+      "constrained": "jutlegraphyમાં spin અને tosનીે સમાેશ થતો હતો જે ચોક્કસ ચો ચોક્કસકાઈ અને લાવણિયાથી કરવા કરવામાં આવ્યો હતોાન્સરની ડીંગ અને ટ ipp કરતી વખતળી હતી",
+      "unconstrained": "जटଲ कोgraphyਾਂ इसin ਅਤੇोसनी शेਣ و ਸਮष्ट થતો હતો જે ચોક્કસ ચો ચોક્કસકાઈ અને લાવણિયાથી કરવા કરવામાં આવ્યો હતોાન્સરની ડીંગ અને ટipp કરતી વખત ਨਾ ਸਰੀਰ ਦੇ ਨਿਯੰਤਿਤ ਕਰਨੀ ਸ਼ਮਤਾ ਪ੍ਰਭਾਵशाळ ह",
+      "hinted": "jutlegraphyમાં spin અને tosનીે સમાેશ થતો હતો જે ચોક્કસ ચો ચોક્કસકાઈ અને લાવણિયાથી કરવા કરવામાં આવ્યો હતોાન્સરની ડીંગ અને ટ ipp કરતી વખતળી હતી"
+    }
+  ]
+}

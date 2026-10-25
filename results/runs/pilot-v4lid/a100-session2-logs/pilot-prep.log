@@ -1,0 +1,51 @@
+ready: /content/pilot/pilot/setup.DONE
+pilot prep: started 2026-10-24 08:14:18
+[08:14:20] python 3.14.8, GIL off, torch threads 6
+[08:24:39] vaani/hi/test: audio/Hindi/test-00051-of-00052.parquet -> 2196 rows, 2.37 h in 37s
+[08:24:54] vaani/hi/test: audio/Hindi/test-00032-of-00052.parquet -> 346 rows, 0.63 h in 14s (cap reached)
+[08:26:45] vaani/ta/test: audio/Tamil/test-00001-of-00002.parquet -> 2146 rows, 2.17 h in 111s
+[08:26:55] vaani/ta/test: audio/Tamil/test-00000-of-00002.parquet -> 814 rows, 0.83 h in 10s (cap reached)
+[08:26:56] UNAVAILABLE lahaja/hi/test: lahaja: ai4bharat/Lahaja is gated and not accessible (HF_TOKEN is not set). Accept the terms at https://huggingface.co/datasets/ai4bharat/Lahaja with the account whose token is in HF_TOKEN.
+[08:26:56] UNAVAILABLE vaani_benchmark/hi/test: vaani_benchmark: ARTPARK-IISc/Vaani-Benchmark-V1.0 is gated and not accessible (HF_TOKEN is not set). Accept the terms at https://huggingface.co/datasets/ARTPARK-IISc/Vaani-Benchmark-V1.0 with the account whose token is in HF_TOKEN.
+[08:26:56] svarah/en/test: data/test-00002-of-00003.parquet -> 2029 rows, 2.95 h in 11s
+[08:26:56] vaani/kn/test: audio/Kannada/test-00000-of-00009.parquet -> 1462 rows, 3.00 h in 30s (cap reached)
+[08:26:57] vaani/en/test: audio/English/test-00000-of-00001.parquet -> 2658 rows, 3.00 h in 18s (cap reached)
+[08:27:06] svarah/en/test: data/test-00001-of-00003.parquet -> 2040 rows, 2.91 h in 10s
+[08:27:11] librispeech/en/test.clean: clean/test/0000.parquet -> 2528 rows, 4.79 h in 13s
+[08:27:16] svarah/en/test: data/test-00000-of-00003.parquet -> 2048 rows, 2.97 h in 10s
+[08:27:22] librispeech/en/test.other: other/test/0000.parquet -> 2893 rows, 5.03 h in 11s
+[08:27:44] voxpopuli/en/test: en/test-00000-of-00001.parquet -> 1671 rows, 3.92 h in 27s
+[08:27:48] voxpopuli/en/accented_test: en_accented/test-00001-of-00002.parquet -> 1905 rows, 5.00 h in 26s (cap reached)
+[08:28:18] indicvoices/hi/valid: hindi/valid-00000-of-00001.parquet -> 4986 rows, 8.02 h in 33s
+[08:28:20] indicvoices/kn/valid: kannada/valid-00000-of-00002.parquet -> 1834 rows, 3.53 h in 31s
+[08:28:20] indicvoices/ta/valid: tamil/valid-00000-of-00002.parquet -> 2413 rows, 4.35 h in 33s
+[08:28:26] indiccontext_eval/hi/test: data/Hindi-00001-of-00003.parquet -> 963 rows, 2.40 h in 8s
+[08:28:29] UNAVAILABLE mucs/hi/blind: mucs: blindtest.tar.gz has no transcripts/['segments', 'text']
+[08:28:36] indiccontext_eval/hi/test: data/Hindi-00002-of-00003.parquet -> 963 rows, 2.52 h in 10s
+[08:28:44] indicvoices/kn/valid: kannada/valid-00001-of-00002.parquet -> 1760 rows, 2.86 h in 24s
+[08:28:51] indiccontext_eval/hi/test: data/Hindi-00000-of-00003.parquet -> 987 rows, 3.34 h in 15s
+[08:28:51] indicvoices/ta/valid: tamil/valid-00001-of-00002.parquet -> 2388 rows, 3.12 h in 31s
+[08:29:05] kathbath/hi/train: hindi/train-00013-of-00032.parquet -> 829 rows, 1.13 h in 14s (cap reached)
+[08:29:09] vaani/hi/train: audio/Hindi/train-00005-of-00177.parquet -> 1184 rows, 2.64 h in 17s (cap reached)
+[08:29:11] indicvoices/hi/train: hindi/train-00055-of-00082.parquet -> 1620 rows, 3.78 h in 19s (cap reached)
+[08:29:19] kathbath/ta/train: tamil/train-00001-of-00040.parquet -> 827 rows, 1.33 h in 10s (cap reached)
+[08:29:19] vaani/ta/train: audio/Tamil/train-00001-of-00004.parquet -> 644 rows, 0.64 h in 14s (cap reached)
+[08:29:29] kathbath/kn/train: kannada/train-00020-of-00033.parquet -> 618 rows, 1.27 h in 9s (cap reached)
+[08:29:34] indicvoices/ta/train: tamil/train-00094-of-00118.parquet -> 3270 rows, 5.41 h in 43s
+[08:29:37] librispeech/en/train.other.500: other/train.500/0039.parquet -> 723 rows, 2.40 h in 8s (cap reached)
+[08:29:40] vaani/kn/train: audio/Kannada/train-00015-of-00029.parquet -> 1964 rows, 2.28 h in 21s (cap reached)
+[08:29:55] indicvoices/kn/train: kannada/train-00078-of-00088.parquet -> 2343 rows, 4.05 h in 44s (cap reached)
+[08:29:56] peoples_speech/en/train: clean/train-00097-of-00804.parquet -> 669 rows, 2.40 h in 18s (cap reached)
+[08:29:57] indicvoices/ta/train: tamil/train-00097-of-00118.parquet -> 389 rows, 0.62 h in 23s (cap reached)
+[08:29:58] voxpopuli/en/train: en/train-00008-of-00030.parquet -> 829 rows, 2.08 h in 17s (cap reached)
+[08:30:07] vaani/en/train: audio/English/train-00002-of-00004.parquet -> 856 rows, 1.12 h in 12s (cap reached)
+[08:39:57] lang  tok/s p95 tok/s max unit/s p95 unit/s max (frames: 25/s)
+[08:39:57] en          6.2      10.8       16.9       24.2
+[08:39:57] WARNING en: phonetic units at p95 exceed 60% of the frame rate
+[08:39:57] hi          6.2      43.6       18.1      107.0
+[08:39:57] WARNING hi: phonetic units at p95 exceed 60% of the frame rate
+[08:39:57] kn          6.9      86.0       18.2      168.0
+[08:39:57] WARNING kn: phonetic units at p95 exceed 60% of the frame rate
+[08:39:57] ta          7.2      29.0       22.2       78.2
+[08:39:57] WARNING ta: phonetic units at p95 exceed 60% of the frame rate
+pilot prep: DONE

@@ -1,0 +1,134 @@
+{
+  "ml": {
+    "wer": 83.73,
+    "cer": 32.48,
+    "utterances": 300,
+    "words": 3240,
+    "script_error_rate": 15.86,
+    "wer_script_normalised": 82.38,
+    "cer_script_normalised": 31.08,
+    "rows_with_alternative_ref": 58,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.816
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.0,
+    "macro_f1": 99.5,
+    "per_lang": {
+      "ml": {
+        "precision": 100.0,
+        "recall": 99.0,
+        "f1": 99.5,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ml": {
+        "ml": 297,
+        "ta": 1,
+        "te": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 5,
+        "accuracy": 80.0
+      },
+      "5-10s": {
+        "utterances": 155,
+        "accuracy": 98.71
+      },
+      "10-20s": {
+        "utterances": 140,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_ml",
+  "utterances": 300,
+  "hours": 0.82,
+  "seconds": 26,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 285,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ml/noisy_test_known/844424931086276-420-f",
+      "constrained": "പറം japനിൽ കഴിഞ്ഞ ആഴ്ച മുതൽ ശക്തമായ മഴയും വെള്ളൊക്കവും മണ്ണിിടിച്ചലുമാണ് അതിന അനുഭവപ്പെടുന്നത്",
+      "unconstrained": "பாറം japാനിൽ കഴിഞ്ഞ ആഴ്ച മുതൽ ശക്തമായ മഴയും വെള്ളൊക്കവും മണ്ണിിടിച്ചലുമാണ് അതിന അനുഭവപ്പെടുന്നത്",
+      "hinted": "പറം japനിൽ കഴിഞ്ഞ ആഴ്ച മുതൽ ശക്തമായ മഴയും വെള്ളൊക്കവും മണ്ണിിടിച്ചലുമാണ് അതിന അനുഭവപ്പെടുന്നത്"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_known/844424930390984-355-m",
+      "constrained": "പക്ഷേ ഇതിന മുമ്പ് sൽമിൽ നിന്ന് ഒരു ഉറപ്പ ഒപ്പിച്ചെടുക്കാനും അമീർ ശ്രമിക്കുന്നുണ്ട്",
+      "unconstrained": "ಪ ഇതിന മുമ്പ് sൽമിൽ നിന്ന് ഒരു ഉറപ്പ ഒപ്പിച്ചെടുക്കാനും അമീർ ശ്രമിക്കുന്നുണ്ട്",
+      "hinted": "പക്ഷേ ഇതിന മുമ്പ് sൽമിൽ നിന്ന് ഒരു ഉറപ്പ ഒപ്പിച്ചെടുക്കാനും അമീർ ശ്രമിക്കുന്നുണ്ട്"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_known/844424933094945-355-m",
+      "constrained": "ആര photo sectionന അല്ലെങ്കിൽ mask class masters നിരസിക്കില്ല",
+      "unconstrained": "ऐவால் ആര photo sectionന അല്ലെങ്കിൽ maskാിൽ masters നിരസിക്കില്ല",
+      "hinted": "ആര photo sectionന അല്ലെങ്കിൽ mask class masters നിരസിക്കില്ല"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_known/844424930525802-985-m",
+      "constrained": "കാരണം രാസസ്ുവമാണ് നീണ്ടത്ും അവസാനം ജീവിതം പരമാവിതി ഒരു ധാരെ പോലെയാണ്",
+      "unconstrained": "కా രാസസ്ുവമാണ് നീണ്ടത്ും അവസാനം ജീവിതം പരമാവിതി ഒരു ധാരെ പോലെയാണ്",
+      "hinted": "കാരണം രാസസ്ുവമാണ് നീണ്ടത്ും അവസാനം ജീവിതം പരമാവിതി ഒരു ധാരെ പോലെയാണ്"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_known/844424933048541-1063-f",
+      "constrained": "കർാടകിലുംുമായി സമാനമായ രീതിയിൽ ഒമ്പത് സ്ത്രീകളെ പ്രതിികൾ കൊലപ്പെടുത്ത എന്നാണ് ചോദ്്യംേലിൽ ഇവർ വെളിപ്പെടുത്തിരുന്നത്",
+      "unconstrained": "తేలంగాിലും കർാടകിലുംുമായി സമാനമായ രീതിയിൽ ഒമ്പത് സ്ത്രീകളെ പ്രതിികൾ കൊലപ്പെടുത്ത എന്നാണ് ചോദ്്യംേലിൽ ഇവർ വെളിപ്പെടുത്തിരുന്നത്",
+      "hinted": "കർാടകിലുംുമായി സമാനമായ രീതിയിൽ ഒമ്പത് സ്ത്രീകളെ പ്രതിികൾ കൊലപ്പെടുത്ത എന്നാണ് ചോദ്്യംേലിൽ ഇവർ വെളിപ്പെടുത്തിരുന്നത്"
+    }
+  ]
+}

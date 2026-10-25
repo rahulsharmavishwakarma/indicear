@@ -1,0 +1,203 @@
+{
+  "hi": {
+    "wer": 27.95,
+    "cer": 15.98,
+    "utterances": 600,
+    "words": 9765,
+    "script_error_rate": 0.63,
+    "wer_script_normalised": 27.85,
+    "rows_with_alternative_ref": 259,
+    "cm_utterances": 250,
+    "cm_spans": 1146,
+    "cm_span_accuracy": 80.98,
+    "cm_span_cer_mean": 25.72,
+    "cm_span_accuracy_by_lang": {
+      "en": 69.77,
+      "hi": 89.14
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.97
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 97.5,
+    "macro_f1": 98.73,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 97.5,
+        "f1": 98.73,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 585,
+        "kn": 9,
+        "ta": 6
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 600,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 600,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 600,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 149,
+        "accuracy": 90.6
+      },
+      "2-5s": {
+        "utterances": 145,
+        "accuracy": 99.31
+      },
+      "5-10s": {
+        "utterances": 202,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 104,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_hi",
+  "utterances": 600,
+  "hours": 0.97,
+  "seconds": 38,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 121,
+  "changed_examples": [
+    {
+      "key": "indicvoices/hi/valid/5348024557936554_chunk_1",
+      "constrained": "स्थानीय कला रूप self स जिले के लिए",
+      "unconstrained": "स्थानीयಯ कला रूप selfಂಗ जिले के लिए"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557936554_chunk_9",
+      "constrained": "show kilometert दूरथ है पचमढ़ जिस पर हम नजारा देखते जाते हैं तो एक पहली बात करें तो जल बन",
+      "unconstrained": "ோ kilometert दूरथ है पचमढ़ जिस पर हम नजारा देखते जाते हैं तो एक पहली बात करें तो जल बन"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557936554_chunk_10",
+      "constrained": "राणियों के इसमें दर्शन भी होते हैं उसके साथ",
+      "unconstrained": "ಪ್ರाणियों के इसमें दर्शन भी होते हैं उसके साथ"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557936554_chunk_18",
+      "constrained": "और ypसी द्वारा भी काफी सारे जैसे कि",
+      "unconstrained": "औरypसी द्वारा भी काफी सारे जैसे कि"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557886947_chunk_1",
+      "constrained": "जौनपुर में famous साह किला है royal foodd ने बनवाए था एकस बासठ में",
+      "unconstrained": "जौनपुर में famous साह किला है royalोd ने बनवाए था एकस बासठ में"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557886947_chunk_8",
+      "constrained": "और नाररी भी सब कुछ मिलते हैं चढ़ाने के लिए वहाँ लोग जाते हैं मनोकाामना ले अपनी दर्शन करते हैं",
+      "unconstrained": "और नारಯಲ್ಲಿ ಚುನरी भी सब कुछ मिलते हैं चढ़ाने के लिए वहाँ लोग जाते हैं मनोकाामना ले अपनी दर्शन करते हैं"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557962836_chunk_2",
+      "constrained": "oकलम कहा जाता है और अंतिम दिनता तक वे ह हर दिन और जटल और बड़े हो होते जाते हैं",
+      "unconstrained": "oोकलम कहा जाता है और अंतिम दिनता तक वे ह हर दिन और जटल और बड़े हो होते जाते हैं"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557913761_chunk_1",
+      "constrained": "mobile number seven टूू eight one five व three four five six लिए टीका पजीकरण जारी रखने के लिए आपका p n p p six nine seven है",
+      "unconstrained": "mobile number seven टूू eight one five व three four five six लिए टीका पजीकरण जारी रखने के लिए आपका p n p pू six nine seven है"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024558092006_chunk_1",
+      "constrained": "मैं laz को नाप l और biscuit रंग में खरीदना चाहता चार रहा हूँ क्या आप अ mazon fashion पर इसकी उपलब्धता कीृष्टि कर सकते हैं",
+      "unconstrained": "मैंlaz को नाप l और biscuit रंग में खरीदना चाहता चार रहा हूँ क्या आप अmazon fashion पर इसकी उपलब्धता कीृष्टि कर सकते हैं"
+    },
+    {
+      "key": "indicvoices/hi/valid/b106bfc4-eb0e-4de0-9760-38f7e768795a_1_chunk_1",
+      "constrained": "sir नमस्कार",
+      "unconstrained": "sir नಮस्कार"
+    },
+    {
+      "key": "indicvoices/hi/valid/b106bfc4-eb0e-4de0-9760-38f7e768795a_1_chunk_2",
+      "constrained": "sir publicब् school से बोल रहा हूँ",
+      "unconstrained": "sir அ publicब् school से बोल रहा हूँ"
+    },
+    {
+      "key": "indicvoices/hi/valid/b106bfc4-eb0e-4de0-9760-38f7e768795a_1_chunk_5",
+      "constrained": "ly sir आपके बच्चे ने एक homeo करके नहीं आया था और वो mat में थोड़ा सा भी है",
+      "unconstrained": "லி sir आपके बच्चे ने एक homeo करके नहीं आया था और वो mat में थोड़ा सा भी है"
+    },
+    {
+      "key": "indicvoices/hi/valid/b106bfc4-eb0e-4de0-9760-38f7e768795a_1_chunk_7",
+      "constrained": "घर मेंर लेकिन यहाँ से जो homeork दिया जाता है school से school की copy में होता नहीं है complete उसको तीन चार बार के इसके complaint होुकी है इसलिए उसको आज पनी ishcement की तौर पर हम रोक रहे हैं कि यहाँ पर रहे",
+      "unconstrained": "घर मेंर लेकिन यहाँ से जो homeork दिया जाता है school से school की copy में होता नहीं है complete उसको तीन चार बार के इसके complaint होुकी है इसलिए उसको आज पनीishcement की तौर पर हम रोक रहे हैं कि यहाँ पर रहे"
+    },
+    {
+      "key": "indicvoices/hi/valid/b106bfc4-eb0e-4de0-9760-38f7e768795a_1_chunk_8",
+      "constrained": "sir school में तो पढ़ा देते हैं लेकिन कुछ respsiivity parents के भी होती है बच्चों को घर में जो homek दिया जाता है वो कर रहा है नहीं कर रहा हैं है आपको भी देखने का थोड़ा सा्ा करता भी होता है",
+      "unconstrained": "ಸರಿ school में तो पढ़ा देते हैं लेकिन कुछ respsiivity parents के भी होती है बच्चों को घर में जो homek दिया जाता है वो कर रहा है नहीं कर रहा हैं है आपको भी देखने का थोड़ा सा्ा करता भी होता है"
+    },
+    {
+      "key": "indicvoices/hi/valid/afd6a6c0-7f8f-442a-ad26-6a9d63166ffa_1_chunk_9",
+      "constrained": "आप को सुविधा कि देखे आजजम ज़िल जिले में तो अब आज़म कर का विकास हो रहा है ना तो आप अगर आदढ़ पर रहने वाले हैं तो कोई बढ़िया आपको मैं lat दे रहा देता हूँ और उसमें दो तरफ से रास्तेते भी होंगे",
+      "unconstrained": "आप को सुविधा कि देखे आजजम ज़िल जिले में तो अब आज़म कर का विकास हो रहा है ना तो आप अगर आदढ़ पर रहने वाले हैं तो कोई बढ़िया आपको मैंlat दे रहा देता हूँ और उसमें दो तरफ से रास्तेते भी होंगे"
+    },
+    {
+      "key": "indicvoices/hi/valid/afd6a6c0-7f8f-442a-ad26-6a9d63166ffa_1_chunk_10",
+      "constrained": "तोट का मकान ज़ है उसमें आपको एक काम ercal काम हम हो जाएगा रह के व्यवस्था हो जाएगी और कम al काम भी कर लेंगे",
+      "unconstrained": "तोट का मकान ज़ है उसमें आपको एक कामercal काम हम हो जाएगा रह के व्यवस्था हो जाएगी और कमal काम भी कर लेंगे"
+    },
+    {
+      "key": "indicvoices/hi/valid/afd6a6c0-7f8f-442a-ad26-6a9d63166ffa_1_chunk_12",
+      "constrained": "भाई दे रख तोानी है उत्तर प्रदेश की वहाँ थोड़ी ज़ जमीन आपको mगी",
+      "unconstrained": "भाई दे रख तोानी है उत्तर प्रदेश की वहाँ थोड़ी ज़ जमीन आपकोmंगी"
+    },
+    {
+      "key": "indicvoices/hi/valid/afd6a6c0-7f8f-442a-ad26-6a9d63166ffa_1_chunk_13",
+      "constrained": "तो आप आज़मगिल में अगर चाहते हैं तो आप मान कर चलिए कि बहुत बढ़िया आपको मिलेगा आप family देखतेगी तो कह कि क्योंकि हाँ आपने lat अच्छा लिया है क्योंकि दो तरफ रास्ते हैं",
+      "unconstrained": "तो आप आज़ಮ್ಗಳುिल में अगर चाहते हैं तो आप मान कर चलिए कि बहुत बढ़िया आपको मिलेगा आप family देखतेगी तो कह कि क्योंकि हाँ आपनेlat अच्छा लिया है क्योंकि दो तरफ रास्ते हैं"
+    },
+    {
+      "key": "indicvoices/hi/valid/afd6a6c0-7f8f-442a-ad26-6a9d63166ffa_1_chunk_18",
+      "constrained": "और मैं आप बात बि रहा दूँगा औरै भीा कि कि rate से आप मकान बनेगा और बढ़िया मकान बनेगा riil अच्छी होंगे",
+      "unconstrained": "और मैं आप बात बि रहा दूँगा औरै भीा कि कि rate से आप मकान बनेगा और बढ़िया मकान बनेगाriil अच्छी होंगे"
+    },
+    {
+      "key": "indicvoices/hi/valid/5348024557734652_chunk_1",
+      "constrained": "क्या मुझे तुंत bodyard मो fcor rapt मिल सकती है",
+      "unconstrained": "क्या मुझे तुंत bodyard मोfcोैpt मिल सकती है"
+    }
+  ]
+}

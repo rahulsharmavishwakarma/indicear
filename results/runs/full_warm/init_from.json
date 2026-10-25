@@ -1,0 +1,161 @@
+{
+ "summary": {
+  "source_config_hash": "34ad89478fc81611",
+  "weights_sha256": "ebf403ef7e17fc224f8131814a410f2af69477a8297f16fe84cab8a758106d33",
+  "tokenizer_sha256": "0e8dc4b702855e8cf2a9f5ffd344b343e865175e73880cb4c8544aefe29b8fea",
+  "kept_scripts": [
+   "deva",
+   "latn",
+   "taml",
+   "knda"
+  ],
+  "new_scripts": [
+   "beng",
+   "guru",
+   "gujr",
+   "orya",
+   "telu",
+   "mlym",
+   "arab"
+  ],
+  "new_script_logits": "fresh",
+  "new_script_bias": -2.0
+ },
+ "new_rows": {
+  "final.script_head.weight": [
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    9,
+    10
+   ],
+   [
+    10,
+    11
+   ]
+  ],
+  "final.script_head.bias": [
+   [
+    2,
+    3
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    4,
+    5
+   ],
+   [
+    5,
+    6
+   ],
+   [
+    7,
+    8
+   ],
+   [
+    9,
+    10
+   ],
+   [
+    10,
+    11
+   ]
+  ],
+  "final.token_head.weight": [
+   [
+    1028,
+    4100
+   ],
+   [
+    4868,
+    5636
+   ],
+   [
+    6404,
+    7940
+   ]
+  ],
+  "final.token_head.bias": [
+   [
+    1028,
+    4100
+   ],
+   [
+    4868,
+    5636
+   ],
+   [
+    6404,
+    7940
+   ]
+  ]
+ },
+ "fresh_params": [],
+ "report": {
+  "source": "/content/full/init/v4+lid",
+  "copied": 64,
+  "mapped": [
+   "final.script_head.weight",
+   "final.script_head.bias",
+   "final.token_head.weight",
+   "final.token_head.bias"
+  ],
+  "fresh": [],
+  "unused": [],
+  "token_spans": [
+   [
+    0,
+    4,
+    0,
+    4
+   ],
+   [
+    4,
+    1028,
+    4,
+    1028
+   ],
+   [
+    1414,
+    2182,
+    4100,
+    4868
+   ],
+   [
+    2292,
+    3060,
+    5636,
+    6404
+   ],
+   [
+    3425,
+    4449,
+    7940,
+    8964
+   ]
+  ],
+  "old_vocab": 4449,
+  "new_vocab": 8964
+ }
+}

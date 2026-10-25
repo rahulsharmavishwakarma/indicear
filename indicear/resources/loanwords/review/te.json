@@ -1,0 +1,812 @@
+{
+ "lang": "te",
+ "words": 69452,
+ "rewrites": 2448,
+ "per_1000_words": 35.25,
+ "types": 770,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "హాస్పిటల్స్",
+   "en": "hospitals",
+   "path": "lexicon",
+   "row": 4887,
+   "context": "వీరు అపోలో హాస్పిటల్స్ వ్యవస్థాపకుడు ప్రతాప్ సి రెడ్డి",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్లస్",
+   "en": "plus",
+   "path": "lexicon",
+   "row": 1551,
+   "context": "ఇందులో ముఖ్యంగా వన్ ప్లస్ స్మార్ట్ఫోన్ల మీద అద్భుతమైన డిస్కౌంట్లు",
+   "verdict": "correct"
+  },
+  {
+   "native": "రెవెన్యూ",
+   "en": "revenue",
+   "path": "lexicon",
+   "row": 5502,
+   "context": "ముందు ఖమ్మం కొత్తగూడెం భద్రాచలం రెవెన్యూ డివిజన్లుగా ఉండేవి",
+   "verdict": "correct"
+  },
+  {
+   "native": "ట్రైను",
+   "en": "train",
+   "path": "lexicon",
+   "row": 346,
+   "context": "వచ్చిన ఓ ట్రైను ఎక్కబోతూంటే ట్రైను దిగుతున్న అన్నయ్య కంట్లోపడ్డాను",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్రాపర్టీ",
+   "en": "property",
+   "path": "lexicon",
+   "row": 3342,
+   "context": "ఈ ప్రాపర్టీ షోలో భాగంగా ఎంపి కవిత",
+   "verdict": "correct"
+  },
+  {
+   "native": "కాలనీ",
+   "en": "colony",
+   "path": "lexicon",
+   "row": 243,
+   "context": "కనకదుర్గ ఆలయంతో పాటు బీసీ కాలనీ రెడ్డిగూడెం సాయిబాబా ఆలయం సమీపంలో",
+   "verdict": "correct"
+  },
+  {
+   "native": "సినిమా",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 1568,
+   "context": "అయితే ఏ సినిమా విషయంలోనైనా పర్ఫెక్షన్ చూసే రాజమౌళి",
+   "verdict": "correct"
+  },
+  {
+   "native": "సినిమా",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 2668,
+   "context": "ఒత్తులు వేసుకొని మరీ ఆర్ఆర్ఆర్ సినిమా కోసం ఎదురు చూస్తున్నారు",
+   "verdict": "correct"
+  },
+  {
+   "native": "సిస్టమ్",
+   "en": "system",
+   "path": "lexicon",
+   "row": 3397,
+   "context": "మెమరీ కేటాయింపు నుండి ఆపరేటింగ్ సిస్టమ్ తొలగిపోతాయి ఒక చిన్న యుటిలిటీ",
+   "verdict": "correct"
+  },
+  {
+   "native": "కాంగ్రెస్",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 2259,
+   "context": "తర్వలో కాంగ్రెస్ పార్టీ ఆధ్వర్యంలో వెబ్ చానల్ను",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఫ్రెంచ్",
+   "en": "french",
+   "path": "lexicon",
+   "row": 1972,
+   "context": "ఇది ఒక ఫ్రెంచ్ బుల్డాగ్ ను గుర్తుచేసే కుక్కల",
+   "verdict": "correct"
+  },
+  {
+   "native": "రికార్డ్స్",
+   "en": "records",
+   "path": "lexicon",
+   "row": 2676,
+   "context": "రిలీజ్ తర్వాత తెలుగులో మరిన్ని రికార్డ్స్ క్రియేట్ చేస్తుందో చూడాలి",
+   "verdict": "correct"
+  },
+  {
+   "native": "రెస్ట్",
+   "en": "rest",
+   "path": "lexicon",
+   "row": 1961,
+   "context": "నెలన్నర రోజుల పాటు రెస్ట్ తీసుకున్న ప్రదీప్ మాచిరాజు ఈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "సెక్షన్",
+   "en": "section",
+   "path": "lexicon",
+   "row": 1441,
+   "context": "మీకు ఒక మొబైల్ రీచార్జ్ సెక్షన్ కనిపిస్తుంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "లిఫ్ట్",
+   "en": "lift",
+   "path": "lexicon",
+   "row": 2242,
+   "context": "లేకుండా కొండ మీద వాహనం లిఫ్ట్ అందించే ఒక శక్తివంతమైన ఇంజిన్",
+   "verdict": "correct"
+  },
+  {
+   "native": "గ్రౌండ్",
+   "en": "ground",
+   "path": "lexicon",
+   "row": 4991,
+   "context": "చౌగన్ స్టేడియం రైల్వే క్రికెట్ గ్రౌండ్ నగరంలోని ఇతర క్రీడా రంగాలు",
+   "verdict": "correct"
+  },
+  {
+   "native": "మార్కెట్",
+   "en": "market",
+   "path": "lexicon",
+   "row": 2069,
+   "context": "నామాలతో పాత స్కూటర్ మీద మార్కెట్ నుంచి కూరగాయలు తెస్తూన్న పోస్టర్",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఫీల్డ్",
+   "en": "field",
+   "path": "lexicon",
+   "row": 3594,
+   "context": "ఈ నేపధ్యంలోనే హౌంమంత్రి ఎల్బర్ ఫీల్డ్ బార్మెన్లో జరగబోతున్న అన్నిరకాల సమావేశాలను",
+   "verdict": "correct"
+  },
+  {
+   "native": "కోర్టు",
+   "en": "court",
+   "path": "lexicon",
+   "row": 3286,
+   "context": "ఆఫీసర్లు వేసిన పిటిషన్ పై కోర్టు ఇవాళ జస్టిస్ డాక్టర్ డీవై",
+   "verdict": "correct"
+  },
+  {
+   "native": "పార్క్",
+   "en": "park",
+   "path": "lexicon",
+   "row": 3557,
+   "context": "జాతీయ పార్క్ యొక్క వృక్షం ఎత్తు మరియు",
+   "verdict": "correct"
+  },
+  {
+   "native": "యూనియన్",
+   "en": "union",
+   "path": "lexicon",
+   "row": 6313,
+   "context": "దీనిని కౌలన్ స్టేషన్ లోని యూనియన్ స్క్వేర్ ప్రాజెక్ట్ లో భాగంగా",
+   "verdict": "correct"
+  },
+  {
+   "native": "సక్సెస్",
+   "en": "success",
+   "path": "lexicon",
+   "row": 4107,
+   "context": "ఏపీలో చేపట్టిన పాదయాత్రలన్ని సూపర్ సక్సెస్ అవ్వడంతో లోకేష్ ఈ యాత్రకు",
+   "verdict": "correct"
+  },
+  {
+   "native": "సినిమా",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 3511,
+   "context": "ఈ సినిమా తర్వాత నాగశౌర్య తన పారితోషికం",
+   "verdict": "correct"
+  },
+  {
+   "native": "వాటర్",
+   "en": "water",
+   "path": "lexicon",
+   "row": 1982,
+   "context": "మరపురాని అనుభవం మరియు మాస్కో వాటర్ పార్కు ఇస్తుంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "కలెక్టర్",
+   "en": "collector",
+   "path": "lexicon",
+   "row": 1855,
+   "context": "మార్పిడి చేయించేందుకు ఏర్పాట్లు చేయాలని కలెక్టర్ వెంకట్రామ్రెడ్డిని ఆదేశించారు",
+   "verdict": "correct"
+  },
+  {
+   "native": "లాక్డౌన్",
+   "en": "lockdown",
+   "path": "lexicon",
+   "row": 3378,
+   "context": "ప్రస్తుతం కొనసాగుతున్న లాక్డౌన్ మరింత కాలం కొనసాగితే ఇప్పుడున్న",
+   "verdict": "correct"
+  },
+  {
+   "native": "కమిటీ",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 1733,
+   "context": "సుప్రీం కోర్టు అంతర్గత దర్యాప్తు కమిటీ కొట్టిపారేసింది",
+   "verdict": "correct"
+  },
+  {
+   "native": "రియాలిటీ",
+   "en": "reality",
+   "path": "lexicon",
+   "row": 386,
+   "context": "వరల్డ్ టెలివిజన్ లోనే బిగ్గెస్ట్ రియాలిటీ షో ఏదన్నా ఉంది అంటే",
+   "verdict": "correct"
+  },
+  {
+   "native": "లిక్విడ్",
+   "en": "liquid",
+   "path": "lexicon",
+   "row": 2692,
+   "context": "లిక్విడ్ ఫండ్లలో పెట్టిన పెట్టుబడులు ఒక",
+   "verdict": "correct"
+  },
+  {
+   "native": "పోస్ట్",
+   "en": "post",
+   "path": "lexicon",
+   "row": 402,
+   "context": "ఈ సినిమా నవంబర్ లో పోస్ట్ ప్రొడక్షన్ వర్క్ కూడా కంప్లీట్",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఫోకస్",
+   "en": "focus",
+   "path": "lexicon",
+   "row": 1018,
+   "context": "వాయిస్ వస్తుండటంపై సీరియస్ గానే ఫోకస్ చేస్తోంది ప్రభుత్వం",
+   "verdict": "correct"
+  },
+  {
+   "native": "లిస్ట్",
+   "en": "list",
+   "path": "lexicon",
+   "row": 3332,
+   "context": "లు ఎవరెవరు కావాలో ఓ లిస్ట్ విడుదల చేసాడు వర్మ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్రైవేట్",
+   "en": "private",
+   "path": "lexicon",
+   "row": 1929,
+   "context": "ప్రైవేట్ సంస్థల భాగస్వామ్యంతో ఏరోస్పేస్ యూనివర్సిటీ",
+   "verdict": "correct"
+  },
+  {
+   "native": "సినిమా",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 279,
+   "context": "రిలీజ్ తర్వాత నేను ఇలాంటి సినిమా ఒక్కటి కూడా తీయలేకపోయానని చిరంజీవి",
+   "verdict": "correct"
+  },
+  {
+   "native": "జూనియర్",
+   "en": "junior",
+   "path": "lexicon",
+   "row": 4439,
+   "context": "సమీప జూనియర్ కళాశాల గొల్లపల్లిలోను ప్రభుత్వ ఆర్ట్స్",
+   "verdict": "correct"
+  },
+  {
+   "native": "సర్టిఫికేట్",
+   "en": "certificate",
+   "path": "lexicon",
+   "row": 3730,
+   "context": "జంతువుల పెంపకం ప్రకటించే ఒక సర్టిఫికేట్ అడగబడతారు",
+   "verdict": "correct"
+  },
+  {
+   "native": "మ్యాన్",
+   "en": "man",
+   "path": "lexicon",
+   "row": 4227,
+   "context": "హిట్ మ్యాన్ నాయకత్వంలో ముంబై జట్టు ఐపీఎల్",
+   "verdict": "correct"
+  },
+  {
+   "native": "పబ్లిక్",
+   "en": "public",
+   "path": "lexicon",
+   "row": 5075,
+   "context": "మొబైల్ ఫోన్ కవరేజి టెలిఫోన్ పబ్లిక్ ఫోన్ ఆఫీసు పబ్లిక్ బస్సు",
+   "verdict": "correct"
+  },
+  {
+   "native": "యాక్టివ్",
+   "en": "active",
+   "path": "lexicon",
+   "row": 612,
+   "context": "కేసుల సంఖ్య పెరుగుతుండటంతో మళ్లీ యాక్టివ్ కేసుల్లో పెరుగుదల కనిపిస్తోంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "కార్డ్",
+   "en": "card",
+   "path": "lexicon",
+   "row": 37,
+   "context": "కార్డ్ నిమిషాల ఒక జంట ఈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఫంక్షన్",
+   "en": "function",
+   "path": "lexicon",
+   "row": 2057,
+   "context": "ఇలాంటి ఫంక్షన్ టెలికాస్ట్ రైట్స్ రేట్లు కనీసం",
+   "verdict": "correct"
+  },
+  {
+   "native": "పోలీస్",
+   "en": "police",
+   "path": "lexicon",
+   "row": 836,
+   "context": "ముఖ్యమంత్రి జగన్ కూడా పోలీస్ డ్రస్ వేసుకుని పాలన చేస్తే",
+   "verdict": "correct"
+  },
+  {
+   "native": "సెషన్",
+   "en": "session",
+   "path": "lexicon",
+   "row": 4917,
+   "context": "జరిగితే ఉదాహరణకు వాతావరణం కారణంగా సెషన్ కోల్పోయిన సమయాన్ని సర్దుబాటు చేయవచ్చు",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్లాన్",
+   "en": "plan",
+   "path": "lexicon",
+   "row": 3504,
+   "context": "వెంటనే తన సినిమా చేసేటట్టు ప్లాన్ చేసి పెట్టుకుంటున్నాడు",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్లాన్",
+   "en": "plan",
+   "path": "lexicon",
+   "row": 1176,
+   "context": "రేంజ్ లోనే ఆవిష్కరించడానికి త్రివిక్రమ్ ప్లాన్ చేస్తున్నాడు",
+   "verdict": "correct"
+  },
+  {
+   "native": "బ్రాండ్",
+   "en": "brand",
+   "path": "lexicon",
+   "row": 841,
+   "context": "కలిసి పని మరియు వివిధ బ్రాండ్ పేర్లతో కలిపి ఉండగా",
+   "verdict": "correct"
+  },
+  {
+   "native": "మ్యూజియం",
+   "en": "museum",
+   "path": "lexicon",
+   "row": 475,
+   "context": "ముంచౌసేన్ మ్యూజియం యొక్క రెండో అంతస్తులో లాట్వియా",
+   "verdict": "correct"
+  },
+  {
+   "native": "వెహికల్స్",
+   "en": "vehicles",
+   "path": "lexicon",
+   "row": 3068,
+   "context": "రెనో లైనప్లో లభించే వెహికల్స్ సంఖ్యను నాలుగు పెంచే క్యాప్చర్",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఇంటర్",
+   "en": "inter",
+   "path": "lexicon",
+   "row": 513,
+   "context": "మూల్యాంకనం అత్యంత పారదర్శకంగా జరిగిందన్నారు ఇంటర్ బోర్డ్ కార్యదర్శి అశోక్ కుమార్",
+   "verdict": "correct"
+  },
+  {
+   "native": "క్యాన్సర్",
+   "en": "cancer",
+   "path": "lexicon",
+   "row": 146,
+   "context": "కాలుష్య వాహనాలతో చర్మ క్యాన్సర్ లాంటి ప్రమాదకర వ్యాధులు వ్యాప్తి",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఫిజిక్స్",
+   "en": "physics",
+   "path": "lexicon",
+   "row": 3549,
+   "context": "ఫిజిక్స్ టుడే లో ప్రచురితమైన స్ప్రిట్స్",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్లస్",
+   "en": "plus",
+   "path": "lexicon",
+   "row": 2197,
+   "context": "ప్లస్ వారు సాధారణంగా నో కుక్",
+   "verdict": "correct"
+  },
+  {
+   "native": "కోర్టు",
+   "en": "court",
+   "path": "lexicon",
+   "row": 1706,
+   "context": "అతను కోర్టు చుట్టూ ఒక చెప్పులు కుట్టేవాడు",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్రెజర్",
+   "en": "pressure",
+   "path": "lexicon",
+   "row": 2578,
+   "context": "ఫీల్డ్లో ఉన్నవారికి మరి ఎక్కువగా ప్రెజర్ ఉంటుంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "షూటింగ్",
+   "en": "shooting",
+   "path": "lexicon",
+   "row": 385,
+   "context": "పూర్తి చేసుకున్న ఈ సినిమా షూటింగ్ హైదరాబాద్లో ప్రారంభమైంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "వైరస్",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 12,
+   "context": "కరోనా వైరస్ కేసులు పెరుగుతుండటంతో బస్సులు స్టార్ట్",
+   "verdict": "correct"
+  },
+  {
+   "native": "రోడ్డు",
+   "en": "road",
+   "path": "lexicon",
+   "row": 5385,
+   "context": "ఇతర ప్రాంతాలు ప్రదేశాలకు చక్కటి రోడ్డు రైలు సౌకర్యాలున్నాయి",
+   "verdict": "correct"
+  },
+  {
+   "native": "రిటైల్",
+   "en": "retail",
+   "path": "lexicon",
+   "row": 3801,
+   "context": "ప్రముఖ రిటైల్ సంస్థ బిగ్ బజార్ మరోసారి",
+   "verdict": "correct"
+  },
+  {
+   "native": "సిల్వర్",
+   "en": "silver",
+   "path": "lexicon",
+   "row": 2588,
+   "context": "మత్తు కళ్ళతో సిల్వర్ స్క్రీన్ మీద చెలరేగిన పాయల్",
+   "verdict": "correct"
+  },
+  {
+   "native": "పేస్ట్",
+   "en": "paste",
+   "path": "lexicon",
+   "row": 4247,
+   "context": "తయారుగా ఉన్న టమోటాలు కొద్దిగా పేస్ట్ ను జోడించడం ద్వారా తాజా",
+   "verdict": "correct"
+  },
+  {
+   "native": "పార్టీ",
+   "en": "party",
+   "path": "lexicon",
+   "row": 801,
+   "context": "గందరగోళం చేస్తూ వైఎస్ఆర్ కాంగ్రెస్ పార్టీ తీరిక లేకుండా ఉంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "కార్డు",
+   "en": "card",
+   "path": "lexicon",
+   "row": 2186,
+   "context": "వినియోగదారుడు యొక్క వ్యాపార కార్డు అయినందున అనుభవజ్ఞులైన స్ట్రీమర్లను స్క్రీన్సేవర్లకు",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఫ్రెంచ్",
+   "en": "french",
+   "path": "lexicon",
+   "row": 3336,
+   "context": "ఫిన్ డు అనే ఓ ఫ్రెంచ్ ట్రైలర్ను చూసేందుకు హాజరైంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "సబ్సిడీ",
+   "en": "subsidy",
+   "path": "lexicon",
+   "row": 2914,
+   "context": "స్మార్ట్ సిటీలకు సౌర విద్యుత్ను సబ్సిడీ ధరకు అం దచేయటం వల్ల",
+   "verdict": "correct"
+  },
+  {
+   "native": "పోస్ట్",
+   "en": "post",
+   "path": "lexicon",
+   "row": 369,
+   "context": "చలించిపోయి వెంటనే సోషల్ మీడియాలో పోస్ట్ చేసింది",
+   "verdict": "correct"
+  },
+  {
+   "native": "హాస్పిటల్",
+   "en": "hospital",
+   "path": "lexicon",
+   "row": 2640,
+   "context": "అది సృష్టించబడిన మొదటి సోవియట్ హాస్పిటల్ ఆంకాలజీ అంశం సర్జరీ శాఖ",
+   "verdict": "correct"
+  },
+  {
+   "native": "క్యారెట్",
+   "en": "carrot",
+   "path": "lexicon",
+   "row": 4752,
+   "context": "తురిమిన క్యారెట్లను క్యారెట్ కేకులలో అలాగే క్యారెట్ పుడ్డింగ్సులో",
+   "verdict": "correct"
+  },
+  {
+   "native": "కంప్యూటింగ్",
+   "en": "computing",
+   "path": "lexicon",
+   "row": 1204,
+   "context": "క్వాంటమ్ కంప్యూటింగ్ వాస్తవ రూపం దాల్చడంలో ఇది",
+   "verdict": "correct"
+  },
+  {
+   "native": "సోషల్",
+   "en": "social",
+   "path": "lexicon",
+   "row": 387,
+   "context": "దాంతో సోషల్ మీడియాలో ఆమె గురించి పాకులాడే",
+   "verdict": "correct"
+  },
+  {
+   "native": "సెక్యూరిటీ",
+   "en": "security",
+   "path": "lexicon",
+   "row": 2110,
+   "context": "ఇందులో ఆన్లైన్ సెక్యూరిటీ డేటా ప్రాసెసింగ్ సాఫ్ట్వేర్ తదితర",
+   "verdict": "correct"
+  },
+  {
+   "native": "సర్వర్",
+   "en": "server",
+   "path": "lexicon",
+   "row": 4196,
+   "context": "ఒక వర్చ్యువల్ సర్వర్ అంటే రౌటర్లు సెటప్ కార్యక్రమాలు",
+   "verdict": "correct"
+  },
+  {
+   "native": "పెట్రోల్",
+   "en": "petrol",
+   "path": "lexicon",
+   "row": 376,
+   "context": "ఇలాంటి పరిస్థితుల్లో పెట్రోల్ ధరలను మరింత పెంచేలా కేంద్రం",
+   "verdict": "correct"
+  },
+  {
+   "native": "ఆపిల్",
+   "en": "apple",
+   "path": "lexicon",
+   "row": 474,
+   "context": "రుచి యొక్క రుచి ఒక ఆపిల్ మరియు స్ట్రాబెర్రీలతో నేరేడు పండు",
+   "verdict": "correct"
+  },
+  {
+   "native": "సినిమా",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 3024,
+   "context": "చరిత్ర ఆధారంగా తెరకెక్కుతున్న యాత్ర సినిమా ట్రైలర్ విడుదల",
+   "verdict": "correct"
+  },
+  {
+   "native": "కమ్యూనిటీ",
+   "en": "community",
+   "path": "lexicon",
+   "row": 5202,
+   "context": "పురపాలకప్రాంతం కాక ఒక్కొక ఉపవిభాగంలో కమ్యూనిటీ డెవెలెప్మెంటు బ్లాకులు గ్రామీణప్రాంతాలున్ పట్టణాలు",
+   "verdict": "correct"
+  },
+  {
+   "native": "మల్టిపుల్",
+   "en": "multiple",
+   "path": "lexicon",
+   "row": 5874,
+   "context": "మీరు శరీరంలోని అనేక భాగాలలో మల్టిపుల్ స్క్లెరోసిస్ వ్యాధి లక్షణాలను కలగవచ్చు",
+   "verdict": "correct"
+  },
+  {
+   "native": "సెటప్",
+   "en": "setup",
+   "path": "lexicon",
+   "row": 133,
+   "context": "భాగంలో కాయిల్ స్ప్రింగ్ సస్పెన్షన్ సెటప్ కలిగి ఉంటుంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "పార్టీ",
+   "en": "party",
+   "path": "lexicon",
+   "row": 1887,
+   "context": "వైఎస్ఆర్ కాంగ్రెస్ పార్టీ నుంచి పోటీ చేస్తున్న అభ్యర్ధులంతా",
+   "verdict": "correct"
+  },
+  {
+   "native": "రైల్వే",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 5540,
+   "context": "మహబూబ్ నగర్ జిల్లా లోని రైల్వే స్టేషను లలో ఇది ఒకటి",
+   "verdict": "correct"
+  },
+  {
+   "native": "సాఫ్ట్వేర్",
+   "en": "software",
+   "path": "lexicon",
+   "row": 3441,
+   "context": "ఓ ప్రముఖ సాఫ్ట్వేర్ కంపెనీలో సాఫ్ట్వేర్ ఇంజినీర్గా పని చేస్తున్నాడు",
+   "verdict": "correct"
+  },
+  {
+   "native": "మాస్టర్",
+   "en": "master",
+   "path": "lexicon",
+   "row": 2499,
+   "context": "మాత్రమే ఆమె లేదా ఆమె మాస్టర్ మరియు అతని భూభాగం ముప్పు",
+   "verdict": "correct"
+  },
+  {
+   "native": "బోర్డు",
+   "en": "board",
+   "path": "lexicon",
+   "row": 4192,
+   "context": "చేసుకుని కూడా పరీక్షలకు హాజరుకావచ్చని బోర్డు కార్యదర్శి పేర్కొన్నారు",
+   "verdict": "correct"
+  },
+  {
+   "native": "సినిమా",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 4112,
+   "context": "కళ్యాణ్ను టాలీవుడ్కు పరిచయం చేసే సినిమా పనిలో శ్రీవాస్ బిజీగా ఉన్నారు",
+   "verdict": "correct"
+  },
+  {
+   "native": "సాఫ్ట్వేర్",
+   "en": "software",
+   "path": "lexicon",
+   "row": 2110,
+   "context": "ఆన్లైన్ సెక్యూరిటీ డేటా ప్రాసెసింగ్ సాఫ్ట్వేర్ తదితర అంశాలపై విద్యార్థులకు మెళకువలు",
+   "verdict": "correct"
+  },
+  {
+   "native": "కమిషన్",
+   "en": "commission",
+   "path": "lexicon",
+   "row": 6096,
+   "context": "పదవులకు తగిన అభ్యర్థులను ఎన్నుకోవడం కమిషన్ ప్రాధమిక విధులలో ఒకటి",
+   "verdict": "correct"
+  },
+  {
+   "native": "పార్టీ",
+   "en": "party",
+   "path": "lexicon",
+   "row": 1031,
+   "context": "రఘురామకృష్ణమ రాజు వ్యవహారంతో మీ పార్టీ రంగు మారుతోందని అది చూసుకోవాలని",
+   "verdict": "correct"
+  },
+  {
+   "native": "పార్టీ",
+   "en": "party",
+   "path": "lexicon",
+   "row": 2740,
+   "context": "కాంగ్రెస్ పార్టీ కూడా హోదా వంటి వాటి",
+   "verdict": "correct"
+  },
+  {
+   "native": "డిమాండ్",
+   "en": "demand",
+   "path": "lexicon",
+   "row": 4117,
+   "context": "పొడిగింపు పంక్తులు లేదా పరిమాణం డిమాండ్ సన్నని ఘన లైన్",
+   "verdict": "correct"
+  },
+  {
+   "native": "అవార్డ్స్",
+   "en": "awards",
+   "path": "lexicon",
+   "row": 3765,
+   "context": "రెండు కాదు ఏకంగా ఏడూ అవార్డ్స్ కైవసం చేసుకోవడం పట్ల ఆయా",
+   "verdict": "correct"
+  },
+  {
+   "native": "థ్రిల్లర్",
+   "en": "thriller",
+   "path": "lexicon",
+   "row": 3710,
+   "context": "వహిస్తున్న ఈ సినిమా స్పై థ్రిల్లర్ గా రూపొందుతుంది",
+   "verdict": "correct"
+  },
+  {
+   "native": "వైరస్",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 1338,
+   "context": "భారత్ లో కరోనా వైరస్ పాజిటివ్ కేసులు రోజురోజుకీ పెరుగుతున్న",
+   "verdict": "correct"
+  },
+  {
+   "native": "కామన్",
+   "en": "common",
+   "path": "lexicon",
+   "row": 3847,
+   "context": "చిత్రానికి బాగానే కనెక్ట్ అవుతున్నా కామన్ ఆడియన్స్ ఎలా రిసీవ్ చేసుకుంటారో",
+   "verdict": "correct"
+  },
+  {
+   "native": "సోషల్",
+   "en": "social",
+   "path": "lexicon",
+   "row": 1947,
+   "context": "ఇక సోషల్ మీడియాలో ఈమెకున్న క్రేజ్తో ఒకప్పుడు",
+   "verdict": "correct"
+  },
+  {
+   "native": "అకాడమీ",
+   "en": "academy",
+   "path": "lexicon",
+   "row": 4922,
+   "context": "ఈ సంస్థ రాయల్ నెదర్లాండ్స్ అకాడమీ ఆఫ్ ఆర్ట్స్ అండ్ సైన్సెస్",
+   "verdict": "correct"
+  },
+  {
+   "native": "టికెట్",
+   "en": "ticket",
+   "path": "lexicon",
+   "row": 1214,
+   "context": "టైమ్ లో కట్టలేకపోవడంతో హాల్ టికెట్ ఇవ్వలేమని అన్నారు",
+   "verdict": "correct"
+  },
+  {
+   "native": "యూనిట్",
+   "en": "unit",
+   "path": "lexicon",
+   "row": 3435,
+   "context": "విడుదల చేయనున్నట్లు ప్రకటించారు చిత్ర యూనిట్",
+   "verdict": "correct"
+  },
+  {
+   "native": "పెన్ను",
+   "en": "pen",
+   "path": "lexicon",
+   "row": 847,
+   "context": "కోతకు భయపడి దాని గురించెక్కడా పెన్ను కదపలేదు",
+   "verdict": "correct"
+  },
+  {
+   "native": "ప్లాన్",
+   "en": "plan",
+   "path": "lexicon",
+   "row": 3737,
+   "context": "అయి పోలీసులు రావడంతో ఆ ప్లాన్ బెడిసికొట్టినట్టు వారిద్దరూ తీవ్రంగా బాధపడుతున్నట్టు",
+   "verdict": "correct"
+  },
+  {
+   "native": "కలెక్టర్",
+   "en": "collector",
+   "path": "lexicon",
+   "row": 2278,
+   "context": "కలెక్టర్ వాసం వెంకటేశ్వర్లు ఇచ్చిన గ్రీన్",
+   "verdict": "correct"
+  },
+  {
+   "native": "ట్రయల్",
+   "en": "trail",
+   "path": "lexicon",
+   "row": 3354,
+   "context": "ఈలోగా జార్ఖండ్ రాష్ట్రంలోని ఓ ట్రయల్ కోర్టు నుంచి అతడు రెగ్యులర్",
+   "verdict": "wrong",
+   "note": "ట్రయల్ కోర్టు = trial court; the lexicon spells it 'trail'"
+  }
+ ],
+ "precision": 99.0
+}

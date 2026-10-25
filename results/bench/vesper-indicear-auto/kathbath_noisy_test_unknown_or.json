@@ -1,0 +1,132 @@
+{
+  "or": {
+    "wer": 65.85,
+    "cer": 31.34,
+    "utterances": 300,
+    "words": 3168,
+    "script_error_rate": 9.8,
+    "wer_script_normalised": 64.74,
+    "cer_script_normalised": 30.02,
+    "rows_with_alternative_ref": 49,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.522
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "or": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "or": {
+        "or": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 72,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 221,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 7,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_or",
+  "utterances": 300,
+  "hours": 0.52,
+  "seconds": 21,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 272,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/or/noisy_test_unknown/844424930545290-845-f",
+      "constrained": "ଫଳରେ ମୁୂାୟ ଓ ରକ୍ତର ମ ମହିଳା ପଦାତ ଜମିଯାଏ",
+      "unconstrained": "পରେ ମୁୂାୟ ଓ ରକ୍ତର ମ ମହିଳା ପଦାତ ଜମିଯାଏ",
+      "hinted": "ଫଳରେ ମୁୂାୟ ଓ ରକ୍ତର ମ ମହିଳା ପଦାତ ଜମିଯାଏ"
+    },
+    {
+      "key": "kathbath_test/or/noisy_test_unknown/844424931277478-5-f",
+      "constrained": "ଏହି ମଦ ନିଜ ଘରେ ପ୍ରସ୍ତୁତଥିବା ଜଣା ପଡ଼ିଛି",
+      "unconstrained": "ਸ এই মদ ନିଜ ଘରେ ପ୍ରସ୍ତୁତଥିବା ଜଣା ପଡ଼ିଛି",
+      "hinted": "ଏହି ମଦ ନିଜ ଘରେ ପ୍ରସ୍ତୁତଥିବା ଜଣା ପଡ଼ିଛି"
+    },
+    {
+      "key": "kathbath_test/or/noisy_test_unknown/844424930383984-1000-f",
+      "constrained": "gର୍ମାନନ୍ ବେ ଆତଙ୍କବାଦ ବିଶରରଣ ମା ହାତ ଥିଲା",
+      "unconstrained": "পুের gର୍ମାନନ୍ ବେ ଆତଙ୍କବାଦ ବିଶରରଣ ମା ହାତ ଥିଲା",
+      "hinted": "gର୍ମାନନ୍ ବେ ଆତଙ୍କବାଦ ବିଶରରଣ ମା ହାତ ଥିଲା"
+    },
+    {
+      "key": "kathbath_test/or/noisy_test_unknown/844424930383961-1000-f",
+      "constrained": "କ ଭାବରେ ଏହାକୁଲେ pସି ରୋଗଙ୍କ ଚିକିତ୍ସା ଦେଶର ଉତ୍ଭାବବନ କରାଯାଇରା କରାଯାଇଛି",
+      "unconstrained": "ౌలిక ଭାବରେ ଏହାକୁଲେpସି ରୋଗଙ୍କ ଚିକିତ୍ସା ଦେଶର ଉତ୍ଭାବବନ କରାଯାଇରା କରାଯାଇଛି",
+      "hinted": "କ ଭାବରେ ଏହାକୁଲେ pସି ରୋଗଙ୍କ ଚିକିତ୍ସା ଦେଶର ଉତ୍ଭାବବନ କରାଯାଇରା କରାଯାଇଛି"
+    },
+    {
+      "key": "kathbath_test/or/noisy_test_unknown/844424931280478-693-m",
+      "constrained": "ବ୍ୟକ୍ତିଜ ଜଣକ ଏମିତିୋର୍ଯ୍ୟରେ ଗଡ଼ଥିଲେ ଯାହାକୁ ଅର୍ସବିକ ଥିଲା",
+      "unconstrained": "व्यक्तिଜ ଜଣକ ଏମିତିୋର୍ଯ୍ୟରେ ଗଡ଼ଥିଲେ ଯାହାକୁ ଅର୍ସବିକ ଥିଲା",
+      "hinted": "ବ୍ୟକ୍ତିଜ ଜଣକ ଏମିତିୋର୍ଯ୍ୟରେ ଗଡ଼ଥିଲେ ଯାହାକୁ ଅର୍ସବିକ ଥିଲା"
+    }
+  ]
+}

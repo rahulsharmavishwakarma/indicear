@@ -1,0 +1,179 @@
+{
+  "kind": "eval",
+  "system": "v4+lid",
+  "set": "cs_dev",
+  "condition": null,
+  "notes": "",
+  "utterances": 400,
+  "hours": 1.606,
+  "metrics": {
+    "ctc": {
+      "cs:hi+en": {
+        "wer": 27.69,
+        "cer": 14.11,
+        "utterances": 100,
+        "words": 4391,
+        "script_error_rate": 0.42,
+        "span_accuracy": 90.0,
+        "span_cer_mean": 26.75,
+        "order_accuracy": 99.0,
+        "span_cer_threshold": 0.5,
+        "hours": 0.46
+      },
+      "cs:hi+kn": {
+        "wer": 42.84,
+        "cer": 22.79,
+        "utterances": 100,
+        "words": 2899,
+        "script_error_rate": 1.5,
+        "span_accuracy": 74.5,
+        "span_cer_mean": 41.17,
+        "order_accuracy": 91.0,
+        "span_cer_threshold": 0.5,
+        "hours": 0.35
+      },
+      "cs:kn+en": {
+        "wer": 31.27,
+        "cer": 14.46,
+        "utterances": 100,
+        "words": 3278,
+        "script_error_rate": 0.81,
+        "span_accuracy": 83.5,
+        "span_cer_mean": 25.96,
+        "order_accuracy": 93.0,
+        "span_cer_threshold": 0.5,
+        "hours": 0.389
+      },
+      "cs:ta+en": {
+        "wer": 34.99,
+        "cer": 16.12,
+        "utterances": 100,
+        "words": 3698,
+        "script_error_rate": 0.68,
+        "span_accuracy": 81.0,
+        "span_cer_mean": 29.16,
+        "order_accuracy": 91.0,
+        "span_cer_threshold": 0.5,
+        "hours": 0.407
+      }
+    }
+  },
+  "lid": {
+    "utterance": {
+      "utterances": 400,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "per_lang": {
+        "hi+en": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 100
+        },
+        "hi+kn": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 100
+        },
+        "kn+en": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 100
+        },
+        "ta+en": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 100
+        }
+      },
+      "confusion": {
+        "hi+en": {
+          "en": 34,
+          "hi": 66,
+          "hi+en": 0
+        },
+        "hi+kn": {
+          "hi": 49,
+          "hi+kn": 0,
+          "kn": 51
+        },
+        "kn+en": {
+          "en": 39,
+          "kn": 61,
+          "kn+en": 0
+        },
+        "ta+en": {
+          "en": 46,
+          "ta": 54,
+          "ta+en": 0
+        }
+      },
+      "pairs": {
+        "hi/ur": {
+          "hi->ur": 0,
+          "ur->hi": 0,
+          "hi_utterances": 0,
+          "ur_utterances": 0,
+          "hi_as_ur_rate": null,
+          "ur_as_hi_rate": null
+        },
+        "hi/mr": {
+          "hi->mr": 0,
+          "mr->hi": 0,
+          "hi_utterances": 0,
+          "mr_utterances": 0,
+          "hi_as_mr_rate": null,
+          "mr_as_hi_rate": null
+        },
+        "pa/hi": {
+          "pa->hi": 0,
+          "hi->pa": 0,
+          "pa_utterances": 0,
+          "hi_utterances": 0,
+          "pa_as_hi_rate": null,
+          "hi_as_pa_rate": null
+        }
+      },
+      "by_duration": {
+        "0-2s": {
+          "utterances": 1,
+          "accuracy": 0.0
+        },
+        "2-5s": {
+          "utterances": 20,
+          "accuracy": 0.0
+        },
+        "5-10s": {
+          "utterances": 81,
+          "accuracy": 0.0
+        },
+        "10-20s": {
+          "utterances": 218,
+          "accuracy": 0.0
+        },
+        ">20s": {
+          "utterances": 80,
+          "accuracy": 0.0
+        }
+      }
+    },
+    "spans": {
+      "utterances": 400,
+      "spans": 800,
+      "span_accuracy": 96.62,
+      "sequence_accuracy": 76.75,
+      "frame_accuracy": null
+    }
+  },
+  "environment": {
+    "runtime": "python 3.14.8, GIL off",
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "encoder": "google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd"
+  },
+  "frame_budget": 67045
+}

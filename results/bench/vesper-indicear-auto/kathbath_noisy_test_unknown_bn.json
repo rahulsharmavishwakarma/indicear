@@ -1,0 +1,132 @@
+{
+  "bn": {
+    "wer": 55.63,
+    "cer": 21.95,
+    "utterances": 300,
+    "words": 3266,
+    "script_error_rate": 7.66,
+    "wer_script_normalised": 54.07,
+    "cer_script_normalised": 20.13,
+    "rows_with_alternative_ref": 66,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.537
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "bn": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "bn": {
+        "bn": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 75,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 208,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 17,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_bn",
+  "utterances": 300,
+  "hours": 0.54,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 145,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/bn/noisy_test_unknown/844424930554317-92-f",
+      "constrained": "নিজের মিক একুশ আক্রান্ত হওয়ায় একেবারেের শেষ মুহূর্তে বিমান থেকে ইজ ct করে পাক অধিককৃত কাশ্মীরের",
+      "unconstrained": "নিজের মিক একুশ আক্রান্ত হওয়ায় একেবারেের শেষ মুহূর্তে বিমান থেকে ইজct করে পাক অধিককৃত কাশ্মীরের",
+      "hinted": "নিজের মিক একুশ আক্রান্ত হওয়ায় একেবারেের শেষ মুহূর্তে বিমান থেকে ইজ ct করে পাক অধিককৃত কাশ্মীরের"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_unknown/844424930707869-210-m",
+      "constrained": "সায়ার প্রতিবাদ যুবক অপ ভাণ্ডারকে খুনের প্রতিবাদে এবং দোষদের গ্রেফরের দাবিতে",
+      "unconstrained": "ೌಡರ್ सालಕয়ার প্রতিবাদ যুবক অপ ভাণ্ডারকে খুনের প্রতিবাদে এবং দোষদের গ্রেফরের দাবিতে",
+      "hinted": "সায়ার প্রতিবাদ যুবক অপ ভাণ্ডারকে খুনের প্রতিবাদে এবং দোষদের গ্রেফরের দাবিতে"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_unknown/844424930707833-210-m",
+      "constrained": "প্রধান নির্দেশ বই মেলার সময়ীমা দুই তিন বৃদ্ধি করা হয়েছে",
+      "unconstrained": "प्र প্রধান নির্দেশ বই মেলার সময়ীমা দুই তিন বৃদ্ধি করা হয়েছে",
+      "hinted": "প্রধান নির্দেশ বই মেলার সময়ীমা দুই তিন বৃদ্ধি করা হয়েছে"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_unknown/844424930464204-1161-m",
+      "constrained": "জগমহনের দুর্নীতি মামলায় ছয় কং res মন্দিরমন্ত্রী্রিকে notice supreme কোর্ট",
+      "unconstrained": "জगমহনের দুর্নীতি মামলায় ছয় কংreেs মন্দিরমন্ত্রী্রিকে notice supreme কোর্ট",
+      "hinted": "জগমহনের দুর্নীতি মামলায় ছয় কং res মন্দিরমন্ত্রী্রিকে notice supreme কোর্ট"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_unknown/844424932474933-37-f",
+      "constrained": "মাধৌ সবন নির্বাচনচ মেয়ের পদ আ আমিীগের ম f হো sean প্রধান মানিক ও বিএপ হাজ",
+      "unconstrained": "माधौৌ সবন নির্বাচনচ মেয়ের পদ ଆଉ আমিীগের ମf হোسین प्र প্রধান माणিক ও বিএপ হাজ",
+      "hinted": "মাধৌ সবন নির্বাচনচ মেয়ের পদ আ আমিীগের ম f হো sean প্রধান মানিক ও বিএপ হাজ"
+    }
+  ]
+}

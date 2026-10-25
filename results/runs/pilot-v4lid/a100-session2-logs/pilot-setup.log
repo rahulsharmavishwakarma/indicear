@@ -1,0 +1,13 @@
+pilot setup: started 2026-10-24 08:13:18
+Downloading cpython-3.14.8+freethreaded-linux-x86_64-gnu (download) (34.8MiB)
+ Downloaded cpython-3.14.8+freethreaded-linux-x86_64-gnu (download)
+Installed Python 3.14.8 in 1.06s
+ + cpython-3.14.8+freethreaded-linux-x86_64-gnu (python3.14t)
+Using CPython 3.14.8+freethreaded
+Creating virtual environment at: /content/venv314t
+Activate with: source /content/venv314t/bin/activate
+NVIDIA A100-SXM4-80GB, 81920 MiB, 580.82.07
+overlay         236G   50G  187G  21% /
+3.14.8 GIL enabled: False | torch 2.14.1+cu130 CUDA 13.0 True NVIDIA A100-SXM4-80GB capability (8, 0) bf16 True
+ffmpeg codecs: ['gsm', 'opus']
+pilot setup: DONE

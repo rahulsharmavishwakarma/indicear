@@ -1,0 +1,90 @@
+{
+  "ml": {
+    "wer": 99.97,
+    "cer": 33.21,
+    "utterances": 300,
+    "words": 3272,
+    "script_error_rate": 29.55,
+    "wer_script_normalised": 98.72,
+    "cer_script_normalised": 32.13,
+    "rows_with_alternative_ref": 59,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.748
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "ml": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ml": {
+        "ml": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "5-10s": {
+        "utterances": 213,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 87,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_ml",
+  "utterances": 300,
+  "hours": 0.75,
+  "seconds": 26,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "hi": {
+    "wer": 53.98,
+    "cer": 32.91,
+    "utterances": 120,
+    "words": 2688,
+    "script_error_rate": 22.29,
+    "wer_script_normalised": 53.94,
+    "cer_script_normalised": 32.88,
+    "rows_with_alternative_ref": 77,
+    "cm_utterances": 77,
+    "cm_spans": 608,
+    "cm_span_accuracy": 71.71,
+    "cm_span_cer_mean": 38.23,
+    "cm_span_accuracy_by_lang": {
+      "en": 77.42,
+      "hi": 66.87
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.341
+  },
+  "lid": {
+    "utterances": 120,
+    "accuracy": 77.5,
+    "macro_f1": 87.32,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 77.5,
+        "f1": 87.32,
+        "support": 120
+      }
+    },
+    "confusion": {
+      "hi": {
+        "gu": 1,
+        "hi": 93,
+        "mr": 1,
+        "or": 1,
+        "ur": 24
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 24,
+        "ur->hi": 0,
+        "hi_utterances": 120,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 20.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 1,
+        "mr->hi": 0,
+        "hi_utterances": 120,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.83,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 120,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 6,
+        "accuracy": 50.0
+      },
+      "5-10s": {
+        "utterances": 57,
+        "accuracy": 78.95
+      },
+      "10-20s": {
+        "utterances": 57,
+        "accuracy": 78.95
+      }
+    }
+  },
+  "eval_set": "indiccontext_hi_code_mixed",
+  "utterances": 120,
+  "hours": 0.34,
+  "seconds": 12,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 118,
+  "changed_examples": [
+    {
+      "key": "indiccontext_eval/hi/test/7318349394481706_0_5",
+      "constrained": "bio powerव er केवल शरीर का नहीं बंक आत्म और विचारों का भी नियम करने लगता है यही सामानकालीन साहित्य के जीवन निगराण और नियंत्रण की त्रास को उजागरर करता है",
+      "unconstrained": "bioॉवer केਵਲ ਸਰੀਰ का नहीं बंक आत्म और विचारों का भी नियम करने लगता है यही सामानकालीन साहित्य के जीवन निगराण और नियंत्रण की त्रास को उजागरर करता है",
+      "hinted": "bio powerव er केवल शरीर का नहीं बंक आत्म और विचारों का भी नियम करने लगता है यही सामानकालीन साहित्य के जीवन निगराण और नियंत्रण की त्रास को उजागरर करता है"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_0",
+      "constrained": "ens dataیع کہ جو",
+      "unconstrained": "ens dataیع کہ ਜੋ",
+      "hinted": "ens data या जो"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_37",
+      "constrained": "हर एक even एक मतलब प्रजाती में भीाणियों की काफ़ी फरक होते काफ़ी अंत होते",
+      "unconstrained": "ਹਰ ایک evenન એક मतलब प्रजाती में بھی پرڑियों की کافی فرق ہوتے کافی ਅੰਤਰ ہوتے",
+      "hinted": "हर एक even एक मतलब प्रजाती में भीाणियों की काफ़ी फरक होते काफ़ी अंत होते"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_0",
+      "constrained": "جب bم leول last in first out accounting meter کی بات کرتے ہیں تو یہ خاص store پر اس س railwayvant ہو جاتا ہے جبنگائی یا infration تیز سے بڑھ رہی lefوں میں سب سے پہلے latest",
+      "unconstrained": "جبbم leੋ last in first और accounting meट की बात करते हैं तो ये खा store पर उस समय railwayvant हो जाता है जब महंगाई या infration تیز سے بڑھ रही lefوں میں سب سے پہلے latest",
+      "hinted": "jbam leo last in first और accounting meट की बात करते हैं तो ये खा store पर उस समय railwayvant हो जाता है जब महंगाई या infration तेज से बढ़ रही lefo में सबसे पहले latest"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_1",
+      "constrained": "خریدیں کا invertry کو بینے کے",
+      "unconstrained": "خریدे का invertry को बेचने के",
+      "hinted": "खरीदे का invertry को बेचने के"
+    }
+  ]
+}

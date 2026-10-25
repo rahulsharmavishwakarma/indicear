@@ -1,0 +1,143 @@
+{
+  "bn": {
+    "wer": 67.92,
+    "cer": 34.17,
+    "utterances": 300,
+    "words": 2631,
+    "script_error_rate": 2.57,
+    "wer_script_normalised": 67.92,
+    "cer_script_normalised": 34.17,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 267,
+    "cm_spans": 1124,
+    "cm_span_accuracy": 59.07,
+    "cm_span_cer_mean": 52.35,
+    "cm_span_accuracy_by_lang": {
+      "bn": 66.51,
+      "en": 49.6
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.509
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 95.0,
+    "macro_f1": 97.44,
+    "per_lang": {
+      "bn": {
+        "precision": 100.0,
+        "recall": 95.0,
+        "f1": 97.44,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "bn": {
+        "bn": 285,
+        "en": 3,
+        "gu": 2,
+        "hi": 1,
+        "mr": 9
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 102,
+        "accuracy": 89.22
+      },
+      "5-10s": {
+        "utterances": 167,
+        "accuracy": 97.6
+      },
+      "10-20s": {
+        "utterances": 30,
+        "accuracy": 100.0
+      },
+      ">20s": {
+        "utterances": 1,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "mucs_test_bn",
+  "utterances": 300,
+  "hours": 0.51,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 193,
+  "changed_examples": [
+    {
+      "key": "mucs/bn/test/456914_FQb2OQZk5p42qy4E_0000",
+      "constrained": "ex ব্যবহার করে feedback diagramh তৈরিই ক অর্থথ tutorলে আপনাদের স্বাগত জানানই",
+      "unconstrained": "ex ব্যবহার করে feedback diagramh তৈরিই ক অর্থথ tutorিয়ালে আপনাদের স্বাগত জানানই",
+      "hinted": "ex ব্যবহার করে feedback diagramh তৈরিই ক অর্থথ tutorলে আপনাদের স্বাগত জানানই"
+    },
+    {
+      "key": "mucs/bn/test/456914_FQb2OQZk5p42qy4E_0004",
+      "constrained": "eight tutorলে al আমরা ব্যাখ্যা করব এই পৃষ্ঠয় প্রদর্শিত এরকম block diagram কীভাবে বানাবো",
+      "unconstrained": "eight tutorলেal আমরা ব্যাখ্যা করব এই পৃষ্ঠয় প্রদর্শিত এরকম block diagram কীভাবে বানাবো",
+      "hinted": "eight tutorলে al আমরা ব্যাখ্যা করব এই পৃষ্ঠয় প্রদর্শিত এরকম block diagram কীভাবে বানাবো"
+    },
+    {
+      "key": "mucs/bn/test/456914_FQb2OQZk5p42qy4E_0005",
+      "constrained": "আমি wস্ককরণ তিন point দুই এবং pter পাঁচ ব্যবহাররবো",
+      "unconstrained": "আমি wংস্ককরণ তিন point দুই এবং pter পাঁচ ব্যবহাররবো",
+      "hinted": "আমি wস্ককরণ তিন point দুই এবং pter পাঁচ ব্যবহাররবো"
+    },
+    {
+      "key": "mucs/bn/test/456914_FQb2OQZk5p42qy4E_0007",
+      "constrained": "বলুন এ ri যাওয়া যাক",
+      "unconstrained": "বলুন এri যাওয়া যাক",
+      "hinted": "বলুন এ ri যাওয়া যাক"
+    },
+    {
+      "key": "mucs/bn/test/456914_FQb2OQZk5p42qy4E_0009",
+      "constrained": "ent boxর মধ্যে আমরা blockoযোগ করবো এবং open tভব অথবা blockd dot ফিকেে doubleল ck কর",
+      "unconstrained": "ent boxक्षের মধ্যে আমরা blockoোযোগ করবো এবং open tভব অথবা blockdোt ফিকেে doubleिक কর",
+      "hinted": "ent boxর মধ্যে আমরা blockoযোগ করবো এবং open tভব অথবা blockd dot ফিকেে doubleল ck কর"
+    }
+  ]
+}

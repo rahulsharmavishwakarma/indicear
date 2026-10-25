@@ -1,0 +1,203 @@
+{
+  "kn": {
+    "wer": 60.34,
+    "cer": 25.02,
+    "utterances": 600,
+    "words": 8440,
+    "script_error_rate": 0.97,
+    "wer_script_normalised": 60.02,
+    "rows_with_alternative_ref": 345,
+    "cm_utterances": 342,
+    "cm_spans": 1780,
+    "cm_span_accuracy": 78.2,
+    "cm_span_cer_mean": 33.31,
+    "cm_span_accuracy_by_lang": {
+      "en": 72.39,
+      "kn": 82.69
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 1.102
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 96.67,
+    "macro_f1": 98.31,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 96.67,
+        "f1": 98.31,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "kn": {
+        "hi": 4,
+        "kn": 580,
+        "ta": 16
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 119,
+        "accuracy": 84.03
+      },
+      "2-5s": {
+        "utterances": 116,
+        "accuracy": 99.14
+      },
+      "5-10s": {
+        "utterances": 230,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 135,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_kn",
+  "utterances": 600,
+  "hours": 1.1,
+  "seconds": 37,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 212,
+  "changed_examples": [
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_3",
+      "constrained": "ಹಾಂ ಸರಿ ಹೌದುೌ electric showroom sir",
+      "unconstrained": "ஆ சரி ಹೌದುೌ electric showroom sir"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_5",
+      "constrained": "sir ನಮಗೆ ಒಂದು fridge ಬೇಕಿತ್ತು sir ನಮಗೆಕ್ಕ ನಿಮ್ಮಲ್ಲಿ ಯಾವ್ಯಾ fridge ಗಳು ಅವ available sir sir ಯಾವ companyಗಳು fridge ಇದ್ದ ನಿಮ್ಮಲ್ಲಿ",
+      "unconstrained": "sir நமக்கு ಒಂದು fridge ಬೇಕಿತ್ತು sir ನಮಗೆಕ್ಕ ನಿಮ್ಮಲ್ಲಿ ಯಾವ್ಯಾ fridge ಗಳು ಅವ available sir sir ಯಾವ companyಗಳು fridge ಇದ್ದ ನಿಮ್ಮಲ್ಲಿ"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_8",
+      "constrained": "ಇಲ್ಲ sir ನಮಗೆ family family ಇದೆ sir ನಮ್ಮದು family ಬೇಕಾಗಿದೆ sir ನಮ್ಗೆ ನಮ್ಗೆ health l g l ಬೇಕಾಗಿದೆ sir lg companyಯಲ್ಲಿ l company ನಿಮ್ಮಲ್ಲಿ ಇದೆಲ್ sir",
+      "unconstrained": "ಇಲ್ಲ sir ನಮಗೆ family family ಇದೆ sir ನಮ್ಮದು familyಿಗೆ ಬೇಕಾಗಿದೆ sir ನಮ್ಗೆ ನಮ್ಗೆ health l g l ಬೇಕಾಗಿದೆ sir lg companyಂಪಯಲ್ಲಿ l company ನಿಮ್ಮಲ್ಲಿ ಇದೆಲ್ sir"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_10",
+      "constrained": "ಹಾಂ double door ಬೇಕು",
+      "unconstrained": "ஆ double door ಬೇಕು"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_18",
+      "constrained": "sir ಇನ್ನೊಂದು ಇನ್ನೊಂದು ಏನಂತಂದರೆ ಈಗ ಅದು ಹಬ್ಬ ಇದೆಲ್ಲ sir ಹಬ್ಬಕ್ಕೆ ಏನಾದರೂ offer ಇದೆ sir ಅದು fridgeಗೆ",
+      "unconstrained": "சரி இ ಇನ್ನೊಂದು ಇನ್ನೊಂದು ಏನಂತಂದರೆ ಈಗ ಅದು ಹಬ್ಬ ಇದೆಲ್ಲ sir ಹಬ್ಬಕ್ಕೆ ಏನಾದರೂ offer ಇದೆ sir ಅದು fridgeಗೆ"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_22",
+      "constrained": "sir ನಾವು ಇಲ್ಲೇ ಗಿಣಗೇ ಇರದದಿಂದ sir",
+      "unconstrained": "ஆ sir ನಾವು ಇಲ್ಲೇ ಗಿಣಗೇ ಇರದದಿಂದ sir"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_29",
+      "constrained": "ಹಾಂ sir",
+      "unconstrained": "ஆ sir"
+    },
+    {
+      "key": "indicvoices/kn/valid/48234f0d-6143-4c71-9f22-bde0c35536bb_0_chunk_31",
+      "constrained": "okay sir sir धन्यवाद",
+      "unconstrained": "okay sir sir धन्यवादನ್"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_1",
+      "constrained": "ಗುಲ್ಬರ್ಗದಲ್ಲಿ ಅಂದರೆ ಅಪ್ಪಂಗ ಗು ಚಣ ದೇವಸ್ಥಾನ ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ",
+      "unconstrained": "गुलबಬರ್ಗದಲ್ಲಿ ಅಂದರೆ ಅಪ್ಪಂಗ ಗು ಚಣ ದೇವಸ್ಥಾನ ತುಂಬಾ ಚೆನ್ನಾಗಿದೆ"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_4",
+      "constrained": "ಹುಡುಗರಿಗೆ bus free ಇದೆ ಹುಡುಗರಿಗೆ amount ಇದೆ autoದಿಂದ ಬರಬಹುದು ಮತ್ತೆ ಬುದ್ಧಂದ ಇದೆ ಬುದ್ಧ ಮಂದಿಿಂದ ನಾನು ಇಲ್ಲಿ ನಡ್ಕೊ ಹೋಗಬಹುದು bus ಇದೆ ಈ bus ಇದೆ ಬದು ಬಂದುೋಲಕ್ಕೆ",
+      "unconstrained": "ಹುಡುಗರಿಗೆ bus free ಇದೆ ಹುಡುಗರಿಗೆ amount ಇದೆ autoದಿಂದ ಬರಬಹುದು ಮತ್ತೆ ಬುದ್ಧಂದ ಇದೆ ಬುದ್ಧ ಮಂದಿಿಂದ ನಾನು ಇಲ್ಲಿ ನಡ್ಕೊ ಹೋಗಬಹುದು bus ಇದೆ ಈ busುವ ಇದೆ ಬದು ಬಂದುೋಲಕ್ಕೆ"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_5",
+      "constrained": "ಬುದ್ಧರ್ೋಲಗೆ bus ಇದೆ ಮತ್ತೆ auto ಇದೆ ಖಾಜೆ ಬನ ಇದೆ ಅಲ್ಲಿ ಭ ಹೋಗಬಹುದು ಮತ್ತು ಹ ಹೆಂಗೆ ಒಬ್ಬದಂತಂದರೆ ಬ ಅನ್ನು bus free ಆಗಿದೆ auto free ಆಗಿದೆ",
+      "unconstrained": "ಬುದ್ಧರ್ೋಲಗೆ bus ಇದೆ ಮತ್ತೆ auto ಇದೆ ಖಾಜೆ बनನ और दग ಇದೆ ಅಲ್ಲಿ ಭ ಹೋಗಬಹುದು ಮತ್ತು ಹ ಹೆಂಗೆ ಒಬ್ಬದಂತಂದರೆ ಬ ಅನ್ನು bus free ಆಗಿದೆ auto free ಆಗಿದೆ"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_9",
+      "constrained": "ಸ unday ಶನಿವ ಕೊಮ್ಮ ಮಕ್ಕಳನ್ನು school school college ಗಳು ಸುಟ್ಟಿಿರ್ತ್ತೇವೆ ಮತ್ತು picnic ಹೋಗೋಲ್ಲ ಆಟ ಆಡಬಹುದು ಜೋಕ ಅಲ್ಲಿ",
+      "unconstrained": "ಸunday ಶನಿವ ಕೊಮ್ಮ ಮಕ್ಕಳನ್ನು school school collegeೇ ಗಳು ಸುಟ್ಟಿಿರ್ತ್ತೇವೆ ಮತ್ತು picnic ಹೋಗೋಲ್ಲ ಆಟ ಆಡಬಹುದು ಜೋಕ ಅಲ್ಲಿ"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_10",
+      "constrained": "ಮದ್ gardenದಲ್ಲಿ free ಆಗಿದೆ ಎಲ್ಲ ಏನ b ದುಡ್ಡು ಕೊಟ್ಟುಲ್ಲ ಮತುಲ್ಲ ಎಲ್ಲ್ free ಆಗಿರಿರುತ್ತೆ",
+      "unconstrained": "मದ್ gardenದಲ್ಲಿ free ಆಗಿದೆ ಎಲ್ಲ ಏನ b ದುಡ್ಡು ಕೊಟ್ಟುಲ್ಲ ಮತುಲ್ಲ ಎಲ್ಲ್ freeಾಗಿಿರುತ್ತೆ"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_12",
+      "constrained": "ಪ್ರರಿಯ ಹೋಗೋದು ನಾವು ಮತ್ತೆ ಈಗ ನಮ್ಗೆ ಏನು ಬೇಕಾಗಿದೆ ಅಂತಂದರೆ ನಮಗೆ ಅಲ್ಲಿ ಎಲ್ಲ ಯಾವ ಯಾವುದಾದ್ರು ಊರ ಹೋಗಬೇಕಂತಂದರೆ ಗುಲ್ಬರರ್ಗದಲ್ಲಿ auto ಒಂದು ಇದೇ ಮತ್ತೆ auto ದೂರ ದೂರ ಯಾವ್ದ ಯಾವುದ ದೇವಸ್ಥಾನಕ್ಕೆ ಹೋಗಬೇಕಂತಂದರೆ ಆ train ಇಲ್ಲ train ಒಂದು ಸುಲಭಯ ಮಾಡ್ಕೊಡಬೇಕಂದು ಕೇಳಕೊಳ್ಳ್ತೀನಿ",
+      "unconstrained": "प्रರಿಯ ಹೋಗೋದು ನಾವು ಮತ್ತೆ ಈಗ ನಮ್ಗೆ ಏನು ಬೇಕಾಗಿದೆ ಅಂತಂದರೆ ನಮಗೆ ಅಲ್ಲಿ ಎಲ್ಲ ಯಾವ ಯಾವುದಾದ್ರು ಊರ ಹೋಗಬೇಕಂತಂದರೆ ಗುಲ್ಬರರ್ಗದಲ್ಲಿ auto ಒಂದು ಇದೇ ಮತ್ತೆ auto ದೂರ ದೂರ ಯಾವ್ದ ಯಾವುದ ದೇವಸ್ಥಾನಕ್ಕೆ ಹೋಗಬೇಕಂತಂದರೆ ಆ train ಇಲ್ಲ train ಒಂದು ಸುಲಭಯ ಮಾಡ್ಕೊಡಬೇಕಂದು ಕೇಳಕೊಳ್ಳ್ತೀನಿ"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_16",
+      "constrained": "ಗು lu ಜಿಲ್ಲೆಯಲ್ಲಿ ಗುಲ್ಬರ್ಗದಲ್ಲಿ ನಮ್ಮ ಮನೆ ಹತ್ತರನೇ ಅಪ್ಪ ಕುಡಿ ಇದೆ ಅೂ ನಾವು ದಿನಾಲು ನಡತ ಹೋಗಬಹುದು ನಡತ ಹೋಗಬಹುದು ನಡಕತ ಅಪ್ಪ ಗುಡಿಯಲ್ಲಿ ಹೋಗಿ ದೇವರ ದರ್ಶಣ ಮಾಡ್ಬೋದು ತೆಂಗದು ಒಡಿದಿ ಜ ದೇವರಲ್ಲಿ ಮತ್ತು ದಾಸೋ ಇದೆ ಒಳಗಡೆ ಒಳಗಡೆ ಹೋಗಿ ಊಟವನ್ನು ಮಾಡ್ಬೋದು",
+      "unconstrained": "गुल का ಜಿಲ್ಲೆಯಲ್ಲಿ ಗುलಬरರ್ಗದಲ್ಲಿ ನಮ್ಮ ಮನೆ ಹತ್ತರನೇ ಅಪ್ಪ ಕುಡಿ ಇದೆ அ கூடல் ನಾವು ದಿನಾಲು ನಡತ ಹೋಗಬಹುದು ನಡತ ಹೋಗಬಹುದು ನಡಕತ ಅಪ್ಪ ಗುಡಿಯಲ್ಲಿ ಹೋಗಿ ದೇವರ ದರ್ಶಣ ಮಾಡ್ಬೋದು ತೆಂಗದು ಒಡಿದಿ ಜ ದೇವರಲ್ಲಿ ಮತ್ತು ದಾಸೋ ಇದೆ ಒಳಗಡೆ ಒಳಗಡೆ ಹೋಗಿ ಊಟವನ್ನು ಮಾಡ್ಬೋದು"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_19",
+      "constrained": "ಇದು ಎಲ್ಲ ಎಲ್ಲ ಚೆನ್ನಾಗಿ ಇಲ್ಲಿ ಹೋಗ ಮತ್ತು ಮ ಇಲ್ಲಿ ಗುಲ ಮೂರನ್ನು ಬಿಟ್ಟಿ ಬೇರೆ ಕಡೆಗೆ ಹೋಗಬೇಕಂದ್ರೆ ನಮಗೆ auto riಕ್ಷಕ್ಕೆ amountರಲ್ಲ ಒಂದೊಂದುಿಸ ಅ amountಟ್ ಇಲ್ಲ ಅಂದ್ರೆ ಏನುಬೇಕ ಅಂತಂದರೆ ಬಸ್ಿಗೆ ಹೋಗೋದು",
+      "unconstrained": "ಇದು ಎಲ್ಲ ಎಲ್ಲ ಚೆನ್ನಾಗಿ ಇಲ್ಲಿ ಹೋಗ ಮತ್ತು ಮ ಇಲ್ಲಿ ಗುಲ ಮೂರನ್ನು ಬಿಟ್ಟಿ ಬೇರೆ ಕಡೆಗೆ ಹೋಗಬೇಕಂದ್ರೆ ನಮಗೆ autoಿಕ್ಷಕ್ಕೆ amountಿಲ್ಲಲ್ಲ ಒಂದೊಂದುಿಸ ಅ amountಟ್ ಇಲ್ಲ ಅಂದ್ರೆ ಏನುಬೇಕ ಅಂತಂದರೆ ಬಸ್ಿಗೆ ಹೋಗೋದು"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_20",
+      "constrained": "ಬ ಹೋಗ್ತಾ್ತಾರೆ ಒ ಹೆಣ್ಮಕ್ಿಗೆ free ಇದೆ bus ನಮ್ಮ ಗನ್ಗ್್ ಇಲ್ಲ ನಾ ಆಮೇಲೆೌ amount ಇಲ್ಲ ಅಂದ್ರೆ ಏನು ಮಾಡ್ಬೋದು ಅಂದರೆ ನಾವಿ ಇಲ್ಲಿ ಅಪ್ಪ ಗುಡಿಯನ್ನು ಹೋಗಬಹುದು ಅಪ್ಪ ಅಂಗಡಿಡಿಯಲ್ಲಿ ಹೋಗ್ಬೋದು",
+      "unconstrained": "बजी ಹೋಗ್ತಾ್ತಾರೆ ಒ ಹೆಣ್ಮಕ್ಿಗೆ free ಇದೆ bus ನಮ್ಮ ಗನ್ಗ್್ ಇಲ್ಲ ನಾ ಆಮೇಲೆೌ amount ಇಲ್ಲ ಅಂದ್ರೆ ಏನು ಮಾಡ್ಬೋದು ಅಂದರೆ ನಾವಿ ಇಲ್ಲಿ ಅಪ್ಪ ಗುಡಿಯನ್ನು ಹೋಗಬಹುದು ಅಪ್ಪ ಅಂಗಡಿಡಿಯಲ್ಲಿ ಹೋಗ್ಬೋದು"
+    },
+    {
+      "key": "indicvoices/kn/valid/6192449487949239_chunk_21",
+      "constrained": "ಇಲ್ಲಿ ಅಪ್ಪಡಿ ಪಕ್ಕದಲ್ಲಿ ಮತ್ತು garden ಇದೆ ಆ garden ಹೋಗೋದು gardenಲ್ಲೇ ಆಡಬಹುದು ನಾವು",
+      "unconstrained": "ಇಲ್ಲಿ ಅಪ್ಪಡಿ பக்கத்தில் ಮತ್ತು garden ಇದೆ ಆ garden ಹೋಗೋದು gardenಲ್ಲೇ ಆಡಬಹುದು ನಾವು"
+    },
+    {
+      "key": "indicvoices/kn/valid/48b35583-7a59-41de-88bf-6bcc0e770af5_0_chunk_1",
+      "constrained": "close sir ಹೇಳಿ",
+      "unconstrained": "ோ close sir ಹೇಳಿ"
+    },
+    {
+      "key": "indicvoices/kn/valid/48b35583-7a59-41de-88bf-6bcc0e770af5_0_chunk_2",
+      "constrained": "ಹಾಂ ಶ sirಬೇಕತ್ತು ನಿಮಗೆ",
+      "unconstrained": "हाँ சரி sirಬೇಕತ್ತು ನಿಮಗೆ"
+    }
+  ]
+}

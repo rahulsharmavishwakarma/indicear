@@ -1,0 +1,813 @@
+{
+ "lang": "mr",
+ "words": 73555,
+ "rewrites": 849,
+ "per_1000_words": 11.54,
+ "types": 372,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "जानेवारी",
+   "en": "january",
+   "path": "lexicon",
+   "row": 2132,
+   "context": "या पक्ष्याची डिसेंबर ते जानेवारी या काळात भारतात वीण",
+   "verdict": "correct"
+  },
+  {
+   "native": "परफेक्ट",
+   "en": "perfect",
+   "path": "lexicon",
+   "row": 6135,
+   "context": "माझ्या बायोपिकसाठी आलिया परफेक्ट असली तरी तिला थोडे",
+   "verdict": "correct"
+  },
+  {
+   "native": "फुटबॉल",
+   "en": "football",
+   "path": "lexicon",
+   "row": 6011,
+   "context": "असोसिएशनच्या पुढाकाराने या मुंबापुरीत फुटबॉल झेप घेऊ लागलाय",
+   "verdict": "correct"
+  },
+  {
+   "native": "बेस्ट",
+   "en": "best",
+   "path": "lexicon",
+   "row": 2107,
+   "context": "बेस्ट परिवहन सेवेची वांद्रे टर्मिनस",
+   "verdict": "correct"
+  },
+  {
+   "native": "प्लॅन",
+   "en": "plan",
+   "path": "lexicon",
+   "row": 3012,
+   "context": "दिल्लीः सर्वात स्वस्त डेटा प्लॅन देणाऱ्या रिलायन्स जिओने अजून",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 5547,
+   "context": "त्यामुळे प्रत्येकाने कुटुंबात असताना सोशल मीडियाच्या वापराची मर्यादा ठरवायला",
+   "verdict": "correct"
+  },
+  {
+   "native": "रिअल",
+   "en": "real",
+   "path": "lexicon",
+   "row": 5972,
+   "context": "बंगळुरू किंवा पुण्यासारख्या मोठ्या रिअल इस्टेट बाजाराप्रमाणेच आहेत",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 657,
+   "context": "सोशल इन्क्ल्यूजन अॅन्ड अॅडडव्हर्ज इंक्लुजन",
+   "verdict": "correct"
+  },
+  {
+   "native": "पार्क",
+   "en": "park",
+   "path": "lexicon",
+   "row": 5043,
+   "context": "उद्या संध्याकाळी दादर शिवाजी पार्क अर्थात शिवसेनेच्या शिवतीर्थावर ते",
+   "verdict": "correct"
+  },
+  {
+   "native": "व्हायरस",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 5803,
+   "context": "करोना व्हायरस आउटब्रेक असल्याने हे वर्ष",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्टँड",
+   "en": "stand",
+   "path": "lexicon",
+   "row": 5681,
+   "context": "गोष्टी टाळण्यासाठी वन नाइट स्टँड यासारख्या गोष्टींपासून अंतर ठेवणे",
+   "verdict": "correct"
+  },
+  {
+   "native": "सेवन",
+   "en": "seven",
+   "path": "lexicon",
+   "row": 2485,
+   "context": "जागतिक तंबाखू सेवन विरोधी दिन जवळ येत",
+   "verdict": "wrong",
+   "note": "सेवन = consumption (तंबाखू सेवन), not 'seven'"
+  },
+  {
+   "native": "पेट्रोल",
+   "en": "petrol",
+   "path": "lexicon",
+   "row": 2831,
+   "context": "जगभरात पेट्रोल आणि डिझेलच्या किमती कमी",
+   "verdict": "correct"
+  },
+  {
+   "native": "शेअर",
+   "en": "share",
+   "path": "lexicon",
+   "row": 4991,
+   "context": "कर्मचारी माईक गेलोसने फेसबुकवर शेअर केला आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "थिएटर",
+   "en": "theatre",
+   "path": "lexicon",
+   "row": 869,
+   "context": "त्यांनी थिएटर युनिट रंगायन अनिकेत इत्यादी",
+   "verdict": "correct"
+  },
+  {
+   "native": "गुगल",
+   "en": "google",
+   "path": "lexicon",
+   "row": 4268,
+   "context": "लॅरी आणि सर्गी यांना गुगल कंपनी सुरू करता आली",
+   "verdict": "correct"
+  },
+  {
+   "native": "कंपनी",
+   "en": "company",
+   "path": "lexicon",
+   "row": 22,
+   "context": "ती कंपनी बंद पडल्यावर शारदा संगीत",
+   "verdict": "correct"
+  },
+  {
+   "native": "बसेस",
+   "en": "buses",
+   "path": "lexicon",
+   "row": 4609,
+   "context": "दंगेखोरांनी एसटी महामंडळाच्या बसेस दगडफेकीसाठी जास्त टार्गेट केल्या",
+   "verdict": "correct"
+  },
+  {
+   "native": "एजन्सी",
+   "en": "agency",
+   "path": "lexicon",
+   "row": 3435,
+   "context": "गॅस वितरण परवाना मिळाल्यानंतर एजन्सी चालू करण्यासाठी एक वर्षाचा",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्विटर",
+   "en": "twitter",
+   "path": "lexicon",
+   "row": 6522,
+   "context": "पंकज नावाच्या एका ट्विटर वापरकर्त्याने हा फोटो ट्विटरवर",
+   "verdict": "correct"
+  },
+  {
+   "native": "डिजिटल",
+   "en": "digital",
+   "path": "lexicon",
+   "row": 5252,
+   "context": "दूर राहिल्यानंतर करिश्माने नुकताच डिजिटल प्लॅटफॉर्म मधून कमबॅक केला",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्रिकेट",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 3795,
+   "context": "क्रिकेट व चित्रपटाविषयी आणि प्रवासवर्णन",
+   "verdict": "correct"
+  },
+  {
+   "native": "काँग्रेस",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 3677,
+   "context": "त्यासाठी राष्ट्रवादी काँग्रेस आणि शिवसेनेकडून सर्व आमदारांना",
+   "verdict": "correct"
+  },
+  {
+   "native": "फ्रेंच",
+   "en": "french",
+   "path": "lexicon",
+   "row": 6525,
+   "context": "या फ्रेंच कायद्यानुसार फ्रेंच जीवनशैली आणि",
+   "verdict": "correct"
+  },
+  {
+   "native": "काँग्रेस",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 5489,
+   "context": "राष्ट्रवादी काँग्रेस पक्षाला जिल्हा परिषदेमध्ये पक्ष",
+   "verdict": "correct"
+  },
+  {
+   "native": "मोबाइल",
+   "en": "mobile",
+   "path": "lexicon",
+   "row": 1148,
+   "context": "वाङ्मय इतिहास ईबुक आणि मोबाइल ईबुकच्या माध्यमांतही वाचायला मिळतो",
+   "verdict": "correct"
+  },
+  {
+   "native": "ग्रुप",
+   "en": "group",
+   "path": "lexicon",
+   "row": 1012,
+   "context": "हायडोर कन्सल्टिंगला एनओआरआर ग्रुप कन्सल्टंट्स इंटरनॅशनल लिमिटेडचे पर्यवेक्षी",
+   "verdict": "correct"
+  },
+  {
+   "native": "नंबर",
+   "en": "number",
+   "path": "lexicon",
+   "row": 3021,
+   "context": "व्हीआयपी नंबर देतो असे सांगून जैन",
+   "verdict": "correct"
+  },
+  {
+   "native": "रिटर्न",
+   "en": "return",
+   "path": "lexicon",
+   "row": 6037,
+   "context": "आहेत जे आपल्या पूलच्या रिटर्न लाइनशी कनेक्ट होऊ शकतात",
+   "verdict": "correct"
+  },
+  {
+   "native": "व्हिडिओ",
+   "en": "video",
+   "path": "lexicon",
+   "row": 3687,
+   "context": "युजर्स फेसबुक अकाउंट नसतानाही व्हिडिओ कॉलिंग करु शकतील",
+   "verdict": "correct"
+  },
+  {
+   "native": "नंबर",
+   "en": "number",
+   "path": "lexicon",
+   "row": 3769,
+   "context": "रतन टाटा यांच्या गाडीचा नंबर वापरण्यात येत असल्याचं उघड",
+   "verdict": "correct"
+  },
+  {
+   "native": "वेडिंग",
+   "en": "wedding",
+   "path": "lexicon",
+   "row": 3336,
+   "context": "खूप चाहते असून प्री वेडिंग तसेच डेस्टिनेशन वेडिंगसाठी ओळखला",
+   "verdict": "correct"
+  },
+  {
+   "native": "कंपनी",
+   "en": "company",
+   "path": "lexicon",
+   "row": 2872,
+   "context": "कंपनी नेटवर्क क्वालिटी टेस्ट करण्यासाठी",
+   "verdict": "correct"
+  },
+  {
+   "native": "एअर",
+   "en": "air",
+   "path": "lexicon",
+   "row": 4072,
+   "context": "विशेषज्ञांशी चर्चा करून आंतरराष्ट्रीय एअर ट्रान्सपोर्ट असोसिएशन बरोबर करारही",
+   "verdict": "correct"
+  },
+  {
+   "native": "गेस्ट",
+   "en": "guest",
+   "path": "lexicon",
+   "row": 5076,
+   "context": "फक्त यासाठी तुम्हाला गेस्ट मोड किंवा इनकॉग्निटो मोड",
+   "verdict": "correct"
+  },
+  {
+   "native": "सिनेमा",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 4699,
+   "context": "प्रेक्षकांवर जादू करण्यासाठी हा सिनेमा आता सज्ज झाला आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "रेल्वे",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 4355,
+   "context": "या गाण्याचा व्हिडिओ रेल्वे मंत्री पियुष गोयल यांनी",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्पॉट",
+   "en": "spot",
+   "path": "lexicon",
+   "row": 4883,
+   "context": "हा अनुप्रयोग घसा स्पॉट सुमारे अर्धा तास लागू",
+   "verdict": "correct"
+  },
+  {
+   "native": "रिलीज",
+   "en": "release",
+   "path": "lexicon",
+   "row": 4244,
+   "context": "तिचा लास्ट रिलीज सिनेमा पदमावतद्वारे तिने रसिकांच्या",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्टार",
+   "en": "star",
+   "path": "lexicon",
+   "row": 5278,
+   "context": "त्यातच स्टार वेन रुनी तीन सामन्यांच्या",
+   "verdict": "correct"
+  },
+  {
+   "native": "अकाउंट",
+   "en": "account",
+   "path": "lexicon",
+   "row": 2663,
+   "context": "पाहिल्यास गुगलने युजर्सचं प्रायव्हेट अकाउंट दाखवणं सुरू केलं आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "सेवन",
+   "en": "seven",
+   "path": "lexicon",
+   "row": 4393,
+   "context": "अभ्यास लाल मांस नियमित सेवन एक हृदयविकाराचा झटका मृत्यू",
+   "verdict": "wrong",
+   "note": "सेवन = consumption (मांस सेवन), not 'seven'"
+  },
+  {
+   "native": "हॉस्पिटल",
+   "en": "hospital",
+   "path": "lexicon",
+   "row": 2466,
+   "context": "दीड महिन्यात कोरोनाशी लढायला हॉस्पिटल उभारणार असल्याचे म्हटले होते",
+   "verdict": "correct"
+  },
+  {
+   "native": "जानेवारी",
+   "en": "january",
+   "path": "lexicon",
+   "row": 5498,
+   "context": "निवडणूक विभागाने जानेवारी महिन्यात हे पत्र पाठविले",
+   "verdict": "correct"
+  },
+  {
+   "native": "इंटरनेट",
+   "en": "internet",
+   "path": "lexicon",
+   "row": 1061,
+   "context": "डेव्हिड एस्प्रे या इंटरनेट सिक्युरुटी तज्ज्ञानं याबाबत नाराजी",
+   "verdict": "correct"
+  },
+  {
+   "native": "जनरल",
+   "en": "general",
+   "path": "lexicon",
+   "row": 6470,
+   "context": "ध्वज प्रदान करताना लेफ्टनंट जनरल पन्नु",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 2823,
+   "context": "घोषणा गायक अवधूत गुप्तेने सोशल मीडियावर दिली आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्वालिटी",
+   "en": "quality",
+   "path": "lexicon",
+   "row": 2872,
+   "context": "कंपनी नेटवर्क क्वालिटी टेस्ट करण्यासाठी बीटा प्रोग्राम",
+   "verdict": "correct"
+  },
+  {
+   "native": "वॉटर",
+   "en": "water",
+   "path": "lexicon",
+   "row": 6484,
+   "context": "बंब यांनी शुद्ध पाण्यासाठी वॉटर प्युरिफायर ठिकठिकाणी बसविले आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "डिझाइन",
+   "en": "design",
+   "path": "lexicon",
+   "row": 3022,
+   "context": "स्वयंपाकघरात स्वयंपाकघरातील डिझाईनचे डिझाइन खोलीला एक आळशीपणा आणि",
+   "verdict": "correct"
+  },
+  {
+   "native": "इलेक्ट्रॉनिक्स",
+   "en": "electronics",
+   "path": "lexicon",
+   "row": 6480,
+   "context": "पद्धतीचा परिणाम सीलेंट आणि इलेक्ट्रॉनिक्स यांच्यातील रिकाम्या जागेत होतो",
+   "verdict": "correct"
+  },
+  {
+   "native": "पॅलेस",
+   "en": "palace",
+   "path": "lexicon",
+   "row": 3892,
+   "context": "नेपाळमधील हा रॉयल पॅलेस एकदम आलिशान आणि पूर्वापार",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्रान्स्फर",
+   "en": "transfer",
+   "path": "lexicon",
+   "row": 2534,
+   "context": "ट्रान्स्फर डेव्हलॉपमेंट हक्क म्हणून राबविणे",
+   "verdict": "correct"
+  },
+  {
+   "native": "सॉफ्टवेअर",
+   "en": "software",
+   "path": "lexicon",
+   "row": 221,
+   "context": "महाराष्ट्र सरकारने सॉफ्टवेअर पार्क्स पुणे मुंबई नाशिक",
+   "verdict": "correct"
+  },
+  {
+   "native": "शेअर",
+   "en": "share",
+   "path": "lexicon",
+   "row": 3434,
+   "context": "लोकच कंपनीकडून नियमितपणे मिळणारे शेअर आमि ऑटोमॅटिक ट्रेंडिंगमधून नफा",
+   "verdict": "correct"
+  },
+  {
+   "native": "फेसबुक",
+   "en": "facebook",
+   "path": "lexicon",
+   "row": 4278,
+   "context": "पोलिसांच्या सायबर सेलनेही फेसबुक आणि इन्स्टाग्रामच्या उच्चपदस्थ अधिकाऱ्यांशी",
+   "verdict": "correct"
+  },
+  {
+   "native": "शेअर",
+   "en": "share",
+   "path": "lexicon",
+   "row": 3857,
+   "context": "जीवनातील अनेक किस्से प्रेक्षकांसोबत शेअर केले",
+   "verdict": "correct"
+  },
+  {
+   "native": "काँग्रेस",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 2674,
+   "context": "अमेठी हा काँग्रेस अध्यक्ष राहुल गांधींचा तर",
+   "verdict": "correct"
+  },
+  {
+   "native": "रेल्वे",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 2726,
+   "context": "लाख रुपयांची नुकसानभरपाई देण्याची रेल्वे कायद्यात तरतूद आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "लाईट",
+   "en": "light",
+   "path": "lexicon",
+   "row": 6162,
+   "context": "वाटले तर वाटेतील सर्व लाईट लावत जावू नका",
+   "verdict": "correct"
+  },
+  {
+   "native": "बुक्स",
+   "en": "books",
+   "path": "lexicon",
+   "row": 189,
+   "context": "यांचे नाव वल्र्ड रिकार्ड बुक्स मधे आले",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 6413,
+   "context": "या ट्रीपमध्ये अर्जुनने सोशल मिडियावर पहिल्यांदाच आपल्या नात्याची",
+   "verdict": "correct"
+  },
+  {
+   "native": "फेसबुक",
+   "en": "facebook",
+   "path": "lexicon",
+   "row": 4984,
+   "context": "ही पोस्ट फेसबुक व्यतिरिक्त व्हॉट्सअॅपवरही मोठ्या प्रमाणात",
+   "verdict": "correct"
+  },
+  {
+   "native": "रेस्टॉरंट",
+   "en": "restaurant",
+   "path": "lexicon",
+   "row": 3010,
+   "context": "हे रेस्टॉरंट उघडण्यामागे त्यांची एक अनोखी",
+   "verdict": "correct"
+  },
+  {
+   "native": "डिझाईन",
+   "en": "design",
+   "path": "lexicon",
+   "row": 442,
+   "context": "प्रेरणा घेऊन परमवीर चक्राचे डिझाईन तयार केले",
+   "verdict": "correct"
+  },
+  {
+   "native": "ओव्हन",
+   "en": "oven",
+   "path": "lexicon",
+   "row": 3702,
+   "context": "अनेकदा ओव्हन मध्ये अथवा मायक्रोव्हेव मध्ये",
+   "verdict": "correct"
+  },
+  {
+   "native": "सॉफ्टवेअर",
+   "en": "software",
+   "path": "lexicon",
+   "row": 1178,
+   "context": "हे सॉफ्टवेअर मुळात ग्राफिक्स डिझाईन करण्यासाठी",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 5089,
+   "context": "सोशल डिस्टन्स न पाळता त्यांचे",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्रॅक",
+   "en": "track",
+   "path": "lexicon",
+   "row": 1081,
+   "context": "निवडलेली ती राज्यातील पहिली ट्रॅक आणि फील्ड ऍथलीट ठरली",
+   "verdict": "correct"
+  },
+  {
+   "native": "टेम्पो",
+   "en": "tempo",
+   "path": "lexicon",
+   "row": 4915,
+   "context": "भरत असताना चालकाने निष्काळजीपणाने टेम्पो चालवल्याने लाद्या कामगारांच्या अंगावर",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 3538,
+   "context": "अशात सोशल मीडियावर एका महिलेच्या पायांचा",
+   "verdict": "correct"
+  },
+  {
+   "native": "व्हिडीओ",
+   "en": "video",
+   "path": "lexicon",
+   "row": 4262,
+   "context": "मुलीच्या कुटुंबीयांनी सोशलमीडियावर व्हिडीओ अपलोड करत घटनेची माहिती",
+   "verdict": "correct"
+  },
+  {
+   "native": "डॉक्टर",
+   "en": "doctor",
+   "path": "lexicon",
+   "row": 6101,
+   "context": "वडील डॉक्टर असले तरी आमच्या घरात",
+   "verdict": "correct"
+  },
+  {
+   "native": "मार्केट",
+   "en": "market",
+   "path": "lexicon",
+   "row": 3571,
+   "context": "मी सध्या भारतीय शेअर मार्केट मध्ये म्युच्युअल फंड एसआयपी",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 3357,
+   "context": "दररोज गर्दी होत असल्याने सोशल डिस्टन्सचा फज्जा उडालेला दिसतो",
+   "verdict": "correct"
+  },
+  {
+   "native": "मलेरिया",
+   "en": "malaria",
+   "path": "lexicon",
+   "row": 1572,
+   "context": "मलेरिया गोवर किंवा एड्सने मरणाऱ्या",
+   "verdict": "correct"
+  },
+  {
+   "native": "मॅनेजर",
+   "en": "manager",
+   "path": "lexicon",
+   "row": 5726,
+   "context": "कारखान्याचे डिस्टीलरी मॅनेजर किरण मुधाळे व केमिस्ट",
+   "verdict": "correct"
+  },
+  {
+   "native": "मॉडेल",
+   "en": "model",
+   "path": "lexicon",
+   "row": 1773,
+   "context": "मॉडेल रिया सेन या सुचित्रा",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्रेडीट",
+   "en": "credit",
+   "path": "lexicon",
+   "row": 3667,
+   "context": "या क्रेडीट कार्ड्स मुळे आपल्याकडे रोख",
+   "verdict": "correct"
+  },
+  {
+   "native": "सायकल",
+   "en": "cycle",
+   "path": "lexicon",
+   "row": 3140,
+   "context": "दिवस त्यांनी अचानक सकाळी सायकल घेत बाहेर पडले",
+   "verdict": "correct"
+  },
+  {
+   "native": "नंबर",
+   "en": "number",
+   "path": "lexicon",
+   "row": 6622,
+   "context": "चुकून त्याचा नंबर दुसरीकडे लागला आणि दुसरीकडून",
+   "verdict": "correct"
+  },
+  {
+   "native": "रेल्वे",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 2112,
+   "context": "लिस्बनमधील शहरी वाहतूक रेल्वे रस्ते व जलमार्गांचा वापर",
+   "verdict": "correct"
+  },
+  {
+   "native": "ग्रीन",
+   "en": "green",
+   "path": "lexicon",
+   "row": 1831,
+   "context": "निसर्गायण ग्रीन मेसेजेस आदी पुस्तकांचे लेखन",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्रिप",
+   "en": "trip",
+   "path": "lexicon",
+   "row": 3207,
+   "context": "आजची पिढी ज्याला सोलो ट्रिप म्हणते तसंच काहीसं करण्याचं",
+   "verdict": "correct"
+  },
+  {
+   "native": "फर्निचर",
+   "en": "furniture",
+   "path": "lexicon",
+   "row": 268,
+   "context": "हे सर्व फर्निचर रोटरी क्लब कोल्हापूरकडून देणगीस्वरूपात",
+   "verdict": "correct"
+  },
+  {
+   "native": "पोस्ट",
+   "en": "post",
+   "path": "lexicon",
+   "row": 4984,
+   "context": "ही पोस्ट फेसबुक व्यतिरिक्त व्हॉट्सअॅपवरही मोठ्या",
+   "verdict": "correct"
+  },
+  {
+   "native": "फेसबुक",
+   "en": "facebook",
+   "path": "lexicon",
+   "row": 3687,
+   "context": "टाईम या फीचरद्वारे युजर्स फेसबुक अकाउंट नसतानाही व्हिडिओ कॉलिंग",
+   "verdict": "correct"
+  },
+  {
+   "native": "पॅलेस",
+   "en": "palace",
+   "path": "lexicon",
+   "row": 5385,
+   "context": "थोडयाथोडक्या अंतरासाठी मला वुडविल पॅलेस बघायचा आनंद हरवायचा नव्हता",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 5646,
+   "context": "बरेच लोक व्हॉट्सअॅप आणि सोशल मीडिया प्लॅटफॉर्मवर याची विक्री",
+   "verdict": "correct"
+  },
+  {
+   "native": "फास्ट",
+   "en": "fast",
+   "path": "lexicon",
+   "row": 3016,
+   "context": "शेवटच्या टेस्ट मॅचमध्ये फास्ट बॉलर ईशांत शर्माला दुखापत",
+   "verdict": "correct"
+  },
+  {
+   "native": "फुटबॉल",
+   "en": "football",
+   "path": "lexicon",
+   "row": 4949,
+   "context": "तो आजवरचा एकमेव आशियाई फुटबॉल संघ आहे",
+   "verdict": "correct"
+  },
+  {
+   "native": "कंपनी",
+   "en": "company",
+   "path": "lexicon",
+   "row": 4268,
+   "context": "आणि सर्गी यांना गुगल कंपनी सुरू करता आली",
+   "verdict": "correct"
+  },
+  {
+   "native": "पेंटिंग",
+   "en": "painting",
+   "path": "lexicon",
+   "row": 5616,
+   "context": "इमारतीमधील झुंबर व विविध पेंटिंग सुरक्षित ठिकाणी काढून ठेवण्यात",
+   "verdict": "correct"
+  },
+  {
+   "native": "रजिस्ट्रेशन",
+   "en": "registration",
+   "path": "lexicon",
+   "row": 5261,
+   "context": "रजिस्ट्रेशन पूर्ण झाल्यानंतर मीरा नावाच्या",
+   "verdict": "correct"
+  },
+  {
+   "native": "शेअर",
+   "en": "share",
+   "path": "lexicon",
+   "row": 2457,
+   "context": "सीरिजमधील खुर्चीवर बसलेला फोटो शेअर केला",
+   "verdict": "correct"
+  },
+  {
+   "native": "बोर्ड",
+   "en": "board",
+   "path": "lexicon",
+   "row": 5005,
+   "context": "बोर्ड गेममध्ये गेम बोर्डच्या आसपास",
+   "verdict": "correct"
+  },
+  {
+   "native": "निगेटिव्ह",
+   "en": "negative",
+   "path": "lexicon",
+   "row": 5128,
+   "context": "त्यांचे कोरोना तपासणी अहवाल निगेटिव्ह आले आहेत",
+   "verdict": "correct"
+  },
+  {
+   "native": "हॉटेल",
+   "en": "hotel",
+   "path": "lexicon",
+   "row": 548,
+   "context": "या कारवाईने दहशतवाद्यांना ताजमहाल हॉटेल नवीन इमारतीत जाण्यापासून रोखले",
+   "verdict": "correct"
+  },
+  {
+   "native": "बुकिंग",
+   "en": "booking",
+   "path": "lexicon",
+   "row": 3921,
+   "context": "काळात झालेले लॉकडाऊनमुळे एकही बुकिंग आलेले नाही",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्रोल",
+   "en": "troll",
+   "path": "lexicon",
+   "row": 4586,
+   "context": "काढलेल्या फोटोवरून त्यांना सध्या ट्रोल केलं जातय",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 98.0
+}

@@ -1,0 +1,204 @@
+{
+  "hi": {
+    "wer": 41.53,
+    "cer": 28.21,
+    "utterances": 600,
+    "words": 11829,
+    "script_error_rate": 12.17,
+    "wer_script_normalised": 41.51,
+    "rows_with_alternative_ref": 77,
+    "cm_utterances": 79,
+    "cm_spans": 614,
+    "cm_span_accuracy": 81.11,
+    "cm_span_cer_mean": 28.89,
+    "cm_span_accuracy_by_lang": {
+      "en": 73.67,
+      "hi": 87.39
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 1.453
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 98.83,
+    "macro_f1": 99.41,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 98.83,
+        "f1": 99.41,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "hi": {
+        "en": 2,
+        "hi": 593,
+        "kn": 3,
+        "ta": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 600,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 600,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 600,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 19,
+        "accuracy": 89.47
+      },
+      "2-5s": {
+        "utterances": 67,
+        "accuracy": 98.51
+      },
+      "5-10s": {
+        "utterances": 313,
+        "accuracy": 98.72
+      },
+      "10-20s": {
+        "utterances": 201,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indiccontext_hi",
+  "utterances": 600,
+  "hours": 1.45,
+  "seconds": 45,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 264,
+  "changed_examples": [
+    {
+      "key": "indiccontext_eval/hi/test/7318349394481706_0_5",
+      "constrained": "biop पावर केवल शरीर का नहीं बकी आत्मा और विचारों का भी नियम करने लगता है यही सामानलीन साहित्य के जीवन निगराण और नियंत्रनण की तासदी को उजागर करता है",
+      "unconstrained": "biopॉवर केवल शरीर का नहीं बकी आत्मा और विचारों का भी नियम करने लगता है यही सामानलीन साहित्य के जीवन निगराण और नियंत्रनण की तासदी को उजागर करता है"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_9",
+      "constrained": "जो होती हैं इनके द्वारा जो जनित ज्ञान होता है उसकी जो सीमाएँ होती है वो होती है तो",
+      "unconstrained": "जो होती हैं इनके द्वारा जो जनित ज्ञाಹन होता है उसकी जो सीमाएँ होती है वो होती है तो"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_13",
+      "constrained": "से ये विकसित होती हैं और",
+      "unconstrained": "ಮನುಷ್ಯों से ये विकसित होती हैं और"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_22",
+      "constrained": "म होता है उसकी जो शक्ति होती हैाख करने की या प्रशंस्करण करने की जो भी यह ये ज्ञाहन उसे प्राप्त होता है अपनी",
+      "unconstrained": "ಮಸ್ತ होता है उसकी जो शक्ति होती हैाख करने की या प्रशंस्करण करने की जो भी यह ये ज्ञाहन उसे प्राप्त होता है अपनी"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_37",
+      "constrained": "हर एक even एक मतलब प्रजाति में भी प्राणियों की काफी फर्क होते हैं काफ़ी अंत होते",
+      "unconstrained": "हर एक ಇವ एक मतलब प्रजाति में भी प्राणियों की काफी फर्क होते हैं काफ़ी अंत होते"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_0",
+      "constrained": "जबमीो last in first और accounting me की बात करते हैं तो ये खाौर पर उस समय railwayleant हो जाता है जब मह महंगाई या infaation तेजी से बढ़ रही लीफों में सबसे पहले latest",
+      "unconstrained": "ஜபमीो last in first और accounting me की बात करते हैं तो ये खाौर पर उस समय railwayleant हो जाता है जब मह महंगाई या infaation तेजी से बढ़ रही लीफों में सबसे पहले latest"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_1",
+      "constrained": "खरीददे का इन ntry को बेचने के",
+      "unconstrained": "खरीददे का इनntry को बेचने के"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_4",
+      "constrained": "लेकिन इसके साथ एक्रे ad ऑफ भी आता है ली foटे की वजह से inventry की veventry valation कम हो जाती है क्योंकि पुराने और सस्त सामान",
+      "unconstrained": "लेकिन इसके साथ एक्रेad ऑफ भी आता है लीfoटे की वजह से inventry कीveventry valूुation कम हो जाती है क्योंकि पुराने और सस्त सामान"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_5",
+      "constrained": "vevntry में दिखाया जाता है इससे balance seat पर ventry asets under v valueed दिखाई दे सकते हैं तो account में हमें या देखना होता है कि क्या company का गोल है tax बचाना या ज़्यादा income दिखाना",
+      "unconstrained": "vevntry में दिखाया जाता है इससे balance seat परventry asets under v valueed दिखाई दे सकते हैं तो account में हमें या देखना होता है कि क्या company का गोल है tax बचाना या ज़्यादा income दिखाना"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_6",
+      "constrained": "और यह अभी ध्यान देना होता है कि क्या उस देश में लीफों मेथड लीग है जो कि कई देशों में ow नहीं किया जा सकता इसलिए से",
+      "unconstrained": "और यह अभी ध्यान देना होता है कि क्या उस देश में लीफों मेथड लीग है जो कि कई देशों मेंow नहीं किया जा सकता इसलिए से"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514024_0_0",
+      "constrained": "गर्मी के मौसम में पशु अपने शरीर कााप नियंत्रण करने के लिए चारर्म mo regulation decorationश करते हैं जैसे पसीना आना तेजासना और ज़्यादा पानी पीना लेकिन ज़्यादा तापमान पर उन्हें feat streses हो जाता हो सकता है",
+      "unconstrained": "गर्मी के मौसम में पशु अपने शरीर का தாपமா नियंत्रण करने के लिए चारर्मmo regulation decorationश करते हैं जैसे पसीना आना ತೇಜासना और ज़्यादा पानी पीना लेकिन ज़्यादा तापमान पर उन्हें feat streses हो जाता हो सकता है"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514024_0_2",
+      "constrained": "ca mistingना और shads में ventilation system यानी पंखें लगाना",
+      "unconstrained": "அ ca misting சே தண்டக்குना और shads में ventilation system यानी पंखें लगाना"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514024_0_3",
+      "constrained": "इन उपयोगकों से पशु काापमानन संतुलित रहता है और उनके भलएँाई बनी रहा रहती है",
+      "unconstrained": "इन उपयोगकों से पशु काापमानन சतुलित रहता है और उनके भलएँाई बनी रहा रहती है"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394496215_0_0",
+      "constrained": "बहुतद हमारे परारंभीिक गव में आदर्श परिस्थियों के आधारर पर हर पचास मिल पर pump लगाने का सुझ आया",
+      "unconstrained": "ौद हमारे परारंभीिक गव में आदर्श परिस्थियों के आधारर पर हर पचास मिल पर pump लगाने का सुझ आया"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394496215_0_3",
+      "constrained": "इस मोदी agम के अनुसार घर कोनाक और प्रेषर ड्रॉप दोनों बढ़ेंगे",
+      "unconstrained": "इस मोदीagाम के अनुसार घर कोनाक और प्रेषर ड्रॉप दोनों बढ़ेंगे"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394496215_0_6",
+      "constrained": "तीस लंबी दूरी परष्मनीिद्र काताापमान घटााई के जिससे से प्रभाव प्रतिरोध और pump पम्पिंग औरर्जा की आवश्यकता परगी इन सभी प्रभावों को सम्मलित कर मह सुझव देता हूँ कि pump स्े acing को केवल दूरड़ी नहीं बल्क परस्कृत",
+      "unconstrained": "तीस लंबी दूरी परष्मनीिद्र काताापमान घटााई के जिससे से प्रभाव प्रतिरोध और pump पम्पिंग औरर्जा की आवश्यकता परगी इन सभी प्रभावों को सम्मलित कर मह सुझव देता हूँ कि pump स्ेacिंग को केवल दूरड़ी नहीं बल्क परस्कृत"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494584_0_1",
+      "constrained": "सित भंडाल गोदाम के लिए नवीन प्रिक्षण पर नाली की स्थापना",
+      "unconstrained": "ीत भंडाल गोदाम के लिए नवीन प्रिक्षण पर नाली की स्थापना"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494584_0_4",
+      "constrained": "प्ी स डक की कीीक्षण वास्तु करता और संघन की बनाव",
+      "unconstrained": "पಪ್ಪी स डक की कीीक्षण वास्तु करता और संघन की बनाव"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494584_0_6",
+      "constrained": "प्ता बना रहे हैं उत्पाद के गुनवक्ता को सुरक्षित रखने और आपातकालन स्थिति में",
+      "unconstrained": "ुप्ता बना रहे हैं उत्पाद के गुनवक्ता को सुरक्षित रखने और आपातकालन स्थिति में"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514027_0_0",
+      "constrained": "io glasses callalpanic रेखा है जो निषके पर किसी भाषााई विशेषता की श सीमा देख है जैसे किसी क्षेत्र में बाल्टी कहा जा जाता है और दूसरे में बैठेक bucket",
+      "unconstrained": "இo glasses callalpanic रेखा है जो निषके पर किसी भाषााई विशेषता की श सीमा देख है जैसे किसी क्षेत्र में बाल्टी कहा जा जाता है और दूसरे में बैठेक bucket"
+    }
+  ]
+}

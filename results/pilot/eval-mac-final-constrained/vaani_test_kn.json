@@ -1,0 +1,202 @@
+{
+  "kn": {
+    "wer": 62.99,
+    "cer": 30.77,
+    "utterances": 600,
+    "words": 8474,
+    "script_error_rate": 1.62,
+    "wer_script_normalised": 62.93,
+    "rows_with_alternative_ref": 397,
+    "cm_utterances": 396,
+    "cm_spans": 2111,
+    "cm_span_accuracy": 71.34,
+    "cm_span_cer_mean": 38.48,
+    "cm_span_accuracy_by_lang": {
+      "en": 75.03,
+      "kn": 68.64
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 1.196
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 99.83,
+    "macro_f1": 99.92,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 99.83,
+        "f1": 99.92,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "kn": {
+        "hi": 1,
+        "kn": 599
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 9,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 166,
+        "accuracy": 99.4
+      },
+      "5-10s": {
+        "utterances": 313,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 112,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_kn",
+  "utterances": 600,
+  "hours": 1.2,
+  "seconds": 31,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 218,
+  "changed_examples": [
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Madh42153_1653500000_Belgaum-SPECIFIC_01276_16640_21248",
+      "constrained": "ma central bank ಅಂತ ಬರಾರ ಮತ್ತೆ stepsಗಳ ಅದಾವವ",
+      "unconstrained": "மேல central bank ಅಂತ ಬರಾರ ಮತ್ತೆ stepsಗಳ ಅದಾವವ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Rahu43987_1359090000_GENERIC_0053_8117_13578",
+      "constrained": "ರಾಕ ಹಬ್ಬ ರಕ್ಷಂಧನ ಬಂತು ಅಂತ ಅಂದ್ರೆ ಇಲ್ಲಿ ಅಂಗಡಿ ಎಲ್ಲ ಬಹಳ r ಆಗ ಇರ್ತವೆ ರಾಕ ಅಂಗಡಿಗಳು",
+      "unconstrained": "ರ राಕ ಹಬ್ಬ ರಕ್ಷಂಧನ ಬಂತು ಅಂತ ಅಂದ್ರೆ ಇಲ್ಲಿ ಅಂಗಡಿ ಎಲ್ಲ ಬಹಳ r ಆಗ ಇರ್ತವೆ ರಾಕ ಅಂಗಡಿಗಳು"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Rahu43987_1400440000_Belgaum-SPECIFIC_00952_13397_15050",
+      "constrained": "current ಇಂದ charge ಮಾಡಕೊಂಡು",
+      "unconstrained": "currentಂಟ ಇಂದ charge ಮಾಡಕೊಂಡು"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shab45506_1021290000_Belgaum-SPECIFIC_01593_12573_16300",
+      "constrained": "ಇಲ್ಲಿ ಈ bank ನಲ್ಲಿ ತೆಳ ಮೂರು ಅಂಗಡಿ ಅದು ಮುಚ್ಚದಿದೆ",
+      "unconstrained": "और ಇಲ್ಲಿ ಈ bank ನಲ್ಲಿ ತೆಳ ಮೂರು ಅಂಗಡಿ ಅದು ಮುಚ್ಚದಿದೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Saga10283_1053560000_GENERIC_1042_1672_10670",
+      "constrained": "ಒಬ್ಬ bike ಕೂತತ್ಕೊಂಡು road ಪಕ್ಕ bike ನಿಸ್ಕೊಂಡು ಆ b bike ಕೂತತಕೊಂಡು ಹೋಗ ಬರಣ photo ಹೊಡಿಿರ್ತಲ್ಲ ನೋಡ ಹಾಗೆವ ಎಮ್ಮ ಬರದ photo ಒಳಗೆದ ಹಾಕರೆ",
+      "unconstrained": "ಒಬ್ಬ bike में ಕೂತತ್ಕೊಂಡು road ಪಕ್ಕ bike ನಿಸ್ಕೊಂಡು ಆ b bike ಕೂತತಕೊಂಡು ಹೋಗ ಬರಣ photo ಹೊಡಿಿರ್ತಲ್ಲ ನೋಡ ಹಾಗೆವ ಎಮ್ಮ ಬರದ photo ಒಳಗೆದ ಹಾಕರೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shan82863_1742570000_Belgaum-SPECIFIC_01208_12042_20906",
+      "constrained": "okay ದೊಡ್ಡ lag ಇದೆ ಇಲ್ಲಿ ಜನ boating ಮಾಡ್ತಾರೆ ಮಾಡ್ತಾರೆ ಮ ಜೊತೆ ಬಂದು ಆಟ ಆಡ್ತಾರೆ ಬಹಳ cleanನ ಆಗಿದೆ ಇಲ್ಲಿ",
+      "unconstrained": "okay ದೊಡ್ಡlag ಇದೆ ಇಲ್ಲಿ ಜನ boating ಮಾಡ್ತಾರೆ ಮಾಡ್ತಾರೆ ಮ ಜೊತೆ ಬಂದು ಆಟ ಆಡ್ತಾರೆ ಬಹಳ cleanನ ಆಗಿದೆ ಇಲ್ಲಿ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shil26548_1457460000_GENERIC_0073_3575_10609",
+      "constrained": "church ಐತಿ ಆಮೇಲೆ ಇಲ್ಲಿ program ನ ನಡೆಯುತ್ತಿದೆ ಇಲ್ಲಿ side lighting ಅದು ಎಲ್ಲ ಮಾಡಿದ್ದಾರೆ",
+      "unconstrained": "church थी ಆಮೇಲೆ ಇಲ್ಲಿ program ನ ನಡೆಯುತ್ತಿದೆ ಇಲ್ಲಿ side lighting ಅದು ಎಲ್ಲ ಮಾಡಿದ್ದಾರೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shil26548_1458120000_Belgaum-SPECIFIC_00644_11876_18470",
+      "constrained": "ನಮಗೆ ಏನಾದ್ರು ಪು್ಸ್ಕಾರ ಕೊಡುವಾಗ ನಮಗೆ ಕೊಡ್ತಾರೆ ನಾ ಏನಾದ್ರು ಚುಲ ಒಳ್ಳೆ etition ಗೆದ್ದಂದ್ರ",
+      "unconstrained": "ನಮಗೆ ಏನಾದ್ರು ಪು್ಸ್ಕಾರ ಕೊಡುವಾಗ ನಮಗೆ ಕೊಡ್ತಾರೆ ನಾ ಏನಾದ್ರು ಚುಲ ಒಳ್ಳೆetition ಗೆದ್ದಂದ್ರ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shil26548_1508350000_GENERIC_0692_18829_22810",
+      "constrained": "ಒಂದು save ಅಂತ ತಿಂದರೆ ಅದು ನ doctor ಇಂದ ದೂರ ಇರ್ತೈತಿ",
+      "unconstrained": "அந்த save ಅಂತ ತಿಂದರೆ ಅದು ನ doctorಿಂದ ದೂರ ಇರ್ತೈತಿ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shil26548_1511000000_Belgaum-SPECIFIC_01303_1218_10257",
+      "constrained": "ಇದು ಒಂದು y ಇಲ್ಲಿ ಎಲ್ಲರೂ exercise ಮಾಡ್ತಾರೆ body fine maintain body maintainance ಮಾಡ್ತಾರೆ ಆಮೇಲೆ",
+      "unconstrained": "ಇದು ಒಂದುy ಇಲ್ಲಿ ಎಲ್ಲರೂ exercise ಮಾಡ್ತಾರೆ body fine maintain body maintainance ಮಾಡ್ತಾರೆ ಆಮೇಲೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Jyot82423_0854040000_GENERIC_0542_9344_19747",
+      "constrained": "ಶಾಂತವಾಗಿದೆ ನದಿ ನೀರಿನ ಗಾಳಿಯ opposit ಇ ಇದ್ದಾರೆ ಇರು ಹೋಗ್ತಾ ಇದ್ದಾರೆ ದೋಣಿಿನ ಒಂದು ಉದ್ದವಾದ ಧಣಿಿನ ಸಂಜೆ ಆಗಿದೆ ಅನ್ಸುತ್ತೆ",
+      "unconstrained": "ಶ शಾಂತವಾಗಿದೆ ನದಿ ನೀರಿನ ಗಾಳಿಯ opposit ಇ ಇದ್ದಾರೆ ಇರು ಹೋಗ್ತಾ ಇದ್ದಾರೆ ದೋಣಿಿನ ಒಂದು ಉದ್ದವಾದ ೋಣಿಿನ ಸಂಜೆ ಆಗಿದೆ ಅನ್ಸುತ್ತೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_121975_12068348_GENERIC_0456_2_12236",
+      "constrained": "ಚಪ್ಪಾಗಿದೆ cutting shopp ನೋಡಲು ತುಂಬಾ ಚೆನ್ನಾಗಿದ್ದು ಇಲ್ಲಿ ಒಬ್ಬ ವ್ಯಕ್ತಿ cutting ಅನ್ನು ಮಾಡಿದ್ದಾನೆ cutting ಮಾಡ ನೋಡಲು ಚೆನ್ನಾಗಿ ಕಾಣಿಸುತ್ತ ವ್ಯಕ್ತಿ cutting ಅನ್ನು neat ಆಗಿ ಮಾಡಿದ್ದಾನೆ",
+      "unconstrained": "ಚಪ್ಪಾಗಿದೆ cutting shopp ನೋಡಲು ತುಂಬಾ ಚೆನ್ನಾಗಿದ್ದು ಇಲ್ಲಿ ಒಬ್ಬ ವ್ಯಕ್ತಿ cutting ಅನ್ನು ಮಾಡಿದ್ದಾನೆ cutting ಮಾಡ ನೋಡಲು ಚೆನ್ನಾಗಿ ಕಾಣಿಸುತ್ತ ವ್ಯಕ್ತಿ cutting ಅನ್ನು neat टंगे ಮಾಡಿದ್ದಾನೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_103291_11269842_GENERIC_1130_11829_16436",
+      "constrained": "post ಹಾಕ್ಯಾರ ಕರಾಟ posterಗಳಲ್ಲ ಕಾಣವೆ ಹುಡುಗರುಗ ಇನ್ನೂ asyಯ ಆಗ",
+      "unconstrained": "टे post ಹಾಕ್ಯಾರ ಕರಾಟ posterಗಳಲ್ಲ ಕಾಣವೆ ಹುಡುಗರುಗ ಇನ್ನೂasyಯ ಆಗ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_103397_11165195_Belgaum-SPECIFIC_00128_8268_19351",
+      "constrained": "glass ಒಳಗೆರ ಆಜು ಬಾಜುಲ ಕಟ್ಟಿಗೆದ box ಮಾಡರಾತ್ರೊಳಗರ ಎರಡು ಕಡೆ್ಯಾ ಕೆಳಗೆ ಮೂರುರ್ ಮೂರು ಇಟ್ಟರ ಕಲ್ಲಿನ ಇದಾವೆ ನೋಡಕ್ ಚಂದ ಇದಾವೆಾವ",
+      "unconstrained": "glass உலகிட்டರ ಆಜು ಬಾಜುಲ ಕಟ್ಟಿಗೆದ box ಮಾಡರಾತ್ರೊಳಗರ ಎರಡು ಕಡೆ್ಯಾ ಕೆಳಗೆ ಮೂರುರ್ ಮೂರು ಇಟ್ಟರ ಕಲ್ಲಿನ ಇದಾವೆ ನೋಡಕ್ ಚಂದ ಇದಾವೆಾವ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_103291_11265202_GENERIC_1251_7028_17483",
+      "constrained": "ಎಲ್ಲ ಪರಗಳು ಬಿಟ್ಟ focus lights ಹಾಕಿ flower artifical flowers ಹಾಕ entrance ಒಳಗೆ artifical flowerವ ಇಂದ ಅಡಿ ಮಾಡಿ ಎಷ್ಟ ಮಾಡರು ನೋಡ ಇದನ್ನ",
+      "unconstrained": "எல்லா ಪರಗಳು ಬಿಟ್ಟ focus lights ಹಾಕಿ flower artifical flowers ಹಾಕ entrance ಒಳಗೆ artifical flowerವ ಇಂದ ಅಡಿ ಮಾಡಿ ಎಷ್ಟ ಮಾಡರು ನೋಡ ಇದನ್ನ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_119706_12294845_Belgaum-SPECIFIC_00359_7798_13213",
+      "constrained": "ಇಲ್ಲಿ ಕೆರ m board ch chair bat ball ಮತ್ತೆ ವಿವಿಧ ರೀತಿಯ games",
+      "unconstrained": "ಇಲ್ಲಿ ಕೆರm board ch chair bat ball ಮತ್ತೆ ವಿವಿಧ ರೀತಿಯ games"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_35690973_1614070000_GENERIC_0559_12693_16704",
+      "constrained": "colour ಚತಿ ನೀಲಿ colour ಐತಿ health colour ಐತಿ",
+      "unconstrained": "colour चलोತಿ नीले colour ಐತಿ health colour ಐತಿ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_133849_12688042_GENERIC_1091_8_13341",
+      "constrained": "ಈ ಚಿತ್ರ ನೋಡುವುದಕ್ಕೆ masaage ಮತ್ತು hair cutting shop ಎಂಬು ಗೊತ್ತತ್ತಾಗಿದೆ ಇದರ ಹೆಸರು ball and sloon ಎಂಬ board ಕಾಣಿಸುತ್ತಿದೆ",
+      "unconstrained": "ಈ ಚಿತ್ರ ನೋಡುವುದಕ್ಕೆ masaage ಮತ್ತು hair cutting shop ಎಂಬು ಗೊತ್ತತ್ತಾಗಿದೆ ಇದರ ಹೆಸರು ballಂಡಿ and sloon ಎಂಬ board ಕಾಣಿಸುತ್ತಿದೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_129892_12437138_Belgaum-SPECIFIC_01600_10568_15385",
+      "constrained": "ಪ ಪಕ್ಕದಲ್ಲಿ cycle ಇದೆ ಆಮೇಲೆ re free ಇದೆ yellow colour gate ಕಾಣಿದೆ glass door ಇದೆ",
+      "unconstrained": "ಪ ಪಕ್ಕದಲ್ಲಿ cycle ಇದೆ ಆಮೇಲೆre free ಇದೆ yellow colour gate ಕಾಣಿದೆ glass door ಇದೆ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_35690973_1613290000_GENERIC_0521_13408_16981",
+      "constrained": "ವು ಆಿನ market ದದಾಗ ಸಿಗ್ತಾವು",
+      "unconstrained": "ಿನ್ತಾವು ಆಿನ market ದದಾಗ ಸಿಗ್ತಾವು"
+    }
+  ]
+}

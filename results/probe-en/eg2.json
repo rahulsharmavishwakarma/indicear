@@ -1,0 +1,78 @@
+{
+  "encoder": "eg2",
+  "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+  "layers": 12,
+  "train_hours": 7.15,
+  "epochs": 6,
+  "lr": 0.002,
+  "seconds": 333,
+  "scores": {
+    "fleurs_en_dev": [
+      {
+        "layer": 1,
+        "wer": 95.96,
+        "cer": 88.79
+      },
+      {
+        "layer": 2,
+        "wer": 95.75,
+        "cer": 85.08
+      },
+      {
+        "layer": 3,
+        "wer": 97.11,
+        "cer": 95.7
+      },
+      {
+        "layer": 4,
+        "wer": 88.88,
+        "cer": 63.73
+      },
+      {
+        "layer": 5,
+        "wer": 84.21,
+        "cer": 53.03
+      },
+      {
+        "layer": 6,
+        "wer": 83.32,
+        "cer": 51.47
+      },
+      {
+        "layer": 7,
+        "wer": 83.22,
+        "cer": 52.31
+      },
+      {
+        "layer": 8,
+        "wer": 82.58,
+        "cer": 48.03
+      },
+      {
+        "layer": 9,
+        "wer": 78.37,
+        "cer": 41.96
+      },
+      {
+        "layer": 10,
+        "wer": 74.63,
+        "cer": 36.28
+      },
+      {
+        "layer": 11,
+        "wer": 71.91,
+        "cer": 31.71
+      },
+      {
+        "layer": 12,
+        "wer": 68.94,
+        "cer": 29.35
+      },
+      {
+        "layer": "output_proj",
+        "wer": 69.35,
+        "cer": 29.58
+      }
+    ]
+  }
+}

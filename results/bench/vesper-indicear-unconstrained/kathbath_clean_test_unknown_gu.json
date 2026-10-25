@@ -1,0 +1,96 @@
+{
+  "gu": {
+    "wer": 73.04,
+    "cer": 41.12,
+    "utterances": 300,
+    "words": 3487,
+    "script_error_rate": 34.79,
+    "wer_script_normalised": 72.01,
+    "cer_script_normalised": 39.77,
+    "rows_with_alternative_ref": 51,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.538
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 98.0,
+    "macro_f1": 98.99,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 98.0,
+        "f1": 98.99,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "gu": {
+        "gu": 294,
+        "hi": 3,
+        "mr": 3
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 49,
+        "accuracy": 91.84
+      },
+      "5-10s": {
+        "utterances": 240,
+        "accuracy": 99.17
+      },
+      "10-20s": {
+        "utterances": 11,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_gu",
+  "utterances": 300,
+  "hours": 0.54,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

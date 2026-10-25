@@ -1,0 +1,256 @@
+{
+  "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+  "langs": [
+    "hi",
+    "mr",
+    "bn",
+    "pa",
+    "gu",
+    "or",
+    "ur",
+    "ta",
+    "te",
+    "kn",
+    "ml",
+    "en"
+  ],
+  "tokenizer": {
+    "vocab_size": 8964,
+    "specials": [
+      "<blank>",
+      "<pad>",
+      "<bos>",
+      "<eos>"
+    ],
+    "ranges": {
+      "deva": [
+        4,
+        1028
+      ],
+      "beng": [
+        1028,
+        1796
+      ],
+      "guru": [
+        1796,
+        2564
+      ],
+      "gujr": [
+        2564,
+        3332
+      ],
+      "orya": [
+        3332,
+        4100
+      ],
+      "taml": [
+        4100,
+        4868
+      ],
+      "telu": [
+        4868,
+        5636
+      ],
+      "knda": [
+        5636,
+        6404
+      ],
+      "mlym": [
+        6404,
+        7172
+      ],
+      "arab": [
+        7172,
+        7940
+      ],
+      "latn": [
+        7940,
+        8964
+      ]
+    }
+  },
+  "label_rates": {
+    "bn": {
+      "tokens_per_s": {
+        "mean": 4.25,
+        "p95": 6.0,
+        "max": 9.52
+      },
+      "units_per_s": {
+        "mean": 10.13,
+        "p95": 13.39,
+        "max": 30.95
+      },
+      "unit_frames_infeasible": 1,
+      "utterances": 2789,
+      "frame_rate": 25
+    },
+    "en": {
+      "tokens_per_s": {
+        "mean": 4.5,
+        "p95": 6.39,
+        "max": 8.28
+      },
+      "units_per_s": {
+        "mean": 11.02,
+        "p95": 14.21,
+        "max": 16.63
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 2550,
+      "frame_rate": 25
+    },
+    "gu": {
+      "tokens_per_s": {
+        "mean": 5.38,
+        "p95": 7.32,
+        "max": 9.64
+      },
+      "units_per_s": {
+        "mean": 12.43,
+        "p95": 15.5,
+        "max": 19.92
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 3095,
+      "frame_rate": 25
+    },
+    "hi": {
+      "tokens_per_s": {
+        "mean": 4.6,
+        "p95": 6.49,
+        "max": 9.83
+      },
+      "units_per_s": {
+        "mean": 11.53,
+        "p95": 15.99,
+        "max": 19.24
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 2047,
+      "frame_rate": 25
+    },
+    "kn": {
+      "tokens_per_s": {
+        "mean": 4.27,
+        "p95": 5.69,
+        "max": 15.8
+      },
+      "units_per_s": {
+        "mean": 11.26,
+        "p95": 13.93,
+        "max": 39.66
+      },
+      "unit_frames_infeasible": 1,
+      "utterances": 2129,
+      "frame_rate": 25
+    },
+    "ml": {
+      "tokens_per_s": {
+        "mean": 5.2,
+        "p95": 7.54,
+        "max": 13.69
+      },
+      "units_per_s": {
+        "mean": 12.13,
+        "p95": 16.84,
+        "max": 21.9
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 2868,
+      "frame_rate": 25
+    },
+    "mr": {
+      "tokens_per_s": {
+        "mean": 4.04,
+        "p95": 5.83,
+        "max": 9.17
+      },
+      "units_per_s": {
+        "mean": 10.16,
+        "p95": 14.37,
+        "max": 18.04
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 2997,
+      "frame_rate": 25
+    },
+    "or": {
+      "tokens_per_s": {
+        "mean": 4.31,
+        "p95": 5.86,
+        "max": 7.41
+      },
+      "units_per_s": {
+        "mean": 12.19,
+        "p95": 15.57,
+        "max": 19.92
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 1050,
+      "frame_rate": 25
+    },
+    "pa": {
+      "tokens_per_s": {
+        "mean": 4.03,
+        "p95": 5.68,
+        "max": 7.36
+      },
+      "units_per_s": {
+        "mean": 11.3,
+        "p95": 15.55,
+        "max": 18.39
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 1831,
+      "frame_rate": 25
+    },
+    "ta": {
+      "tokens_per_s": {
+        "mean": 3.88,
+        "p95": 5.64,
+        "max": 32.93
+      },
+      "units_per_s": {
+        "mean": 11.02,
+        "p95": 15.19,
+        "max": 117.07
+      },
+      "unit_frames_infeasible": 1,
+      "utterances": 2179,
+      "frame_rate": 25
+    },
+    "te": {
+      "tokens_per_s": {
+        "mean": 4.22,
+        "p95": 5.81,
+        "max": 61.11
+      },
+      "units_per_s": {
+        "mean": 10.37,
+        "p95": 13.47,
+        "max": 173.61
+      },
+      "unit_frames_infeasible": 2,
+      "utterances": 2181,
+      "frame_rate": 25
+    },
+    "ur": {
+      "tokens_per_s": {
+        "mean": 4.49,
+        "p95": 5.97,
+        "max": 10.7
+      },
+      "units_per_s": {
+        "mean": 10.24,
+        "p95": 13.06,
+        "max": 24.62
+      },
+      "unit_frames_infeasible": 0,
+      "utterances": 1996,
+      "frame_rate": 25
+    }
+  },
+  "train_hours": 87.5,
+  "dev_hours": 12.3
+}

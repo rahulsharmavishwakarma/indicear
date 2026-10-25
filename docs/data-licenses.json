@@ -1,0 +1,884 @@
+{
+  "verified_on": "2026-10-24",
+  "sources": [
+    {
+      "name": "indicvoices",
+      "title": "IndicVoices (AI4Bharat)",
+      "kind": "hf-parquet",
+      "repo": "ai4bharat/IndicVoices",
+      "revision": "c96f9088f138cf89d419da7e8e643e1f05c00a87",
+      "license": "CC BY 4.0 (card tag and card text)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "verified",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "spontaneous (76% extempore, 15% conversational, 8% read)",
+      "markup": "indicvoices",
+      "speaker_ids": "field",
+      "attribution": "IndicVoices, Javed et al., ACL Findings 2024 (AI4Bharat, IIT Madras); CC BY 4.0.",
+      "notes": "Gated (auto-approve). Verified on 2026-10-24 with a read-only account token (parquet footers and the text/duration/speaker columns of hi, kn and ta shards). Columns: audio_filepath (Audio struct), text, duration, lang, samples, verbatim, normalized, speaker_id, scenario, task_name, gender, age_group, job_type, qualification, area, district, state, occupation, verification_report, unsanitized_verbatim, unsanitized_normalized. `text` = `normalized` (textbook spelling, English loanwords in native script, tags mostly removed but `<unintelligible>` survives in some rows); `verbatim` = as spoken. `unsanitized_normalized` keeps the tags (<tag> or [tag], 89 Table-13 names, capitalised or misspelt at times) and adds a Latin gloss after English words: 'ಆರ್ಡರ್ [order] ಶಿಪ್‌ [ship]'. Rows with a gloss: hi valid 50%, kn 62%, ta 71% (train shard 0: hi 43%, kn 60%, ta 82%). IndicEAR reads `unsanitized_normalized`, rewrites glossed words to Latin (code_mixed rows) and drops unintelligible rows. Measured train hours (duration column, all shards): hi 819.4 (2,354 speakers), ta 803.9 (2,407), kn 616.2 (2,131). The Hub has train and valid only (no test). Valid speakers are almost all in train (hi 512/514, kn 218/220, ta 546/553); valid is used as a code-mixed eval set and its speakers are removed from training, which costs hi 192.6 h (24%), kn 71.8 h (12%), ta 201.1 h (25%) of the train split.",
+      "langs": {
+        "hi": "hindi",
+        "mr": "marathi",
+        "bn": "bengali",
+        "pa": "punjabi",
+        "gu": "gujarati",
+        "or": "odia",
+        "ur": "urdu",
+        "ta": "tamil",
+        "te": "telugu",
+        "kn": "kannada",
+        "ml": "malayalam"
+      },
+      "splits": {
+        "train": "{config}/train-",
+        "valid": "{config}/valid-"
+      },
+      "mb_per_hour": 61.0,
+      "hours": {
+        "hi": 819.4,
+        "ta": 803.9,
+        "kn": 616.2,
+        "all": 11200.0
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "vaani",
+      "title": "Vaani transcribed part (ARTPARK-IISc)",
+      "kind": "hf-parquet",
+      "repo": "ARTPARK-IISc/Vaani-transcription-part",
+      "revision": "418f8f160c6effbb9fd15d3bf54c9d39508e81bc",
+      "license": "CC BY 4.0 (card tag)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "verified",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "spontaneous, image-prompted, district-level dialect variety",
+      "markup": "vaani",
+      "speaker_ids": "filename",
+      "attribution": "VAANI, Pulikodan et al., arXiv 2603.28714 (IISc Bengaluru and ARTPARK, funded by Google); CC BY 4.0.",
+      "notes": "Gated with a form (name, company, purpose: Research/Academic/Commercial/Education). Card schema: audio (Audio), language, gender, state, district, transcript, referenceImage; splits train, validation, test. No speaker column: speakers are grouped by the uploader token in the file name (heuristic), and leaks are checked by audio hash. Markup verified from public Vaani transcripts (the portal's v1a JSON) and the Vaani-Benchmark card: '{english}' follows the native-script rendering of an English word (multi-word spans and glued suffixes occur), '{native}' and '(native)' give the standard spelling of a dialect form, '<noise> ... </noise>' wraps noisy speech, '<PAUSE>', '<static_noise>', '[breathing]', '[lip smacks]', '[unintelligible]', and '--' marks a cut-off word. Verified on 2026-10-24 on the HF rows of the main ARTPARK-IISc/Vaani repo (same project and transcripts; 80 of 100 transcribed Hindi rows in one shard carry {english}). Access was granted later the same day: the pilot streamed it, and a pilot shard (audio/Hindi/train-00132-of-00177.parquet, 2,401 rows) has exactly the card's columns audio, language, gender, state, district, transcript, referenceImage, with '{english}' glosses in the transcripts.",
+      "langs": {
+        "hi": "Hindi",
+        "kn": "Kannada",
+        "ta": "Tamil",
+        "te": "Telugu",
+        "ml": "Malayalam",
+        "mr": "Marathi",
+        "bn": "Bengali",
+        "gu": "Gujarati",
+        "pa": "Punjabi",
+        "or": "Odia",
+        "ur": "Urdu",
+        "en": "English"
+      },
+      "splits": {
+        "train": "audio/{config}/train-",
+        "validation": "audio/{config}/validation-",
+        "test": "audio/{config}/test-"
+      },
+      "mb_per_hour": 115.0,
+      "hours": {
+        "hi": 1003.78,
+        "kn": 151.12,
+        "te": 184.48,
+        "bn": 162.42,
+        "mr": 68.09,
+        "or": 51.2,
+        "ml": 40.52,
+        "ta": 24.35,
+        "en": 22.46,
+        "pa": 20.42,
+        "gu": 19.26,
+        "ur": 2.31
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "vaani_main",
+      "title": "Vaani, full release (transcribed rows only)",
+      "kind": "hf-parquet",
+      "repo": "ARTPARK-IISc/Vaani",
+      "revision": "9e6ed4f94f7060e633cbc500480623ae7521522c",
+      "license": "CC BY 4.0 (card tag)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "verified",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "spontaneous, image-prompted, district-level dialect variety",
+      "markup": "vaani",
+      "speaker_ids": "field",
+      "attribution": "VAANI, Pulikodan et al., arXiv 2603.28714 (IISc Bengaluru and ARTPARK, funded by Google); CC BY 4.0.",
+      "notes": "Fallback while Vaani-transcription-part is not accessible. Verified with the project's token: config audio/<Language>, one train split (Hindi: 5,620 shards); columns audio, language, duration, speakerID, languagesKnown, gender, state, district, pincode, stay(years), isTranscriptionAvailable, transcript, referenceImage, speakerImageHash, UtteranceSequenceID. Only ~6% of rows are transcribed (100 of 1,799 in the first Hindi shard, spread over every row group), so each transcribed hour costs ~18 hours of download. speakerID can be 'NA'. Not used in the shipped mixtures.",
+      "langs": {
+        "hi": "Hindi",
+        "kn": "Kannada",
+        "ta": "Tamil",
+        "te": "Telugu",
+        "ml": "Malayalam",
+        "mr": "Marathi",
+        "bn": "Bengali",
+        "gu": "Gujarati",
+        "pa": "Punjabi",
+        "or": "Odia",
+        "ur": "Urdu",
+        "en": "English"
+      },
+      "splits": {
+        "train": "audio/{config}/train-"
+      },
+      "mb_per_hour": 2070.0,
+      "hours": {},
+      "repos": {},
+      "files": {},
+      "speaker_namespace": "vaani_main"
+    },
+    {
+      "name": "vaani_benchmark",
+      "title": "Vaani Benchmark v1.0 (Hindi)",
+      "kind": "hf-parquet",
+      "repo": "ARTPARK-IISc/Vaani-Benchmark-V1.0",
+      "revision": "d742f1cca7111ac5e9890bffbc91e6df79517627",
+      "license": "CC BY 4.0 (card tag)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "partial",
+      "use": [
+        "eval"
+      ],
+      "style": "spontaneous, image-prompted, 104 districts",
+      "markup": "vaani",
+      "speaker_ids": "field",
+      "attribution": "Vaani-Benchmark-V1.0, ARTPARK-IISc (VAANI, arXiv 2603.28714); CC BY 4.0.",
+      "notes": "Held-out collection distinct from Vaani. 5,050 segments, 1,103 speakers, ~10.9 h, three independent references per segment (multi-reference WER). Columns from the card table: audio, speakerID, language, state, district, duration, gender, reference_image, transcription_v1..v3. The notation table on its card is the source of the Vaani markup rules.",
+      "langs": {
+        "hi": "Hindi"
+      },
+      "splits": {
+        "test": "data/test-"
+      },
+      "mb_per_hour": 114.0,
+      "hours": {
+        "hi": 10.9
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": "vaani_benchmark"
+    },
+    {
+      "name": "indiccontext_eval",
+      "title": "IndicContextEval (AI4Bharat, entity-heavy)",
+      "kind": "hf-parquet",
+      "repo": "ai4bharat/IndicContextEval",
+      "revision": "d9c03758652771b6ac9dc98d06a5ba6e15c6bd5a",
+      "license": "CC BY 4.0 (card tag)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "verified",
+      "use": [
+        "eval"
+      ],
+      "style": "read and spontaneous, entity-heavy domains",
+      "markup": "paren_gloss",
+      "speaker_ids": "field",
+      "attribution": "IndicContextEval (AI4Bharat), arXiv 2606.19157; CC BY 4.0.",
+      "notes": "Verified from a parquet footer and rows: audio, reference_text (English as 'वारंटी (Warranty)'), reference_text_with_tags, reference_text_no_tags, reference_text_no_brackets, language, duration, task_name, domain_name, speech_style, code_mixing (bool; 185 of 245 rows in one Hindi shard), speaker_id, context prompts l0-l6. Splits are named by language (bn, gu, hi, ml, mr, or, te, ur; no kn, ta or en): data/<Language>-*.parquet. 55.9 h in total (measured on 24 October 2026).",
+      "langs": {
+        "bn": "Bengali",
+        "gu": "Gujarati",
+        "hi": "Hindi",
+        "ml": "Malayalam",
+        "mr": "Marathi",
+        "or": "Odia",
+        "te": "Telugu",
+        "ur": "Urdu"
+      },
+      "splits": {
+        "test": "data/{config}-"
+      },
+      "mb_per_hour": 114.0,
+      "hours": {
+        "all": 55.9
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "indic_diarbench",
+      "title": "Indic DiarBench (Sarvam AI, multi-speaker long-form)",
+      "kind": "none",
+      "repo": "sarvamai/indic-diarbench",
+      "revision": "92877bad8aab6e598167d91c6ee02aa8ca6ede09",
+      "license": "CC BY 4.0 (card tag)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "verified",
+      "use": [
+        "eval"
+      ],
+      "style": "multi-speaker long-form recordings",
+      "markup": "plain",
+      "speaker_ids": "none",
+      "attribution": "indic-diarbench, Sarvam AI; CC BY 4.0.",
+      "notes": "Registered, not loaded: whole recordings (Kannada: 89 rows) with columns audio, recording_id, language, annotated_transcript, dataset_type, sample_id, num_speakers, num_segments, duration_seconds; one test parquet per language. Needs long-form segmentation before it fits the <= 20 s eval path; code-mixing is not flagged. About 108 h (measured on 24 October 2026).",
+      "langs": {},
+      "splits": {},
+      "mb_per_hour": 0.0,
+      "hours": {},
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "kathbath",
+      "title": "Kathbath (AI4Bharat IndicSUPERB)",
+      "kind": "hf-parquet",
+      "repo": "ai4bharat/Kathbath",
+      "revision": "5b9e92849222026d9141acba4e8434fe816396bf",
+      "license": "CC BY 4.0 (HF tag); the card text and IndicSUPERB README say CC0 for the packaging",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "partial",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "read (sentences from IndicCorp)",
+      "markup": "plain",
+      "speaker_ids": "field",
+      "attribution": "Kathbath / IndicSUPERB, Javed et al., arXiv 2208.11761 (AI4Bharat); CC BY 4.0 / CC0.",
+      "notes": "Tag conflict: the Hub tag is CC BY 4.0, while the card and the IndicSUPERB README license the packaging under CC0 and say the read text comes from the IndicCorp web crawl, which AI4Bharat does not own. Treated as CC BY 4.0 (the stricter reading) with attribution. Card schema: fname, text, audio_filepath (Audio), lang, duration, gender, speaker_id (int64); Hub splits train and valid. The test-known/test-unknown sets (clean and noisy) are only on the IndicSUPERB object store (`kathbath_test`). Test-known speakers also appear in train by design, so they are removed from training when that eval set is loaded.",
+      "langs": {
+        "hi": "hindi",
+        "mr": "marathi",
+        "bn": "bengali",
+        "pa": "punjabi",
+        "gu": "gujarati",
+        "or": "odia",
+        "ur": "urdu",
+        "ta": "tamil",
+        "te": "telugu",
+        "kn": "kannada",
+        "ml": "malayalam"
+      },
+      "splits": {
+        "train": "{config}/train-",
+        "valid": "{config}/valid-"
+      },
+      "mb_per_hour": 103.0,
+      "hours": {
+        "all": 1684.0
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "kathbath_test",
+      "title": "Kathbath test-known / test-unknown, clean and noisy",
+      "kind": "url-tar",
+      "repo": "https://github.com/AI4Bharat/IndicSUPERB",
+      "revision": "object-store tars pinned by size and ETag",
+      "license": "CC0 (IndicSUPERB README) / CC BY 4.0 (Hub tag of the same corpus)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "partial",
+      "use": [
+        "eval"
+      ],
+      "style": "read; noisy = the same protocol with added noise",
+      "markup": "plain",
+      "speaker_ids": "filename",
+      "attribution": "Kathbath / IndicSUPERB, Javed et al., arXiv 2208.11761 (AI4Bharat).",
+      "notes": "Each tar holds all 12 languages, so it is downloaded whole. Audio is m4a (decoded with ffmpeg). Verified: transcripts are `kb_data_clean_m4a/<language>/<split>/transcription_n2w.txt` with '<file>\\t<text>' lines and file names '<utterance>-<speaker>-<gender>.m4a' (read from the head of the clean transcripts tar). Unverified: the split directory names inside the test tars and the noisy transcript prefix; the loader discovers them and reports what it found.",
+      "langs": {
+        "hi": "hindi",
+        "mr": "marathi",
+        "bn": "bengali",
+        "pa": "punjabi",
+        "gu": "gujarati",
+        "or": "odia",
+        "ur": "urdu",
+        "ta": "tamil",
+        "te": "telugu",
+        "kn": "kannada",
+        "ml": "malayalam"
+      },
+      "splits": {
+        "clean_test_known": "testkn",
+        "clean_test_unknown": "testunk",
+        "noisy_test_known": "testkn",
+        "noisy_test_unknown": "testunk"
+      },
+      "mb_per_hour": 100.0,
+      "hours": {},
+      "repos": {},
+      "files": {
+        "clean_transcripts": {
+          "url": "https://objectstore.e2enetworks.net/indic-superb/kathbath/clean/transcripts_n2w.tar",
+          "size": 208998400,
+          "etag": "6f53b052669224769cc52cc74d37deb6-13"
+        },
+        "noisy_transcripts": {
+          "url": "https://objectstore.e2enetworks.net/indic-superb/kathbath/noisy/transcripts_n2w.tar",
+          "size": null,
+          "etag": null
+        },
+        "clean_testkn": {
+          "url": "https://objectstore.e2enetworks.net/indic-superb/kathbath/clean/testkn_audio.tar",
+          "size": 3587717120,
+          "etag": "ae6de144c95b7a0b1f2fe26eaf4293fa-214"
+        },
+        "clean_testunk": {
+          "url": "https://objectstore.e2enetworks.net/indic-superb/kathbath/clean/testunk_audio.tar",
+          "size": 2207580160,
+          "etag": "0310395bab8363ae2a0b3251a001f32b-132"
+        },
+        "noisy_testkn": {
+          "url": "https://objectstore.e2enetworks.net/indic-superb/kathbath/noisy/testkn_audio.tar",
+          "size": 3456552960,
+          "etag": "da42031c7f06a1a43d4bb61b2c572107-207"
+        },
+        "noisy_testunk": {
+          "url": "https://objectstore.e2enetworks.net/indic-superb/kathbath/noisy/testunk_audio.tar",
+          "size": 1418004480,
+          "etag": "e3a5722797d95b2a439ade8e1d5dfe71-85"
+        }
+      },
+      "speaker_namespace": "kathbath"
+    },
+    {
+      "name": "shrutilipi",
+      "title": "Shrutilipi (AI4Bharat, All India Radio)",
+      "kind": "hf-parquet",
+      "repo": "ai4bharat/Shrutilipi",
+      "revision": "f4beb2f2cfaeae5a8fc28808f85165fec1cb19b3",
+      "license": "CC BY 4.0 (card tag and card text)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "partial",
+      "use": [
+        "train"
+      ],
+      "style": "broadcast news, mined alignments",
+      "markup": "plain",
+      "speaker_ids": "none",
+      "attribution": "Shrutilipi, Bhogale et al., ICASSP 2023 (AI4Bharat); CC BY 4.0.",
+      "notes": "Mined audio-text pairs from All India Radio bulletins: labels can be misaligned. PLAN.md asks for a teacher-CER filter, which is not implemented, so Shrutilipi is only in the `full` mixture, not in `full_warm`. Card schema: audio_filepath (Audio), text, duration, lang; one train split; no speaker ids. No Urdu config despite the card text. On 2026-10-24 the file listing worked but reading a parquet file returned 403 (the project's account is not on the gated repo's authorized list), so no row was read.",
+      "langs": {
+        "hi": "hindi",
+        "mr": "marathi",
+        "bn": "bengali",
+        "pa": "punjabi",
+        "gu": "gujarati",
+        "or": "odia",
+        "ta": "tamil",
+        "te": "telugu",
+        "kn": "kannada",
+        "ml": "malayalam"
+      },
+      "splits": {
+        "train": "{config}/train-"
+      },
+      "mb_per_hour": 42.0,
+      "hours": {
+        "all": 6400.0
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "spring_inx",
+      "title": "SPRING-INX (SPRING Lab, IIT Madras)",
+      "kind": "hf-parquet",
+      "repo": "SPRINGLab/SPRING_INX_<Language>_R1|R2",
+      "revision": "per-language repos, see `repos`",
+      "license": "unconfirmed: no licence on the Hub repos; the IndiaAI AIKosh listing (Odia, Malayalam) says CC BY 4.0",
+      "spdx": "NOASSERTION",
+      "license_status": "review",
+      "access": "open",
+      "verification": "partial",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "conversational and read; English words appear in Latin script",
+      "markup": "plain",
+      "speaker_ids": "none",
+      "attribution": "SPRING-INX, SPRING Lab, IIT Madras, arXiv 2310.14654.",
+      "notes": "Schema verified from the Kannada R1 parquet footer: utterance_id, text, audio; splits train, validation, test; no speaker ids. No Hindi audio repo under SPRINGLab (speechlab/SPRING_INX_R1 holds Kaldi text files only). The SPRING Lab page (asr.iitm.ac.in/dataset) returned 404, so the licence was not read at the source: resolve before training (PLAN.md checklist 5).",
+      "langs": {
+        "bn": "bn",
+        "gu": "gu",
+        "kn": "kn",
+        "ml": "ml",
+        "mr": "mr",
+        "or": "or",
+        "pa": "pa",
+        "ta": "ta"
+      },
+      "splits": {
+        "train": "data/train-",
+        "validation": "data/validation-",
+        "test": "data/test-"
+      },
+      "mb_per_hour": 115.0,
+      "hours": {
+        "all": 2000.0
+      },
+      "repos": {
+        "bn": [
+          [
+            "SPRINGLab/SPRING_INX_Bengali_R1",
+            "84a3fb13194b7646ec2a3071bf7e83840461acbc"
+          ],
+          [
+            "SPRINGLab/SPRING_INX_Bengali_R2",
+            "794a895662bb9b6235ab29345a3515005207660a"
+          ]
+        ],
+        "gu": [
+          [
+            "SPRINGLab/SPRING_INX_Gujarati_R1",
+            "6cbbaf73ba99c7afbc78fd589e2cebda74959746"
+          ],
+          [
+            "SPRINGLab/SPRING_INX_Gujarati_R2",
+            "c17325ec48cfa78221f8127d62e3ce8f988bbd97"
+          ]
+        ],
+        "kn": [
+          [
+            "SPRINGLab/SPRING_INX_Kannada_R1",
+            "bd9e8f130d19353ebee691fddf34ac5f99143416"
+          ]
+        ],
+        "ml": [
+          [
+            "SPRINGLab/SPRING_INX_Malayalam_R1",
+            "0843a854a60a1264bf42b1a869ddc85890f19bb1"
+          ],
+          [
+            "SPRINGLab/SPRING_INX_Malayalam_R2",
+            "d74480400f3d98af82ddc7657d30c93920b1035b"
+          ]
+        ],
+        "mr": [
+          [
+            "SPRINGLab/SPRING_INX_Marathi_R1",
+            "a3eded7ad3104f4a294937e5078ef7a254360ac7"
+          ],
+          [
+            "SPRINGLab/SPRING_INX_Marathi_R2",
+            "ba83cc9083c815375b4c3a7ed4c5855ea0d9ae5f"
+          ]
+        ],
+        "or": [
+          [
+            "SPRINGLab/SPRING_INX_Odia_R1",
+            "0aee5fd987bf1fc897629a82ce9c328600652999"
+          ]
+        ],
+        "pa": [
+          [
+            "SPRINGLab/SPRING_INX_Punjabi_R1",
+            "97e5f36fce3e24b0ddad726728d1cc4506c24476"
+          ],
+          [
+            "SPRINGLab/SPRING_INX_Punjabi_R2",
+            "1cd05ae2e6eff4a91f30b397bfda1826dfb19437"
+          ]
+        ],
+        "ta": [
+          [
+            "SPRINGLab/SPRING_INX_Tamil_R1",
+            "3931b31eaa37449c263d380fd215b18c36558846"
+          ],
+          [
+            "SPRINGLab/SPRING_INX_Tamil_R2",
+            "5cdae7158e86e3124a309d0fbb6d591b2691873e"
+          ]
+        ]
+      },
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "mucs",
+      "title": "MUCS 2021 sub-task 2 (Hindi-English, Bengali-English)",
+      "kind": "url-tar",
+      "repo": "https://www.openslr.org/104/",
+      "revision": "OpenSLR SLR104 tarballs pinned by size and ETag",
+      "license": "CC BY-SA 4.0 (OpenSLR page)",
+      "spdx": "CC-BY-SA-4.0",
+      "license_status": "review",
+      "access": "open",
+      "verification": "partial",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "spoken technical tutorials, code-switched",
+      "markup": "plain",
+      "speaker_ids": "field",
+      "attribution": "MUCS 2021 (Diwan et al., Interspeech 2021), OpenSLR SLR104; data from the Spoken Tutorial project, IIT Bombay; CC BY-SA 4.0.",
+      "notes": "Share-alike: counsel review before training (PLAN.md checklist 3). Kaldi layout per the challenge baseline README: <split>/transcripts/{text,segments,utt2spk,wav.scp} plus <split>/<recording>.wav (the wav part seen in the head of the test tar). Transcripts mostly write English in Latin but some English words in Devanagari (seen in a public mirror). Hi-En 89.86 h train / 5.18 h test; Bn-En 46.11 h / 7.02 h; blind test set in subtask2_blindtest_wReadme.tar.gz (layout unverified).",
+      "langs": {
+        "hi": "Hindi-English",
+        "bn": "Bengali-English"
+      },
+      "splits": {
+        "train": "train",
+        "test": "test",
+        "blind": "blindtest"
+      },
+      "mb_per_hour": 82.0,
+      "hours": {
+        "hi": 95.03999999999999,
+        "bn": 53.129999999999995
+      },
+      "repos": {},
+      "files": {
+        "Hindi-English_train": {
+          "urls": [
+            "https://openslr.trmal.net/resources/104/Hindi-English_train.tar.gz",
+            "https://openslr.elda.org/resources/104/Hindi-English_train.tar.gz",
+            "https://openslr.magicdatatech.com/resources/104/Hindi-English_train.tar.gz"
+          ],
+          "size": 7332628101,
+          "etag": "1b50f0685-5cc09b825c245"
+        },
+        "Hindi-English_test": {
+          "urls": [
+            "https://openslr.trmal.net/resources/104/Hindi-English_test.tar.gz",
+            "https://openslr.elda.org/resources/104/Hindi-English_test.tar.gz",
+            "https://openslr.magicdatatech.com/resources/104/Hindi-English_test.tar.gz"
+          ],
+          "size": 443929204,
+          "etag": "1a75d274-5cc09b9ecc146"
+        },
+        "Bengali-English_train": {
+          "urls": [
+            "https://openslr.trmal.net/resources/104/Bengali-English_train.tar.gz",
+            "https://openslr.elda.org/resources/104/Bengali-English_train.tar.gz",
+            "https://openslr.magicdatatech.com/resources/104/Bengali-English_train.tar.gz"
+          ],
+          "size": 3916509124,
+          "etag": "e9712fc4-5cc09c867ceab"
+        },
+        "Bengali-English_test": {
+          "urls": [
+            "https://openslr.trmal.net/resources/104/Bengali-English_test.tar.gz",
+            "https://openslr.elda.org/resources/104/Bengali-English_test.tar.gz",
+            "https://openslr.magicdatatech.com/resources/104/Bengali-English_test.tar.gz"
+          ],
+          "size": 606285637,
+          "etag": "24232f45-5cc09cab19cfe"
+        },
+        "blindtest": {
+          "urls": [
+            "https://openslr.trmal.net/resources/104/subtask2_blindtest_wReadme.tar.gz",
+            "https://openslr.elda.org/resources/104/subtask2_blindtest_wReadme.tar.gz",
+            "https://openslr.magicdatatech.com/resources/104/subtask2_blindtest_wReadme.tar.gz"
+          ],
+          "size": null,
+          "etag": null
+        }
+      },
+      "speaker_namespace": ""
+    },
+    {
+      "name": "librispeech",
+      "title": "LibriSpeech (OpenSLR 12, Hub mirror)",
+      "kind": "hf-parquet",
+      "repo": "openslr/librispeech_asr",
+      "revision": "71cacbfb7e2354c4226d01e70d77d5fca3d04ba1",
+      "license": "CC BY 4.0",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "verified",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "read audiobooks (US English)",
+      "markup": "plain",
+      "speaker_ids": "field",
+      "attribution": "LibriSpeech, Panayotov et al., ICASSP 2015 (LibriVox); CC BY 4.0.",
+      "notes": "Schema verified from a parquet footer: file, audio, text (upper case), speaker_id, chapter_id, id.",
+      "langs": {
+        "en": "en"
+      },
+      "splits": {
+        "train.clean.100": "clean/train.100/",
+        "train.clean.360": "clean/train.360/",
+        "train.other.500": "other/train.500/",
+        "test.clean": "clean/test/",
+        "test.other": "other/test/"
+      },
+      "mb_per_hour": 63.0,
+      "hours": {
+        "en": 960.0
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "peoples_speech",
+      "title": "The People's Speech, CC BY subsets",
+      "kind": "hf-parquet",
+      "repo": "MLCommons/peoples_speech",
+      "revision": "f10597c5d3d3a63f8b6827701297c3afdf178272",
+      "license": "CC BY 2.0/2.5/3.0/4.0 (per item; the `clean`/`dirty` configs); `*_sa` configs are CC BY-SA and not used",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "verified",
+      "use": [
+        "train"
+      ],
+      "style": "mixed spontaneous and prepared speech from archive.org (courts, forums, lectures); mostly US accents",
+      "markup": "plain",
+      "speaker_ids": "recording",
+      "attribution": "The People's Speech, Galvez et al., arXiv 2111.09344 (MLCommons); CC BY.",
+      "notes": "Only `clean/train-*` is read. The validation/test splits are shared across the CC BY and CC BY-SA configs, so they are not used. Schema verified from a parquet footer: id, audio, duration_ms, text (lower case). Transcripts come from existing captions and are partly misaligned (card). No speaker ids: the archive.org item in the id groups utterances. Open question: CC BY 2.0-4.0 attribution for individual archive.org works.",
+      "langs": {
+        "en": "en"
+      },
+      "splits": {
+        "train": "clean/train-"
+      },
+      "mb_per_hour": 66.0,
+      "hours": {},
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "voxpopuli",
+      "title": "VoxPopuli English",
+      "kind": "hf-parquet",
+      "repo": "facebook/voxpopuli",
+      "revision": "42f01879c780b4a2e90ec0b4f616c2ece526e4f1",
+      "license": "CC0 (card); European Parliament legal notice for the raw recordings",
+      "spdx": "CC0-1.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "verified",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "parliamentary speeches (native and L2 European English)",
+      "markup": "plain",
+      "speaker_ids": "field",
+      "attribution": "VoxPopuli, Wang et al., ACL 2021 (Meta AI; European Parliament recordings); CC0.",
+      "notes": "Schema verified from a parquet footer: audio_id, language, audio, raw_text, normalized_text, gender, speaker_id, is_gold_transcript, accent. Only gold transcripts are used. `en_accented` (15 L2 accents, test only) is an extra eval set; it has no Indian accent.",
+      "langs": {
+        "en": "en"
+      },
+      "splits": {
+        "train": "en/train-",
+        "validation": "en/validation-",
+        "test": "en/test-",
+        "accented_test": "en_accented/test-"
+      },
+      "mb_per_hour": 182.0,
+      "hours": {
+        "en": 543.0
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "svarah",
+      "title": "Svarah (Indian-accented English)",
+      "kind": "hf-parquet",
+      "repo": "ai4bharat/Svarah",
+      "revision": "ebbf7777fe771490696a3f7b007097606fa8c924",
+      "license": "CC BY 4.0 (card text; no Hub tag)",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "verified",
+      "use": [
+        "eval"
+      ],
+      "style": "read and spontaneous Indian English, 117 speakers",
+      "markup": "plain",
+      "speaker_ids": "recording",
+      "attribution": "Svarah, Javed et al., Interspeech 2023 (AI4Bharat); CC BY 4.0.",
+      "notes": "Schema verified from a parquet footer: audio_filepath, duration, text, gender, age-group, primary_language, native_place_state, native_place_district, highest_qualification, job_category, occupation_domain. No speaker column: the recording id before '_chunk' in the file name groups clips.",
+      "langs": {
+        "en": "en"
+      },
+      "splits": {
+        "test": "data/test-"
+      },
+      "mb_per_hour": 114.0,
+      "hours": {
+        "en": 9.6
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "lahaja",
+      "title": "Lahaja (multi-accent Hindi)",
+      "kind": "hf-parquet",
+      "repo": "ai4bharat/Lahaja",
+      "revision": "d4ffd2ecbdd933e37c917ddcf620eef159ceb3a7",
+      "license": "Tag conflict: Hub tag MIT, card text CC BY 4.0",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "gated",
+      "verification": "partial",
+      "use": [
+        "eval"
+      ],
+      "style": "read and extempore Hindi, 132 speakers",
+      "markup": "plain",
+      "speaker_ids": "field",
+      "attribution": "LAHAJA, Javed et al., arXiv 2408.11440 (AI4Bharat); CC BY 4.0.",
+      "notes": "Both licences are permissive; eval only. Card schema: audio_filepath, text, lang, verbatim, normalized, duration, scenario, fname, native_language, gender, age_group, native_state, native_district, sp_id.",
+      "langs": {
+        "hi": "hi"
+      },
+      "splits": {
+        "test": "data/test-"
+      },
+      "mb_per_hour": 114.0,
+      "hours": {
+        "hi": 12.5
+      },
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "fleurs",
+      "title": "FLEURS",
+      "kind": "hf-tar",
+      "repo": "google/fleurs",
+      "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+      "license": "CC BY 4.0",
+      "spdx": "CC-BY-4.0",
+      "license_status": "allowed",
+      "access": "open",
+      "verification": "verified",
+      "use": [
+        "train",
+        "eval"
+      ],
+      "style": "read Wikipedia sentences",
+      "markup": "plain",
+      "speaker_ids": "none",
+      "attribution": "FLEURS, Conneau et al., SLT 2022 (Google); CC BY 4.0.",
+      "notes": "Loaded by indicear.data (the ablation's default). Test is never read. Never the headline metric.",
+      "langs": {},
+      "splits": {},
+      "mb_per_hour": 0.0,
+      "hours": {},
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "common_voice",
+      "title": "Common Voice (Mozilla)",
+      "kind": "none",
+      "repo": "mozilla-foundation/common_voice_17_0",
+      "revision": "11dc88355e899d1bf2df74f01b904a8544a17b33",
+      "license": "CC0 historically; current terms on the Mozilla Data Collective not reviewed",
+      "spdx": "NOASSERTION",
+      "license_status": "review",
+      "access": "blocked",
+      "verification": "verified",
+      "use": [],
+      "style": "read",
+      "markup": "plain",
+      "speaker_ids": "field",
+      "attribution": "Common Voice, Mozilla Foundation.",
+      "notes": "The Hub repo now holds only a notice: since October 2025 Common Voice is distributed only through the Mozilla Data Collective, whose downloads need MDC credentials and new terms. Not a plain download, so blocked.",
+      "langs": {},
+      "splits": {},
+      "mb_per_hour": 0.0,
+      "hours": {},
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    },
+    {
+      "name": "indictts",
+      "title": "Indic TTS database (IIT Madras)",
+      "kind": "none",
+      "repo": "SPRINGLab/IndicTTS-<Language>",
+      "revision": "e.g. SPRINGLab/IndicTTS-Hindi@e8de3acc27c78c97a4360a51a4f13bc6db354543",
+      "license": "'License For Use of Indic TTS' (IIT Madras PDF, not readable from here); mirrors tag CC BY 4.0 inconsistently",
+      "spdx": "NOASSERTION",
+      "license_status": "excluded",
+      "access": "open",
+      "verification": "unverified",
+      "use": [],
+      "style": "studio read speech, two speakers per language",
+      "markup": "plain",
+      "speaker_ids": "none",
+      "attribution": "Indic TTS, Speech Technology Consortium, IIT Madras.",
+      "notes": "The mirror cards defer to the original licence, which could not be fetched (timeout), and only some mirrors carry a cc-by-4.0 tag. Excluded until the original terms are read; studio TTS speech adds little to a spontaneous-speech mixture anyway.",
+      "langs": {},
+      "splits": {},
+      "mb_per_hour": 0.0,
+      "hours": {},
+      "repos": {},
+      "files": {},
+      "speaker_namespace": ""
+    }
+  ],
+  "excluded_by_policy": {
+    "HiACC": "CC BY-NC (PLAN.md checklist 4)",
+    "CS-FLEURS": "CC BY-NC 4.0 (PLAN.md checklist 4)",
+    "Gram Vaani": "academic use only (PLAN.md checklist 4)",
+    "MSR Indian-language sets": "academic-only (PLAN.md checklist 4)",
+    "MUCS 103 / NPTEL2020": "licence unresolved (PLAN.md checklist 5); not registered"
+  },
+  "open_questions": [
+    "SPRING-INX: no licence on the Hub repos and the SPRING Lab page 404s; only the IndiaAI AIKosh listing states CC BY 4.0. Confirm with IIT Madras before training.",
+    "MUCS (SLR104): CC BY-SA 4.0. Counsel review of share-alike obligations for model weights before training; if cleared, internal training only, never in anything redistributed.",
+    "IndicVoices: valid speakers overlap train (removed from training when valid is an eval set); public models trained on IndicVoices train may have seen the valid speakers.",
+    "Kathbath: Hub tag CC BY 4.0 vs CC0 in the card text; the read text comes from the IndicCorp crawl.",
+    "Lahaja: Hub tag MIT vs CC BY 4.0 in the card text (eval only).",
+    "Common Voice: Mozilla Data Collective terms and credentials; not a plain download.",
+    "IndicTTS: original IIT Madras licence not readable from here; mirrors disagree.",
+    "People's Speech: attribution for individual CC BY 2.0-4.0 archive.org works.",
+    "Shrutilipi: the project's account is not on the gated repo's authorized list (403 on a parquet read, 2026-10-24); rows unverified, and no teacher-CER filter. Not used in full_warm."
+  ]
+}

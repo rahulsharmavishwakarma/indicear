@@ -1,0 +1,141 @@
+{
+  "ur": {
+    "wer": 60.96,
+    "cer": 47.18,
+    "utterances": 300,
+    "words": 6708,
+    "script_error_rate": 29.27,
+    "wer_script_normalised": 60.96,
+    "cer_script_normalised": 47.18,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 1.019
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 82.67,
+    "macro_f1": 90.51,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 82.67,
+        "f1": 90.51,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ur": {
+        "gu": 1,
+        "hi": 38,
+        "mr": 2,
+        "pa": 4,
+        "te": 7,
+        "ur": 248
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 38,
+        "hi_utterances": 0,
+        "ur_utterances": 300,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 12.67
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 2,
+        "accuracy": 50.0
+      },
+      "2-5s": {
+        "utterances": 12,
+        "accuracy": 33.33
+      },
+      "5-10s": {
+        "utterances": 83,
+        "accuracy": 75.9
+      },
+      "10-20s": {
+        "utterances": 203,
+        "accuracy": 88.67
+      }
+    }
+  },
+  "eval_set": "indiccontext_ur",
+  "utterances": 300,
+  "hours": 1.02,
+  "seconds": 34,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 285,
+  "changed_examples": [
+    {
+      "key": "indiccontext_eval/ur/test/7318349394493548_0_0",
+      "constrained": "ଆମେ pre supposei",
+      "unconstrained": "ଆମେ pre supposei",
+      "hinted": "ہمیں pre supposei"
+    },
+    {
+      "key": "indiccontext_eval/ur/test/7318349394493548_0_1",
+      "constrained": "रात त तर्ंना और अनाफरा ands processing",
+      "unconstrained": "रात त तर्ंना और अनाफरा ands processing",
+      "hinted": "ات ands processing"
+    },
+    {
+      "key": "indiccontext_eval/ur/test/7318349394493548_0_2",
+      "constrained": "کو بہت ضروری ہے کیونکہ اس کے اندر جو ہے عام جو میجان ہے اس میں ambcutٹی ہے res regulationation ہے differial ہے process ہے ابام وغیرہ کا بہت سا کام آتا ہے ہمیں اس پہ ہل کرنے کیت",
+      "unconstrained": "ੋ بہت ضروری ہے کیونکہ اس کے اندر جو ہے عام جو میجان ہے اس میں ambcutٹی ہے res regulationation है differial ہے process ہے ابام وغیرہ کا بہت سا کام آتا ہے ہمیں اس پہ ہل کرنے कीت",
+      "hinted": "کو بہت ضروری ہے کیونکہ اس کے اندر جو ہے عام جو میجان ہے اس میں ambcutٹی ہے res regulationation ہے differial ہے process ہے ابام وغیرہ کا بہت سا کام آتا ہے ہمیں اس پہ ہل کرنے کیت"
+    },
+    {
+      "key": "indiccontext_eval/ur/test/7318349394479671_0_1",
+      "constrained": "اور album کوی exza کرنے کے لیے لطف e q",
+      "unconstrained": "और album को य exza करने के लिए لطف e q",
+      "hinted": "اور album کوی exza کرنے کے لیے لطف e q"
+    },
+    {
+      "key": "indiccontext_eval/ur/test/7318349394479671_0_2",
+      "constrained": "compresion اور میں دو کا استعمال کروں گی streaming کے لیے fourteenuve کو ہنا میں بلند آواز میں توزن رکھوں گی اور transation کو بڑھاؤ",
+      "unconstrained": "compresion और मैं दूध کا इस्तेमाल کروں گی इस streaming के लिए fourteenuve को हदाब बनाना میں بلंद आवाزज़ में त توزن رکھوں گی اور transation کو बढ़اؤ",
+      "hinted": "compresion اور میں دو کا استعمال کروں گی streaming کے لیے fourteenuve کو ہنا میں بلند آواز میں توزن رکھوں گی اور transation کو بڑھاؤ"
+    }
+  ]
+}

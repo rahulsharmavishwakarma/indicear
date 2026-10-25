@@ -1,0 +1,81 @@
+{
+  "condition": "noise:20",
+  "variant": "v1",
+  "per_lang": {
+    "bn": {
+      "wer": 67.97,
+      "cer": 30.75,
+      "utterances": 200,
+      "words": 3472
+    },
+    "en": {
+      "wer": 59.89,
+      "cer": 30.27,
+      "utterances": 200,
+      "words": 3934
+    },
+    "gu": {
+      "wer": 68.56,
+      "cer": 34.4,
+      "utterances": 200,
+      "words": 3973
+    },
+    "hi": {
+      "wer": 70.24,
+      "cer": 45.11,
+      "utterances": 200,
+      "words": 4466
+    },
+    "kn": {
+      "wer": 85.19,
+      "cer": 35.65,
+      "utterances": 200,
+      "words": 2788
+    },
+    "ml": {
+      "wer": 87.06,
+      "cer": 32.3,
+      "utterances": 200,
+      "words": 2543
+    },
+    "mr": {
+      "wer": 75.3,
+      "cer": 36.04,
+      "utterances": 200,
+      "words": 3527
+    },
+    "or": {
+      "wer": 75.8,
+      "cer": 42.36,
+      "utterances": 200,
+      "words": 3529
+    },
+    "pa": {
+      "wer": 68.86,
+      "cer": 45.13,
+      "utterances": 200,
+      "words": 4419
+    },
+    "ta": {
+      "wer": 85.38,
+      "cer": 39.53,
+      "utterances": 200,
+      "words": 2811
+    },
+    "te": {
+      "wer": 82.86,
+      "cer": 37.59,
+      "utterances": 200,
+      "words": 3144
+    },
+    "ur": {
+      "wer": 85.57,
+      "cer": 58.15,
+      "utterances": 200,
+      "words": 5016
+    }
+  },
+  "noise": "synthetic colored noise",
+  "utterances": 2400,
+  "seconds": 149
+}

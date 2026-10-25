@@ -1,0 +1,194 @@
+{
+  "ta": {
+    "wer": 62.83,
+    "cer": 16.83,
+    "utterances": 600,
+    "words": 6441,
+    "script_error_rate": 1.73,
+    "wer_script_normalised": 62.83,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 1.142
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "ta": {
+        "ta": 600
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 86,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 483,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 31,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_ta",
+  "utterances": 600,
+  "hours": 1.14,
+  "seconds": 31,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 180,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930425693-685-f",
+      "constrained": "நெடி சேர்மமாக காணப்படும் கந்தக ry ஆ side அ அதிகமாகமான அறிக்கும் பண்ப கொண்டுது",
+      "unconstrained": "நெடி சேர்மமாக காணப்படும் கந்தகry ஆ side அ அதிகமாகமான அறிக்கும் பண்ப கொண்டுது"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930425722-685-f",
+      "constrained": "சர்வதேசுத்தூற்ற செயல் விசாரணகளுக்கு இந்தியா ஆதர வலிக்குக்கூடிய சாத்தி",
+      "unconstrained": "சರ್वதேசுத்தூற்ற செயல் விசாரணகளுக்கு இந்தியா ஆதர வலிக்குக்கூடிய சாத்தி"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933279710-299-m",
+      "constrained": "ப்ராப்பலின் ஐதராயயோடடுுடன் வினை புரிந்த இரண்டு விளை பொருட்களளை ப்ரொ fild அயடடு iப்பயில் அயோடடு ஆகியவற்ற விளைவி முடியும்",
+      "unconstrained": "ப்ராப்பலின் ஐதராயயோடடுுடன் வினை புரிந்த இரண்டு விளை பொருட்களளை ப்ரொfild அயடடு iப்பயில் அயோடடு ஆகியவற்ற விளைவி முடியும்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930584044-1009-f",
+      "constrained": "மரக்கறி வாங்க போனோளர் ஒருவர் ஒரு பெண்ுடன் தகத உறவ வைத்து பயிற்",
+      "unconstrained": "ಮರக்கறி வாங்க போனோளர் ஒருவர் ஒரு பெண்ுடன் தகத உறவ வைத்து பயிற்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930458020-556-f",
+      "constrained": "b இருந்து பெறப்பட்ட ஒரு பண்டைய கதை ஒரு நகரப்புற புராணத்திற்கு அடிப்படியாகும்",
+      "unconstrained": "ಬೈಬಲ್ இருந்து பெறப்பட்ட ஒரு பண்டைய கதை ஒரு நகரப்புற புராணத்திற்கு அடிப்படியாகும்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930506960-556-f",
+      "constrained": "நீதிச்சர் ரவ்ப் hoக்கிம் இன்று சனிக்கிழமை மற்றும் நகரக் நீதுவான் நிதின்ற புதிய கட்டிடத்திற்கு சென்று",
+      "unconstrained": "ನೀதிಯச்சர் ரவ்ப் hoுக்கிம் இன்று சனிக்கிழமை மற்றும் நகரக் நீதுவான் நிதின்ற புதிய கட்டிடத்திற்கு சென்று"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930657115-709-f",
+      "constrained": "அரண்மனைுள்ளர்ருந்து சிற்றமச்சர் சுறைேசர் வெளியே ஓடி வந்து கைகளை அசைக்கே வெள்ளிோலைந்திய நிமித்திக்கர் இரு நிறுவனர்",
+      "unconstrained": "அರண்மனைுள்ளர்ருந்து சிற்றமச்சர் சுறைேசர் வெளியே ஓடி வந்து கைகளை அசைக்கே வெள்ளிோலைந்திய நிமித்திக்கர் இரு நிறுவனர்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930458025-556-f",
+      "constrained": "தங்க நார்ரசாசாலையில் லி ft கொடுத்த ல loரி ஓட்டு நிறைய தாக்கி வழிரி",
+      "unconstrained": "தங்க நார்ரசாசாலையில் லிft கொடுத்த ல loரி ஓட்டு நிறைய தாக்கி வழிரி"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930425747-685-f",
+      "constrained": "தனிமை படுத்தப்பட்ட விடுதிகளில் வெளிட்டு ஊழிர்களுக்கு வழங்கங்கும் உணவுவின் தரத்தை மேம்டுத்த நடவடிக்கை",
+      "unconstrained": "पानीமை படுத்தப்பட்ட விடுதிகளில் வெளிட்டு ஊழிர்களுக்கு வழங்கங்கும் உணவுவின் தரத்தை மேம்டுத்த நடவடிக்கை"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933236986-311-m",
+      "constrained": "பள்ளிச்சந்தக்கு செல்லும் வழியில் ஒரு குண்டிில்ன தீர்த்தங்கரின் நிவாரண சிப்பம் காணப்படுகிறது",
+      "unconstrained": "ಪ பள்ளிச்சந்தुக்கு செல்லும் வழியில் ஒரு குண்டிில்ன தீர்த்தங்கரின் நிவாரண சிப்பம் காணப்படுகிறது"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933226077-131-m",
+      "constrained": "பெெயர் கேத்திரின் வேலர் மற்றும் லான் busஸ்ோ ஆகியோருடன் ஏணைந்து பல ஆய்வுகளை நிகழ்ழ்த்தியுள்ளார்",
+      "unconstrained": "ெயர் கேத்திரின் வேலர் மற்றும் லான் busஸ்ோ ஆகியோருடன் ஏணைந்து பல ஆய்வுகளை நிகழ்ழ்த்தியுள்ளார்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930455401-471-f",
+      "constrained": "கொோனா வைரஸ் சட காமாக குஜ erat பா ஊரங்க ஒத்தரவா இருந்தது",
+      "unconstrained": "कोरோனா வைரस சட காವಾಗಿ ಗುಜerat ಪಾ ಓಡರங்க ಉತ್ತರவா ಆಮೇಲೆ ಇಲ್ಲಿ இருந்தது"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930576961-47-f",
+      "constrained": "அவரது தாயா டெஃபெ nds மற்றும் மஹழ்ில்லி road உட fisher",
+      "unconstrained": "ಅವರரது தாயா டெஃபெnds மற்றும் மஹழ்ில்லி road உட fisher"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930592544-47-f",
+      "constrained": "இது தமிழ்நாடு இங்க கூடடியால் அழிஞ்சு போயின்ட்டு இருக்கும் கன்றவி டாஸ்ர் k நாடு ஏறு மாற்றப்படம் போலி இருக்க",
+      "unconstrained": "இது தமிழ்நாடு இங்க கூடடியால் அழிஞ்சு போயின்ட்டு இருக்கும் கன்றவி டாஸ்ர்k நாடு ஏறு மாற்றப்படம் போலி இருக்க"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930452992-1009-f",
+      "constrained": "அகில இந்திய மகளிற்க காங்கிரஸ் பொதுச்சயயிலாளர் ஆனார் நடிகை நட்மா",
+      "unconstrained": "अகில இந்திய மகளிற்க காங்கிரஸ் பொதுச்சயயிலாளர் ஆனார் நடிகை நட்மா"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424930486805-556-f",
+      "constrained": "இந்திய வம்சாவளி வ வைரஸ் ஆய்வு நிபுனர் தென் ஆப்பி cவில் கொரோனாக்கு பலி",
+      "unconstrained": "இந்திய வம்சாவளி வ வைரஸ் ஆய்வு நிபுனர் தென் ஆப்பிcவில் கொரோனாக்கு பலி"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933243291-85-m",
+      "constrained": "உக்கர பெறு வழுதி எனும் பாண்டன் வேங்கை மரபனை வென்று இந்த ஊரை தனக்கானக்கிக் கொண்டண்டாான்",
+      "unconstrained": "உக்கರ பெறு வழுதி எனும் பாண்டன் வேங்கை மரபனை வென்று இந்த ஊரை தனக்கானக்கிக் கொண்டண்டாான்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933225967-311-m",
+      "constrained": "அ அதனால் ச சமண சமயத்தில் தன்னுடைய தம்பி இணைந்தது எண்ணி வருருந்த இடம் உறட்டார்",
+      "unconstrained": "आ ना ச சமண சமயத்தில் தன்னுடைய தம்பி இணைந்தது எண்ணி வருருந்த இடம் உறட்டார்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933226105-131-m",
+      "constrained": "இது டாக்டர் கேவி டெமனி ic என்பவரால் தொகுத்து அமைப்படுகிறது",
+      "unconstrained": "இது டாக்டர் கேவி டெமனிic என்பவரால் தொகுத்து அமைப்படுகிறது"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_unknown/844424933279732-299-m",
+      "constrained": "இந்திய பாகிஸ்தாதான் பிரிவினைையும் அதைையயோட்டின் நடந்த மரணங்களும் பாலில் வண்ண கொடுமைகளும் மன்ோவை துக்க வைத்தன",
+      "unconstrained": "இந்திய பாகிஸ்தாन பிரிவினைையும் அதைையயோட்டின் நடந்த மரணங்களும் பாலில் வண்ண கொடுமைகளும் மன்ோவை துக்க வைத்தன"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "pa": {
+    "wer": 47.0,
+    "cer": 30.07,
+    "utterances": 300,
+    "words": 3919,
+    "script_error_rate": 16.1,
+    "wer_script_normalised": 46.9,
+    "cer_script_normalised": 29.8,
+    "rows_with_alternative_ref": 217,
+    "cm_utterances": 216,
+    "cm_spans": 938,
+    "cm_span_accuracy": 68.55,
+    "cm_span_cer_mean": 39.36,
+    "cm_span_accuracy_by_lang": {
+      "en": 77.34,
+      "pa": 62.45
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.406
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 76.33,
+    "macro_f1": 86.58,
+    "per_lang": {
+      "pa": {
+        "precision": 100.0,
+        "recall": 76.33,
+        "f1": 86.58,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "pa": {
+        "hi": 65,
+        "mr": 2,
+        "or": 2,
+        "pa": 229,
+        "te": 1,
+        "ur": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 65,
+        "hi->pa": 0,
+        "pa_utterances": 300,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": 21.67,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 66,
+        "accuracy": 39.39
+      },
+      "2-5s": {
+        "utterances": 84,
+        "accuracy": 82.14
+      },
+      "5-10s": {
+        "utterances": 150,
+        "accuracy": 89.33
+      }
+    }
+  },
+  "eval_set": "vaani_test_pa",
+  "utterances": 300,
+  "hours": 0.41,
+  "seconds": 19,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 197,
+  "changed_examples": [
+    {
+      "key": "vaani/pa/test/IISc_VaaniProject_M_HimachalPradesh_Shimla_Simr097338a95e5c_09733064324000088324_GENERIC_0181_5030_8050",
+      "constrained": "to ਰੰਗ ਦੀ ਇੱਕ ਗਹੈਲ ਲੱਗੀ ਹੋਈ ਹੈ",
+      "unconstrained": "to में ਰੰਗ ਦੀ ਇੱਕ ਗਹੈਲ ਲੱਗੀ ਹੋਈ ਹੈ",
+      "hinted": "to ਰੰਗ ਦੀ ਇੱਕ ਗਹੈਲ ਲੱਗੀ ਹੋਈ ਹੈ"
+    },
+    {
+      "key": "vaani/pa/test/IISc_VaaniProject_M_HimachalPradesh_Shimla_Simr097338a95e5c_09733083949000088324_GENERIC_0852_4640_12380",
+      "constrained": "ਜਿਸ ਦੇ side ਤੇਅਕਕਾਰ ਅਤੇ ਬਹੁਤ ਵਿਸ਼ਾਲ ਆਸਮਾਨ ਨਜ਼ਰ ਆ ਰਿਹਾ ਹੈ",
+      "unconstrained": "جس ਦੇ side ਤੇਅਕਕਾਰ ਅਤੇ ਬਹੁਤ ਵਿਸ਼ਾਲ ਆਸਮਾਨ ਨਜ਼ਰ ਆ ਰਿਹਾ ਹੈ",
+      "hinted": "ਜਿਸ ਦੇ side ਤੇਅਕਕਾਰ ਅਤੇ ਬਹੁਤ ਵਿਸ਼ਾਲ ਆਸਮਾਨ ਨਜ਼ਰ ਆ ਰਿਹਾ ਹੈ"
+    },
+    {
+      "key": "vaani/pa/test/IISc_VaaniProject_M_HimachalPradesh_Shimla_Simr097338a95e5c_09733150753000088324_GENERIC_0802_12630_15410",
+      "constrained": "a ਸ਼ਾਂਤਰੀ ਅਤੇ ਚਿੱਟੇੇ ਗੁਬਾਾਰਿਆ ਨਾਲ",
+      "unconstrained": "अ ਸ਼ਾਂਤਰੀ ਅਤੇ ਚਿੱਟੇੇ ਗੁਬਾਾਰਿਆ ਨਾਲ",
+      "hinted": "a ਸ਼ਾਂਤਰੀ ਅਤੇ ਚਿੱਟੇੇ ਗੁਬਾਾਰਿਆ ਨਾਲ"
+    },
+    {
+      "key": "vaani/pa/test/IISc_VaaniProject_M_HimachalPradesh_Shimla_Simr097338a95e5c_09733151502000088324_GENERIC_1161_19950_23000",
+      "constrained": "so ਆਦਮੀ ਖ ਨਜ਼ਰ ਆ ਰਹੇ ਹਨ",
+      "unconstrained": "તો आदमी खड़े नजर आ रही ਹਨ",
+      "hinted": "so ਆਦਮੀ ਖ ਨਜ਼ਰ ਆ ਰਹੇ ਹਨ"
+    },
+    {
+      "key": "vaani/pa/test/IISc_VaaniProject_K_Karnataka_Bangalore_Bangalore844425030184527_002_Bangalore-SPECIFIC_01722_674_2138",
+      "constrained": "एक मस्जिद photo",
+      "unconstrained": "एक मस्जिद photo",
+      "hinted": "ਇੱਕ photo"
+    }
+  ]
+}

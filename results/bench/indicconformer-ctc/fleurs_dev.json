@@ -1,0 +1,278 @@
+{
+  "kind": "eval",
+  "system": "indicconformer-ctc",
+  "set": "fleurs_dev",
+  "condition": null,
+  "notes": "",
+  "utterances": 3140,
+  "hours": 9.558,
+  "metrics": {
+    "ctc": {
+      "all": {
+        "wer": 17.35,
+        "cer": 5.38,
+        "utterances": 3140,
+        "words": 55783,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 17.35,
+        "cer_script_normalised": 5.38,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 179,
+        "cm_spans": 577,
+        "cm_span_accuracy": 57.54,
+        "cm_span_cer_mean": 86.07,
+        "cm_span_accuracy_by_lang": {
+          "bn": 100.0,
+          "en": 0.0,
+          "gu": 100.0,
+          "hi": 100.0,
+          "kn": 100.0,
+          "ml": 100.0,
+          "mr": 92.16,
+          "or": 98.18,
+          "ta": 100.0,
+          "te": 93.86,
+          "ur": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 9.558
+      },
+      "bn": {
+        "wer": 15.67,
+        "cer": 4.25,
+        "utterances": 300,
+        "words": 5207,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 15.67,
+        "cer_script_normalised": 4.25,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 12,
+        "cm_spans": 30,
+        "cm_span_accuracy": 60.0,
+        "cm_span_cer_mean": 66.75,
+        "cm_span_accuracy_by_lang": {
+          "bn": 100.0,
+          "en": 0.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.997
+      },
+      "gu": {
+        "wer": 16.32,
+        "cer": 4.82,
+        "utterances": 300,
+        "words": 5816,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 16.32,
+        "cer_script_normalised": 4.82,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 9,
+        "cm_spans": 27,
+        "cm_span_accuracy": 66.67,
+        "cm_span_cer_mean": 55.1,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "gu": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.791
+      },
+      "hi": {
+        "wer": 11.65,
+        "cer": 4.51,
+        "utterances": 234,
+        "words": 5210,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 11.65,
+        "cer_script_normalised": 4.51,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 6,
+        "cm_spans": 25,
+        "cm_span_accuracy": 56.0,
+        "cm_span_cer_mean": 93.22,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "hi": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.68
+      },
+      "kn": {
+        "wer": 16.26,
+        "cer": 5.19,
+        "utterances": 300,
+        "words": 4158,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 16.26,
+        "cer_script_normalised": 5.19,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 21,
+        "cm_spans": 61,
+        "cm_span_accuracy": 62.3,
+        "cm_span_cer_mean": 97.7,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "kn": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.977
+      },
+      "ml": {
+        "wer": 20.57,
+        "cer": 4.64,
+        "utterances": 300,
+        "words": 3884,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 20.57,
+        "cer_script_normalised": 4.64,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 2,
+        "cm_spans": 6,
+        "cm_span_accuracy": 66.67,
+        "cm_span_cer_mean": 105.8,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "ml": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 1.028
+      },
+      "mr": {
+        "wer": 19.1,
+        "cer": 5.45,
+        "utterances": 300,
+        "words": 5142,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 19.1,
+        "cer_script_normalised": 5.45,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 21,
+        "cm_spans": 84,
+        "cm_span_accuracy": 55.95,
+        "cm_span_cer_mean": 79.31,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "mr": 92.16
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.995
+      },
+      "or": {
+        "wer": 18.31,
+        "cer": 4.9,
+        "utterances": 300,
+        "words": 5259,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 18.31,
+        "cer_script_normalised": 4.9,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 33,
+        "cm_spans": 97,
+        "cm_span_accuracy": 55.67,
+        "cm_span_cer_mean": 106.48,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "or": 98.18
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.892
+      },
+      "pa": {
+        "wer": 15.14,
+        "cer": 5.64,
+        "utterances": 245,
+        "words": 5516,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 15.14,
+        "cer_script_normalised": 5.64,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "hours": 0.707
+      },
+      "ta": {
+        "wer": 24.42,
+        "cer": 7.55,
+        "utterances": 300,
+        "words": 4357,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 24.42,
+        "cer_script_normalised": 7.55,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 19,
+        "cm_spans": 48,
+        "cm_span_accuracy": 60.42,
+        "cm_span_cer_mean": 84.13,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "ta": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.91
+      },
+      "te": {
+        "wer": 22.36,
+        "cer": 6.46,
+        "utterances": 300,
+        "words": 4677,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 22.36,
+        "cer_script_normalised": 6.46,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 53,
+        "cm_spans": 193,
+        "cm_span_accuracy": 55.44,
+        "cm_span_cer_mean": 81.62,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "te": 93.86
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.86
+      },
+      "ur": {
+        "wer": 14.37,
+        "cer": 5.32,
+        "utterances": 261,
+        "words": 6557,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 14.37,
+        "cer_script_normalised": 5.32,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 3,
+        "cm_spans": 6,
+        "cm_span_accuracy": 50.0,
+        "cm_span_cer_mean": 77.61,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "ur": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.72
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ai4bharat/indic-conformer-600m-multilingual",
+    "revision": "2a77d305038dfc502fd9464e7d028b90381976cb",
+    "decoder": "ctc",
+    "notes": "ONNX via the repo's model_onnx.py; English unsupported",
+    "languages_scored": [
+      "bn",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te",
+      "ur"
+    ]
+  }
+}

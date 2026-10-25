@@ -1,0 +1,102 @@
+{
+  "pa": {
+    "wer": 52.97,
+    "cer": 34.27,
+    "utterances": 300,
+    "words": 3919,
+    "script_error_rate": 25.38,
+    "wer_script_normalised": 52.87,
+    "cer_script_normalised": 34.0,
+    "rows_with_alternative_ref": 217,
+    "cm_utterances": 216,
+    "cm_spans": 938,
+    "cm_span_accuracy": 63.01,
+    "cm_span_cer_mean": 43.08,
+    "cm_span_accuracy_by_lang": {
+      "en": 77.08,
+      "pa": 53.25
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.406
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 76.33,
+    "macro_f1": 86.58,
+    "per_lang": {
+      "pa": {
+        "precision": 100.0,
+        "recall": 76.33,
+        "f1": 86.58,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "pa": {
+        "hi": 65,
+        "mr": 2,
+        "or": 2,
+        "pa": 229,
+        "te": 1,
+        "ur": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 65,
+        "hi->pa": 0,
+        "pa_utterances": 300,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": 21.67,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 66,
+        "accuracy": 39.39
+      },
+      "2-5s": {
+        "utterances": 84,
+        "accuracy": 82.14
+      },
+      "5-10s": {
+        "utterances": 150,
+        "accuracy": 89.33
+      }
+    }
+  },
+  "eval_set": "vaani_test_pa",
+  "utterances": 300,
+  "hours": 0.41,
+  "seconds": 19,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

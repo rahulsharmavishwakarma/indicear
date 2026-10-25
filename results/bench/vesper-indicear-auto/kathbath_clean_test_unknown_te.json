@@ -1,0 +1,132 @@
+{
+  "te": {
+    "wer": 63.93,
+    "cer": 20.49,
+    "utterances": 300,
+    "words": 3227,
+    "script_error_rate": 7.62,
+    "wer_script_normalised": 61.95,
+    "cer_script_normalised": 18.5,
+    "rows_with_alternative_ref": 91,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.604
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "te": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "te": {
+        "te": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 26,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 246,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 28,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_te",
+  "utterances": 300,
+  "hours": 0.6,
+  "seconds": 23,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 165,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/te/clean_test_unknown/844424932651833-944-f",
+      "constrained": "ఇంలాండ్తో serస్లో centur చేయుకుంటే cricket ఆడి waste అనిేస్ అభిప్రాయపడ్డాడు",
+      "unconstrained": "ఇంலாండ్ தோ serస్లో centur செய்யుకుంటే cricket ఆడి waste అనిేస్ అభిప్రాయపడ్డాడు",
+      "hinted": "ఇంలాండ్తో serస్లో centur చేయుకుంటే cricket ఆడి waste అనిేస్ అభిప్రాయపడ్డాడు"
+    },
+    {
+      "key": "kathbath_test/te/clean_test_unknown/844424931358668-879-f",
+      "constrained": "cఎం మంది శ్రీషశేలం పరయటనకు ఎప్పుడ వెళ్త అనేది ఇంకా clarity రాలేదు",
+      "unconstrained": "ీఎం మంది శ్రీషశేలం పరయటనకు ఎప్పుడ వెళ్త అనేది ఇంకా clarity రాలేదు",
+      "hinted": "cఎం మంది శ్రీషశేలం పరయటనకు ఎప్పుడ వెళ్త అనేది ఇంకా clarity రాలేదు"
+    },
+    {
+      "key": "kathbath_test/te/clean_test_unknown/844424932737135-944-f",
+      "constrained": "పునద్ధారణ కాలం కష్టకలం పడుతుంది మరియు దాదాపుగా ఎటువంటి బాధ లేకుండాపోతుంది",
+      "unconstrained": "পুనুदారణ కాలం కష్టకలం పడుతుంది మరియు దాదాపుగా ఎటువంటి బాధ లేకుండాపోతుంది",
+      "hinted": "పునద్ధారణ కాలం కష్టకలం పడుతుంది మరియు దాదాపుగా ఎటువంటి బాధ లేకుండాపోతుంది"
+    },
+    {
+      "key": "kathbath_test/te/clean_test_unknown/844424930593537-831-m",
+      "constrained": "ఎల్లిరపులపై ఏపీఎ mb speakర్ కూడాల శుప్రరాసాుకు కోర్రు noticసు ఇచ్చింది",
+      "unconstrained": "ಎల్లిరపులపై ఏపీఎmb speakర్ కూడాల శుప్రరాసాుకు కోర్రు noticసు ఇచ్చింది",
+      "hinted": "ఎల్లిరపులపై ఏపీఎ mb speakర్ కూడాల శుప్రరాసాుకు కోర్రు noticసు ఇచ్చింది"
+    },
+    {
+      "key": "kathbath_test/te/clean_test_unknown/844424930594193-352-m",
+      "constrained": "పవన్ కళ్యా ఇంకా పోరట మొదలపెట్టకు మునిపే దాని నాడ్డవడానికి ప్రయత్నిస్తున్నారనే భవన ప్రజలకి కల్పిస్తున్నారు",
+      "unconstrained": "पವन कलल्याण ఇంకా పోరట మొదలపెట్టకు మునిపే దాని నాడ్డవడానికి ప్రయత్నిస్తున్నారనే భవన ప్రజలకి కల్పిస్తున్నారు",
+      "hinted": "పవన్ కళ్యా ఇంకా పోరట మొదలపెట్టకు మునిపే దాని నాడ్డవడానికి ప్రయత్నిస్తున్నారనే భవన ప్రజలకి కల్పిస్తున్నారు"
+    }
+  ]
+}

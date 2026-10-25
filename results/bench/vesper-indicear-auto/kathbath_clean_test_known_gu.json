@@ -1,0 +1,132 @@
+{
+  "gu": {
+    "wer": 54.25,
+    "cer": 29.45,
+    "utterances": 300,
+    "words": 3473,
+    "script_error_rate": 10.35,
+    "wer_script_normalised": 53.35,
+    "cer_script_normalised": 28.01,
+    "rows_with_alternative_ref": 48,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.501
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "gu": {
+        "gu": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 95,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 201,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 4,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_gu",
+  "utterances": 300,
+  "hours": 0.5,
+  "seconds": 21,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 289,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/gu/clean_test_known/844424931417969-992-f",
+      "constrained": "church મદ બાર દ્વારા આ કેસમાં સજા સંભળાાવવામાં આવે",
+      "unconstrained": "ਜ महਹद બાર દ્વારા આ કેસમાં સજા સંભળાાવવામાં આવે",
+      "hinted": "church મદ બાર દ્વારા આ કેસમાં સજા સંભળાાવવામાં આવે"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_known/844424931332556-856-f",
+      "constrained": "આ સંગનથી સંગનના સભ દેશો વચ્ચે આર્થિક અને સંંસ્કૃતિક પોસાઓનોહગ વધ્યો છે",
+      "unconstrained": "হাল આ सघठन थी संगनना સભ्य દેશों बच्चे आर्थિક અને સંંસ્કૃતિક પોસાઓનોહગ વધ્યો છે",
+      "hinted": "આ સંગનથી સંગનના સભ દેશો વચ્ચે આર્થિક અને સંંસ્કૃતિક પોસાઓનોહગ વધ્યો છે"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_known/844424931162521-825-f",
+      "constrained": "એક super ytn speed બ kilometer પ્રતિ કલાક છે",
+      "unconstrained": "एक super yटनी स् speed लगभग बत्तस kilometer प्रती કલાક છે",
+      "hinted": "એક super ytn speed બ kilometer પ્રતિ કલાક છે"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_known/844424930332245-332-f",
+      "constrained": "જો તમને કોઈ શંકા હોય તો રદ કરો બટનને ઘણી વાર દબોવો",
+      "unconstrained": "ు તમને કોઈ શંકા હોય તો રદ કરો બટનને ઘણી વાર દબોવો",
+      "hinted": "જો તમને કોઈ શંકા હોય તો રદ કરો બટનને ઘણી વાર દબોવો"
+    },
+    {
+      "key": "kathbath_test/gu/clean_test_known/844424931481519-240-f",
+      "constrained": "જણાવ દ કે ilના નિર્દિત રાગ lourn આજે sensus certificate માટે ગયા હતા",
+      "unconstrained": "ਜਣ ਵੀ ਦ કેilના નિર્દक रागवੌurਂ ਅੱਜ senਂਸus certificate માટે ગયા હતા",
+      "hinted": "જણાવ દ કે ilના નિર્દિત રાગ lourn આજે sensus certificate માટે ગયા હતા"
+    }
+  ]
+}

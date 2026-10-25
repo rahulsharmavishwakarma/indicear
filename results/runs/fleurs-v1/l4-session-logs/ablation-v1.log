@@ -1,0 +1,86 @@
+[17:59:53] python 3.14.8, GIL off
+[18:01:24] cache: 32981 keys, 9395400 rows, 17.9 GiB in pinned
+Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]Loading weights:  44%|████▍     | 608/1376 [00:00<00:00, 6044.37it/s]Loading weights:  88%|████████▊ | 1213/1376 [00:00<00:00, 1485.17it/s]Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 1480.01it/s]
+[18:02:10] python 3.14.8, GIL off; 28110 training examples; dropped {'ctc_infeasible:ta': 1, 'ctc_infeasible:te': 1}
+[18:02:10] autotune: capacity 19.4 GiB (share 1.0)
+[18:02:12] autotune: 4000 frames -> peak 6.1% of device memory
+[18:02:12] autotune: 5200 frames -> peak 6.9% of device memory
+[18:02:12] autotune: 6760 frames -> peak 8.0% of device memory
+[18:02:13] autotune: 8788 frames -> peak 9.5% of device memory
+[18:02:14] autotune: 11424 frames -> peak 11.3% of device memory
+[18:02:14] autotune: 14851 frames -> peak 13.8% of device memory
+[18:02:15] autotune: 19306 frames -> peak 17.1% of device memory
+[18:02:17] autotune: 25097 frames -> peak 21.5% of device memory
+[18:02:19] autotune: 32626 frames -> peak 26.9% of device memory
+[18:02:21] autotune: 42413 frames -> peak 33.9% of device memory
+[18:02:23] autotune: 55136 frames -> peak 43.3% of device memory
+[18:02:26] autotune: 71676 frames -> peak 55.3% of device memory
+[18:02:31] autotune: 93178 frames -> peak 71.0% of device memory
+[W1023 18:02:36.958401341 CUDACachingAllocator.cpp:528] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 4194304, total: 23659151360).
+[18:02:37] autotune: 121131 frames -> peak 91.4% of device memory
+[18:02:42] autotune: 111806 frames -> peak 84.5% of device memory
+[18:02:42] autotune: fixed frame budget 111806 (84.5% peak)
+[18:02:42] run v1: 28110 examples, budget 111806 frames, lr 2.36e-03, 880 steps, starting at 0, config 1aa790309c66e462
+[18:02:55] torch.compile: CTCOutput compiled
+W1023 18:03:04.828000 17711 torch/_inductor/utils.py:1806] [0/1] Not enough SMs to use max_autotune_gemm mode
+[18:04:18] step=25 epoch=0 loss=39.7644 ctc=39.7644 phonetic=nan rnnt=nan consistency=nan lr=6.986e-04 frames_per_s=25931 peak_gib=16.38 splits=1 elapsed_s=82
+[18:05:34] step=50 epoch=0 loss=15.3082 ctc=15.3082 phonetic=nan rnnt=nan consistency=nan lr=1.370e-03 frames_per_s=33145 peak_gib=16.38 splits=1 elapsed_s=159
+[18:06:40] step=75 epoch=0 loss=5.5379 ctc=5.5379 phonetic=nan rnnt=nan consistency=nan lr=2.042e-03 frames_per_s=33123 peak_gib=16.38 splits=1 elapsed_s=224
+[18:07:43] step=100 epoch=1 loss=3.4371 ctc=3.4371 phonetic=nan rnnt=nan consistency=nan lr=2.363e-03 frames_per_s=32952 peak_gib=16.38 splits=1 elapsed_s=288
+[18:08:51] step=125 epoch=1 loss=2.8413 ctc=2.8413 phonetic=nan rnnt=nan consistency=nan lr=2.352e-03 frames_per_s=32885 peak_gib=16.38 splits=1 elapsed_s=356
+[18:10:00] step=150 epoch=1 loss=2.6488 ctc=2.6488 phonetic=nan rnnt=nan consistency=nan lr=2.331e-03 frames_per_s=32926 peak_gib=16.38 splits=1 elapsed_s=424
+[18:11:10] step=175 epoch=1 loss=2.4279 ctc=2.4279 phonetic=nan rnnt=nan consistency=nan lr=2.298e-03 frames_per_s=33094 peak_gib=16.38 splits=1 elapsed_s=494
+[18:12:19] step=200 epoch=2 loss=2.3183 ctc=2.3183 phonetic=nan rnnt=nan consistency=nan lr=2.255e-03 frames_per_s=32613 peak_gib=16.38 splits=1 elapsed_s=563
+[18:13:26] step=225 epoch=2 loss=2.2848 ctc=2.2848 phonetic=nan rnnt=nan consistency=nan lr=2.203e-03 frames_per_s=32819 peak_gib=16.38 splits=1 elapsed_s=630
+[18:14:36] step=250 epoch=2 loss=2.1571 ctc=2.1571 phonetic=nan rnnt=nan consistency=nan lr=2.140e-03 frames_per_s=33042 peak_gib=16.38 splits=1 elapsed_s=700
+[18:15:43] step=275 epoch=3 loss=2.0199 ctc=2.0199 phonetic=nan rnnt=nan consistency=nan lr=2.069e-03 frames_per_s=33036 peak_gib=16.38 splits=1 elapsed_s=768
+[18:16:53] step=300 epoch=3 loss=2.0351 ctc=2.0351 phonetic=nan rnnt=nan consistency=nan lr=1.990e-03 frames_per_s=32719 peak_gib=16.38 splits=1 elapsed_s=838
+[18:18:00] step=325 epoch=3 loss=2.0892 ctc=2.0892 phonetic=nan rnnt=nan consistency=nan lr=1.904e-03 frames_per_s=33214 peak_gib=16.38 splits=1 elapsed_s=905
+[18:19:07] step=350 epoch=3 loss=1.9996 ctc=1.9996 phonetic=nan rnnt=nan consistency=nan lr=1.811e-03 frames_per_s=33238 peak_gib=16.38 splits=1 elapsed_s=972
+[18:20:11] step=375 epoch=4 loss=1.9945 ctc=1.9945 phonetic=nan rnnt=nan consistency=nan lr=1.712e-03 frames_per_s=33074 peak_gib=16.38 splits=1 elapsed_s=1035
+[18:21:20] step=400 epoch=4 loss=1.9048 ctc=1.9048 phonetic=nan rnnt=nan consistency=nan lr=1.609e-03 frames_per_s=33097 peak_gib=16.38 splits=1 elapsed_s=1104
+[18:22:31] step=425 epoch=4 loss=1.9412 ctc=1.9412 phonetic=nan rnnt=nan consistency=nan lr=1.502e-03 frames_per_s=32550 peak_gib=16.38 splits=1 elapsed_s=1175
+[18:23:44] step=450 epoch=5 loss=1.847 ctc=1.847 phonetic=nan rnnt=nan consistency=nan lr=1.392e-03 frames_per_s=32972 peak_gib=16.38 splits=1 elapsed_s=1249
+[18:24:40] step=475 epoch=5 loss=1.8536 ctc=1.8536 phonetic=nan rnnt=nan consistency=nan lr=1.281e-03 frames_per_s=33067 peak_gib=16.38 splits=1 elapsed_s=1305
+[18:25:57] step=500 epoch=5 loss=1.7895 ctc=1.7895 phonetic=nan rnnt=nan consistency=nan lr=1.170e-03 frames_per_s=32810 peak_gib=16.38 splits=1 elapsed_s=1382
+[18:27:08] step=525 epoch=5 loss=1.9278 ctc=1.9278 phonetic=nan rnnt=nan consistency=nan lr=1.059e-03 frames_per_s=32746 peak_gib=16.38 splits=1 elapsed_s=1452
+[18:28:11] step=550 epoch=6 loss=1.7622 ctc=1.7622 phonetic=nan rnnt=nan consistency=nan lr=9.506e-04 frames_per_s=33065 peak_gib=16.38 splits=1 elapsed_s=1516
+[18:29:22] step=575 epoch=6 loss=1.8116 ctc=1.8116 phonetic=nan rnnt=nan consistency=nan lr=8.447e-04 frames_per_s=32664 peak_gib=16.38 splits=1 elapsed_s=1586
+[18:30:33] step=600 epoch=6 loss=1.7923 ctc=1.7923 phonetic=nan rnnt=nan consistency=nan lr=7.426e-04 frames_per_s=33094 peak_gib=16.38 splits=1 elapsed_s=1658
+[18:31:39] step=625 epoch=7 loss=1.7147 ctc=1.7147 phonetic=nan rnnt=nan consistency=nan lr=6.454e-04 frames_per_s=33163 peak_gib=16.38 splits=1 elapsed_s=1724
+[18:32:49] step=650 epoch=7 loss=1.7039 ctc=1.7039 phonetic=nan rnnt=nan consistency=nan lr=5.541e-04 frames_per_s=33238 peak_gib=16.38 splits=1 elapsed_s=1793
+[18:33:54] step=675 epoch=7 loss=1.7229 ctc=1.7229 phonetic=nan rnnt=nan consistency=nan lr=4.695e-04 frames_per_s=32704 peak_gib=16.38 splits=1 elapsed_s=1858
+[18:35:03] step=700 epoch=7 loss=1.8135 ctc=1.8135 phonetic=nan rnnt=nan consistency=nan lr=3.925e-04 frames_per_s=33012 peak_gib=16.38 splits=1 elapsed_s=1928
+[18:36:17] step=725 epoch=8 loss=1.7096 ctc=1.7096 phonetic=nan rnnt=nan consistency=nan lr=3.239e-04 frames_per_s=32665 peak_gib=16.38 splits=1 elapsed_s=2001
+[18:37:26] step=750 epoch=8 loss=1.7223 ctc=1.7223 phonetic=nan rnnt=nan consistency=nan lr=2.643e-04 frames_per_s=32940 peak_gib=16.38 splits=1 elapsed_s=2071
+[18:38:33] step=775 epoch=8 loss=1.6897 ctc=1.6897 phonetic=nan rnnt=nan consistency=nan lr=2.142e-04 frames_per_s=32821 peak_gib=16.38 splits=1 elapsed_s=2137
+[18:39:44] step=800 epoch=9 loss=1.6139 ctc=1.6139 phonetic=nan rnnt=nan consistency=nan lr=1.743e-04 frames_per_s=33069 peak_gib=16.38 splits=1 elapsed_s=2208
+[18:40:42] step=825 epoch=9 loss=1.7338 ctc=1.7338 phonetic=nan rnnt=nan consistency=nan lr=1.448e-04 frames_per_s=32678 peak_gib=16.38 splits=1 elapsed_s=2266
+[18:41:54] step=850 epoch=9 loss=1.6977 ctc=1.6977 phonetic=nan rnnt=nan consistency=nan lr=1.262e-04 frames_per_s=33133 peak_gib=16.38 splits=1 elapsed_s=2339
+[18:43:03] step=875 epoch=9 loss=1.696 ctc=1.696 phonetic=nan rnnt=nan consistency=nan lr=1.184e-04 frames_per_s=33081 peak_gib=16.38 splits=1 elapsed_s=2408
+[18:43:17] step=880 epoch=9 loss=1.6326 ctc=1.6326 phonetic=nan rnnt=nan consistency=nan lr=1.182e-04 frames_per_s=33053 peak_gib=16.38 splits=1 elapsed_s=2422
+[18:43:18] GPU utilization: mean 98%, at or above 80% for 97% of 471 samples, peak memory 22560 MiB
+[18:44:18] v1: wrote results/v1.json
+[18:44:27] python 3.14.8, GIL off
+| variant | decoder | set | CER | WER | script err | OOV recall | span acc | false output |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| v1 | ctc | bn | 30.39 | 66.89 | 5.43 | 4.21 |  |  |
+| v1 | ctc | cs:bn+en | 29.35 | 59.95 | 2.27 |  | 95.0 |  |
+| v1 | ctc | cs:hi+en | 35.85 | 61.52 | 13.36 |  | 84.0 |  |
+| v1 | ctc | cs:hi+kn | 38.89 | 76.67 | 21.2 |  | 77.0 |  |
+| v1 | ctc | cs:kn+en | 30.77 | 66.42 | 7.65 |  | 94.0 |  |
+| v1 | ctc | cs:ta+en | 33.89 | 69.7 | 5.54 |  | 91.0 |  |
+| v1 | ctc | cs:te+en | 34.69 | 69.97 | 8.95 |  | 87.0 |  |
+| v1 | ctc | cs:ur+en | 41.95 | 70.27 | 26.36 |  | 62.0 |  |
+| v1 | ctc | en | 28.82 | 57.16 | 0.62 | 3.98 |  |  |
+| v1 | ctc | gu | 34.26 | 68.14 | 15.18 | 5.91 |  |  |
+| v1 | ctc | hi | 44.23 | 69.16 | 25.76 | 3.0 |  |  |
+| v1 | ctc | kn | 34.04 | 83.53 | 16.9 | 7.54 |  |  |
+| v1 | ctc | ml | 33.52 | 86.03 | 11.32 | 5.45 |  |  |
+| v1 | ctc | mr | 36.77 | 75.89 | 12.1 | 4.8 |  |  |
+| v1 | ctc | negatives |  |  |  |  |  | 0.0 |
+| v1 | ctc | or | 39.57 | 73.03 | 16.07 | 6.09 |  |  |
+| v1 | ctc | pa | 42.61 | 65.66 | 20.91 | 1.62 |  |  |
+| v1 | ctc | ta | 35.95 | 80.96 | 10.71 | 7.36 |  |  |
+| v1 | ctc | te | 38.33 | 83.31 | 17.38 | 3.38 |  |  |
+| v1 | ctc | ur | 55.29 | 81.78 | 44.81 | 0.69 |  |  |

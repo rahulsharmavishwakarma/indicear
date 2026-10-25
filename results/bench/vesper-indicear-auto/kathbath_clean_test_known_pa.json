@@ -1,0 +1,133 @@
+{
+  "pa": {
+    "wer": 40.79,
+    "cer": 20.31,
+    "utterances": 300,
+    "words": 3408,
+    "script_error_rate": 6.95,
+    "wer_script_normalised": 39.03,
+    "cer_script_normalised": 17.77,
+    "rows_with_alternative_ref": 65,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.458
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 98.33,
+    "macro_f1": 99.16,
+    "per_lang": {
+      "pa": {
+        "precision": 100.0,
+        "recall": 98.33,
+        "f1": 99.16,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "pa": {
+        "hi": 5,
+        "pa": 295
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 5,
+        "hi->pa": 0,
+        "pa_utterances": 300,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": 1.67,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 131,
+        "accuracy": 96.95
+      },
+      "5-10s": {
+        "utterances": 167,
+        "accuracy": 99.4
+      },
+      "10-20s": {
+        "utterances": 2,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_pa",
+  "utterances": 300,
+  "hours": 0.46,
+  "seconds": 19,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 156,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/pa/clean_test_known/844424933609733-1-m",
+      "constrained": "ਉਹ ਕਰਨਰੇਦੀ ਤੋਂ ਬਾਅਦ ਦੇਸ਼ ਦੀ ਦੂਜੀ ਮਹਿਲਾ i p s ਅਧਿਕਾਰੀ ਸੀ",
+      "unconstrained": "वह ਕਰਨਰੇਦੀ ਤੋਂ ਬਾਅਦ ਦੇਸ਼ ਦੀ ਦੂਜੀ ਮਹਿਲਾ i p s ਅਧਿਕਾਰੀ ਸੀ",
+      "hinted": "ਉਹ ਕਰਨਰੇਦੀ ਤੋਂ ਬਾਅਦ ਦੇਸ਼ ਦੀ ਦੂਜੀ ਮਹਿਲਾ i p s ਅਧਿਕਾਰੀ ਸੀ"
+    },
+    {
+      "key": "kathbath_test/pa/clean_test_known/844424933633102-359-m",
+      "constrained": "ਰਾਜਜ਼ਵ ਗਾਂਧੀ ਇੰਦਾ ਅਤੇ ਫਿਰੋਜ਼ ਗਾਂਧੀ ਦੇ ਸਭ ਤੋਂ ਵੱਡੇ ਪੁੱਤਰ ਸਨ",
+      "unconstrained": "راज़و ਗਾਂਧੀ ਇੰਦਾ ਅਤੇ ਫਿਰੋਜ਼ ਗਾਂਧੀ ਦੇ ਸਭ ਤੋਂ ਵੱਡੇ ਪੁੱਤਰ ਸਨ",
+      "hinted": "ਰਾਜਜ਼ਵ ਗਾਂਧੀ ਇੰਦਾ ਅਤੇ ਫਿਰੋਜ਼ ਗਾਂਧੀ ਦੇ ਸਭ ਤੋਂ ਵੱਡੇ ਪੁੱਤਰ ਸਨ"
+    },
+    {
+      "key": "kathbath_test/pa/clean_test_known/844424933636179-439-m",
+      "constrained": "ਗੁਰੂ ਨੇ ਬਨ ਕੀਤਾ ਇਹਨਾਂ ਦੀ ਸੰਤਤਾਨ ਰਾਜ ਕਰੇੇਗੀ",
+      "unconstrained": "गुरजी ने भजਨ ਕੀਤਾ ਇਹਨਾਂ ਦੀ ਸੰਤਤਾਨ ਰਾਜ ਕਰੇੇਗੀ",
+      "hinted": "ਗੁਰੂ ਨੇ ਬਨ ਕੀਤਾ ਇਹਨਾਂ ਦੀ ਸੰਤਤਾਨ ਰਾਜ ਕਰੇੇਗੀ"
+    },
+    {
+      "key": "kathbath_test/pa/clean_test_known/844424933640647-220-m",
+      "constrained": "ਦਿਨ ਸਮੇਂਿਦਾ ਅਤੇ ਗੁਆਢੀ ਪਰਿਵਾਰ ਨੂੰ ਮਿਲਣ ਆਉਂਦੇ ਹਨ",
+      "unconstrained": "दिन ਸਮੇਂिਦਾ ਅਤੇ ਗੁਆंडੀ ਪਰਿਵਾਰ ਨੂੰ ਮਿਲਣ ਆਉਂਦੇ ਹਨ",
+      "hinted": "ਦਿਨ ਸਮੇਂਿਦਾ ਅਤੇ ਗੁਆਢੀ ਪਰਿਵਾਰ ਨੂੰ ਮਿਲਣ ਆਉਂਦੇ ਹਨ"
+    },
+    {
+      "key": "kathbath_test/pa/clean_test_known/844424933612652-1-m",
+      "constrained": "ਇਸ ਬਿਮਾਰ ਨੂੰ ਫੀਟਲ alcoolic synroum ਇਸ as ਕਹਿੰਦੇ ਹਨ",
+      "unconstrained": "इस ਬਿਮਾਰ ਨੂੰ ਫੀਟਲ alcoolic syੰਡroum ਇਸ as ਕਹਿੰਦੇ ਹਨ",
+      "hinted": "ਇਸ ਬਿਮਾਰ ਨੂੰ ਫੀਟਲ alcoolic synroum ਇਸ as ਕਹਿੰਦੇ ਹਨ"
+    }
+  ]
+}

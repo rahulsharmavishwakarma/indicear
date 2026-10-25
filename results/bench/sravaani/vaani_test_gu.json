@@ -1,0 +1,42 @@
+{
+  "kind": "eval",
+  "system": "sravaani",
+  "set": "vaani_test_gu",
+  "condition": null,
+  "notes": "",
+  "utterances": 300,
+  "hours": 0.547,
+  "metrics": {
+    "tdt": {
+      "gu": {
+        "wer": 25.07,
+        "cer": 19.08,
+        "utterances": 300,
+        "words": 4608,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 13.28,
+        "cer_script_normalised": 3.52,
+        "rows_with_alternative_ref": 230,
+        "cm_utterances": 230,
+        "cm_spans": 1202,
+        "cm_span_accuracy": 57.07,
+        "cm_span_cer_mean": 46.01,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "gu": 97.72
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.547
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ARTPARK-IISc/SraVaani-1.0",
+    "revision": "f5dd5358325a5208775b91dad98918e079ea2b27",
+    "decoder": "tdt",
+    "notes": "repo code modeling_sravaani.py (TorchScript + greedy TDT); automatic language; no Urdu",
+    "languages_scored": [
+      "gu"
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "hi": {
+    "wer": 25.08,
+    "cer": 14.8,
+    "utterances": 300,
+    "words": 3660,
+    "script_error_rate": 1.57,
+    "wer_script_normalised": 25.05,
+    "cer_script_normalised": 14.71,
+    "rows_with_alternative_ref": 195,
+    "cm_utterances": 195,
+    "cm_spans": 834,
+    "cm_span_accuracy": 89.81,
+    "cm_span_cer_mean": 15.88,
+    "cm_span_accuracy_by_lang": {
+      "en": 87.65,
+      "hi": 91.24
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.335
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 98.0,
+    "macro_f1": 98.99,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 98.0,
+        "f1": 98.99,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 294,
+        "mr": 2,
+        "pa": 1,
+        "ur": 3
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 3,
+        "ur->hi": 0,
+        "hi_utterances": 300,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 1.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 2,
+        "mr->hi": 0,
+        "hi_utterances": 300,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.67,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 1,
+        "pa_utterances": 0,
+        "hi_utterances": 300,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.33
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 32,
+        "accuracy": 93.75
+      },
+      "2-5s": {
+        "utterances": 192,
+        "accuracy": 97.92
+      },
+      "5-10s": {
+        "utterances": 73,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 3,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_hi",
+  "utterances": 300,
+  "hours": 0.33,
+  "seconds": 18,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 134,
+  "changed_examples": [
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384944_019_Shamli-SPECIFIC_01822_3437_6176",
+      "constrained": "bike के पास में कुछ व्यक्ति खड़े हैं",
+      "unconstrained": "bikeों के पास में कुछ व्यक्ति खड़े हैं",
+      "hinted": "bike के पास में कुछ व्यक्ति खड़े हैं"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384944_037_Shamli-SPECIFIC_00838_9570_12524",
+      "constrained": "यहां पर boundary के पास में कुछ पेड़ खड़े हैं",
+      "unconstrained": "यहां पर boundary کے पास में कुछ पेड़ खड़े हैं",
+      "hinted": "यहां पर boundary के पास में कुछ पेड़ खड़े हैं"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384944_039_GENERIC_0580_258_3956",
+      "constrained": "यह एक egड है eg day के अंदर counter है",
+      "unconstrained": "यह एक egड है eg day के اندر counter है",
+      "hinted": "यह एक egड है eg day के अंदर counter है"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384972_030_Shamli-SPECIFIC_00378_10823_16138",
+      "constrained": "पर दीवार पर एक l c d लगी है जो कि camera से connect",
+      "unconstrained": "पर दीवार पर एक l c d लगी है जो कि camera سے connect",
+      "hinted": "पर दीवार पर एक l c d लगी है जो कि camera से connect"
+    },
+    {
+      "key": "vaani/hi/test/IISc_VaaniProject_K_UttarPradesh_Shamli_Shamli844425030384974_011_Shamli-SPECIFIC_00015_1798_11422",
+      "constrained": "कहीं सारी दुकान है दुकान पर एक दुकान paintant हुआ है पीले colour का एक banner रखा हुआ है सारे ra है",
+      "unconstrained": "कहीं सारी दुकान है दुकान पर एक दुकान paintant हुआ है पीले colour का एक banner रखा हुआ है सारेra है",
+      "hinted": "कहीं सारी दुकान है दुकान पर एक दुकान paintant हुआ है पीले colour का एक banner रखा हुआ है सारे ra है"
+    }
+  ]
+}

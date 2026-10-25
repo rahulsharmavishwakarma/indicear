@@ -1,0 +1,132 @@
+{
+  "mr": {
+    "wer": 53.88,
+    "cer": 18.31,
+    "utterances": 300,
+    "words": 3502,
+    "script_error_rate": 3.19,
+    "wer_script_normalised": 53.28,
+    "cer_script_normalised": 17.72,
+    "rows_with_alternative_ref": 39,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.552
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "mr": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "mr": {
+        "mr": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 300,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": 0.0
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 52,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 236,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 12,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_mr",
+  "utterances": 300,
+  "hours": 0.55,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 113,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/mr/clean_test_unknown/844424930649789-823-m",
+      "constrained": "जगभरातील अनेक देशांनी भारताला ऑक्सिज en cylinder आणि ऑक ygen पुरवट्यासाठी आवश्यक घटकांची वैदकीय मदत पाठवली होती",
+      "unconstrained": "जगभरातील अनेक देशांनी भारताला ऑक्सिजen cylinderंड आणि ऑकygen पुरवट्यासाठी आवश्यक घटकांची वैदकीय मदत पाठवली होती",
+      "hinted": "जगभरातील अनेक देशांनी भारताला ऑक्सिज en cylinder आणि ऑक ygen पुरवट्यासाठी आवश्यक घटकांची वैदकीय मदत पाठवली होती"
+    },
+    {
+      "key": "kathbath_test/mr/clean_test_unknown/844424932330084-980-f",
+      "constrained": "वरऐकल असेल की अमेरिकचे राष्ट्राध्यक्ष रोणलमम्प भारतात आले होते",
+      "unconstrained": "ीवरऐकल असेल की अमेरिकचे राष्ट्राध्यक्ष रोणलमम्प भारतात आले होते",
+      "hinted": "वरऐकल असेल की अमेरिकचे राष्ट्राध्यक्ष रोणलमम्प भारतात आले होते"
+    },
+    {
+      "key": "kathbath_test/mr/clean_test_unknown/844424932262431-809-f",
+      "constrained": "लेबननमधून झालेला हल्ला हा पॉस नागरिकांनी केलेला असलाचा दावा करत ये आहे",
+      "unconstrained": "লেবনनमधून झालेला हल्ला हा पॉस नागरिकांनी केलेला असलाचा दावा करत ये आहे",
+      "hinted": "लेबननमधून झालेला हल्ला हा पॉस नागरिकांनी केलेला असलाचा दावा करत ये आहे"
+    },
+    {
+      "key": "kathbath_test/mr/clean_test_unknown/844424933379962-487-m",
+      "constrained": "पे शिवशशाहीर बाबासाहेब पुरंदरी यांचे पुतण आणि लेखिका चित्रलिक का पुरंदरी यांचे पती होती",
+      "unconstrained": "े शिवशशाहीर बाबासाहेब पुरंदरी यांचे पुतण आणि लेखिका चित्रलिक का पुरंदरी यांचे पती होती",
+      "hinted": "पे शिवशशाहीर बाबासाहेब पुरंदरी यांचे पुतण आणि लेखिका चित्रलिक का पुरंदरी यांचे पती होती"
+    },
+    {
+      "key": "kathbath_test/mr/clean_test_unknown/844424930394084-60-m",
+      "constrained": "ळ चौरां दहा लाख सत्तहत्तर हजार पाचशेुपंचे सोने्याचे दागेने लांबवले",
+      "unconstrained": "వేడి चौरां दहा लाख सत्तहत्तर हजार पाचशेुपंचे सोने्याचे दागेने लांबवले",
+      "hinted": "ळ चौरां दहा लाख सत्तहत्तर हजार पाचशेुपंचे सोने्याचे दागेने लांबवले"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+IndicEAR
+Copyright 2026 Rahul Sharma
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project uses, unmodified, the audio encoder of EmbeddingGemma 2
+(google/embeddinggemma-2, revision 914f7f89142e33e77833254d9c9b90c3cef7303b),
+Copyright Google LLC, licensed under the Apache License, Version 2.0. The released
+model weights include a copy of that audio encoder's weights, extracted without
+modification; the text and vision parts of EmbeddingGemma 2 are not included.
+
+indicear/resources/english_words.tsv is derived from SCOWL (Spell Checker Oriented
+Word Lists); its copyright notice and licence are in
+indicear/resources/SCOWL-LICENSE.txt.
+
+The released model was trained on third-party speech datasets under CC BY (2.0–4.0)
+and CC0 terms; sources, revisions and attributions are listed in docs/data-licenses.md
+and in the model card.

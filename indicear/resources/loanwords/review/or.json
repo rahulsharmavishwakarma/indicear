@@ -1,0 +1,811 @@
+{
+ "lang": "or",
+ "words": 79995,
+ "rewrites": 1554,
+ "per_1000_words": 19.43,
+ "types": 424,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "ଟ୍ରାଫିକ୍",
+   "en": "traffic",
+   "path": "lexicon",
+   "row": 1971,
+   "context": "ଅଭିଯୋଗ ପାଇବା ପରେ ଟ୍ରାଫିକ୍ ବିଭାଗର ଅଧିକାରୀ ତୁରନ୍ତ ଏହାର",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଫିଲ୍ମ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 540,
+   "context": "ଯାହା ଫଳରେ ଅନେକ ସାଉଥ୍ ଫିଲ୍ମ ଏବେ ହିନ୍ଦୀ ଭାଷାରେ ଡବିଂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେପ୍ଟେମ୍ବର",
+   "en": "september",
+   "path": "lexicon",
+   "row": 6991,
+   "context": "ଗତ ବର୍ଷ ସେପ୍ଟେମ୍ବର ମାସରେ ସପ୍ନା ଆତ୍ମହତ୍ୟା କରିବାକୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଟିକେଟ",
+   "en": "ticket",
+   "path": "lexicon",
+   "row": 4233,
+   "context": "ପାଇଁ ଆଉ ଶତ୍ରୁଘ୍ନ ସିହ୍ନାଙ୍କୁ ଟିକେଟ ଦେଇନଥିଲା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେକେଣ୍ଡ",
+   "en": "second",
+   "path": "lexicon",
+   "row": 3194,
+   "context": "ଏବଂ ଛାଡିବା ମଝିରେ କିଛି ସେକେଣ୍ଡ ପାଇଁ ନିଶ୍ୱାସକୁ ଅଟକାନ୍ତୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପୁଲିସ",
+   "en": "police",
+   "path": "lexicon",
+   "row": 3034,
+   "context": "ଅପମୃତ୍ୟୁ ମାମଲା ରୁଜୁ କରି ପୁଲିସ ତଦନ୍ତ ଚଳାଇଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପ୍ଲାଷ୍ଟିକ୍",
+   "en": "plastic",
+   "path": "lexicon",
+   "row": 3152,
+   "context": "ବି ଦାନ ଆକରରେ କୌଣସି ପ୍ଲାଷ୍ଟିକ୍ ଜିନିଷ ଦିଅନ୍ତୁ ନାହିଁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍କୁଲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 2152,
+   "context": "ଭଲ ସ୍କୁଲ ଓ ଭଲ ଶିକ୍ଷକ ଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଲୋକାଲ୍",
+   "en": "local",
+   "path": "lexicon",
+   "row": 6417,
+   "context": "କାର୍ତ୍ତିକ ଚନ୍ଦ୍ର ସୋରେନ୍ ମୋର ଲୋକାଲ୍ ଗାର୍ଡିଆନ୍ ଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେୟାର",
+   "en": "share",
+   "path": "lexicon",
+   "row": 6841,
+   "context": "ସିଂ ଚାୱଲା ଏହି ଫଟୋକୁ ସେୟାର କରିବା ସହ ଲୋକମାନଙ୍କୁ ମଧ୍ୟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କୋଭିଡ୍",
+   "en": "covid",
+   "path": "lexicon",
+   "row": 7062,
+   "context": "ଏହାସହିତ କୋଭିଡ୍ ବିରୁଦ୍ଧରେ ଏହି ଲଢ଼େଇରେ ନିଶ୍ଚୟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଷ୍ଟାର୍ଟ",
+   "en": "start",
+   "path": "lexicon",
+   "row": 1692,
+   "context": "ଏଭିନ୍ ଲୁଇସ୍ ଟିମକୁ ଭଲ ଷ୍ଟାର୍ଟ ଦେଉଛନ୍ତି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ହୋଟେଲ",
+   "en": "hotel",
+   "path": "lexicon",
+   "row": 2665,
+   "context": "ଆବଶ୍ୟକ ପଡ଼ିଲେ ଦଳ ପକ୍ଷରୁ ହୋଟେଲ ବିଲ୍ ସର୍ବସାଧାରଣରେ ଉପସ୍ଥାପନ କରାଯିବ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପାଇପ୍",
+   "en": "pipe",
+   "path": "lexicon",
+   "row": 756,
+   "context": "ହେବା ଦୂରକୁ ଥାଉ ଅଦ୍ୟାବଧି ପାଇପ୍ ବିଛା କାମ ସରୁନାହିଁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେୟାର",
+   "en": "share",
+   "path": "lexicon",
+   "row": 6951,
+   "context": "ସନ୍ନି ଦେଓଲ ଏକ ଫଟୋ ସେୟାର କରିଛନ୍ତି ଯେଉଁଥିରେ ମାଆ ଏବଂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମ୍ୟାଚ୍",
+   "en": "match",
+   "path": "lexicon",
+   "row": 1783,
+   "context": "ଏହି ମ୍ୟାଚ୍ ଉପରେ ସମଗ୍ର ଟେନିସ୍ ଜଗତର",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଭାଇରାଲ୍",
+   "en": "viral",
+   "path": "lexicon",
+   "row": 7518,
+   "context": "ସେପଟେ ପ୍ରଶ୍ନପତ୍ର ଭାଇରାଲ୍ ଘଟଣାରେ ସଂପୃକ୍ତ ସମସ୍ତ ବ୍ୟକ୍ତିବିଶେଷଙ୍କୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କ୍ୟାମ୍ପ",
+   "en": "camp",
+   "path": "lexicon",
+   "row": 513,
+   "context": "ମିନିପା ଜଙ୍ଗଲରେ ମାଓବାଦୀ କ୍ୟାମ୍ପ ଚାଲିଥିବା ସୂଚନା ପାଇ ଛତିଶଗଡ଼",
+   "verdict": "correct"
+  },
+  {
+   "native": "ରିଲାଏନ୍ସ",
+   "en": "reliance",
+   "path": "lexicon",
+   "row": 5812,
+   "context": "ରିଲାଏନ୍ସ ଇନଫ୍ରା ବୋର୍ଡ଼ରୁ ଇସ୍ତଫା ଦେଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ବ୍ୟାଙ୍କ",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 7137,
+   "context": "ବ୍ୟାଙ୍କ ମେଟ୍ରୋ ଏବଂ ଗ୍ରାମୀଣ ଅଞ୍ଚଳ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଲାଇନ",
+   "en": "line",
+   "path": "lexicon",
+   "row": 3128,
+   "context": "ତେବେ ବିଏମସି ନୂଆ ଗାଇଡ ଲାଇନ ଜାରି ପରେ ସେଲୁନ ସ୍ପା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଅପ୍ଡେଟ୍",
+   "en": "update",
+   "path": "lexicon",
+   "row": 5105,
+   "context": "ତେବେ ସଫ୍ଟୱେୟାର ଅପ୍ଡେଟ୍ ହୋଇପାରିନଥିବାରୁ କେତେକ ରାଜ୍ୟରେ ସୋମବାର",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଜେନେରାଲ",
+   "en": "general",
+   "path": "lexicon",
+   "row": 5648,
+   "context": "ସମୟରେ ଉପସ୍ଥିତ ଥିବା ଆଟର୍ଣ୍ଣିଂ ଜେନେରାଲ କେକେ ଭେନୁଗୋପାଳ ସାବରିମାଳା ମନ୍ଦିର",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଇନ୍ସୁରାନ୍ସ",
+   "en": "insurance",
+   "path": "lexicon",
+   "row": 6500,
+   "context": "ତେବେ ଓରିଏଣ୍ଟାଲ ଇନ୍ସୁରାନ୍ସ କମ୍ପାନୀ ଜରିଆରେ ରେ ଉକ୍ତ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 759,
+   "context": "ଶିକ୍ଷା ଓ ଯୋଗାଯୋଗ ସହ କରୋନା ବାବଦରେ ଆସୁଥିବା ବିଭିନ୍ନ ତଥ୍ୟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସିଲେକ୍ଟ",
+   "en": "select",
+   "path": "lexicon",
+   "row": 1644,
+   "context": "ଏହା ସହିତ ବିଲକୁ ସିଲେକ୍ଟ କମିଟି ପାଖକୁ ପଠାଇବାର ଦାବି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ହାଉସ",
+   "en": "house",
+   "path": "lexicon",
+   "row": 724,
+   "context": "ଦିଲ୍ଲୀର ପଟିଆଲା ହାଉସ କୋର୍ଟ ଦୋଷୀଙ୍କ ଡେଥ୍ ଓ୍ବାରେଣ୍ଟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଇନକମ୍",
+   "en": "income",
+   "path": "lexicon",
+   "row": 4882,
+   "context": "କରୁଛି କିମ୍ବା ଆମେ ଦୁହେଁ ଇନକମ୍ କରୁଛୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଟିକେଟ୍",
+   "en": "ticket",
+   "path": "lexicon",
+   "row": 4668,
+   "context": "ସୂଚନା ମୁତାବକ ଚଳିତଥର ଦଳୀୟ ଟିକେଟ୍ ଆଣିବା ପାଇଁ ବେଦପ୍ରକାଶ ଅସୁସ୍ଥତା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସର୍କିଟ୍",
+   "en": "circuit",
+   "path": "lexicon",
+   "row": 7081,
+   "context": "ବୁଦ୍ଧିଷ୍ଟ ସର୍କିଟ୍ ଶିମିଳିପାଳ ପରି ଜାଗା କେନ୍ଦ୍ର",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଟାୟାର",
+   "en": "tyre",
+   "path": "lexicon",
+   "row": 2316,
+   "context": "ଆଜି ଆନ୍ଦୋଳନକାରୀ ଛାତ୍ରଛାତ୍ରୀମାନେ ରାସ୍ତାରେ ଟାୟାର ଜାଳି ବିକ୍ଷୋଭ ପ୍ରଦର୍ଶନ କରିଛନ୍ତି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମେସିନ",
+   "en": "machine",
+   "path": "lexicon",
+   "row": 1368,
+   "context": "ମନରେଗା ଯୋଜନାରେ କାର୍ଯ୍ୟଗୁଡିକ ମେସିନ ସାହାଯ୍ୟରେ ହେଉଥିବା ବେଳେ ଲୋକମାନେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କଷ୍ଟ୍ୟୁମ୍",
+   "en": "costume",
+   "path": "lexicon",
+   "row": 5412,
+   "context": "ଓ୍ୱିଗ୍ କଷ୍ଟ୍ୟୁମ୍ ଏବଂ ମେକଅପ ଆଦିର ଯଥାସମ୍ଭବ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍କୁଲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 2107,
+   "context": "ଶିଶୁଟି କହିଥିଲା ଯେ ସ୍କୁଲ ଭ୍ୟାନ୍ ର ଡ୍ରାଇଭର ତାକୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍କୁଲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 123,
+   "context": "ଯେଉଁମାନଙ୍କ ପିଲାଛୁଆ ସ୍କୁଲ ଯାଇଥିଲେ ସେମାନେ ବ୍ୟସ୍ତବିବ୍ରତ ହୋଇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେୟାର",
+   "en": "share",
+   "path": "lexicon",
+   "row": 54,
+   "context": "ବିପାଶା ବାସୁ କିଛି ଫଟୋ ସେୟାର କରିଛନ୍ତି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ନ୍ୟୁଜ୍",
+   "en": "news",
+   "path": "lexicon",
+   "row": 1055,
+   "context": "ଗୋଟିଏ ସମୟରେ ଦେଶର ହଟ୍ ନ୍ୟୁଜ୍ ହୋଇଥିଲା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମେଡିକାଲ",
+   "en": "medical",
+   "path": "lexicon",
+   "row": 478,
+   "context": "ତାଙ୍କ ସ୍ୱାସ୍ଥ୍ୟାବସ୍ଥା ଭଲ ଥିବା ମେଡିକାଲ ପକ୍ଷରୁ କୁହାଯାଇଥିଲା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପୋଷ୍ଟ",
+   "en": "post",
+   "path": "lexicon",
+   "row": 139,
+   "context": "ଏ ନେଇ ଫେସ୍ବୁକ୍ରେ ଲେଖି ପୋଷ୍ଟ କରିବା ପରେ ଘଟଣାଟି ସାମ୍ନାକୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ବ୍ୟାଙ୍କ୍",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 286,
+   "context": "ବ୍ୟାଙ୍କ୍ ଓ ଏଟିଏମ୍ ସାଙ୍ଗକୁ ପେଟ୍ରୋଲ୍",
+   "verdict": "correct"
+  },
+  {
+   "native": "ନଭେମ୍ବର",
+   "en": "november",
+   "path": "lexicon",
+   "row": 417,
+   "context": "ଏ ନେଇ ନଭେମ୍ବର ପ୍ରଥମ ସପ୍ତାହରେ ଦଳର ଅଧ୍ୟକ୍ଷା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପ୍ୟାଣ୍ଟ୍",
+   "en": "pant",
+   "path": "lexicon",
+   "row": 2497,
+   "context": "ଜାମା ପ୍ୟାଣ୍ଟ୍ ଏପରିକି ଆଶୁତୋଷ ଦେହ ଉପରେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍ମାର୍ଟ",
+   "en": "smart",
+   "path": "lexicon",
+   "row": 3191,
+   "context": "ପୋଲିସ ପାଇଁ ନୁହେଁ ବରଂ ସ୍ମାର୍ଟ ସିଟି ବାସିନ୍ଦାଙ୍କ ପାଇଁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେଣ୍ଟ୍ରାଲ",
+   "en": "central",
+   "path": "lexicon",
+   "row": 7029,
+   "context": "ଅମିତା ପଣ୍ଡା ହେଲେ ମିସେସ୍ ସେଣ୍ଟ୍ରାଲ ପାସିଫିକ୍ ଏସିଆ ୟୁନିଭର୍ସ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 5959,
+   "context": "କରୋନା ସଂକ୍ରମିତଙ୍କ ସଂଖ୍ୟା ଏବଂ କରୋନା ଟେଷ୍ଟ ବାବଦରେ ସୂଚନା ଦିଆଯାଏ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଫିଲ୍ମ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 366,
+   "context": "କରିବା ପରେ ସେ ଦକ୍ଷିଣ ଫିଲ୍ମ ଜଗତରେ ନିଜର ପରିଚୟ ସୃଷ୍ଟି",
+   "verdict": "correct"
+  },
+  {
+   "native": "କୋର୍ସ",
+   "en": "course",
+   "path": "lexicon",
+   "row": 6428,
+   "context": "ଅଣ୍ଡର୍ ଗ୍ରାଜୁଏଟରେ ସେଲ୍ଫ ଷ୍ଟଡି କୋର୍ସ ଲାଗୁ ହେବ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଷ୍ଟାପ୍",
+   "en": "staff",
+   "path": "lexicon",
+   "row": 3705,
+   "context": "କରିଛନ୍ତି ନର୍ସ ଓ ମେଡିକାଲ୍ ଷ୍ଟାପ୍",
+   "verdict": "correct"
+  },
+  {
+   "native": "ନମ୍ବର",
+   "en": "number",
+   "path": "lexicon",
+   "row": 2338,
+   "context": "ମଧ୍ୟପ୍ରଦେଶ ଗାଡିର ନମ୍ବର ପ୍ଲେଟରେ ଚୌକିଦାର ଲେଖିବା ଜଣେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 7185,
+   "context": "ଏହାଦ୍ୱାରା ଆମେ କରୋନା ସ୍ଥିତି ଜାଣିବା ସହ ଏହାକୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍କୋର",
+   "en": "score",
+   "path": "lexicon",
+   "row": 1011,
+   "context": "ଏଣୁ ଆପଣଙ୍କ ସିଭିଲ ସ୍କୋର ଉପରେ ବି କୌଣସି ପ୍ରଭାବ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଟ୍ରଫି",
+   "en": "trophy",
+   "path": "lexicon",
+   "row": 856,
+   "context": "ଫାଇନାଲ୍ ପ୍ରବେଶକୁ ନାଦାଲ ମଧ୍ୟ ଟ୍ରଫି ହାସଲରେ ରୂପାନ୍ତର କରିଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସର୍ଚ୍ଚ",
+   "en": "search",
+   "path": "lexicon",
+   "row": 2137,
+   "context": "ସନ୍ଧ୍ୟା ପର୍ୟ୍ୟନ୍ତ ସର୍ଚ୍ଚ ଅପରେଶନ ଚାଲିଥିବାବେଳେ ଜଣେ ଯବାନଙ୍କ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କମ୍ପାନୀ",
+   "en": "company",
+   "path": "lexicon",
+   "row": 69,
+   "context": "ସୂଚନା ଥାଉକି ଗୁଗଲ କମ୍ପାନୀ ଏହି ଫୋନ୍ରେ ପିକ୍ସେଲ୍ ବ୍ରାଣ୍ଡିଂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ୱେବସାଇଟ୍",
+   "en": "website",
+   "path": "lexicon",
+   "row": 3901,
+   "context": "ଏବେ ୱେବସାଇଟ୍ ଦର୍ଶାଉଛି ଦେଶରେ ବିଜୁଳି ଯାଇନଥିବା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଡ୍ୟାନ୍ସ",
+   "en": "dance",
+   "path": "lexicon",
+   "row": 5102,
+   "context": "ପୁଣି ଥରେ ଏକ ଖାସ୍ ଡ୍ୟାନ୍ସ ଭିଡିଓ ଶେଆର କରିଛନ୍ତି",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 853,
+   "context": "ସ୍ୱାସ୍ଥ୍ୟ ସଂଗଠନ ଏବଂ ଚୀନ୍ କରୋନା ଭାଇରସ୍କୁ ବିଶ୍ୱକୁ ଲୁଚାଇଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମାସ୍କ",
+   "en": "mask",
+   "path": "lexicon",
+   "row": 3525,
+   "context": "ବୈଜ୍ଞାନିକଙ୍କ ଏକ ଟିମ୍ ବିଶ୍ୱବାସୀଙ୍କୁ ମାସ୍କ ବ୍ୟବହାର ଲାଗି ଆହ୍ୱାନ ଦେଇଛନ୍ତି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଫାଇନାଲ",
+   "en": "final",
+   "path": "lexicon",
+   "row": 6974,
+   "context": "ସଡନ୍ ଡେଥରେ ଚକମା ଦେଇ ଫାଇନାଲ ପାଇଁ ସ୍ଥାନ ପକ୍କା କରିଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପ୍ରାଇଭେଟ୍",
+   "en": "private",
+   "path": "lexicon",
+   "row": 4915,
+   "context": "ହେଉଛନ୍ତି ଜିର୍କା ଡିଜିଟାଲ୍ ସଲ୍ୟୁସନ୍ସ ପ୍ରାଇଭେଟ୍ ଲିମିଟେଡ୍ର ସିଇଓ ଏବଂ ନିର୍ଦେଶିକା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମ୍ୟାଚ",
+   "en": "match",
+   "path": "lexicon",
+   "row": 7401,
+   "context": "କିନ୍ତୁ ଏହି ମ୍ୟାଚ ହେବା ପୂର୍ବରୁ ଟିମ୍ ସଦସ୍ୟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍କୁଲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 1646,
+   "context": "ଅସ୍ତବ୍ୟସ୍ତ ହୋଇପଡୁଛନ୍ତି କୁନି କୁନି ସ୍କୁଲ ପିଲାଠାରୁ ଆରମ୍ଭ କରି ପଥଚାରୀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଅପରେସନ",
+   "en": "operation",
+   "path": "lexicon",
+   "row": 3480,
+   "context": "ବାହିନୀ ସୋମବାର ସକାଳେ ସର୍ଚ୍ଚ ଅପରେସନ କରିଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେଲିବ୍ରିଟି",
+   "en": "celebrity",
+   "path": "lexicon",
+   "row": 5469,
+   "context": "କୌଣସି ସେଲିବ୍ରିଟି ନିଜ ବିବାହରେ ହୋଇଥିବା ଭିଡିଓକୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପୁଲିସ",
+   "en": "police",
+   "path": "lexicon",
+   "row": 1655,
+   "context": "ସ୍ପଷ୍ଟ ହୋଇ ଯିବ ବୋଲି ପୁଲିସ କହିଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଡ୍ରାଇଭର",
+   "en": "driver",
+   "path": "lexicon",
+   "row": 2517,
+   "context": "ଆହତ ଡ୍ରାଇଭର ଜଣକ ଡାବୁଗାଁ ଗୋଷ୍ଠି ସ୍ୱାସ୍ଥ୍ୟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଫ୍ରିଜ",
+   "en": "fridge",
+   "path": "lexicon",
+   "row": 2111,
+   "context": "ଯେଉଁଥିପାଇଁ ଫ୍ରିଜ ଶୀତଳତା କାକୁଡି ଖରଭୁଜ କିମ୍ବା",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 3033,
+   "context": "କହିଛନ୍ତି ଯେ ଡାକ୍ତର ତାଙ୍କୁ କରୋନା ପଜିଟିଭ ବୋଲି କହିଛନ୍ତି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଆର୍ଟିଫିସିଆଲ",
+   "en": "artificial",
+   "path": "lexicon",
+   "row": 3670,
+   "context": "ଆର୍ଟିଫିସିଆଲ ଇଣ୍ଟେଲିଜେନ୍ସ କ୍ଷେତ୍ରରେ ଆମେରିକା ଫ୍ରାନ୍ସ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସେୟାର",
+   "en": "share",
+   "path": "lexicon",
+   "row": 2575,
+   "context": "ମ୍ୟାଚ ପରେ ଏକ ଭିଡିଓ ସେୟାର କରିଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ରିପୋର୍ଟ",
+   "en": "report",
+   "path": "lexicon",
+   "row": 2211,
+   "context": "ଏନେଇ ସେତେବେଳେ ଉଦିତନଗର ଥାନାରେ ରିପୋର୍ଟ କରିଥିଲେ ପରିବାର ଲୋକେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ହସ୍ପିଟାଲ",
+   "en": "hospital",
+   "path": "lexicon",
+   "row": 4420,
+   "context": "ଭୁବନେଶ୍ୱରରେ ଆଜି ଏକ ଶିଶୁକୁ ହସ୍ପିଟାଲ ନେବା ବାଟରେ ଆମ୍ବୁଲାନ୍ସଟି ଟ୍ରାଫିକ୍ରେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପୋଲିସ୍",
+   "en": "police",
+   "path": "lexicon",
+   "row": 4046,
+   "context": "ପୋଲିସ୍ ଦୃଢ଼ ହୋଇ ପଚାରିବାରୁ ସେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଚିକେନ୍",
+   "en": "chicken",
+   "path": "lexicon",
+   "row": 5246,
+   "context": "ଗୁରୁବାର ଅଜୟ କୁମାର ସ୍ୱିଗିରୁ ଚିକେନ୍ ଅର୍ଡର କରିଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍କୁଲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 3413,
+   "context": "ରାଜ୍ୟର କିଛି ଜିଲ୍ଲାରେ ଆଜି ସ୍କୁଲ ଓ ଅଙ୍ଗନବାଡ଼ି କେନ୍ଦ୍ର ଛୁଟି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ବ୍ୟାଙ୍କ",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 1183,
+   "context": "ସୁବିଧା ପାଇଁ ଭାରତୀୟ ଷ୍ଟେଟ ବ୍ୟାଙ୍କ ଅଫ ଇଣ୍ଡିଆ ତରଫରୁ ଗୋଟିଏ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପୁଲିସ",
+   "en": "police",
+   "path": "lexicon",
+   "row": 354,
+   "context": "ଏହାପରେ କୁମ୍ଭାରପଡ଼ା ପୁଲିସ ତାକୁ ଧରିବା ପାଇଁ ଚେଷ୍ଟା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଲୋକାଲ",
+   "en": "local",
+   "path": "lexicon",
+   "row": 2995,
+   "context": "କାରଣରୁ ସେ ଭୁବନେଶ୍ବରରେ ଏକପ୍ରକାର ଲୋକାଲ ହିରୋ ପାଲଟି ଯାଇଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଅପରେସନ",
+   "en": "operation",
+   "path": "lexicon",
+   "row": 2896,
+   "context": "ଠୁ ଆଭ୍ୟନ୍ତରୀଣ ଇଲାକାରେ କମ୍ବିଂ ଅପରେସନ ଆରମ୍ଭ ହୋଇଗଲାଣି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଇଣ୍ଟରନେଟ୍",
+   "en": "internet",
+   "path": "lexicon",
+   "row": 1911,
+   "context": "ଇ ବ୍ୟାଙ୍କିଂ ପାଇଁ ଲୋକେ ଇଣ୍ଟରନେଟ୍ ବ୍ୟବହାର କରିପାରିବେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଅପରେସନ୍",
+   "en": "operation",
+   "path": "lexicon",
+   "row": 513,
+   "context": "ଛତିଶଗଡ଼ ପୁଲିସ୍ ପକ୍ଷରୁ କମ୍ବିଂ ଅପରେସନ୍ ହୋଇଥିଲା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଏକାଡେମି",
+   "en": "academy",
+   "path": "lexicon",
+   "row": 2673,
+   "context": "ଏକାଡେମୀ ପରିଚାଳିତ ହେଉଛି ବୋଲି ଏକାଡେମି ପକ୍ଷରୁ କୁହାଯାଇଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମୋବାଇଲ",
+   "en": "mobile",
+   "path": "lexicon",
+   "row": 4457,
+   "context": "ଗିରଫ କରିବା ସହ ନାବାଳକର ମୋବାଇଲ ସିଜ୍ କରି ତଦନ୍ତ ଚଳାଇଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଗ୍ରୁପ",
+   "en": "group",
+   "path": "lexicon",
+   "row": 6037,
+   "context": "ଏବେ କୌଣସି ବି ଗ୍ରୁପ ତଥା ୟୁଜରର ଅପସନରେ କ୍ଲିକ୍",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଫିଲ୍ମ",
+   "en": "film",
+   "path": "lexicon",
+   "row": 5287,
+   "context": "ଏପରିକି କିଛି ଫିଲ୍ମ ଓ ଆଲବମ୍ରେ ଟାଇଗରଙ୍କ ତାଳରେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଅର୍ଡର",
+   "en": "order",
+   "path": "lexicon",
+   "row": 4545,
+   "context": "ଦଳର କୌଣସି ଟପ୍ ଅର୍ଡର ବ୍ୟାଟ୍ସମ୍ୟାନ୍ ବଡ଼ ସ୍କୋର କରିପାରିନଥିଲେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ହେଲ୍ପର",
+   "en": "helper",
+   "path": "lexicon",
+   "row": 5446,
+   "context": "ଯାଉଥିବା ଟ୍ରକର ଡ୍ରାଇଭର ଓ ହେଲ୍ପର",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସ୍ମାର୍ଟଫୋନ",
+   "en": "smartphone",
+   "path": "lexicon",
+   "row": 936,
+   "context": "କଟକଣାରେ ଯବାନ ଓ ଅଧିକାରୀମାନେ ସ୍ମାର୍ଟଫୋନ ବ୍ୟବହାର କରିପାରିବେ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଟ୍ୟାପ୍",
+   "en": "tap",
+   "path": "lexicon",
+   "row": 6832,
+   "context": "କେଉଁଠି ଟ୍ୟାପ୍ ନଥିଲା ତ କେଉଁଠି ପାଣି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଭିଟାମିନ୍",
+   "en": "vitamin",
+   "path": "lexicon",
+   "row": 2366,
+   "context": "ଅନେକ ପ୍ରକାର ପ୍ରୋଟିନ୍ ଏବଂ ଭିଟାମିନ୍ ରହିଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 1716,
+   "context": "ଜନତା ପାର୍ଟି କଂଗ୍ରେସର ବିଧାୟକ କରୋନା ସଂକ୍ରମିତ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଟ୍ୟାକ୍ସି",
+   "en": "taxi",
+   "path": "lexicon",
+   "row": 3835,
+   "context": "ଅରେଞ୍ଜ ଜୋନ୍ରେ ଟ୍ୟାକ୍ସି ଓ କ୍ୟାବ୍ ଚଳାଚଳ ପାଇଁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ଅଏଲ୍",
+   "en": "oil",
+   "path": "lexicon",
+   "row": 6201,
+   "context": "ଓଏନ୍ଜିସି ଏଚ୍ପିସିଏଲ୍ ବିପିସିଏଲ୍ ଇଣ୍ଡିଆନ୍ ଅଏଲ୍ ଓ ଅଏଲ୍ ଇଣ୍ଡିଆ ଲିମିଟେଡ୍",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପୁଲିସ",
+   "en": "police",
+   "path": "lexicon",
+   "row": 1620,
+   "context": "ଥାନାରେ ଅଭିଯୋଗ କରିବା ପରେ ପୁଲିସ ତଦନ୍ତ ଆରମ୍ଭ କରିଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "କରୋନା",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 6757,
+   "context": "କିନ୍ତୁ ଚଳିତ ବର୍ଷ କରୋନା ଯୋଗୁଁ ଏହି ଶିଳ୍ପ ମଧ୍ୟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କାଉଣ୍ଟର",
+   "en": "counter",
+   "path": "lexicon",
+   "row": 4496,
+   "context": "ଯାତ୍ରୀ ସଂରକ୍ଷଣ ପ୍ରଣାଳୀ ବୁକିଂ କାଉଣ୍ଟର ମୋବାଇଲ ଓ ଆଇଆରସିଟିସି ୱେବସାଇଟରୁ",
+   "verdict": "correct"
+  },
+  {
+   "native": "କ୍ୟାମେରା",
+   "en": "camera",
+   "path": "lexicon",
+   "row": 6445,
+   "context": "ପ୍ରତି ପୂଜା ପେଣ୍ଡାଲରେ ସିସିଟିଭି କ୍ୟାମେରା ଲଗାଯିବା ସହିତ ଅଗ୍ନି ନିରାପତ୍ତା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ମେଡ଼ିସିନ",
+   "en": "medicine",
+   "path": "lexicon",
+   "row": 2157,
+   "context": "ସେଗୁଡିକ ମଧ୍ୟରେ ପାଣି ବୋତଲ ମେଡ଼ିସିନ ଓ କ୍ଷୀରକୁ ବାଦ ଦିଆଯାଇଛି",
+   "verdict": "correct"
+  },
+  {
+   "native": "ପାର୍ସଲ",
+   "en": "parcel",
+   "path": "lexicon",
+   "row": 6568,
+   "context": "ଜବତ କାଗଜ ଭିତରେ ରାୟପୁରରୁ ପାର୍ସଲ ପଠାଇବା ବେଳେ କୋରିଅର ସଂସ୍ଥା",
+   "verdict": "correct"
+  },
+  {
+   "native": "ସୋସିଆଲ",
+   "en": "social",
+   "path": "lexicon",
+   "row": 2022,
+   "context": "ଏହା ପ୍ରକାଶ କରିଛନ୍ତି ଯାହା ସୋସିଆଲ ମିଡିଆରେ ଭାଇରାଲ ହେବାରେ ଲାଗିଛି",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 100.0
+}

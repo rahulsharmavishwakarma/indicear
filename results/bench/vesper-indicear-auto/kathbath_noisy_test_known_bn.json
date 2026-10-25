@@ -1,0 +1,134 @@
+{
+  "bn": {
+    "wer": 56.14,
+    "cer": 25.54,
+    "utterances": 300,
+    "words": 3299,
+    "script_error_rate": 10.48,
+    "wer_script_normalised": 54.71,
+    "cer_script_normalised": 23.7,
+    "rows_with_alternative_ref": 70,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.56
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 98.33,
+    "macro_f1": 99.16,
+    "per_lang": {
+      "bn": {
+        "precision": 100.0,
+        "recall": 98.33,
+        "f1": 99.16,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "bn": {
+        "bn": 295,
+        "en": 1,
+        "or": 4
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 56,
+        "accuracy": 96.43
+      },
+      "5-10s": {
+        "utterances": 222,
+        "accuracy": 98.65
+      },
+      "10-20s": {
+        "utterances": 22,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_bn",
+  "utterances": 300,
+  "hours": 0.56,
+  "seconds": 21,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 202,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/bn/noisy_test_known/844424930534352-278-m",
+      "constrained": "বর্তাপুর নিয়ে ভারত হাতে চূড়ান্ত খসলা চুক্তি তুল দিল পাকি anন",
+      "unconstrained": "वর্তাপুর নিয়ে ভারত হাতে চূড়ান্ত খসলা চুক্তি তুল দিল পাকিanান",
+      "hinted": "বর্তাপুর নিয়ে ভারত হাতে চূড়ান্ত খসলা চুক্তি তুল দিল পাকি anন"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_known/844424931089064-956-f",
+      "constrained": "যেল eld স্প্যানিশ মধ্যে tilld ব্যবহার সঙ্গে কোন স্পষ্ট সরাসরি সংযোগ আছে",
+      "unconstrained": "ਜੀলeld স্প্যানিশ মধ্যে tilld ব্যবহার সঙ্গে কোন স্পষ্ট সরাসরি সংযোগ আছে",
+      "hinted": "যেল eld স্প্যানিশ মধ্যে tilld ব্যবহার সঙ্গে কোন স্পষ্ট সরাসরি সংযোগ আছে"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_known/844424930651019-278-m",
+      "constrained": "এ বিষয় জানতে চা হলে এসির অতিরিক্ত সচিব মো",
+      "unconstrained": "हे বিষয় জানতে চা হলে এসির অতিরিক্ত সচিব মো",
+      "hinted": "এ বিষয় জানতে চা হলে এসির অতিরিক্ত সচিব মো"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_known/844424932816120-1174-m",
+      "constrained": "আগে গত বছর চার november ନିହାତିତ ନାଇଁାଇୂଲ ଆପ୍ରାରେରେ ବାବା ମୋହ",
+      "unconstrained": "ஏಗೆ গত বছর চার november ନିହାତିତ ନାଇଁାଇୂଲ ଆପ୍ରାରେରେ ବାବା ମୋହ",
+      "hinted": "আগে গত বছর চার november নিহ নাইূল বাবা মো"
+    },
+    {
+      "key": "kathbath_test/bn/noisy_test_known/844424930585157-278-m",
+      "constrained": "সেখান থেকে ফি অবশে ম্যা ch জতে নেন না না",
+      "unconstrained": "সেখান থেকে ফি অবশে ম্যাchিতে নেন না না",
+      "hinted": "সেখান থেকে ফি অবশে ম্যা ch জতে নেন না না"
+    }
+  ]
+}

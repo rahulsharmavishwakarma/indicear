@@ -1,0 +1,274 @@
+{
+  "kind": "eval",
+  "system": "sravaani",
+  "set": "fleurs_dev",
+  "condition": null,
+  "notes": "",
+  "utterances": 3179,
+  "hours": 9.607,
+  "metrics": {
+    "tdt": {
+      "all": {
+        "wer": 18.06,
+        "cer": 5.9,
+        "utterances": 3179,
+        "words": 55312,
+        "script_error_rate": 0.12,
+        "wer_script_normalised": 18.06,
+        "cer_script_normalised": 5.9,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 176,
+        "cm_spans": 571,
+        "cm_span_accuracy": 57.97,
+        "cm_span_cer_mean": 80.43,
+        "cm_span_accuracy_by_lang": {
+          "bn": 100.0,
+          "en": 0.0,
+          "gu": 100.0,
+          "hi": 100.0,
+          "kn": 97.37,
+          "ml": 100.0,
+          "mr": 94.12,
+          "or": 98.18,
+          "ta": 100.0,
+          "te": 95.61
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 9.607
+      },
+      "bn": {
+        "wer": 13.58,
+        "cer": 3.74,
+        "utterances": 300,
+        "words": 5207,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 13.58,
+        "cer_script_normalised": 3.74,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 12,
+        "cm_spans": 30,
+        "cm_span_accuracy": 60.0,
+        "cm_span_cer_mean": 65.13,
+        "cm_span_accuracy_by_lang": {
+          "bn": 100.0,
+          "en": 0.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.997
+      },
+      "en": {
+        "wer": 22.31,
+        "cer": 10.14,
+        "utterances": 300,
+        "words": 6086,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 22.31,
+        "cer_script_normalised": 10.14,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "hours": 0.769
+      },
+      "gu": {
+        "wer": 16.95,
+        "cer": 4.9,
+        "utterances": 300,
+        "words": 5816,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 16.95,
+        "cer_script_normalised": 4.9,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 9,
+        "cm_spans": 27,
+        "cm_span_accuracy": 66.67,
+        "cm_span_cer_mean": 59.53,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "gu": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.791
+      },
+      "hi": {
+        "wer": 12.03,
+        "cer": 5.46,
+        "utterances": 234,
+        "words": 5210,
+        "script_error_rate": 1.0,
+        "wer_script_normalised": 12.03,
+        "cer_script_normalised": 5.46,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 6,
+        "cm_spans": 25,
+        "cm_span_accuracy": 56.0,
+        "cm_span_cer_mean": 97.51,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "hi": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.68
+      },
+      "kn": {
+        "wer": 18.66,
+        "cer": 5.49,
+        "utterances": 300,
+        "words": 4158,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 18.66,
+        "cer_script_normalised": 5.49,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 21,
+        "cm_spans": 61,
+        "cm_span_accuracy": 60.66,
+        "cm_span_cer_mean": 77.48,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "kn": 97.37
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.977
+      },
+      "ml": {
+        "wer": 17.38,
+        "cer": 4.26,
+        "utterances": 300,
+        "words": 3884,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 17.38,
+        "cer_script_normalised": 4.26,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 2,
+        "cm_spans": 6,
+        "cm_span_accuracy": 66.67,
+        "cm_span_cer_mean": 105.8,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "ml": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 1.028
+      },
+      "mr": {
+        "wer": 18.05,
+        "cer": 5.39,
+        "utterances": 300,
+        "words": 5142,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 18.05,
+        "cer_script_normalised": 5.39,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 21,
+        "cm_spans": 84,
+        "cm_span_accuracy": 57.14,
+        "cm_span_cer_mean": 65.76,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "mr": 94.12
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.995
+      },
+      "or": {
+        "wer": 19.4,
+        "cer": 5.15,
+        "utterances": 300,
+        "words": 5259,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 19.4,
+        "cer_script_normalised": 5.15,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 33,
+        "cm_spans": 97,
+        "cm_span_accuracy": 55.67,
+        "cm_span_cer_mean": 98.17,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "or": 98.18
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.892
+      },
+      "pa": {
+        "wer": 16.46,
+        "cer": 5.98,
+        "utterances": 245,
+        "words": 5516,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 16.46,
+        "cer_script_normalised": 5.98,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "hours": 0.707
+      },
+      "ta": {
+        "wer": 23.07,
+        "cer": 7.76,
+        "utterances": 300,
+        "words": 4357,
+        "script_error_rate": 0.34,
+        "wer_script_normalised": 23.07,
+        "cer_script_normalised": 7.76,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 19,
+        "cm_spans": 48,
+        "cm_span_accuracy": 60.42,
+        "cm_span_cer_mean": 81.57,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "ta": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.91
+      },
+      "te": {
+        "wer": 21.4,
+        "cer": 6.29,
+        "utterances": 300,
+        "words": 4677,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 21.4,
+        "cer_script_normalised": 6.29,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 53,
+        "cm_spans": 193,
+        "cm_span_accuracy": 56.48,
+        "cm_span_cer_mean": 80.85,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "te": 95.61
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.86
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ARTPARK-IISc/SraVaani-1.0",
+    "revision": "f5dd5358325a5208775b91dad98918e079ea2b27",
+    "decoder": "tdt",
+    "notes": "repo code modeling_sravaani.py (TorchScript + greedy TDT); automatic language; no Urdu",
+    "languages_scored": [
+      "bn",
+      "en",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te"
+    ]
+  }
+}

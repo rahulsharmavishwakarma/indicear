@@ -1,0 +1,33 @@
+[17:35:27] python 3.14.8, GIL off
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[17:35:51] hi: train 2047 (6.2 h)
+[17:36:32] mr: train 2997 (10.2 h)
+[17:37:08] bn: train 2789 (9.3 h)
+[17:37:30] pa: train 1831 (5.8 h)
+[17:38:02] gu: train 3095 (8.6 h)
+[17:38:22] or: train 1050 (3.2 h)
+[17:38:48] ur: train 1996 (6.3 h)
+[17:39:18] ta: train 2179 (7.4 h)
+[17:39:46] te: train 2181 (7.1 h)
+[17:40:15] kn: train 2129 (7.3 h)
+[17:40:53] ml: train 2868 (8.9 h)
+[17:41:19] en: train 2550 (7.1 h)
+[17:42:39] lang  tok/s p95 tok/s max unit/s p95 unit/s max (frames: 25/s)
+[17:42:39] bn          6.0       9.5       13.4       30.9
+[17:42:39] en          6.4       8.3       14.2       16.6
+[17:42:39] gu          7.3       9.6       15.5       19.9
+[17:42:39] WARNING gu: phonetic units at p95 exceed 60% of the frame rate
+[17:42:39] hi          6.5       9.8       16.0       19.2
+[17:42:39] WARNING hi: phonetic units at p95 exceed 60% of the frame rate
+[17:42:39] kn          5.7      15.8       13.9       39.7
+[17:42:39] ml          7.5      13.7       16.8       21.9
+[17:42:39] WARNING ml: phonetic units at p95 exceed 60% of the frame rate
+[17:42:39] mr          5.8       9.2       14.4       18.0
+[17:42:39] or          5.9       7.4       15.6       19.9
+[17:42:39] WARNING or: phonetic units at p95 exceed 60% of the frame rate
+[17:42:39] pa          5.7       7.4       15.6       18.4
+[17:42:39] WARNING pa: phonetic units at p95 exceed 60% of the frame rate
+[17:42:39] ta          5.6      32.9       15.2      117.1
+[17:42:39] WARNING ta: phonetic units at p95 exceed 60% of the frame rate
+[17:42:39] te          5.8      61.1       13.5      173.6
+[17:42:39] ur          6.0      10.7       13.1       24.6

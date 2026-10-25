@@ -1,0 +1,93 @@
+{
+  "ur": {
+    "wer": 100.15,
+    "cer": 74.83,
+    "utterances": 300,
+    "words": 3272,
+    "script_error_rate": 79.91,
+    "wer_script_normalised": 98.11,
+    "cer_script_normalised": 71.41,
+    "rows_with_alternative_ref": 97,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.492
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 29.67,
+    "macro_f1": 45.76,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 29.67,
+        "f1": 45.76,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ur": {
+        "hi": 204,
+        "mr": 1,
+        "pa": 6,
+        "ur": 89
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 204,
+        "hi_utterances": 0,
+        "ur_utterances": 300,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 68.0
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 75,
+        "accuracy": 20.0
+      },
+      "5-10s": {
+        "utterances": 225,
+        "accuracy": 32.89
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_ur",
+  "utterances": 300,
+  "hours": 0.49,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

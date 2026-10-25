@@ -1,0 +1,132 @@
+{
+  "kn": {
+    "wer": 61.05,
+    "cer": 20.76,
+    "utterances": 300,
+    "words": 3304,
+    "script_error_rate": 5.16,
+    "wer_script_normalised": 60.38,
+    "cer_script_normalised": 19.97,
+    "rows_with_alternative_ref": 35,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.705
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "kn": {
+        "kn": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 8,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 222,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 70,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_kn",
+  "utterances": 300,
+  "hours": 0.7,
+  "seconds": 25,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 213,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933382446-309-m",
+      "constrained": "ರಯಚೂರಿನ ನೂುವುದ ವಂಶಕ್ಕೆ ಸಂಬಂಧಧಪಟ್ಟಹದ್ ಖಾದರಿ ಎಂಬದ ಅನೇಕ ಧಾರ್ಮಿಕ ಗ್ರಂಥಗಳನ್ನು ಉರ್ಧುವಿನಲ್ಲಿ ರಚಿಸಿದ",
+      "unconstrained": "రాಯಚూరిన నూುವುದయా ವంಶಕ್ಕೆ ಸಂಬಂಧಧಪಟ್ಟಹहದ್ ಖಾದರಿ ಎಂಬದ ಅನೇಕ ಧಾರ್ಮಿಕ ಗ್ರಂಥಗಳನ್ನು ಉರ್ಧುವಿನಲ್ಲಿ ರಚಿಸಿದ",
+      "hinted": "ರಯಚೂರಿನ ನೂುವುದ ವಂಶಕ್ಕೆ ಸಂಬಂಧಧಪಟ್ಟಹದ್ ಖಾದರಿ ಎಂಬದ ಅನೇಕ ಧಾರ್ಮಿಕ ಗ್ರಂಥಗಳನ್ನು ಉರ್ಧುವಿನಲ್ಲಿ ರಚಿಸಿದ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930725341-609-f",
+      "constrained": "ಪ್ರೃತಿ ಶಿಭರದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಭಂಧ ಸ್ಪರ್ಧೆ ಮತ್ತು ಚಿಕ್ರ ಕಲಾ ಸ್ಪರ್ಧಿಗಳು ಜರಿಗೆಗಿದವು",
+      "unconstrained": "प्रਕ ప్రకృతి ಶिಭರದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಭಂಧ ಸ್ಪರ್ಧೆ ಮತ್ತು ಚಿಕ್ರ ಕಲಾ ಸ್ಪರ್ಧಿಗಳು ಜರಿಗೆಗಿದವು",
+      "hinted": "ಪ್ರೃತಿ ಶಿಭರದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಭಂಧ ಸ್ಪರ್ಧೆ ಮತ್ತು ಚಿಕ್ರ ಕಲಾ ಸ್ಪರ್ಧಿಗಳು ಜರಿಗೆಗಿದವು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930669737-1144-f",
+      "constrained": "ಕಾ ವ ಮಾಡಿಿರುವಂತೆ ಅನುಷಕಾ ಶರ್ಮ ಮತ್ತು ಕ cricket ವಿರಾಟ್ ಕೊಹಿಲಿೊಂದಾಗುವುದುಾಧ",
+      "unconstrained": "काम వதி ಮಾಡಿಿರುವಂತೆ ಅನುಷಕಾ ಶರ್ಮ ಮತ್ತು ಕ cricket ವಿರಾಟ್ ಕೊಹಿಲಿೊಂದಾಗುವುದುಾಧ",
+      "hinted": "ಕಾ ವ ಮಾಡಿಿರುವಂತೆ ಅನುಷಕಾ ಶರ್ಮ ಮತ್ತು ಕ cricket ವಿರಾಟ್ ಕೊಹಿಲಿೊಂದಾಗುವುದುಾಧ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930442377-734-f",
+      "constrained": "ವ ಅಧಕ್ಷ ಸ್ಥಾನದಿಂದ ನಟಿರ್ತಿ ಕೆ ಇಳಿದ ಮೇಲೆ ಬೆಳಳ್ಳ ತೆರೆರಿಗೆ ಮತ್ತೆ ಮರಳಿಿದ್ದರು",
+      "unconstrained": "హ महिलाళ అభివృద్ధిಿವ దీనినిగమంద అధ్యయక్ష ಸ್ಥಾನದಿಂದ ನಟಿರ್ತಿ ಕೆ ಇಳಿದ ಮೇಲೆ ಬೆಳಳ್ಳ ತೆರೆರಿಗೆ ಮತ್ತೆ ಮರಳಿಿದ್ದರು",
+      "hinted": "ವ ಅಧಕ್ಷ ಸ್ಥಾನದಿಂದ ನಟಿರ್ತಿ ಕೆ ಇಳಿದ ಮೇಲೆ ಬೆಳಳ್ಳ ತೆರೆರಿಗೆ ಮತ್ತೆ ಮರಳಿಿದ್ದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424931145050-991-f",
+      "constrained": "star ಆಟ ಹೆಚ್ಚು ನಂಬಿಕೊಂಡರಿರುವುದು ಟೀಂ ಇಂಡಯದ ಬಿಗ್ ವೀ kness point ಆಗಿದೆ",
+      "unconstrained": "star ఆటగాగరరన్న ಹೆಚ್ಚು ನಂಬಿಕೊಂಡರಿರುವುದು ಟೀಂ ಇಂಡಯದ ಬಿಗ್ ವೀkness point ಆಗಿದೆ",
+      "hinted": "star ಆಟ ಹೆಚ್ಚು ನಂಬಿಕೊಂಡರಿರುವುದು ಟೀಂ ಇಂಡಯದ ಬಿಗ್ ವೀ kness point ಆಗಿದೆ"
+    }
+  ]
+}

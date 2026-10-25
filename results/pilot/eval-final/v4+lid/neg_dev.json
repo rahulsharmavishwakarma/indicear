@@ -1,0 +1,33 @@
+{
+  "kind": "eval",
+  "system": "v4+lid",
+  "set": "neg_dev",
+  "condition": null,
+  "notes": "",
+  "utterances": 100,
+  "hours": 0.12,
+  "metrics": {
+    "ctc": {
+      "negatives": {
+        "clips": 100,
+        "false_output_rate": 0.0,
+        "words_per_clip": 0.0
+      }
+    }
+  },
+  "lid": {
+    "utterance": {
+      "utterances": 0,
+      "accuracy": null,
+      "macro_f1": null
+    }
+  },
+  "environment": {
+    "runtime": "python 3.14.8, GIL off",
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "encoder": "google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd"
+  },
+  "frame_budget": 67045
+}

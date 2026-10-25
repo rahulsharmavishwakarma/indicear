@@ -1,0 +1,133 @@
+{
+  "pa": {
+    "wer": 40.13,
+    "cer": 20.03,
+    "utterances": 300,
+    "words": 3471,
+    "script_error_rate": 6.91,
+    "wer_script_normalised": 37.94,
+    "cer_script_normalised": 17.02,
+    "rows_with_alternative_ref": 87,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.513
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "pa": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "pa": {
+        "hi": 1,
+        "pa": 299
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 1,
+        "hi->pa": 0,
+        "pa_utterances": 300,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": 0.33,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 95,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 187,
+        "accuracy": 99.47
+      },
+      "10-20s": {
+        "utterances": 18,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_pa",
+  "utterances": 300,
+  "hours": 0.51,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 159,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/pa/noisy_test_known/844424931558760-594-f",
+      "constrained": "oਮਣ committee ਵੱਲੋਂ cancer ਭ ਪੀੜਤ ਨੂੰ ਸਹਾਇਤਾ ਰਾਸ਼ੀ ਜਾਰੀ",
+      "unconstrained": "੍ਰੋਮਣ committee ਵੱਲੋਂ cancer ਭ ਪੀੜਤ ਨੂੰ ਸਹਾਇਤਾ ਰਾਸ਼ੀ ਜਾਰੀ",
+      "hinted": "oਮਣ committee ਵੱਲੋਂ cancer ਭ ਪੀੜਤ ਨੂੰ ਸਹਾਇਤਾ ਰਾਸ਼ੀ ਜਾਰੀ"
+    },
+    {
+      "key": "kathbath_test/pa/noisy_test_known/844424933625609-500-m",
+      "constrained": "ਇਸ ਤਰ੍ਹਾਂ ਕਿਲੇ ਦੇ ਆਲੇ ਦੁਆਲੇ ਦੁਆਲੇ ਦਿਨੋਂ ਦਿਨ ਵਸ ਵੱਧ ਦੀ ਗਈ",
+      "unconstrained": "इस ਤਰ੍ਹਾਂ ਕਿਲੇ ਦੇ ਆਲੇ ਦੁਆਲੇ ਦੁਆਲੇ ਦਿਨੋਂ ਦਿਨ وਸ ਵੱਧ ਦੀ ਗਈ",
+      "hinted": "ਇਸ ਤਰ੍ਹਾਂ ਕਿਲੇ ਦੇ ਆਲੇ ਦੁਆਲੇ ਦੁਆਲੇ ਦਿਨੋਂ ਦਿਨ ਵਸ ਵੱਧ ਦੀ ਗਈ"
+    },
+    {
+      "key": "kathbath_test/pa/noisy_test_known/844424933128735-703-f",
+      "constrained": "ਇੱਕ ਮਨ ਰੋਮਨਟਿਕ ਮਨਦਸ਼ਾ ਅਧੁਤੀ class ਅਤੇ p s water fows p ਕੀਤਾ ਜਾਵੇਗਾ",
+      "unconstrained": "ਇੱਕ ਮਨ ਰੋਮਨਟਿਕ ਮਨਦਸ਼ਾ ਅਧੁਤੀ class ਅਤੇ p s water fows ద్వారా p की जागा",
+      "hinted": "ਇੱਕ ਮਨ ਰੋਮਨਟਿਕ ਮਨਦਸ਼ਾ ਅਧੁਤੀ class ਅਤੇ p s water fows p ਕੀਤਾ ਜਾਵੇਗਾ"
+    },
+    {
+      "key": "kathbath_test/pa/noisy_test_known/844424931453015-594-f",
+      "constrained": "ਹਵਾ ਸਾਫ ਕਰਨ ਵਾਲੇ ਯੰਤਰਾ ਨਾਲ ਪ੍ਰਦੂਸ਼ਣ ਦੇ ਮਾੜੇੇ ਪ੍ਰਭਾਵ ਤੋਂ ਨਹੀਂ ਜਾ ਸਕਦਾ ਬੱਚਿਆਂ",
+      "unconstrained": "हवा ਸਾਫ ਕਰਨ ਵਾਲੇ ਯੰਤਰਾ ਨਾਲ ਪ੍ਰਦੂਸ਼ਣ ਦੇ माडे ਪ੍ਰਭਾਵ तो नहीं जा सकता बच्चा",
+      "hinted": "ਹਵਾ ਸਾਫ ਕਰਨ ਵਾਲੇ ਯੰਤਰਾ ਨਾਲ ਪ੍ਰਦੂਸ਼ਣ ਦੇ ਮਾੜੇੇ ਪ੍ਰਭਾਵ ਤੋਂ ਨਹੀਂ ਜਾ ਸਕਦਾ ਬੱਚਿਆਂ"
+    },
+    {
+      "key": "kathbath_test/pa/noisy_test_known/844424930886818-1031-f",
+      "constrained": "ਸਬਜ਼ੀ ਦੇ ਨਾਲ ਓਵਨ ਵਿੱਚ ਸਿਬਾਸ ਮੱਛੀ ਦਾ ਸੁਆਦਲਾ",
+      "unconstrained": "सब ਸਬਜ਼ੀ ਦੇ ਨਾਲ ਓਵਨ ਵਿੱਚ ਸਿਬਾਸ ਮੱਛੀ ਦਾ ਸੁਆਦਲਾ",
+      "hinted": "ਸਬਜ਼ੀ ਦੇ ਨਾਲ ਓਵਨ ਵਿੱਚ ਸਿਬਾਸ ਮੱਛੀ ਦਾ ਸੁਆਦਲਾ"
+    }
+  ]
+}

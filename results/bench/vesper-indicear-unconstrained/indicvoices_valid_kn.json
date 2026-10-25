@@ -1,0 +1,107 @@
+{
+  "kn": {
+    "wer": 59.1,
+    "cer": 24.35,
+    "utterances": 300,
+    "words": 3888,
+    "script_error_rate": 4.91,
+    "wer_script_normalised": 59.1,
+    "cer_script_normalised": 24.31,
+    "rows_with_alternative_ref": 196,
+    "cm_utterances": 195,
+    "cm_spans": 984,
+    "cm_span_accuracy": 82.83,
+    "cm_span_cer_mean": 28.96,
+    "cm_span_accuracy_by_lang": {
+      "en": 83.92,
+      "kn": 81.98
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.528
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 95.0,
+    "macro_f1": 97.44,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 95.0,
+        "f1": 97.44,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "kn": {
+        "gu": 3,
+        "kn": 285,
+        "ml": 1,
+        "mr": 2,
+        "or": 2,
+        "ta": 2,
+        "te": 5
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 56,
+        "accuracy": 73.21
+      },
+      "2-5s": {
+        "utterances": 75,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 110,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 59,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_kn",
+  "utterances": 300,
+  "hours": 0.53,
+  "seconds": 25,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

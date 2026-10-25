@@ -1,0 +1,309 @@
+{
+ "name": "pilot",
+ "description": "PLAN.md phase 1: Hindi 200 h, Tamil 150 h, Kannada 150 h, English 100 h, code-switched 50 h (MUCS Hi-En + Vaani code-mixed rows), about 650 h. Indic: mostly spontaneous IndicVoices/Vaani plus Kathbath read speech. English: LibriSpeech, People's Speech (CC BY), VoxPopuli and Vaani Indian English.",
+ "seed": 0,
+ "min_seconds": 0.5,
+ "max_seconds": 20.0,
+ "dev": {
+  "fraction": 0.02,
+  "min_hours_per_lang": 0.5,
+  "max_hours_per_lang": 2.0
+ },
+ "sampling": {
+  "alpha": 0.5,
+  "max_share": {
+   "hi": 0.25
+  },
+  "min_share": {
+   "cs": 0.08
+  }
+ },
+ "code_switched_target_hours": 50,
+ "train": [
+  {
+   "source": "indicvoices",
+   "lang": "hi",
+   "split": "train",
+   "hours": 100
+  },
+  {
+   "source": "vaani",
+   "lang": "hi",
+   "split": "train",
+   "hours": 70
+  },
+  {
+   "source": "kathbath",
+   "lang": "hi",
+   "split": "train",
+   "hours": 30
+  },
+  {
+   "source": "indicvoices",
+   "lang": "ta",
+   "split": "train",
+   "hours": 113
+  },
+  {
+   "source": "vaani",
+   "lang": "ta",
+   "split": "train",
+   "hours": 12
+  },
+  {
+   "source": "kathbath",
+   "lang": "ta",
+   "split": "train",
+   "hours": 25
+  },
+  {
+   "source": "indicvoices",
+   "lang": "kn",
+   "split": "train",
+   "hours": 80
+  },
+  {
+   "source": "vaani",
+   "lang": "kn",
+   "split": "train",
+   "hours": 45
+  },
+  {
+   "source": "kathbath",
+   "lang": "kn",
+   "split": "train",
+   "hours": 25
+  },
+  {
+   "source": "librispeech",
+   "lang": "en",
+   "split": "train.other.500",
+   "hours": 15
+  },
+  {
+   "source": "librispeech",
+   "lang": "en",
+   "split": "train.clean.360",
+   "hours": 15
+  },
+  {
+   "source": "peoples_speech",
+   "lang": "en",
+   "split": "train",
+   "hours": 30
+  },
+  {
+   "source": "voxpopuli",
+   "lang": "en",
+   "split": "train",
+   "hours": 26
+  },
+  {
+   "source": "vaani",
+   "lang": "en",
+   "split": "train",
+   "hours": 14
+  },
+  {
+   "source": "mucs",
+   "lang": "hi",
+   "split": "train",
+   "hours": 30
+  },
+  {
+   "source": "vaani",
+   "lang": "hi",
+   "split": "train",
+   "hours": 12,
+   "code_mixed_only": true
+  },
+  {
+   "source": "vaani",
+   "lang": "kn",
+   "split": "train",
+   "hours": 8,
+   "code_mixed_only": true
+  }
+ ],
+ "eval": [
+  {
+   "name": "kathbath_clean_test_known_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "vaani_test_hi",
+   "source": "vaani",
+   "lang": "hi",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_ta",
+   "source": "vaani",
+   "lang": "ta",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_kn",
+   "source": "vaani",
+   "lang": "kn",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_en",
+   "source": "vaani",
+   "lang": "en",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "svarah",
+   "source": "svarah",
+   "lang": "en",
+   "split": "test"
+  },
+  {
+   "name": "lahaja",
+   "source": "lahaja",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "vaani_benchmark",
+   "source": "vaani_benchmark",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "mucs_test_hi",
+   "source": "mucs",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "mucs_blind_hi",
+   "source": "mucs",
+   "lang": "hi",
+   "split": "blind"
+  },
+  {
+   "name": "librispeech_test_clean",
+   "source": "librispeech",
+   "lang": "en",
+   "split": "test.clean"
+  },
+  {
+   "name": "librispeech_test_other",
+   "source": "librispeech",
+   "lang": "en",
+   "split": "test.other"
+  },
+  {
+   "name": "voxpopuli_test",
+   "source": "voxpopuli",
+   "lang": "en",
+   "split": "test"
+  },
+  {
+   "name": "voxpopuli_accented",
+   "source": "voxpopuli",
+   "lang": "en",
+   "split": "accented_test",
+   "hours": 5
+  },
+  {
+   "name": "indicvoices_valid_hi",
+   "source": "indicvoices",
+   "lang": "hi",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_ta",
+   "source": "indicvoices",
+   "lang": "ta",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_kn",
+   "source": "indicvoices",
+   "lang": "kn",
+   "split": "valid"
+  },
+  {
+   "name": "indiccontext_hi",
+   "source": "indiccontext_eval",
+   "lang": "hi",
+   "split": "test"
+  }
+ ]
+}

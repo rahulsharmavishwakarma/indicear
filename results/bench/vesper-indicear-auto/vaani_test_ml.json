@@ -1,0 +1,133 @@
+{
+  "ml": {
+    "wer": 64.6,
+    "cer": 29.26,
+    "utterances": 300,
+    "words": 2808,
+    "script_error_rate": 0.85,
+    "wer_script_normalised": 64.25,
+    "cer_script_normalised": 28.72,
+    "rows_with_alternative_ref": 211,
+    "cm_utterances": 210,
+    "cm_spans": 846,
+    "cm_span_accuracy": 67.73,
+    "cm_span_cer_mean": 47.97,
+    "cm_span_accuracy_by_lang": {
+      "en": 62.43,
+      "ml": 71.4
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.433
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.33,
+    "macro_f1": 99.67,
+    "per_lang": {
+      "ml": {
+        "precision": 100.0,
+        "recall": 99.33,
+        "f1": 99.67,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ml": {
+        "ml": 298,
+        "ta": 1,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 165,
+        "accuracy": 98.79
+      },
+      "5-10s": {
+        "utterances": 135,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_ml",
+  "utterances": 300,
+  "hours": 0.43,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 180,
+  "changed_examples": [
+    {
+      "key": "vaani/ml/test/IISc_VaaniProject_M_Kerala_Kasaragod_ARCH41789_41789085719000094004_GENERIC_1197_12370_15220",
+      "constrained": "i ഒര ഒരാളളെന്ന് പറയുന്നത് phone വിളിച്ച കൊണ്ട്് ന",
+      "unconstrained": "એટલે ഒര ഒരാളളെന്ന് പറയുന്നത് phone വിളിച്ച കൊണ്ട്് ന",
+      "hinted": "i ഒര ഒരാളളെന്ന് പറയുന്നത് phone വിളിച്ച കൊണ്ട്് ന"
+    },
+    {
+      "key": "vaani/ml/test/IISc_VaaniProject_M_Kerala_Kasaragod_ARCH41789_41789102918000094004_GENERIC_1233_230_4790",
+      "constrained": "ചിത്രത്തിൽ ഒരു barber shopത് barber shop ഇടകൊണ്ടള മുട്ടി മുറുണ്ട്",
+      "unconstrained": "चित्र ഒരു barber shopുള്ളത്ത് barber shop ഇടകൊണ്ടള മുട്ടി മുറുണ്ട്",
+      "hinted": "ചിത്രത്തിൽ ഒരു barber shopത് barber shop ഇടകൊണ്ടള മുട്ടി മുറുണ്ട്"
+    },
+    {
+      "key": "vaani/ml/test/IISc_VaaniProject_M_Kerala_Kasaragod_ARCH41789_41789103122000094004_GENERIC_0803_3450_7660",
+      "constrained": "താഴെ കൂടെ പു ഒഴവുന്നുണ്ട് അതിന മുകളിലായിട്ട് തെളിഞ്ഞാകകഷവും",
+      "unconstrained": "का కూడా പു ഒഴവുന്നുണ്ട് അതിന മുകളിലായിട്ട് തെളിഞ്ഞാകകഷവും",
+      "hinted": "താഴെ കൂടെ പു ഒഴവുന്നുണ്ട് അതിന മുകളിലായിട്ട് തെളിഞ്ഞാകകഷവും"
+    },
+    {
+      "key": "vaani/ml/test/IISc_VaaniProject_M_Kerala_Kasaragod_ARCH41789_41789104402000094004_GENERIC_0667_5100_8160",
+      "constrained": "ളങ്ങനെ മെ വെള്ളേ ഇഴഞ്ഞ്ീങ്ങുന്ന ജീവയാണ്",
+      "unconstrained": "ാങ്ങനെ മെ വെള്ളേ ഇഴഞ്ഞ്ീങ്ങുന്ന ജീവയാണ്",
+      "hinted": "ളങ്ങനെ മെ വെള്ളേ ഇഴഞ്ഞ്ീങ്ങുന്ന ജീവയാണ്"
+    },
+    {
+      "key": "vaani/ml/test/IISc_VaaniProject_M_Kerala_Kasaragod_ARCH41789_41789104938000094004_Kasaragod-SPECIFIC_00118_13840_17460",
+      "constrained": "d s ബദ് general store എന്നാണ് സ്റ്റോറിൻ്റെ പേര",
+      "unconstrained": "d s बദ്िया general store എന്നാണ് സ്റ്റോറിൻ്റെ പേര",
+      "hinted": "d s ബദ് general store എന്നാണ് സ്റ്റോറിൻ്റെ പേര"
+    }
+  ]
+}

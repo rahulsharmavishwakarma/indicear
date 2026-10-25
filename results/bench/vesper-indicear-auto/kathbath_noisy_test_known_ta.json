@@ -1,0 +1,132 @@
+{
+  "ta": {
+    "wer": 60.99,
+    "cer": 16.71,
+    "utterances": 300,
+    "words": 3212,
+    "script_error_rate": 2.17,
+    "wer_script_normalised": 60.74,
+    "cer_script_normalised": 16.5,
+    "rows_with_alternative_ref": 18,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.576
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ta": {
+        "ta": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 42,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 234,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 24,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_ta",
+  "utterances": 300,
+  "hours": 0.58,
+  "seconds": 22,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 151,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ta/noisy_test_known/844424930740988-793-f",
+      "constrained": "தெ செய்யப்பட்ட பிரதேச செயலக பிரிவுகளில் பல்நோக்கக்கு பொருளாதார ஆலோசனை சேவை நிலை எ அமைக்குப்படுவதல் நோக்கங்கள்",
+      "unconstrained": "తిరిగి செய்யப்பட்ட பிரதேச செயலக பிரிவுகளில் பல்நோக்கக்கு பொருளாதார ஆலோசனை சேவை நிலை எ அமைக்குப்படுவதல் நோக்கங்கள்",
+      "hinted": "தெ செய்யப்பட்ட பிரதேச செயலக பிரிவுகளில் பல்நோக்கக்கு பொருளாதார ஆலோசனை சேவை நிலை எ அமைக்குப்படுவதல் நோக்கங்கள்"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_known/844424933292693-686-m",
+      "constrained": "ச சம புள்ள விபரம் கூட செறிவு மிக அதிக வேகத்தில் உயர் வரரைக் காட்டிுகிறது",
+      "unconstrained": "సమపధ్యయುுள்ள விபరం கூட செறிவு மிக அதிக வேகத்தில் உயர் வரரைக் காட்டிுகிறது",
+      "hinted": "ச சம புள்ள விபரம் கூட செறிவு மிக அதிக வேகத்தில் உயர் வரரைக் காட்டிுகிறது"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_known/844424932814499-154-f",
+      "constrained": "தீவிரவாதிகள் பிண கைதிகளை அடைத்து வைத்திருக்கு இடம் தெரியாததால் மீட்பு பணிகளில் இறங்க முடியாது என்றும் பிரிட்டன் கூறியுள்ளது",
+      "unconstrained": "ತೀವ್రவாதிகள் பிண கைதிகளை அடைத்து வைத்திருக்கு இடம் தெரியாததால் மீட்பு பணிகளில் இறங்க முடியாது என்றும் பிரிட்டன் கூறியுள்ளது",
+      "hinted": "தீவிரவாதிகள் பிண கைதிகளை அடைத்து வைத்திருக்கு இடம் தெரியாததால் மீட்பு பணிகளில் இறங்க முடியாது என்றும் பிரிட்டன் கூறியுள்ளது"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_known/844424930796624-507-f",
+      "constrained": "பிரபடிகர் மீ நடிகர் சங்கத்தில் புகார் அளித்த இயக்குனர்ங்க",
+      "unconstrained": "ప్రభల నడిகர் మీద நடிகர் சங்கத்தில் புகார் அளித்த இயக்குனர்ங்க",
+      "hinted": "பிரபடிகர் மீ நடிகர் சங்கத்தில் புகார் அளித்த இயக்குனர்ங்க"
+    },
+    {
+      "key": "kathbath_test/ta/noisy_test_known/844424932691089-80-f",
+      "constrained": "லவுனியா நகரர சபயில் ஊழியர்களால் வருத்தக நடவடிக்கையில் ஈடுபட்ட வருத்தர்களின் புறர்கள் பரிமுதல்",
+      "unconstrained": "ల ਲౌనియా నగర சபயில் ஊழியர்களால் வருத்தக நடவடிக்கையில் ஈடுபட்ட வருத்தர்களின் புறர்கள் பரிமுதல்",
+      "hinted": "லவுனியா நகரர சபயில் ஊழியர்களால் வருத்தக நடவடிக்கையில் ஈடுபட்ட வருத்தர்களின் புறர்கள் பரிமுதல்"
+    }
+  ]
+}

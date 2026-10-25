@@ -1,0 +1,89 @@
+{
+ "ta": {
+  "wer": 48.87,
+  "cer": 22.27,
+  "utterances": 600,
+  "words": 4721,
+  "script_error_rate": 3.3,
+  "wer_script_normalised": 48.63,
+  "rows_with_alternative_ref": 477,
+  "cm_utterances": 477,
+  "cm_spans": 1902,
+  "cm_span_accuracy": 80.28,
+  "cm_span_cer_mean": 28.05,
+  "cm_span_accuracy_by_lang": {
+   "en": 78.68,
+   "ta": 81.42
+  },
+  "span_cer_threshold": 0.5,
+  "hours": 0.588
+ },
+ "lid": {
+  "utterances": 600,
+  "accuracy": 99.67,
+  "macro_f1": 99.83,
+  "per_lang": {
+   "ta": {
+    "precision": 100.0,
+    "recall": 99.67,
+    "f1": 99.83,
+    "support": 600
+   }
+  },
+  "confusion": {
+   "ta": {
+    "kn": 2,
+    "ta": 598
+   }
+  },
+  "pairs": {
+   "hi/ur": {
+    "hi->ur": 0,
+    "ur->hi": 0,
+    "hi_utterances": 0,
+    "ur_utterances": 0,
+    "hi_as_ur_rate": null,
+    "ur_as_hi_rate": null
+   },
+   "hi/mr": {
+    "hi->mr": 0,
+    "mr->hi": 0,
+    "hi_utterances": 0,
+    "mr_utterances": 0,
+    "hi_as_mr_rate": null,
+    "mr_as_hi_rate": null
+   },
+   "pa/hi": {
+    "pa->hi": 0,
+    "hi->pa": 0,
+    "pa_utterances": 0,
+    "hi_utterances": 0,
+    "pa_as_hi_rate": null,
+    "hi_as_pa_rate": null
+   }
+  },
+  "by_duration": {
+   "0-2s": {
+    "utterances": 94,
+    "accuracy": 100.0
+   },
+   "2-5s": {
+    "utterances": 400,
+    "accuracy": 99.5
+   },
+   "5-10s": {
+    "utterances": 102,
+    "accuracy": 100.0
+   },
+   "10-20s": {
+    "utterances": 4,
+    "accuracy": 100.0
+   }
+  }
+ },
+ "eval_set": "vaani_test_ta",
+ "utterances": 600,
+ "hours": 0.59,
+ "seconds": 34,
+ "model": "~/workspace/sangam-models/pilot-v4lid-final"
+}

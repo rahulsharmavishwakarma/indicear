@@ -1,0 +1,91 @@
+{
+ "ta": {
+  "wer": 58.86,
+  "cer": 25.74,
+  "utterances": 4801,
+  "words": 59512,
+  "script_error_rate": 2.43,
+  "wer_script_normalised": 58.78,
+  "rows_with_alternative_ref": 2817,
+  "cm_utterances": 2645,
+  "cm_spans": 12285,
+  "cm_span_accuracy": 72.56,
+  "cm_span_cer_mean": 38.88,
+  "cm_span_accuracy_by_lang": {
+   "en": 66.54,
+   "ta": 77.34
+  },
+  "span_cer_threshold": 0.5,
+  "hours": 7.47
+ },
+ "lid": {
+  "utterances": 4801,
+  "accuracy": 96.71,
+  "macro_f1": 98.33,
+  "per_lang": {
+   "ta": {
+    "precision": 100.0,
+    "recall": 96.71,
+    "f1": 98.33,
+    "support": 4801
+   }
+  },
+  "confusion": {
+   "ta": {
+    "en": 2,
+    "hi": 22,
+    "kn": 134,
+    "ta": 4643
+   }
+  },
+  "pairs": {
+   "hi/ur": {
+    "hi->ur": 0,
+    "ur->hi": 0,
+    "hi_utterances": 0,
+    "ur_utterances": 0,
+    "hi_as_ur_rate": null,
+    "ur_as_hi_rate": null
+   },
+   "hi/mr": {
+    "hi->mr": 0,
+    "mr->hi": 0,
+    "hi_utterances": 0,
+    "mr_utterances": 0,
+    "hi_as_mr_rate": null,
+    "mr_as_hi_rate": null
+   },
+   "pa/hi": {
+    "pa->hi": 0,
+    "hi->pa": 0,
+    "pa_utterances": 0,
+    "hi_utterances": 0,
+    "pa_as_hi_rate": null,
+    "hi_as_pa_rate": null
+   }
+  },
+  "by_duration": {
+   "0-2s": {
+    "utterances": 1414,
+    "accuracy": 89.75
+   },
+   "2-5s": {
+    "utterances": 1056,
+    "accuracy": 98.77
+   },
+   "5-10s": {
+    "utterances": 1503,
+    "accuracy": 100.0
+   },
+   "10-20s": {
+    "utterances": 828,
+    "accuracy": 100.0
+   }
+  }
+ },
+ "eval_set": "indicvoices_valid_ta",
+ "utterances": 4801,
+ "hours": 7.47,
+ "seconds": 328,
+ "model": "~/workspace/sangam-models/pilot-v4lid-step3788"
+}

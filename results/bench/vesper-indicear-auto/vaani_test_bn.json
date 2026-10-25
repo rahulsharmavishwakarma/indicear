@@ -1,0 +1,145 @@
+{
+  "bn": {
+    "wer": 47.09,
+    "cer": 23.13,
+    "utterances": 300,
+    "words": 2788,
+    "script_error_rate": 3.87,
+    "wer_script_normalised": 46.99,
+    "cer_script_normalised": 22.91,
+    "rows_with_alternative_ref": 130,
+    "cm_utterances": 130,
+    "cm_spans": 446,
+    "cm_span_accuracy": 81.17,
+    "cm_span_cer_mean": 26.56,
+    "cm_span_accuracy_by_lang": {
+      "bn": 82.86,
+      "en": 78.31
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.361
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 97.67,
+    "macro_f1": 98.82,
+    "per_lang": {
+      "bn": {
+        "precision": 100.0,
+        "recall": 97.67,
+        "f1": 98.82,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "bn": {
+        "bn": 293,
+        "gu": 1,
+        "hi": 2,
+        "kn": 1,
+        "mr": 1,
+        "or": 1,
+        "ur": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 8,
+        "accuracy": 75.0
+      },
+      "2-5s": {
+        "utterances": 205,
+        "accuracy": 97.56
+      },
+      "5-10s": {
+        "utterances": 84,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 3,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_bn",
+  "utterances": 300,
+  "hours": 0.36,
+  "seconds": 18,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 159,
+  "changed_examples": [
+    {
+      "key": "vaani/bn/test/IISc_VaaniProject_K_Assam_Hailakandi_Hailakandi844425030207250_046_Hailakandi-SPECIFIC_01385_13504_17628",
+      "constrained": "একটি show shirtতেেরলতে যাচ্ছে একটি u রয়েছে",
+      "unconstrained": "একটি show shirtতেಲೆেরলতে যাচ্ছে একটিu রয়েছে",
+      "hinted": "একটি show shirtতেেরলতে যাচ্ছে একটি u রয়েছে"
+    },
+    {
+      "key": "vaani/bn/test/IISc_VaaniProject_K_Assam_Hailakandi_Hailakandi844425030207250_047_Hailakandi-SPECIFIC_00136_386_4798",
+      "constrained": "এই সবর মধ্যে একটি বড় building করে দেখা যাচ্ছে সেখানে একটি electric কুঁ রয়েছে",
+      "unconstrained": "ଏହି সবর মধ্যে একটি বড় building করে দেখা যাচ্ছে সেখানে একটি electricুঁ রয়েছে",
+      "hinted": "এই সবর মধ্যে একটি বড় building করে দেখা যাচ্ছে সেখানে একটি electric কুঁ রয়েছে"
+    },
+    {
+      "key": "vaani/bn/test/IISc_VaaniProject_K_Assam_Hailakandi_Hailakandi844425030207250_047_Hailakandi-SPECIFIC_00136_9664_12830",
+      "constrained": "কয়েকটিস গাছপালা দেখা যাচ্ছে সামনেখাল জায়গা রয়েছে",
+      "unconstrained": "ై ఒక কয়েকটিস গাছপালা দেখা যাচ্ছে সামনেখাল জায়গা রয়েছে",
+      "hinted": "কয়েকটিস গাছপালা দেখা যাচ্ছে সামনেখাল জায়গা রয়েছে"
+    },
+    {
+      "key": "vaani/bn/test/IISc_VaaniProject_K_Assam_Hailakandi_Hailakandi844425030207250_059_Hailakandi-SPECIFIC_00043_802_6204",
+      "constrained": "ଦୁଇ କିତା ସା board ଲେଖା ସବୁ তলদা ওর উপ সাদা",
+      "unconstrained": "ಇನ್ನ ಇನ್ನೊಂದು ଦୁଇ କିତା ସା board ଲେଖା ସବୁলদা ওর উপ সাদা",
+      "hinted": "দুই কি s board লেখা সবুজলদা ওর উপ সাদা"
+    },
+    {
+      "key": "vaani/bn/test/IISc_VaaniProject_K_Assam_Hailakandi_Hailakandi844425030207250_060_GENERIC_0665_2210_7422",
+      "constrained": "in তিন ch packet একটা মি একটা তার biscuit",
+      "unconstrained": "ಇನ್ನು ಆ ତିନି ଚାରି packet একটা মি একটা তার biscuit",
+      "hinted": "in তিন ch packet একটা মি একটা তার biscuit"
+    }
+  ]
+}

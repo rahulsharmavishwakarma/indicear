@@ -1,0 +1,96 @@
+{
+  "hi": {
+    "wer": 55.83,
+    "cer": 31.49,
+    "utterances": 300,
+    "words": 3600,
+    "script_error_rate": 22.29,
+    "wer_script_normalised": 53.83,
+    "cer_script_normalised": 28.55,
+    "rows_with_alternative_ref": 80,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.485
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.33,
+    "macro_f1": 99.67,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 99.33,
+        "f1": 99.67,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 298,
+        "mr": 1,
+        "pa": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 300,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 1,
+        "mr->hi": 0,
+        "hi_utterances": 300,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.33,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 1,
+        "pa_utterances": 0,
+        "hi_utterances": 300,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.33
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 107,
+        "accuracy": 98.13
+      },
+      "5-10s": {
+        "utterances": 186,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 7,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_hi",
+  "utterances": 300,
+  "hours": 0.48,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

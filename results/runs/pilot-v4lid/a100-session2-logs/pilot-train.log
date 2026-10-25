@@ -1,0 +1,396 @@
+ready: /content/pilot/pilot/prep.DONE
+pilot train: started 2026-10-24 08:40:18
+[08:40:20] python 3.14.8, GIL off, torch threads 6
+Loading weights:   0%|          | 0/1376 [00:00<?, ?it/s]Loading weights: 100%|██████████| 1376/1376 [00:00<00:00, 24823.28it/s]
+[08:42:25] stream plan: indicvoices/hi 0.125, vaani/hi 0.087, kathbath/hi 0.037, indicvoices/ta 0.173, vaani/ta 0.018, kathbath/ta 0.038, indicvoices/kn 0.122, vaani/kn 0.069, kathbath/kn 0.038, librispeech/en 0.056, peoples_speech/en 0.056, voxpopuli/en 0.049, vaani/en 0.026, vaani/hi/cm 0.050, vaani/kn/cm 0.034, negative-floor/none/local 0.007, negative-hum/none/local 0.007, negative-synthetic-brown/none/local 0.002, negative-synthetic-pink/none/local 0.002, negative-synthetic-white/none/local 0.002
+[08:42:25] host: NVIDIA A100-SXM4-80GB, device cuda, precision auto, torch 2.14.1+cu130
+[08:42:25] augmentation in the main process on cuda (model on cuda): 50% of rows, weights {'noise': 0.25, 'babble': 0.2, 'reverb': 0.175, 'reverb_pointnoise': 0.175, 'speed': 0.15, 'tel8k': 0.05}; codecs ['gsm', 'opus'] of ['gsm', 'opus', 'amr'] available on this host, on 15% of clips in 11 stream workers
+[08:42:25] WARNING: ffmpeg here cannot encode ['amr']; codec draws go to ['gsm', 'opus'] instead, so codec augmentation differs from a host that has them
+[08:42:25] python 3.14.8, GIL off; live training of v4+lid on pilot (620 h planned, target 4700 h of audio)
+[08:42:25] resuming from ckpt-00003809.pt (step 3809)
+[08:42:25] micro-batches: 1 per step of 67045 frames (auto for cuda auto; the checkpoint has 4 (mps, fp16)); losses normalized by the whole batch, so the accumulated gradient equals the one-piece gradient
+[08:42:25] rng: the checkpoint's MPS generator state cannot be restored without MPS
+[08:42:42] stream: 541 MB fetched, 31.1 MB/s (wall), 32.1 MB/s (while fetching), cache 0.5/40 GiB
+[08:43:42] stream: 2389 MB fetched, 30.8 MB/s (wall), 31.3 MB/s (while fetching), cache 1.9/40 GiB
+[08:44:47] stream: 8520 MB fetched, 59.8 MB/s (wall), 61.4 MB/s (while fetching), cache 7.6/40 GiB
+[08:44:59] stream restore: 15 of 191 buffered rows are rejected by this host's filters and left out (by stream and reason: {'kathbath/hi:excluded_speaker': 10, 'kathbath/ta:excluded_speaker': 4, 'voxpopuli/en:excluded_speaker': 1}); later batches differ from the original host's
+[08:44:59] run v4+lid: streamed data (live lower; group: v4+lid), budget 67045 frames, lr 1.83e-03, 7423 steps, starting at 3809, config 34ad89478fc81611
+[08:45:20] torch.compile: ScriptFactoredOutput compiled
+[08:45:23] torch.compile: SelfConditionedCTC compiled
+[08:45:23] torch.compile: SelfConditionedCTC compiled
+[08:45:47] stream: 14074 MB fetched, 69.4 MB/s (wall), 59.0 MB/s (while fetching), cache 15.9/40 GiB
+[08:45:56] features: GPU log-mel vs Hugging Face extractor on the first batch max |diff| = 4.77e-07, mask equal
+/content/venv314t/lib/python3.14t/site-packages/torch/_subclasses/meta_utils.py:103: UserWarning: The .grad attribute of a Tensor that is not a leaf Tensor is being accessed. Its .grad attribute won't be populated during autograd.backward(). If you indeed want the .grad field to be populated for a non-leaf Tensor, use .retain_grad() on the non-leaf Tensor. If you access the non-leaf Tensor by mistake, make sure you access the leaf Tensor instead. See github.com/pytorch/pytorch/pull/30531 for more information. (Triggered internally at /__w/pytorch/pytorch/build/aten/src/ATen/core/TensorBody.h:488.)
+  return t.grad
+[08:46:34] stream: 5 batches, 1.79 h of audio (26x real time), buffer 215/1800 s, consumer waited 33 s, eval-audio drops 0; network 80.8 MB/s, cache 17.6/40 GiB
+[08:47:01] step=3825 epoch=0 loss=2.0013 ctc=1.9858 phonetic=1.7689 rnnt=nan consistency=nan lid_utt=0.636 lid_frame=0.1695 lr=9.752e-04 frames_per_s=5304 peak_gib=72.41 splits=1 elapsed_s=98
+[08:47:36] stream: 37 batches, 13.21 h of audio (153x real time), buffer 1440/1800 s, consumer waited 51 s, eval-audio drops 0; network 68.2 MB/s, cache 17.6/40 GiB
+[08:47:43] stream: 21690 MB fetched, 68.1 MB/s (wall), 65.9 MB/s (while fetching), cache 17.6/40 GiB
+[08:47:51] step=3850 epoch=0 loss=1.573 ctc=1.4322 phonetic=1.6959 rnnt=nan consistency=nan lid_utt=0.5769 lid_frame=0.0401 lr=9.656e-04 frames_per_s=16135 peak_gib=72.65 splits=1 elapsed_s=147
+[08:48:37] stream: 63 batches, 22.46 h of audio (217x real time), buffer 1029/1800 s, consumer waited 89 s, eval-audio drops 0; network 71.4 MB/s, cache 17.6/40 GiB
+[08:48:44] step=3875 epoch=0 loss=1.7243 ctc=1.6778 phonetic=1.584 rnnt=nan consistency=nan lid_utt=0.618 lid_frame=0.1288 lr=9.561e-04 frames_per_s=15147 peak_gib=72.67 splits=1 elapsed_s=201
+[08:49:00] stream: 27560 MB fetched, 69.6 MB/s (wall), 73.6 MB/s (while fetching), cache 17.6/40 GiB
+[08:49:42] stream: 90 batches, 32.27 h of audio (266x real time), buffer 612/1800 s, consumer waited 128 s, eval-audio drops 0; network 66.0 MB/s, cache 17.5/40 GiB
+[08:49:46] step=3900 epoch=0 loss=1.7098 ctc=1.619 phonetic=1.7 rnnt=nan consistency=nan lid_utt=0.5845 lid_frame=0.0797 lr=9.465e-04 frames_per_s=13294 peak_gib=73.36 splits=1 elapsed_s=262
+[08:50:18] stream: 30012 MB fetched, 63.4 MB/s (wall), 74.2 MB/s (while fetching), cache 17.6/40 GiB
+[08:50:39] step=3925 epoch=0 loss=1.6093 ctc=1.4789 phonetic=1.6751 rnnt=nan consistency=nan lid_utt=0.6002 lid_frame=0.1148 lr=9.369e-04 frames_per_s=14934 peak_gib=73.36 splits=1 elapsed_s=315
+[08:50:49] stream: 120 batches, 42.82 h of audio (306x real time), buffer 269/1800 s, consumer waited 172 s, eval-audio drops 0; network 61.6 MB/s, cache 17.8/40 GiB
+[08:51:35] step=3950 epoch=0 loss=1.8588 ctc=1.7574 phonetic=1.7958 rnnt=nan consistency=nan lid_utt=0.6543 lid_frame=0.2442 lr=9.273e-04 frames_per_s=14555 peak_gib=73.36 splits=1 elapsed_s=371
+[08:51:44] stream: 32050 MB fetched, 57.2 MB/s (wall), 73.5 MB/s (while fetching), cache 17.9/40 GiB
+[08:51:54] stream: 152 batches, 54.44 h of audio (344x real time), buffer 390/1800 s, consumer waited 206 s, eval-audio drops 0; network 58.1 MB/s, cache 18.0/40 GiB
+[08:52:32] step=3975 epoch=0 loss=1.817 ctc=1.6996 phonetic=1.7429 rnnt=nan consistency=nan lid_utt=0.741 lid_frame=0.303 lr=9.177e-04 frames_per_s=14153 peak_gib=73.36 splits=1 elapsed_s=429
+[08:52:57] stream: 182 batches, 65.14 h of audio (371x real time), buffer 768/1800 s, consumer waited 233 s, eval-audio drops 0; network 58.2 MB/s, cache 17.9/40 GiB
+[08:53:01] stream: 37358 MB fetched, 58.7 MB/s (wall), 75.3 MB/s (while fetching), cache 17.9/40 GiB
+[08:53:18] step=4000 epoch=0 loss=2.1141 ctc=2.0445 phonetic=1.912 rnnt=nan consistency=nan lid_utt=0.7143 lid_frame=0.3797 lr=9.081e-04 frames_per_s=16816 peak_gib=73.36 splits=1 elapsed_s=475
+[08:53:21] step 4000: dev metric 17.850
+[08:54:00] stream: 210 batches, 75.03 h of audio (389x real time), buffer 797/1800 s, consumer waited 254 s, eval-audio drops 0; network 55.7 MB/s, cache 18.1/40 GiB
+[08:54:04] stream: 39199 MB fetched, 56.0 MB/s (wall), 75.1 MB/s (while fetching), cache 18.1/40 GiB
+[08:54:13] step=4025 epoch=0 loss=1.4487 ctc=1.3369 phonetic=1.4908 rnnt=nan consistency=nan lid_utt=0.5842 lid_frame=0.0724 lr=8.986e-04 frames_per_s=15208 peak_gib=73.36 splits=1 elapsed_s=529
+[08:55:01] stream: 242 batches, 86.72 h of audio (413x real time), buffer 935/1800 s, consumer waited 285 s, eval-audio drops 0; network 51.8 MB/s, cache 18.1/40 GiB
+[08:55:02] step=4050 epoch=0 loss=1.7656 ctc=1.6709 phonetic=1.7504 rnnt=nan consistency=nan lid_utt=0.6155 lid_frame=0.0928 lr=8.890e-04 frames_per_s=16733 peak_gib=73.51 splits=1 elapsed_s=578
+[08:55:12] stream: 40196 MB fetched, 52.4 MB/s (wall), 76.0 MB/s (while fetching), cache 18.1/40 GiB
+[08:55:53] step=4075 epoch=0 loss=1.5029 ctc=1.3709 phonetic=1.5673 rnnt=nan consistency=nan lid_utt=0.6165 lid_frame=0.1139 lr=8.795e-04 frames_per_s=16153 peak_gib=73.51 splits=1 elapsed_s=629
+[08:56:05] stream: 271 batches, 97.17 h of audio (427x real time), buffer 218/1800 s, consumer waited 323 s, eval-audio drops 0; network 50.4 MB/s, cache 18.0/40 GiB
+[08:56:50] step=4100 epoch=0 loss=1.6589 ctc=1.5356 phonetic=1.719 rnnt=nan consistency=nan lid_utt=0.6101 lid_frame=0.0733 lr=8.699e-04 frames_per_s=14258 peak_gib=73.51 splits=1 elapsed_s=687
+[08:56:53] stream: 41869 MB fetched, 48.2 MB/s (wall), 70.0 MB/s (while fetching), cache 15.1/40 GiB
+[08:57:07] stream: 301 batches, 108.27 h of audio (442x real time), buffer 428/1800 s, consumer waited 356 s, eval-audio drops 0; network 48.0 MB/s, cache 18.1/40 GiB
+[08:57:42] step=4125 epoch=0 loss=1.7169 ctc=1.6129 phonetic=1.6047 rnnt=nan consistency=nan lid_utt=0.7007 lid_frame=0.3638 lr=8.604e-04 frames_per_s=15703 peak_gib=73.51 splits=1 elapsed_s=739
+[08:57:59] stream: 45925 MB fetched, 49.1 MB/s (wall), 72.4 MB/s (while fetching), cache 18.1/40 GiB
+[08:58:10] stream: 332 batches, 119.54 h of audio (455x real time), buffer 169/1800 s, consumer waited 389 s, eval-audio drops 0; network 49.1 MB/s, cache 18.1/40 GiB
+[08:58:31] step=4150 epoch=0 loss=1.4501 ctc=1.3029 phonetic=1.5888 rnnt=nan consistency=nan lid_utt=0.5714 lid_frame=0.0424 lr=8.509e-04 frames_per_s=16957 peak_gib=73.51 splits=1 elapsed_s=788
+[08:59:10] stream: 363 batches, 130.56 h of audio (468x real time), buffer 601/1800 s, consumer waited 431 s, eval-audio drops 0; network 47.7 MB/s, cache 18.3/40 GiB
+[08:59:22] step=4175 epoch=0 loss=1.7465 ctc=1.6902 phonetic=1.6327 rnnt=nan consistency=nan lid_utt=0.6138 lid_frame=0.1219 lr=8.414e-04 frames_per_s=15605 peak_gib=73.51 splits=1 elapsed_s=839
+[08:59:32] stream: 48232 MB fetched, 46.9 MB/s (wall), 70.9 MB/s (while fetching), cache 18.0/40 GiB
+[09:00:13] stream: 391 batches, 140.76 h of audio (475x real time), buffer 239/1800 s, consumer waited 464 s, eval-audio drops 0; network 45.6 MB/s, cache 18.0/40 GiB
+[09:00:15] step=4200 epoch=0 loss=2.0661 ctc=2.0215 phonetic=1.775 rnnt=nan consistency=nan lid_utt=0.7392 lid_frame=0.4463 lr=8.319e-04 frames_per_s=15543 peak_gib=73.51 splits=1 elapsed_s=892
+[09:00:35] stream: 49598 MB fetched, 45.5 MB/s (wall), 71.3 MB/s (while fetching), cache 17.9/40 GiB
+[09:01:08] step=4225 epoch=0 loss=1.7212 ctc=1.6365 phonetic=1.6783 rnnt=nan consistency=nan lid_utt=0.6173 lid_frame=0.1047 lr=8.224e-04 frames_per_s=15572 peak_gib=73.51 splits=1 elapsed_s=945
+[09:01:15] stream: 422 batches, 151.98 h of audio (484x real time), buffer 1297/1800 s, consumer waited 499 s, eval-audio drops 0; network 44.7 MB/s, cache 17.6/40 GiB
+[09:01:38] stream: 54672 MB fetched, 47.4 MB/s (wall), 74.6 MB/s (while fetching), cache 17.2/40 GiB
+[09:02:02] step=4250 epoch=0 loss=1.8543 ctc=1.7901 phonetic=1.7682 rnnt=nan consistency=nan lid_utt=0.6005 lid_frame=0.1072 lr=8.129e-04 frames_per_s=14964 peak_gib=73.51 splits=1 elapsed_s=999
+[09:02:19] stream: 451 batches, 162.46 h of audio (490x real time), buffer 1585/1800 s, consumer waited 545 s, eval-audio drops 0; network 46.6 MB/s, cache 17.2/40 GiB
+[09:02:40] stream: 56253 MB fetched, 46.3 MB/s (wall), 75.3 MB/s (while fetching), cache 17.3/40 GiB
+[09:02:53] step=4275 epoch=0 loss=1.5527 ctc=1.4592 phonetic=1.5552 rnnt=nan consistency=nan lid_utt=0.5786 lid_frame=0.0684 lr=8.035e-04 frames_per_s=15840 peak_gib=73.51 splits=1 elapsed_s=1050
+[09:03:21] stream: 481 batches, 173.07 h of audio (496x real time), buffer 1564/1800 s, consumer waited 593 s, eval-audio drops 0; network 45.5 MB/s, cache 17.5/40 GiB
+[09:03:41] stream: 57506 MB fetched, 45.1 MB/s (wall), 74.7 MB/s (while fetching), cache 17.4/40 GiB
+[09:03:44] step=4300 epoch=0 loss=2.1692 ctc=2.1005 phonetic=1.9345 rnnt=nan consistency=nan lid_utt=0.7379 lid_frame=0.4476 lr=7.941e-04 frames_per_s=15557 peak_gib=73.51 splits=1 elapsed_s=1100
+[09:04:24] stream: 513 batches, 184.31 h of audio (503x real time), buffer 1294/1800 s, consumer waited 631 s, eval-audio drops 0; network 45.0 MB/s, cache 17.3/40 GiB
+[09:04:35] step=4325 epoch=0 loss=1.9512 ctc=1.8454 phonetic=1.9442 rnnt=nan consistency=nan lid_utt=0.6252 lid_frame=0.1362 lr=7.847e-04 frames_per_s=15437 peak_gib=73.51 splits=1 elapsed_s=1151
+[09:04:59] stream: 60258 MB fetched, 44.5 MB/s (wall), 73.9 MB/s (while fetching), cache 17.3/40 GiB
+[09:05:25] stream: 541 batches, 194.32 h of audio (507x real time), buffer 772/1800 s, consumer waited 679 s, eval-audio drops 0; network 44.3 MB/s, cache 17.4/40 GiB
+[09:05:30] step=4350 epoch=0 loss=1.8316 ctc=1.758 phonetic=1.7216 rnnt=nan consistency=nan lid_utt=0.6568 lid_frame=0.189 lr=7.753e-04 frames_per_s=14763 peak_gib=73.51 splits=1 elapsed_s=1206
+[09:06:22] step=4375 epoch=0 loss=1.6568 ctc=1.5499 phonetic=1.6763 rnnt=nan consistency=nan lid_utt=0.5953 lid_frame=0.0949 lr=7.659e-04 frames_per_s=15464 peak_gib=73.51 splits=1 elapsed_s=1259
+[09:06:30] stream: 570 batches, 204.74 h of audio (510x real time), buffer 1729/1800 s, consumer waited 710 s, eval-audio drops 0; network 45.3 MB/s, cache 17.4/40 GiB
+[09:07:10] step=4400 epoch=0 loss=2.018 ctc=1.9455 phonetic=1.9097 rnnt=nan consistency=nan lid_utt=0.6561 lid_frame=0.1764 lr=7.566e-04 frames_per_s=17391 peak_gib=73.51 splits=1 elapsed_s=1307
+[09:07:11] stream: 65902 MB fetched, 44.3 MB/s (wall), 75.9 MB/s (while fetching), cache 17.4/40 GiB
+[09:07:35] stream: 601 batches, 216.12 h of audio (515x real time), buffer 765/1800 s, consumer waited 752 s, eval-audio drops 0; network 43.6 MB/s, cache 17.4/40 GiB
+[09:08:05] step=4425 epoch=0 loss=1.6864 ctc=1.5564 phonetic=1.7724 rnnt=nan consistency=nan lid_utt=0.5753 lid_frame=0.0767 lr=7.473e-04 frames_per_s=15127 peak_gib=73.51 splits=1 elapsed_s=1361
+[09:08:18] stream: 66766 MB fetched, 43.0 MB/s (wall), 75.5 MB/s (while fetching), cache 17.3/40 GiB
+[09:08:41] stream: 635 batches, 228.58 h of audio (522x real time), buffer 750/1800 s, consumer waited 785 s, eval-audio drops 0; network 42.6 MB/s, cache 17.4/40 GiB
+[09:08:59] step=4450 epoch=0 loss=1.9254 ctc=1.8624 phonetic=1.8116 rnnt=nan consistency=nan lid_utt=0.6209 lid_frame=0.1612 lr=7.380e-04 frames_per_s=15061 peak_gib=73.51 splits=1 elapsed_s=1416
+[09:09:21] stream: 69083 MB fetched, 42.7 MB/s (wall), 75.4 MB/s (while fetching), cache 17.7/40 GiB
+[09:09:41] stream: 666 batches, 239.61 h of audio (527x real time), buffer 719/1800 s, consumer waited 822 s, eval-audio drops 0; network 42.4 MB/s, cache 17.9/40 GiB
+[09:09:48] step=4475 epoch=0 loss=1.5128 ctc=1.3999 phonetic=1.5642 rnnt=nan consistency=nan lid_utt=0.5657 lid_frame=0.0703 lr=7.288e-04 frames_per_s=16321 peak_gib=73.51 splits=1 elapsed_s=1464
+[09:10:29] stream: 70728 MB fetched, 42.0 MB/s (wall), 74.2 MB/s (while fetching), cache 14.7/40 GiB
+[09:10:41] step=4500 epoch=0 loss=1.7857 ctc=1.6521 phonetic=1.8693 rnnt=nan consistency=nan lid_utt=0.5985 lid_frame=0.0862 lr=7.195e-04 frames_per_s=15716 peak_gib=73.51 splits=1 elapsed_s=1517
+[09:10:42] stream: 694 batches, 249.80 h of audio (530x real time), buffer 995/1800 s, consumer waited 857 s, eval-audio drops 0; network 41.9 MB/s, cache 14.7/40 GiB
+[09:11:31] step=4525 epoch=0 loss=1.6156 ctc=1.5558 phonetic=1.524 rnnt=nan consistency=nan lid_utt=0.6052 lid_frame=0.0883 lr=7.103e-04 frames_per_s=16058 peak_gib=73.51 splits=1 elapsed_s=1568
+[09:11:48] stream: 725 batches, 260.83 h of audio (533x real time), buffer 644/1800 s, consumer waited 896 s, eval-audio drops 0; network 40.7 MB/s, cache 14.7/40 GiB
+[09:12:10] stream: 72271 MB fetched, 40.5 MB/s (wall), 73.5 MB/s (while fetching), cache 14.7/40 GiB
+[09:12:21] step=4550 epoch=0 loss=1.5416 ctc=1.386 phonetic=1.6714 rnnt=nan consistency=nan lid_utt=0.587 lid_frame=0.1122 lr=7.012e-04 frames_per_s=15894 peak_gib=73.51 splits=1 elapsed_s=1617
+[09:12:48] stream: 756 batches, 271.83 h of audio (537x real time), buffer 1425/1800 s, consumer waited 937 s, eval-audio drops 0; network 40.1 MB/s, cache 14.5/40 GiB
+[09:13:15] step=4575 epoch=0 loss=1.5347 ctc=1.4104 phonetic=1.5998 rnnt=nan consistency=nan lid_utt=0.5911 lid_frame=0.0842 lr=6.920e-04 frames_per_s=14664 peak_gib=73.51 splits=1 elapsed_s=1671
+[09:13:40] stream: 74615 MB fetched, 39.8 MB/s (wall), 73.5 MB/s (while fetching), cache 14.7/40 GiB
+[09:13:50] stream: 785 batches, 282.05 h of audio (539x real time), buffer 853/1800 s, consumer waited 976 s, eval-audio drops 0; network 39.8 MB/s, cache 14.7/40 GiB
+[09:14:07] step=4600 epoch=0 loss=1.515 ctc=1.3696 phonetic=1.6317 rnnt=nan consistency=nan lid_utt=0.6044 lid_frame=0.0632 lr=6.829e-04 frames_per_s=15066 peak_gib=73.51 splits=1 elapsed_s=1724
+[09:14:46] stream: 77462 MB fetched, 39.9 MB/s (wall), 73.3 MB/s (while fetching), cache 14.8/40 GiB
+[09:14:50] stream: 812 batches, 291.59 h of audio (540x real time), buffer 726/1800 s, consumer waited 1016 s, eval-audio drops 0; network 39.8 MB/s, cache 14.9/40 GiB
+[09:15:02] step=4625 epoch=0 loss=1.7185 ctc=1.6293 phonetic=1.6981 rnnt=nan consistency=nan lid_utt=0.5933 lid_frame=0.0925 lr=6.739e-04 frames_per_s=14710 peak_gib=73.51 splits=1 elapsed_s=1779
+[09:15:48] stream: 85287 MB fetched, 42.6 MB/s (wall), 75.8 MB/s (while fetching), cache 17.9/40 GiB
+[09:15:51] stream: 838 batches, 301.06 h of audio (540x real time), buffer 675/1800 s, consumer waited 1056 s, eval-audio drops 0; network 42.5 MB/s, cache 17.9/40 GiB
+[09:16:05] step=4650 epoch=0 loss=1.8551 ctc=1.7968 phonetic=1.7247 rnnt=nan consistency=nan lid_utt=0.6416 lid_frame=0.1582 lr=6.648e-04 frames_per_s=13023 peak_gib=73.51 splits=1 elapsed_s=1842
+[09:16:53] stream: 864 batches, 310.73 h of audio (541x real time), buffer 576/1800 s, consumer waited 1107 s, eval-audio drops 0; network 41.7 MB/s, cache 17.5/40 GiB
+[09:16:59] step=4675 epoch=0 loss=1.7067 ctc=1.5553 phonetic=1.8248 rnnt=nan consistency=nan lid_utt=0.6159 lid_frame=0.0902 lr=6.558e-04 frames_per_s=15649 peak_gib=73.51 splits=1 elapsed_s=1895
+[09:17:21] stream: 86810 MB fetched, 41.4 MB/s (wall), 75.8 MB/s (while fetching), cache 17.6/40 GiB
+[09:17:53] step=4700 epoch=0 loss=1.627 ctc=1.5105 phonetic=1.6855 rnnt=nan consistency=nan lid_utt=0.5977 lid_frame=0.0421 lr=6.469e-04 frames_per_s=15004 peak_gib=73.51 splits=1 elapsed_s=1950
+[09:17:57] stream: 895 batches, 321.95 h of audio (544x real time), buffer 618/1800 s, consumer waited 1154 s, eval-audio drops 0; network 41.6 MB/s, cache 18.1/40 GiB
+[09:18:23] stream: 89289 MB fetched, 41.4 MB/s (wall), 76.7 MB/s (while fetching), cache 18.1/40 GiB
+[09:18:45] step=4725 epoch=0 loss=1.7153 ctc=1.5921 phonetic=1.7887 rnnt=nan consistency=nan lid_utt=0.5738 lid_frame=0.0686 lr=6.380e-04 frames_per_s=15301 peak_gib=73.51 splits=1 elapsed_s=2002
+[09:18:57] stream: 925 batches, 332.37 h of audio (546x real time), buffer 1302/1800 s, consumer waited 1185 s, eval-audio drops 0; network 41.3 MB/s, cache 17.8/40 GiB
+[09:19:24] stream: 91391 MB fetched, 41.2 MB/s (wall), 75.9 MB/s (while fetching), cache 17.8/40 GiB
+[09:19:39] step=4750 epoch=0 loss=1.8961 ctc=1.832 phonetic=1.7068 rnnt=nan consistency=nan lid_utt=0.7063 lid_frame=0.3105 lr=6.291e-04 frames_per_s=14164 peak_gib=73.51 splits=1 elapsed_s=2056
+[09:20:01] stream: 952 batches, 341.87 h of audio (545x real time), buffer 172/1800 s, consumer waited 1233 s, eval-audio drops 0; network 42.1 MB/s, cache 17.8/40 GiB
+[09:20:32] step=4775 epoch=0 loss=1.3201 ctc=1.1895 phonetic=1.4188 rnnt=nan consistency=nan lid_utt=0.5592 lid_frame=0.0589 lr=6.202e-04 frames_per_s=15652 peak_gib=73.51 splits=1 elapsed_s=2109
+[09:20:37] stream: 96052 MB fetched, 41.9 MB/s (wall), 78.1 MB/s (while fetching), cache 17.9/40 GiB
+[09:21:04] stream: 983 batches, 353.11 h of audio (548x real time), buffer 1683/1800 s, consumer waited 1271 s, eval-audio drops 0; network 41.7 MB/s, cache 17.8/40 GiB
+[09:21:26] step=4800 epoch=0 loss=1.9929 ctc=1.8861 phonetic=1.8496 rnnt=nan consistency=nan lid_utt=0.76 lid_frame=0.4176 lr=6.114e-04 frames_per_s=14791 peak_gib=73.51 splits=1 elapsed_s=2163
+[09:22:07] stream: 1011 batches, 363.28 h of audio (549x real time), buffer 500/1800 s, consumer waited 1313 s, eval-audio drops 0; network 41.0 MB/s, cache 17.9/40 GiB
+[09:22:14] stream: 98356 MB fetched, 41.2 MB/s (wall), 78.0 MB/s (while fetching), cache 18.0/40 GiB
+[09:22:18] step=4825 epoch=0 loss=1.6996 ctc=1.6176 phonetic=1.6743 rnnt=nan consistency=nan lid_utt=0.5784 lid_frame=0.0708 lr=6.027e-04 frames_per_s=15877 peak_gib=73.51 splits=1 elapsed_s=2215
+[09:23:10] stream: 1041 batches, 374.30 h of audio (551x real time), buffer 202/1800 s, consumer waited 1355 s, eval-audio drops 0; network 40.6 MB/s, cache 18.0/40 GiB
+[09:23:12] step=4850 epoch=0 loss=1.5557 ctc=1.4148 phonetic=1.6727 rnnt=nan consistency=nan lid_utt=0.592 lid_frame=0.043 lr=5.940e-04 frames_per_s=15430 peak_gib=73.51 splits=1 elapsed_s=2269
+[09:23:27] stream: 99863 MB fetched, 40.5 MB/s (wall), 77.8 MB/s (while fetching), cache 18.1/40 GiB
+[09:24:07] step=4875 epoch=0 loss=1.8017 ctc=1.7132 phonetic=1.7618 rnnt=nan consistency=nan lid_utt=0.6301 lid_frame=0.1089 lr=5.853e-04 frames_per_s=14831 peak_gib=73.51 splits=1 elapsed_s=2324
+[09:24:12] stream: 1070 batches, 384.82 h of audio (553x real time), buffer 1266/1800 s, consumer waited 1395 s, eval-audio drops 0; network 40.3 MB/s, cache 18.3/40 GiB
+[09:24:48] stream: 105707 MB fetched, 41.6 MB/s (wall), 79.5 MB/s (while fetching), cache 18.3/40 GiB
+[09:25:00] step=4900 epoch=0 loss=1.7385 ctc=1.6028 phonetic=1.8251 rnnt=nan consistency=nan lid_utt=0.5967 lid_frame=0.0934 lr=5.767e-04 frames_per_s=15673 peak_gib=73.51 splits=1 elapsed_s=2377
+[09:25:18] stream: 1099 batches, 395.48 h of audio (553x real time), buffer 476/1800 s, consumer waited 1433 s, eval-audio drops 0; network 41.2 MB/s, cache 18.2/40 GiB
+[09:25:53] step=4925 epoch=0 loss=1.7653 ctc=1.6646 phonetic=1.757 rnnt=nan consistency=nan lid_utt=0.6242 lid_frame=0.1049 lr=5.681e-04 frames_per_s=16009 peak_gib=73.51 splits=1 elapsed_s=2430
+[09:25:56] stream: 106859 MB fetched, 40.9 MB/s (wall), 78.5 MB/s (while fetching), cache 18.2/40 GiB
+[09:26:18] stream: 1129 batches, 406.64 h of audio (556x real time), buffer 623/1800 s, consumer waited 1467 s, eval-audio drops 0; network 41.0 MB/s, cache 18.2/40 GiB
+[09:26:42] step=4950 epoch=0 loss=1.7396 ctc=1.5431 phonetic=1.9637 rnnt=nan consistency=nan lid_utt=0.607 lid_frame=0.0958 lr=5.596e-04 frames_per_s=16465 peak_gib=73.51 splits=1 elapsed_s=2479
+[09:27:23] stream: 1160 batches, 417.60 h of audio (557x real time), buffer 229/1800 s, consumer waited 1496 s, eval-audio drops 0; network 40.3 MB/s, cache 18.2/40 GiB
+[09:27:37] step=4975 epoch=0 loss=1.5679 ctc=1.4133 phonetic=1.7165 rnnt=nan consistency=nan lid_utt=0.5765 lid_frame=0.0605 lr=5.511e-04 frames_per_s=14601 peak_gib=73.51 splits=1 elapsed_s=2533
+[09:27:45] stream: 109276 MB fetched, 40.2 MB/s (wall), 78.2 MB/s (while fetching), cache 18.2/40 GiB
+[09:28:24] stream: 1190 batches, 428.06 h of audio (559x real time), buffer 723/1800 s, consumer waited 1532 s, eval-audio drops 0; network 39.8 MB/s, cache 18.2/40 GiB
+[09:28:27] step=5000 epoch=0 loss=1.6461 ctc=1.5095 phonetic=1.7454 rnnt=nan consistency=nan lid_utt=0.5711 lid_frame=0.0875 lr=5.427e-04 frames_per_s=15606 peak_gib=73.51 splits=1 elapsed_s=2584
+[09:28:29] step 5000: dev metric 16.602
+[09:29:14] stream: 110366 MB fetched, 39.3 MB/s (wall), 77.9 MB/s (while fetching), cache 15.1/40 GiB
+[09:29:20] step=5025 epoch=0 loss=1.7176 ctc=1.6264 phonetic=1.6706 rnnt=nan consistency=nan lid_utt=0.6204 lid_frame=0.159 lr=5.343e-04 frames_per_s=15331 peak_gib=73.51 splits=1 elapsed_s=2637
+[09:29:28] stream: 1221 batches, 439.38 h of audio (560x real time), buffer 782/1800 s, consumer waited 1566 s, eval-audio drops 0; network 39.2 MB/s, cache 15.1/40 GiB
+[09:30:13] step=5050 epoch=0 loss=1.7319 ctc=1.6602 phonetic=1.6594 rnnt=nan consistency=nan lid_utt=0.6053 lid_frame=0.1148 lr=5.259e-04 frames_per_s=15534 peak_gib=73.51 splits=1 elapsed_s=2690
+[09:30:26] stream: 112245 MB fetched, 38.9 MB/s (wall), 77.8 MB/s (while fetching), cache 15.0/40 GiB
+[09:30:28] stream: 1249 batches, 449.52 h of audio (561x real time), buffer 1022/1800 s, consumer waited 1609 s, eval-audio drops 0; network 38.9 MB/s, cache 14.7/40 GiB
+[09:31:06] step=5075 epoch=0 loss=1.5879 ctc=1.4662 phonetic=1.6517 rnnt=nan consistency=nan lid_utt=0.5852 lid_frame=0.075 lr=5.177e-04 frames_per_s=15245 peak_gib=73.51 splits=1 elapsed_s=2743
+[09:31:29] stream: 1278 batches, 460.13 h of audio (563x real time), buffer 878/1800 s, consumer waited 1651 s, eval-audio drops 0; network 38.5 MB/s, cache 14.8/40 GiB
+[09:31:29] stream: 113756 MB fetched, 38.6 MB/s (wall), 76.8 MB/s (while fetching), cache 14.8/40 GiB
+[09:32:01] step=5100 epoch=0 loss=1.7955 ctc=1.7007 phonetic=1.7922 rnnt=nan consistency=nan lid_utt=0.5994 lid_frame=0.0738 lr=5.094e-04 frames_per_s=15425 peak_gib=73.51 splits=1 elapsed_s=2798
+[09:32:29] stream: 1306 batches, 470.37 h of audio (564x real time), buffer 894/1800 s, consumer waited 1681 s, eval-audio drops 0; network 38.2 MB/s, cache 14.8/40 GiB
+[09:32:55] step=5125 epoch=0 loss=1.6241 ctc=1.5427 phonetic=1.5854 rnnt=nan consistency=nan lid_utt=0.601 lid_frame=0.0846 lr=5.013e-04 frames_per_s=15254 peak_gib=73.51 splits=1 elapsed_s=2851
+[09:33:06] stream: 115316 MB fetched, 37.9 MB/s (wall), 76.2 MB/s (while fetching), cache 14.2/40 GiB
+[09:33:29] stream: 1334 batches, 480.52 h of audio (564x real time), buffer 1117/1800 s, consumer waited 1718 s, eval-audio drops 0; network 38.8 MB/s, cache 17.3/40 GiB
+[09:33:53] step=5150 epoch=0 loss=1.5941 ctc=1.4559 phonetic=1.6753 rnnt=nan consistency=nan lid_utt=0.607 lid_frame=0.1168 lr=4.932e-04 frames_per_s=13882 peak_gib=73.51 splits=1 elapsed_s=2910
+[09:34:07] stream: 122786 MB fetched, 39.6 MB/s (wall), 79.9 MB/s (while fetching), cache 17.3/40 GiB
+[09:34:33] stream: 1361 batches, 490.12 h of audio (564x real time), buffer 1222/1800 s, consumer waited 1765 s, eval-audio drops 0; network 39.4 MB/s, cache 17.3/40 GiB
+[09:34:47] step=5175 epoch=0 loss=2.0025 ctc=1.9466 phonetic=1.8744 rnnt=nan consistency=nan lid_utt=0.6328 lid_frame=0.1431 lr=4.851e-04 frames_per_s=15172 peak_gib=73.51 splits=1 elapsed_s=2964
+[09:35:16] stream: 124113 MB fetched, 39.1 MB/s (wall), 79.7 MB/s (while fetching), cache 17.3/40 GiB
+[09:35:39] stream: 1391 batches, 501.27 h of audio (565x real time), buffer 501/1800 s, consumer waited 1817 s, eval-audio drops 0; network 38.9 MB/s, cache 17.3/40 GiB
+[09:35:41] step=5200 epoch=0 loss=1.552 ctc=1.4048 phonetic=1.674 rnnt=nan consistency=nan lid_utt=0.5737 lid_frame=0.0902 lr=4.771e-04 frames_per_s=15318 peak_gib=73.51 splits=1 elapsed_s=3018
+[09:36:24] stream: 125145 MB fetched, 38.6 MB/s (wall), 79.0 MB/s (while fetching), cache 17.4/40 GiB
+[09:36:31] step=5225 epoch=0 loss=1.858 ctc=1.672 phonetic=1.9695 rnnt=nan consistency=nan lid_utt=0.7077 lid_frame=0.2597 lr=4.692e-04 frames_per_s=15725 peak_gib=73.51 splits=1 elapsed_s=3068
+[09:36:49] stream: 1422 batches, 512.05 h of audio (565x real time), buffer 134/1800 s, consumer waited 1866 s, eval-audio drops 0; network 38.6 MB/s, cache 17.3/40 GiB
+[09:37:26] step=5250 epoch=0 loss=1.4439 ctc=1.3148 phonetic=1.5147 rnnt=nan consistency=nan lid_utt=0.613 lid_frame=0.0781 lr=4.613e-04 frames_per_s=14860 peak_gib=73.51 splits=1 elapsed_s=3122
+[09:37:38] stream: 126640 MB fetched, 38.2 MB/s (wall), 79.1 MB/s (while fetching), cache 16.9/40 GiB
+[09:37:52] stream: 1456 batches, 524.15 h of audio (567x real time), buffer 684/1800 s, consumer waited 1889 s, eval-audio drops 0; network 38.1 MB/s, cache 16.9/40 GiB
+[09:38:27] step=5275 epoch=0 loss=2.1595 ctc=2.0373 phonetic=2.0254 rnnt=nan consistency=nan lid_utt=0.7655 lid_frame=0.4925 lr=4.535e-04 frames_per_s=12330 peak_gib=73.51 splits=1 elapsed_s=3183
+[09:38:45] stream: 131034 MB fetched, 38.8 MB/s (wall), 80.2 MB/s (while fetching), cache 16.9/40 GiB
+[09:38:56] stream: 1479 batches, 531.95 h of audio (565x real time), buffer 610/1800 s, consumer waited 1927 s, eval-audio drops 0; network 38.6 MB/s, cache 16.9/40 GiB
+[09:39:20] step=5300 epoch=0 loss=1.6016 ctc=1.5199 phonetic=1.5475 rnnt=nan consistency=nan lid_utt=0.6111 lid_frame=0.1228 lr=4.457e-04 frames_per_s=15040 peak_gib=73.51 splits=1 elapsed_s=3237
+[09:40:00] stream: 1512 batches, 543.68 h of audio (567x real time), buffer 850/1800 s, consumer waited 1958 s, eval-audio drops 0; network 38.2 MB/s, cache 16.9/40 GiB
+[09:40:13] step=5325 epoch=0 loss=1.7135 ctc=1.5945 phonetic=1.7509 rnnt=nan consistency=nan lid_utt=0.5934 lid_frame=0.127 lr=4.380e-04 frames_per_s=15051 peak_gib=73.51 splits=1 elapsed_s=3290
+[09:40:20] stream: 132547 MB fetched, 38.1 MB/s (wall), 80.3 MB/s (while fetching), cache 16.9/40 GiB
+[09:41:01] stream: 1543 batches, 554.20 h of audio (567x real time), buffer 1290/1800 s, consumer waited 1986 s, eval-audio drops 0; network 38.2 MB/s, cache 17.4/40 GiB
+[09:41:05] step=5350 epoch=0 loss=1.6969 ctc=1.5917 phonetic=1.7254 rnnt=nan consistency=nan lid_utt=0.5744 lid_frame=0.0767 lr=4.304e-04 frames_per_s=14471 peak_gib=73.51 splits=1 elapsed_s=3342
+[09:41:34] stream: 135253 MB fetched, 38.1 MB/s (wall), 80.4 MB/s (while fetching), cache 17.6/40 GiB
+[09:42:02] step=5375 epoch=0 loss=1.6866 ctc=1.6049 phonetic=1.6326 rnnt=nan consistency=nan lid_utt=0.6118 lid_frame=0.1218 lr=4.229e-04 frames_per_s=14034 peak_gib=73.51 splits=1 elapsed_s=3398
+[09:42:06] stream: 1570 batches, 563.75 h of audio (567x real time), buffer 858/1800 s, consumer waited 2025 s, eval-audio drops 0; network 38.5 MB/s, cache 18.2/40 GiB
+[09:42:42] stream: 141627 MB fetched, 39.1 MB/s (wall), 81.5 MB/s (while fetching), cache 18.1/40 GiB
+[09:42:48] step=5400 epoch=0 loss=1.4816 ctc=1.3599 phonetic=1.5509 rnnt=nan consistency=nan lid_utt=0.5833 lid_frame=0.06 lr=4.154e-04 frames_per_s=16847 peak_gib=73.51 splits=1 elapsed_s=3444
+[09:43:08] stream: 1599 batches, 573.60 h of audio (567x real time), buffer 634/1800 s, consumer waited 2065 s, eval-audio drops 0; network 38.9 MB/s, cache 18.1/40 GiB
+[09:43:42] step=5425 epoch=0 loss=1.6381 ctc=1.4947 phonetic=1.737 rnnt=nan consistency=nan lid_utt=0.6187 lid_frame=0.0882 lr=4.079e-04 frames_per_s=14025 peak_gib=73.51 splits=1 elapsed_s=3499
+[09:43:43] stream: 142544 MB fetched, 38.7 MB/s (wall), 81.5 MB/s (while fetching), cache 18.2/40 GiB
+[09:44:08] stream: 1631 batches, 584.48 h of audio (568x real time), buffer 1459/1800 s, consumer waited 2093 s, eval-audio drops 0; network 38.5 MB/s, cache 18.1/40 GiB
+[09:44:30] step=5450 epoch=0 loss=1.5428 ctc=1.4467 phonetic=1.5331 rnnt=nan consistency=nan lid_utt=0.6047 lid_frame=0.0969 lr=4.006e-04 frames_per_s=16410 peak_gib=73.51 splits=1 elapsed_s=3547
+[09:45:14] stream: 1663 batches, 595.74 h of audio (569x real time), buffer 1139/1800 s, consumer waited 2130 s, eval-audio drops 0; network 37.9 MB/s, cache 18.2/40 GiB
+[09:45:17] stream: 143339 MB fetched, 38.0 MB/s (wall), 81.1 MB/s (while fetching), cache 18.2/40 GiB
+[09:45:22] step=5475 epoch=0 loss=1.6685 ctc=1.5411 phonetic=1.7313 rnnt=nan consistency=nan lid_utt=0.6097 lid_frame=0.0939 lr=3.933e-04 frames_per_s=15204 peak_gib=73.51 splits=1 elapsed_s=3599
+[09:46:16] step=5500 epoch=0 loss=1.5817 ctc=1.4346 phonetic=1.7076 rnnt=nan consistency=nan lid_utt=0.5829 lid_frame=0.0693 lr=3.860e-04 frames_per_s=15170 peak_gib=73.51 splits=1 elapsed_s=3652
+[09:46:17] stream: 1695 batches, 607.22 h of audio (570x real time), buffer 1384/1800 s, consumer waited 2162 s, eval-audio drops 0; network 37.7 MB/s, cache 18.3/40 GiB
+[09:46:20] stream: 145184 MB fetched, 37.9 MB/s (wall), 80.9 MB/s (while fetching), cache 18.0/40 GiB
+[09:47:10] step=5525 epoch=0 loss=1.5782 ctc=1.459 phonetic=1.6248 rnnt=nan consistency=nan lid_utt=0.6012 lid_frame=0.0933 lr=3.789e-04 frames_per_s=14923 peak_gib=73.51 splits=1 elapsed_s=3707
+[09:47:18] stream: 1723 batches, 617.44 h of audio (571x real time), buffer 897/1800 s, consumer waited 2200 s, eval-audio drops 0; network 38.5 MB/s, cache 18.6/40 GiB
+[09:47:35] stream: 150637 MB fetched, 38.5 MB/s (wall), 82.3 MB/s (while fetching), cache 18.6/40 GiB
+[09:48:02] step=5550 epoch=0 loss=1.7415 ctc=1.6744 phonetic=1.645 rnnt=nan consistency=nan lid_utt=0.63 lid_frame=0.1294 lr=3.718e-04 frames_per_s=15803 peak_gib=73.51 splits=1 elapsed_s=3759
+[09:48:20] stream: 1753 batches, 628.38 h of audio (572x real time), buffer 1584/1800 s, consumer waited 2233 s, eval-audio drops 0; network 38.3 MB/s, cache 18.5/40 GiB
+[09:48:42] stream: 152231 MB fetched, 38.3 MB/s (wall), 82.1 MB/s (while fetching), cache 18.5/40 GiB
+[09:48:53] step=5575 epoch=0 loss=1.9297 ctc=1.7849 phonetic=1.9756 rnnt=nan consistency=nan lid_utt=0.6468 lid_frame=0.2297 lr=3.648e-04 frames_per_s=16143 peak_gib=73.51 splits=1 elapsed_s=3810
+[09:49:23] stream: 1782 batches, 639.47 h of audio (573x real time), buffer 333/1800 s, consumer waited 2277 s, eval-audio drops 0; network 38.0 MB/s, cache 18.5/40 GiB
+[09:49:48] step=5600 epoch=0 loss=1.6682 ctc=1.5556 phonetic=1.7078 rnnt=nan consistency=nan lid_utt=0.6001 lid_frame=0.0689 lr=3.578e-04 frames_per_s=15974 peak_gib=73.51 splits=1 elapsed_s=3865
+[09:50:26] stream: 153774 MB fetched, 37.7 MB/s (wall), 82.3 MB/s (while fetching), cache 18.7/40 GiB
+[09:50:31] stream: 1814 batches, 651.32 h of audio (574x real time), buffer 437/1800 s, consumer waited 2319 s, eval-audio drops 0; network 37.6 MB/s, cache 18.7/40 GiB
+[09:50:37] step=5625 epoch=0 loss=2.0361 ctc=1.9558 phonetic=1.9062 rnnt=nan consistency=nan lid_utt=0.6732 lid_frame=0.2785 lr=3.510e-04 frames_per_s=16894 peak_gib=73.51 splits=1 elapsed_s=3914
+[09:51:26] stream: 155304 MB fetched, 37.5 MB/s (wall), 82.1 MB/s (while fetching), cache 15.7/40 GiB
+[09:51:28] step=5650 epoch=0 loss=1.7246 ctc=1.6217 phonetic=1.7435 rnnt=nan consistency=nan lid_utt=0.6 lid_frame=0.0638 lr=3.442e-04 frames_per_s=17100 peak_gib=73.51 splits=1 elapsed_s=3964
+[09:51:37] stream: 1846 batches, 663.37 h of audio (575x real time), buffer 1199/1800 s, consumer waited 2358 s, eval-audio drops 0; network 38.3 MB/s, cache 18.8/40 GiB
+[09:52:22] step=5675 epoch=0 loss=1.6784 ctc=1.5545 phonetic=1.7276 rnnt=nan consistency=nan lid_utt=0.6229 lid_frame=0.0967 lr=3.375e-04 frames_per_s=15701 peak_gib=73.51 splits=1 elapsed_s=4018
+[09:52:27] stream: 159931 MB fetched, 38.1 MB/s (wall), 83.4 MB/s (while fetching), cache 18.8/40 GiB
+[09:52:38] stream: 1873 batches, 673.57 h of audio (576x real time), buffer 317/1800 s, consumer waited 2402 s, eval-audio drops 0; network 38.0 MB/s, cache 18.8/40 GiB
+[09:53:14] step=5700 epoch=0 loss=1.6344 ctc=1.5086 phonetic=1.7044 rnnt=nan consistency=nan lid_utt=0.5887 lid_frame=0.0821 lr=3.308e-04 frames_per_s=15965 peak_gib=73.51 splits=1 elapsed_s=4071
+[09:53:36] stream: 161942 MB fetched, 37.9 MB/s (wall), 83.2 MB/s (while fetching), cache 18.3/40 GiB
+[09:53:42] stream: 1905 batches, 685.59 h of audio (577x real time), buffer 635/1800 s, consumer waited 2445 s, eval-audio drops 0; network 37.9 MB/s, cache 18.3/40 GiB
+[09:54:08] step=5725 epoch=0 loss=1.7138 ctc=1.5885 phonetic=1.7909 rnnt=nan consistency=nan lid_utt=0.5802 lid_frame=0.0647 lr=3.242e-04 frames_per_s=15868 peak_gib=73.51 splits=1 elapsed_s=4124
+[09:54:48] stream: 1938 batches, 697.67 h of audio (578x real time), buffer 661/1800 s, consumer waited 2479 s, eval-audio drops 0; network 37.5 MB/s, cache 18.3/40 GiB
+[09:54:56] step=5750 epoch=0 loss=1.4914 ctc=1.3321 phonetic=1.6127 rnnt=nan consistency=nan lid_utt=0.6205 lid_frame=0.1307 lr=3.178e-04 frames_per_s=16934 peak_gib=73.51 splits=1 elapsed_s=4172
+[09:55:36] stream: 163376 MB fetched, 37.2 MB/s (wall), 82.9 MB/s (while fetching), cache 18.3/40 GiB
+[09:55:50] step=5775 epoch=0 loss=1.6831 ctc=1.5681 phonetic=1.704 rnnt=nan consistency=nan lid_utt=0.6282 lid_frame=0.1143 lr=3.113e-04 frames_per_s=15493 peak_gib=73.51 splits=1 elapsed_s=4227
+[09:55:50] stream: 1970 batches, 709.54 h of audio (580x real time), buffer 1322/1800 s, consumer waited 2516 s, eval-audio drops 0; network 37.1 MB/s, cache 18.3/40 GiB
+[09:56:37] stream: 165652 MB fetched, 37.2 MB/s (wall), 82.8 MB/s (while fetching), cache 14.9/40 GiB
+[09:56:39] step=5800 epoch=0 loss=1.5255 ctc=1.4352 phonetic=1.5106 rnnt=nan consistency=nan lid_utt=0.6081 lid_frame=0.0682 lr=3.050e-04 frames_per_s=16832 peak_gib=73.51 splits=1 elapsed_s=4276
+[09:56:51] stream: 1998 batches, 719.89 h of audio (580x real time), buffer 1610/1800 s, consumer waited 2548 s, eval-audio drops 0; network 37.2 MB/s, cache 14.9/40 GiB
+[09:57:35] step=5825 epoch=0 loss=1.4083 ctc=1.2684 phonetic=1.5254 rnnt=nan consistency=nan lid_utt=0.5804 lid_frame=0.0478 lr=2.988e-04 frames_per_s=14245 peak_gib=73.51 splits=1 elapsed_s=4332
+[09:57:40] stream: 166692 MB fetched, 36.9 MB/s (wall), 82.5 MB/s (while fetching), cache 14.9/40 GiB
+[09:57:52] stream: 2025 batches, 729.37 h of audio (580x real time), buffer 135/1800 s, consumer waited 2589 s, eval-audio drops 0; network 36.8 MB/s, cache 14.9/40 GiB
+[09:58:26] step=5850 epoch=0 loss=1.5981 ctc=1.5038 phonetic=1.5996 rnnt=nan consistency=nan lid_utt=0.6004 lid_frame=0.0549 lr=2.926e-04 frames_per_s=15396 peak_gib=73.51 splits=1 elapsed_s=4383
+[09:58:49] stream: 167928 MB fetched, 36.6 MB/s (wall), 82.5 MB/s (while fetching), cache 14.8/40 GiB
+[09:58:55] stream: 2057 batches, 740.42 h of audio (581x real time), buffer 489/1800 s, consumer waited 2624 s, eval-audio drops 0; network 36.6 MB/s, cache 14.8/40 GiB
+[09:59:15] step=5875 epoch=0 loss=1.7057 ctc=1.6234 phonetic=1.6461 rnnt=nan consistency=nan lid_utt=0.635 lid_frame=0.12 lr=2.865e-04 frames_per_s=16525 peak_gib=73.51 splits=1 elapsed_s=4432
+[09:59:56] stream: 169288 MB fetched, 36.4 MB/s (wall), 82.2 MB/s (while fetching), cache 15.2/40 GiB
+[09:59:57] stream: 2090 batches, 752.34 h of audio (582x real time), buffer 1484/1800 s, consumer waited 2657 s, eval-audio drops 0; network 36.4 MB/s, cache 15.2/40 GiB
+[10:00:06] step=5900 epoch=0 loss=1.9432 ctc=1.8554 phonetic=1.846 rnnt=nan consistency=nan lid_utt=0.6661 lid_frame=0.2398 lr=2.805e-04 frames_per_s=15737 peak_gib=73.51 splits=1 elapsed_s=4482
+[10:01:01] stream: 2114 batches, 760.66 h of audio (581x real time), buffer 660/1800 s, consumer waited 2702 s, eval-audio drops 0; network 37.8 MB/s, cache 18.3/40 GiB
+[10:01:07] step=5925 epoch=0 loss=1.5466 ctc=1.4108 phonetic=1.6242 rnnt=nan consistency=nan lid_utt=0.627 lid_frame=0.0906 lr=2.746e-04 frames_per_s=13104 peak_gib=73.51 splits=1 elapsed_s=4543
+[10:01:33] stream: 178596 MB fetched, 37.6 MB/s (wall), 84.4 MB/s (while fetching), cache 18.0/40 GiB
+[10:02:00] step=5950 epoch=0 loss=1.5389 ctc=1.3927 phonetic=1.6507 rnnt=nan consistency=nan lid_utt=0.6103 lid_frame=0.0781 lr=2.687e-04 frames_per_s=15405 peak_gib=73.51 splits=1 elapsed_s=4596
+[10:02:02] stream: 2144 batches, 771.41 h of audio (581x real time), buffer 500/1800 s, consumer waited 2733 s, eval-audio drops 0; network 37.4 MB/s, cache 18.0/40 GiB
+[10:02:50] step=5975 epoch=0 loss=1.7539 ctc=1.6188 phonetic=1.7081 rnnt=nan consistency=nan lid_utt=0.7186 lid_frame=0.3646 lr=2.630e-04 frames_per_s=15661 peak_gib=73.51 splits=1 elapsed_s=4646
+[10:03:03] stream: 2174 batches, 782.21 h of audio (582x real time), buffer 1401/1800 s, consumer waited 2773 s, eval-audio drops 0; network 37.3 MB/s, cache 17.9/40 GiB
+[10:03:08] stream: 180831 MB fetched, 37.3 MB/s (wall), 83.4 MB/s (while fetching), cache 17.9/40 GiB
+[10:03:46] step=6000 epoch=0 loss=1.634 ctc=1.5372 phonetic=1.5975 rnnt=nan consistency=nan lid_utt=0.6426 lid_frame=0.1442 lr=2.573e-04 frames_per_s=14503 peak_gib=73.51 splits=1 elapsed_s=4703
+[10:03:47] step 6000: dev metric 16.567
+[10:04:03] stream: 2201 batches, 791.80 h of audio (582x real time), buffer 1736/1800 s, consumer waited 2809 s, eval-audio drops 0; network 37.1 MB/s, cache 17.4/40 GiB
+[10:04:30] stream: 182193 MB fetched, 37.0 MB/s (wall), 83.2 MB/s (while fetching), cache 17.4/40 GiB
+[10:04:38] step=6025 epoch=0 loss=1.6296 ctc=1.5251 phonetic=1.6337 rnnt=nan consistency=nan lid_utt=0.6166 lid_frame=0.1025 lr=2.517e-04 frames_per_s=15543 peak_gib=73.51 splits=1 elapsed_s=4755
+[10:05:03] stream: 2225 batches, 800.51 h of audio (581x real time), buffer 186/1800 s, consumer waited 2854 s, eval-audio drops 0; network 37.0 MB/s, cache 17.6/40 GiB
+[10:05:37] step=6050 epoch=0 loss=1.6989 ctc=1.5767 phonetic=1.7433 rnnt=nan consistency=nan lid_utt=0.6194 lid_frame=0.1029 lr=2.462e-04 frames_per_s=14308 peak_gib=73.51 splits=1 elapsed_s=4813
+[10:05:41] stream: 184509 MB fetched, 36.9 MB/s (wall), 83.5 MB/s (while fetching), cache 17.6/40 GiB
+[10:06:04] stream: 2249 batches, 809.38 h of audio (580x real time), buffer 517/1800 s, consumer waited 2899 s, eval-audio drops 0; network 37.7 MB/s, cache 18.0/40 GiB
+[10:06:45] step=6075 epoch=0 loss=1.5734 ctc=1.4581 phonetic=1.6165 rnnt=nan consistency=nan lid_utt=0.6049 lid_frame=0.0722 lr=2.408e-04 frames_per_s=12075 peak_gib=73.51 splits=1 elapsed_s=4882
+[10:07:00] stream: 190686 MB fetched, 37.6 MB/s (wall), 84.1 MB/s (while fetching), cache 18.0/40 GiB
+[10:07:06] stream: 2273 batches, 818.09 h of audio (580x real time), buffer 187/1800 s, consumer waited 2943 s, eval-audio drops 0; network 37.6 MB/s, cache 18.0/40 GiB
+[10:07:41] step=6100 epoch=0 loss=1.7143 ctc=1.654 phonetic=1.5855 rnnt=nan consistency=nan lid_utt=0.6545 lid_frame=0.1537 lr=2.354e-04 frames_per_s=14456 peak_gib=73.51 splits=1 elapsed_s=4937
+[10:08:08] stream: 192558 MB fetched, 37.4 MB/s (wall), 83.8 MB/s (while fetching), cache 18.1/40 GiB
+[10:08:11] stream: 2307 batches, 830.37 h of audio (581x real time), buffer 941/1800 s, consumer waited 2975 s, eval-audio drops 0; network 37.4 MB/s, cache 18.1/40 GiB
+[10:08:36] step=6125 epoch=0 loss=1.5855 ctc=1.4222 phonetic=1.7546 rnnt=nan consistency=nan lid_utt=0.5746 lid_frame=0.0607 lr=2.302e-04 frames_per_s=14970 peak_gib=73.51 splits=1 elapsed_s=4993
+[10:09:15] stream: 2336 batches, 840.98 h of audio (581x real time), buffer 1282/1800 s, consumer waited 3018 s, eval-audio drops 0; network 37.3 MB/s, cache 18.2/40 GiB
+[10:09:22] stream: 194941 MB fetched, 37.4 MB/s (wall), 83.7 MB/s (while fetching), cache 18.2/40 GiB
+[10:09:32] step=6150 epoch=0 loss=1.8054 ctc=1.6878 phonetic=1.7699 rnnt=nan consistency=nan lid_utt=0.6685 lid_frame=0.2608 lr=2.251e-04 frames_per_s=14455 peak_gib=73.51 splits=1 elapsed_s=5049
+[10:10:17] stream: 2367 batches, 852.30 h of audio (582x real time), buffer 1738/1800 s, consumer waited 3059 s, eval-audio drops 0; network 37.0 MB/s, cache 18.2/40 GiB
+[10:10:21] step=6175 epoch=0 loss=1.4253 ctc=1.273 phonetic=1.5534 rnnt=nan consistency=nan lid_utt=0.6102 lid_frame=0.0717 lr=2.200e-04 frames_per_s=16895 peak_gib=73.51 splits=1 elapsed_s=5097
+[10:10:39] stream: 195540 MB fetched, 36.9 MB/s (wall), 83.7 MB/s (while fetching), cache 18.2/40 GiB
+[10:11:14] step=6200 epoch=0 loss=2.0623 ctc=2.0175 phonetic=1.8326 rnnt=nan consistency=nan lid_utt=0.67 lid_frame=0.3331 lr=2.150e-04 frames_per_s=15294 peak_gib=73.51 splits=1 elapsed_s=5151
+[10:11:23] stream: 2396 batches, 862.84 h of audio (582x real time), buffer 412/1800 s, consumer waited 3108 s, eval-audio drops 0; network 37.5 MB/s, cache 18.1/40 GiB
+[10:12:09] step=6225 epoch=0 loss=1.3515 ctc=1.2246 phonetic=1.422 rnnt=nan consistency=nan lid_utt=0.6019 lid_frame=0.0755 lr=2.101e-04 frames_per_s=14451 peak_gib=73.51 splits=1 elapsed_s=5205
+[10:12:19] stream: 200513 MB fetched, 37.2 MB/s (wall), 84.8 MB/s (while fetching), cache 18.3/40 GiB
+[10:12:26] stream: 2426 batches, 873.09 h of audio (582x real time), buffer 731/1800 s, consumer waited 3141 s, eval-audio drops 0; network 37.2 MB/s, cache 18.3/40 GiB
+[10:13:00] step=6250 epoch=0 loss=1.5167 ctc=1.3032 phonetic=1.7392 rnnt=nan consistency=nan lid_utt=0.6293 lid_frame=0.1977 lr=2.054e-04 frames_per_s=15364 peak_gib=73.51 splits=1 elapsed_s=5256
+[10:13:26] stream: 2456 batches, 883.70 h of audio (583x real time), buffer 1766/1800 s, consumer waited 3177 s, eval-audio drops 0; network 37.1 MB/s, cache 18.3/40 GiB
+[10:13:29] stream: 203367 MB fetched, 37.2 MB/s (wall), 84.1 MB/s (while fetching), cache 18.3/40 GiB
+[10:13:54] step=6275 epoch=0 loss=1.6237 ctc=1.5455 phonetic=1.5555 rnnt=nan consistency=nan lid_utt=0.6404 lid_frame=0.1122 lr=2.007e-04 frames_per_s=14582 peak_gib=73.51 splits=1 elapsed_s=5311
+[10:14:31] stream: 2488 batches, 895.05 h of audio (583x real time), buffer 1322/1800 s, consumer waited 3212 s, eval-audio drops 0; network 37.0 MB/s, cache 18.3/40 GiB
+[10:14:39] step=6300 epoch=0 loss=1.6375 ctc=1.5105 phonetic=1.6509 rnnt=nan consistency=nan lid_utt=0.6702 lid_frame=0.1786 lr=1.961e-04 frames_per_s=17830 peak_gib=73.51 splits=1 elapsed_s=5356
+[10:15:08] stream: 204845 MB fetched, 36.8 MB/s (wall), 84.3 MB/s (while fetching), cache 15.1/40 GiB
+[10:15:31] stream: 2519 batches, 906.15 h of audio (584x real time), buffer 841/1800 s, consumer waited 3252 s, eval-audio drops 0; network 36.8 MB/s, cache 15.1/40 GiB
+[10:15:33] step=6325 epoch=0 loss=1.8699 ctc=1.8009 phonetic=1.7529 rnnt=nan consistency=nan lid_utt=0.662 lid_frame=0.1718 lr=1.915e-04 frames_per_s=15137 peak_gib=73.51 splits=1 elapsed_s=5409
+[10:16:21] step=6350 epoch=0 loss=1.4379 ctc=1.2694 phonetic=1.6154 rnnt=nan consistency=nan lid_utt=0.5799 lid_frame=0.0672 lr=1.871e-04 frames_per_s=16806 peak_gib=73.51 splits=1 elapsed_s=5458
+[10:16:32] stream: 206524 MB fetched, 36.6 MB/s (wall), 84.1 MB/s (while fetching), cache 15.2/40 GiB
+[10:16:36] stream: 2549 batches, 917.17 h of audio (584x real time), buffer 766/1800 s, consumer waited 3300 s, eval-audio drops 0; network 36.5 MB/s, cache 15.2/40 GiB
+[10:17:16] step=6375 epoch=0 loss=1.4342 ctc=1.2941 phonetic=1.5288 rnnt=nan consistency=nan lid_utt=0.6064 lid_frame=0.0907 lr=1.828e-04 frames_per_s=15031 peak_gib=73.51 splits=1 elapsed_s=5513
+[10:17:37] stream: 2579 batches, 928.04 h of audio (585x real time), buffer 1636/1800 s, consumer waited 3336 s, eval-audio drops 0; network 36.2 MB/s, cache 14.6/40 GiB
+[10:18:04] step=6400 epoch=0 loss=1.7562 ctc=1.6726 phonetic=1.6891 rnnt=nan consistency=nan lid_utt=0.6219 lid_frame=0.1646 lr=1.786e-04 frames_per_s=16822 peak_gib=73.51 splits=1 elapsed_s=5560
+[10:18:10] stream: 207229 MB fetched, 36.1 MB/s (wall), 83.7 MB/s (while fetching), cache 14.4/40 GiB
+[10:18:38] stream: 2609 batches, 938.72 h of audio (585x real time), buffer 265/1800 s, consumer waited 3375 s, eval-audio drops 0; network 35.9 MB/s, cache 14.2/40 GiB
+[10:18:53] step=6425 epoch=0 loss=1.5603 ctc=1.4194 phonetic=1.6432 rnnt=nan consistency=nan lid_utt=0.6192 lid_frame=0.118 lr=1.744e-04 frames_per_s=16621 peak_gib=73.51 splits=1 elapsed_s=5610
+[10:19:39] stream: 2638 batches, 949.22 h of audio (586x real time), buffer 566/1800 s, consumer waited 3409 s, eval-audio drops 0; network 35.9 MB/s, cache 14.7/40 GiB
+[10:19:40] stream: 212704 MB fetched, 36.4 MB/s (wall), 84.4 MB/s (while fetching), cache 14.7/40 GiB
+[10:20:06] step=6450 epoch=0 loss=2.0336 ctc=1.933 phonetic=1.8965 rnnt=nan consistency=nan lid_utt=0.7236 lid_frame=0.3923 lr=1.704e-04 frames_per_s=11171 peak_gib=73.51 splits=1 elapsed_s=5682
+[10:20:41] stream: 2661 batches, 957.57 h of audio (585x real time), buffer 604/1800 s, consumer waited 3440 s, eval-audio drops 0; network 36.9 MB/s, cache 17.8/40 GiB
+[10:20:51] stream: 217893 MB fetched, 36.9 MB/s (wall), 85.7 MB/s (while fetching), cache 17.7/40 GiB
+[10:20:54] step=6475 epoch=0 loss=1.9224 ctc=1.802 phonetic=1.7789 rnnt=nan consistency=nan lid_utt=0.8272 lid_frame=0.4456 lr=1.665e-04 frames_per_s=16605 peak_gib=73.51 splits=1 elapsed_s=5731
+[10:21:43] step=6500 epoch=0 loss=1.4947 ctc=1.3659 phonetic=1.5555 rnnt=nan consistency=nan lid_utt=0.6208 lid_frame=0.0992 lr=1.626e-04 frames_per_s=17164 peak_gib=73.51 splits=1 elapsed_s=5779
+[10:21:44] stream: 2692 batches, 968.71 h of audio (585x real time), buffer 1084/1800 s, consumer waited 3481 s, eval-audio drops 0; network 36.6 MB/s, cache 17.7/40 GiB
+[10:22:01] stream: 218633 MB fetched, 36.6 MB/s (wall), 85.4 MB/s (while fetching), cache 17.6/40 GiB
+[10:22:44] step=6525 epoch=0 loss=1.9014 ctc=1.8209 phonetic=1.7896 rnnt=nan consistency=nan lid_utt=0.6648 lid_frame=0.2343 lr=1.589e-04 frames_per_s=13251 peak_gib=73.51 splits=1 elapsed_s=5840
+[10:22:50] stream: 2721 batches, 979.07 h of audio (585x real time), buffer 442/1800 s, consumer waited 3521 s, eval-audio drops 0; network 36.6 MB/s, cache 17.6/40 GiB
+[10:23:34] step=6550 epoch=0 loss=1.6395 ctc=1.542 phonetic=1.6018 rnnt=nan consistency=nan lid_utt=0.6306 lid_frame=0.1649 lr=1.552e-04 frames_per_s=15903 peak_gib=73.51 splits=1 elapsed_s=5890
+[10:23:46] stream: 221115 MB fetched, 36.4 MB/s (wall), 85.0 MB/s (while fetching), cache 17.5/40 GiB
+[10:23:51] stream: 2753 batches, 990.34 h of audio (586x real time), buffer 1225/1800 s, consumer waited 3560 s, eval-audio drops 0; network 36.3 MB/s, cache 17.5/40 GiB
+[10:24:25] step=6575 epoch=0 loss=1.6349 ctc=1.5216 phonetic=1.6543 rnnt=nan consistency=nan lid_utt=0.6098 lid_frame=0.1248 lr=1.517e-04 frames_per_s=15598 peak_gib=73.51 splits=1 elapsed_s=5941
+[10:24:53] stream: 2782 batches, 1000.74 h of audio (586x real time), buffer 178/1800 s, consumer waited 3594 s, eval-audio drops 0; network 36.6 MB/s, cache 17.5/40 GiB
+[10:25:08] stream: 225506 MB fetched, 36.6 MB/s (wall), 85.8 MB/s (while fetching), cache 17.6/40 GiB
+[10:25:17] step=6600 epoch=0 loss=1.5817 ctc=1.4066 phonetic=1.7448 rnnt=nan consistency=nan lid_utt=0.6181 lid_frame=0.118 lr=1.482e-04 frames_per_s=15561 peak_gib=73.51 splits=1 elapsed_s=5993
+[10:26:01] stream: 2813 batches, 1011.63 h of audio (586x real time), buffer 407/1800 s, consumer waited 3642 s, eval-audio drops 0; network 36.5 MB/s, cache 17.4/40 GiB
+[10:26:09] step=6625 epoch=0 loss=1.593 ctc=1.4356 phonetic=1.7374 rnnt=nan consistency=nan lid_utt=0.5797 lid_frame=0.0891 lr=1.449e-04 frames_per_s=15032 peak_gib=73.51 splits=1 elapsed_s=6046
+[10:26:22] stream: 227187 MB fetched, 36.4 MB/s (wall), 86.0 MB/s (while fetching), cache 17.4/40 GiB
+[10:27:02] step=6650 epoch=0 loss=1.9782 ctc=1.8675 phonetic=1.8649 rnnt=nan consistency=nan lid_utt=0.717 lid_frame=0.3973 lr=1.416e-04 frames_per_s=14789 peak_gib=73.51 splits=1 elapsed_s=6099
+[10:27:06] stream: 2844 batches, 1022.54 h of audio (586x real time), buffer 441/1800 s, consumer waited 3672 s, eval-audio drops 0; network 36.3 MB/s, cache 17.0/40 GiB
+[10:27:23] stream: 228541 MB fetched, 36.3 MB/s (wall), 86.0 MB/s (while fetching), cache 16.9/40 GiB
+[10:27:54] step=6675 epoch=0 loss=1.7557 ctc=1.6474 phonetic=1.7867 rnnt=nan consistency=nan lid_utt=0.5979 lid_frame=0.0679 lr=1.384e-04 frames_per_s=15255 peak_gib=73.51 splits=1 elapsed_s=6150
+[10:28:09] stream: 2873 batches, 1032.48 h of audio (586x real time), buffer 511/1800 s, consumer waited 3717 s, eval-audio drops 0; network 36.3 MB/s, cache 17.1/40 GiB
+[10:28:35] stream: 234058 MB fetched, 36.7 MB/s (wall), 86.2 MB/s (while fetching), cache 17.1/40 GiB
+[10:28:53] step=6700 epoch=0 loss=1.8889 ctc=1.777 phonetic=1.8317 rnnt=nan consistency=nan lid_utt=0.6865 lid_frame=0.2681 lr=1.354e-04 frames_per_s=13068 peak_gib=73.51 splits=1 elapsed_s=6209
+[10:29:09] stream: 2901 batches, 1042.38 h of audio (586x real time), buffer 261/1800 s, consumer waited 3758 s, eval-audio drops 0; network 36.7 MB/s, cache 17.1/40 GiB
+[10:29:45] step=6725 epoch=0 loss=1.3111 ctc=1.1155 phonetic=1.5409 rnnt=nan consistency=nan lid_utt=0.5907 lid_frame=0.0887 lr=1.324e-04 frames_per_s=15609 peak_gib=73.51 splits=1 elapsed_s=6262
+[10:29:54] stream: 235911 MB fetched, 36.6 MB/s (wall), 86.3 MB/s (while fetching), cache 17.0/40 GiB
+[10:30:10] stream: 2930 batches, 1052.63 h of audio (586x real time), buffer 1246/1800 s, consumer waited 3804 s, eval-audio drops 0; network 36.5 MB/s, cache 17.0/40 GiB
+[10:30:39] step=6750 epoch=0 loss=1.6772 ctc=1.5861 phonetic=1.6218 rnnt=nan consistency=nan lid_utt=0.6466 lid_frame=0.1572 lr=1.296e-04 frames_per_s=14489 peak_gib=73.51 splits=1 elapsed_s=6315
+[10:31:04] stream: 237268 MB fetched, 36.4 MB/s (wall), 86.3 MB/s (while fetching), cache 17.1/40 GiB
+[10:31:14] stream: 2959 batches, 1062.72 h of audio (586x real time), buffer 487/1800 s, consumer waited 3847 s, eval-audio drops 0; network 36.5 MB/s, cache 17.5/40 GiB
+[10:31:42] step=6775 epoch=0 loss=1.4965 ctc=1.3582 phonetic=1.5624 rnnt=nan consistency=nan lid_utt=0.6377 lid_frame=0.1329 lr=1.268e-04 frames_per_s=12499 peak_gib=73.51 splits=1 elapsed_s=6379
+[10:32:19] stream: 2984 batches, 1071.36 h of audio (585x real time), buffer 1745/1800 s, consumer waited 3896 s, eval-audio drops 0; network 36.5 MB/s, cache 17.7/40 GiB
+[10:32:33] step=6800 epoch=0 loss=1.4977 ctc=1.3439 phonetic=1.6164 rnnt=nan consistency=nan lid_utt=0.6194 lid_frame=0.1013 lr=1.242e-04 frames_per_s=15526 peak_gib=73.51 splits=1 elapsed_s=6430
+[10:32:47] stream: 240710 MB fetched, 36.3 MB/s (wall), 85.9 MB/s (while fetching), cache 17.8/40 GiB
+[10:33:26] stream: 3015 batches, 1082.57 h of audio (585x real time), buffer 1790/1800 s, consumer waited 3931 s, eval-audio drops 0; network 36.4 MB/s, cache 14.9/40 GiB
+[10:33:30] step=6825 epoch=0 loss=1.4088 ctc=1.2505 phonetic=1.5716 rnnt=nan consistency=nan lid_utt=0.5788 lid_frame=0.0405 lr=1.216e-04 frames_per_s=14396 peak_gib=73.51 splits=1 elapsed_s=6487
+[10:33:50] stream: 243411 MB fetched, 36.4 MB/s (wall), 86.1 MB/s (while fetching), cache 15.0/40 GiB
+[10:34:24] step=6850 epoch=0 loss=1.8432 ctc=1.75 phonetic=1.6769 rnnt=nan consistency=nan lid_utt=0.7577 lid_frame=0.394 lr=1.192e-04 frames_per_s=14771 peak_gib=73.51 splits=1 elapsed_s=6541
+[10:34:26] stream: 3046 batches, 1093.79 h of audio (586x real time), buffer 1792/1800 s, consumer waited 3974 s, eval-audio drops 0; network 36.2 MB/s, cache 15.1/40 GiB
+[10:34:52] stream: 244863 MB fetched, 36.3 MB/s (wall), 86.1 MB/s (while fetching), cache 15.1/40 GiB
+[10:35:15] step=6875 epoch=0 loss=1.4734 ctc=1.2994 phonetic=1.6468 rnnt=nan consistency=nan lid_utt=0.6221 lid_frame=0.0754 lr=1.168e-04 frames_per_s=15837 peak_gib=73.51 splits=1 elapsed_s=6592
+[10:35:30] stream: 3074 batches, 1103.71 h of audio (586x real time), buffer 1187/1800 s, consumer waited 4019 s, eval-audio drops 0; network 36.2 MB/s, cache 15.2/40 GiB
+[10:36:07] step=6900 epoch=0 loss=1.5841 ctc=1.4418 phonetic=1.5869 rnnt=nan consistency=nan lid_utt=0.6817 lid_frame=0.3064 lr=1.146e-04 frames_per_s=15617 peak_gib=73.51 splits=1 elapsed_s=6644
+[10:36:19] stream: 246374 MB fetched, 36.0 MB/s (wall), 86.2 MB/s (while fetching), cache 15.2/40 GiB
+[10:36:30] stream: 3105 batches, 1115.08 h of audio (586x real time), buffer 814/1800 s, consumer waited 4054 s, eval-audio drops 0; network 36.0 MB/s, cache 15.2/40 GiB
+[10:36:59] step=6925 epoch=0 loss=1.6465 ctc=1.5133 phonetic=1.7196 rnnt=nan consistency=nan lid_utt=0.6085 lid_frame=0.1046 lr=1.124e-04 frames_per_s=15757 peak_gib=73.51 splits=1 elapsed_s=6696
+[10:37:32] stream: 3134 batches, 1125.44 h of audio (587x real time), buffer 1742/1800 s, consumer waited 4093 s, eval-audio drops 0; network 35.8 MB/s, cache 15.1/40 GiB
+[10:37:42] stream: 247800 MB fetched, 35.8 MB/s (wall), 86.1 MB/s (while fetching), cache 15.1/40 GiB
+[10:37:52] step=6950 epoch=0 loss=1.7106 ctc=1.5624 phonetic=1.8449 rnnt=nan consistency=nan lid_utt=0.5869 lid_frame=0.0476 lr=1.104e-04 frames_per_s=15052 peak_gib=73.51 splits=1 elapsed_s=6748
+[10:38:36] stream: 3160 batches, 1134.62 h of audio (586x real time), buffer 668/1800 s, consumer waited 4133 s, eval-audio drops 0; network 36.5 MB/s, cache 18.1/40 GiB
+[10:38:44] stream: 255263 MB fetched, 36.6 MB/s (wall), 87.6 MB/s (while fetching), cache 18.1/40 GiB
+[10:38:51] step=6975 epoch=0 loss=1.5646 ctc=1.4499 phonetic=1.609 rnnt=nan consistency=nan lid_utt=0.6015 lid_frame=0.0684 lr=1.085e-04 frames_per_s=13578 peak_gib=73.51 splits=1 elapsed_s=6808
+[10:39:37] stream: 3190 batches, 1145.11 h of audio (586x real time), buffer 725/1800 s, consumer waited 4174 s, eval-audio drops 0; network 36.4 MB/s, cache 18.2/40 GiB
+[10:39:42] step=7000 epoch=0 loss=1.6543 ctc=1.5063 phonetic=1.7141 rnnt=nan consistency=nan lid_utt=0.6442 lid_frame=0.2127 lr=1.066e-04 frames_per_s=15371 peak_gib=73.51 splits=1 elapsed_s=6859
+[10:39:44] step 7000: dev metric 16.227
+[10:39:45] stream: 257030 MB fetched, 36.5 MB/s (wall), 87.3 MB/s (while fetching), cache 18.2/40 GiB
+[10:40:35] step=7025 epoch=0 loss=2.0288 ctc=1.9406 phonetic=1.8948 rnnt=nan consistency=nan lid_utt=0.6833 lid_frame=0.3364 lr=1.049e-04 frames_per_s=15646 peak_gib=73.51 splits=1 elapsed_s=6912
+[10:40:37] stream: 3221 batches, 1156.58 h of audio (587x real time), buffer 1445/1800 s, consumer waited 4196 s, eval-audio drops 0; network 36.4 MB/s, cache 18.3/40 GiB
+[10:41:17] stream: 258796 MB fetched, 36.3 MB/s (wall), 87.4 MB/s (while fetching), cache 18.2/40 GiB
+[10:41:23] step=7050 epoch=0 loss=1.5056 ctc=1.3266 phonetic=1.6925 rnnt=nan consistency=nan lid_utt=0.6 lid_frame=0.0923 lr=1.033e-04 frames_per_s=17715 peak_gib=73.51 splits=1 elapsed_s=6959
+[10:41:38] stream: 3251 batches, 1167.28 h of audio (587x real time), buffer 514/1800 s, consumer waited 4236 s, eval-audio drops 0; network 36.2 MB/s, cache 18.2/40 GiB
+[10:42:12] step=7075 epoch=0 loss=1.7557 ctc=1.6536 phonetic=1.7635 rnnt=nan consistency=nan lid_utt=0.6027 lid_frame=0.0885 lr=1.018e-04 frames_per_s=15895 peak_gib=73.51 splits=1 elapsed_s=7009
+[10:42:50] stream: 3284 batches, 1178.90 h of audio (587x real time), buffer 764/1800 s, consumer waited 4283 s, eval-audio drops 0; network 35.9 MB/s, cache 18.1/40 GiB
+[10:42:56] stream: 260086 MB fetched, 36.0 MB/s (wall), 87.1 MB/s (while fetching), cache 18.1/40 GiB
+[10:43:05] step=7100 epoch=0 loss=1.4823 ctc=1.3652 phonetic=1.5312 rnnt=nan consistency=nan lid_utt=0.5978 lid_frame=0.0751 lr=1.004e-04 frames_per_s=15118 peak_gib=73.51 splits=1 elapsed_s=7062
+[10:43:52] step=7125 epoch=0 loss=1.7413 ctc=1.6107 phonetic=1.8145 rnnt=nan consistency=nan lid_utt=0.597 lid_frame=0.0977 lr=9.905e-05 frames_per_s=17137 peak_gib=73.51 splits=1 elapsed_s=7109
+[10:43:55] stream: 3317 batches, 1190.77 h of audio (588x real time), buffer 586/1800 s, consumer waited 4321 s, eval-audio drops 0; network 35.9 MB/s, cache 14.8/40 GiB
+[10:44:22] stream: 262083 MB fetched, 35.8 MB/s (wall), 87.1 MB/s (while fetching), cache 14.7/40 GiB
+[10:44:41] step=7150 epoch=0 loss=1.537 ctc=1.4103 phonetic=1.5725 rnnt=nan consistency=nan lid_utt=0.6463 lid_frame=0.1345 lr=9.784e-05 frames_per_s=15775 peak_gib=73.51 splits=1 elapsed_s=7158
+[10:44:58] stream: 3348 batches, 1201.18 h of audio (588x real time), buffer 634/1800 s, consumer waited 4365 s, eval-audio drops 0; network 36.0 MB/s, cache 14.8/40 GiB
+[10:45:40] step=7175 epoch=0 loss=1.504 ctc=1.3517 phonetic=1.6343 rnnt=nan consistency=nan lid_utt=0.6022 lid_frame=0.0734 lr=9.674e-05 frames_per_s=13192 peak_gib=73.51 splits=1 elapsed_s=7216
+[10:46:00] stream: 3376 batches, 1211.24 h of audio (588x real time), buffer 1357/1800 s, consumer waited 4399 s, eval-audio drops 0; network 35.8 MB/s, cache 14.8/40 GiB
+[10:46:21] stream: 265812 MB fetched, 35.7 MB/s (wall), 87.2 MB/s (while fetching), cache 14.8/40 GiB
+[10:46:35] step=7200 epoch=0 loss=1.5584 ctc=1.4665 phonetic=1.5357 rnnt=nan consistency=nan lid_utt=0.619 lid_frame=0.0921 lr=9.575e-05 frames_per_s=14841 peak_gib=73.51 splits=1 elapsed_s=7272
+[10:47:01] stream: 3406 batches, 1221.91 h of audio (588x real time), buffer 1600/1800 s, consumer waited 4436 s, eval-audio drops 0; network 35.8 MB/s, cache 15.1/40 GiB
+[10:47:28] step=7225 epoch=0 loss=1.7946 ctc=1.7488 phonetic=1.6658 rnnt=nan consistency=nan lid_utt=0.5969 lid_frame=0.1098 lr=9.486e-05 frames_per_s=14971 peak_gib=73.51 splits=1 elapsed_s=7325
+[10:47:35] stream: 271516 MB fetched, 36.1 MB/s (wall), 88.2 MB/s (while fetching), cache 15.1/40 GiB
+[10:48:05] stream: 3431 batches, 1230.88 h of audio (588x real time), buffer 527/1800 s, consumer waited 4479 s, eval-audio drops 0; network 36.6 MB/s, cache 18.1/40 GiB
+[10:48:26] step=7250 epoch=0 loss=1.7765 ctc=1.6526 phonetic=1.7431 rnnt=nan consistency=nan lid_utt=0.6828 lid_frame=0.2842 lr=9.408e-05 frames_per_s=14178 peak_gib=73.51 splits=1 elapsed_s=7382
+[10:49:04] stream: 276582 MB fetched, 36.4 MB/s (wall), 89.0 MB/s (while fetching), cache 18.1/40 GiB
+[10:49:09] stream: 3464 batches, 1242.82 h of audio (588x real time), buffer 448/1800 s, consumer waited 4520 s, eval-audio drops 0; network 36.4 MB/s, cache 18.1/40 GiB
+[10:49:18] step=7275 epoch=0 loss=1.528 ctc=1.4335 phonetic=1.5276 rnnt=nan consistency=nan lid_utt=0.5968 lid_frame=0.066 lr=9.340e-05 frames_per_s=15856 peak_gib=73.51 splits=1 elapsed_s=7434
+[10:50:11] stream: 3492 batches, 1252.88 h of audio (588x real time), buffer 1400/1800 s, consumer waited 4558 s, eval-audio drops 0; network 36.2 MB/s, cache 18.1/40 GiB
+[10:50:12] step=7300 epoch=0 loss=1.7372 ctc=1.6166 phonetic=1.6769 rnnt=nan consistency=nan lid_utt=0.6781 lid_frame=0.3476 lr=9.283e-05 frames_per_s=14460 peak_gib=73.51 splits=1 elapsed_s=7489
+[10:50:14] stream: 278398 MB fetched, 36.3 MB/s (wall), 88.7 MB/s (while fetching), cache 18.1/40 GiB
+[10:51:04] step=7325 epoch=0 loss=1.7728 ctc=1.6887 phonetic=1.7025 rnnt=nan consistency=nan lid_utt=0.6322 lid_frame=0.1673 lr=9.236e-05 frames_per_s=15833 peak_gib=73.51 splits=1 elapsed_s=7541
+[10:51:13] stream: 3523 batches, 1264.14 h of audio (589x real time), buffer 1352/1800 s, consumer waited 4595 s, eval-audio drops 0; network 36.1 MB/s, cache 18.1/40 GiB
+[10:51:48] stream: 279919 MB fetched, 36.1 MB/s (wall), 88.7 MB/s (while fetching), cache 18.1/40 GiB
+[10:51:57] step=7350 epoch=0 loss=1.7067 ctc=1.5745 phonetic=1.7594 rnnt=nan consistency=nan lid_utt=0.6282 lid_frame=0.139 lr=9.200e-05 frames_per_s=15814 peak_gib=73.51 splits=1 elapsed_s=7594
+[10:52:14] stream: 3552 batches, 1274.76 h of audio (589x real time), buffer 1089/1800 s, consumer waited 4637 s, eval-audio drops 0; network 35.9 MB/s, cache 18.2/40 GiB
+[10:52:48] step=7375 epoch=0 loss=1.9421 ctc=1.7869 phonetic=1.9523 rnnt=nan consistency=nan lid_utt=0.7027 lid_frame=0.3537 lr=9.174e-05 frames_per_s=15021 peak_gib=73.51 splits=1 elapsed_s=7644
+[10:52:53] stream: 285042 MB fetched, 36.4 MB/s (wall), 88.8 MB/s (while fetching), cache 18.2/40 GiB
+[10:53:14] stream: 3582 batches, 1285.27 h of audio (589x real time), buffer 1622/1800 s, consumer waited 4673 s, eval-audio drops 0; network 36.3 MB/s, cache 18.1/40 GiB
+[10:53:40] step=7400 epoch=0 loss=1.7012 ctc=1.5699 phonetic=1.7854 rnnt=nan consistency=nan lid_utt=0.5949 lid_frame=0.0719 lr=9.159e-05 frames_per_s=16096 peak_gib=73.51 splits=1 elapsed_s=7696
+[10:54:18] stream: 3612 batches, 1296.34 h of audio (590x real time), buffer 1407/1800 s, consumer waited 4714 s, eval-audio drops 0; network 36.2 MB/s, cache 18.3/40 GiB
+[10:54:32] step=7423 epoch=0 loss=1.5454 ctc=1.3907 phonetic=1.6941 rnnt=nan consistency=nan lid_utt=0.5789 lid_frame=0.0578 lr=9.155e-05 frames_per_s=14607 peak_gib=73.51 splits=1 elapsed_s=7749
+[10:54:37] GPU utilization: mean 82%, at or above 80% for 80% of 1532 samples, peak memory 76360 MiB
+[10:55:34] v4+lid: wrote results/v4+lid.json
+pilot train: DONE

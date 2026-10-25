@@ -1,0 +1,186 @@
+{
+ "fleurs_hi": {
+  "Vesper-IndicEAR": {
+   "wer": 41.31,
+   "cer": 24.45,
+   "clips": 84
+  },
+  "Vesper-IndicEAR (language given)": {
+   "wer": 40.76,
+   "cer": 23.93,
+   "clips": 84
+  },
+  "Nemotron 3.5 ASR 0.6B": {
+   "wer": 17.33,
+   "cer": 9.18,
+   "clips": 84,
+   "runtime": "NeMo-Speech.cpp",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 17.59
+  },
+  "Qwen3-ASR 0.6B": {
+   "wer": 25.79,
+   "cer": 12.91,
+   "clips": 84,
+   "runtime": "sherpa-onnx",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 26.45
+  }
+ },
+ "fleurs_en": {
+  "Vesper-IndicEAR": {
+   "wer": 34.75,
+   "cer": 15.5,
+   "clips": 93
+  },
+  "Vesper-IndicEAR (language given)": {
+   "wer": 34.75,
+   "cer": 15.5,
+   "clips": 93
+  },
+  "Cohere Transcribe": {
+   "wer": 7.86,
+   "cer": 3.68,
+   "clips": 93,
+   "runtime": "sherpa-onnx",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 6.7
+  },
+  "Nemotron 3.5 ASR 0.6B": {
+   "wer": 11.31,
+   "cer": 5.19,
+   "clips": 93,
+   "runtime": "NeMo-Speech.cpp",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 10.22
+  },
+  "Qwen3-ASR 0.6B": {
+   "wer": 8.93,
+   "cer": 4.03,
+   "clips": 93,
+   "runtime": "sherpa-onnx",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 7.42
+  },
+  "Whisper small": {
+   "wer": 7.2,
+   "cer": 2.92,
+   "clips": 93,
+   "runtime": "sherpa-onnx",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 6.15
+  },
+  "Whisper large-v3-turbo": {
+   "wer": 7.05,
+   "cer": 2.61,
+   "clips": 93,
+   "runtime": "sherpa-onnx",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 5.64
+  },
+  "LFM2.5-Audio 1.5B": {
+   "wer": 8.68,
+   "cer": 4.16,
+   "clips": 93,
+   "runtime": "llama-cpp-2/mtmd",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 7.45
+  },
+  "Parakeet TDT 0.6B v3": {
+   "wer": 6.09,
+   "cer": 2.23,
+   "clips": 93,
+   "runtime": "NeMo-Speech.cpp",
+   "precision": "Q8_0 GGUF (NVIDIA official)",
+   "vesper_reported_wer_mean": 4.78
+  },
+  "Parakeet Redux": {
+   "wer": 7.31,
+   "cer": 3.13,
+   "clips": 93,
+   "runtime": "MLX-Audio-Swift",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 6.21
+  },
+  "Phonon-2": {
+   "wer": 6.7,
+   "cer": 2.64,
+   "clips": 93,
+   "runtime": "MLX-Audio-Swift",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 5.4
+  },
+  "Granite Speech 5.0 470M": {
+   "wer": 6.19,
+   "cer": 2.5,
+   "clips": 93,
+   "runtime": "MLX-Audio-Swift",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 5.08
+  },
+  "Moonshine base": {
+   "wer": 10.65,
+   "cer": 4.69,
+   "clips": 93,
+   "runtime": "sherpa-onnx",
+   "precision": "each model's pinned catalog artifacts; see modelVersions in each report",
+   "vesper_reported_wer_mean": 9.55
+  }
+ },
+ "svarah": {
+  "Vesper-IndicEAR": {
+   "wer": 48.38,
+   "cer": 26.69,
+   "clips": 304
+  },
+  "Vesper-IndicEAR (language given)": {
+   "wer": 46.59,
+   "cer": 25.61,
+   "clips": 304
+  },
+  "Nemotron 3.5 ASR 0.6B": {
+   "wer": 20.71,
+   "cer": 12.91,
+   "clips": 304,
+   "runtime": "NeMo-Speech.cpp",
+   "precision": "Q8_0",
+   "vesper_reported_wer_mean": 25.66
+  },
+  "Cohere Transcribe": {
+   "wer": 9.61,
+   "cer": 5.07,
+   "clips": 304,
+   "runtime": "sherpa-onnx",
+   "precision": "ONNX INT8",
+   "vesper_reported_wer_mean": 13.39
+  }
+ },
+ "mucs_hi_en": {
+  "Vesper-IndicEAR": {
+   "wer": 66.38,
+   "cer": 41.81,
+   "clips": 16
+  },
+  "Vesper-IndicEAR (language given)": {
+   "wer": 66.38,
+   "cer": 41.81,
+   "clips": 16
+  },
+  "Nemotron 3.5 ASR 0.6B": {
+   "wer": 52.84,
+   "cer": 47.4,
+   "clips": 16,
+   "runtime": "NeMo-Speech.cpp",
+   "precision": "model-specific quantized weights",
+   "vesper_reported_wer_mean": 51.26
+  },
+  "Qwen3-ASR 0.6B": {
+   "wer": 57.64,
+   "cer": 52.99,
+   "clips": 16,
+   "runtime": "sherpa-onnx",
+   "precision": "model-specific quantized weights",
+   "vesper_reported_wer_mean": 58.24
+  }
+ }
+}

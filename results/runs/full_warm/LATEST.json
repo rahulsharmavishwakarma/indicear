@@ -1,0 +1,79 @@
+{
+  "run": "v4+lid",
+  "run_dir": "/content/full/runs/v4+lid",
+  "status": "DONE",
+  "step": 13394,
+  "checkpoint": {
+    "file": "ckpt-00013394.pt",
+    "kind": "checkpoint",
+    "size": 141723995,
+    "sha256": "deafe1d53f06399e480a248f3d7038633b6da5a109bd3aa11cfad1d9985d115e",
+    "step": 13394,
+    "best": false
+  },
+  "best": {
+    "file": "best.pt",
+    "kind": "best",
+    "size": 141721243,
+    "sha256": "fe2528cfb8ac0ed18acfda7bfe5e65d0ea6b3ab1d8361268723c4105b36da789",
+    "step": 13000
+  },
+  "keep": [
+    "ckpt-00013394.pt",
+    "ckpt-00013370.pt"
+  ],
+  "files": [
+    {
+      "file": "ckpt-00013394.pt",
+      "kind": "checkpoint",
+      "size": 141723995,
+      "sha256": "deafe1d53f06399e480a248f3d7038633b6da5a109bd3aa11cfad1d9985d115e",
+      "step": 13394
+    },
+    {
+      "file": "ckpt-00013370.pt",
+      "kind": "checkpoint",
+      "size": 141730203,
+      "sha256": "ffbfb273d89e2d3402f3fb527081a06decdd2512e010096d78ad320e5aa0309e",
+      "step": 13370
+    },
+    {
+      "file": "best.pt",
+      "kind": "best",
+      "size": 141721243,
+      "sha256": "fe2528cfb8ac0ed18acfda7bfe5e65d0ea6b3ab1d8361268723c4105b36da789",
+      "step": 13000
+    },
+    {
+      "file": "result.json",
+      "kind": "artifact",
+      "size": 33460,
+      "sha256": "f674c1588980b4a74a1ec48273cc6b3c1a4c7f4faffda144384eedfaf03109ab"
+    },
+    {
+      "file": "heads.safetensors",
+      "kind": "artifact",
+      "size": 40832696,
+      "sha256": "6e1b2f414fab8bcf49ab0a2d6d5994ab097ca741ac7146916a21ff8947facc26"
+    },
+    {
+      "file": "variant.json",
+      "kind": "artifact",
+      "size": 316,
+      "sha256": "1efab4018f79759270d540ba382d2b9ca519270f0dbb44bd77fbb08e915c8767"
+    },
+    {
+      "file": "adapters.safetensors",
+      "kind": "artifact",
+      "size": 6371584,
+      "sha256": "4a3d7bb8b02f9d7715f180f81277af4188016afede884ca1516b11c9683b6ae6"
+    },
+    {
+      "file": "lid.json",
+      "kind": "artifact",
+      "size": 416,
+      "sha256": "0ffe00419c22d2e843003d22e90ba808191c5e705a4a80f27c2a611985e69c1d"
+    }
+  ],
+  "updated_at": 1792880085.0057075
+}

@@ -1,0 +1,138 @@
+{
+  "ur": {
+    "wer": 94.69,
+    "cer": 74.22,
+    "utterances": 139,
+    "words": 1901,
+    "script_error_rate": 82.24,
+    "wer_script_normalised": 94.69,
+    "cer_script_normalised": 74.15,
+    "rows_with_alternative_ref": 73,
+    "cm_utterances": 73,
+    "cm_spans": 310,
+    "cm_span_accuracy": 26.77,
+    "cm_span_cer_mean": 72.1,
+    "cm_span_accuracy_by_lang": {
+      "en": 66.12,
+      "ur": 1.59
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.192
+  },
+  "lid": {
+    "utterances": 139,
+    "accuracy": 10.07,
+    "macro_f1": 18.3,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 10.07,
+        "f1": 18.3,
+        "support": 139
+      }
+    },
+    "confusion": {
+      "ur": {
+        "hi": 119,
+        "pa": 5,
+        "te": 1,
+        "ur": 14
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 119,
+        "hi_utterances": 0,
+        "ur_utterances": 139,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 85.61
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 6,
+        "accuracy": 16.67
+      },
+      "2-5s": {
+        "utterances": 67,
+        "accuracy": 11.94
+      },
+      "5-10s": {
+        "utterances": 66,
+        "accuracy": 7.58
+      }
+    }
+  },
+  "eval_set": "vaani_test_ur",
+  "utterances": 139,
+  "hours": 0.19,
+  "seconds": 9,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 84,
+  "changed_examples": [
+    {
+      "key": "vaani/ur/test/IISc_VaaniProject_M_UttarPradesh_Budaun_Chan75698_0515440000_GENERIC_1049_5917_8179",
+      "constrained": "आ जो english liters में है",
+      "unconstrained": "आ जो english liters में है",
+      "hinted": "جو english liters میں"
+    },
+    {
+      "key": "vaani/ur/test/IISc_VaaniProject_M_UttarPradesh_Budaun_Chan75698_0516180000_Budaun-SPECIFIC_02106_13257_14408",
+      "constrained": "light भी दिखाई रही",
+      "unconstrained": "light भी दिखाई रही",
+      "hinted": "light دکھ"
+    },
+    {
+      "key": "vaani/ur/test/IISc_VaaniProject_M_UttarPradesh_Budaun_Chan75698_0508160000_Budaun-SPECIFIC_00350_6703_11700",
+      "constrained": "और दो मछली buildings है सामने कुछ गाड़ियां खड़ी हुई है जो टू wheeler से",
+      "unconstrained": "और दो मछली buildings है सामने कुछ गाड़ियां खड़ी हुई है जो टू wheeler से",
+      "hinted": "اور دو م buildings سا کچھ گاڑی کھ ہوئی to wheeler"
+    },
+    {
+      "key": "vaani/ur/test/IISc_VaaniProject_M_UttarPradesh_JyotibaPhuleNagar_Umer71602_1411300000_JyotibaPhuleNagar-SPECIFIC_00924_8179_14611",
+      "constrained": "और बड़ा एकी भी देख और यहाँिऱम भी हमें देख जा कितने बड़े बड़े हैं",
+      "unconstrained": "और बड़ा एकी भी দেখতে میں और یہاں పైరમ भी हमें देख जा कितने बड़े बड़े हैं",
+      "hinted": "اور بڑا بھی دیکھ میں اور یہاں بھی دیکھ جا کتنے بڑے"
+    },
+    {
+      "key": "vaani/ur/test/IISc_VaaniProject_M_UttarPradesh_JyotibaPhuleNagar_Umer71602_1413030000_JyotibaPhuleNagar-SPECIFIC_00726_17394_22680",
+      "constrained": "औराड के सााय में ये car को खड़े सौ और यहाँ क्या कि एक लगे gage care",
+      "unconstrained": "ওाड के सााय में ये car को खड़े सौ और यहाँ क्या कि एक लगेgage care",
+      "hinted": "ڑ کےائ میں یہ car کو کھ سو اور یہاں کیا کہ lgage care"
+    }
+  ]
+}

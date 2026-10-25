@@ -1,0 +1,140 @@
+{
+  "te": {
+    "wer": 73.08,
+    "cer": 30.26,
+    "utterances": 218,
+    "words": 4253,
+    "script_error_rate": 19.96,
+    "wer_script_normalised": 73.08,
+    "cer_script_normalised": 30.26,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 1,
+    "cm_spans": 3,
+    "cm_span_accuracy": 33.33,
+    "cm_span_cer_mean": 128.89,
+    "cm_span_accuracy_by_lang": {
+      "en": 0.0,
+      "te": 50.0
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.838
+  },
+  "lid": {
+    "utterances": 218,
+    "accuracy": 99.54,
+    "macro_f1": 99.77,
+    "per_lang": {
+      "te": {
+        "precision": 100.0,
+        "recall": 99.54,
+        "f1": 99.77,
+        "support": 218
+      }
+    },
+    "confusion": {
+      "te": {
+        "te": 217,
+        "ur": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 1,
+        "accuracy": 0.0
+      },
+      "2-5s": {
+        "utterances": 1,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 30,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 186,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indiccontext_te_code_mixed",
+  "utterances": 218,
+  "hours": 0.84,
+  "seconds": 24,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 179,
+  "changed_examples": [
+    {
+      "key": "indiccontext_eval/te/test/7318349394517101_0_0",
+      "constrained": "భౌతికవాధం యొక్క తాత్విిక పునాాధలను అర్థం చేసుకోవడానికిడానికి దాని ప్రధాన సూత్రత్రాలను జాగ్రత్తగా పరిశీలించడం అవసరం వాస్తవికత మరియు చైతన్యం యొక్క స్వభవాన్ని అర్థం చేసడానికి ప్రత్యేకమైన చిక్కలను హల ight చేస్తుంది",
+      "unconstrained": "ౌతికవాధం యొక్క తాత్విిక పునాాధలను అర్థం చేసుకోవడానికిడానికి దాని ప్రధాన సూత్రత్రాలను జాగ్రత్తగా పరిశీలించడం అవసరం వాస్తవికత మరియు చైతన్యం యొక్క స్వభవాన్ని అర్థం చేసడానికి ప్రత్యేకమైన చిక్కలను హలight చేస్తుంది",
+      "hinted": "భౌతికవాధం యొక్క తాత్విిక పునాాధలను అర్థం చేసుకోవడానికిడానికి దాని ప్రధాన సూత్రత్రాలను జాగ్రత్తగా పరిశీలించడం అవసరం వాస్తవికత మరియు చైతన్యం యొక్క స్వభవాన్ని అర్థం చేసడానికి ప్రత్యేకమైన చిక్కలను హల ight చేస్తుంది"
+    },
+    {
+      "key": "indiccontext_eval/te/test/7318349394515636_0_0",
+      "constrained": "auto regrec మరియు కదిలే సగటు భాగాలతో డ yinమి ic system moడ eling కోసం ఏఆర్ఎంే నమోనాాల భావన సంబధిితమైనది సంకలనం యొక్క భావన ప్రతి ఇ inప ut యొక్క ప్రతి స్పపందనల మొత్తానికి సమానని సూచిస్స్తుంది",
+      "unconstrained": "auto regrec మరియు కదిలే సగటు భాగాలతో డyైనమిic system moడelింగ్ కోసం ఏఆర్ఎంే నమోనాాల భావన సంబధిితమైనది సంకలనం యొక్క భావన ప్రతి ఇ inపut యొక్క ప్రతి స్పపందనల మొత్తానికి సమానని సూచిస్స్తుంది",
+      "hinted": "auto regrec మరియు కదిలే సగటు భాగాలతో డ yinమి ic system moడ eling కోసం ఏఆర్ఎంే నమోనాాల భావన సంబధిితమైనది సంకలనం యొక్క భావన ప్రతి ఇ inప ut యొక్క ప్రతి స్పపందనల మొత్తానికి సమానని సూచిస్స్తుంది"
+    },
+    {
+      "key": "indiccontext_eval/te/test/7318349394515646_0_0",
+      "constrained": "ని మరియు ubic అడుగుల కొలతల ఆధరంగా చేసిన సరుకువాణ టన్నల లెక్కంపు మొదట చెప్పిన ధరనుిించిపోయింది master లీ z openప్పందం ఒక నిర్దిష్ట సమయాన్ని పేర్కొంది అది మా మొత్తం కార్ాచరణ chedడ్యూల్ను ప్రభావితం చేసింది",
+      "unconstrained": "निನ್ನು ಮ ಯೂಬಕ್ అ ಅಡುಗೆగుಲ కొಳతల ఆధరంగా చేసిన సరుకువాణ టన్నల లెక్కంపు మొదట చెప్పిన ధరనుిించిపోయింది master లీz openప్పందం ఒక నిర్దిష్ట సమయాన్ని పేర్కొంది అది మా మొత్తం కార్ాచరణchedడ్యూల్ను ప్రభావితం చేసింది",
+      "hinted": "ని మరియు ubic అడుగుల కొలతల ఆధరంగా చేసిన సరుకువాణ టన్నల లెక్కంపు మొదట చెప్పిన ధరనుిించిపోయింది master లీ z openప్పందం ఒక నిర్దిష్ట సమయాన్ని పేర్కొంది అది మా మొత్తం కార్ాచరణ chedడ్యూల్ను ప్రభావితం చేసింది"
+    },
+    {
+      "key": "indiccontext_eval/te/test/7318349394517817_0_0",
+      "constrained": "మా robot యొక్క స్వయం ప్రతిపత్త నావి igగ ation వ్యవస్థ leadర్ రాడర్ మరియు జ gp s కళీకను ఉపయోగస్తుంది ఇది నిజ సమయ నిర్ణయం తీసడానికి అతధనిక యూరల్ network ద్వారా మెరుగు పర్చబడింది",
+      "unconstrained": "મારો robot యొక్క స్వయం ప్రతిపత్త నావిigగation వ్యవస్థ leీadర్ రాడర్ మరియు జ gp s కళీకను ఉపయోగస్తుంది ఇది నిజ సమయ నిర్ణయం తీసడానికి అతధనిక యూరల్ network ద్వారా మెరుగు పర్చబడింది",
+      "hinted": "మా robot యొక్క స్వయం ప్రతిపత్త నావి igగ ation వ్యవస్థ leadర్ రాడర్ మరియు జ gp s కళీకను ఉపయోగస్తుంది ఇది నిజ సమయ నిర్ణయం తీసడానికి అతధనిక యూరల్ network ద్వారా మెరుగు పర్చబడింది"
+    },
+    {
+      "key": "indiccontext_eval/te/test/7318349394518065_0_0",
+      "constrained": "అట్లాంటి tic indian bas యొక్క ప్రభావం ఆర్కిటి ic botom waterపై సముద్రను నమోనాాలను ఉపయోగించ పరిశధంబడింది డీ బేేసిన్ ప్రయోం యొక్క ప్రభావం డీప్ పో tionన్ స cర్క్కుల ation ప సముద్రరన నమూనా ఉపయోగించి పరిశోధంచబడింది",
+      "unconstrained": "అట్లాంటిtic indiaండిn bas యొక్క ప్రభావం ఆర్కిటిic botom waterపై సముద్రను నమోనాాలను ఉపయోగించ పరిశధంబడింది డీ బేేసిన్ ప్రయోం యొక్క ప్రభావం డీప్ పోtionన్ స cర్క్కులation ప సముద్రరన నమూనా ఉపయోగించి పరిశోధంచబడింది",
+      "hinted": "అట్లాంటి tic indian bas యొక్క ప్రభావం ఆర్కిటి ic botom waterపై సముద్రను నమోనాాలను ఉపయోగించ పరిశధంబడింది డీ బేేసిన్ ప్రయోం యొక్క ప్రభావం డీప్ పో tionన్ స cర్క్కుల ation ప సముద్రరన నమూనా ఉపయోగించి పరిశోధంచబడింది"
+    }
+  ]
+}

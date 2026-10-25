@@ -1,0 +1,143 @@
+{
+  "language": "hi_in",
+  "encoder": "eg2text",
+  "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+  "layers": 24,
+  "train_clips": 2047,
+  "train_hours": 6.17,
+  "epochs": 6,
+  "batch_seconds": 100.0,
+  "lr": 0.002,
+  "python": "3.14.8",
+  "gil_enabled": false,
+  "seconds": 311,
+  "scores": {
+    "fleurs_dev": [
+      {
+        "layer": 1,
+        "wer": 54.22,
+        "cer": 23.33
+      },
+      {
+        "layer": 2,
+        "wer": 57.72,
+        "cer": 26.1
+      },
+      {
+        "layer": 3,
+        "wer": 56.68,
+        "cer": 25.83
+      },
+      {
+        "layer": 4,
+        "wer": 59.75,
+        "cer": 28.43
+      },
+      {
+        "layer": 5,
+        "wer": 60.6,
+        "cer": 29.31
+      },
+      {
+        "layer": 6,
+        "wer": 66.79,
+        "cer": 40.72
+      },
+      {
+        "layer": 7,
+        "wer": 70.92,
+        "cer": 52.63
+      },
+      {
+        "layer": 8,
+        "wer": 71.4,
+        "cer": 47.07
+      },
+      {
+        "layer": 9,
+        "wer": 74.41,
+        "cer": 53.59
+      },
+      {
+        "layer": 10,
+        "wer": 70.83,
+        "cer": 38.34
+      },
+      {
+        "layer": 11,
+        "wer": 69.69,
+        "cer": 36.79
+      },
+      {
+        "layer": 12,
+        "wer": 72.73,
+        "cer": 44.15
+      },
+      {
+        "layer": 13,
+        "wer": 74.38,
+        "cer": 48.51
+      },
+      {
+        "layer": 14,
+        "wer": 74.03,
+        "cer": 43.73
+      },
+      {
+        "layer": 15,
+        "wer": 74.34,
+        "cer": 44.42
+      },
+      {
+        "layer": 16,
+        "wer": 74.43,
+        "cer": 44.4
+      },
+      {
+        "layer": 17,
+        "wer": 79.42,
+        "cer": 53.92
+      },
+      {
+        "layer": 18,
+        "wer": 80.25,
+        "cer": 52.6
+      },
+      {
+        "layer": 19,
+        "wer": 83.67,
+        "cer": 58.78
+      },
+      {
+        "layer": 20,
+        "wer": 83.17,
+        "cer": 57.02
+      },
+      {
+        "layer": 21,
+        "wer": 83.95,
+        "cer": 58.63
+      },
+      {
+        "layer": 22,
+        "wer": 98.62,
+        "cer": 96.19
+      },
+      {
+        "layer": 23,
+        "wer": 84.53,
+        "cer": 59.39
+      },
+      {
+        "layer": 24,
+        "wer": 98.43,
+        "cer": 95.93
+      },
+      {
+        "layer": "output_proj",
+        "wer": 81.82,
+        "cer": 50.94
+      }
+    ]
+  }
+}

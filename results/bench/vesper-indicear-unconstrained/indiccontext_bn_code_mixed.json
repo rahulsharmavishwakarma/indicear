@@ -1,0 +1,100 @@
+{
+  "bn": {
+    "wer": 65.6,
+    "cer": 28.64,
+    "utterances": 210,
+    "words": 4337,
+    "script_error_rate": 18.93,
+    "wer_script_normalised": 65.6,
+    "cer_script_normalised": 28.64,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 1,
+    "cm_spans": 5,
+    "cm_span_accuracy": 100.0,
+    "cm_span_cer_mean": 32.36,
+    "cm_span_accuracy_by_lang": {
+      "bn": 100.0,
+      "en": 100.0
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.79
+  },
+  "lid": {
+    "utterances": 210,
+    "accuracy": 98.57,
+    "macro_f1": 99.28,
+    "per_lang": {
+      "bn": {
+        "precision": 100.0,
+        "recall": 98.57,
+        "f1": 99.28,
+        "support": 210
+      }
+    },
+    "confusion": {
+      "bn": {
+        "bn": 207,
+        "gu": 1,
+        "or": 1,
+        "ur": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 4,
+        "accuracy": 25.0
+      },
+      "5-10s": {
+        "utterances": 33,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 173,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indiccontext_bn_code_mixed",
+  "utterances": 210,
+  "hours": 0.79,
+  "seconds": 24,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "language": "gu_in",
+  "encoder": "eg2",
+  "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+  "layers": 12,
+  "train_clips": 3095,
+  "train_hours": 8.64,
+  "epochs": 6,
+  "batch_seconds": 100.0,
+  "lr": 0.002,
+  "python": "3.14.7",
+  "gil_enabled": false,
+  "seconds": 801,
+  "scores": {
+    "fleurs_dev": [
+      {
+        "layer": 1,
+        "wer": 95.58,
+        "cer": 69.15
+      },
+      {
+        "layer": 2,
+        "wer": 93.21,
+        "cer": 60.02
+      },
+      {
+        "layer": 3,
+        "wer": 90.44,
+        "cer": 50.32
+      },
+      {
+        "layer": 4,
+        "wer": 85.93,
+        "cer": 40.74
+      },
+      {
+        "layer": 5,
+        "wer": 79.57,
+        "cer": 33.28
+      },
+      {
+        "layer": 6,
+        "wer": 78.58,
+        "cer": 31.95
+      },
+      {
+        "layer": 7,
+        "wer": 80.21,
+        "cer": 32.69
+      },
+      {
+        "layer": 8,
+        "wer": 79.3,
+        "cer": 31.99
+      },
+      {
+        "layer": 9,
+        "wer": 67.93,
+        "cer": 23.93
+      },
+      {
+        "layer": 10,
+        "wer": 64.99,
+        "cer": 21.98
+      },
+      {
+        "layer": 11,
+        "wer": 62.12,
+        "cer": 20.11
+      },
+      {
+        "layer": 12,
+        "wer": 59.37,
+        "cer": 19.34
+      },
+      {
+        "layer": "output_proj",
+        "wer": 62.23,
+        "cer": 20.3
+      }
+    ]
+  }
+}

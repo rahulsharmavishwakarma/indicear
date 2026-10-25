@@ -1,0 +1,194 @@
+{
+  "kn": {
+    "wer": 57.67,
+    "cer": 18.21,
+    "utterances": 600,
+    "words": 6333,
+    "script_error_rate": 5.03,
+    "wer_script_normalised": 57.67,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 1.318
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "kn": {
+        "kn": 600
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 31,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 458,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 111,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_kn",
+  "utterances": 600,
+  "hours": 1.32,
+  "seconds": 34,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 372,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424931147295-863-f",
+      "constrained": "ಹಿಂದೆ ಇವೆಲ್ಲ ಕಡಾ ವ್ಯಾಪ್ತಿಯಲ್ಲಿದ್ದರು ತಾಲೂೂಕಿ ಕೇಂದ್ರವಾದ ಪುತ್ತುರಿನ ನ್ಯಾಯಾಲಯಕ್ಕೆ ಒಪಟ್ಟಿಿತ್ತು",
+      "unconstrained": "ಹಿಂದೆ ಇವೆಲ್ಲ ಕಡಾ ವ್ಯಾಪ್ತಿಯಲ್ಲಿದ್ದರು ತಾಲೂೂಕಿ ಕೇಂದ್ರವಾದ ಪುತ್ತುರಿನ ನ್ಯಾಯಾಲಯಕ್ಕೆ ஒலಪಟ್ಟಿಿತ್ತು"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933192151-808-m",
+      "constrained": "ಇನ್ನು ಕಲಿದ ಎರಡು ದಿನಲ ಹಿಂದೆ tea ಮಾರುವವನಿಗೆ ಹೊಡೆದು ಗಂಡನ್ ಮೇಲೆ ಹಲ್ಲ ಮಾಡಿದ್ದ",
+      "unconstrained": "இ இன்னும் ಕಲಿದ ಎರಡು ದಿನಲ ಹಿಂದೆ tea ಮಾರುವವನಿಗೆ ಹೊಡೆದು ಗಂಡನ್ ಮೇಲೆ ಹಲ್ಲ ಮಾಡಿದ್ದ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933135826-168-m",
+      "constrained": "ಹೊಸ ಅಪಾರ್ಟ್ mentಮ ನಲ್ಲಿನೋರೆಸ್ತಿ ಆರಂಭವು ಪ್ರಾಯೋಗಿಿಕವಾಗಿ ಹಳೆಯ aಪಾ arಟ್ ment ನನೂಲಂಕುಶಷದಿಂದ ಭಿನ್ನವಾಗಿುವುದಿಲ್ಲ",
+      "unconstrained": "ಹೊಸ ಅಪಾರ್ಟ್mentಮ ನಲ್ಲಿನೋರೆಸ್ತಿ ಆರಂಭವು ಪ್ರಾಯೋಗಿಿಕವಾಗಿ ಹಳೆಯ aಪಾarಟ್mentಂಟ್ ನನೂಲಂಕುಶಷದಿಂದ ಭಿನ್ನವಾಗಿುವುದಿಲ್ಲ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933104596-418-f",
+      "constrained": "ನಂತರ ತನಿೋಡುೂ out ಪ್ರಕರಣವನ್ನು ಸಿೇಡಿ ತಣಿಕೆ ಒಳಪಡಿಸಂತೆ ಗೃಹ ಸಚಿವ k g charge ಅವರು ಆದೇಶ ನೀಡಿದ್ದಾರೆ",
+      "unconstrained": "ನಂತರ ತನಿக்கೋಡುೂout ಪ್ರಕರಣವನ್ನು ಸಿೇಡಿ ತಣಿಕೆ ಒಳಪಡಿಸಂತೆ ಗೃಹ ಸಚಿವ k g charge ಅವರು ಆದೇಶ ನೀಡಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933040662-385-m",
+      "constrained": "ಹಾಸ್ಂಬದ ಚಿಂತನಾಕಾಲಿಕವಾದ ಮಾತುಗಳಿಂದ ಸಮರಧದ್ಧಗೊಂಡ ಅವರಾಷಣ ಅ ಅದ್ಭತವಾಗಿತ್ತು",
+      "unconstrained": "ಹಾसंबीದ ಚಿಂತನಾकाಲಿಕವಾದ बाद ಮಾತುಗಳಿಂದ ಸಮರಧದ್ಧಗೊಂಡ ಅವರಾಷಣ ಅ ಅದ್ಭತವಾಗಿತ್ತು"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424930358424-818-f",
+      "constrained": "ಬಟಸ್ ಅಥವಾ ಪ್ಯಾರ ಪ್ರಿನ್ ಮೇಲೆ ಅವಂಬಿತವಾಗಿಿರುವ ಕಾಮಿ ಪಾತ್ರವನ್ನು ಕೇವಲ triky ಕವಿತೆಗಳ ಮೇಲೆ ಹೆಚ್ಚು ಒತ್ತಡವನ್ನು ಇಡಲಾಗಿದೆ",
+      "unconstrained": "बಟಸ್ ಅಥವಾ ಪ್ಯಾರ ಪ್ರಿನ್ ಮೇಲೆ ಅವवलंितವಾಗಿಿರುವ ಕಾಮಿ ಪಾತ್ರವನ್ನು ಕೇವಲ triky ಕವಿತೆಗಳ ಮೇಲೆ ಹೆಚ್ಚು ಒತ್ತಡವನ್ನು ಇಡಲಾಗಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933135791-168-m",
+      "constrained": "ಅನ ಡೇಟೆಂಟ ಮತ್ತು opticalal fber ಅನ್ನು icequare cpit ಖರೀಿಸುವ ನಿರಕ್ಷೆ ಇದೆ",
+      "unconstrained": "अ औरकामना ಡेटाೆಂಟ ಮತ್ತು opticalal fber ಅನ್ನು icequare cpit ಖರೀಿಸುವ ನಿರಕ್ಷೆ ಇದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933075823-418-f",
+      "constrained": "ಶಿವಾನು ಹೇಳಿಿರುವ ಪ್ರಕಾರ ಈಗಲೂ ಸಹ ಕೆಲವು ಮನೆಗಳಲ್ಲಿದೆೇ ರೀತಿುತ್ತವೆ",
+      "unconstrained": "शिवाನು ಹೇಳಿಿರುವ ಪ್ರಕಾರ ಈಗಲೂ ಸಹ ಕೆಲವು ಮನೆಗಳಲ್ಲಿದೆೇ ರೀತಿುತ್ತವೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933187951-243-m",
+      "constrained": "ಅತ್ಯಂತ ಸಹನುಭೂತಿಯನ್ನು ಹೊಂದಿರುವ ವ್ಯಕ್ತಿಗಳಾಗಿುವುದರಿಂದ ಪಾಲುದಾರರ ಅಗತ್ಯಗಳನ್ನು ತಾವೇ ಸೂಕ್ಷ್ಮವಾಗಿ ಪರಿಗಣಿಿಸಿ ಸಕಕರಸುತ್ತಾರೆ",
+      "unconstrained": "अत्यಯन ಸಹನುಭೂತಿಯನ್ನು ಹೊಂದಿರುವ ವ್ಯಕ್ತಿಗಳಾಗಿುವುದರಿಂದ ಪಾಲುದಾರರ ಅಗತ್ಯಗಳನ್ನು ತಾವೇ ಸೂಕ್ಷ್ಮವಾಗಿ ಪರಿಗಣಿಿಸಿ ಸಕಕರಸುತ್ತಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933083914-1153-f",
+      "constrained": "ವಡಿಗಳು ಮತ್ತು ಲೆಕ್ಕತ್ರರ ಮತ್ತು ತೆರೆಗೆ ಬರ ಗಮನರ ಅನಕಾಸ ದ ತುಂಬಿದ್ದು ಇರ ಸಮಸ್ಯೆಗಳನ್ನು ಅಕಾಕಾಲಿಕ ಸಲ್ಲಿಕೆ ಕಾರಣ",
+      "unconstrained": "ஒருடிಗಳು ಮತ್ತು ಲೆಕ್ಕತ್ರರ ಮತ್ತು ತೆರೆಗೆ ಬರ ಗಮನರ ಅನಕಾಸ ದ ತುಂಬಿದ್ದು ಇರ ಸಮಸ್ಯೆಗಳನ್ನು ಅಕಾಕಾಲಿಕ ಸಲ್ಲಿಕೆ ಕಾರಣ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933067897-385-m",
+      "constrained": "ಈ ಉದಾಹಣೆಯಲ್ಲಿ ಮತ್ತೊಮ್ಮೆ ಭಾಷೆಯನ್ನು ದೇಶದ ಮತ್ತು ಸಮಾಜದಲ್ಲಿ ಸಂಭಿಸುವ ಎಲ್ಲ ಬದಲಾವಣೆಗಳನ್ನು ಬಿಂಬಿಸುತ್ತದೆ ಕಲ್ಪನೆಯನ್ನು ಖಚಿಿತಪಡಿಸುತ್ತದೆ",
+      "unconstrained": "ಈ उदाಹಣೆಯಲ್ಲಿ ಮತ್ತೊಮ್ಮೆ ಭಾಷೆಯನ್ನು ದೇಶದ ಮತ್ತು ಸಮಾಜದಲ್ಲಿ ಸಂಭಿಸುವ ಎಲ್ಲ ಬದಲಾವಣೆಗಳನ್ನು ಬಿಂಬಿಸುತ್ತದೆ ಕಲ್ಪನೆಯನ್ನು ಖಚಿಿತಪಡಿಸುತ್ತದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933057831-418-f",
+      "constrained": "ಅಿನಯ ಚಕ್ರರ್ತಿ ಸುದಿ ದೀಪಭಿನಯದಯೈಲ್ an ತ ಬಂದಿದೆ",
+      "unconstrained": "அनய சक्रर््य की சுदी ದೀಪಭಿನயದ பೈಲ್வான் சிதிೆ ತக்கு ಬಂದಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933158004-640-m",
+      "constrained": "ಅನುಿನದ ವಿಶ್ವದ ಇತಿಹಾಸದಲ್ಲಿ ಹೊಸ ಸಂತ್ರಸ್ತರಿಗೆ ಹುಟ್ಟು ಮುಖ್ಯ ಕಾರಣಗಳಲ್ಲಿ ಒಂದು ಹುಳಿಯುತ್ತದೆ",
+      "unconstrained": "अनुಿನದ ವಿಶ್ವದ ಇತಿಹಾಸದಲ್ಲಿ ಹೊಸ ಸಂತ್ರಸ್ತರಿಗೆ ಹುಟ್ಟು ಮುಖ್ಯ ಕಾರಣಗಳಲ್ಲಿ ಒಂದು ಹುಳಿಯುತ್ತದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933075809-418-f",
+      "constrained": "ಅವರು ಅದನ್ನು ಪ್ರತಿಭಟಿಸುವ ಸಲುವಾಗಿ ಚರಿತ್ರರ ಅಮರಣ ಅಂತ ಉಪವಸ ಅಥವಾಥವನ್ನು ಕೈಗೊಂಡರು",
+      "unconstrained": "ಅವರು அத ಪ್ರತಿಭಟಿಸುವ ಸಲುವಾಗಿ ಚರಿತ್ರರ ಅಮರಣ ಅಂತ ಉಪವಸ ಅಥವಾಥವನ್ನು ಕೈಗೊಂಡರು"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933192227-808-m",
+      "constrained": "ಇನ್ನು ಭೀಟ m laಔಟ್ನಲ್ಲೂ mask ಧರಿಸದವರಿಗೆ ಪೊಲೀಸರು ಬಿಸಿಮುಟ್ಟಿಿಸಿದ್ದಾರೆ",
+      "unconstrained": "ಇನ್ನು ಭೀಟm laೌಟ್ನಲ್ಲೂ mask ಧರಿಸದವರಿಗೆ ಪೊಲೀಸರು ಬಿಸಿಮುಟ್ಟಿಿಸಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933135812-168-m",
+      "constrained": "book of worldರ್ record ಸೇರಿಸಬಹುದು ಎಲಾಗಿದೆಾಗಿದೆ",
+      "unconstrained": "இல்லை கிண்ணீஸ் பு of worldರ್ட் record ಸೇರಿಸಬಹುದು ಎಲಾಗಿದೆಾಗಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933388466-919-m",
+      "constrained": "ಅವನು ಶಠರ್ಶಣ ಪುರುಕತ್ಸಾ ಅಥವಾ ವಿಷ್ಣೃದ್ಧ ಹೆಬ್ಬರ್ ಶ್ರೀವತ್ಸನ ಸಮುದಾಯದ ವಂಶಾವಳಿ ಸೇರಿದವರು",
+      "unconstrained": "ಅವवನು ಶಠರ್ಶಣ ಪುರುಕತ್ಸಾ ಅಥವಾ ವಿಷ್ಣೃದ್ಧ ಹೆಬ್ಬರ್ ಶ್ರೀವತ್ಸನ ಸಮುದಾಯದ ವಂಶಾವಳಿ ಸೇರಿದವರು"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424930677725-413-f",
+      "constrained": "ಏ ಆಕೆ ಯಾವುದೇ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ತೆರಳಿದರು ನಿಲು ಅಂಗಯನ್ನುೇ ಧರಿಿಸಿುತ್ತಿರುವಿರುವುದು ಇದಕ್ಕೆ ಸಾಕ್ಷಿ",
+      "unconstrained": "ಏन्द ಆಕೆ ಯಾವುದೇ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ತೆರಳಿದರು ನಿಲು ಅಂಗಯನ್ನುೇ ಧರಿಿಸಿುತ್ತಿರುವಿರುವುದು ಇದಕ್ಕೆ ಸಾಕ್ಷಿ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933187970-243-m",
+      "constrained": "ವಿ window ಮತ್ತು ಔಟ್ looಕ್ ನಲ್ಲಿ ಮುನ್ನೂಟ ಪಲಕವನ್ನು ನಿಷಕ್ರಿಯಯಗೊಳಿಸುವುದು ಹೇಗೆ",
+      "unconstrained": "विंडோஸ் மேல் ಮತ್ತು ಔಟ್looಕ್ ನಲ್ಲಿ ಮುನ್ನೂಟ ಪಲಕವನ್ನು ನಿಷಕ್ರಿಯಯಗೊಳಿಸುವುದು ಹೇಗೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_unknown/844424933037237-1017-f",
+      "constrained": "ಮಾರ್ಕ್ಸ್ ಹೇಳಿದ್ದರಲ್ಲಿ ಅಸಮಂಜಸವಾದದ್ದು ಯಾವುದೋ ಇಲ್ಲ ಎಂದು ಹೇಳುವೃತಿಯು ಅಲ್ಲ",
+      "unconstrained": "ಮಾರ್कಸ್ ಹೇಳಿದ್ದರಲ್ಲಿ ಅಸಮಂಜಸವಾದದ್ದು ಯಾವುದೋ ಇಲ್ಲ ಎಂದು ಹೇಳುವೃತಿಯು ಅಲ್ಲ"
+    }
+  ]
+}

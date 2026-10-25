@@ -1,0 +1,812 @@
+{
+ "lang": "pa",
+ "words": 95575,
+ "rewrites": 3202,
+ "per_1000_words": 33.5,
+ "types": 694,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "ਮਾਰਚ",
+   "en": "march",
+   "path": "lexicon",
+   "row": 4669,
+   "context": "ਸੰਘਰਸ਼ ਕਮੇਟੀ ਵਲੋਂ ਝੰਡਾ ਮਾਰਚ ਤੇ ਰੋਸ ਪ੍ਰਦਰਸ਼ਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਡਾਕਟਰ",
+   "en": "doctor",
+   "path": "lexicon",
+   "row": 8214,
+   "context": "ਅਤੇ ਨਰਸ ਦੇ ਸਹਾਇਕ ਡਾਕਟਰ ਹਨ ਅਤੇ ਆਪਣੇ ਸਾਰੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪੈਨਸ਼ਨ",
+   "en": "pension",
+   "path": "lexicon",
+   "row": 2730,
+   "context": "ਅਕਤੂਬਰ ਮਹੀਨੇ ਤਕ ਹੀ ਪੈਨਸ਼ਨ ਵੰਡੀ ਹੈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਰੇਲਵੇ",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 5186,
+   "context": "ਇਹ ਬਿਆਨ ਰਿਫੰਡਾਂ ਲਈ ਰੇਲਵੇ ਕਾਊਂਟਰਾਂ ਤੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕਮੇਟੀ",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 4536,
+   "context": "ਕੇ ਪਿੰਡ ਵਾਸੀਆਂ ਅਤੇ ਕਮੇਟੀ ਦੇ ਅਹੁਦੇਦਾਰਾਂ ਵਿਚ ਰੋਸ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮੀਟਿੰਗ",
+   "en": "meeting",
+   "path": "lexicon",
+   "row": 6582,
+   "context": "ਤੇ ਵਰਕਰਾਂ ਦੀ ਹੋਈ ਮੀਟਿੰਗ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਜਨਰਲ",
+   "en": "general",
+   "path": "lexicon",
+   "row": 5154,
+   "context": "ਮਾਧੁਰੀ ਕਾਨਿਤਕਰ ਨੂੰ ਲੈਫਟੀਨੈਂਟ ਜਨਰਲ ਬਣਾਏ ਜਾਣ ਨੂੰ ਹਰੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਫਾਸਟ",
+   "en": "fast",
+   "path": "lexicon",
+   "row": 7500,
+   "context": "ਦੇ ਜਲਦ ਨਿਪਟਾਰੇ ਲਈ ਫਾਸਟ ਟਰੈਕ ਅਦਾਲਤਾਂ ਦੀ ਸਥਾਪਨਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਨੈਟਵਰਕ",
+   "en": "network",
+   "path": "lexicon",
+   "row": 3733,
+   "context": "ਸਥਾਨਕ ਨੈਟਵਰਕ ਦੀ ਇਸ ਸੰਰਚਨਾ ਵਿੱਚ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਲਾਈਨ",
+   "en": "line",
+   "path": "lexicon",
+   "row": 5466,
+   "context": "ਮੈਟਰੋ ਸਿਟਰ ਲਾਈਨ ਲਾਈਨ ਮਾਲ ਨੂੰ ਸਿੱਧੀ ਪਹੁੰਚ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਫੀਚਰ",
+   "en": "feature",
+   "path": "lexicon",
+   "row": 2131,
+   "context": "ਦੀ ਸਿਹਤ ਸਟਰ ਦੇ ਫੀਚਰ ਨੂੰ ਚਾਲੂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਵੈਟਰਨਰੀ",
+   "en": "veterinary",
+   "path": "lexicon",
+   "row": 6597,
+   "context": "ਐਨਥਰੈਕਸ ਦੀ ਤਿਆਰ ਵੈਟਰਨਰੀ ਅਤੇ ਸਿਹਤ ਦੇਖਭਾਲ ਦੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਵਰਕਰ",
+   "en": "worker",
+   "path": "lexicon",
+   "row": 2459,
+   "context": "ਆਸ਼ਾ ਵਰਕਰ ਨਹੀਂ ਕਰਨਗੀਆਂ ਭਗਤ ਪੂਰਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਡਿਨਰ",
+   "en": "dinner",
+   "path": "lexicon",
+   "row": 7790,
+   "context": "ਉਹ ਲੰਚ ਅਤੇ ਡਿਨਰ ਕਰਨ ਲਈ ਅਰਜ਼ੀ ਕਰਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਨੈਸ਼ਨਲ",
+   "en": "national",
+   "path": "lexicon",
+   "row": 4627,
+   "context": "ਚਰਨਜੀਤ ਸਿੰਘ ਚੰਨੀ ਵੱਲੋਂ ਨੈਸ਼ਨਲ ਸੈਮੀਨਾਰ ਦਾ ਬਰੌਸ਼ਰ ਜਾਰੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕਲੀਨਿਕ",
+   "en": "clinic",
+   "path": "lexicon",
+   "row": 6201,
+   "context": "ਅੱਜ ਇਥੇ ਲਿਵਰ ਹੈਲਥ ਕਲੀਨਿਕ ਦਾ ਉਦਘਾਟਨ ਕਰਨ ਆਏ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪਾਰਟੀ",
+   "en": "party",
+   "path": "lexicon",
+   "row": 2081,
+   "context": "ਤਹਿਤ ਨਰਿੰਦਰ ਮੋਦੀ ਨੇ ਪਾਰਟੀ ਦੇ ਕਈ ਸੀਨੀਅਰ ਨੇਤਾਵਾਂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਬੋਰਡ",
+   "en": "board",
+   "path": "lexicon",
+   "row": 434,
+   "context": "ਬੈਂਸ ਸਕੂਲ ਡਿਸਟ੍ਰਿਕ ਦੇ ਬੋਰਡ ਮੈਂਬਰ ਚੁਣੇ ਗਏ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਟੇਸ਼ਨ",
+   "en": "station",
+   "path": "lexicon",
+   "row": 4059,
+   "context": "ਪੁਲਿਸ ਵਲੋਂ ਮਲੋਟ ਰੇਲਵੇ ਸਟੇਸ਼ਨ ਨੂੰ ਅੱਗ ਲਗਾਉਣ ਦੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਯੂਨੀਅਨ",
+   "en": "union",
+   "path": "lexicon",
+   "row": 3183,
+   "context": "ਕਾਨ ਨੇ ਭਾਗੀਦਾਰੀ ਜਾਂ ਯੂਨੀਅਨ ਦੇ ਸੰਕਲਪ ਨੂੰ ਜ਼ਾਹਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਟੈਕਸਟ",
+   "en": "text",
+   "path": "lexicon",
+   "row": 1085,
+   "context": "ਛੱਤ ਮੈਚ ਦੇ ਟੈਕਸਟ ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਡਿਜ਼ਾਇਨ",
+   "en": "design",
+   "path": "lexicon",
+   "row": 7687,
+   "context": "ਦੋਨੋ ਡਿਜ਼ਾਈਨ ਦੀ ਸਬੰਧਿਤ ਡਿਜ਼ਾਇਨ ਫੀਚਰ ਜ਼ੋਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਟਾਇਰ",
+   "en": "tyre",
+   "path": "lexicon",
+   "row": 5319,
+   "context": "ਹਮਲਾਵਰ ਮਿਧਣ ਨਾਲ ਵਾਈਡ ਟਾਇਰ ਕਿਤੇ ਵੀ ਪਾਸ ਕਰਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕੰਪਨੀ",
+   "en": "company",
+   "path": "lexicon",
+   "row": 1156,
+   "context": "ਦਸਤਾਵੇਜ਼ ਕੰਪਨੀ ਦੇ ਪ੍ਰਸ਼ਾਸਨ ਲਈ ਲੋੜ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪਾਰਟੀਸ਼ਨ",
+   "en": "partition",
+   "path": "lexicon",
+   "row": 6951,
+   "context": "ਬਹੁਤ ਜ਼ਿਆਦਾ ਪਾਰਟੀਸ਼ਨ ਕਰਨਾ ਤੁਹਾਡੇ ਯੋਜਨਾਬੱਧ ਅਧਿਐਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਯੂਨੀਅਨ",
+   "en": "union",
+   "path": "lexicon",
+   "row": 5715,
+   "context": "ਇੱਕ ਸਾਂਝੇ ਸੈਸ਼ਨ ਵਿੱਚ ਯੂਨੀਅਨ ਦੇ ਸੰਦੇਸ਼ ਨੂੰ ਸਲਾਨਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਕਿਨ",
+   "en": "skin",
+   "path": "lexicon",
+   "row": 1141,
+   "context": "ਜੀਵਨ ਜਾਚ ਸਿਹਤ ਹੁਣ ਸਕਿਨ ਪੈਚ ਨਾਲ ਸ਼ੂਗਰ ਰੋਗੀਆਂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕੰਪਲੈਕਸ",
+   "en": "complex",
+   "path": "lexicon",
+   "row": 6721,
+   "context": "ਪ੍ਰਬੰਧਕੀ ਕੰਪਲੈਕਸ ਦੀ ਸੁੰਦਰਤਾ ਨੂੰ ਗ੍ਰਹਿਣ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਅਪਾਰਟਮੈਂਟ",
+   "en": "apartment",
+   "path": "lexicon",
+   "row": 4707,
+   "context": "ਸੂਚੀਬੱਧ ਸੰਸਥਾਵਾਂ ਵਿੱਚ ਕਿਸੇ ਅਪਾਰਟਮੈਂਟ ਲਈ ਪਾਸਪੋਰਟ ਦੀ ਲੋੜ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਅਪਗ੍ਰੇਡ",
+   "en": "upgrade",
+   "path": "lexicon",
+   "row": 5386,
+   "context": "ਆਟੋਮੈਟਿਕ ਸੌਫਟਵੇਅਰ ਅਪਡੇਟਾਂ ਅਤੇ ਅਪਗ੍ਰੇਡ ਪ੍ਰਾਪਤ ਕਰਨ ਦੀ ਆਗਿਆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕੋਰਸ",
+   "en": "course",
+   "path": "lexicon",
+   "row": 7387,
+   "context": "ਉਮਰ ਖ਼ੁਦ ਬਿਮਾਰੀ ਦੇ ਕੋਰਸ ਤੇ ਨਿਰਭਰ ਕਰਦੀ ਹੈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮਸ਼ੀਨ",
+   "en": "machine",
+   "path": "lexicon",
+   "row": 2811,
+   "context": "ਜਿਵੇਂ ਅਸੀਂ ਤਲਵਾਰ ਅਤੇ ਮਸ਼ੀਨ ਨੂੰ ਖਤਮ ਕਰਦੇ ਹਾਂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਚਾਰਜ",
+   "en": "charge",
+   "path": "lexicon",
+   "row": 3978,
+   "context": "ਇੱਥੇ ਤੁਹਾਨੂੰ ਇੱਕ ਸਕਾਰਾਤਮਕ ਚਾਰਜ ਅਤੇ ਸਾਰੀ ਸਾਲ ਲਈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੈਕੰਡਰੀ",
+   "en": "secondary",
+   "path": "lexicon",
+   "row": 3995,
+   "context": "ਸਰਕਾਰੀ ਸੀਨੀਅਰ ਸੈਕੰਡਰੀ ਸਕੂਲ ਭੁੱਲਾਰਾਏ ਵਿਖੇ ਵੋਟਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੁਸਾਇਟੀ",
+   "en": "society",
+   "path": "lexicon",
+   "row": 3960,
+   "context": "ਸਹਿਕਾਰੀ ਸੁਸਾਇਟੀ ਬਣਾ ਕੇ ਬਗੈਰ ਬੋਲੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਗਰੁੱਪ",
+   "en": "group",
+   "path": "lexicon",
+   "row": 2276,
+   "context": "ਦੀ ਬਣਤਰ ਵਿੱਚ ਕਾਰਨੀਟਾਈਨ ਗਰੁੱਪ ਬੀ ਦੇ ਵਿਟਾਮਿਨਾਂ ਦੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਕੂਲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 1914,
+   "context": "ਸ਼ਿਕਾਗੋ ਬੂਥ ਸਕੂਲ ਆਫ ਬਿਜਨਸ ਯੂਨੀਵਰਸਿਟੀ ਯੁਨਾਈਟੇਡ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪ੍ਰਿੰਸੀਪਲ",
+   "en": "principal",
+   "path": "lexicon",
+   "row": 4154,
+   "context": "ਉਹ ਪ੍ਰਿੰਸੀਪਲ ਖਿਲਾਫ ਐੱਫ ਆਈ ਆਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮਾਰਚ",
+   "en": "march",
+   "path": "lexicon",
+   "row": 989,
+   "context": "ਰੱਖਦਿਆਂ ਪੁਲਿਸ ਵਲੋਂ ਫਲੈਗ ਮਾਰਚ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕਲਾਸੀਕਲ",
+   "en": "classical",
+   "path": "lexicon",
+   "row": 3700,
+   "context": "ਕਲਾਸੀਕਲ ਵਾਤਾਅਨੁਕੂਲਿਤ ਇੱਕ ਨੂੰ ਕੁਝ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪਲਾਂਟ",
+   "en": "plant",
+   "path": "lexicon",
+   "row": 2856,
+   "context": "ਨੇ ਦੱਸਿਆ ਕਿ ਸਟੀਲ ਪਲਾਂਟ ਵਿੱਚ ਮੁਰੰਮਤ ਦੇ ਬਾਅਦ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪੋਰਟਰੇਟ",
+   "en": "portrait",
+   "path": "lexicon",
+   "row": 7292,
+   "context": "ਮੇਰੀ ਪਰਿਵਾਰਕ ਸਿਹਤ ਪੋਰਟਰੇਟ ਫਾਈਲਾਂ ਦੀ ਨਿੱਜਤਾ ਅਤੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਟੇਟ",
+   "en": "state",
+   "path": "lexicon",
+   "row": 5276,
+   "context": "ਪੰਜਾਬ ਸਟੇਟ ਸੀਨੀਅਰ ਸਿਟੀਜ਼ਨ ਵੈਲਫੇਅਰ ਸੁਸਾਇਟੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪੇਪਰ",
+   "en": "paper",
+   "path": "lexicon",
+   "row": 3664,
+   "context": "ਇੱਕ ਸਧਾਰਨ ਪੇਪਰ ਬੈਗ ਲਵੋ ਅਤੇ ਹੌਲੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੀਨੀਅਰ",
+   "en": "senior",
+   "path": "lexicon",
+   "row": 252,
+   "context": "ਬਹੁਜਨ ਸਮਾਜ ਪਾਰਟੀ ਦੇ ਸੀਨੀਅਰ ਆਗੂ ਸੈਂਕੜੇ ਸਾਥੀਆ ਸਮੇਤ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪ੍ਰਾਈਵੇਟ",
+   "en": "private",
+   "path": "lexicon",
+   "row": 1733,
+   "context": "ਔਟਟੀਕਲ ਬੱਚਿਆਂ ਲਈ ਪ੍ਰਾਈਵੇਟ ਸਕੂਲ ਦੀ ਪ੍ਰੋਸ ਐਂਡ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮਿਊਜ਼ੀਅਮ",
+   "en": "museum",
+   "path": "lexicon",
+   "row": 6100,
+   "context": "ਪੁਏਬਲੋ ਗ੍ਰੇਂਡ ਮਿਊਜ਼ੀਅਮ ਵਿਚ ਸਾਰੀਆਂ ਉਮਰ ਦੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਗਰੁੱਪ",
+   "en": "group",
+   "path": "lexicon",
+   "row": 6089,
+   "context": "ਛੋਟੇ ਬੱਚਿਆਂ ਲਈ ਕਈ ਗਰੁੱਪ ਕਲਾਸ ਬਣਾਏ ਗਏ ਹਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪੁਲੀਸ",
+   "en": "police",
+   "path": "lexicon",
+   "row": 3844,
+   "context": "ਸੋਹਾਣਾ ਪੁਲੀਸ ਨੂੰ ਦੂਜੇ ਦਿਨ ਵੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਰੇਲਵੇ",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 5186,
+   "context": "ਰੇਲਵੇ ਦਾ ਇਹ ਬਿਆਨ ਰਿਫੰਡਾਂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕਲੱਬ",
+   "en": "club",
+   "path": "lexicon",
+   "row": 7834,
+   "context": "ਵਿੱਚ ਨਵੇਂ ਕਾਇਮ ਦਸਮੇਸ਼ ਕਲੱਬ ਵੱਲੋਂ ਪਿੰਡ ਦੇ ਡਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਚਾਰਜ",
+   "en": "charge",
+   "path": "lexicon",
+   "row": 7253,
+   "context": "ਅਧਿਕਾਰੀਆਂ ਨੂੰ ਕੀਤਾ ਗਿਆ ਚਾਰਜ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਟੈਸਟ",
+   "en": "test",
+   "path": "lexicon",
+   "row": 6340,
+   "context": "ਸਾਰਿਆਂ ਦੀ ਦੂਜੀ ਕੋਰੋਨਾ ਟੈਸਟ ਰਿਪੋਰਟ ਨੈਗੇਟਿਵ ਆਉਣ ਤੋਂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੀਨੀਅਰ",
+   "en": "senior",
+   "path": "lexicon",
+   "row": 2081,
+   "context": "ਨੇ ਪਾਰਟੀ ਦੇ ਕਈ ਸੀਨੀਅਰ ਨੇਤਾਵਾਂ ਨਾਲ ਮੁਲਾਕਾਤ ਕਰਕੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਐਂਕਰ",
+   "en": "anchor",
+   "path": "lexicon",
+   "row": 5949,
+   "context": "ਦੇ ਦਿਨਾਂ ਦੌਰਾਨ ਟੈਲੀਵਿਜ਼ਨ ਐਂਕਰ ਰਹਿ ਚੁੱਕੇ ਹਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਫੋਲਿੰਗ",
+   "en": "following",
+   "path": "lexicon",
+   "row": 3485,
+   "context": "ਲਾਈਫਟਾਈਮ ਚਿਲਡਰਨਜ਼ ਸਕ੍ਰੀਨ ਫੋਲਿੰਗ ਟੇਬਲ ਇੱਕ ਪੂਰਨ ਹੱਲ",
+   "verdict": "wrong",
+   "note": "ਫੋਲਿੰਗ is 'folding' in this context (folding table); the IndicVoices gloss is 'following'"
+  },
+  {
+   "native": "ਕਲਾਸ",
+   "en": "class",
+   "path": "lexicon",
+   "row": 8138,
+   "context": "ਅਤੇ ਤੰਦਰੁਸਤੀ ਅਤੇ ਨਾਚ ਕਲਾਸ ਲਈ ਸਭ ਦਾ ਧੰਨਵਾਦ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਲਿਵਿੰਗ",
+   "en": "living",
+   "path": "lexicon",
+   "row": 5628,
+   "context": "ਪਰਦੇ ਵਿਚਲੇ ਹਰੇ ਇਸ ਲਿਵਿੰਗ ਰੂਮ ਲਈ ਇਕ ਵਧੀਆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮੋਟਰ",
+   "en": "motor",
+   "path": "lexicon",
+   "row": 5729,
+   "context": "ਫਿਰ ਮੋਟਰ ਕਾਢ ਸਟੀਲ ਮਸ਼ਕ ਖੂਹ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਇੰਸਟਾਲੇਸ਼ਨ",
+   "en": "installation",
+   "path": "lexicon",
+   "row": 4636,
+   "context": "ਰੂਪ ਵਿੱਚ ਕਮਰੇ ਵਿੱਚ ਇੰਸਟਾਲੇਸ਼ਨ ਲਈ ਆਦਰਸ਼ ਹਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੀਨੀਅਰ",
+   "en": "senior",
+   "path": "lexicon",
+   "row": 2277,
+   "context": "ਲੋਕ ਭਲਾਈ ਪਾਰਟੀ ਦੇ ਸੀਨੀਅਰ ਮੀਤ ਪ੍ਰਧਾਨ ਅਵਤਾਰ ਸਿੰਘ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕਮੇਟੀ",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 1824,
+   "context": "ਸਿੰਘ ਮੱਕੜ ਅਤੇ ਸ਼੍ਰੋਮਣੀ ਕਮੇਟੀ ਦੇ ਹੋਰ ਅਧਿਕਾਰੀ ਮੀਡੀਆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਟੈੱਪ",
+   "en": "step",
+   "path": "lexicon",
+   "row": 1907,
+   "context": "ਸਟੈੱਪ ਬਾਏ ਸਟੈੱਪ ਹਾਈ ਸਕੂਲ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੀਨੀਅਰ",
+   "en": "senior",
+   "path": "lexicon",
+   "row": 5650,
+   "context": "ਕਿਸ਼ੋਰ ਦੀਆਂ ਹਦਾਇਤਾਂ ਅਤੇ ਸੀਨੀਅਰ ਮੈਡੀਕਲ ਅਫ਼ਸਰ ਮਹਿਲ ਕਲਾਂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਵਿਲੇਜ",
+   "en": "village",
+   "path": "lexicon",
+   "row": 6847,
+   "context": "ਸਮਾਰਟ ਵਿਲੇਜ ਕੰਪੇਨ ਅਧੀਨ ਕੀਤੇ ਜਾਣ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਨਵੰਬਰ",
+   "en": "november",
+   "path": "lexicon",
+   "row": 8103,
+   "context": "ਨਵੰਬਰ ਤੋਂ ਫਰਵਰੀ ਦੇ ਵਿਚਕਾਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਫੈਸਟੀਵਲ",
+   "en": "festival",
+   "path": "lexicon",
+   "row": 2115,
+   "context": "ਸਿੰਘ ਨੇ ਪਟਿਆਲਾ ਹੈਰੀਟੇਜ ਫੈਸਟੀਵਲ ਵਿੱਚ ਵਿੰਟੇਜ ਕਾਰ ਰੈਲੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੁਸਾਇਟੀ",
+   "en": "society",
+   "path": "lexicon",
+   "row": 2663,
+   "context": "ਇਸ ਮੌਕੇ ਸੁਪਰੀਮ ਸਿੱਖ ਸੁਸਾਇਟੀ ਨਿਊਜ਼ੀਲੈਂਡ ਦੇ ਬੁਲਾਰੇ ਸ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਟੇਬਲ",
+   "en": "table",
+   "path": "lexicon",
+   "row": 7949,
+   "context": "ਕੱਟ ਸਕਦੇ ਹੋ ਅਤੇ ਟੇਬਲ ਤੇ ਇਸਦੀ ਸੇਵਾ ਕਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪ੍ਰਾਈਵੇਟ",
+   "en": "private",
+   "path": "lexicon",
+   "row": 3489,
+   "context": "ਸਾਡੇ ਦੇਸ਼ ਦੇ ਵਧੀਆ ਪ੍ਰਾਈਵੇਟ ਵਿਦਿਅਕ ਅਦਾਰੇ ਦੇ ਇੱਕ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਰੇਲਵੇ",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 6875,
+   "context": "ਵਿਧਾਇਕ ਵਿੱਜ ਨੇ ਰੇਲਵੇ ਓਵਰ ਬਿ੍ਜ ਬਣਾਉਣ ਵਾਲੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਵੈਟਰ",
+   "en": "sweater",
+   "path": "lexicon",
+   "row": 557,
+   "context": "ਸਕੂਲੀ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਵੰਡੇ ਸਵੈਟਰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਓਵਨ",
+   "en": "oven",
+   "path": "lexicon",
+   "row": 4187,
+   "context": "ਓਵਨ ਵਿਚ ਲਈਆ ਮਸ਼ਰੂਮਜ਼ ਨੂੰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਾਈਟ",
+   "en": "site",
+   "path": "lexicon",
+   "row": 344,
+   "context": "ਹੁਣ ਬਹੁਤ ਸਾਰੇ ਸਾਈਟ ਪ੍ਰਸਿੱਧ ਵਿਸ਼ੇਸ਼ ਭਾਗ ਸਮੀਖਿਆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪ੍ਰੋਟੀਨ",
+   "en": "protein",
+   "path": "lexicon",
+   "row": 5359,
+   "context": "ਕਈ ਵਾਰ ਇਹ ਮਰੀਜ਼ ਪ੍ਰੋਟੀਨ ਕੁਪੋਸ਼ਣ ਦਾ ਵਿਕਾਸ ਹੋ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਡਬਲ",
+   "en": "double",
+   "path": "lexicon",
+   "row": 4415,
+   "context": "ਟਾਈ ਡਬਲ ਲਚਕੀਲੇ ਤਿੰਨ ਸੈਟੀਮੀਟਰ ਅਤੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਇੰਟਰਵਿਊ",
+   "en": "interview",
+   "path": "lexicon",
+   "row": 1532,
+   "context": "ਇੱਕ ਸੰਭਾਵੀ ਮਾਲਕ ਤੁਹਾਨੂੰ ਇੰਟਰਵਿਊ ਵਿੱਚ ਪਹਿਲੀ ਵਾਰ ਵੇਖਦਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਬ੍ਰਾਂਡ",
+   "en": "brand",
+   "path": "lexicon",
+   "row": 5269,
+   "context": "ਆਉ ਅਸੀਂ ਜਲਦੀ ਹੀ ਬ੍ਰਾਂਡ ਦੀਆਂ ਨਵੀਨੀਤਾਵਾਂ ਨਾਲ ਜਾਣੂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਬੈਕਟੀਰੀਆ",
+   "en": "bacteria",
+   "path": "lexicon",
+   "row": 5582,
+   "context": "ਘੱਟ ਬੈਕਟੀਰੀਆ ਦਾ ਮਤਲਬ ਘੱਟ ਤੋੜਨ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਚੈਕਿੰਗ",
+   "en": "checking",
+   "path": "lexicon",
+   "row": 192,
+   "context": "ਲਾਏ ਨਾਕਿਆਂ ਦੀ ਅਚਨਚੇਤ ਚੈਕਿੰਗ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਅਪੀਲ",
+   "en": "appeal",
+   "path": "lexicon",
+   "row": 6174,
+   "context": "ਉਨਾਂ ਨੇ ਕਿਸਾਨਾਂ ਨੂੰ ਅਪੀਲ ਕੀਤੀ ਕਿ ਸੁੱਕੇ ਝੋਨੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕੰਪਨੀ",
+   "en": "company",
+   "path": "lexicon",
+   "row": 5517,
+   "context": "ਡਿਟੈਕਟਿਵ ਕੰਪਨੀ ਨੇ ਗਰਭਵਤੀ ਔਰਤ ਨੂੰ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮੀਡੀਆ",
+   "en": "media",
+   "path": "lexicon",
+   "row": 4756,
+   "context": "ਲੈ ਕੇ ਵੀ ਸੋਸ਼ਲ ਮੀਡੀਆ ਉੱਤੇ ਚਰਚਾ ਹੈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਕੂਲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 8115,
+   "context": "ਸਰਕਾਰੀ ਸੈਕੰਡਰੀ ਸਕੂਲ ਅਤਲਾਂ ਕਲਾਂ ਵਿਖੇ ਯੋਗ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪਬਲਿਕ",
+   "en": "public",
+   "path": "lexicon",
+   "row": 5888,
+   "context": "ਸ੍ਰੀ ਗੁਰੂ ਹਰਿਕ੍ਰਿਸ਼ਨ ਸਾਹਿਬ ਪਬਲਿਕ ਸਕੂਲ ਕਮਾਲਪੁਰਾ ਦਾ ਇਨਾਮ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮਿਕਸਰ",
+   "en": "mixer",
+   "path": "lexicon",
+   "row": 3612,
+   "context": "ਪਹਿਲੀ ਕਿਸਮ ਦੇ ਮਿਕਸਰ ਦਿੱਖ ਅਤੇ ਕਾਰਜਕੁਸ਼ਲਤਾ ਵਿੱਚ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸਕੂਲ",
+   "en": "school",
+   "path": "lexicon",
+   "row": 1055,
+   "context": "ਨੇਤਾ ਜੀ ਮਾਡਲ ਸਕੂਲ ਦੇ ਵਿਦਿਆਰਥੀਆਂ ਨੇ ਗੱਡੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਪਾਲਿਸੀ",
+   "en": "policy",
+   "path": "lexicon",
+   "row": 3710,
+   "context": "ਵਿਸ਼ਾ ਬੀਮਾ ਪਾਲਿਸੀ ਵੀ ਛੋਟੀ ਪਿੰਡ ਵਿੱਚ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮੋਸਟ",
+   "en": "most",
+   "path": "lexicon",
+   "row": 8249,
+   "context": "ਇੰਟਰਪੋਲ ਨੇ ਜਾਰੀ ਕਾਤਾ ਮੋਸਟ ਵਾਂਟੇਡ ਰੈੱਡ ਕਾਰਨਰ ਨੋਟਿਸ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਬੈਕਟੀਰੀਆ",
+   "en": "bacteria",
+   "path": "lexicon",
+   "row": 3719,
+   "context": "ਬਿਮਾਰੀ ਦੇ ਵਿਕਾਸ ਵਿੱਚ ਬੈਕਟੀਰੀਆ ਦੀ ਸ਼ਮੂਲੀਅਤ ਸਾਬਤ ਹੋਇਆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਇਵੈਂਟ",
+   "en": "event",
+   "path": "lexicon",
+   "row": 7221,
+   "context": "ਇਵੈਂਟ ਅਤੇ ਸੰਸਥਾਵਾਂ ਹਰ ਸਾਲ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਮੀਡੀਆ",
+   "en": "media",
+   "path": "lexicon",
+   "row": 4175,
+   "context": "ਵੀ ਕਿਸੇ ਅਧਿਕਾਰੀ ਨੇ ਮੀਡੀਆ ਨਾਲ ਗੱਲ ਨਹੀਂ ਕੀਤੀ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਵਿੰਟਰ",
+   "en": "winter",
+   "path": "lexicon",
+   "row": 3672,
+   "context": "ਵਿੰਟਰ ਸਕੈਂਟ ਲਈ ਸ਼ਿਕਾਰੀ ਲਈ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਬ੍ਰਿਜ",
+   "en": "bridge",
+   "path": "lexicon",
+   "row": 2737,
+   "context": "ਇਹ ਸ਼ੋਅ ਬਰੁਕਲਿਨ ਬ੍ਰਿਜ ਦੇ ਦੁਆਲੇ ਕੇਂਦਰਿਤ ਕੀਤਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਰਾਈਡ",
+   "en": "ride",
+   "path": "lexicon",
+   "row": 152,
+   "context": "ਜੈਕਲੀਨ ਨੇ ਲਿਆ ਬਾਈਕ ਰਾਈਡ ਦਾ ਮਜ਼ਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਐਲਰਜੀ",
+   "en": "allergy",
+   "path": "lexicon",
+   "row": 2441,
+   "context": "ਫਾੜਦਾ ਐਲਰਜੀ ਪ੍ਰਤੀਕਰਮ ਨੂੰ ਖਤਮ ਦਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਸੁਸਾਇਟੀ",
+   "en": "society",
+   "path": "lexicon",
+   "row": 5276,
+   "context": "ਸਟੇਟ ਸੀਨੀਅਰ ਸਿਟੀਜ਼ਨ ਵੈਲਫੇਅਰ ਸੁਸਾਇਟੀ ਵੱਲੋਂ ਰੋਸ ਵਿਖਾਵਾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਰੀਅਲ",
+   "en": "real",
+   "path": "lexicon",
+   "row": 3335,
+   "context": "ਹੱਲ ਵੀ ਉਸਾਰੀ ਅਧੀਨ ਰੀਅਲ ਅਸਟੇਟ ਖਰੀਦਣ ਹੋ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਫੋਟੋਜ਼",
+   "en": "photos",
+   "path": "lexicon",
+   "row": 1095,
+   "context": "ਉੱਲੀਮਾਰ ਦੇ ਫੋਟੋਜ਼ ਇਸ ਲੇਖ ਵਿਚ ਤੁਹਾਡੇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ਕਮੇਟੀ",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 4419,
+   "context": "ਸ਼੍ਰੋਮਣੀ ਕਮੇਟੀ ਨੇ ਤਖ਼ਤ ਸਾਹਿਬ ਵਿਖੇ",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 99.0
+}

@@ -1,0 +1,132 @@
+{
+  "kn": {
+    "wer": 57.84,
+    "cer": 17.94,
+    "utterances": 300,
+    "words": 3363,
+    "script_error_rate": 5.11,
+    "wer_script_normalised": 57.03,
+    "cer_script_normalised": 17.1,
+    "rows_with_alternative_ref": 38,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.687
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "kn": {
+        "kn": 300
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 6,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 236,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 58,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_kn",
+  "utterances": 300,
+  "hours": 0.69,
+  "seconds": 24,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 192,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/kn/clean_test_known/844424933293159-35-m",
+      "constrained": "ವೇಳೆಗಾಗಿಲಿ ಮತ್ತ ತಲಗತ್ತಿ ಪ್ರಬಲವಾಗುವ ಚಿನ್ನಿೋರಿತ್ತು ಜರ್ಮನಿಯನ್ನು ಹದ್ದು ಬಸ್ಿನಲ್ಲಿಡಬೇಕೆಂಬ್ರಾನ್ಸಿನ ಆಶಕ್ಕೆ ಬ್ರಿಟನ್ ಅಮೆರಿಕಿಗಳು ಬೆಂಬಲ ನೀಡಲಿಲ್ಲ",
+      "unconstrained": "ఆೇಳೆಗಾಗಿಲಿ ಮತ್ತ ತಲಗತ್ತಿ ಪ್ರಬಲವಾಗುವ ಚಿನ್ನಿೋರಿತ್ತು ಜರ್ಮನಿಯನ್ನು ಹದ್ದು ಬಸ್ಿನಲ್ಲಿಡಬೇಕೆಂಬ್ರಾನ್ಸಿನ ಆಶಕ್ಕೆ ಬ್ರಿಟನ್ ಅಮೆರಿಕಿಗಳು ಬೆಂಬಲ ನೀಡಲಿಲ್ಲ",
+      "hinted": "ವೇಳೆಗಾಗಿಲಿ ಮತ್ತ ತಲಗತ್ತಿ ಪ್ರಬಲವಾಗುವ ಚಿನ್ನಿೋರಿತ್ತು ಜರ್ಮನಿಯನ್ನು ಹದ್ದು ಬಸ್ಿನಲ್ಲಿಡಬೇಕೆಂಬ್ರಾನ್ಸಿನ ಆಶಕ್ಕೆ ಬ್ರಿಟನ್ ಅಮೆರಿಕಿಗಳು ಬೆಂಬಲ ನೀಡಲಿಲ್ಲ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_known/844424930309806-148-f",
+      "constrained": "ವ್ಯಕ್ತಿರ್ನ್ನು ದುಷ್ರ್ಮಿಗಳು ಕೊಲೆ ಮಾಡಿಿರುವ ಘಟನೆ ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆಯ ಮಂಗಳೂರು ತಾಲ್ಲಕಿನ ಸುರತ್ನಲ್ಲಿ ನಡೆದಿದೆ",
+      "unconstrained": "వ్యక్తిರ್ನ್ನು ದುಷ್ರ್ಮಿಗಳು ಕೊಲೆ ಮಾಡಿಿರುವ ಘಟನೆ ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆಯ ಮಂಗಳೂರು ತಾಲ್ಲಕಿನ ಸುರತ್ನಲ್ಲಿ ನಡೆದಿದೆ",
+      "hinted": "ವ್ಯಕ್ತಿರ್ನ್ನು ದುಷ್ರ್ಮಿಗಳು ಕೊಲೆ ಮಾಡಿಿರುವ ಘಟನೆ ದಕ್ಷಿಣ ಕನ್ನಡ ಜಿಲ್ಲೆಯ ಮಂಗಳೂರು ತಾಲ್ಲಕಿನ ಸುರತ್ನಲ್ಲಿ ನಡೆದಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_known/844424930421537-148-f",
+      "constrained": "ಉ ಮಟ್ಟದ ಸಭೆಯಲ್ಲಿ ಗೋಲಿಬಾರಗೆ ಕಾರಣ ಏನು ಅನ್ನೋದರ ಬಗ್ಗೆ ಸಿಎಂ ಮಾಹಿತಿ ಕಲೆಾಿದ್ದಾರೆ",
+      "unconstrained": "ఉన్నతమట్ದ ಸಭೆಯಲ್ಲಿ ಗೋಲಿಬಾರಗೆ ಕಾರಣ ಏನು ಅನ್ನೋದರ ಬಗ್ಗೆ ಸಿಎಂ ಮಾಹಿತಿ ಕಲೆಾಿದ್ದಾರೆ",
+      "hinted": "ಉ ಮಟ್ಟದ ಸಭೆಯಲ್ಲಿ ಗೋಲಿಬಾರಗೆ ಕಾರಣ ಏನು ಅನ್ನೋದರ ಬಗ್ಗೆ ಸಿಎಂ ಮಾಹಿತಿ ಕಲೆಾಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_known/844424933290690-333-m",
+      "constrained": "octoberರಾಂತಯ ಸ ಸ್ವಲ್ಪಪ ದಿನಗಳು ನಂತರ ರಷದ ಅಂತಂತರಿವುದ್ಧೆಟ್ಸ್ ಮತ್ತು ವೈಡ್ಸ್ ಗುಂಪೋಡ ನಡುವೆ ನಡೆಯಿತು",
+      "unconstrained": "october कರಾांतಂತ या ಸ ಸ್ವಲ್ಪಪ ದಿನಗಳು ನಂತರ ರಷದ ಅಂತಂತರಿವುದ್ಧೆಟ್ಸ್ ಮತ್ತು ವೈಡ್ಸ್ ಗುಂಪೋಡ ನಡುವೆ ನಡೆಯಿತು",
+      "hinted": "octoberರಾಂತಯ ಸ ಸ್ವಲ್ಪಪ ದಿನಗಳು ನಂತರ ರಷದ ಅಂತಂತರಿವುದ್ಧೆಟ್ಸ್ ಮತ್ತು ವೈಡ್ಸ್ ಗುಂಪೋಡ ನಡುವೆ ನಡೆಯಿತು"
+    },
+    {
+      "key": "kathbath_test/kn/clean_test_known/844424930411590-519-f",
+      "constrained": "ರಿ ಹಬ್ಬವನ್ನು ಹೆಣ್ಣು ಮಕ್ಕಳು ಹೇಗೆ ಆಚರಿಸುತ್ತಾರೆಾರ ಅಷ್ಟೇ ಸಂಭರಮದಿಂದ ಗಣಷ್ ಚತುರ್ಧಯನ್ನು ಆಚರಿಸುತ್ತಾರೆ",
+      "unconstrained": "ೌरी ಹಬ್ಬವನ್ನು ಹೆಣ್ಣು ಮಕ್ಕಳು ಹೇಗೆ ಆಚರಿಸುತ್ತಾರೆಾರ ಅಷ್ಟೇ ಸಂಭರಮದಿಂದ ಗಣಷ್ ಚತುರ್ಧಯನ್ನು ಆಚರಿಸುತ್ತಾರೆ",
+      "hinted": "ರಿ ಹಬ್ಬವನ್ನು ಹೆಣ್ಣು ಮಕ್ಕಳು ಹೇಗೆ ಆಚರಿಸುತ್ತಾರೆಾರ ಅಷ್ಟೇ ಸಂಭರಮದಿಂದ ಗಣಷ್ ಚತುರ್ಧಯನ್ನು ಆಚರಿಸುತ್ತಾರೆ"
+    }
+  ]
+}

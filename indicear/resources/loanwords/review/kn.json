@@ -1,0 +1,811 @@
+{
+ "lang": "kn",
+ "words": 112250,
+ "rewrites": 1601,
+ "per_1000_words": 14.26,
+ "types": 486,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "ಸೇಲ್ಸ್",
+   "en": "sales",
+   "path": "lexicon",
+   "row": 865,
+   "context": "ಸ್ವಲ್ಪ ಪ್ರಮಾಣವನ್ನು ಮಾತ್ರ ಮೈಸೂರು ಸೇಲ್ಸ್ ಇಂಟರ್ನ್ಯಾಷನಲ್ ಸಂಸ್ಥೆ ಮೂಲಕ ಮಾರಾಟ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟ್ರೆಂಡ್",
+   "en": "trend",
+   "path": "lexicon",
+   "row": 926,
+   "context": "ನಿರ್ದೇಶಕರು ಪ್ರತೀ ಪಾತ್ರವನ್ನೂ ಕೂಡಾ ಟ್ರೆಂಡ್ ಸೆಟ್ ಮಾಡುವಂಥಾ ರೀತಿಯಲ್ಲಿ ರೂಪಿಸಿದ್ದಾರಂತೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಲೇಜು",
+   "en": "college",
+   "path": "lexicon",
+   "row": 4313,
+   "context": "ಪೂಜೆ ಮದುವೆ ಹಬ್ಬ ಆಫೀಸ್ ಕಾಲೇಜು ಶಾಪಿಂಗ್ ಮುಂತಾದ ಕಡೆಗಳಲ್ಲಿ ಧರಿಸಿಕೊಂಡು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಮ್ಯಾಚ್",
+   "en": "match",
+   "path": "lexicon",
+   "row": 6455,
+   "context": "ಎಷ್ಟೇ ಕಷ್ಟ ಆದ್ರೂ ಸರಿ ಮ್ಯಾಚ್ ಸಮಯಕ್ಕೆ ಟಿವಿ ಮುಂದೆ ಹಾಜರಾಗದೇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ರೈಲ್ವೆ",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 5160,
+   "context": "ಪ್ರಸಕ್ತ ಅವರು ಕಪೂರ್ತಲಾದ ರೈಲ್ವೆ ಬೋಗಿ ತಯಾರಿಕೆ ಕಾರ್ಖಾನೆಯಲ್ಲಿ ಕ್ರೀಡಾಧಿಕಾರಿಯಾಗಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟಾರ್",
+   "en": "star",
+   "path": "lexicon",
+   "row": 7292,
+   "context": "ಹಾಲಿವುಡ್ ನ ಸ್ಟಾರ್ ನಟ ಜಾಕ್ವಿನ್ ಫೀನಿಕ್ಸ್ ಅವರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ರಬ್ಬರ್",
+   "en": "rubber",
+   "path": "lexicon",
+   "row": 4508,
+   "context": "ಹತ್ತಿವಸ್ಟ್ರ ಉದ್ಯೋಗವಲ್ಲದೆ ರಬ್ಬರ್ ಕೆಮಿಕಲ್ಸ್ ಸ್ಪೆಶ್ಯಾಲಿಟಿ ಕೆಮಿಕಲ್ಸ್ ಪೆಟ್ರೊಕೆಮಿಕಲ್ಸ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಆಪಲ್",
+   "en": "apple",
+   "path": "lexicon",
+   "row": 9879,
+   "context": "ಆಪಲ್ ಕಂಪೆನಿ ಸಿಇಒ ಟಿಮ್ ಕುಕ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಅಲರ್ಜಿ",
+   "en": "allergy",
+   "path": "lexicon",
+   "row": 8977,
+   "context": "ಕಪೂರ್ಗೆ ತಿಳಿದಿರುವ ಅಲರ್ಜಿ ಅಥವಾ ಸಂವೇದನೆಯನ್ನು ಹೊಂದಿರುವ ಜನರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಎಲೆಕ್ಟ್ರಿಕ್",
+   "en": "electric",
+   "path": "lexicon",
+   "row": 2119,
+   "context": "ವಿದ್ಯುತ್ ಚಾಲಿತ ಎಸ್ಯುವಿ ಕೋನಾ ಎಲೆಕ್ಟ್ರಿಕ್ ಬೆಲೆಯಲ್ಲಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಫೀಚರ್ಸ್",
+   "en": "features",
+   "path": "lexicon",
+   "row": 704,
+   "context": "ಇನ್ನು ಆಪ್ಲಿಕೇಶನ್ಗಳಲ್ಲಿ ಬ್ಲರ್ ಫೀಚರ್ಸ್ ಹೊಂದಿರುವ ಫೀಚರ್ಸ್ಅನ್ನು ಹೊಂದಿರುವ ಫೋಟೋ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಂಪೆನಿ",
+   "en": "company",
+   "path": "lexicon",
+   "row": 8771,
+   "context": "ಚರ್ಚೆಗಳು ನಡೆಯುತ್ತಿದ್ದರೂ ಕೂಡ ಇದುವರೆಗೂ ಕಂಪೆನಿ ಯಾವುದೇ ಗುಟ್ಟು ಬಿಟ್ಟುಕೊಟ್ಟಿಲ್ಲ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟ್ವೀಟ್",
+   "en": "tweet",
+   "path": "lexicon",
+   "row": 967,
+   "context": "ಕಿಂಗ್ ಖಾನ್ ಶಾರುಖ್ ಟ್ವೀಟ್ ಮಾಡಿ ಸಾನಿಯಾ ಹಾಗೂ ಹಿಂಗಿಸ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಂಗ್ರೆಸ್",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 1572,
+   "context": "ಕೋವಿಡ್ ಸಂದರ್ಭದಲ್ಲಿ ಕಾಂಗ್ರೆಸ್ ನವರು ಯಾವ ವಿಚಾರದಲ್ಲೂ ರಾಜಕೀಯ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ಯಾಟಿಂಗ್",
+   "en": "batting",
+   "path": "lexicon",
+   "row": 8903,
+   "context": "ಈ ನಡುವೆ ಮಗದೊಮ್ಮೆ ಸಮಯೋಚಿತ ಬ್ಯಾಟಿಂಗ್ ಪ್ರದರ್ಶಿಸಿದ ಅನುಭವಿ ರಾಸ್ ಟೇಲರ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟಾರ್",
+   "en": "star",
+   "path": "lexicon",
+   "row": 9139,
+   "context": "ದುನಿಯಾ ವಿಜಯ್ ಇನ್ನೂ ಮಲ್ಟಿ ಸ್ಟಾರ್ ಚಿತ್ರದಲ್ಲಿ ನಟಿಸಿಲ್ಲ ಎನ್ನುವುದು ಗಮನಿಸತಕ್ಕ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಯುನೈಟೆಡ್",
+   "en": "united",
+   "path": "lexicon",
+   "row": 5554,
+   "context": "ಫ್ಯಾರನ್ಹೀಟ್ ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಆಫ್ ಅಮೆರಿಕಾದ ಅಧಿಕೃತ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪ್ರೊಡಕ್ಟ್",
+   "en": "product",
+   "path": "lexicon",
+   "row": 265,
+   "context": "ಈಗಲೂ ಕೂಡ ಬಹಳ ಮುಖ್ಯವಾದ ಪ್ರೊಡಕ್ಟ್ ಆಗಿಯೇ ಉಳಿದಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೊಲೀಸ್",
+   "en": "police",
+   "path": "lexicon",
+   "row": 1413,
+   "context": "ಸಂಬಂಧ ಕೆ ಆರ್ ಪುರ ಪೊಲೀಸ್ ಠಾಣೆಯಲ್ಲಿ ದೂರು ದಾಖಲಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೊಲೀಸ್",
+   "en": "police",
+   "path": "lexicon",
+   "row": 2146,
+   "context": "ವಿಷಯ ತಿಳಿಸಿದ ನಂತರ ಪೋಷಕರು ಪೊಲೀಸ್ ಠಾಣೆಯಲ್ಲಿ ಅತ್ಯಾಚಾರ ಪ್ರಕರಣ ದಾಖಲಿಸಿದ್ದಾರೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ನೆಟ್ವರ್ಕ್",
+   "en": "network",
+   "path": "lexicon",
+   "row": 4203,
+   "context": "ಆಸ್ಟ್ರೇಲಿಯಾದಲ್ಲಿ ನೆಟ್ವರ್ಕ್ ಟೆನ್ ಕೂಡಾ ಸಿಬಿಎಸ್ ನ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೊಲೀಸ್",
+   "en": "police",
+   "path": "lexicon",
+   "row": 104,
+   "context": "ಕೋಟಿ ಅವರ ಸಂಸ್ಮರಣೆಯಲ್ಲಿ ಉಪ ಪೊಲೀಸ್ ಆಯುಕ್ತ ವಿಷ್ಣುವರ್ಧನ್ ಬಿಜೆಪಿ ಜಿಲ್ಲಾಧ್ಯಕ್ಷ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಮೊಬೈಲ್",
+   "en": "mobile",
+   "path": "lexicon",
+   "row": 2956,
+   "context": "ಮೊಬೈಲ್ ಕ್ಯಾಮೆರಾಗಳಲ್ಲಿ ಇಂತಹ ಸವಲತ್ತುಗಳನ್ನು ನೀಡಲು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಆ್ಯಕ್ಟಿವ್",
+   "en": "active",
+   "path": "lexicon",
+   "row": 2782,
+   "context": "ಇನ್ಸ್ಟಾಗ್ರಾಂನಲ್ಲಿ ಸಿಕ್ಕಾಪಟ್ಟೆ ಆ್ಯಕ್ಟಿವ್ ಇರುವ ಪ್ರಥಮ್ ವಿದ್ಯಾರ್ಥಿಗಳ ಪರ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸಫಾರಿ",
+   "en": "safari",
+   "path": "lexicon",
+   "row": 8872,
+   "context": "ಲಭ್ಯವಿರುವ ಮಾಹಿತಿ ಪ್ರಕಾರ ಹೊಸ ಸಫಾರಿ ಸ್ಟ್ರೋಮ್ ಕಾರಿನ ಹೊರಗೂ ಒಳಗೂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬಕೆಟ್",
+   "en": "bucket",
+   "path": "lexicon",
+   "row": 8683,
+   "context": "ಆದವರ ಜೊತೆ ಶ್ವೇತಾ ಚೆಂಗಪ್ಪ ಬಕೆಟ್ ಹಿಡಿಯುತ್ತಿದ್ದಾರೆ ಎಂದು ದೀಪಿಕಾ ಹಾಗೂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕ್ಯಾನ್ಸರ್",
+   "en": "cancer",
+   "path": "lexicon",
+   "row": 1894,
+   "context": "ಪಿಸ್ತಾ ತಿನ್ನುವುದನ್ನು ಅಭ್ಯಾಸ ಮಾಡಿಕೊಂಡರೆ ಕ್ಯಾನ್ಸರ್ ಬರುವಂತಹ ಸಂಭವ ಇದ್ದರೆ ಕ್ಯಾನ್ಸರ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟೂರಿಸ್ಟ್",
+   "en": "tourist",
+   "path": "lexicon",
+   "row": 3814,
+   "context": "ಹೊಂದಿದ್ದು ಸಂಪೂರ್ಣ ಮರದಿಂದಲೇ ಸಿದ್ಧಗೊಂಡಿರುವ ಟೂರಿಸ್ಟ್ ಬೋಟನ್ನು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಮಾರ್ಚ್",
+   "en": "march",
+   "path": "lexicon",
+   "row": 5412,
+   "context": "ಪ್ರತಿ ವರ್ಷ ಫೆಬ್ರವರಿ ಅಥವಾ ಮಾರ್ಚ್ ತಿಂಗಳಿನಲ್ಲಿ ಜಾತ್ರೆ ಆರಂಭವಾಗುತ್ತದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸರ್ಕಲ್",
+   "en": "circle",
+   "path": "lexicon",
+   "row": 5277,
+   "context": "ಮೈಸೂರ್ ಕನ್ಸರ್ನ್ಸ್ಮುಂಬಯಿನ ಕಿಂಗ್ಸ್ ಸರ್ಕಲ್ ನಲ್ಲಿ ಕೇವಲ ಕಾಫಿಪುಡಿ ಮಾರಾಟದಿಂದಲೇ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪ್ಲೇಟ್",
+   "en": "plate",
+   "path": "lexicon",
+   "row": 6337,
+   "context": "ಪರಿಣಾಮಕಾರಿ ಒಂದು ಬೋಳಿಸಿಕೊಂಡ ಘಟಕದ ಪ್ಲೇಟ್ ಸಣ್ಣ ಬಿರುಗೂದಲುಗಳಿಂದ ತೆರೆಯುವಿಕೆಗೆ ಹೊಂದಿರುವ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಕ್ಯಾನಿಂಗ್",
+   "en": "scanning",
+   "path": "lexicon",
+   "row": 465,
+   "context": "ಚರ್ಮರೋಗ ತಜ್ಞರಿಗೆ ತೋರಿಸಿದ್ದು ಅವರು ಸ್ಕ್ಯಾನಿಂಗ್ ಮಾಡಲು ಸಲಹೆ ನೀಡಿದ್ದರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸೋಶಿಯಲ್",
+   "en": "social",
+   "path": "lexicon",
+   "row": 9769,
+   "context": "ಪಿಲ್ಲೋ ಚಾಲೆಂಜ್ ಎಂಬ ಪೋಸ್ಟ್ಗಳು ಸೋಶಿಯಲ್ ಮಿಡೀಯಾದಲ್ಲಿ ವೈರಲ್ ಆಗುತ್ತಿವೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕ್ಯಾಪಿಟಲ್",
+   "en": "capital",
+   "path": "lexicon",
+   "row": 5520,
+   "context": "ತನ್ನ ಶ್ರೇಷ್ಠಕೃತಿಯಾದ ಕ್ಯಾಪಿಟಲ್ ಎಂಬ ಪುಸ್ತಕದಲ್ಲಿ ಆತ ಮೂರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟಾರ್",
+   "en": "star",
+   "path": "lexicon",
+   "row": 3320,
+   "context": "ಮಕ್ಕಳು ಶಿಕ್ಷಣ ಬಯಕೆಯ ಹಾಲಿವುಡ್ ಸ್ಟಾರ್ ಕನಸನ್ನು ಹೊರನಡೆದನು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟಿಕೆಟ್",
+   "en": "ticket",
+   "path": "lexicon",
+   "row": 2696,
+   "context": "ಇರುವ ಅವಕಾಶದ ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಕುಟುಂಬದವರಿಗೆ ಟಿಕೆಟ್ ನೀಡಬಹುದು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪ್ಲಾಸ್ಟಿಕ್",
+   "en": "plastic",
+   "path": "lexicon",
+   "row": 9455,
+   "context": "ಮುಚ್ಚಲಾಗಿರುವ ಲೋಹಗಳು ಲೋಹದ ಅಥವಾ ಪ್ಲಾಸ್ಟಿಕ್ ಫ್ರೇಮ್ಗಳನ್ನು ನೆಲದ ಮೇಲೆ ನಿರ್ಮಿಸಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಚಾರ್ಜ್",
+   "en": "charge",
+   "path": "lexicon",
+   "row": 6517,
+   "context": "ಮತ್ತು ಇದು ಅವರು ಅಮೂಲ್ಯ ಚಾರ್ಜ್ ರಕ್ಷಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ ಬಳಸಲಾಗುತ್ತದೆ ಅದೂ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಂಗ್ರೆಸ್",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 1195,
+   "context": "ಕಾಂಗ್ರೆಸ್ ಅಧ್ಯಕ್ಷೆ ಸೋನಿಯಾ ಗಾಂಧಿ ಶರದ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬೋರ್ಡ್",
+   "en": "board",
+   "path": "lexicon",
+   "row": 7792,
+   "context": "ಭಾರತದಲ್ಲಿಯೇ ಅತೀ ವೇಗದಲ್ಲಿ ಕೀ ಬೋರ್ಡ್ ಪ್ಲೇ ಮಾಡುವವರಲ್ಲಿ ಒಬ್ಬರಾಗಿದ್ದಾರೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಂಪ್ಯೂಟರ್",
+   "en": "computer",
+   "path": "lexicon",
+   "row": 384,
+   "context": "ಕೆಲಸಗಾರರು ಮತ್ತು ಅವರ ಕೆಲಸ ಕಂಪ್ಯೂಟರ್ ತಂತ್ರಜ್ಞಾನ ಸಂಬಂಧಿಸಿದೆ ಯಾರಾದರೂ ವಿಶೇಷವಾಗಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕ್ಯಾನ್ಸರ್",
+   "en": "cancer",
+   "path": "lexicon",
+   "row": 4787,
+   "context": "ಅಲ್ಲದೇ ಆಮ್ಲೀಯ ದ್ರವ ಕೀವಿನಿಂದಾಗಿ ಕ್ಯಾನ್ಸರ್ ಬರುತ್ತದೆ ಎಂದು ಆತ ಹೇಳಿದ್ದಾನೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಂಪನಿ",
+   "en": "company",
+   "path": "lexicon",
+   "row": 2843,
+   "context": "ವಾಟ್ಸಾಪ್ ಸೇವೆ ರದ್ದು ಮಾಡ್ತಿರುವುದಾಗಿ ಕಂಪನಿ ಹೇಳಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಲೇಜು",
+   "en": "college",
+   "path": "lexicon",
+   "row": 825,
+   "context": "ಹೋಬಳಿ ಮಟ್ಟದಲ್ಲಿ ಕಡ್ಡಾಯವಾಗಿ ಪಿಯುಸಿ ಕಾಲೇಜು ತೆರೆಯಬೇಕು ಎಂದು ಪ್ರತಿಭಟನಾಕಾರರು ಒತ್ತಾಯಿಸಿದರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಗೂಗಲ್",
+   "en": "google",
+   "path": "lexicon",
+   "row": 8633,
+   "context": "ಕಾದು ಕಾದು ಬೇಸರವಾಗಿ ಗೂಗಲ್ ನಲ್ಲಿ ಅದೂ ಇದೂ ಹುಡುಕುತ್ತಾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಅಪ್ಲಿಕೇಶನ್",
+   "en": "application",
+   "path": "lexicon",
+   "row": 8921,
+   "context": "ಕಾಲಿಂಗ್ ಪ್ಲಾಟ್ಫಾರ್ಮ್ ಗಳಲ್ಲಿ ಜೂಮ್ ಅಪ್ಲಿಕೇಶನ್ ಕೂಡ ಒಂದಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೊಲೀಸ್",
+   "en": "police",
+   "path": "lexicon",
+   "row": 7708,
+   "context": "ಶಿಖಾ ಶೇಖ್ ಕೆಳಗಿಳಿದು ಬಂದು ಪೊಲೀಸ್ ಜೀಪ್ನ ಹಿಂಬದಿ ಸೀಟಿನಲ್ಲಿ ಕುಳಿತರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ಯಾಂಕ್",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 315,
+   "context": "ಒಂದೊಮ್ಮೆ ನಗದು ಇಟ್ಟಿರುವುದು ಬ್ಯಾಂಕ್ ಗಮನಕ್ಕೆ ಬಂದರೆ ಆದಾಯ ತೆರಿಗೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಚರ್ಚ್",
+   "en": "church",
+   "path": "lexicon",
+   "row": 995,
+   "context": "ಚಿರಾಕ್ ಇಸ್ರೇಲ್ ನಲ್ಲಿರುವ ಕ್ಯಾಥೋಲಿಕ್ ಚರ್ಚ್ ಗೆ ಭೇಟಿ ನೀಡಿದ್ದ ವೇಳೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಆನ್ಲೈನ್",
+   "en": "online",
+   "path": "lexicon",
+   "row": 6721,
+   "context": "ಮಾಡಿದ ನಂತರ ನಿಮಗೆ ಅರ್ಜಿಯ ಆನ್ಲೈನ್ ಫಾರ್ಮ್ ಓಪನ್ ಆಗುತ್ತದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕ್ರೀಮ್",
+   "en": "cream",
+   "path": "lexicon",
+   "row": 9216,
+   "context": "ನೆನಪಿನಲ್ಲಿಡಿ ಕ್ರೀಮ್ ಉತ್ಪನ್ನಗಳು ಅತ್ಯಂತ ತಾಜಾ ಮತ್ತು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಮೀಟರ್",
+   "en": "meter",
+   "path": "lexicon",
+   "row": 8431,
+   "context": "ಅವಧಿ ಒಳಗೆ ಎಲ್ಲ ಆಟೋಗಳಿಗೂ ಮೀಟರ್ ಅಳವಡಿಸಲಾಗುವುದು ಎಂದು ಕೋರಿದರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಂಗ್ರೆಸ್",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 7866,
+   "context": "ತಿದ್ದುಪಡಿ ಕಾಯಿದೆಯನ್ನು ಸಂಸತ್ತಿನಲ್ಲಿ ಮುಂಡಿಸಿದಾಗ ಕಾಂಗ್ರೆಸ್ ಈ ವಿಷಯವನ್ನಿಟ್ಟುಕೊಂಡು ಸರಕಾರದ ವಿರುದ್ಧ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ರಿಪೋರ್ಟ್",
+   "en": "report",
+   "path": "lexicon",
+   "row": 126,
+   "context": "ಪ್ರಕರಣಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ಪೋಸ್ಟ್ ಮಾರ್ಟಂ ರಿಪೋರ್ಟ್ ಪೋಲೀಸರ ಕೈ ಸೇರಿದೆ ಎನ್ನಲಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟಾರ್",
+   "en": "star",
+   "path": "lexicon",
+   "row": 8300,
+   "context": "ರಾಜಕೀಯಕ್ಕೆ ಹೊಸದಾಗಿ ಎಂಟ್ರಿಯಾಗಿರುವ ರಿಯಲ್ ಸ್ಟಾರ್ ಉಪೇಂದ್ರ ತಮ್ಮ ಹೊಸಪಕ್ಷದ ಮೂಲಕ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಚರ್ಚ್",
+   "en": "church",
+   "path": "lexicon",
+   "row": 3045,
+   "context": "ಅಡ್ಡ ಕಿಸ್ಸ್ ಅವಶ್ಯಕತೆ ಚರ್ಚ್ ಹೊರಗೆ ದಾರಿಯಲ್ಲಿ ಬ್ಯಾಪ್ಟಿಸಮ್ ಬೇಬಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ರಷ್",
+   "en": "brush",
+   "path": "lexicon",
+   "row": 1478,
+   "context": "ಭಾರತೀಯ ವ್ಯಕ್ತಿ ಬಾಯಲ್ಲಿ ಟೂತ್ ಬ್ರಷ್ ಇರಿಸಿಕೊಂಡು ಅದರ ಮೇಲೆ ಬ್ಯಾಸ್ಕೆಟ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ಯಾಂಕ್",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 2897,
+   "context": "ಸ್ಥಳಕ್ಕೆ ಆಗಮಿಸಿದ ಪೊಲೀಸರ ತಂಡ ಬ್ಯಾಂಕ್ ಮುಂದೆ ಕಾರ್ಯಾಚರಣೆ ನಡೆಸಲು ಸಿದ್ಧತೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕ್ರಿಕೆಟ್",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 5850,
+   "context": "ಪರಿಹಾಸ್ಯವನ್ನು ಪ್ರತಿನಿಧಿಸುತ್ತದೆಯೋ ಎಂಬುದರ ಬಗ್ಗೆ ಕ್ರಿಕೆಟ್ ಪ್ರಪಂಚದಲ್ಲಿ ಚರ್ಚೆಯಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಲೇಬರ್",
+   "en": "labour",
+   "path": "lexicon",
+   "row": 5306,
+   "context": "ಲಿಬ್ಡೆಮ್ಸ್ ಮೊದಲ ಅಸೆಂಬ್ಲಿಯಲ್ಲಿ ಲೇಬರ್ ಪಾರ್ಟಿಯ ಜೊತೆ ಮುಂಚೆ ಒಂದು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟೆಸ್ಟ್",
+   "en": "test",
+   "path": "lexicon",
+   "row": 9803,
+   "context": "ಇಂಗ್ಲೆಂಡ್ ವಿರುದ್ಧದ ಮೊದಲ ಟೆಸ್ಟ್ ಪಂದ್ಯದಲ್ಲಿ ಅತ್ಯುತ್ತಮ ಪ್ರದರ್ಶನ ನೀಡಿರುವ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಇಂಟೀರಿಯರ್",
+   "en": "interior",
+   "path": "lexicon",
+   "row": 1838,
+   "context": "ಇಂಟೀರಿಯರ್ ಡಿಸೈನಿಂಗ್ನ ವಿದ್ಯಾರ್ಥಿಗಳು ಅನುಪಯುಕ್ತ ಪ್ಲಾಸ್ಟಿಕ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ರಿಲೀಸ್",
+   "en": "release",
+   "path": "lexicon",
+   "row": 7452,
+   "context": "ಅಷ್ಟರಲ್ಲೇ ರಿಲೀಸ್ ಆಗಿ ಎರಡು ವಾರ ಆಗಿರುವ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬೀನ್ಸ್",
+   "en": "beans",
+   "path": "lexicon",
+   "row": 1075,
+   "context": "ಎಲೆಗಳು ಕೆಫಿನ್ ರಷ್ಟು ಕಾಫಿ ಬೀನ್ಸ್ ರಲ್ಲಿ ಗಿಂತ ಎರಡು ಪಟ್ಟು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಶಾರ್ಟ್",
+   "en": "short",
+   "path": "lexicon",
+   "row": 9699,
+   "context": "ವ್ಯತ್ಯಾಸವೆಂದರೆ ಒಂದು ಶಾರ್ಟ್ ಸರ್ಕ್ಯೂಟ್ ಸಂಭವಿಸುತ್ತದೆ ಫ್ಯೂಸ್ ಬೇಗನೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟೆಸ್ಟ್",
+   "en": "test",
+   "path": "lexicon",
+   "row": 3148,
+   "context": "ಬಳಿಕ ಮೊದಲ ಟೆಸ್ಟ್ ಪಂದ್ಯಕ್ಕೂ ಡೇವಿಡ್ ವಾರ್ನರ್ ಸಂಪೂರ್ಣ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸೂಪರ್",
+   "en": "super",
+   "path": "lexicon",
+   "row": 6997,
+   "context": "ಹೀಗೆ ಚೆನ್ನೈ ಸೂಪರ್ ಕಿಂಗ್ಸ್ ಅಭಿಮಾನಿಯೊರ್ವ ತನ್ನ ತಂದಲ್ಲಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೇಮೆಂಟ್",
+   "en": "payment",
+   "path": "lexicon",
+   "row": 6747,
+   "context": "ಮುಂದೆ ತೆರಿಗೆ ಪಾವತಿಯನ್ನು ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಪೇಮೆಂಟ್ ವ್ಯವಸ್ಥೆ ಮೂಲಕ ಮಾಡಲಾಗುವುದು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಂಗ್ರೆಸ್",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 1175,
+   "context": "ಕಾಂಗ್ರೆಸ್ ಹೈಕಮಾಂಡ್ ಮತ್ತು ಶಿವಕುಮಾರ್ ದೇವೇಗೌಡರ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಶಿಫ್ಟ್",
+   "en": "shift",
+   "path": "lexicon",
+   "row": 6211,
+   "context": "ಕಾರಣ ಸಚಿವರನ್ನು ಮ್ಯಾಕ್ಸ್ ಆಸ್ಪತ್ರೆಗೆ ಶಿಫ್ಟ್ ಮಾಡಲಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೊಲೀಸ್",
+   "en": "police",
+   "path": "lexicon",
+   "row": 3883,
+   "context": "ಜಿಲ್ಲಾ ಪೊಲೀಸ್ ಕಚೇರಿ ಸಭಾಂಗಣದಲ್ಲಿ ಭಾನುವಾರ ಆಯೋಜಿಸಿದ್ದ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಆರ್ಡರ್",
+   "en": "order",
+   "path": "lexicon",
+   "row": 646,
+   "context": "ಸಂಖ್ಯೆ ಸೀಮಿತವಾಗಿಲ್ಲ ಎಂದು ಕಾಯ್ದೆಯ ಆರ್ಡರ್ ಹೇಳುತ್ತದೆ ಎಂದು ಗಮನಿಸಬೇಕು ಖಚಿತವಾಗಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟೀಲ್",
+   "en": "steel",
+   "path": "lexicon",
+   "row": 300,
+   "context": "ಕಾನ್ಸರ್ಟ್ ಹಾಲ್ನ ಬ್ರಷ್ಡ್ ಸ್ಟೇನ್ಲೆಸ್ ಸ್ಟೀಲ್ ಕವರಿಂಗ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ಯಾಂಕ್",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 4023,
+   "context": "ಇದು ಕೇಂದ್ರ ಬ್ಯಾಂಕ್ ಅಥವಾ ವಾಣಿಜ್ಯ ಹಣಕಾಸು ಮತ್ತು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಫಸ್ಟ್",
+   "en": "first",
+   "path": "lexicon",
+   "row": 664,
+   "context": "ಯಾವಾಗ ಫಸ್ಟ್ ಲುಕ್ ಸೋಷಲ್ ಮೀಡಿಯಾದಲ್ಲಿ ವೈರಲ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ಲಡ್",
+   "en": "blood",
+   "path": "lexicon",
+   "row": 7764,
+   "context": "ಚಂದ್ರನನ್ನೇ ರಕ್ತ ಚಂದ್ರ ಅಥವಾ ಬ್ಲಡ್ ಮೂನ್ ಎನ್ನಲಾಗುತ್ತೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟೋರಿ",
+   "en": "story",
+   "path": "lexicon",
+   "row": 6637,
+   "context": "ಪ್ರೈವೇಟ್ ಆಗಿದ್ದೂ ನಿಮ್ಮ ಜತೆ ಸ್ಟೋರಿ ಶೇರ್ ಮಾಡಬಹುದಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಂಗ್ರೆಸ್",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 9798,
+   "context": "ಕಾಂಗ್ರೆಸ್ ಸಂಸ್ಥೆಯ ರಚನೆಯನ್ನೂ ನವೀನ ಕಾಲಕ್ಕೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಅಡಿಕ್ಟ್",
+   "en": "addict",
+   "path": "lexicon",
+   "row": 2689,
+   "context": "ನಾವು ಮಸಾಜ್ಗೆ ದಾಸರಾಗಿ ಅದಕ್ಕೆ ಅಡಿಕ್ಟ್ ಆಗಿಬಿಡುವ ಸಾಧ್ಯತೆಯೂ ಇದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಡಿಪ್ಲೊಮಾ",
+   "en": "diploma",
+   "path": "lexicon",
+   "row": 1378,
+   "context": "ಮುಂದಿನ ವರ್ಷದಿಂದ ಕೌಶಲತೆ ಸಂಬಂಧಿಸಿದ ಡಿಪ್ಲೊಮಾ ಕೋರ್ಸ್ಗಳನ್ನು ತೆರೆಯುವ ಬಗ್ಗೆಯೂ ಚಿಂತನೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಇಂಗ್ಲಿಷ್",
+   "en": "english",
+   "path": "lexicon",
+   "row": 5219,
+   "context": "ರಾಜರು ಕನ್ನಡ ಇಂಗ್ಲಿಷ್ ಸಂಸ್ಕೃತ ವಿಜ್ಞಾನಗಳಲ್ಲಿ ಶಿಕ್ಷಣ ಪಡೆದರು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಟ್ವೀಟ್",
+   "en": "tweet",
+   "path": "lexicon",
+   "row": 86,
+   "context": "ಸದಸ್ಯರಿಗೆ ನನ್ನ ಸಂತಾಪವಿದೆ ಎಂದು ಟ್ವೀಟ್ ಮಾಡಿದ್ದಾರೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ವಾಟರ್",
+   "en": "water",
+   "path": "lexicon",
+   "row": 4746,
+   "context": "ಪಡೆಯಬಹುದು ಮತ್ತು ವಿಶ್ವದ ದೊಡ್ಡ ವಾಟರ್ ಕೋಸ್ಟರ್ ನಲ್ಲಿ ರೈಡ್ ಮಾಡಬಹುದು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸ್ಟುಡಿಯೋ",
+   "en": "studio",
+   "path": "lexicon",
+   "row": 6780,
+   "context": "ಹೊಸ ಲೆನ್ಸ್ಗಳು ಇಂದಿನಿಂದ ಲೆನ್ಸ್ ಸ್ಟುಡಿಯೋ ಮೂಲಕ ಲಭ್ಯವಾಗಲಿವೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಗೂಗಲ್",
+   "en": "google",
+   "path": "lexicon",
+   "row": 728,
+   "context": "ಮೊಬೈಲ್ ನೆಟ್ವರ್ಕ್ ಕಂಪೆನಿಗಳಲ್ಲೇ ಮುಂಚೂಣಿಯಲ್ಲಿರುವ ಗೂಗಲ್ ಕಳೆದ ವರ್ಷದಿಂದ ಐಪಿಎಲ್ ಡಿಜಿಟಲ್",
+   "verdict": "correct"
+  },
+  {
+   "native": "ವೇಸ್ಟ್",
+   "en": "waste",
+   "path": "lexicon",
+   "row": 9845,
+   "context": "ಇಲೆವರಿ ಮಾಡುವ ಉದ್ದೇಶದಿಂದ ಆಸ್ಪತ್ರೆ ವೇಸ್ಟ್ ಗಳನ್ನು ರಾಂಮ್ಕೀ ಕಂಪೆನಿ ಪಡೆಯುತ್ತದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಸರ್ಚ್",
+   "en": "search",
+   "path": "lexicon",
+   "row": 8961,
+   "context": "ವಿಶೇಷ ಸರ್ಚ್ ಲೈಟ್ ಅಳವಡಿಸಿ ನಿಗಾ ಇಡಲು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಡಿಗ್ರಿ",
+   "en": "degree",
+   "path": "lexicon",
+   "row": 1669,
+   "context": "ಪ್ರೋಗ್ರೆಸ್ ಪರಿಸರಕ್ಕೆ ಹೊಂದಿಕೊಳ್ಳುವ ಎರಡು ಡಿಗ್ರಿ ಹೆಚ್ಚಿಸಲು ಹೊಸ ಲಕ್ಷಣಗಳನ್ನು ರಚನೆಗೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಂಗ್ರೆಸ್",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 4474,
+   "context": "ನಂತರ ಜನವರಿಯಲ್ಲಿ ನಡೆದ ಚುನಾವಣೆಯಲ್ಲಿ ಕಾಂಗ್ರೆಸ್ ಪ್ರಚಂಡ ಬಹುಮತದಿಂದ ಅಧಿಕಾರ ಗದ್ದುಗೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪಾರ್ಕ್",
+   "en": "park",
+   "path": "lexicon",
+   "row": 5912,
+   "context": "ಪಾರ್ಕ್ ಹೊಟೇಲ್ ಭಾರತದ ಪಶ್ಚಿಮ ಬಂಗಾಳದ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪೆನ್ಸಿಲ್",
+   "en": "pencil",
+   "path": "lexicon",
+   "row": 8380,
+   "context": "ವಿವರವಾದ ಮಾರ್ಗದರ್ಶನ ಅವಲಂಬಿಸಿವೆ ಮೇಲ್ಫಿಸೆಂಟ್ ಪೆನ್ಸಿಲ್ ಮಹಾನ್ ಆಗಿರುತ್ತದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಚಾನಲ್",
+   "en": "channel",
+   "path": "lexicon",
+   "row": 8863,
+   "context": "ರೋಗ ತಕ್ಷಣ ಗಾಳಿಗುಳ್ಳೆಯ ಒಳಗೆ ಚಾನಲ್ ಮೂಲಕ ಪಡೆದ ನಂತರ ಸ್ಪಷ್ಟವಾಗಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕೊರೋನಾ",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 1065,
+   "context": "ಮೊದಲನೇ ಮತ್ತು ಎರಡನೇ ಮಹಾಯುದ್ಧಕಿಂತ ಕೊರೋನಾ ಜೈವಿಕ ಅಸ್ತ್ರ ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಪ್ಲಾಸ್ಟಿಕ್",
+   "en": "plastic",
+   "path": "lexicon",
+   "row": 8802,
+   "context": "ಸೇರಿದಂತೆ ಹಲವೆಡೆಯಲ್ಲಿ ಅತಿಯಾಗಿ ನಿಷೇಧಿತ ಪ್ಲಾಸ್ಟಿಕ್ ಬಳಕೆಯಾಗುತ್ತಿದೆ ಎಂಬ ದೂರು ಕೇಳಿಬಂದಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಂಟ್ರೋಲ್",
+   "en": "control",
+   "path": "lexicon",
+   "row": 6905,
+   "context": "ಮತ್ತು ಸ್ವಯಂ ಚಾಲಿತ ಮೋಡ್ ಕಂಟ್ರೋಲ್ ಎಲ್ಲಾ ಅಗತ್ಯ ನಿಯತಾಂಕಗಳನ್ನು ಅನುಮತಿಸುತ್ತದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಶಾಪಿಂಗ್",
+   "en": "shopping",
+   "path": "lexicon",
+   "row": 8091,
+   "context": "ಹಾಗೂ ಅಸಾದ್ ಈಗಾಗಲೇ ದುಬೈನಲ್ಲಿ ಶಾಪಿಂಗ್ ಕೂಡಾ ಮಾಡಿದ್ದಾರೆಂದು ಹೇಳಲಾಗಿದೆ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಫ್ಯಾನ್",
+   "en": "fan",
+   "path": "lexicon",
+   "row": 10192,
+   "context": "ಇದಲ್ಲದೆ ರ್ಯಾಪರ್ ಚಂದನ್ಶೆಟ್ಟಿಯವರ ಅಭಿಮಾನಿಯಾಗಿ ಫ್ಯಾನ್ ಆಫ್ ಚಂದನ್ ಎಂಬ ಹಾಡನ್ನು",
+   "verdict": "correct"
+  },
+  {
+   "native": "ವಿಡಿಯೋ",
+   "en": "video",
+   "path": "lexicon",
+   "row": 3983,
+   "context": "ಜೊತೆಗೆ ವಿಡಿಯೋ ವೀಕ್ಷಣೆ ಹಾಗೂ ವಿಡಿಯೋ ಕರೆಗಳಿಗಾಗಿ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಬ್ಯಾಕ್",
+   "en": "back",
+   "path": "lexicon",
+   "row": 543,
+   "context": "ಸ್ಥಳೀಯ ಬಿಲ್ಡಿಂಗ್ ಸಂಕೇತಗಳು ಮನೆಮಾಲೀಕರಿಗೆ ಬ್ಯಾಕ್ ಫ್ಲೋ ಸಾಧನವನ್ನು ಸರಿಪಡಿಸಲು ಅಥವಾ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ಕಾಲೇಜು",
+   "en": "college",
+   "path": "lexicon",
+   "row": 8018,
+   "context": "ತಾಲೂಕಿನ ಎಲ್ಲಾ ಶಾಲಾ ಕಾಲೇಜು ಹಾಗೂ ಸರ್ಕಾರಿ ಕಛೇರಿಗಳಿಗು ರಜೆ",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 100.0
+}

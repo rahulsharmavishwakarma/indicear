@@ -1,0 +1,407 @@
+{
+  "cer": {
+    "amr": {
+      "skipped": "ffmpeg encoder missing for ['amr']"
+    },
+    "babble:10": {
+      "bn": 40.46,
+      "en": 40.21,
+      "gu": 40.51,
+      "hi": 52.57,
+      "kn": 46.77,
+      "ml": 38.67,
+      "mr": 43.84,
+      "or": 61.69,
+      "pa": 54.9,
+      "ta": 48.79,
+      "te": 43.54,
+      "ur": 61.3
+    },
+    "babble:20": {
+      "bn": 31.69,
+      "en": 31.46,
+      "gu": 35.16,
+      "hi": 46.94,
+      "kn": 36.45,
+      "ml": 35.16,
+      "mr": 37.92,
+      "or": 44.62,
+      "pa": 47.44,
+      "ta": 39.03,
+      "te": 38.24,
+      "ur": 56.47
+    },
+    "babble:5": {
+      "bn": 50.29,
+      "en": 51.38,
+      "gu": 49.63,
+      "hi": 62.41,
+      "kn": 60.09,
+      "ml": 46.98,
+      "mr": 52.07,
+      "or": 70.57,
+      "pa": 63.53,
+      "ta": 62.05,
+      "te": 52.58,
+      "ur": 68.23
+    },
+    "clean": {
+      "bn": 29.89,
+      "en": 28.49,
+      "gu": 33.64,
+      "hi": 44.93,
+      "kn": 33.22,
+      "ml": 33.61,
+      "mr": 35.47,
+      "or": 39.94,
+      "pa": 43.18,
+      "ta": 36.47,
+      "te": 36.76,
+      "ur": 55.61
+    },
+    "gsm": {
+      "bn": 34.42,
+      "en": 48.12,
+      "gu": 40.21,
+      "hi": 48.82,
+      "kn": 40.87,
+      "ml": 37.42,
+      "mr": 41.2,
+      "or": 54.59,
+      "pa": 54.36,
+      "ta": 44.08,
+      "te": 40.87,
+      "ur": 64.93
+    },
+    "noise:10": {
+      "bn": 34.25,
+      "en": 35.74,
+      "gu": 37.34,
+      "hi": 49.18,
+      "kn": 41.43,
+      "ml": 35.33,
+      "mr": 38.74,
+      "or": 49.85,
+      "pa": 48.63,
+      "ta": 44.59,
+      "te": 40.7,
+      "ur": 62.12
+    },
+    "noise:20": {
+      "bn": 30.75,
+      "en": 30.27,
+      "gu": 34.4,
+      "hi": 45.11,
+      "kn": 35.65,
+      "ml": 32.3,
+      "mr": 36.04,
+      "or": 42.36,
+      "pa": 45.13,
+      "ta": 39.53,
+      "te": 37.59,
+      "ur": 58.15
+    },
+    "noise:5": {
+      "bn": 37.75,
+      "en": 41.42,
+      "gu": 40.71,
+      "hi": 54.13,
+      "kn": 46.57,
+      "ml": 39.16,
+      "mr": 42.45,
+      "or": 57.12,
+      "pa": 53.02,
+      "ta": 50.31,
+      "te": 44.47,
+      "ur": 65.23
+    },
+    "opus": {
+      "bn": 32.16,
+      "en": 32.59,
+      "gu": 36.9,
+      "hi": 45.19,
+      "kn": 35.4,
+      "ml": 31.83,
+      "mr": 37.89,
+      "or": 47.21,
+      "pa": 49.59,
+      "ta": 41.32,
+      "te": 38.53,
+      "ur": 60.61
+    },
+    "reverb:0.3": {
+      "bn": 36.32,
+      "en": 34.66,
+      "gu": 39.49,
+      "hi": 48.96,
+      "kn": 37.39,
+      "ml": 36.96,
+      "mr": 43.1,
+      "or": 55.41,
+      "pa": 56.47,
+      "ta": 46.73,
+      "te": 42.5,
+      "ur": 69.08
+    },
+    "reverb:0.6+pointnoise:10": {
+      "bn": 55.91,
+      "en": 56.31,
+      "gu": 57.78,
+      "hi": 69.09,
+      "kn": 63.23,
+      "ml": 51.18,
+      "mr": 60.96,
+      "or": 78.83,
+      "pa": 72.71,
+      "ta": 71.4,
+      "te": 62.37,
+      "ur": 83.39
+    },
+    "reverb:0.6": {
+      "bn": 43.18,
+      "en": 42.15,
+      "gu": 43.78,
+      "hi": 54.96,
+      "kn": 45.15,
+      "ml": 43.23,
+      "mr": 51.31,
+      "or": 67.52,
+      "pa": 63.87,
+      "ta": 56.87,
+      "te": 49.23,
+      "ur": 76.63
+    },
+    "reverb:0.9": {
+      "bn": 49.76,
+      "en": 49.55,
+      "gu": 51.16,
+      "hi": 60.82,
+      "kn": 52.71,
+      "ml": 50.53,
+      "mr": 59.4,
+      "or": 77.9,
+      "pa": 69.79,
+      "ta": 64.25,
+      "te": 57.69,
+      "ur": 82.66
+    },
+    "speed:0.9": {
+      "bn": 31.08,
+      "en": 30.65,
+      "gu": 37.94,
+      "hi": 43.63,
+      "kn": 34.74,
+      "ml": 34.24,
+      "mr": 37.82,
+      "or": 41.39,
+      "pa": 45.74,
+      "ta": 39.02,
+      "te": 37.33,
+      "ur": 59.95
+    },
+    "speed:1.1": {
+      "bn": 29.95,
+      "en": 28.48,
+      "gu": 32.76,
+      "hi": 45.01,
+      "kn": 32.95,
+      "ml": 32.5,
+      "mr": 35.88,
+      "or": 40.58,
+      "pa": 45.42,
+      "ta": 36.1,
+      "te": 36.39,
+      "ur": 56.69
+    },
+    "tel8k": {
+      "bn": 34.86,
+      "en": 38.41,
+      "gu": 39.13,
+      "hi": 49.41,
+      "kn": 39.67,
+      "ml": 35.66,
+      "mr": 42.47,
+      "or": 54.98,
+      "pa": 57.02,
+      "ta": 43.31,
+      "te": 41.68,
+      "ur": 66.91
+    }
+  },
+  "collapses": [
+    {
+      "condition": "babble:10",
+      "lang": "or",
+      "cer": 61.69,
+      "clean_cer": 39.94
+    },
+    {
+      "condition": "babble:5",
+      "lang": "bn",
+      "cer": 50.29,
+      "clean_cer": 29.89
+    },
+    {
+      "condition": "babble:5",
+      "lang": "en",
+      "cer": 51.38,
+      "clean_cer": 28.49
+    },
+    {
+      "condition": "babble:5",
+      "lang": "kn",
+      "cer": 60.09,
+      "clean_cer": 33.22
+    },
+    {
+      "condition": "babble:5",
+      "lang": "or",
+      "cer": 70.57,
+      "clean_cer": 39.94
+    },
+    {
+      "condition": "babble:5",
+      "lang": "pa",
+      "cer": 63.53,
+      "clean_cer": 43.18
+    },
+    {
+      "condition": "babble:5",
+      "lang": "ta",
+      "cer": 62.05,
+      "clean_cer": 36.47
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "bn",
+      "cer": 55.91,
+      "clean_cer": 29.89
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "en",
+      "cer": 56.31,
+      "clean_cer": 28.49
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "gu",
+      "cer": 57.78,
+      "clean_cer": 33.64
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "hi",
+      "cer": 69.09,
+      "clean_cer": 44.93
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "kn",
+      "cer": 63.23,
+      "clean_cer": 33.22
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "mr",
+      "cer": 60.96,
+      "clean_cer": 35.47
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "or",
+      "cer": 78.83,
+      "clean_cer": 39.94
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "pa",
+      "cer": 72.71,
+      "clean_cer": 43.18
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "ta",
+      "cer": 71.4,
+      "clean_cer": 36.47
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "te",
+      "cer": 62.37,
+      "clean_cer": 36.76
+    },
+    {
+      "condition": "reverb:0.6+pointnoise:10",
+      "lang": "ur",
+      "cer": 83.39,
+      "clean_cer": 55.61
+    },
+    {
+      "condition": "reverb:0.6",
+      "lang": "or",
+      "cer": 67.52,
+      "clean_cer": 39.94
+    },
+    {
+      "condition": "reverb:0.6",
+      "lang": "pa",
+      "cer": 63.87,
+      "clean_cer": 43.18
+    },
+    {
+      "condition": "reverb:0.6",
+      "lang": "ta",
+      "cer": 56.87,
+      "clean_cer": 36.47
+    },
+    {
+      "condition": "reverb:0.6",
+      "lang": "ur",
+      "cer": 76.63,
+      "clean_cer": 55.61
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "en",
+      "cer": 49.55,
+      "clean_cer": 28.49
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "mr",
+      "cer": 59.4,
+      "clean_cer": 35.47
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "or",
+      "cer": 77.9,
+      "clean_cer": 39.94
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "pa",
+      "cer": 69.79,
+      "clean_cer": 43.18
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "ta",
+      "cer": 64.25,
+      "clean_cer": 36.47
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "te",
+      "cer": 57.69,
+      "clean_cer": 36.76
+    },
+    {
+      "condition": "reverb:0.9",
+      "lang": "ur",
+      "cer": 82.66,
+      "clean_cer": 55.61
+    }
+  ]
+}

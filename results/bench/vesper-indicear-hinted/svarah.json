@@ -1,0 +1,114 @@
+{
+  "en": {
+    "wer": 43.4,
+    "cer": 23.98,
+    "utterances": 300,
+    "words": 3445,
+    "script_error_rate": 0.69,
+    "wer_script_normalised": 43.4,
+    "cer_script_normalised": 23.98,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.465
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 69.67,
+    "macro_f1": 82.12,
+    "per_lang": {
+      "en": {
+        "precision": 100.0,
+        "recall": 69.67,
+        "f1": 82.12,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "en": {
+        "bn": 11,
+        "en": 209,
+        "gu": 9,
+        "hi": 7,
+        "kn": 3,
+        "ml": 5,
+        "mr": 12,
+        "or": 5,
+        "pa": 14,
+        "ta": 1,
+        "te": 13,
+        "ur": 11
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 58,
+        "accuracy": 24.14
+      },
+      "2-5s": {
+        "utterances": 100,
+        "accuracy": 75.0
+      },
+      "5-10s": {
+        "utterances": 103,
+        "accuracy": 83.5
+      },
+      "10-20s": {
+        "utterances": 39,
+        "accuracy": 87.18
+      }
+    }
+  },
+  "eval_set": "svarah",
+  "utterances": 300,
+  "hours": 0.47,
+  "seconds": 21,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": "the row's language"
+  }
+}

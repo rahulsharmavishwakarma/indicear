@@ -1,0 +1,100 @@
+{
+  "kind": "eval",
+  "system": "v4+lid",
+  "set": "kathbath_noisy_test_unknown_kn",
+  "condition": null,
+  "notes": "",
+  "utterances": 1418,
+  "hours": 3.449,
+  "metrics": {
+    "ctc": {
+      "kn": {
+        "wer": 70.13,
+        "cer": 24.1,
+        "utterances": 1418,
+        "words": 15322,
+        "script_error_rate": 14.01,
+        "wer_script_normalised": 70.13,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "oov_recall": 12.34,
+        "oov_words": 2772,
+        "hours": 3.449
+      }
+    }
+  },
+  "lid": {
+    "utterance": {
+      "utterances": 1418,
+      "accuracy": 99.86,
+      "macro_f1": 99.93,
+      "per_lang": {
+        "kn": {
+          "precision": 100.0,
+          "recall": 99.86,
+          "f1": 99.93,
+          "support": 1418
+        }
+      },
+      "confusion": {
+        "kn": {
+          "hi": 2,
+          "kn": 1416
+        }
+      },
+      "pairs": {
+        "hi/ur": {
+          "hi->ur": 0,
+          "ur->hi": 0,
+          "hi_utterances": 0,
+          "ur_utterances": 0,
+          "hi_as_ur_rate": null,
+          "ur_as_hi_rate": null
+        },
+        "hi/mr": {
+          "hi->mr": 0,
+          "mr->hi": 0,
+          "hi_utterances": 0,
+          "mr_utterances": 0,
+          "hi_as_mr_rate": null,
+          "mr_as_hi_rate": null
+        },
+        "pa/hi": {
+          "pa->hi": 0,
+          "hi->pa": 0,
+          "pa_utterances": 0,
+          "hi_utterances": 0,
+          "pa_as_hi_rate": null,
+          "hi_as_pa_rate": null
+        }
+      },
+      "by_duration": {
+        "2-5s": {
+          "utterances": 64,
+          "accuracy": 96.88
+        },
+        "5-10s": {
+          "utterances": 924,
+          "accuracy": 100.0
+        },
+        "10-20s": {
+          "utterances": 430,
+          "accuracy": 100.0
+        }
+      }
+    }
+  },
+  "environment": {
+    "runtime": "python 3.14.8, GIL off",
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "encoder": "google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd"
+  },
+  "frame_budget": 67045
+}

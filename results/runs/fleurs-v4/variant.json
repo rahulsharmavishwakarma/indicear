@@ -1,0 +1,19 @@
+{
+  "name": "v4",
+  "adapters": true,
+  "phonetic": true,
+  "factored": true,
+  "cr_ctc": false,
+  "transducer": false,
+  "adapter_rank": 128,
+  "inter_layers": [
+    6,
+    9
+  ],
+  "inter_weight": 0.3,
+  "ctc_weight": 0.3,
+  "cr_weight": 0.2,
+  "cr_time_scale": 2.5,
+  "specaugment": true,
+  "checkpoint": false
+}

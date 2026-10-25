@@ -1,0 +1,203 @@
+{
+  "hi": {
+    "wer": 43.28,
+    "cer": 30.09,
+    "utterances": 600,
+    "words": 12917,
+    "script_error_rate": 13.93,
+    "wer_script_normalised": 43.19,
+    "rows_with_alternative_ref": 200,
+    "cm_utterances": 201,
+    "cm_spans": 1380,
+    "cm_span_accuracy": 82.03,
+    "cm_span_cer_mean": 27.34,
+    "cm_span_accuracy_by_lang": {
+      "en": 72.29,
+      "hi": 90.16
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 1.594
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 99.33,
+    "macro_f1": 99.67,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 99.33,
+        "f1": 99.67,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "hi": {
+        "en": 2,
+        "hi": 596,
+        "kn": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 600,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 600,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 600,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 7,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 50,
+        "accuracy": 98.0
+      },
+      "5-10s": {
+        "utterances": 296,
+        "accuracy": 98.99
+      },
+      "10-20s": {
+        "utterances": 247,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indiccontext_hi_code_mixed",
+  "utterances": 600,
+  "hours": 1.59,
+  "seconds": 40,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 348,
+  "changed_examples": [
+    {
+      "key": "indiccontext_eval/hi/test/7318349394481706_0_5",
+      "constrained": "biop पावर केवल शरीर का नहीं बकी आत्मा और विचारों का भी नियम करने लगता है यही सामानलीन साहित्य के जीवन निगराण और नियंत्रनण की तासदी को उजागर करता है",
+      "unconstrained": "biopॉवर केवल शरीर का नहीं बकी आत्मा और विचारों का भी नियम करने लगता है यही सामानलीन साहित्य के जीवन निगराण और नियंत्रनण की तासदी को उजागर करता है"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394482125_0_37",
+      "constrained": "हर एक even एक मतलब प्रजाति में भी प्राणियों की काफी फर्क होते हैं काफ़ी अंत होते",
+      "unconstrained": "हर एक ಇವ एक मतलब प्रजाति में भी प्राणियों की काफी फर्क होते हैं काफ़ी अंत होते"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_0",
+      "constrained": "जबमीो last in first और accounting me की बात करते हैं तो ये खाौर पर उस समय railwayleant हो जाता है जब मह महंगाई या infaation तेजी से बढ़ रही लीफों में सबसे पहले latest",
+      "unconstrained": "ஜபमीो last in first और accounting me की बात करते हैं तो ये खाौर पर उस समय railwayleant हो जाता है जब मह महंगाई या infaation तेजी से बढ़ रही लीफों में सबसे पहले latest"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_1",
+      "constrained": "खरीददे का इन ntry को बेचने के",
+      "unconstrained": "खरीददे का इनntry को बेचने के"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_4",
+      "constrained": "लेकिन इसके साथ एक्रे ad ऑफ भी आता है ली foटे की वजह से inventry की veventry valation कम हो जाती है क्योंकि पुराने और सस्त सामान",
+      "unconstrained": "लेकिन इसके साथ एक्रेad ऑफ भी आता है लीfoटे की वजह से inventry कीveventry valूुation कम हो जाती है क्योंकि पुराने और सस्त सामान"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_5",
+      "constrained": "vevntry में दिखाया जाता है इससे balance seat पर ventry asets under v valueed दिखाई दे सकते हैं तो account में हमें या देखना होता है कि क्या company का गोल है tax बचाना या ज़्यादा income दिखाना",
+      "unconstrained": "vevntry में दिखाया जाता है इससे balance seat परventry asets under v valueed दिखाई दे सकते हैं तो account में हमें या देखना होता है कि क्या company का गोल है tax बचाना या ज़्यादा income दिखाना"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394492574_0_6",
+      "constrained": "और यह अभी ध्यान देना होता है कि क्या उस देश में लीफों मेथड लीग है जो कि कई देशों में ow नहीं किया जा सकता इसलिए से",
+      "unconstrained": "और यह अभी ध्यान देना होता है कि क्या उस देश में लीफों मेथड लीग है जो कि कई देशों मेंow नहीं किया जा सकता इसलिए से"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514024_0_0",
+      "constrained": "गर्मी के मौसम में पशु अपने शरीर कााप नियंत्रण करने के लिए चारर्म mo regulation decorationश करते हैं जैसे पसीना आना तेजासना और ज़्यादा पानी पीना लेकिन ज़्यादा तापमान पर उन्हें feat streses हो जाता हो सकता है",
+      "unconstrained": "गर्मी के मौसम में पशु अपने शरीर का தாपமா नियंत्रण करने के लिए चारर्मmo regulation decorationश करते हैं जैसे पसीना आना ತೇಜासना और ज़्यादा पानी पीना लेकिन ज़्यादा तापमान पर उन्हें feat streses हो जाता हो सकता है"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514024_0_2",
+      "constrained": "ca mistingना और shads में ventilation system यानी पंखें लगाना",
+      "unconstrained": "அ ca misting சே தண்டக்குना और shads में ventilation system यानी पंखें लगाना"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514027_0_0",
+      "constrained": "io glasses callalpanic रेखा है जो निषके पर किसी भाषााई विशेषता की श सीमा देख है जैसे किसी क्षेत्र में बाल्टी कहा जा जाता है और दूसरे में बैठेक bucket",
+      "unconstrained": "இo glasses callalpanic रेखा है जो निषके पर किसी भाषााई विशेषता की श सीमा देख है जैसे किसी क्षेत्र में बाल्टी कहा जा जाता है और दूसरे में बैठेक bucket"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514027_0_1",
+      "constrained": "dialक्ट ol technology में इन रेख की उपयोगग blling क्षेत्रों को पहचानने के लिए किया जाता है लिगिस्टिको ograpy और एरििंग्वबस्टिक बताता है कि",
+      "unconstrained": "ायalक्टol technology में इन रेख की उपयोगग blling क्षेत्रों को पहचानने के लिए किया जाता है लिगिस्टिकोog्रrapy और एरििंग्वबस्टिक बताता है कि"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394514027_0_3",
+      "constrained": "में iholas भाषााई विवि वि तथा को",
+      "unconstrained": "ಸಂಕ್ಷೆೇಪ में iholas பாಷाई विवि वि तथा को"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_4",
+      "constrained": "something पहला casbal lighting fesor केव",
+      "unconstrained": "something எங்கள் पहला casbal lighting fesor केव"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_5",
+      "constrained": "coation बताता है लेकिन कारण नहीं poster explation को intervivationtion आधारित एन yश is के साथ ज जोर हम",
+      "unconstrained": "கோation बताता है लेकिन कारण नहीं poster explation को intervivationtion आधारित एनyशis के साथ ज जोर हम"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_6",
+      "constrained": "पता लगा सकते हैं कि यदि एक एक carर्िय feat को बदला जाए तो क्या model का निर्णय बदलता है दूसरा concept bottleत ने एक म moड el",
+      "unconstrained": "पता लगा सकते हैं कि यदि एक एक carर्िय feat को बदला जाए तो क्या model का निर्णय बदलता है दूसरा concept bottleत ने एक म moडel"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_7",
+      "constrained": "b m एक या एक मध्य बढ़र्ती ले में मानव समझने योगॉ cept को लाता है जिससे हम देख सकते हैं कि model ने कीन अवधारव के आधार पढ़ निर्णय लिया तीसरा atbutiontion इस",
+      "unconstrained": "b m एक या एक मध्य बढ़र्ती ले में मानव समझने योगॉcept को लाता है जिससे हम देख सकते हैं कि model ने कीन अवधारव के आधार पढ़ निर्णय लिया तीसरा atbutiontion इस"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_9",
+      "constrained": "इसके कुछ limitations भी है poster explanation aर्ण हो हैं",
+      "unconstrained": "इसके कुछ limitations भी है poster explanation aूर्ण हो हैं"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_11",
+      "constrained": "दूसरा proxy ही समस्या से f जैसे tuol modern का एक सरकृत",
+      "unconstrained": "दूसरा proxy ही समस्या सेf जैसे tuol modern का एक सरकृत"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394494409_0_12",
+      "constrained": "आप ization बना बनाते हैं जो तो जो जरूरी नहीं की अस निर्ने प्रक्रिया को पूरीड़ी तरह दर्शाएँ",
+      "unconstrained": "आपization बना बनाते हैं जो तो जो जरूरी नहीं की अस निर्ने प्रक्रिया को पूरीड़ी तरह दर्शाएँ"
+    },
+    {
+      "key": "indiccontext_eval/hi/test/7318349394490472_0_0",
+      "constrained": "यहां पे बोला गया है कि blue osन strateg को कैसे use करें ortal के po के five foururs को पा करने के लिए और hypercetitive market में sustainableetive adantage पानी के लिए",
+      "unconstrained": "यहां पे बोला गया है कि blue osन strateg को कैसे use करेंortal के po के five foururs को पा करने के लिए और hypercetitive market में sustainableetive adantage पानी के लिए"
+    }
+  ]
+}

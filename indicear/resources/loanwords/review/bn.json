@@ -1,0 +1,811 @@
+{
+ "lang": "bn",
+ "words": 69132,
+ "rewrites": 1725,
+ "per_1000_words": 24.95,
+ "types": 425,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "উইকেট",
+   "en": "wicket",
+   "path": "lexicon",
+   "row": 1011,
+   "context": "তিন ম্যাচে মাত্র তিনটে উইকেট ফেলতে পারে",
+   "verdict": "correct"
+  },
+  {
+   "native": "সিনিয়র",
+   "en": "senior",
+   "path": "lexicon",
+   "row": 1194,
+   "context": "মধ্যে ন্যাশনাল ব্যাংক লিমিটেডের সিনিয়র ভাইস প্রেসিডেন্ট এবং ডেপুটি",
+   "verdict": "correct"
+  },
+  {
+   "native": "সিকিউরিটি",
+   "en": "security",
+   "path": "lexicon",
+   "row": 1378,
+   "context": "সোশ্যাল সিকিউরিটি কোলা বিষয়ক সমস্যা মোকাবেলার",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যান্ড",
+   "en": "and",
+   "path": "lexicon",
+   "row": 5447,
+   "context": "আহম্মেদ রেসিডেন্সিয়াল মডেল স্কুল অ্যান্ড কলেজ অধ্যক্ষ মেজর মো",
+   "verdict": "correct"
+  },
+  {
+   "native": "ফ্রন্ট",
+   "en": "front",
+   "path": "lexicon",
+   "row": 2298,
+   "context": "আওয়ামী লীগে নতুন ইসলামি ফ্রন্ট গঠনের উদ্যোগ",
+   "verdict": "correct"
+  },
+  {
+   "native": "কংগ্রেস",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 50,
+   "context": "আসন সমঝোতার লক্ষ্যে স্বাভাবিকভাবেই কংগ্রেস সম্পর্কে কোনও কথা নেই",
+   "verdict": "correct"
+  },
+  {
+   "native": "রিপোর্ট",
+   "en": "report",
+   "path": "lexicon",
+   "row": 1160,
+   "context": "রয়েছেঃ মার্কিন গোয়েন্দা সংস্থার রিপোর্ট",
+   "verdict": "correct"
+  },
+  {
+   "native": "মডেল",
+   "en": "model",
+   "path": "lexicon",
+   "row": 1355,
+   "context": "কান্না জুড়লেন বিখ্যাত এই মডেল",
+   "verdict": "correct"
+  },
+  {
+   "native": "সুপ্রিম",
+   "en": "supreme",
+   "path": "lexicon",
+   "row": 1163,
+   "context": "সঙ্গে দেখা করার নির্দেশ সুপ্রিম কোর্টের",
+   "verdict": "correct"
+  },
+  {
+   "native": "ক্লিনিক",
+   "en": "clinic",
+   "path": "lexicon",
+   "row": 6212,
+   "context": "ভাবে চলা ক্লিনিক্যাল ল্যাবরেটরি ক্লিনিক বন্ধ করে পালিয়ে যায়",
+   "verdict": "correct"
+  },
+  {
+   "native": "সিস্টেম",
+   "en": "system",
+   "path": "lexicon",
+   "row": 4473,
+   "context": "তথ্যের জন্য পাওয়ার লক সিস্টেম দেখুন",
+   "verdict": "correct"
+  },
+  {
+   "native": "সোশ্যাল",
+   "en": "social",
+   "path": "lexicon",
+   "row": 5914,
+   "context": "তাঁর ছবি ভাইরাল হয়েছে সোশ্যাল মিডিয়ায় ছবি সংগৃহীত",
+   "verdict": "correct"
+  },
+  {
+   "native": "বোর্ড",
+   "en": "board",
+   "path": "lexicon",
+   "row": 3182,
+   "context": "আরামবাগে পঞ্চায়েত বোর্ড গঠন নিয়ে গোষ্ঠীদ্বন্দ্বের জেরে",
+   "verdict": "correct"
+  },
+  {
+   "native": "জেনারেল",
+   "en": "general",
+   "path": "lexicon",
+   "row": 887,
+   "context": "গিয়ে খুশি প্রকাশ করেছিলেন জেনারেল নারভানে",
+   "verdict": "correct"
+  },
+  {
+   "native": "ফুটবল",
+   "en": "football",
+   "path": "lexicon",
+   "row": 6324,
+   "context": "পৃষ্ঠপোষকতায় ফারাজ আন্তবিশ্ববিদ্যালয় গোল্ডকাপ ফুটবল টুর্নামেন্টের কোয়ার্টার ফাইনালে উঠেছে",
+   "verdict": "correct"
+  },
+  {
+   "native": "কলেজ",
+   "en": "college",
+   "path": "lexicon",
+   "row": 6076,
+   "context": "ক্যান্টনমেন্ট পাবলিক স্কুল ও কলেজ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ট্যাক্স",
+   "en": "tax",
+   "path": "lexicon",
+   "row": 5019,
+   "context": "বাড়ির মালিকদের দ্বারা শক্তি ট্যাক্স ক্রেডিট প্রয়োগ করা যেতে",
+   "verdict": "correct"
+  },
+  {
+   "native": "ট্রাফিক",
+   "en": "traffic",
+   "path": "lexicon",
+   "row": 4355,
+   "context": "ভূমিকম্পে মৃত ইন্দোনেশিয়ার এয়ার ট্রাফিক কন্ট্রোলার",
+   "verdict": "correct"
+  },
+  {
+   "native": "সুপ্রিম",
+   "en": "supreme",
+   "path": "lexicon",
+   "row": 3638,
+   "context": "পরেই এ আদেশ দিল সুপ্রিম কোর্ট",
+   "verdict": "correct"
+  },
+  {
+   "native": "ফেসবুক",
+   "en": "facebook",
+   "path": "lexicon",
+   "row": 2786,
+   "context": "দোষ খুঁজে বের করতে ফেসবুক রিপাবলিকান মালিকানাধীন একটি রাজনৈতিক",
+   "verdict": "correct"
+  },
+  {
+   "native": "আর্টস",
+   "en": "arts",
+   "path": "lexicon",
+   "row": 2323,
+   "context": "আপনার আর্টস এবং কারুশিল্প ব্যবসা জন্য",
+   "verdict": "correct"
+  },
+  {
+   "native": "ফ্যাশন",
+   "en": "fashion",
+   "path": "lexicon",
+   "row": 2066,
+   "context": "মুম্বইয়ের মেয়ে হলেও ফ্যাশন ডিজাইনিংয়ের পর লন্ডনেই পাকাপাকিভাবে",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যাসিড",
+   "en": "acid",
+   "path": "lexicon",
+   "row": 352,
+   "context": "সন্দেহের বশে স্ত্রীর ওপর অ্যাসিড হামলার অভিযোগ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ফিটনেস",
+   "en": "fitness",
+   "path": "lexicon",
+   "row": 2711,
+   "context": "ডাফ বলেন যে তিনি ফিটনেস ট্রেইনারের সাথে মিলিত হন",
+   "verdict": "correct"
+  },
+  {
+   "native": "ক্যাম্প",
+   "en": "camp",
+   "path": "lexicon",
+   "row": 3281,
+   "context": "পুলিশ ক্যাম্প থেকে পালিয়েও রক্ষা পেলেন",
+   "verdict": "correct"
+  },
+  {
+   "native": "রিপোর্ট",
+   "en": "report",
+   "path": "lexicon",
+   "row": 725,
+   "context": "দ্বিতীয় ত্রৈমাসিকের জিডিপি রিপোর্ট প্রকাশের আগেই পতন শেয়ার",
+   "verdict": "correct"
+  },
+  {
+   "native": "থেরাপি",
+   "en": "therapy",
+   "path": "lexicon",
+   "row": 1967,
+   "context": "করল বিশ্বের বৃহত্তম প্লাজমা থেরাপি ট্রায়াল প্রজেক্ট প্লাটিনা",
+   "verdict": "correct"
+  },
+  {
+   "native": "কংগ্রেস",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 4682,
+   "context": "কোন গেমপ্ল্যান নিয়ে নামছে কংগ্রেস",
+   "verdict": "correct"
+  },
+  {
+   "native": "টেনিস",
+   "en": "tennis",
+   "path": "lexicon",
+   "row": 6137,
+   "context": "শেষ স্বপ্নপূরণ নিয়ে সংশয়ে টেনিস তারকা লিয়েন্ডার পেজ",
+   "verdict": "correct"
+  },
+  {
+   "native": "স্মার্টফোন",
+   "en": "smartphone",
+   "path": "lexicon",
+   "row": 5301,
+   "context": "এড়াতে এই জায়গায় ভুলেও স্মার্টফোন ব্যবহার করবেন না",
+   "verdict": "correct"
+  },
+  {
+   "native": "কর্পোরেশন",
+   "en": "corporation",
+   "path": "lexicon",
+   "row": 1288,
+   "context": "সিটি কর্পোরেশন এলাকায় উপকর আইন বাস্তবায়নের",
+   "verdict": "correct"
+  },
+  {
+   "native": "সুপার",
+   "en": "super",
+   "path": "lexicon",
+   "row": 4879,
+   "context": "পত্র জমা দেন হল সুপার মো",
+   "verdict": "correct"
+  },
+  {
+   "native": "মেডিক্যাল",
+   "en": "medical",
+   "path": "lexicon",
+   "row": 4166,
+   "context": "করেন বঙ্গবন্ধু শেখ মুজিব মেডিক্যাল বিশ্ববিদ্যালয়ের সাবেক উপাচার্য ডা",
+   "verdict": "correct"
+  },
+  {
+   "native": "মোবাইল",
+   "en": "mobile",
+   "path": "lexicon",
+   "row": 4596,
+   "context": "সাথে তার অবস্থান ও মোবাইল নম্বর পরিবর্তন করতে থাকে",
+   "verdict": "correct"
+  },
+  {
+   "native": "হসপিটাল",
+   "en": "hospital",
+   "path": "lexicon",
+   "row": 4335,
+   "context": "এরই মধ্যে স্বাস্থ্য অধিদফতরের হসপিটাল অ্যান্ড ক্লিনিকস বিভাগের পরিচালক",
+   "verdict": "correct"
+  },
+  {
+   "native": "ব্লিচিং",
+   "en": "bleaching",
+   "path": "lexicon",
+   "row": 1780,
+   "context": "এলাকায় ছড়ানো হচ্ছে ব্লিচিং পাউডার মশা মারার স্প্রে",
+   "verdict": "correct"
+  },
+  {
+   "native": "টাইগার",
+   "en": "tiger",
+   "path": "lexicon",
+   "row": 2476,
+   "context": "টাইগার শ্রফ দিশা পাটানি তাদের",
+   "verdict": "correct"
+  },
+  {
+   "native": "সিঙ্গল",
+   "en": "single",
+   "path": "lexicon",
+   "row": 4713,
+   "context": "তবে সিঙ্গল বেঞ্চের রায়কে চ্যালেঞ্জ করে",
+   "verdict": "correct"
+  },
+  {
+   "native": "কংগ্রেস",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 678,
+   "context": "সংস্কৃতির জন্য হুমকি স্বরূপ কংগ্রেস",
+   "verdict": "correct"
+  },
+  {
+   "native": "চ্যালেঞ্জ",
+   "en": "challenge",
+   "path": "lexicon",
+   "row": 4535,
+   "context": "এদিকে বরুণ ধাওয়ানও চ্যালেঞ্জ ছুঁড়েছেন তিনি জানিয়েছেন অক্ষয়",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যান্ড",
+   "en": "and",
+   "path": "lexicon",
+   "row": 4750,
+   "context": "বাংলাদেশ নিউট্রিশন অ্যান্ড ডায়টিটিকস ফোরামের বছর পূর্তি",
+   "verdict": "correct"
+  },
+  {
+   "native": "স্পিকার",
+   "en": "speaker",
+   "path": "lexicon",
+   "row": 4699,
+   "context": "মৃত্যুতে জাতীয় সংসদের ডেপুটি স্পিকার মো",
+   "verdict": "correct"
+  },
+  {
+   "native": "মাস্ক",
+   "en": "mask",
+   "path": "lexicon",
+   "row": 5404,
+   "context": "শুষ্ক ত্বক জন্য মাস্ক জন্য রেসিপি নীচের দেওয়া",
+   "verdict": "correct"
+  },
+  {
+   "native": "সার্ভিস",
+   "en": "service",
+   "path": "lexicon",
+   "row": 6059,
+   "context": "পোস্ট অফিসের আউটলেট বা সার্ভিস কানাডা সেন্টার এ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ম্যাচ",
+   "en": "match",
+   "path": "lexicon",
+   "row": 4072,
+   "context": "হয়ে চেন্নাইয়ে বেশ কিছু ম্যাচ করতে বাধ্য হন সিএবি",
+   "verdict": "correct"
+  },
+  {
+   "native": "প্ল্যাটফর্ম",
+   "en": "platform",
+   "path": "lexicon",
+   "row": 2495,
+   "context": "প্রথম আন্তর্জাতিক এই স্ট্রিমিং প্ল্যাটফর্ম বলিউডের গতানুগতিক ধারার",
+   "verdict": "correct"
+  },
+  {
+   "native": "পাবলিক",
+   "en": "public",
+   "path": "lexicon",
+   "row": 1241,
+   "context": "অতিথির বক্তব্য রাখেন বাংলাদেশ পাবলিক সার্ভিস কমিশনের চেয়ারম্যান ড",
+   "verdict": "correct"
+  },
+  {
+   "native": "এয়ারটেল",
+   "en": "airtel",
+   "path": "lexicon",
+   "row": 4795,
+   "context": "ভারতের টেলিকমে দ্বিতীয় স্থানে এয়ারটেল",
+   "verdict": "correct"
+  },
+  {
+   "native": "মাস্ক",
+   "en": "mask",
+   "path": "lexicon",
+   "row": 6044,
+   "context": "শুধুমাত্র ব্যাটম্যান জন্য একটি মাস্ক হয়",
+   "verdict": "correct"
+  },
+  {
+   "native": "ব্যাঙ্ক",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 4320,
+   "context": "পড়াশোনার ব্যয়ভার নিল সমবায় ব্যাঙ্ক",
+   "verdict": "correct"
+  },
+  {
+   "native": "স্কুল",
+   "en": "school",
+   "path": "lexicon",
+   "row": 1760,
+   "context": "স্কুল এবং অনলাইন পাবলিক স্কুল তালিকা",
+   "verdict": "correct"
+  },
+  {
+   "native": "স্পেশাল",
+   "en": "special",
+   "path": "lexicon",
+   "row": 4243,
+   "context": "পার্ক স্ট্রিট থানার স্পেশাল ব্রাঞ্চের এক কর্মী করোনা",
+   "verdict": "correct"
+  },
+  {
+   "native": "ডিজিটাল",
+   "en": "digital",
+   "path": "lexicon",
+   "row": 5656,
+   "context": "ইন্সট্রুমেন্ট বাদ্যযন্ত্র ছবি ডি ডিজিটাল ভিশন গেটি চিত্রগুলি",
+   "verdict": "correct"
+  },
+  {
+   "native": "ইন্ডাস্ট্রি",
+   "en": "industry",
+   "path": "lexicon",
+   "row": 1436,
+   "context": "দেশের অর্থনীতিকে সচল করতে ইন্ডাস্ট্রি খোলার আর্জি জানিয়ে স্বরাষ্ট্র",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যান্ড",
+   "en": "and",
+   "path": "lexicon",
+   "row": 875,
+   "context": "ইনস্টিটিউট অব মেডিকেল সায়েন্সেস অ্যান্ড রিসার্চ",
+   "verdict": "correct"
+  },
+  {
+   "native": "পয়েন্ট",
+   "en": "point",
+   "path": "lexicon",
+   "row": 371,
+   "context": "পয়েন্ট ব্ল্যাঙ্ক রেঞ্জ থেকে গুলি",
+   "verdict": "correct"
+  },
+  {
+   "native": "হর্স",
+   "en": "horse",
+   "path": "lexicon",
+   "row": 5251,
+   "context": "লোকডাউনে মেয়েকে হর্স রাইডিং এর প্রশিক্ষণ দিতে",
+   "verdict": "correct"
+  },
+  {
+   "native": "সিনিয়র",
+   "en": "senior",
+   "path": "lexicon",
+   "row": 1809,
+   "context": "করে সাতকানিয়া ফায়ার সার্ভিসের সিনিয়র স্টেশন অফিসার মো",
+   "verdict": "correct"
+  },
+  {
+   "native": "কমিটি",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 2557,
+   "context": "জাতীয় সংসদীয় কমিটি এই বিষয়ে খসড়া বিল",
+   "verdict": "correct"
+  },
+  {
+   "native": "ম্যানেজার",
+   "en": "manager",
+   "path": "lexicon",
+   "row": 975,
+   "context": "কুরিয়ার সার্ভিসের জয়পুরহাটের সহকারী ম্যানেজার মো",
+   "verdict": "correct"
+  },
+  {
+   "native": "জেনারেল",
+   "en": "general",
+   "path": "lexicon",
+   "row": 5400,
+   "context": "ফরেন ট্রেড বিভাগের ডাইরেক্টর জেনারেল ড",
+   "verdict": "correct"
+  },
+  {
+   "native": "রিজার্ভ",
+   "en": "reserve",
+   "path": "lexicon",
+   "row": 5021,
+   "context": "চাঙ্গা করতে একগুচ্ছ পদক্ষেপ রিজার্ভ ব্যাঙ্কের",
+   "verdict": "correct"
+  },
+  {
+   "native": "ইন্টারভিউ",
+   "en": "interview",
+   "path": "lexicon",
+   "row": 2076,
+   "context": "লটারিতে ঠিক হবে ডব্লুবিসিএস ইন্টারভিউ বোর্ড",
+   "verdict": "correct"
+  },
+  {
+   "native": "মডেল",
+   "en": "model",
+   "path": "lexicon",
+   "row": 5447,
+   "context": "ইয়াজউদ্দিন আহম্মেদ রেসিডেন্সিয়াল মডেল স্কুল অ্যান্ড কলেজ অধ্যক্ষ",
+   "verdict": "correct"
+  },
+  {
+   "native": "আউট",
+   "en": "out",
+   "path": "lexicon",
+   "row": 290,
+   "context": "অ্যাসেজের প্রথম টেস্টে আউট হওয়ার পর ওয়ার্নারকে স্যান্ড",
+   "verdict": "correct"
+  },
+  {
+   "native": "ট্যাক্স",
+   "en": "tax",
+   "path": "lexicon",
+   "row": 5613,
+   "context": "ব্যক্তিদের দায়িত্ব অনুপাত একটি ট্যাক্স বিষয় হিসেবে",
+   "verdict": "correct"
+  },
+  {
+   "native": "এয়ার",
+   "en": "air",
+   "path": "lexicon",
+   "row": 4515,
+   "context": "আপনার ট্রাক এর এয়ার কন্ডিশনার সিস্টেম পরিচালনা এবং",
+   "verdict": "correct"
+  },
+  {
+   "native": "সোশ্যাল",
+   "en": "social",
+   "path": "lexicon",
+   "row": 525,
+   "context": "প্রচার ও বিরোধীদের মোকাবিলায় সোশ্যাল মিডিয়ায় গুরুত্ব আরোপ তৃণমূল",
+   "verdict": "correct"
+  },
+  {
+   "native": "আপডেট",
+   "en": "update",
+   "path": "lexicon",
+   "row": 904,
+   "context": "এছাড়াও সমস্ত আপডেট তাঁদের কাছে খুব দ্রুত",
+   "verdict": "correct"
+  },
+  {
+   "native": "গুগল",
+   "en": "google",
+   "path": "lexicon",
+   "row": 5046,
+   "context": "মাথায় রেখেই নিয়ে এসেছে গুগল",
+   "verdict": "correct"
+  },
+  {
+   "native": "ট্যাক্স",
+   "en": "tax",
+   "path": "lexicon",
+   "row": 2627,
+   "context": "প্রতিটি রাষ্ট্রের জন্য সেলস ট্যাক্স হার দেখতে এই পিডিএফ",
+   "verdict": "correct"
+  },
+  {
+   "native": "ল্যাপটপ",
+   "en": "laptop",
+   "path": "lexicon",
+   "row": 4089,
+   "context": "কথা মাথায় রেখে নতুন ল্যাপটপ নিয়ে এল ডেল",
+   "verdict": "correct"
+  },
+  {
+   "native": "ব্যাঙ্ক",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 3305,
+   "context": "এই উপায়ে ব্যাঙ্ক অ্যাকাউন্ট থেকে সব টাকা",
+   "verdict": "correct"
+  },
+  {
+   "native": "সেন্ট্রাল",
+   "en": "central",
+   "path": "lexicon",
+   "row": 5793,
+   "context": "ব্যুরো অব সাউথ অ্যান্ড সেন্ট্রাল এশিয়া বিষয়ক ডেপুটি অ্যাসিস্ট্যান্ট",
+   "verdict": "correct"
+  },
+  {
+   "native": "কংগ্রেস",
+   "en": "congress",
+   "path": "lexicon",
+   "row": 1328,
+   "context": "মন্তব্যের প্রতিবাদে দেশজুড়ে বিক্ষোভে কংগ্রেস",
+   "verdict": "correct"
+  },
+  {
+   "native": "আনলিমিটেড",
+   "en": "unlimited",
+   "path": "lexicon",
+   "row": 601,
+   "context": "প্ল্যানে কোম্পানির হোম নেটওয়ার্কে আনলিমিটেড কলও করা যাবে",
+   "verdict": "correct"
+  },
+  {
+   "native": "স্পেশাল",
+   "en": "special",
+   "path": "lexicon",
+   "row": 4582,
+   "context": "হত্যা মামলা চলবে রংপুর স্পেশাল জজ আদালতে",
+   "verdict": "correct"
+  },
+  {
+   "native": "এয়ারপোর্ট",
+   "en": "airport",
+   "path": "lexicon",
+   "row": 4378,
+   "context": "প্রচ্ছদ এয়ারলাইনস এয়ারপোর্ট ট্যুরিজম হোটেল এন্ড রিসোর্টস",
+   "verdict": "correct"
+  },
+  {
+   "native": "রাইস",
+   "en": "rice",
+   "path": "lexicon",
+   "row": 2191,
+   "context": "রাইস ট্রান্সপ্লান্টার কাম দানাদার ইউরিয়া",
+   "verdict": "correct"
+  },
+  {
+   "native": "কমিটি",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 1140,
+   "context": "খুলে যাওয়ার ঘটনায় তদন্ত কমিটি",
+   "verdict": "correct"
+  },
+  {
+   "native": "লাইন",
+   "en": "line",
+   "path": "lexicon",
+   "row": 1116,
+   "context": "লাইন গাইডসমূহের মাধ্যমে লাইন চালান এবং লৌহের উপর",
+   "verdict": "correct"
+  },
+  {
+   "native": "জেনারেল",
+   "en": "general",
+   "path": "lexicon",
+   "row": 491,
+   "context": "ব্রিগেডের ব্রিগেড কমান্ডার ব্রিগেডিয়ার জেনারেল মো",
+   "verdict": "correct"
+  },
+  {
+   "native": "ক্রিকেট",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 2829,
+   "context": "দুর্দান্ত প্রদর্শন করে বাংলা ক্রিকেট দল রনজি ট্রফির সেমিফাইনালে",
+   "verdict": "correct"
+  },
+  {
+   "native": "প্রজেক্ট",
+   "en": "project",
+   "path": "lexicon",
+   "row": 1969,
+   "context": "গ্রেট সায়েন্স অ্যান্ড ইঞ্জিনিয়ারিং প্রজেক্ট আপনি হোম এ কি",
+   "verdict": "correct"
+  },
+  {
+   "native": "সোশ্যাল",
+   "en": "social",
+   "path": "lexicon",
+   "row": 2266,
+   "context": "সোশ্যাল মিডিয়ায় হৃতিকের মা পিঙ্কি",
+   "verdict": "correct"
+  },
+  {
+   "native": "লাইন",
+   "en": "line",
+   "path": "lexicon",
+   "row": 6,
+   "context": "ডাবল লাইন না হওয়া পর্যন্ত সিডিউল",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যান্ড",
+   "en": "and",
+   "path": "lexicon",
+   "row": 4199,
+   "context": "মাসুম এবং সাতপাই স্কুল অ্যান্ড কলেজে প্রতিষ্ঠানের সহকারী প্রধান",
+   "verdict": "correct"
+  },
+  {
+   "native": "ফ্যাশন",
+   "en": "fashion",
+   "path": "lexicon",
+   "row": 4576,
+   "context": "ফ্যাশন শোয়ে হাজির হয়ে মায়ের",
+   "verdict": "correct"
+  },
+  {
+   "native": "ব্যাঙ্ক",
+   "en": "bank",
+   "path": "lexicon",
+   "row": 1215,
+   "context": "ব্যাঙ্ক থেকে পেনশন তুলতেই বৃদ্ধার",
+   "verdict": "correct"
+  },
+  {
+   "native": "বাইক",
+   "en": "bike",
+   "path": "lexicon",
+   "row": 638,
+   "context": "স্টিকার বা লোগো লাগানো বাইক পাওয়া গেলে সেখান থেকে",
+   "verdict": "correct"
+  },
+  {
+   "native": "কমিটি",
+   "en": "committee",
+   "path": "lexicon",
+   "row": 4818,
+   "context": "কমিটি নিয়মিতভাবে মামলার অগ্রগতি বিভাগকে",
+   "verdict": "correct"
+  },
+  {
+   "native": "পোর্ট",
+   "en": "port",
+   "path": "lexicon",
+   "row": 1341,
+   "context": "করার জন্য নয়েস আইসোলেশন পোর্ট আছে",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যান্ড",
+   "en": "and",
+   "path": "lexicon",
+   "row": 2723,
+   "context": "তখন বিশ্ববিদ্যালয়ের ট্যুরিজম অ্যান্ড হসপিটালিটি বিভাগের দ্বিতীয় বর্ষের",
+   "verdict": "correct"
+  },
+  {
+   "native": "ডিগ্রি",
+   "en": "degree",
+   "path": "lexicon",
+   "row": 5335,
+   "context": "মেডিকেল কলেজ থেকে এমবিবিএস ডিগ্রি অর্জন করেন ডা",
+   "verdict": "correct"
+  },
+  {
+   "native": "অ্যাপ",
+   "en": "app",
+   "path": "lexicon",
+   "row": 6305,
+   "context": "জন্য দারুন ফোটো এডিটিং অ্যাপ",
+   "verdict": "correct"
+  },
+  {
+   "native": "আইটেম",
+   "en": "item",
+   "path": "lexicon",
+   "row": 4641,
+   "context": "নিফটি আইটেম আপনার রাইড আরও মজা",
+   "verdict": "correct"
+  },
+  {
+   "native": "গ্রুপ",
+   "en": "group",
+   "path": "lexicon",
+   "row": 5641,
+   "context": "অ্যাডাপটেশন এন্ড রেজিলিয়েন্স বিষয়ক গ্রুপ অব ফ্রেন্ডস",
+   "verdict": "correct"
+  },
+  {
+   "native": "পার্টি",
+   "en": "party",
+   "path": "lexicon",
+   "row": 4016,
+   "context": "দুই তৃতীয়াংশই শ্রীলঙ্কা পিউপিলস পার্টি ঝুলিতে",
+   "verdict": "correct"
+  },
+  {
+   "native": "ইউনিয়ন",
+   "en": "union",
+   "path": "lexicon",
+   "row": 4809,
+   "context": "গতরাতে স্টেট অব দ্যা ইউনিয়ন ভাষণ দেন প্রেসিডেন্ট ট্রাম্প",
+   "verdict": "correct"
+  },
+  {
+   "native": "স্টার",
+   "en": "star",
+   "path": "lexicon",
+   "row": 1104,
+   "context": "এবারের আইপিএল নিলামে স্টার হতে পারেন যে নতুন",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 100.0
+}

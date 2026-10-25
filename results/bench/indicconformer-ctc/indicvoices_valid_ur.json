@@ -1,0 +1,42 @@
+{
+  "kind": "eval",
+  "system": "indicconformer-ctc",
+  "set": "indicvoices_valid_ur",
+  "condition": null,
+  "notes": "",
+  "utterances": 300,
+  "hours": 0.578,
+  "metrics": {
+    "ctc": {
+      "ur": {
+        "wer": 9.69,
+        "cer": 6.99,
+        "utterances": 300,
+        "words": 5459,
+        "script_error_rate": 0.07,
+        "wer_script_normalised": 6.94,
+        "cer_script_normalised": 2.68,
+        "rows_with_alternative_ref": 72,
+        "cm_utterances": 69,
+        "cm_spans": 321,
+        "cm_span_accuracy": 58.88,
+        "cm_span_cer_mean": 43.6,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "ur": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.578
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ai4bharat/indic-conformer-600m-multilingual",
+    "revision": "2a77d305038dfc502fd9464e7d028b90381976cb",
+    "decoder": "ctc",
+    "notes": "ONNX via the repo's model_onnx.py; English unsupported",
+    "languages_scored": [
+      "ur"
+    ]
+  }
+}

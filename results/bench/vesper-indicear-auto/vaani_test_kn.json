@@ -1,0 +1,141 @@
+{
+  "kn": {
+    "wer": 65.57,
+    "cer": 33.43,
+    "utterances": 300,
+    "words": 4778,
+    "script_error_rate": 2.13,
+    "wer_script_normalised": 65.42,
+    "cer_script_normalised": 33.34,
+    "rows_with_alternative_ref": 210,
+    "cm_utterances": 210,
+    "cm_spans": 1203,
+    "cm_span_accuracy": 70.32,
+    "cm_span_cer_mean": 37.54,
+    "cm_span_accuracy_by_lang": {
+      "en": 74.85,
+      "kn": 66.91
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.678
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.33,
+    "macro_f1": 99.67,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 99.33,
+        "f1": 99.67,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "kn": {
+        "kn": 298,
+        "mr": 1,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 3,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 51,
+        "accuracy": 96.08
+      },
+      "5-10s": {
+        "utterances": 161,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 85,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_kn",
+  "utterances": 300,
+  "hours": 0.68,
+  "seconds": 25,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 175,
+  "changed_examples": [
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_S_Karnataka_Belgaum_98232_11168401_Belgaum-SPECIFIC_00639_835_9785",
+      "constrained": "ಇದೊಂದು ಮನೆ ಹಾಗು ಆ us ಕಟ್ಟಯಲ್ಲಿದ್ದು",
+      "unconstrained": "ఇ ಇದೊಂದು ಮನೆ ಹಾಗು ആ ముus ಕಟ್ಟಯಲ್ಲಿದ್ದು",
+      "hinted": "ಇದೊಂದು ಮನೆ ಹಾಗು ಆ us ಕಟ್ಟಯಲ್ಲಿದ್ದು"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Madh42153_1653500000_Belgaum-SPECIFIC_01276_16640_21248",
+      "constrained": "maentral bank ಅಂತ ಬರಾರ ಮತ್ತು stepsಗಳದಾವ",
+      "unconstrained": "மேலentral bank ಅಂತ ಬರಾರ ಮತ್ತು stepsಗಳದಾವ",
+      "hinted": "maentral bank ಅಂತ ಬರಾರ ಮತ್ತು stepsಗಳದಾವ"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Rahu43987_1359090000_GENERIC_0053_8117_13578",
+      "constrained": "ಹಬ್ಬ ರಕ್ಷಂಧನ ಬಂತು ಅಂತಂದ್ರೆ ಇಲ್ಲಿ ಅಂಗಡಿ ಎಲ್ಲ ಭಾಳ ರ s ಆಗಿರಿರ್ತವು ರಾಕ ಅಂಗಡಿಗಳು",
+      "unconstrained": "रा ಹಬ್ಬ ರಕ್ಷಂಧನ ಬಂತು ಅಂತಂದ್ರೆ ಇಲ್ಲಿ ಅಂಗಡಿ ಎಲ್ಲ ಭಾಳ ರsಾಗಿಿರ್ತವು ರಾಕ ಅಂಗಡಿಗಳು",
+      "hinted": "ಹಬ್ಬ ರಕ್ಷಂಧನ ಬಂತು ಅಂತಂದ್ರೆ ಇಲ್ಲಿ ಅಂಗಡಿ ಎಲ್ಲ ಭಾಳ ರ s ಆಗಿರಿರ್ತವು ರಾಕ ಅಂಗಡಿಗಳು"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Rahu43987_1400440000_Belgaum-SPECIFIC_00952_13397_15050",
+      "constrained": "current ಇಂದ charge ಮಾಡ್್ಕೊಂಡು",
+      "unconstrained": "currentಿಂದ charge ಮಾಡ್್ಕೊಂಡು",
+      "hinted": "current ಇಂದ charge ಮಾಡ್್ಕೊಂಡು"
+    },
+    {
+      "key": "vaani/kn/test/IISc_VaaniProject_M_Karnataka_Belgaum_Shab45506_1018200000_Belgaum-SPECIFIC_01256_9195_13955",
+      "constrained": "ಈ home ಇಷ್ಟ homem hospital children special hospital",
+      "unconstrained": "ಈ home ಇಷ್ಟ homem hospitalల్లో children special hospital",
+      "hinted": "ಈ home ಇಷ್ಟ homem hospital children special hospital"
+    }
+  ]
+}

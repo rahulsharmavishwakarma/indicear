@@ -1,0 +1,29 @@
+{
+  "utterance": true,
+  "frame": true,
+  "utterance_weight": 0.1,
+  "frame_weight": 0.1,
+  "layers": [
+    6,
+    12
+  ],
+  "hidden": 256,
+  "label_smoothing": 0.1,
+  "class_weights": [
+    1.212541,
+    1.212541,
+    1.212541,
+    0.832777,
+    0.964646,
+    1.212541,
+    1.212541,
+    1.212541,
+    1.212541,
+    0.990036,
+    1.212541,
+    1.212541
+  ],
+  "detach": true,
+  "only": false,
+  "min_span_frames": 1
+}

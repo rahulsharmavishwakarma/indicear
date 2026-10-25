@@ -1,0 +1,921 @@
+{
+ "name": "full",
+ "description": "PLAN.md phase 3 mixture: about 12K hours per epoch across the 12 languages. Hours per language follow PLAN.md (Urdu real data only; Common Voice is blocked and its 600 h of English are not replaced). Shrutilipi is included without the planned teacher-CER filter. SPRING-INX and MUCS load only with --allow-review.",
+ "seed": 0,
+ "min_seconds": 0.5,
+ "max_seconds": 20.0,
+ "dev": {
+  "fraction": 0.01,
+  "min_hours_per_lang": 0.5,
+  "max_hours_per_lang": 2.0
+ },
+ "sampling": {
+  "alpha": 0.5,
+  "max_share": {
+   "hi": 0.2
+  },
+  "min_share": {
+   "cs": 0.06
+  }
+ },
+ "code_switched_target_hours": 330,
+ "train": [
+  {
+   "source": "indicvoices",
+   "lang": "hi",
+   "split": "train",
+   "hours": 600
+  },
+  {
+   "source": "vaani",
+   "lang": "hi",
+   "split": "train",
+   "hours": 350
+  },
+  {
+   "source": "kathbath",
+   "lang": "hi",
+   "split": "train",
+   "hours": 130
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "hi",
+   "split": "train",
+   "hours": 120
+  },
+  {
+   "source": "indicvoices",
+   "lang": "mr",
+   "split": "train",
+   "hours": 400
+  },
+  {
+   "source": "vaani",
+   "lang": "mr",
+   "split": "train",
+   "hours": 50
+  },
+  {
+   "source": "kathbath",
+   "lang": "mr",
+   "split": "train",
+   "hours": 140
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "mr",
+   "split": "train",
+   "hours": 110
+  },
+  {
+   "source": "indicvoices",
+   "lang": "bn",
+   "split": "train",
+   "hours": 550
+  },
+  {
+   "source": "vaani",
+   "lang": "bn",
+   "split": "train",
+   "hours": 140
+  },
+  {
+   "source": "kathbath",
+   "lang": "bn",
+   "split": "train",
+   "hours": 90
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "bn",
+   "split": "train",
+   "hours": 15
+  },
+  {
+   "source": "indicvoices",
+   "lang": "pa",
+   "split": "train",
+   "hours": 480
+  },
+  {
+   "source": "vaani",
+   "lang": "pa",
+   "split": "train",
+   "hours": 15
+  },
+  {
+   "source": "kathbath",
+   "lang": "pa",
+   "split": "train",
+   "hours": 100
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "pa",
+   "split": "train",
+   "hours": 5
+  },
+  {
+   "source": "indicvoices",
+   "lang": "gu",
+   "split": "train",
+   "hours": 400
+  },
+  {
+   "source": "vaani",
+   "lang": "gu",
+   "split": "train",
+   "hours": 15
+  },
+  {
+   "source": "kathbath",
+   "lang": "gu",
+   "split": "train",
+   "hours": 120
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "gu",
+   "split": "train",
+   "hours": 65
+  },
+  {
+   "source": "indicvoices",
+   "lang": "or",
+   "split": "train",
+   "hours": 500
+  },
+  {
+   "source": "vaani",
+   "lang": "or",
+   "split": "train",
+   "hours": 40
+  },
+  {
+   "source": "kathbath",
+   "lang": "or",
+   "split": "train",
+   "hours": 60
+  },
+  {
+   "source": "indicvoices",
+   "lang": "ur",
+   "split": "train",
+   "hours": 420
+  },
+  {
+   "source": "kathbath",
+   "lang": "ur",
+   "split": "train",
+   "hours": 80
+  },
+  {
+   "source": "indicvoices",
+   "lang": "kn",
+   "split": "train",
+   "hours": 500
+  },
+  {
+   "source": "vaani",
+   "lang": "kn",
+   "split": "train",
+   "hours": 140
+  },
+  {
+   "source": "kathbath",
+   "lang": "kn",
+   "split": "train",
+   "hours": 140
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "kn",
+   "split": "train",
+   "hours": 120
+  },
+  {
+   "source": "indicvoices",
+   "lang": "ta",
+   "split": "train",
+   "hours": 550
+  },
+  {
+   "source": "vaani",
+   "lang": "ta",
+   "split": "train",
+   "hours": 20
+  },
+  {
+   "source": "kathbath",
+   "lang": "ta",
+   "split": "train",
+   "hours": 170
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "ta",
+   "split": "train",
+   "hours": 160
+  },
+  {
+   "source": "indicvoices",
+   "lang": "te",
+   "split": "train",
+   "hours": 400
+  },
+  {
+   "source": "vaani",
+   "lang": "te",
+   "split": "train",
+   "hours": 160
+  },
+  {
+   "source": "kathbath",
+   "lang": "te",
+   "split": "train",
+   "hours": 140
+  },
+  {
+   "source": "indicvoices",
+   "lang": "ml",
+   "split": "train",
+   "hours": 450
+  },
+  {
+   "source": "vaani",
+   "lang": "ml",
+   "split": "train",
+   "hours": 35
+  },
+  {
+   "source": "kathbath",
+   "lang": "ml",
+   "split": "train",
+   "hours": 140
+  },
+  {
+   "source": "shrutilipi",
+   "lang": "ml",
+   "split": "train",
+   "hours": 75
+  },
+  {
+   "source": "librispeech",
+   "lang": "en",
+   "split": "train.other.500",
+   "hours": 250
+  },
+  {
+   "source": "librispeech",
+   "lang": "en",
+   "split": "train.clean.360",
+   "hours": 250
+  },
+  {
+   "source": "peoples_speech",
+   "lang": "en",
+   "split": "train",
+   "hours": 1000
+  },
+  {
+   "source": "voxpopuli",
+   "lang": "en",
+   "split": "train",
+   "hours": 300
+  },
+  {
+   "source": "vaani",
+   "lang": "en",
+   "split": "train",
+   "hours": 20
+  },
+  {
+   "source": "mucs",
+   "lang": "hi",
+   "split": "train",
+   "hours": 85
+  },
+  {
+   "source": "mucs",
+   "lang": "bn",
+   "split": "train",
+   "hours": 44
+  },
+  {
+   "source": "spring_inx",
+   "lang": "ta",
+   "split": "train",
+   "hours": 100
+  },
+  {
+   "source": "spring_inx",
+   "lang": "kn",
+   "split": "train",
+   "hours": 60
+  },
+  {
+   "source": "spring_inx",
+   "lang": "ml",
+   "split": "train",
+   "hours": 60
+  },
+  {
+   "source": "spring_inx",
+   "lang": "mr",
+   "split": "train",
+   "hours": 60
+  },
+  {
+   "source": "spring_inx",
+   "lang": "bn",
+   "split": "train",
+   "hours": 60
+  },
+  {
+   "source": "spring_inx",
+   "lang": "gu",
+   "split": "train",
+   "hours": 40
+  },
+  {
+   "source": "spring_inx",
+   "lang": "pa",
+   "split": "train",
+   "hours": 40
+  },
+  {
+   "source": "spring_inx",
+   "lang": "or",
+   "split": "train",
+   "hours": 40
+  },
+  {
+   "source": "vaani",
+   "lang": "hi",
+   "split": "train",
+   "hours": 60,
+   "code_mixed_only": true
+  },
+  {
+   "source": "vaani",
+   "lang": "kn",
+   "split": "train",
+   "hours": 25,
+   "code_mixed_only": true
+  },
+  {
+   "source": "vaani",
+   "lang": "te",
+   "split": "train",
+   "hours": 25,
+   "code_mixed_only": true
+  },
+  {
+   "source": "vaani",
+   "lang": "bn",
+   "split": "train",
+   "hours": 15,
+   "code_mixed_only": true
+  },
+  {
+   "source": "vaani",
+   "lang": "mr",
+   "split": "train",
+   "hours": 10,
+   "code_mixed_only": true
+  }
+ ],
+ "eval": [
+  {
+   "name": "kathbath_clean_test_known_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_hi",
+   "source": "kathbath_test",
+   "lang": "hi",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_mr",
+   "source": "kathbath_test",
+   "lang": "mr",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_mr",
+   "source": "kathbath_test",
+   "lang": "mr",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_mr",
+   "source": "kathbath_test",
+   "lang": "mr",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_mr",
+   "source": "kathbath_test",
+   "lang": "mr",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_bn",
+   "source": "kathbath_test",
+   "lang": "bn",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_bn",
+   "source": "kathbath_test",
+   "lang": "bn",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_bn",
+   "source": "kathbath_test",
+   "lang": "bn",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_bn",
+   "source": "kathbath_test",
+   "lang": "bn",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_pa",
+   "source": "kathbath_test",
+   "lang": "pa",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_pa",
+   "source": "kathbath_test",
+   "lang": "pa",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_pa",
+   "source": "kathbath_test",
+   "lang": "pa",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_pa",
+   "source": "kathbath_test",
+   "lang": "pa",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_gu",
+   "source": "kathbath_test",
+   "lang": "gu",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_gu",
+   "source": "kathbath_test",
+   "lang": "gu",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_gu",
+   "source": "kathbath_test",
+   "lang": "gu",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_gu",
+   "source": "kathbath_test",
+   "lang": "gu",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_or",
+   "source": "kathbath_test",
+   "lang": "or",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_or",
+   "source": "kathbath_test",
+   "lang": "or",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_or",
+   "source": "kathbath_test",
+   "lang": "or",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_or",
+   "source": "kathbath_test",
+   "lang": "or",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_ur",
+   "source": "kathbath_test",
+   "lang": "ur",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_ur",
+   "source": "kathbath_test",
+   "lang": "ur",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_ur",
+   "source": "kathbath_test",
+   "lang": "ur",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_ur",
+   "source": "kathbath_test",
+   "lang": "ur",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_kn",
+   "source": "kathbath_test",
+   "lang": "kn",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_ta",
+   "source": "kathbath_test",
+   "lang": "ta",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_te",
+   "source": "kathbath_test",
+   "lang": "te",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_te",
+   "source": "kathbath_test",
+   "lang": "te",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_te",
+   "source": "kathbath_test",
+   "lang": "te",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_te",
+   "source": "kathbath_test",
+   "lang": "te",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "kathbath_clean_test_known_ml",
+   "source": "kathbath_test",
+   "lang": "ml",
+   "split": "clean_test_known"
+  },
+  {
+   "name": "kathbath_clean_test_unknown_ml",
+   "source": "kathbath_test",
+   "lang": "ml",
+   "split": "clean_test_unknown"
+  },
+  {
+   "name": "kathbath_noisy_test_known_ml",
+   "source": "kathbath_test",
+   "lang": "ml",
+   "split": "noisy_test_known"
+  },
+  {
+   "name": "kathbath_noisy_test_unknown_ml",
+   "source": "kathbath_test",
+   "lang": "ml",
+   "split": "noisy_test_unknown"
+  },
+  {
+   "name": "vaani_test_hi",
+   "source": "vaani",
+   "lang": "hi",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_mr",
+   "source": "vaani",
+   "lang": "mr",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_bn",
+   "source": "vaani",
+   "lang": "bn",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_pa",
+   "source": "vaani",
+   "lang": "pa",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_gu",
+   "source": "vaani",
+   "lang": "gu",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_or",
+   "source": "vaani",
+   "lang": "or",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_kn",
+   "source": "vaani",
+   "lang": "kn",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_ta",
+   "source": "vaani",
+   "lang": "ta",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_te",
+   "source": "vaani",
+   "lang": "te",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_ml",
+   "source": "vaani",
+   "lang": "ml",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "vaani_test_en",
+   "source": "vaani",
+   "lang": "en",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "svarah",
+   "source": "svarah",
+   "lang": "en",
+   "split": "test"
+  },
+  {
+   "name": "lahaja",
+   "source": "lahaja",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "vaani_benchmark",
+   "source": "vaani_benchmark",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "mucs_test_hi",
+   "source": "mucs",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "mucs_test_bn",
+   "source": "mucs",
+   "lang": "bn",
+   "split": "test"
+  },
+  {
+   "name": "mucs_blind",
+   "source": "mucs",
+   "lang": "hi",
+   "split": "blind"
+  },
+  {
+   "name": "librispeech_test_clean",
+   "source": "librispeech",
+   "lang": "en",
+   "split": "test.clean"
+  },
+  {
+   "name": "librispeech_test_other",
+   "source": "librispeech",
+   "lang": "en",
+   "split": "test.other"
+  },
+  {
+   "name": "voxpopuli_test",
+   "source": "voxpopuli",
+   "lang": "en",
+   "split": "test"
+  },
+  {
+   "name": "voxpopuli_accented",
+   "source": "voxpopuli",
+   "lang": "en",
+   "split": "accented_test",
+   "hours": 5
+  },
+  {
+   "name": "spring_inx_test_ta",
+   "source": "spring_inx",
+   "lang": "ta",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "spring_inx_test_kn",
+   "source": "spring_inx",
+   "lang": "kn",
+   "split": "test",
+   "hours": 3
+  },
+  {
+   "name": "indicvoices_valid_hi",
+   "source": "indicvoices",
+   "lang": "hi",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_mr",
+   "source": "indicvoices",
+   "lang": "mr",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_bn",
+   "source": "indicvoices",
+   "lang": "bn",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_pa",
+   "source": "indicvoices",
+   "lang": "pa",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_gu",
+   "source": "indicvoices",
+   "lang": "gu",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_or",
+   "source": "indicvoices",
+   "lang": "or",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_ur",
+   "source": "indicvoices",
+   "lang": "ur",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_kn",
+   "source": "indicvoices",
+   "lang": "kn",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_ta",
+   "source": "indicvoices",
+   "lang": "ta",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_te",
+   "source": "indicvoices",
+   "lang": "te",
+   "split": "valid"
+  },
+  {
+   "name": "indicvoices_valid_ml",
+   "source": "indicvoices",
+   "lang": "ml",
+   "split": "valid"
+  },
+  {
+   "name": "indiccontext_bn",
+   "source": "indiccontext_eval",
+   "lang": "bn",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_gu",
+   "source": "indiccontext_eval",
+   "lang": "gu",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_hi",
+   "source": "indiccontext_eval",
+   "lang": "hi",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_ml",
+   "source": "indiccontext_eval",
+   "lang": "ml",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_mr",
+   "source": "indiccontext_eval",
+   "lang": "mr",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_or",
+   "source": "indiccontext_eval",
+   "lang": "or",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_te",
+   "source": "indiccontext_eval",
+   "lang": "te",
+   "split": "test"
+  },
+  {
+   "name": "indiccontext_ur",
+   "source": "indiccontext_eval",
+   "lang": "ur",
+   "split": "test"
+  }
+ ]
+}

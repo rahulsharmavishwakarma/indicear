@@ -1,0 +1,203 @@
+{
+  "ta": {
+    "wer": 52.82,
+    "cer": 21.21,
+    "utterances": 600,
+    "words": 7997,
+    "script_error_rate": 0.97,
+    "wer_script_normalised": 52.68,
+    "rows_with_alternative_ref": 312,
+    "cm_utterances": 293,
+    "cm_spans": 1383,
+    "cm_span_accuracy": 78.38,
+    "cm_span_cer_mean": 31.39,
+    "cm_span_accuracy_by_lang": {
+      "en": 71.85,
+      "ta": 83.55
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 1.032
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 98.17,
+    "macro_f1": 99.07,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 98.17,
+        "f1": 99.07,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "ta": {
+        "hi": 5,
+        "kn": 6,
+        "ta": 589
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 142,
+        "accuracy": 92.25
+      },
+      "2-5s": {
+        "utterances": 129,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 208,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 121,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_ta",
+  "utterances": 600,
+  "hours": 1.03,
+  "seconds": 33,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 177,
+  "changed_examples": [
+    {
+      "key": "indicvoices/ta/valid/3096224744085317_chunk_1",
+      "constrained": "சின்ன கொழயா இருக்க முதலனு சின்ன வயசுல்மே வந்து நான் வந்து gardening வந்து தோட்டன்றக்கு வந்து orangeஞ்சுட்ட ஏனா எனக்கு செடில வந்து அப்பலேயுமே ரொம்ப பிடிக்கும் அதே மாதிரி வந்து",
+      "unconstrained": "हमें சின்ன கொழயா இருக்க முதலனு சின்ன வயசுல்மே வந்து நான் வந்து gardening வந்து தோட்டன்றக்கு வந்து orangeஞ்சுட்ட ஏனா எனக்கு செடில வந்து அப்பலேயுமே ரொம்ப பிடிக்கும் அதே மாதிரி வந்து"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744152416_chunk_2",
+      "constrained": "குறிப்பிட்ட டைுக்கு அளன சாப்பாடு தான் சாப்பிடணும் தண்ணி அதிகமாக குடிக்கணும் அப்படிங்கிற மாதிரி நிறைய உடல் ஆரோக்கத்துக்கு சம்மந்தமான நிறைய நல்லா கருத்துளை வந்துட்டு எங்களுக்கு சொல்லிக் கொடுத்தாங்க",
+      "unconstrained": "குರುಪட்ட டைுக்கு அளன சாப்பாடு தான் சாப்பிடணும் தண்ணி அதிகமாக குடிக்கணும் அப்படிங்கிற மாதிரி நிறைய உடல் ஆரோக்கத்துக்கு சம்மந்தமான நிறைய நல்லா கருத்துளை வந்துட்டு எங்களுக்கு சொல்லிக் கொடுத்தாங்க"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_10",
+      "constrained": "பல்லாரி நூறு kilo",
+      "unconstrained": "ಬல்லாரி ನநூறு kilo"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_13",
+      "constrained": "ஆ ans இருத்தஞ்சி kilo",
+      "unconstrained": "ஆans இருத்தஞ்சி kilo"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_15",
+      "constrained": "அப்புறம் காலைில் வருவேன் வேணும்",
+      "unconstrained": "அப்புறம்ಾಲಿில் வருவேன் வேணும்"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_18",
+      "constrained": "அம இருத்தஞ்சி kilo",
+      "unconstrained": "அ ಮಳಾಯಿ இருத்தஞ்சி kilo"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_26",
+      "constrained": "அது வந்து december கடைசி தா december இருபஞ்சிங்க",
+      "unconstrained": "அது வந்து december கடைசிಿದ್ದಾನೆನೆ december இருபஞ்சிங்க"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_28",
+      "constrained": "மத்தியான ஒரு பன்னெண்டு மணி அனுப்ப இருங்க வய எ அனுப்பருவீங்களா",
+      "unconstrained": "மத்திನ ஒரு பன்னெண்டு மணி அனுப்ப இருங்க வய எ அனுப்பருவீங்களா"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_32",
+      "constrained": "ஆ சூரிய மகால்",
+      "unconstrained": "ಹಾಂ சூரிய மகால்"
+    },
+    {
+      "key": "indicvoices/ta/valid/259b7169-1e54-4037-9a94-3133095dec19_0_chunk_36",
+      "constrained": "ஆன்றிங்க நறி",
+      "unconstrained": "ಹಾಂ ಹಾಂன்றிங்க நறி"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744042163_chunk_1",
+      "constrained": "என்ன நேர aட்டல் payments bank கணக்கில் தொண்ணூாயிரம் இருக்கும்மா",
+      "unconstrained": "என்ன நேர aட்டல் payments bank ಕಣக்கில் தொண்ணூாயிரம் இருக்கும்மா"
+    },
+    {
+      "key": "indicvoices/ta/valid/b4352193-bd49-4632-b2a8-e64ee683482c_0_chunk_6",
+      "constrained": "ஆ அப்புறம் அது என்னென்ன வேணுமோ உங்களுக்கு பொருள எதாமேணனா கேட்டு அந்த எ வேணுன்னு சொல்லுங்கள் நான் இன்னைக்கு வாங்கி கொடுக்குற அதெல்லாம் உங்களுக்கு",
+      "unconstrained": "ಹಾಂ அப்புறம் அது என்னென்ன வேணுமோ உங்களுக்கு பொருள எதாமேணனா கேட்டு அந்த எ வேணுன்னு சொல்லுங்கள் நான் இன்னைக்கு வாங்கி கொடுக்குற அதெல்லாம் உங்களுக்கு"
+    },
+    {
+      "key": "indicvoices/ta/valid/b4352193-bd49-4632-b2a8-e64ee683482c_0_chunk_11",
+      "constrained": "மா அதெல்லாம் இங்கே நாங்கள் இங்கே பார்த்துுவாங்க நீங்கள் என்ன பண்ணுறீங்கன்னு சொன்னால் இந்த உள்ள இருக்கிறதெல்லாம் இங்கே நான்கிட்ட ஒம்பதுெல்லாம் தொடுச்சிருங்க",
+      "unconstrained": "ಹಾಂ அதெல்லாம் இங்கே நாங்கள் இங்கே பார்த்துுவாங்க நீங்கள் என்ன பண்ணுறீங்கன்னு சொன்னால் இந்த உள்ள இருக்கிறதெல்லாம் இங்கே நான்கிட்ட ஒம்பதுெல்லாம் தொடுச்சிருங்க"
+    },
+    {
+      "key": "indicvoices/ta/valid/b4352193-bd49-4632-b2a8-e64ee683482c_0_chunk_12",
+      "constrained": "ம மேல நீங்கள் ஏன்னானால் நீங்கள் எட்டு மணிக்கு வந்து அதெல்லாம் clean பண்ண சுத்தம் பண்ண முடியாது அதனால மத்தியயம்வும் ஒன்றரை மணிக்கு சாப்பாட்டுக்கு போவாங்க ம உள்ள வரது மூணு மணிக்கு தான் உள்ள வருவாங்க அந்த நேரத்தில் போய் பின்னாடி அந்த சாப்பாட்டற எல்லாம் இருக்குது உக்காந்து சாப்பிடுவாங்கல்ல",
+      "unconstrained": "ನಮ್ಮ मध्यಾ್ಕ ಮೇಲೆ நீங்கள் ஏன்னானால் நீங்கள் எட்டு மணிக்கு வந்து அதெல்லாம் clean பண்ண சுத்தம் பண்ண முடியாது அதனால மத்தியயம்வும் ஒன்றரை மணிக்கு சாப்பாட்டுக்கு போவாங்க ம உள்ள வரது மூணு மணிக்கு தான் உள்ள வருவாங்க அந்த நேரத்தில் போய் பின்னாடி அந்த சாப்பாட்டற எல்லாம் இருக்குது உக்காந்து சாப்பிடுவாங்கல்ல"
+    },
+    {
+      "key": "indicvoices/ta/valid/b4352193-bd49-4632-b2a8-e64ee683482c_0_chunk_13",
+      "constrained": "அதே எல்லா சுத்தம் பண்ணி வச்சிருங்க ஏன்னா அவங்க ராத்திரிக்கு வந்து இங்கேதான் தங்குவாங்க",
+      "unconstrained": "अ எல்லா சுத்தம் பண்ணி வச்சிருங்க ஏன்னா அவங்க ராத்திரிக்கு வந்து இங்கேதான் தங்குவாங்க"
+    },
+    {
+      "key": "indicvoices/ta/valid/b4352193-bd49-4632-b2a8-e64ee683482c_0_chunk_16",
+      "constrained": "அது நா நீங்கள் foodரு அது என்ன ஆத அவங்க அவங்கள வச்சு எல்லாம் சுத்தம் பண்ணி கொடுத்துங்கம்மா சரிங்கங்களா",
+      "unconstrained": "அது ನಾವು நீங்கள் foodரு அது என்ன ஆத அவங்க அவங்கள வச்சு எல்லாம் சுத்தம் பண்ணி கொடுத்துங்கம்மா சரிங்கங்களா"
+    },
+    {
+      "key": "indicvoices/ta/valid/b4352193-bd49-4632-b2a8-e64ee683482c_0_chunk_21",
+      "constrained": "ஆ நன்றி",
+      "unconstrained": "ಹಾಂ நன்றி"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744124278_chunk_1",
+      "constrained": "hello av s hotelட்டல sir",
+      "unconstrained": "hello येv sோட்டல sir"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744124278_chunk_2",
+      "constrained": "sir நாக்கரிலேருந்து பேசுகிறேன் பேஜ உங்கள் ஹ hotel வெ bசை side பார்த்தேன் bucketet பிரிய yணிக்கு offer போட்டுருந்தீங்க offer நி எத்தனை வந்து sir இருக்குது இன்னும் மூணு நாள் இருக்கா sir ok sir எனக்கு ஒரு எட்டு பா ceல் வேணும்ம் sir bucketக்கர் வி ரேட்டுவ sir",
+      "unconstrained": "sir நாக்கரிலேருந்து பேசுகிறேன் பேஜ உங்கள் ஹ hotel வெbசை side பார்த்தேன் bucketet பிரியyாணிக்கு offer போட்டுருந்தீங்க offer நி எத்தனை வந்து sir இருக்குது இன்னும் மூணு நாள் இருக்கா sir ok sir எனக்கு ஒரு எட்டு பாceல் வேணும்ம் sir bucketக்கர் வி ரேட்டுவ sir"
+    },
+    {
+      "key": "indicvoices/ta/valid/3096224744124278_chunk_3",
+      "constrained": "ஒருர் ஆயுத்தை ஐநூறுரவா sir ஓ sir போது sir rate மட்டும் கொஞ்சம் கம்ப பண்ணி சொல்லங்க sir",
+      "unconstrained": "ஒருர் ஆயுத்தை ஐநூறுரவா sir ಹೋಗಿ sir ಮೊತ್ತಿನ ಎಂಟು ಹೋದ sir rate மட்டும் கொஞ்சம் கம்ப பண்ணி சொல்லங்க sir"
+    }
+  ]
+}

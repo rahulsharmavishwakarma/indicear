@@ -1,0 +1,812 @@
+{
+ "lang": "hi",
+ "words": 268266,
+ "rewrites": 7125,
+ "per_1000_words": 26.56,
+ "types": 949,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "पैलेस",
+   "en": "palace",
+   "path": "lexicon",
+   "row": 4745,
+   "context": "इसके अलावा पैलेस कालोनी वार्ड तीन में",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 11378,
+   "context": "उनकी वो तस्वीरें सोशल साइट पर किसने डाली",
+   "verdict": "correct"
+  },
+  {
+   "native": "ऑफिस",
+   "en": "office",
+   "path": "lexicon",
+   "row": 285,
+   "context": "इस शुक्रवार बॉक्स ऑफिस पर तीन फिल्में रिलीज",
+   "verdict": "correct"
+  },
+  {
+   "native": "यूनियन",
+   "en": "union",
+   "path": "lexicon",
+   "row": 11929,
+   "context": "हरियाणा रोडवेज वर्कर्स यूनियन की एक बैठक आज",
+   "verdict": "correct"
+  },
+  {
+   "native": "बजट",
+   "en": "budget",
+   "path": "lexicon",
+   "row": 6997,
+   "context": "उत्तर प्रदेश सरकार ने बजट में इसके लिए प्रावधान",
+   "verdict": "correct"
+  },
+  {
+   "native": "पिकअप",
+   "en": "pickup",
+   "path": "lexicon",
+   "row": 11900,
+   "context": "एक पिकअप गाड़ी में मृत पशुओं",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्रिकेट",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 1935,
+   "context": "महेन्द्र सिंह धोनी ने क्रिकेट में अपना कॅरियर बनाया",
+   "verdict": "correct"
+  },
+  {
+   "native": "इंटरनेट",
+   "en": "internet",
+   "path": "lexicon",
+   "row": 21945,
+   "context": "में सहयोग किया़ जिसने इंटरनेट का उद्भव हुआ",
+   "verdict": "correct"
+  },
+  {
+   "native": "पेट्रोल",
+   "en": "petrol",
+   "path": "lexicon",
+   "row": 5425,
+   "context": "यह सख्ती फिलहाल पुलिस पेट्रोल पंप द्वारा की जा",
+   "verdict": "correct"
+  },
+  {
+   "native": "मॉडल",
+   "en": "model",
+   "path": "lexicon",
+   "row": 891,
+   "context": "सबसे उन्नत और महंगी मॉडल एक साथ है",
+   "verdict": "correct"
+  },
+  {
+   "native": "रिसर्च",
+   "en": "research",
+   "path": "lexicon",
+   "row": 19083,
+   "context": "रोड पर स्थित सीएफटी रिसर्च इंस्टीट्यूट के सामने है",
+   "verdict": "correct"
+  },
+  {
+   "native": "फिल्म",
+   "en": "film",
+   "path": "lexicon",
+   "row": 13413,
+   "context": "रोहित शेट्टी के साथ फिल्म सर्कस को लेकर बिजी",
+   "verdict": "correct"
+  },
+  {
+   "native": "वीडियो",
+   "en": "video",
+   "path": "lexicon",
+   "row": 6707,
+   "context": "इस तरह की फोटो वीडियो को फैन्स काफी लाइक",
+   "verdict": "correct"
+  },
+  {
+   "native": "फिल्म",
+   "en": "film",
+   "path": "lexicon",
+   "row": 548,
+   "context": "इसका असर अब हिंदी फिल्म इंडस्ट्री पर भी पड़ता",
+   "verdict": "correct"
+  },
+  {
+   "native": "डिजाइन",
+   "en": "design",
+   "path": "lexicon",
+   "row": 21060,
+   "context": "पाल सिंह पुरेवाल ने डिजाइन किया था",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्टोर",
+   "en": "store",
+   "path": "lexicon",
+   "row": 7066,
+   "context": "गिलास के जार में स्टोर करें",
+   "verdict": "correct"
+  },
+  {
+   "native": "पार्टी",
+   "en": "party",
+   "path": "lexicon",
+   "row": 12069,
+   "context": "इवेंट और पार्टी के दौरान करिश्मा कपूर",
+   "verdict": "correct"
+  },
+  {
+   "native": "फिल्म",
+   "en": "film",
+   "path": "lexicon",
+   "row": 957,
+   "context": "सोनू कन्नड़ फिल्म कुरुक्षेत्र में अर्जुन के",
+   "verdict": "correct"
+  },
+  {
+   "native": "टैंकर",
+   "en": "tanker",
+   "path": "lexicon",
+   "row": 15622,
+   "context": "जाता है कि विस्फोट टैंकर से तेल निकालते समय",
+   "verdict": "correct"
+  },
+  {
+   "native": "कोरोना",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 12178,
+   "context": "कोरोना की लड़ाई में शहीद",
+   "verdict": "correct"
+  },
+  {
+   "native": "प्रमोशन",
+   "en": "promotion",
+   "path": "lexicon",
+   "row": 10302,
+   "context": "हाल ही में प्रमोशन के दौरान एक वीडियो",
+   "verdict": "correct"
+  },
+  {
+   "native": "मीडिया",
+   "en": "media",
+   "path": "lexicon",
+   "row": 9330,
+   "context": "खबर मीडिया में आने के बाद",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्रिकेट",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 15507,
+   "context": "एकदिवसीय क्रिकेट में तो कोहली का",
+   "verdict": "correct"
+  },
+  {
+   "native": "जीन्स",
+   "en": "jeans",
+   "path": "lexicon",
+   "row": 475,
+   "context": "में नीता अंबानी ने जीन्स और टॉप पहना था",
+   "verdict": "correct"
+  },
+  {
+   "native": "एसोसिएशन",
+   "en": "association",
+   "path": "lexicon",
+   "row": 11419,
+   "context": "हैं कि वह किस एसोसिएशन से लीग खेले",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्टार",
+   "en": "star",
+   "path": "lexicon",
+   "row": 10099,
+   "context": "होने के कारण पंजाबी स्टार लाइव के पक्ष में",
+   "verdict": "correct"
+  },
+  {
+   "native": "लोटस",
+   "en": "lotus",
+   "path": "lexicon",
+   "row": 10501,
+   "context": "चेहरे की परछाई को लोटस कुण्ड में दिखाया",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 10685,
+   "context": "कोतवाली पुलिस ने आरोपी के खिलाफ",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्विच",
+   "en": "switch",
+   "path": "lexicon",
+   "row": 12015,
+   "context": "बाद पीड़िता का फोन स्विच ऑफ हो गया",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्वेश्चन",
+   "en": "question",
+   "path": "lexicon",
+   "row": 14884,
+   "context": "ये दोनों क्वेश्चन पेपर क्वालिफाइंग होते हैं",
+   "verdict": "correct"
+  },
+  {
+   "native": "प्रेशर",
+   "en": "pressure",
+   "path": "lexicon",
+   "row": 13487,
+   "context": "बैंक का प्रेशर इतना था कि पीड़ित",
+   "verdict": "correct"
+  },
+  {
+   "native": "सीजन",
+   "en": "season",
+   "path": "lexicon",
+   "row": 13907,
+   "context": "इससे पहले इस सीजन में आर माधवन और",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्टेट",
+   "en": "state",
+   "path": "lexicon",
+   "row": 170,
+   "context": "मैंने भी दिल्ली स्टेट से खेला हुआ है",
+   "verdict": "correct"
+  },
+  {
+   "native": "कमेंट",
+   "en": "comment",
+   "path": "lexicon",
+   "row": 4249,
+   "context": "अब इस वीडियो पर कमेंट किया है",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 8386,
+   "context": "इसके बाद पुलिस ने यह मामला सीबीआई",
+   "verdict": "correct"
+  },
+  {
+   "native": "यूनियन",
+   "en": "union",
+   "path": "lexicon",
+   "row": 15893,
+   "context": "यूनियन नेताओं ने कहा कि",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 7302,
+   "context": "पुलिस ने दोनों को गिरफ्तार",
+   "verdict": "correct"
+  },
+  {
+   "native": "इवेंट",
+   "en": "event",
+   "path": "lexicon",
+   "row": 6713,
+   "context": "चीन में हुए इवेंट में इसकी पहली झलक",
+   "verdict": "correct"
+  },
+  {
+   "native": "शूटिंग",
+   "en": "shooting",
+   "path": "lexicon",
+   "row": 3906,
+   "context": "शूटिंग के बीच रणवीर और",
+   "verdict": "correct"
+  },
+  {
+   "native": "मोबाइल",
+   "en": "mobile",
+   "path": "lexicon",
+   "row": 15974,
+   "context": "लूप टेलीकॉम और लूप मोबाइल पर की कार्रवाई",
+   "verdict": "correct"
+  },
+  {
+   "native": "वेबसाइट",
+   "en": "website",
+   "path": "lexicon",
+   "row": 9334,
+   "context": "इसके साथ ही वेबसाइट पर प्रमुख दस्तावेज हिंदी",
+   "verdict": "correct"
+  },
+  {
+   "native": "शॉर्ट",
+   "en": "short",
+   "path": "lexicon",
+   "row": 16981,
+   "context": "पीपीसीबी के परिवेश में शॉर्ट टर्म करेक्टराइजेशन स्टडी करा",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 4978,
+   "context": "जश्र में शराबियों पर पुलिस शिकंजा कसेगी",
+   "verdict": "correct"
+  },
+  {
+   "native": "पार्टी",
+   "en": "party",
+   "path": "lexicon",
+   "row": 9925,
+   "context": "मुस्लिम पार्टी विवाद पर कांग्रेस अध्यक्ष",
+   "verdict": "correct"
+  },
+  {
+   "native": "ब्लड",
+   "en": "blood",
+   "path": "lexicon",
+   "row": 8987,
+   "context": "इसके अलावा हाई ब्लड प्रेशर भी सीने में",
+   "verdict": "correct"
+  },
+  {
+   "native": "कोरोना",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 15971,
+   "context": "का मानना है कि कोरोना के इलाज पर कुछ",
+   "verdict": "correct"
+  },
+  {
+   "native": "नंबर",
+   "en": "number",
+   "path": "lexicon",
+   "row": 12201,
+   "context": "उसके मोबाइल पर अज्ञात नंबर से कॉल आया",
+   "verdict": "correct"
+  },
+  {
+   "native": "उबर",
+   "en": "uber",
+   "path": "lexicon",
+   "row": 457,
+   "context": "दिखने से पहले ही उबर सके",
+   "verdict": "wrong",
+   "note": "उबर is the Hindi verb 'recover/emerge' here ('उबर सके'), not Uber"
+  },
+  {
+   "native": "कोर्ट",
+   "en": "court",
+   "path": "lexicon",
+   "row": 2563,
+   "context": "कहा कि हम सुप्रीम कोर्ट के फैसले का सम्मान",
+   "verdict": "correct"
+  },
+  {
+   "native": "एजेंसी",
+   "en": "agency",
+   "path": "lexicon",
+   "row": 10315,
+   "context": "पाकिस्तानी खुफिया एजेंसी आईएसआई ने मेरठ को",
+   "verdict": "correct"
+  },
+  {
+   "native": "कोरोना",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 10863,
+   "context": "न्यू लाइन अस्पताल में कोरोना संक्रमित मरीज को भर्ती",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 9439,
+   "context": "पुलिस ने लड़की के होश",
+   "verdict": "correct"
+  },
+  {
+   "native": "इंस्टीट्यूट",
+   "en": "institute",
+   "path": "lexicon",
+   "row": 886,
+   "context": "सीरम इंस्टीट्यूट कोरोना की चार और",
+   "verdict": "correct"
+  },
+  {
+   "native": "रिजल्ट",
+   "en": "result",
+   "path": "lexicon",
+   "row": 16227,
+   "context": "अब इसके रिजल्ट ऑफिशियल वेबसाइट अपर अपलोड",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्रेडिट",
+   "en": "credit",
+   "path": "lexicon",
+   "row": 16250,
+   "context": "रिया क्रेडिट कार्ड से पैसों को",
+   "verdict": "correct"
+  },
+  {
+   "native": "क्रीम",
+   "en": "cream",
+   "path": "lexicon",
+   "row": 4515,
+   "context": "पहला कदम क्रीम सॉस के साथ सेब",
+   "verdict": "correct"
+  },
+  {
+   "native": "फिल्म",
+   "en": "film",
+   "path": "lexicon",
+   "row": 3918,
+   "context": "कपूर की यह पहली फिल्म है",
+   "verdict": "correct"
+  },
+  {
+   "native": "मैराथन",
+   "en": "marathon",
+   "path": "lexicon",
+   "row": 11000,
+   "context": "मैराथन में उपायुक्त रमेश चंद्र",
+   "verdict": "correct"
+  },
+  {
+   "native": "एंबुलेंस",
+   "en": "ambulance",
+   "path": "lexicon",
+   "row": 6552,
+   "context": "परिजनों को अस्पताल ने एंबुलेंस मुहैया कराने से इनकार",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 14685,
+   "context": "सोशल और प्रोफेशनल लाइफ के",
+   "verdict": "correct"
+  },
+  {
+   "native": "मैनेजमेंट",
+   "en": "management",
+   "path": "lexicon",
+   "row": 9917,
+   "context": "रिश्वत मैनेजमेंट कहता है कि सभी",
+   "verdict": "correct"
+  },
+  {
+   "native": "ब्लैक",
+   "en": "black",
+   "path": "lexicon",
+   "row": 17531,
+   "context": "इसलिए बड़े ब्लैक होल छोटे ब्लैक होल",
+   "verdict": "correct"
+  },
+  {
+   "native": "टीचर",
+   "en": "teacher",
+   "path": "lexicon",
+   "row": 5058,
+   "context": "बच्चों से लेकर टीचर तक परेशान हैं लेकिन",
+   "verdict": "correct"
+  },
+  {
+   "native": "मिल्क",
+   "en": "milk",
+   "path": "lexicon",
+   "row": 19406,
+   "context": "मिल्क ने कई फिल्म आलोचक",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्कूल",
+   "en": "school",
+   "path": "lexicon",
+   "row": 8443,
+   "context": "कि धनंजय पहले निजी स्कूल में पढ़ता था",
+   "verdict": "correct"
+  },
+  {
+   "native": "कलेक्टर",
+   "en": "collector",
+   "path": "lexicon",
+   "row": 14223,
+   "context": "कलेक्टर को संदेह था कि",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्रिपल",
+   "en": "triple",
+   "path": "lexicon",
+   "row": 9435,
+   "context": "बताता है कि कैसे ट्रिपल ट्रिपल करें",
+   "verdict": "correct"
+  },
+  {
+   "native": "मिडिल",
+   "en": "middle",
+   "path": "lexicon",
+   "row": 16462,
+   "context": "टीम इंडिया के मिडिल ऑर्डर की अभी तक",
+   "verdict": "correct"
+  },
+  {
+   "native": "बटन",
+   "en": "button",
+   "path": "lexicon",
+   "row": 16509,
+   "context": "चेन की बजाय पुश बटन जैसे कुछ नए फीचर",
+   "verdict": "correct"
+  },
+  {
+   "native": "ट्रैक्टर",
+   "en": "tractor",
+   "path": "lexicon",
+   "row": 2004,
+   "context": "बताया कि मगाराम एक ट्रैक्टर ट्रॉली पर सवार था",
+   "verdict": "correct"
+  },
+  {
+   "native": "मीडिया",
+   "en": "media",
+   "path": "lexicon",
+   "row": 8153,
+   "context": "सोशल मीडिया के आ जाने से",
+   "verdict": "correct"
+  },
+  {
+   "native": "जनरल",
+   "en": "general",
+   "path": "lexicon",
+   "row": 21285,
+   "context": "सैमसंग जनरल केमिकल्स को हनवा को",
+   "verdict": "correct"
+  },
+  {
+   "native": "अप्रैल",
+   "en": "april",
+   "path": "lexicon",
+   "row": 5678,
+   "context": "अप्रैल का माह शिक्षा के",
+   "verdict": "correct"
+  },
+  {
+   "native": "डॉक्टर",
+   "en": "doctor",
+   "path": "lexicon",
+   "row": 5925,
+   "context": "पर क्वारंटाइन होकर वह डॉक्टर की सलाह के मुताबिक",
+   "verdict": "correct"
+  },
+  {
+   "native": "सर्च",
+   "en": "search",
+   "path": "lexicon",
+   "row": 7971,
+   "context": "सर्च ऑपरेशन के दौरान आतंकियों",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 10444,
+   "context": "पुलिस ने रविवार सुबह पोस्टमार्टम",
+   "verdict": "correct"
+  },
+  {
+   "native": "वॉट्सएप",
+   "en": "whatsapp",
+   "path": "lexicon",
+   "row": 5922,
+   "context": "पॉपुलर मैसेजिंग ऐप वॉट्सएप ने हाल ही में",
+   "verdict": "correct"
+  },
+  {
+   "native": "एयरलाइंस",
+   "en": "airlines",
+   "path": "lexicon",
+   "row": 13115,
+   "context": "कई एयरलाइंस की फ्लाइट इसे दिल्ली",
+   "verdict": "correct"
+  },
+  {
+   "native": "साइंस",
+   "en": "science",
+   "path": "lexicon",
+   "row": 16636,
+   "context": "पटेल कंप्यूटर साइंस में बीई ऑनर्स और",
+   "verdict": "correct"
+  },
+  {
+   "native": "रेलवे",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 9532,
+   "context": "रेलवे यह सुविधा यात्रियों की",
+   "verdict": "correct"
+  },
+  {
+   "native": "ग्रुप",
+   "en": "group",
+   "path": "lexicon",
+   "row": 2604,
+   "context": "उस ग्रुप में संस्था के सभी",
+   "verdict": "correct"
+  },
+  {
+   "native": "मोटर्स",
+   "en": "motors",
+   "path": "lexicon",
+   "row": 12690,
+   "context": "जापान की ईसुजू मोटर्स की नई कार अब",
+   "verdict": "correct"
+  },
+  {
+   "native": "आउटलेट",
+   "en": "outlet",
+   "path": "lexicon",
+   "row": 2637,
+   "context": "आउटलेट में वेरोना में सस्ती",
+   "verdict": "correct"
+  },
+  {
+   "native": "एयर",
+   "en": "air",
+   "path": "lexicon",
+   "row": 10714,
+   "context": "किस लाइन को आॅन एयर दिखा रहे हैं",
+   "verdict": "correct"
+  },
+  {
+   "native": "कैमरा",
+   "en": "camera",
+   "path": "lexicon",
+   "row": 9077,
+   "context": "इसलिए डिवाइस में कैमरा एक महत्वपूर्ण भूमिका निभाता",
+   "verdict": "correct"
+  },
+  {
+   "native": "फिल्म",
+   "en": "film",
+   "path": "lexicon",
+   "row": 21205,
+   "context": "शिबूया ने फिल्म में केवल अंग्रेजी में",
+   "verdict": "correct"
+  },
+  {
+   "native": "पुलिस",
+   "en": "police",
+   "path": "lexicon",
+   "row": 4649,
+   "context": "पुलिस ने जब पीडि़त से",
+   "verdict": "correct"
+  },
+  {
+   "native": "पेमेंट",
+   "en": "payment",
+   "path": "lexicon",
+   "row": 4790,
+   "context": "गन्ना पेमेंट को लेकर एसडीएम से",
+   "verdict": "correct"
+  },
+  {
+   "native": "फिल्म",
+   "en": "film",
+   "path": "lexicon",
+   "row": 4566,
+   "context": "जबकि फिल्म में उनके पिता नसीरूद्दीन",
+   "verdict": "correct"
+  },
+  {
+   "native": "सॉकेट",
+   "en": "socket",
+   "path": "lexicon",
+   "row": 14700,
+   "context": "यह साधन सॉकेट डिवाइस की जांच करने",
+   "verdict": "correct"
+  },
+  {
+   "native": "सोशल",
+   "en": "social",
+   "path": "lexicon",
+   "row": 5258,
+   "context": "फेसबुक सोशल मीडिया का नया राजा",
+   "verdict": "correct"
+  },
+  {
+   "native": "गेस्ट",
+   "en": "guest",
+   "path": "lexicon",
+   "row": 5467,
+   "context": "गेस्ट हाउस में छुट्टी की",
+   "verdict": "correct"
+  },
+  {
+   "native": "प्रैक्टिस",
+   "en": "practice",
+   "path": "lexicon",
+   "row": 9540,
+   "context": "रही थी साथ में प्रैक्टिस",
+   "verdict": "correct"
+  },
+  {
+   "native": "लाइन",
+   "en": "line",
+   "path": "lexicon",
+   "row": 9731,
+   "context": "होता है कि यह लाइन क्रॉस ना हो",
+   "verdict": "correct"
+  },
+  {
+   "native": "पार्टी",
+   "en": "party",
+   "path": "lexicon",
+   "row": 21631,
+   "context": "भारत की एक राजनीतिक पार्टी जनता दल यूनाइटेड के",
+   "verdict": "correct"
+  },
+  {
+   "native": "व्हाइट",
+   "en": "white",
+   "path": "lexicon",
+   "row": 16450,
+   "context": "ठीक रेत के साथ व्हाइट समुद्र तट सौंदर्य और",
+   "verdict": "correct"
+  },
+  {
+   "native": "स्टेशन",
+   "en": "station",
+   "path": "lexicon",
+   "row": 17396,
+   "context": "बस स्टैंड और रेलवे स्टेशन पर टैक्सी मिल सकती",
+   "verdict": "correct"
+  },
+  {
+   "native": "ब्रेन",
+   "en": "brain",
+   "path": "lexicon",
+   "row": 16614,
+   "context": "में गिरने से उन्हें ब्रेन हैमरेज हुआ था",
+   "verdict": "correct"
+  },
+  {
+   "native": "डाक्टर",
+   "en": "doctor",
+   "path": "lexicon",
+   "row": 4411,
+   "context": "एक सप्ताह पहले डाक्टर से अपाइंटमेंट ले सकते",
+   "verdict": "correct"
+  },
+  {
+   "native": "प्रिंट",
+   "en": "print",
+   "path": "lexicon",
+   "row": 15619,
+   "context": "प्रिंट मीडिया की तरह विजुअल",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 99.0
+}

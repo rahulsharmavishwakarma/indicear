@@ -1,0 +1,145 @@
+{
+  "gu": {
+    "wer": 42.81,
+    "cer": 22.17,
+    "utterances": 300,
+    "words": 5045,
+    "script_error_rate": 2.48,
+    "wer_script_normalised": 42.74,
+    "cer_script_normalised": 22.11,
+    "rows_with_alternative_ref": 146,
+    "cm_utterances": 141,
+    "cm_spans": 706,
+    "cm_span_accuracy": 76.49,
+    "cm_span_cer_mean": 30.83,
+    "cm_span_accuracy_by_lang": {
+      "en": 70.81,
+      "gu": 80.64
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.615
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 94.67,
+    "macro_f1": 97.26,
+    "per_lang": {
+      "gu": {
+        "precision": 100.0,
+        "recall": 94.67,
+        "f1": 97.26,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "gu": {
+        "bn": 2,
+        "gu": 284,
+        "hi": 2,
+        "ml": 1,
+        "mr": 7,
+        "te": 2,
+        "ur": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 53,
+        "accuracy": 77.36
+      },
+      "2-5s": {
+        "utterances": 42,
+        "accuracy": 92.86
+      },
+      "5-10s": {
+        "utterances": 126,
+        "accuracy": 99.21
+      },
+      "10-20s": {
+        "utterances": 79,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_gu",
+  "utterances": 300,
+  "hours": 0.61,
+  "seconds": 25,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 170,
+  "changed_examples": [
+    {
+      "key": "indicvoices/gu/valid/3377699720701548_chunk_1",
+      "constrained": "ઉપર",
+      "unconstrained": "ऊपर",
+      "hinted": "ઉપર"
+    },
+    {
+      "key": "indicvoices/gu/valid/3377699720715046_chunk_1",
+      "constrained": "covi sepril ચોવીસ વિશે બરે ત pસ્તળી વાગ રાષ્ટ્રીયવાસ્ વીમા યોજના હેઠળરોગ તપાસસની મુલાકાતુ કરવા માંગું છું શું તમે મને આ પ્રક્રિયામાં માર્ગદદર્શન આપી શકો છો",
+      "unconstrained": "नमस्ते कोव sepril्या आठ चौवीस दे વિશે બ পরে તিস্তળી વાગ રાષ્ટ્રીયવાસ્ વીમા યોજના હેઠળરોગ તપાસસની મુલાકાતુ કરવા માંગું છું શું તમે મને આ પ્રક્રિયામાં માર્ગદદર્શન આપી શકો છો",
+      "hinted": "covi sepril ચોવીસ વિશે બરે ત pસ્તળી વાગ રાષ્ટ્રીયવાસ્ વીમા યોજના હેઠળરોગ તપાસસની મુલાકાતુ કરવા માંગું છું શું તમે મને આ પ્રક્રિયામાં માર્ગદદર્શન આપી શકો છો"
+    },
+    {
+      "key": "indicvoices/gu/valid/3fbaed3f-c436-4f39-9d94-b2a97e1b576a_1_chunk_1",
+      "constrained": "હા sir नमस्कार",
+      "unconstrained": "હા sir నમस्कार",
+      "hinted": "હા sir નમ"
+    },
+    {
+      "key": "indicvoices/gu/valid/3fbaed3f-c436-4f39-9d94-b2a97e1b576a_1_chunk_2",
+      "constrained": "hello sir so phone so serviceing વધી ગઈ આજે બધાય ક એટલા એક પછી એક આવતા હતા ને",
+      "unconstrained": "அது ஒரு sir சொல்ல phone ஒரு serviceing વધી ગઈ આજે બધાય ક એટલા એક પછી એક આવતા હતા ને",
+      "hinted": "hello sir so phone so serviceing વધી ગઈ આજે બધાય ક એટલા એક પછી એક આવતા હતા ને"
+    },
+    {
+      "key": "indicvoices/gu/valid/3fbaed3f-c436-4f39-9d94-b2a97e1b576a_1_chunk_3",
+      "constrained": "પાસ ooક printing ને credit કાર્ડના થોડાકના બધાનાિલના ને issue હતા ને credit કાર્ડમાંને પાુ kriટિંગને fd ચાલુ બંધ કરવાની અંદર",
+      "unconstrained": "પાસooક printિંગ ને credit કાર્ડના થોડાકના બધાનાિલના ને issue હતા ને credit કાર્ડમાંને પાુkિટિંગને fd ચાલુ બંધ કરવાની અંદર",
+      "hinted": "પાસ ooક printing ને credit કાર્ડના થોડાકના બધાનાિલના ને issue હતા ને credit કાર્ડમાંને પાુ kriટિંગને fd ચાલુ બંધ કરવાની અંદર"
+    }
+  ]
+}

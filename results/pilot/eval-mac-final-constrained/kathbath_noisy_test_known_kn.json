@@ -1,0 +1,194 @@
+{
+  "kn": {
+    "wer": 60.61,
+    "cer": 20.32,
+    "utterances": 600,
+    "words": 6621,
+    "script_error_rate": 4.26,
+    "wer_script_normalised": 60.61,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 1.41
+  },
+  "lid": {
+    "utterances": 600,
+    "accuracy": 100.0,
+    "macro_f1": 100.0,
+    "per_lang": {
+      "kn": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 600
+      }
+    },
+    "confusion": {
+      "kn": {
+        "kn": 600
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 22,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 431,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 147,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_known_kn",
+  "utterances": 600,
+  "hours": 1.41,
+  "seconds": 35,
+  "model": "~/workspace/sangam-models/pilot-v4lid-final",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true
+  },
+  "changed_utterances": 353,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933382446-309-m",
+      "constrained": "ರಾಯೂರಿನ nooರಿಯ ವಂಶಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ಅಹ್ಮದ್ಾದರಿ ಎಂಬದ ಅನೇಕ ಧಾರ್ಮಿಕ ಗರಂಥಗಳನ್ನು ಉರ್ದುುವಿನಲ್ಲಿ ರಚದ",
+      "unconstrained": "ರ रायाச்சೂரிनाूदिया ವಂಶಕ್ಕೆ ಸಂಬಂಧಪಟ್ಟ ಅಹ್मದ್ಾದರಿ ಎಂಬದ ಅನೇಕ ಧಾರ್ಮಿಕ ಗರಂಥಗಳನ್ನು ಉರ್ದುುವಿನಲ್ಲಿ ರಚದ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933359042-641-m",
+      "constrained": "ಇದು ಒಂದು ನಕಾಶಯನ್ನು ನಾಲ್ಕು ರಾಷ್ಟ್ರೀಯ ಚಿಹಹೆಗಳ ಬದಲಾಗಿದೆಾಗಿ ಬಳಸಲ್ಡುತ್ತದೆ",
+      "unconstrained": "இது ಒಂದು ನಕಾಶಯನ್ನು ನಾಲ್ಕು ರಾಷ್ಟ್ರೀಯ ಚಿಹಹೆಗಳ ಬದಲಾಗಿದೆಾಗಿ ಬಳಸಲ್ಡುತ್ತದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930335683-320-m",
+      "constrained": "ಕಚೇರುಗಳಲ್ಲಿ ಕೆಲಸಯಾಕೆ ಹಾಗೂ ಗೊತ್ತಿಲ್ಲಯನ್ನುುವುದರ ಕುರಿತ ನಾವು ಅ ಪ್ರಯತ್ನ ಮಾಡ ಮಾಡಬೇಕು",
+      "unconstrained": "कचೇರುಗಳಲ್ಲಿ ಕೆಲಸಯಾಕೆ ಹಾಗೂ ಗೊತ್ತಿಲ್ಲಯನ್ನುುವುದರ ಕುರಿತ ನಾವು ಅ ಪ್ರಯತ್ನ ಮಾಡ ಮಾಡಬೇಕು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930725341-609-f",
+      "constrained": "ಪ್ರಕ್ ಪ್ರಕೃತಿ ಶಿಭಿರದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಭಂಧ ಸ ಸ್ಪರ್ಧ ಮತ್ತುಿಕ್ರಲಾ ಸ್ಪರ್ಧಗಳು ಜರಿಗೆಗದವು",
+      "unconstrained": "प्रಕ್ ಪ್ರಕೃತಿ ಶಿಭಿರದಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಭಂಧ ಸ ಸ್ಪರ್ಧ ಮತ್ತುಿಕ್ರಲಾ ಸ್ಪರ್ಧಗಳು ಜರಿಗೆಗದವು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930669737-1144-f",
+      "constrained": "ಕಾ ವರ ಮಾಡಿರುವಂತೆ ಅನುಷಕಾಶ ಶರ್ಮ ಮತ್ತು ಕ್ರಿಕೆಟ್ ವಿರಾಟ್ ಕೊಹಿಲಿೊಂದಾಗುವುದುಸಾಧ",
+      "unconstrained": "ಕಾம் வரரதி ಮಾಡಿರುವಂತೆ ಅನುಷಕಾಶ ಶರ್ಮ ಮತ್ತು ಕ್ರಿಕೆಟ್ ವಿರಾಟ್ ಕೊಹಿಲಿೊಂದಾಗುವುದುಸಾಧ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930442377-734-f",
+      "constrained": "ಳ ಅಭವೃದ್ಧಗ ಅಧ್ಯಕ್ಷ ಸ್ಥಾನದಿಂದ ನಟಗಳ ಇಳಿದ ಮೇಲೆ ಬೆಳಳ್ಳ ತೆರಿಗೆ ಮತ್ತೆ ಮರಳಿಿದ್ದರು",
+      "unconstrained": "ಿಳ ಅಭವೃದ್ಧಗ ಅಧ್ಯಕ್ಷ ಸ್ಥಾನದಿಂದ ನಟಗಳ ಇಳಿದ ಮೇಲೆ ಬೆಳಳ್ಳ ತೆರಿಗೆ ಮತ್ತೆ ಮರಳಿಿದ್ದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424931145050-991-f",
+      "constrained": "ಸ್ಟಾರ್ ಆಟಗಾರರನ್ನ ಹೆಚ್ಚು ನಂಬಿಕೊಂಡರುರಿರುವುದು ಟೀಂ ಇಂಡಿದ ಬಿಗ್ ವೀ kಸ್ ಪಾಯಿಂಟ ಆಗಿದೆ",
+      "unconstrained": "ಸ್ಟ स्टाார்र ಆಟಗಾರರನ್ನ ಹೆಚ್ಚು ನಂಬಿಕೊಂಡರುರಿರುವುದು ಟೀಂ ಇಂಡಿದ ಬಿಗ್ ವೀkಸ್ ಪಾಯಿಂಟ ಆಗಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933170377-1083-m",
+      "constrained": "ಅಷ್ಟೊತ್ತಿಗೆ ಪ policeಲೀ ತಮ ಅಣಮಾನವಿದ್ದ ಆ ಕಾಲ್ೀ details ಅನ್ನ ಮತ್ತೆ ಪರಿಶೀಲನೆ ಮಾಡಿದ್ದ",
+      "unconstrained": "ಅಷ್ಟೊತ್ತಿಗೆ ಪ policeಲೀ ತಮ ಅಣಮಾನವಿದ್ದ ಆ ಕಾಲ್ೀ details அண்ணா ಮತ್ತೆ ಪರಿಶೀಲನೆ ಮಾಡಿದ್ದ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933381855-641-m",
+      "constrained": "ಈ ಚಿತ್ರ ಉಮಾರ್ಶಿ ಅವರು ತೋರಿಸ ಗಮನರಭಿನಯ ನೆನಪಲ್ಲಿ ಉಳಿಯುವುವಂಥದು",
+      "unconstrained": "ಈ चित्र उमರ್ಶಿ ಅವರು ತೋರಿಸ ಗಮನರಭಿನಯ ನೆನಪಲ್ಲಿ ಉಳಿಯುವುವಂಥದು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930819984-149-m",
+      "constrained": "ಆದರೆಿಂದೌರೆ ಅಲ್ಲಿಗೆ ತೆರಳ ಅತ್ಿಲ್ಲ ಎನಯ ಅಭಮತ",
+      "unconstrained": "ಆದರೆಿಂದ चौೌರೆ ಅಲ್ಲಿಗೆ ತೆರಳ ಅತ್ಿಲ್ಲ ಎನಯ ಅಭಮತ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930435982-734-f",
+      "constrained": "ಇದರ ಜತೆಗೆ ಡ diesel ದರ ಏರಿಕೆ ಕೂಡ b m tಗೆ ಬಾರಿ ಹೊಡೆತ ನೀಡಿದೆ",
+      "unconstrained": "ಇದರ ಜತೆಗೆ ಡ diesel ದರ ಏರಿಕೆ ಕೂಡ b m tಿಗೆ ಬಾರಿ ಹೊಡೆತ ನೀಡಿದೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930455152-1144-f",
+      "constrained": "photo ಶಿಷನ್ ಹೇಗೆ ನಡೆಬೇಕಂಬುದ ಬಗ್ಗೆ ಮಕ್ಕಳು ಸಂಬ ಸ್ವ ಕಲ್ಪನೆಯನ್ನು ಹೊಂದಿದ್ದಾರೆ ಎಂಬುದು ಯಾವುದೇಾಸ್ಯವ ಅಲ್ಲ",
+      "unconstrained": "ोट ಶಿಷನ್ ಹೇಗೆ ನಡೆಬೇಕಂಬುದ ಬಗ್ಗೆ ಮಕ್ಕಳು ಸಂಬ ಸ್ವ ಕಲ್ಪನೆಯನ್ನು ಹೊಂದಿದ್ದಾರೆ ಎಂಬುದು ಯಾವುದೇಾಸ್ಯವ ಅಲ್ಲ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930362885-734-f",
+      "constrained": "ಗಲಾಕಂತಿಗೆ ಭಾವತಿ ಮಾಡುವ ಮೂಲಕ ಯೋಜನೆಯೌಲಭ್ಯ ಪಡೆದುಕೊಳ್ಳ",
+      "unconstrained": "गण माಕಂತಿಗೆ ಭಾವತಿ ಮಾಡುವ ಮೂಲಕ ಯೋಜನೆಯೌಲಭ್ಯ ಪಡೆದುಕೊಳ್ಳ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930725370-609-f",
+      "constrained": "ಉತ್ತದ ಮುಖ್ಯಮಂತ್ರಿ ಅಯೋಗಿ ಆದಿತ್ಯನಾಥರು ಬಾಲಿವುಡ್ ನಟ ಸಂಜಯದ ತವರನ್ನು ಭೇಟಿ ಮಾಡಿ ಮಾತುಕತೆ ನಡೆಸಿದ್ದಾರೆ",
+      "unconstrained": "ಉತ್ತ प्रदेशದ ಮುಖ್ಯಮಂತ್ರಿ ಅಯೋಗಿ ಆದಿತ್ಯನಾಥರು ಬಾಲಿವುಡ್ ನಟ ಸಂಜಯದ ತವರನ್ನು ಭೇಟಿ ಮಾಡಿ ಮಾತುಕತೆ ನಡೆಸಿದ್ದಾರೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933112804-1083-m",
+      "constrained": "ಪೂರವಭವಿ ಪರೀಕ್ಷೆ ಹಾಗೂ ಮುಖ್ಯ ಪರೀಕ್ಷೆಯ ಆಧಾರದ ಮೇಲೆ ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳಲಾಗುವುದು",
+      "unconstrained": "पूर्वವಭವಿ ಪರೀಕ್ಷೆ ಹಾಗೂ ಮುಖ್ಯ ಪರೀಕ್ಷೆಯ ಆಧಾರದ ಮೇಲೆ ಆಯ್ಕೆ ಮಾಡಿಕೊಳ್ಳಲಾಗುವುದು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930335726-320-m",
+      "constrained": "u food billing ಪ್ರತಿದಲ್ಲಿ ಬೇರೆ ca capb there is u",
+      "unconstrained": "आंकरू food billing प्रतिದಲ್ಲಿ ಬೇರೆ ca capb there is u"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930314601-320-m",
+      "constrained": "ಇದು ಮೊದಲ glass store ಎಂದು ಮನೆ ಮತ್ತು ನಿಜವಾಗಿಯೂ ಕಷ್ಟ ಅಲ್ಲ ವ ine ತಯರು",
+      "unconstrained": "ಇದು ಮೊದಲ glassೋುತ್ತದೆ ಎಂದು ಮನೆ ಮತ್ತು ನಿಜವಾಗಿಯೂ ಕಷ್ಟ ಅಲ್ಲ ವine ತಯರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930421462-702-f",
+      "constrained": "ಕೂಡಲೇ ರಾಜ್ಯ ಸರ್ಕಾರ ರೈತರ ಸಾಲಮನ್ನ ಮಾಡ ಎಂದು ಆಗ್ರಹಿಸಿದರು",
+      "unconstrained": "கூடಲೇ ರಾಜ್ಯ ಸರ್ಕಾರ ರೈತರ ಸಾಲಮನ್ನ ಮಾಡ ಎಂದು ಆಗ್ರಹಿಸಿದರು"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424933353927-625-m",
+      "constrained": "ಕಂಪ ನಯ ಮೈದಾನದಲ್ಲಿ gಗ್ yails ಮತ್ತು revous ಅಗ್ನಿ ಪರ್ವತಗಳಿವೆ",
+      "unconstrained": "कಂಪ ನिय ಮೈದಾನದಲ್ಲಿgಗ್yails ಮತ್ತು revous ಅಗ್ನಿ ಪರ್ವತಗಳಿವೆ"
+    },
+    {
+      "key": "kathbath_test/kn/noisy_test_known/844424930856798-702-f",
+      "constrained": "ಕಮತಿರಪಗಾಗಿ ತತ್ೋ್ಯಾ athidatಟರ್ ಅನ್ನು ಅವನ ಹೇಗೆ ಪರಿೀಕ್ಷಿಸಿಸದನೆಂದು ಇಲ್ಲಿ",
+      "unconstrained": "ಿಮோத்திರಪಗಾಗಿ ತತ್ೋ್ಯಾathidೇಟರ್ ಅನ್ನು ಅವನ ಹೇಗೆ ಪರಿೀಕ್ಷಿಸಿಸದನೆಂದು ಇಲ್ಲಿ"
+    }
+  ]
+}

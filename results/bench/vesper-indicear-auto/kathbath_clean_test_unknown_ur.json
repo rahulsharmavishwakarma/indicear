@@ -1,0 +1,135 @@
+{
+  "ur": {
+    "wer": 74.2,
+    "cer": 56.49,
+    "utterances": 300,
+    "words": 3457,
+    "script_error_rate": 55.22,
+    "wer_script_normalised": 72.52,
+    "cer_script_normalised": 53.93,
+    "rows_with_alternative_ref": 75,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.469
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 48.67,
+    "macro_f1": 65.47,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 48.67,
+        "f1": 65.47,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ur": {
+        "hi": 151,
+        "pa": 2,
+        "te": 1,
+        "ur": 146
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 151,
+        "hi_utterances": 0,
+        "ur_utterances": 300,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 50.33
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 95,
+        "accuracy": 38.95
+      },
+      "5-10s": {
+        "utterances": 202,
+        "accuracy": 53.47
+      },
+      "10-20s": {
+        "utterances": 3,
+        "accuracy": 33.33
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_unknown_ur",
+  "utterances": 300,
+  "hours": 0.47,
+  "seconds": 19,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 283,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ur/clean_test_unknown/844424931246918-522-m",
+      "constrained": "ہزاروں روہنگ مسلموں کی بنگلہ میں پنا",
+      "unconstrained": "மनमार से हजारों روہنگ مسلموں کی بنگلہ میں پنا",
+      "hinted": "ہزاروں روہنگ مسلموں کی بنگلہ میں پنا"
+    },
+    {
+      "key": "kathbath_test/ur/clean_test_unknown/844424932926150-904-m",
+      "constrained": "अदायगी हरमा या साल में एक बार अ करना होगा",
+      "unconstrained": "अदायगी हरਮਾ या साल में ایک بار ادا کرنا ہوگا",
+      "hinted": "یا سال میں ایک بار ادا کرنا ہوگا"
+    },
+    {
+      "key": "kathbath_test/ur/clean_test_unknown/844424932946303-30-f",
+      "constrained": "ये सब काफी पैसा होगा कि किस तरह पर मुनासर है",
+      "unconstrained": "ఏ सब ਕਾਫ਼ੀ ਪੈ होगा कि किस तरह पर मुناसر ہے",
+      "hinted": "یہ سب کافی پی ہوگا کہ کس طرح پر منناسر ہے"
+    },
+    {
+      "key": "kathbath_test/ur/clean_test_unknown/844424930583829-376-f",
+      "constrained": "बी को बचाने के लिए शहर काार्ख पर हमला",
+      "unconstrained": "বিਵੀੋ बचाने के लिए शहर काार्ख पर हमला",
+      "hinted": "b کو بچانے کے لیے shk پر حمل"
+    },
+    {
+      "key": "kathbath_test/ur/clean_test_unknown/844424932926279-904-m",
+      "constrained": "اس عظ اورق با سے بھیاقفیت ہو جائے",
+      "unconstrained": "इस अظ اورق با سے بھیاقفیت ہو جائے",
+      "hinted": "اس عظ اورق با سے بھیاقفیت ہو جائے"
+    }
+  ]
+}

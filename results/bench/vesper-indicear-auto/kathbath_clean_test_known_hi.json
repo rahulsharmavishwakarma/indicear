@@ -1,0 +1,133 @@
+{
+  "hi": {
+    "wer": 37.8,
+    "cer": 19.95,
+    "utterances": 300,
+    "words": 3487,
+    "script_error_rate": 7.08,
+    "wer_script_normalised": 35.65,
+    "cer_script_normalised": 16.93,
+    "rows_with_alternative_ref": 78,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.47
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "hi": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "hi": {
+        "hi": 299,
+        "pa": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 300,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": 0.0,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 300,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": 0.0,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 1,
+        "pa_utterances": 0,
+        "hi_utterances": 300,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": 0.33
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 128,
+        "accuracy": 99.22
+      },
+      "5-10s": {
+        "utterances": 165,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 7,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_hi",
+  "utterances": 300,
+  "hours": 0.47,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 180,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/hi/clean_test_known/844424932711187-645-f",
+      "constrained": "दुन के तमा देश भारत के साथ इस मसले पर खड़े हैं",
+      "unconstrained": "ద ਦੁਨੀਆ के ਤਮਾ ਦੇ ਭਾਰਤ के साथ इस मਸਲੇ पर खड़े हैं",
+      "hinted": "दुन के तमा देश भारत के साथ इस मसले पर खड़े हैं"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_known/844424930615251-326-f",
+      "constrained": "देवंगताईएसआर के शासन काल में दलित भाइियों को पौधे दिए गए",
+      "unconstrained": "िवंगताईएसआर के शासन काल में दलित भाइियों को पौधे दिए गए",
+      "hinted": "देवंगताईएसआर के शासन काल में दलित भाइियों को पौधे दिए गए"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_known/844424932732959-645-f",
+      "constrained": "सालय देखने के बाद अ अंसारी अंक और वाट मंदिर गए",
+      "unconstrained": "ਸੰਗੰਗਲੇ ਦੇਖਣ के बाद अ अंसारी अंक और वाट मंदिर गए",
+      "hinted": "सालय देखने के बाद अ अंसारी अंक और वाट मंदिर गए"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_known/844424931274594-1102-f",
+      "constrained": "light brown blser लगाने से चहरे पर नि देखने को मिलता है",
+      "unconstrained": "light brown্lser ਲਗने से चहरे पर ਨਿੜ ਦੇਖਣ को मिलता है",
+      "hinted": "light brown blser लगाने से चहरे पर नि देखने को मिलता है"
+    },
+    {
+      "key": "kathbath_test/hi/clean_test_known/844424932309968-1160-m",
+      "constrained": "उन्होंने पर सरकार से hट धर्मीा छोड़कर्रमचारों की लंबित मांगे पूरी करने की मांग की",
+      "unconstrained": "उन्होंने पर सरकार से ہٹرمीा छोड़ڑ کر्रمचारों की लंबित मांगे पूरी करने की मांग की",
+      "hinted": "उन्होंने पर सरकार से hट धर्मीा छोड़कर्रमचारों की लंबित मांगे पूरी करने की मांग की"
+    }
+  ]
+}

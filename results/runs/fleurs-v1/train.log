@@ -1,0 +1,56 @@
+2026-10-23 18:02:10 autotune: capacity 19.4 GiB (share 1.0)
+2026-10-23 18:02:12 autotune: 4000 frames -> peak 6.1% of device memory
+2026-10-23 18:02:12 autotune: 5200 frames -> peak 6.9% of device memory
+2026-10-23 18:02:12 autotune: 6760 frames -> peak 8.0% of device memory
+2026-10-23 18:02:13 autotune: 8788 frames -> peak 9.5% of device memory
+2026-10-23 18:02:14 autotune: 11424 frames -> peak 11.3% of device memory
+2026-10-23 18:02:14 autotune: 14851 frames -> peak 13.8% of device memory
+2026-10-23 18:02:15 autotune: 19306 frames -> peak 17.1% of device memory
+2026-10-23 18:02:17 autotune: 25097 frames -> peak 21.5% of device memory
+2026-10-23 18:02:19 autotune: 32626 frames -> peak 26.9% of device memory
+2026-10-23 18:02:21 autotune: 42413 frames -> peak 33.9% of device memory
+2026-10-23 18:02:23 autotune: 55136 frames -> peak 43.3% of device memory
+2026-10-23 18:02:26 autotune: 71676 frames -> peak 55.3% of device memory
+2026-10-23 18:02:31 autotune: 93178 frames -> peak 71.0% of device memory
+2026-10-23 18:02:37 autotune: 121131 frames -> peak 91.4% of device memory
+2026-10-23 18:02:42 autotune: 111806 frames -> peak 84.5% of device memory
+2026-10-23 18:02:42 autotune: fixed frame budget 111806 (84.5% peak)
+2026-10-23 18:02:42 run v1: 28110 examples, budget 111806 frames, lr 2.36e-03, 880 steps, starting at 0, config 1aa790309c66e462
+2026-10-23 18:02:55 torch.compile: CTCOutput compiled
+2026-10-23 18:04:18 step=25 epoch=0 loss=39.7644 ctc=39.7644 phonetic=nan rnnt=nan consistency=nan lr=6.986e-04 frames_per_s=25931 peak_gib=16.38 splits=1 elapsed_s=82
+2026-10-23 18:05:34 step=50 epoch=0 loss=15.3082 ctc=15.3082 phonetic=nan rnnt=nan consistency=nan lr=1.370e-03 frames_per_s=33145 peak_gib=16.38 splits=1 elapsed_s=159
+2026-10-23 18:06:40 step=75 epoch=0 loss=5.5379 ctc=5.5379 phonetic=nan rnnt=nan consistency=nan lr=2.042e-03 frames_per_s=33123 peak_gib=16.38 splits=1 elapsed_s=224
+2026-10-23 18:07:43 step=100 epoch=1 loss=3.4371 ctc=3.4371 phonetic=nan rnnt=nan consistency=nan lr=2.363e-03 frames_per_s=32952 peak_gib=16.38 splits=1 elapsed_s=288
+2026-10-23 18:08:51 step=125 epoch=1 loss=2.8413 ctc=2.8413 phonetic=nan rnnt=nan consistency=nan lr=2.352e-03 frames_per_s=32885 peak_gib=16.38 splits=1 elapsed_s=356
+2026-10-23 18:10:00 step=150 epoch=1 loss=2.6488 ctc=2.6488 phonetic=nan rnnt=nan consistency=nan lr=2.331e-03 frames_per_s=32926 peak_gib=16.38 splits=1 elapsed_s=424
+2026-10-23 18:11:10 step=175 epoch=1 loss=2.4279 ctc=2.4279 phonetic=nan rnnt=nan consistency=nan lr=2.298e-03 frames_per_s=33094 peak_gib=16.38 splits=1 elapsed_s=494
+2026-10-23 18:12:19 step=200 epoch=2 loss=2.3183 ctc=2.3183 phonetic=nan rnnt=nan consistency=nan lr=2.255e-03 frames_per_s=32613 peak_gib=16.38 splits=1 elapsed_s=563
+2026-10-23 18:13:26 step=225 epoch=2 loss=2.2848 ctc=2.2848 phonetic=nan rnnt=nan consistency=nan lr=2.203e-03 frames_per_s=32819 peak_gib=16.38 splits=1 elapsed_s=630
+2026-10-23 18:14:36 step=250 epoch=2 loss=2.1571 ctc=2.1571 phonetic=nan rnnt=nan consistency=nan lr=2.140e-03 frames_per_s=33042 peak_gib=16.38 splits=1 elapsed_s=700
+2026-10-23 18:15:43 step=275 epoch=3 loss=2.0199 ctc=2.0199 phonetic=nan rnnt=nan consistency=nan lr=2.069e-03 frames_per_s=33036 peak_gib=16.38 splits=1 elapsed_s=768
+2026-10-23 18:16:53 step=300 epoch=3 loss=2.0351 ctc=2.0351 phonetic=nan rnnt=nan consistency=nan lr=1.990e-03 frames_per_s=32719 peak_gib=16.38 splits=1 elapsed_s=838
+2026-10-23 18:18:00 step=325 epoch=3 loss=2.0892 ctc=2.0892 phonetic=nan rnnt=nan consistency=nan lr=1.904e-03 frames_per_s=33214 peak_gib=16.38 splits=1 elapsed_s=905
+2026-10-23 18:19:07 step=350 epoch=3 loss=1.9996 ctc=1.9996 phonetic=nan rnnt=nan consistency=nan lr=1.811e-03 frames_per_s=33238 peak_gib=16.38 splits=1 elapsed_s=972
+2026-10-23 18:20:11 step=375 epoch=4 loss=1.9945 ctc=1.9945 phonetic=nan rnnt=nan consistency=nan lr=1.712e-03 frames_per_s=33074 peak_gib=16.38 splits=1 elapsed_s=1035
+2026-10-23 18:21:20 step=400 epoch=4 loss=1.9048 ctc=1.9048 phonetic=nan rnnt=nan consistency=nan lr=1.609e-03 frames_per_s=33097 peak_gib=16.38 splits=1 elapsed_s=1104
+2026-10-23 18:22:31 step=425 epoch=4 loss=1.9412 ctc=1.9412 phonetic=nan rnnt=nan consistency=nan lr=1.502e-03 frames_per_s=32550 peak_gib=16.38 splits=1 elapsed_s=1175
+2026-10-23 18:23:44 step=450 epoch=5 loss=1.847 ctc=1.847 phonetic=nan rnnt=nan consistency=nan lr=1.392e-03 frames_per_s=32972 peak_gib=16.38 splits=1 elapsed_s=1249
+2026-10-23 18:24:40 step=475 epoch=5 loss=1.8536 ctc=1.8536 phonetic=nan rnnt=nan consistency=nan lr=1.281e-03 frames_per_s=33067 peak_gib=16.38 splits=1 elapsed_s=1305
+2026-10-23 18:25:57 step=500 epoch=5 loss=1.7895 ctc=1.7895 phonetic=nan rnnt=nan consistency=nan lr=1.170e-03 frames_per_s=32810 peak_gib=16.38 splits=1 elapsed_s=1382
+2026-10-23 18:27:08 step=525 epoch=5 loss=1.9278 ctc=1.9278 phonetic=nan rnnt=nan consistency=nan lr=1.059e-03 frames_per_s=32746 peak_gib=16.38 splits=1 elapsed_s=1452
+2026-10-23 18:28:11 step=550 epoch=6 loss=1.7622 ctc=1.7622 phonetic=nan rnnt=nan consistency=nan lr=9.506e-04 frames_per_s=33065 peak_gib=16.38 splits=1 elapsed_s=1516
+2026-10-23 18:29:22 step=575 epoch=6 loss=1.8116 ctc=1.8116 phonetic=nan rnnt=nan consistency=nan lr=8.447e-04 frames_per_s=32664 peak_gib=16.38 splits=1 elapsed_s=1586
+2026-10-23 18:30:33 step=600 epoch=6 loss=1.7923 ctc=1.7923 phonetic=nan rnnt=nan consistency=nan lr=7.426e-04 frames_per_s=33094 peak_gib=16.38 splits=1 elapsed_s=1658
+2026-10-23 18:31:39 step=625 epoch=7 loss=1.7147 ctc=1.7147 phonetic=nan rnnt=nan consistency=nan lr=6.454e-04 frames_per_s=33163 peak_gib=16.38 splits=1 elapsed_s=1724
+2026-10-23 18:32:49 step=650 epoch=7 loss=1.7039 ctc=1.7039 phonetic=nan rnnt=nan consistency=nan lr=5.541e-04 frames_per_s=33238 peak_gib=16.38 splits=1 elapsed_s=1793
+2026-10-23 18:33:54 step=675 epoch=7 loss=1.7229 ctc=1.7229 phonetic=nan rnnt=nan consistency=nan lr=4.695e-04 frames_per_s=32704 peak_gib=16.38 splits=1 elapsed_s=1858
+2026-10-23 18:35:03 step=700 epoch=7 loss=1.8135 ctc=1.8135 phonetic=nan rnnt=nan consistency=nan lr=3.925e-04 frames_per_s=33012 peak_gib=16.38 splits=1 elapsed_s=1928
+2026-10-23 18:36:17 step=725 epoch=8 loss=1.7096 ctc=1.7096 phonetic=nan rnnt=nan consistency=nan lr=3.239e-04 frames_per_s=32665 peak_gib=16.38 splits=1 elapsed_s=2001
+2026-10-23 18:37:26 step=750 epoch=8 loss=1.7223 ctc=1.7223 phonetic=nan rnnt=nan consistency=nan lr=2.643e-04 frames_per_s=32940 peak_gib=16.38 splits=1 elapsed_s=2071
+2026-10-23 18:38:33 step=775 epoch=8 loss=1.6897 ctc=1.6897 phonetic=nan rnnt=nan consistency=nan lr=2.142e-04 frames_per_s=32821 peak_gib=16.38 splits=1 elapsed_s=2137
+2026-10-23 18:39:44 step=800 epoch=9 loss=1.6139 ctc=1.6139 phonetic=nan rnnt=nan consistency=nan lr=1.743e-04 frames_per_s=33069 peak_gib=16.38 splits=1 elapsed_s=2208
+2026-10-23 18:40:42 step=825 epoch=9 loss=1.7338 ctc=1.7338 phonetic=nan rnnt=nan consistency=nan lr=1.448e-04 frames_per_s=32678 peak_gib=16.38 splits=1 elapsed_s=2266
+2026-10-23 18:41:54 step=850 epoch=9 loss=1.6977 ctc=1.6977 phonetic=nan rnnt=nan consistency=nan lr=1.262e-04 frames_per_s=33133 peak_gib=16.38 splits=1 elapsed_s=2339
+2026-10-23 18:43:03 step=875 epoch=9 loss=1.696 ctc=1.696 phonetic=nan rnnt=nan consistency=nan lr=1.184e-04 frames_per_s=33081 peak_gib=16.38 splits=1 elapsed_s=2408
+2026-10-23 18:43:17 step=880 epoch=9 loss=1.6326 ctc=1.6326 phonetic=nan rnnt=nan consistency=nan lr=1.182e-04 frames_per_s=33053 peak_gib=16.38 splits=1 elapsed_s=2422
+2026-10-23 18:43:18 GPU utilization: mean 98%, at or above 80% for 97% of 471 samples, peak memory 22560 MiB

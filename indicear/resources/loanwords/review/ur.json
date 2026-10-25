@@ -1,0 +1,814 @@
+{
+ "lang": "ur",
+ "words": 97176,
+ "rewrites": 2993,
+ "per_1000_words": 30.8,
+ "types": 551,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "میڈیا",
+   "en": "media",
+   "path": "lexicon",
+   "row": 6933,
+   "context": "بھارتی میڈیا پر اس سے قبل",
+   "verdict": "correct"
+  },
+  {
+   "native": "ہیلتھ",
+   "en": "health",
+   "path": "lexicon",
+   "row": 715,
+   "context": "کے لئے انشورنس اور ہیلتھ کارڈز لا رہے ہیں",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسکول",
+   "en": "school",
+   "path": "lexicon",
+   "row": 7789,
+   "context": "پری اسکول کے بچوں کی تعلیم",
+   "verdict": "correct"
+  },
+  {
+   "native": "سروس",
+   "en": "service",
+   "path": "lexicon",
+   "row": 817,
+   "context": "وسطی میں اوبر ٹیکسی سروس جاری رکھی جائے گی",
+   "verdict": "correct"
+  },
+  {
+   "native": "میڈیکل",
+   "en": "medical",
+   "path": "lexicon",
+   "row": 148,
+   "context": "جلوس کے راستوں میں میڈیکل کیمپ بھی لگائے جائیں",
+   "verdict": "correct"
+  },
+  {
+   "native": "ووڈ",
+   "en": "wood",
+   "path": "lexicon",
+   "row": 3552,
+   "context": "ہالی ووڈ اداکارہ سے برطانوی شہزادہ",
+   "verdict": "wrong",
+   "note": "ہالی ووڈ = Hollywood: rewriting the second half gives 'ہالی wood'"
+  },
+  {
+   "native": "ٹائیگر",
+   "en": "tiger",
+   "path": "lexicon",
+   "row": 7701,
+   "context": "ٹائیگر کے ٹی وی ڈیبٹ",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسکول",
+   "en": "school",
+   "path": "lexicon",
+   "row": 2288,
+   "context": "سملتلارہائشی اسکول میں داخلہ کےلئے پی",
+   "verdict": "correct"
+  },
+  {
+   "native": "فون",
+   "en": "phone",
+   "path": "lexicon",
+   "row": 8307,
+   "context": "ایک چمڑے فون کیس سجانے کے لئے",
+   "verdict": "correct"
+  },
+  {
+   "native": "نیشنل",
+   "en": "national",
+   "path": "lexicon",
+   "row": 8076,
+   "context": "نیشنل توحید جماعت پر حملوں",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسٹیشن",
+   "en": "station",
+   "path": "lexicon",
+   "row": 6497,
+   "context": "ٹنڈو جان محمد ریلوے اسٹیشن ٹنڈو جان محمد میں",
+   "verdict": "correct"
+  },
+  {
+   "native": "فورس",
+   "en": "force",
+   "path": "lexicon",
+   "row": 1452,
+   "context": "لیگ کا مشترکہ فوجی فورس کی تشکیل پر اتفاق",
+   "verdict": "correct"
+  },
+  {
+   "native": "رپورٹ",
+   "en": "report",
+   "path": "lexicon",
+   "row": 634,
+   "context": "ہانسی پولیس سے اسٹیٹس رپورٹ طلب کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "اکتوبر",
+   "en": "october",
+   "path": "lexicon",
+   "row": 5051,
+   "context": "پیپلز پارٹی نے اکتوبر میں کراچی میں ایک",
+   "verdict": "correct"
+  },
+  {
+   "native": "لائن",
+   "en": "line",
+   "path": "lexicon",
+   "row": 7018,
+   "context": "چاہتی سدھو کو سائیڈ لائن",
+   "verdict": "correct"
+  },
+  {
+   "native": "پریکٹس",
+   "en": "practice",
+   "path": "lexicon",
+   "row": 7484,
+   "context": "کی پیشہ ورانہ مہارت پریکٹس جعلی ہے جانتا ہے",
+   "verdict": "correct"
+  },
+  {
+   "native": "الیکشن",
+   "en": "election",
+   "path": "lexicon",
+   "row": 5784,
+   "context": "عمران خان کے مقابل الیکشن لڑنے کا اعلان",
+   "verdict": "correct"
+  },
+  {
+   "native": "سپر",
+   "en": "super",
+   "path": "lexicon",
+   "row": 7794,
+   "context": "سریش رائنا نے چنئی سپر کنگز کو فتح دلوائی",
+   "verdict": "correct"
+  },
+  {
+   "native": "اینٹی",
+   "en": "anti",
+   "path": "lexicon",
+   "row": 2373,
+   "context": "بنیادی طور پر دو اینٹی وائرل ادویات لوپیناویر اور",
+   "verdict": "correct"
+  },
+  {
+   "native": "اینٹی",
+   "en": "anti",
+   "path": "lexicon",
+   "row": 5003,
+   "context": "اینٹی کیفے کے طور پر",
+   "verdict": "correct"
+  },
+  {
+   "native": "روم",
+   "en": "room",
+   "path": "lexicon",
+   "row": 4305,
+   "context": "روم میں ایک شخص پوپ",
+   "verdict": "wrong",
+   "note": "روم = Rome (with the Pope), not 'room'"
+  },
+  {
+   "native": "پولیس",
+   "en": "police",
+   "path": "lexicon",
+   "row": 4466,
+   "context": "جمیکا پولیس نے ابتدا میں کہا",
+   "verdict": "correct"
+  },
+  {
+   "native": "مسٹر",
+   "en": "mister",
+   "path": "lexicon",
+   "row": 4841,
+   "context": "مسٹر بائڈن کو خارجہ پالیسی",
+   "verdict": "correct"
+  },
+  {
+   "native": "ٹورنامنٹ",
+   "en": "tournament",
+   "path": "lexicon",
+   "row": 7188,
+   "context": "بیگھا پکری برانواں کرکٹ ٹورنامنٹ",
+   "verdict": "correct"
+  },
+  {
+   "native": "گیمز",
+   "en": "games",
+   "path": "lexicon",
+   "row": 5821,
+   "context": "کوبرٹین نے نیو اولمپک گیمز کی تجویز کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "بورڈ",
+   "en": "board",
+   "path": "lexicon",
+   "row": 2916,
+   "context": "نوجوانوں کے لیے وقف بورڈ کے تربیتی کورسیس",
+   "verdict": "correct"
+  },
+  {
+   "native": "ڈیٹا",
+   "en": "data",
+   "path": "lexicon",
+   "row": 8412,
+   "context": "پر ریسرچ کا عالمی ڈیٹا بیس بنانے کا مطالبہ",
+   "verdict": "correct"
+  },
+  {
+   "native": "وائرس",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 4404,
+   "context": "کورونا وائرس سے متعلق غلط معلومات",
+   "verdict": "correct"
+  },
+  {
+   "native": "میڈیا",
+   "en": "media",
+   "path": "lexicon",
+   "row": 3400,
+   "context": "کے انتظام پر نیا میڈیا کا اثر",
+   "verdict": "correct"
+  },
+  {
+   "native": "فیلڈ",
+   "en": "field",
+   "path": "lexicon",
+   "row": 647,
+   "context": "ادریس خٹک کے خلاف فیلڈ جنرل کورٹ مارشل کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "کیپٹن",
+   "en": "captain",
+   "path": "lexicon",
+   "row": 8145,
+   "context": "کیپٹن دیپک ساٹھے ایئر فورس",
+   "verdict": "correct"
+  },
+  {
+   "native": "ڈسپلے",
+   "en": "display",
+   "path": "lexicon",
+   "row": 2342,
+   "context": "ڈسپلے کے جائزے ہمیں ایک",
+   "verdict": "correct"
+  },
+  {
+   "native": "ویب",
+   "en": "web",
+   "path": "lexicon",
+   "row": 4197,
+   "context": "کمپنی کی ویب سائٹ اور مصنوعات کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "پرائمری",
+   "en": "primary",
+   "path": "lexicon",
+   "row": 2353,
+   "context": "اور ٹرمپ کی نیویارک پرائمری انتخابات میں بھی کامیابی",
+   "verdict": "correct"
+  },
+  {
+   "native": "سکیورٹی",
+   "en": "security",
+   "path": "lexicon",
+   "row": 29,
+   "context": "سٹیڈیم کراچی کے اردگرد سکیورٹی کے سخت انتظامات کیے",
+   "verdict": "correct"
+  },
+  {
+   "native": "پولیس",
+   "en": "police",
+   "path": "lexicon",
+   "row": 7545,
+   "context": "مشتعل بھیڑ نے پولیس کے سامنے کی گاڑیوں",
+   "verdict": "correct"
+  },
+  {
+   "native": "یونیورسٹی",
+   "en": "university",
+   "path": "lexicon",
+   "row": 8021,
+   "context": "کیجریوال کی دہلی یونیورسٹی میں مقامی طلبہ کے",
+   "verdict": "correct"
+  },
+  {
+   "native": "ایجوکیشن",
+   "en": "education",
+   "path": "lexicon",
+   "row": 1749,
+   "context": "ڈائریکٹر سکول ایجوکیشن کشمیر ڈاکٹر جی این",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسمبلی",
+   "en": "assembly",
+   "path": "lexicon",
+   "row": 1187,
+   "context": "کرناٹک اسمبلی کے نومنتخب ارکان اسمبلی",
+   "verdict": "correct"
+  },
+  {
+   "native": "گروپ",
+   "en": "group",
+   "path": "lexicon",
+   "row": 5065,
+   "context": "حملے کیلئے قومی توحید گروپ پر معلومات دستیاب",
+   "verdict": "correct"
+  },
+  {
+   "native": "رپورٹ",
+   "en": "report",
+   "path": "lexicon",
+   "row": 6459,
+   "context": "رپورٹ کے مطابق ہزاروں قیدی",
+   "verdict": "correct"
+  },
+  {
+   "native": "انٹرویو",
+   "en": "interview",
+   "path": "lexicon",
+   "row": 7697,
+   "context": "ڈونلڈ ٹرمپ کے انٹرویو پر انگیلا میرکل کا",
+   "verdict": "correct"
+  },
+  {
+   "native": "پوزیشن",
+   "en": "position",
+   "path": "lexicon",
+   "row": 2482,
+   "context": "نےعالمی مقابلے میں دوسری پوزیشن حاصل کرلی",
+   "verdict": "correct"
+  },
+  {
+   "native": "کرکٹ",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 5614,
+   "context": "پاکستان بھارت کرکٹ شائقین کو میچ کا",
+   "verdict": "correct"
+  },
+  {
+   "native": "پلس",
+   "en": "plus",
+   "path": "lexicon",
+   "row": 6071,
+   "context": "مضمون نگار ودیا پتی پلس ٹو ہائی اسکول بسفی",
+   "verdict": "correct"
+  },
+  {
+   "native": "سیکٹر",
+   "en": "sector",
+   "path": "lexicon",
+   "row": 7441,
+   "context": "محشر تک وہ چھمب سیکٹر کشمیری",
+   "verdict": "correct"
+  },
+  {
+   "native": "نوکیا",
+   "en": "nokia",
+   "path": "lexicon",
+   "row": 3910,
+   "context": "اسمارٹ فون مارکیٹ میں نوکیا کی شاندار انٹری",
+   "verdict": "correct"
+  },
+  {
+   "native": "ووڈ",
+   "en": "wood",
+   "path": "lexicon",
+   "row": 3373,
+   "context": "ہالی ووڈ اداکار ٹام ہینکس اور",
+   "verdict": "wrong",
+   "note": "ہالی ووڈ = Hollywood (split name)"
+  },
+  {
+   "native": "پولیس",
+   "en": "police",
+   "path": "lexicon",
+   "row": 2002,
+   "context": "صدر کی فرگوسن محکمہ پولیس پر شدید نکتہ چینی",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسمبلی",
+   "en": "assembly",
+   "path": "lexicon",
+   "row": 3643,
+   "context": "صوبائی اسمبلی کے الیکشن لڑے مگرحالات",
+   "verdict": "correct"
+  },
+  {
+   "native": "گیمز",
+   "en": "games",
+   "path": "lexicon",
+   "row": 6619,
+   "context": "ویڈیو گیمز وژن کو بہتر بنانے",
+   "verdict": "correct"
+  },
+  {
+   "native": "گفٹ",
+   "en": "gift",
+   "path": "lexicon",
+   "row": 7145,
+   "context": "گولف کے لئے گفٹ تحفے جو سب کچھ",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسٹیٹ",
+   "en": "state",
+   "path": "lexicon",
+   "row": 7493,
+   "context": "ریل اسٹیٹ ایجنٹس کے لئے ریل",
+   "verdict": "correct"
+  },
+  {
+   "native": "اپیل",
+   "en": "appeal",
+   "path": "lexicon",
+   "row": 4415,
+   "context": "کے لئے بھی کی اپیل",
+   "verdict": "correct"
+  },
+  {
+   "native": "نوبل",
+   "en": "noble",
+   "path": "lexicon",
+   "row": 2884,
+   "context": "ابن الوقت نے نوبل صاحب کے ساتھ میز",
+   "verdict": "correct"
+  },
+  {
+   "native": "بورڈ",
+   "en": "board",
+   "path": "lexicon",
+   "row": 8651,
+   "context": "جے کے بورڈ کی جانب سے گیارہویں",
+   "verdict": "correct"
+  },
+  {
+   "native": "رجسٹریشن",
+   "en": "registration",
+   "path": "lexicon",
+   "row": 577,
+   "context": "رجسٹریشن پنشن کے فوائد کے",
+   "verdict": "correct"
+  },
+  {
+   "native": "موٹر",
+   "en": "motor",
+   "path": "lexicon",
+   "row": 2056,
+   "context": "لنگوٹ سے سائیکل یا موٹر سائیکل بنانے پر",
+   "verdict": "correct"
+  },
+  {
+   "native": "کمپیوٹر",
+   "en": "computer",
+   "path": "lexicon",
+   "row": 4863,
+   "context": "نوٹ بک ایک روایتی کمپیوٹر کا ایک چھوٹا کاپی",
+   "verdict": "correct"
+  },
+  {
+   "native": "کورٹ",
+   "en": "court",
+   "path": "lexicon",
+   "row": 2523,
+   "context": "اے ایم یو کورٹ میں دو اراکین کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "ستمبر",
+   "en": "september",
+   "path": "lexicon",
+   "row": 5865,
+   "context": "یکم ستمبر سے ملک بھر میں",
+   "verdict": "correct"
+  },
+  {
+   "native": "سائز",
+   "en": "size",
+   "path": "lexicon",
+   "row": 1386,
+   "context": "لئے اس وجہ سے سائز کی ایک وسیع رینج",
+   "verdict": "correct"
+  },
+  {
+   "native": "ٹریفک",
+   "en": "traffic",
+   "path": "lexicon",
+   "row": 3030,
+   "context": "شہر سرینگر کے ٹریفک نظام میں بہتری لانے",
+   "verdict": "correct"
+  },
+  {
+   "native": "چیلنجز",
+   "en": "challenges",
+   "path": "lexicon",
+   "row": 6649,
+   "context": "زیراہتمام لڑکیوں کاتحفظ اوردرپیش چیلنجز کے موضوع پرکانفرنس",
+   "verdict": "correct"
+  },
+  {
+   "native": "کوچ",
+   "en": "coach",
+   "path": "lexicon",
+   "row": 1393,
+   "context": "چیف سلیکٹر اور ہیڈ کوچ کی تنخواہ سے محروم",
+   "verdict": "correct"
+  },
+  {
+   "native": "ٹریفک",
+   "en": "traffic",
+   "path": "lexicon",
+   "row": 5136,
+   "context": "ہے کہ راب میں ٹریفک حادثے پڑے گا",
+   "verdict": "correct"
+  },
+  {
+   "native": "ڈراپ",
+   "en": "drop",
+   "path": "lexicon",
+   "row": 6786,
+   "context": "یہ ڈراپ ڈاون وڈتھ پراپرٹی کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "کرکٹ",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 2967,
+   "context": "نے حکم عدولی پرزمبابوے کرکٹ بورڈ کومعطل کردیا",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسمبلی",
+   "en": "assembly",
+   "path": "lexicon",
+   "row": 5526,
+   "context": "رکن اسمبلی اور مبصر کی موجودگی",
+   "verdict": "correct"
+  },
+  {
+   "native": "سیکیورٹی",
+   "en": "security",
+   "path": "lexicon",
+   "row": 7632,
+   "context": "افغان سیکیورٹی اہل کار کی فائرنگ",
+   "verdict": "correct"
+  },
+  {
+   "native": "پولیس",
+   "en": "police",
+   "path": "lexicon",
+   "row": 366,
+   "context": "معینہ بھوک ہڑتال کو پولیس نے اجازت نہیں دی",
+   "verdict": "correct"
+  },
+  {
+   "native": "ہوٹل",
+   "en": "hotel",
+   "path": "lexicon",
+   "row": 338,
+   "context": "اور تمام مہمانوں نے ہوٹل کے بہترین مقام کا",
+   "verdict": "correct"
+  },
+  {
+   "native": "میٹرو",
+   "en": "metro",
+   "path": "lexicon",
+   "row": 8265,
+   "context": "پرانے شہر میں میٹرو ریل پر چیف منسٹر",
+   "verdict": "correct"
+  },
+  {
+   "native": "پولیس",
+   "en": "police",
+   "path": "lexicon",
+   "row": 542,
+   "context": "مذہب کے مجرم پر پولیس اہلکار کی فائرنگ",
+   "verdict": "correct"
+  },
+  {
+   "native": "کنٹرول",
+   "en": "control",
+   "path": "lexicon",
+   "row": 4761,
+   "context": "ذرائع کو محدود کرکے کنٹرول کیا جا سکتا ہے",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسمبلی",
+   "en": "assembly",
+   "path": "lexicon",
+   "row": 1742,
+   "context": "کیرالا کی طرح تلنگانہ اسمبلی میں شہریت قانون کے",
+   "verdict": "correct"
+  },
+  {
+   "native": "ریسرچ",
+   "en": "research",
+   "path": "lexicon",
+   "row": 8412,
+   "context": "جین کی تبدیلیوں پر ریسرچ کا عالمی ڈیٹا بیس",
+   "verdict": "correct"
+  },
+  {
+   "native": "وائرس",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 6850,
+   "context": "کورونا وائرس سے نمٹنے سعودی عرب",
+   "verdict": "correct"
+  },
+  {
+   "native": "بلاگز",
+   "en": "blogs",
+   "path": "lexicon",
+   "row": 5868,
+   "context": "گوگل نے فحش بلاگز تک رسائی روکنے کا",
+   "verdict": "correct"
+  },
+  {
+   "native": "میڈیا",
+   "en": "media",
+   "path": "lexicon",
+   "row": 4171,
+   "context": "سوشل میڈیا پر ہراساں کرنے کی",
+   "verdict": "correct"
+  },
+  {
+   "native": "وائرس",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 2322,
+   "context": "وہ مقامات جو کرونا وائرس کی وجہ سے خالی",
+   "verdict": "correct"
+  },
+  {
+   "native": "میگزین",
+   "en": "magazine",
+   "path": "lexicon",
+   "row": 5958,
+   "context": "وجیندر کمار نے میگزین کے لیے ماڈلنگ بھی",
+   "verdict": "correct"
+  },
+  {
+   "native": "ڈیزائن",
+   "en": "design",
+   "path": "lexicon",
+   "row": 2869,
+   "context": "چار لوگوں کے لئے ڈیزائن کمرے ہیں",
+   "verdict": "correct"
+  },
+  {
+   "native": "ڈیولپمنٹ",
+   "en": "development",
+   "path": "lexicon",
+   "row": 2556,
+   "context": "ریسٹورانٹ مینیجر بزنس ڈیولپمنٹ ریستوران کے مینیجر مارکیٹنگ",
+   "verdict": "correct"
+  },
+  {
+   "native": "بانڈ",
+   "en": "bond",
+   "path": "lexicon",
+   "row": 8099,
+   "context": "ہیکر حملے میں نئی بانڈ فلم کا سکرپٹ بھی",
+   "verdict": "correct"
+  },
+  {
+   "native": "مارکیٹ",
+   "en": "market",
+   "path": "lexicon",
+   "row": 1167,
+   "context": "مکمل روزگار اور لیبر مارکیٹ ریگولیٹری میں ریاست کا",
+   "verdict": "correct"
+  },
+  {
+   "native": "سکیورٹی",
+   "en": "security",
+   "path": "lexicon",
+   "row": 1219,
+   "context": "کے قریب دھماکے بعد سکیورٹی انتہائی سخت",
+   "verdict": "correct"
+  },
+  {
+   "native": "پالیسی",
+   "en": "policy",
+   "path": "lexicon",
+   "row": 5137,
+   "context": "نئی حج پالیسی کا مسودہ مختار عباس",
+   "verdict": "correct"
+  },
+  {
+   "native": "گوگل",
+   "en": "google",
+   "path": "lexicon",
+   "row": 5868,
+   "context": "گوگل نے فحش بلاگز تک",
+   "verdict": "correct"
+  },
+  {
+   "native": "پراپرٹی",
+   "en": "property",
+   "path": "lexicon",
+   "row": 130,
+   "context": "کے پی حکومت کا پراپرٹی ٹیکس نظام کو انٹرنیٹ",
+   "verdict": "correct"
+  },
+  {
+   "native": "سائٹ",
+   "en": "site",
+   "path": "lexicon",
+   "row": 6341,
+   "context": "ایک باغ کی ویب سائٹ پر چینٹی کے خلاف",
+   "verdict": "correct"
+  },
+  {
+   "native": "ویڈیوز",
+   "en": "videos",
+   "path": "lexicon",
+   "row": 3780,
+   "context": "کی خواتین کی خفیہ ویڈیوز بنانے کا الزام",
+   "verdict": "correct"
+  },
+  {
+   "native": "شٹل",
+   "en": "shuttle",
+   "path": "lexicon",
+   "row": 3186,
+   "context": "شٹل کی کس طرح سے",
+   "verdict": "correct"
+  },
+  {
+   "native": "فیڈرل",
+   "en": "federal",
+   "path": "lexicon",
+   "row": 7572,
+   "context": "فلورنس فیڈرل پینیٹنشری کمپلیکس میں اس",
+   "verdict": "correct"
+  },
+  {
+   "native": "پلیئر",
+   "en": "player",
+   "path": "lexicon",
+   "row": 8031,
+   "context": "معروف اولمپیئن ہاکی پلیئر اختر رسول عالمی وبا",
+   "verdict": "correct"
+  },
+  {
+   "native": "وائرس",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 3741,
+   "context": "اوٹنور میں کرونا وائرس سے متاثرہ مثبت کیس",
+   "verdict": "correct"
+  },
+  {
+   "native": "شوگر",
+   "en": "sugar",
+   "path": "lexicon",
+   "row": 498,
+   "context": "ہونیوالے شوہر نک جونز شوگر کی بیماری میں مبتلا",
+   "verdict": "correct"
+  },
+  {
+   "native": "اسمبلی",
+   "en": "assembly",
+   "path": "lexicon",
+   "row": 8360,
+   "context": "پاکستان قومی اسمبلی کے ڈپٹی اسپیکر کا",
+   "verdict": "correct"
+  },
+  {
+   "native": "پارٹی",
+   "en": "party",
+   "path": "lexicon",
+   "row": 6667,
+   "context": "پارٹی کی جانب سے ہر",
+   "verdict": "correct"
+  },
+  {
+   "native": "مارکیٹنگ",
+   "en": "marketing",
+   "path": "lexicon",
+   "row": 3692,
+   "context": "مارکیٹنگ کنسلٹنٹس کے لئے کلیدی",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 97.0
+}

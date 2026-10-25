@@ -1,0 +1,39 @@
+{
+  "kind": "eval",
+  "system": "indicconformer-ctc",
+  "set": "kathbath_noisy_test_unknown_ta",
+  "condition": null,
+  "notes": "",
+  "utterances": 300,
+  "hours": 0.592,
+  "metrics": {
+    "ctc": {
+      "ta": {
+        "wer": 24.69,
+        "cer": 4.5,
+        "utterances": 300,
+        "words": 3155,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 24.69,
+        "cer_script_normalised": 4.5,
+        "rows_with_alternative_ref": 25,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "hours": 0.592
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ai4bharat/indic-conformer-600m-multilingual",
+    "revision": "2a77d305038dfc502fd9464e7d028b90381976cb",
+    "decoder": "ctc",
+    "notes": "ONNX via the repo's model_onnx.py; English unsupported",
+    "languages_scored": [
+      "ta"
+    ]
+  }
+}

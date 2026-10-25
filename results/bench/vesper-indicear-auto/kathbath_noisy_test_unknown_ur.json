@@ -1,0 +1,131 @@
+{
+  "ur": {
+    "wer": 88.23,
+    "cer": 71.48,
+    "utterances": 300,
+    "words": 3272,
+    "script_error_rate": 75.26,
+    "wer_script_normalised": 85.97,
+    "cer_script_normalised": 68.02,
+    "rows_with_alternative_ref": 97,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.492
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 29.67,
+    "macro_f1": 45.76,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 29.67,
+        "f1": 45.76,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ur": {
+        "hi": 204,
+        "mr": 1,
+        "pa": 6,
+        "ur": 89
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 204,
+        "hi_utterances": 0,
+        "ur_utterances": 300,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 68.0
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 75,
+        "accuracy": 20.0
+      },
+      "5-10s": {
+        "utterances": 225,
+        "accuracy": 32.89
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_ur",
+  "utterances": 300,
+  "hours": 0.49,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 286,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ur/noisy_test_unknown/844424930922097-376-f",
+      "constrained": "यान अल्वाम cricket मेंिस्त की नुम देनाब है",
+      "unconstrained": "यान अल्ਵਾम cricket ਨੇिस्त की नुमਿੰਦ ان ਦੇਨਾاب ਹੈ",
+      "hinted": "n aام cricket میں ist کی نم ان دیاب ہے"
+    },
+    {
+      "key": "kathbath_test/ur/noisy_test_unknown/844424931074800-69-m",
+      "constrained": "प शहरियों की record तादाद बर्तनतानियाँ छोड़ रही है",
+      "unconstrained": "ुूरोਪ शहरियों की record तादाद बर्तनतानियाँ छोड़ڑ रही है",
+      "hinted": "شہر کی recordعداد برانیہوڑ رہی ہے"
+    },
+    {
+      "key": "kathbath_test/ur/noisy_test_unknown/844424930630499-376-f",
+      "constrained": "secondنے کے لیے اپنی پہ زبان کا استعمال کریں",
+      "unconstrained": "ੈੈਂ ਸਿੱਖने के लिए अपनी पह زبان का استعمال کریں",
+      "hinted": "secondنے کے لیے اپنی پہ زبان کا استعمال کریں"
+    },
+    {
+      "key": "kathbath_test/ur/noisy_test_unknown/844424932515672-563-f",
+      "constrained": "म मुत औरिक का इ और पाकिस्तन को सब काु",
+      "unconstrained": "ਅਕਵਾਮੀ ਮੁੱਤਹਿਦਾ और ਅਮਰੀਕਾ का इ और पाकिस्तन को सब काु",
+      "hinted": "اور america india اور pakist کو ص کا"
+    },
+    {
+      "key": "kathbath_test/ur/noisy_test_unknown/844424930818592-376-f",
+      "constrained": "america کا iran میں سہاف کےدمے میں شفافیت ق مطالبہ",
+      "unconstrained": "अਮਕਾ का ईरान में सिंहहाफ केدمے میں شفافیت ق مطالبہ",
+      "hinted": "america کا iran میں سہاف کےدمے میں شفافیت ق مطالبہ"
+    }
+  ]
+}

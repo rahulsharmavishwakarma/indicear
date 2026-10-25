@@ -1,0 +1,811 @@
+{
+ "lang": "ta",
+ "words": 153319,
+ "rewrites": 1253,
+ "per_1000_words": 8.17,
+ "types": 373,
+ "sampled": 100,
+ "sample": [
+  {
+   "native": "கிளப்",
+   "en": "club",
+   "path": "lexicon",
+   "row": 7539,
+   "context": "லாஸ் ஏஞ்சல்ஸ் ஃபிகர் ஸ்கேட்டிங் கிளப் யுஎஸ் தேசிய தேசிய ஆண்கள்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஸ்மார்ட்",
+   "en": "smart",
+   "path": "lexicon",
+   "row": 3240,
+   "context": "ஐ ஸ்மார்ட் சங்கர் படத்தின் தயாரிப்பாளரான நடிகை",
+   "verdict": "correct"
+  },
+  {
+   "native": "வீடியோ",
+   "en": "video",
+   "path": "lexicon",
+   "row": 7771,
+   "context": "சிறப்பான அம்சம் இதில் தரப்பட்டுள்ள வீடியோ விளக்கங்களாகும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "அக்டோபர்",
+   "en": "october",
+   "path": "lexicon",
+   "row": 12233,
+   "context": "ஒவ்வொரு ஆண்டும் செப்டம்பர் மற்றும் அக்டோபர் மாதங்களில் பாசித்திரள் தோன்றுகிறன்றன",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஸ்கூல்",
+   "en": "school",
+   "path": "lexicon",
+   "row": 11478,
+   "context": "பின்னர் யேல் பல்கலைக்கழகத்தில் உள்ள ஸ்கூல் ஆப் டிராமாவில் பயின்றார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 9558,
+   "context": "கொரோனா தொற்று கட்டுப்படுத்தும் வகையில் காட்டுமன்னார்கோவில்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஆட்டோ",
+   "en": "auto",
+   "path": "lexicon",
+   "row": 3870,
+   "context": "தங்கச் சங்கிலியை உரியவரிடம் ஒப்படைத்த ஆட்டோ ஓட்டுநருக்கு பாராட்டு",
+   "verdict": "correct"
+  },
+  {
+   "native": "டெஸ்ட்",
+   "en": "test",
+   "path": "lexicon",
+   "row": 8359,
+   "context": "ஒரு கோடி ரூபாய் கார் டெஸ்ட் டிரைவில் டிரைவ்ஸ்பார்க் டீம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 9679,
+   "context": "தமிழகத்தில் மாவட்டவாரியாக கொரோனா பாதிப்பு குறித்த தகவலை இந்த",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஃபில்டர்",
+   "en": "filter",
+   "path": "lexicon",
+   "row": 13666,
+   "context": "மூன்றாவது வகையில் சில்லுவில் பேயர் ஃபில்டர் அல்லாமல் முதல் இரண்டு வகைகளும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "மேரேஜ்",
+   "en": "marriage",
+   "path": "lexicon",
+   "row": 6422,
+   "context": "மார்க்கெட் இருக்கும் போதே மேரேஜ் வதந்தியை கிளப்புகிறார்களே என்ற கடுப்புதான்",
+   "verdict": "correct"
+  },
+  {
+   "native": "டெஸ்ட்",
+   "en": "test",
+   "path": "lexicon",
+   "row": 5428,
+   "context": "டெஸ்ட் கிரிக்கெட்டில் அதிக இடது கை",
+   "verdict": "correct"
+  },
+  {
+   "native": "சிக்கன்",
+   "en": "chicken",
+   "path": "lexicon",
+   "row": 9311,
+   "context": "இப்போது அந்த சிக்கன் விங்ஸை உண்பதால் ஏன் இவ்வளவு",
+   "verdict": "correct"
+  },
+  {
+   "native": "டாக்டர்",
+   "en": "doctor",
+   "path": "lexicon",
+   "row": 5577,
+   "context": "தமிழகம் வெண்மை புரட்சியின் வித்தகரான டாக்டர் குரியனுக்கு தன்னுடைய மரியாதை கலந்த",
+   "verdict": "correct"
+  },
+  {
+   "native": "பெட்ரோல்",
+   "en": "petrol",
+   "path": "lexicon",
+   "row": 10719,
+   "context": "பெட்ரோல் மற்றும் சமையல் எண்ணெய் அதிகமாக",
+   "verdict": "correct"
+  },
+  {
+   "native": "கலெக்டர்",
+   "en": "collector",
+   "path": "lexicon",
+   "row": 6109,
+   "context": "பட்டா வழங்கப்படும் ஆய்வு செய்த கலெக்டர் தகவல் பொய்கையில் ரிங்ரோடு அமைக்க",
+   "verdict": "correct"
+  },
+  {
+   "native": "கார்பன்",
+   "en": "carbon",
+   "path": "lexicon",
+   "row": 12006,
+   "context": "அல்லாத கார்பன் சேர்மங்களான கனிம கார்பன் நீரினுள் ஏற்படும் விளைவுகளுக்கு மிகவும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 1336,
+   "context": "கொரோனா தொடங்கி முதல் விவாதத்திலேயே டிரம்பை",
+   "verdict": "correct"
+  },
+  {
+   "native": "மூவிஸ்",
+   "en": "movies",
+   "path": "lexicon",
+   "row": 8619,
+   "context": "வழியாக வந்து போன வேந்தர் மூவிஸ் மதன்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கால்சியம்",
+   "en": "calcium",
+   "path": "lexicon",
+   "row": 10759,
+   "context": "போலோக்னோ கல்லில் இருந்து உற்பத்தியானது கால்சியம் சல்பேட்டு என்ற முடிவுக்கு வந்தார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ரெயில்வே",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 2297,
+   "context": "ஜோலார்பேட்டை பொறுப்பு ரெயில்வே போலீஸ் இன்ஸ்பெக்டர் சுரேஷ் மற்றும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "மில்லியன்",
+   "en": "million",
+   "path": "lexicon",
+   "row": 2424,
+   "context": "மகள் குளிர் இருந்தது இரண்டு மில்லியன் டாலர்கள் இருந்து நெருப்பை மூட்டி",
+   "verdict": "correct"
+  },
+  {
+   "native": "டிசம்பர்",
+   "en": "december",
+   "path": "lexicon",
+   "row": 1869,
+   "context": "ஒவ்வோர் ஆண்டும் டிசம்பர் மாதத்தில் இந்துக்களுக்கான பிரார்த்தனைக் கூட்டம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "வைரஸ்",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 2093,
+   "context": "அதன் பின்னர் கொரோனா வைரஸ் பாதித்த நபர்கள் தனிமைப்படுத்தப்பட்டு அங்கு",
+   "verdict": "correct"
+  },
+  {
+   "native": "ட்ரோன்",
+   "en": "drone",
+   "path": "lexicon",
+   "row": 5549,
+   "context": "விஐடி வேளாண்மைத்துறை சார்பில் நெற்பயிர்களுக்கு ட்ரோன் மூலம் வேப்ப எண்ணெய் தெளிக்க",
+   "verdict": "correct"
+  },
+  {
+   "native": "மாடல்",
+   "en": "model",
+   "path": "lexicon",
+   "row": 7670,
+   "context": "இந்த மாடல் தொலைக்காட்சியின் திரையை தேவைக்கேற்ப வளைத்து",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 1501,
+   "context": "இந்த படம் கொரோனா ஊரடங்கு முடிந்த பிறகு செப்டம்பர்",
+   "verdict": "correct"
+  },
+  {
+   "native": "மசாஜ்",
+   "en": "massage",
+   "path": "lexicon",
+   "row": 7499,
+   "context": "நன்றாக இந்த சாறை தடவி மசாஜ் செய்வும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 4905,
+   "context": "கொரோனா நோய் பரவுதலை தடுப்பதற்கும் கட்டுப்படுத்தவும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஓவர்",
+   "en": "over",
+   "path": "lexicon",
+   "row": 6011,
+   "context": "நடிகை என்பதால் அவரது கதாபாத்திரத்திற்கு ஓவர் வெயிட் கொடுத்து தன்னை டம்மி",
+   "verdict": "correct"
+  },
+  {
+   "native": "கிரிக்கெட்",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 4434,
+   "context": "பாகிஸ்தான் கிரிக்கெட் அணியின் முன்னாள் கேப்டன் ஷாஹித்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஆன்லைன்",
+   "en": "online",
+   "path": "lexicon",
+   "row": 6443,
+   "context": "ஆசிரியர் பொது இடமாறுல் கலந்தாய்வுக்கு ஆன்லைன் விண்ணப்பம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "வைரஸ்",
+   "en": "virus",
+   "path": "lexicon",
+   "row": 976,
+   "context": "கொரோனா வைரஸ் தொற்று நோயின் காரணமாக புதிய",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஹெல்மெட்",
+   "en": "helmet",
+   "path": "lexicon",
+   "row": 6684,
+   "context": "ஹெல்மெட் இல்லாமல் புதிய இருசக்கர வாகனங்களை",
+   "verdict": "correct"
+  },
+  {
+   "native": "லிஸ்ட்",
+   "en": "list",
+   "path": "lexicon",
+   "row": 3768,
+   "context": "அவரை மாஸ் ஹீரோவாக்கிய திரைப்படங்களின் லிஸ்ட் இதோ",
+   "verdict": "correct"
+  },
+  {
+   "native": "மொபைல்",
+   "en": "mobile",
+   "path": "lexicon",
+   "row": 7796,
+   "context": "அம்மாக்களை வேண்டித்தான் மகன்கள் அந்த மொபைல் போனையே வாங்கியிருப்பாங்க",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஸ்டார்",
+   "en": "star",
+   "path": "lexicon",
+   "row": 8778,
+   "context": "ஸ்டார் பீட்சா என்ற கடையை சென்னை",
+   "verdict": "correct"
+  },
+  {
+   "native": "கேப்டன்",
+   "en": "captain",
+   "path": "lexicon",
+   "row": 6697,
+   "context": "புலிகளுக்காக வணிக கப்பல் இயக்கிய கேப்டன் பிறைசூடி சென்னையில் காலமானார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கஸ்டமைஸ்",
+   "en": "customise",
+   "path": "lexicon",
+   "row": 5775,
+   "context": "பக்கங்களின் தோற்றம் மற்றும் வேலைகளை கஸ்டமைஸ் செய்ய முடியும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ப்ளஸ்",
+   "en": "plus",
+   "path": "lexicon",
+   "row": 6780,
+   "context": "ஐபேட் ப்ரோ மற்றும் ஐபேட் ப்ளஸ் மாடல்களை வெளியிடும் என்று எதிர்பார்க்கலாம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "மொபைல்ஸ்",
+   "en": "mobiles",
+   "path": "lexicon",
+   "row": 6659,
+   "context": "ஆட்டோ மொபைல்ஸ் கண்காட்சி துவங்கியது சாலைகளில் அணிவகுத்து",
+   "verdict": "correct"
+  },
+  {
+   "native": "சினிமா",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 8390,
+   "context": "சினிமா என்ற கலைவடிவத்தினைக் கொண்டு எதையெல்லாம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ரயில்வே",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 8958,
+   "context": "செல்லும் முக்கிய சாலையில் உள்ள ரயில்வே பாலம் உடைந்ததால் அந்தரத்தில் கிடக்கும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கோர்ட்டு",
+   "en": "court",
+   "path": "lexicon",
+   "row": 341,
+   "context": "குழந்தைகளை பணியில் அமர்த்தக்கூடாது சுப்ரீம் கோர்ட்டு தடை",
+   "verdict": "correct"
+  },
+  {
+   "native": "அக்டோபர்",
+   "en": "october",
+   "path": "lexicon",
+   "row": 1501,
+   "context": "முடிந்த பிறகு செப்டம்பர் அல்லது அக்டோபர் மாதத்தில் துவங்கும் என",
+   "verdict": "correct"
+  },
+  {
+   "native": "டிப்ஸ்",
+   "en": "tips",
+   "path": "lexicon",
+   "row": 4105,
+   "context": "மனைவி கேத் மிடில்டனுக்கு எக்சர்சைஸ் டிப்ஸ் கொடுக்கும் இளவரசர் பிலிப்",
+   "verdict": "correct"
+  },
+  {
+   "native": "மார்க்கெட்டிங்",
+   "en": "marketing",
+   "path": "lexicon",
+   "row": 6351,
+   "context": "உங்கள் வீட்டு வியாபாரத்தை கட்டியெழுப்ப மார்க்கெட்டிங் மிக்ஸ் எவ்வாறு பயன்படுத்த வேண்டும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "சினிமா",
+   "en": "cinema",
+   "path": "lexicon",
+   "row": 3527,
+   "context": "இனியும் சினிமா கவர்ச்சியில் மயங்க வேண்டாம் என்று",
+   "verdict": "correct"
+  },
+  {
+   "native": "போலீஸ்",
+   "en": "police",
+   "path": "lexicon",
+   "row": 3658,
+   "context": "செய்தியாளர்களை கைது செய்த மலேசியா போலீஸ்",
+   "verdict": "correct"
+  },
+  {
+   "native": "பட்ஜெட்",
+   "en": "budget",
+   "path": "lexicon",
+   "row": 9511,
+   "context": "நான் ஒரு குறைந்த பட்ஜெட் நிலத்தில் ஒரு வெட்டு விலை",
+   "verdict": "correct"
+  },
+  {
+   "native": "போஸ்டர்",
+   "en": "poster",
+   "path": "lexicon",
+   "row": 482,
+   "context": "இந்த படத்தின் பர்ஸ்ட் லுக் போஸ்டர் வெளியாகியுள்ளது",
+   "verdict": "correct"
+  },
+  {
+   "native": "போஸ்ட்",
+   "en": "post",
+   "path": "lexicon",
+   "row": 3381,
+   "context": "பணத்தை எத்தனை முறை வேண்டுமென்றாலும் போஸ்ட் ஆபீஸில் உள்ள ஏடிஎம்மில் எடுத்துக்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 4526,
+   "context": "அணியின் பயிற்சியாளர் ரவி சாஸ்திரிக்கு கொரோனா தொற்று உறுதி",
+   "verdict": "correct"
+  },
+  {
+   "native": "சேல்ஸ்",
+   "en": "sales",
+   "path": "lexicon",
+   "row": 9584,
+   "context": "ஆன் லைன் தள்ளுபடி சேல்ஸ் பத்திய சின்ன அலெர்ட் ரிப்போர்ட்",
+   "verdict": "correct"
+  },
+  {
+   "native": "நவம்பர்",
+   "en": "november",
+   "path": "lexicon",
+   "row": 4003,
+   "context": "மேலும் இது குறித்த விசாரணையை நவம்பர் முதல் வாரத்தில் தொடங்க உள்ளதாகவும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "அயர்ன்",
+   "en": "iron",
+   "path": "lexicon",
+   "row": 10939,
+   "context": "ஜூனியர் கூறிய மற்றும் நான் அயர்ன் மேன்",
+   "verdict": "correct"
+  },
+  {
+   "native": "வீலர்",
+   "en": "wheeler",
+   "path": "lexicon",
+   "row": 243,
+   "context": "டூ வீலர் மீது கார் மோதி பார்த்திபனுாரில்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ட்விட்டர்",
+   "en": "twitter",
+   "path": "lexicon",
+   "row": 300,
+   "context": "சுந்தரும் ஒரு பதிவில் எனக்கு ட்விட்டர்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கிரிக்கெட்",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 9055,
+   "context": "முழுவதும் கிளப்பில் கொண்டாடிய இளம் கிரிக்கெட் வீரருக்கு நேர்ந்த சோகம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஸ்பின்",
+   "en": "spin",
+   "path": "lexicon",
+   "row": 10503,
+   "context": "ஒரு பௌன்சர் போடுவார் இது ஸ்பின் பௌலர்களிடத்தில் அரிதான ஒன்றாக இருக்கிறது",
+   "verdict": "correct"
+  },
+  {
+   "native": "பட்ஜெட்",
+   "en": "budget",
+   "path": "lexicon",
+   "row": 5869,
+   "context": "உங்கள் பட்ஜெட் மற்றும் பைபிள் படிப்பு தேவைகளுக்கு",
+   "verdict": "correct"
+  },
+  {
+   "native": "மார்க்",
+   "en": "mark",
+   "path": "lexicon",
+   "row": 224,
+   "context": "நாடுகளின் தொடர் குற்றச்சாட்டுகளை அடுத்தே மார்க் வருத்தம் தெரிவித்துள்ளதாக கூறப்படுகிறது",
+   "verdict": "correct"
+  },
+  {
+   "native": "கால்சியம்",
+   "en": "calcium",
+   "path": "lexicon",
+   "row": 12855,
+   "context": "கால்சியம் ஐதராக்சைடை பாஸ்போரிக் அமிலத்துடன் வினைப்படுத்துவதன்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கிரிக்கெட்",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 8456,
+   "context": "பாகிஸ்தான் கிரிக்கெட் வாரியத் தலைவர் பதவியில் இருந்து",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஆன்லைன்",
+   "en": "online",
+   "path": "lexicon",
+   "row": 8425,
+   "context": "வேலூர் மாவட்டம் காட்பாடியில் ஆன்லைன் மூலம் மாற்று மென்பொருளை பயன்படுத்தி",
+   "verdict": "correct"
+  },
+  {
+   "native": "கிரீம்",
+   "en": "cream",
+   "path": "lexicon",
+   "row": 4013,
+   "context": "தூள் கொண்டு வெண்ணெய் ஒரு கிரீம் மற்றும் அமுக்கப்பட்ட பால் எப்படி",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஹில்ஸ்",
+   "en": "hills",
+   "path": "lexicon",
+   "row": 14192,
+   "context": "தெலுங்கு ஊடகங்களின் தலைமையிடகமாக ஜூப்ளி ஹில்ஸ் மாறிவிட்டது",
+   "verdict": "correct"
+  },
+  {
+   "native": "கமெண்ட்",
+   "en": "comment",
+   "path": "lexicon",
+   "row": 9516,
+   "context": "லிஸ்டிலேயே இல்லையே என நெட்டிசன்கள் கமெண்ட் அளித்து வருகின்றனர்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கிங்ஸ்",
+   "en": "kings",
+   "path": "lexicon",
+   "row": 305,
+   "context": "சென்னை சூப்பர் கிங்ஸ் அணிக்காக சேப்பாக்கம் மைதானத்தில் பயிற்சியின்",
+   "verdict": "correct"
+  },
+  {
+   "native": "சூப்பர்",
+   "en": "super",
+   "path": "lexicon",
+   "row": 9858,
+   "context": "சூப்பர் டீலக்ஸ் படப்பிடிப்பு தளத்தில் எடுக்கப்பட்ட",
+   "verdict": "correct"
+  },
+  {
+   "native": "செப்டம்பர்",
+   "en": "september",
+   "path": "lexicon",
+   "row": 12233,
+   "context": "வளைகுடா கடற்பகுதியில் ஒவ்வொரு ஆண்டும் செப்டம்பர் மற்றும் அக்டோபர் மாதங்களில் பாசித்திரள்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கிரிக்கெட்",
+   "en": "cricket",
+   "path": "lexicon",
+   "row": 6118,
+   "context": "ஆஸ்திரேலியா கிரிக்கெட் வீரரின் அதிரடி ஆட்டக்காரர் மேக்ஸ்வெல்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 9327,
+   "context": "இந்தியாவில் மீண்டும் கொரோனா அலை எழும் அபாயம் இருப்பதாக",
+   "verdict": "correct"
+  },
+  {
+   "native": "மில்லியன்",
+   "en": "million",
+   "path": "lexicon",
+   "row": 7410,
+   "context": "வீடுகள் கட்டுதல் அதில் அரை மில்லியன் வீடுகள் கவுன்சில் வீடுகளாகும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கார்பன்",
+   "en": "carbon",
+   "path": "lexicon",
+   "row": 13385,
+   "context": "டைநைட்ரசன் பெண்டாக்சைடை முனைவற்ற கரைப்பான் கார்பன் டெட்ராகுளோரைடுடன் சேர்த்து வினைப்படுத்தினால் பதங்கமாதல்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஜனவரி",
+   "en": "january",
+   "path": "lexicon",
+   "row": 6991,
+   "context": "ஜனவரி மாதத்தில் நிச்சயதார்த்தம் முடிந்த நிலையில்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ரிலீஸ்",
+   "en": "release",
+   "path": "lexicon",
+   "row": 3737,
+   "context": "இதனால் அதே தேதியில் ரிலீஸ் செய்ய திட்டமிடப்பட்டிருந்த சூர்யாவின் காப்பான்",
+   "verdict": "correct"
+  },
+  {
+   "native": "போலீஸ்",
+   "en": "police",
+   "path": "lexicon",
+   "row": 3703,
+   "context": "உண்ணாவிரதம் குறித்து கருத்து கூற போலீஸ் மறுப்பு",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஃபேஸ்புக்",
+   "en": "facebook",
+   "path": "lexicon",
+   "row": 3551,
+   "context": "ஃபேஸ்புக் இலவச இணைய சேவை என்பது",
+   "verdict": "correct"
+  },
+  {
+   "native": "பட்ஜெட்",
+   "en": "budget",
+   "path": "lexicon",
+   "row": 3747,
+   "context": "பொதுவாக பட்ஜெட் தாக்கல் செய்யப்பட்ட அன்றே அது",
+   "verdict": "correct"
+  },
+  {
+   "native": "கலெக்டர்",
+   "en": "collector",
+   "path": "lexicon",
+   "row": 7071,
+   "context": "சுற்றியுள்ள விதிமீறிய கட்டிடங்களை இடிக்க கலெக்டர் நோட்டீஸ்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 756,
+   "context": "கொரோனா வைரஸ் காரணமாக தமிழகம் முழுவதும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ட்விட்டர்",
+   "en": "twitter",
+   "path": "lexicon",
+   "row": 8535,
+   "context": "தனக்கு புற்றுநோய் இருப்பதாக தனது ட்விட்டர் பக்கத்தில் தெரிவித்து உள்ளார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "வீடியோ",
+   "en": "video",
+   "path": "lexicon",
+   "row": 4360,
+   "context": "பால் அபிஷேகம் செய்து ரசிகர்கள் வீடியோ வெளியிட்டுள்ளனர்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ரயில்வே",
+   "en": "railway",
+   "path": "lexicon",
+   "row": 8867,
+   "context": "ரயில்வே துறை சார்பில் விற்கப்படும் உணவு",
+   "verdict": "correct"
+  },
+  {
+   "native": "சைக்கிள்",
+   "en": "cycle",
+   "path": "lexicon",
+   "row": 6014,
+   "context": "ஒரு மோட்டார் சைக்கிள் மீது பிரயோகிக்கும் போது ஐந்து",
+   "verdict": "correct"
+  },
+  {
+   "native": "டிஜிட்டல்",
+   "en": "digital",
+   "path": "lexicon",
+   "row": 4722,
+   "context": "பெற்றுக்கொடுப்பதற்காக செலான் வங்கி தனது டிஜிட்டல் நாளிகை",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஆக்சன்",
+   "en": "action",
+   "path": "lexicon",
+   "row": 995,
+   "context": "மொத்தத்தில் ஒரு விறுவிறுப்பான ஆக்சன் கதையை ரசிக்க விரும்புபவர்கள் இந்த",
+   "verdict": "correct"
+  },
+  {
+   "native": "இன்டர்வியூ",
+   "en": "interview",
+   "path": "lexicon",
+   "row": 11569,
+   "context": "தி இன்டர்வியூ திரைப்படம் பயங்கரவாதத்தின் திரைப்படம் என",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஆன்லைன்",
+   "en": "online",
+   "path": "lexicon",
+   "row": 3939,
+   "context": "திட்டமிட்ட கொள்ளை குற்றச்சாட்டுக்களுக்கான குற்றச்சாட்டுக்களுக்காக ஆன்லைன் வெளியீடு மீது வழக்கு தொடர்ந்தார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "பார்சல்",
+   "en": "parcel",
+   "path": "lexicon",
+   "row": 2245,
+   "context": "எல்லோரும் வாழைத்தோலை மட்டும் அதிராவிற்கு பார்சல் செய்து அனுப்பவும்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஓசோன்",
+   "en": "ozone",
+   "path": "lexicon",
+   "row": 11365,
+   "context": "ஓசோன் படை தேய்வினை தடுப்பதும் ஓசோன் படையை பாதுகாப்பதும் பூமியின் எதிர்கால",
+   "verdict": "correct"
+  },
+  {
+   "native": "மெட்ரோ",
+   "en": "metro",
+   "path": "lexicon",
+   "row": 4021,
+   "context": "பூங்கா முதல் சென்ரல் வரையிலான மெட்ரோ ரயில் பணிகள் தீவிரம்",
+   "verdict": "correct"
+  },
+  {
+   "native": "போலீஸ்",
+   "en": "police",
+   "path": "lexicon",
+   "row": 2297,
+   "context": "ஜோலார்பேட்டை பொறுப்பு ரெயில்வே போலீஸ் இன்ஸ்பெக்டர் சுரேஷ் மற்றும் போலீசார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "கொரோனா",
+   "en": "corona",
+   "path": "lexicon",
+   "row": 4394,
+   "context": "பிரதமர் யூசப் ராஜா கிலானிக்கு கொரோனா தொற்று உறுதி",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஆன்லைன்",
+   "en": "online",
+   "path": "lexicon",
+   "row": 12862,
+   "context": "விளம்பர செயற்பாட்டின் ஒரு பகுதியாக ஆன்லைன் ஆகியவற்றில் தோன்றினார்",
+   "verdict": "correct"
+  },
+  {
+   "native": "ட்விட்டர்",
+   "en": "twitter",
+   "path": "lexicon",
+   "row": 7581,
+   "context": "நான் வெளியிட்ட ட்விட்டர் பதிவின் சாராம்சம் இது தான்",
+   "verdict": "correct"
+  },
+  {
+   "native": "வெஸ்ட்",
+   "en": "west",
+   "path": "lexicon",
+   "row": 11562,
+   "context": "போகர்டின் குடும்பம் ஒரு அப்பர் வெஸ்ட் சைட் அடுக்குமாடி குடியிருப்பில் வசித்தது",
+   "verdict": "correct"
+  },
+  {
+   "native": "சென்ட்ரல்",
+   "en": "central",
+   "path": "lexicon",
+   "row": 9351,
+   "context": "சென்னை சென்ட்ரல் ரயில் நிலையத்துக்கு எம்ஜிஆர் பெயரை",
+   "verdict": "correct"
+  },
+  {
+   "native": "ஜனவரி",
+   "en": "january",
+   "path": "lexicon",
+   "row": 7314,
+   "context": "பரிசீலித்த நீதிபதிகள் இவ்வழக்கி மறுவிசாரணையை ஜனவரி மாதம் இரண்டாம் வாரத்துக்கு ஒத்திவைத்தனர்",
+   "verdict": "correct"
+  }
+ ],
+ "precision": 100.0
+}

@@ -1,0 +1,132 @@
+{
+  "or": {
+    "wer": 52.75,
+    "cer": 24.75,
+    "utterances": 300,
+    "words": 4231,
+    "script_error_rate": 1.06,
+    "wer_script_normalised": 52.61,
+    "cer_script_normalised": 24.53,
+    "rows_with_alternative_ref": 212,
+    "cm_utterances": 212,
+    "cm_spans": 1087,
+    "cm_span_accuracy": 76.82,
+    "cm_span_cer_mean": 32.17,
+    "cm_span_accuracy_by_lang": {
+      "en": 71.9,
+      "or": 80.41
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.495
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "or": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "or": {
+        "bn": 1,
+        "or": 299
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 113,
+        "accuracy": 99.12
+      },
+      "5-10s": {
+        "utterances": 187,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "vaani_test_or",
+  "utterances": 300,
+  "hours": 0.5,
+  "seconds": 21,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 150,
+  "changed_examples": [
+    {
+      "key": "vaani/or/test/IISc_VaaniProject_M_Odisha_Malkangiri_nira45013d6b32d2_45013032921000081440_Malkangiri-SPECIFIC_01579_18802_25440",
+      "constrained": "sir ଏଥିରେ unman ଭୁବନେଶ୍ୱର ବୋଲି ଲେଖା ହୋଇଛି ଧଳା colour ର କିଛି ଆକାଶ ଦେଖା ଯାଉଛି",
+      "unconstrained": "ಹೂವಿನ sir ଏଥିରେ unman ଭୁବନେଶ୍ୱର ବୋଲି ଲେଖା ହୋଇଛି ଧଳା colour ର କିଛି ଆକାଶ ଦେଖା ଯାଉଛି",
+      "hinted": "sir ଏଥିରେ unman ଭୁବନେଶ୍ୱର ବୋଲି ଲେଖା ହୋଇଛି ଧଳା colour ର କିଛି ଆକାଶ ଦେଖା ଯାଉଛି"
+    },
+    {
+      "key": "vaani/or/test/IISc_VaaniProject_M_Odisha_Malkangiri_nira45013d6b32d2_45013033556000081440_Malkangiri-SPECIFIC_00819_811_6494",
+      "constrained": "ଏଠାରେ ଏକ ଜନସେ କେନ୍ଦ୍ର ଅଛି ବା ଗୋଟିଏ office ଟିଏ ଅଛି ଏଠାରେ କାନ୍ଥରେ କିଛି poster ଲାଗିଛି",
+      "unconstrained": "এটা ଏକ ଜନସେ କେନ୍ଦ୍ର ଅଛି ବା ଗୋଟିଏ office ଟିଏ ଅଛି ଏଠାରେ କାନ୍ଥରେ କିଛି poster ଲାଗିଛି",
+      "hinted": "ଏଠାରେ ଏକ ଜନସେ କେନ୍ଦ୍ର ଅଛି ବା ଗୋଟିଏ office ଟିଏ ଅଛି ଏଠାରେ କାନ୍ଥରେ କିଛି poster ଲାଗିଛି"
+    },
+    {
+      "key": "vaani/or/test/IISc_VaaniProject_M_Odisha_Malkangiri_nira45013d6b32d2_45013034034000081440_Malkangiri-SPECIFIC_00660_11291_19484",
+      "constrained": "ଏହି ଦୋକାନଟି ହେଉଛି ଏକ locery ଦୋକାନ କିଛିଥାକରେ କିଛି ବି biscuit କିଛି chocolate ବା କିଛି କୁରୁକରି ରଖାଯାଏ",
+      "unconstrained": "ଏହି ଦୋକାନଟି ହେଉଛି ଏକlocery ଦୋକାନ କିଛିଥାକରେ କିଛି ବି biscuit କିଛି chocolate ବା କିଛି କୁରୁକରି ରଖାଯାଏ",
+      "hinted": "ଏହି ଦୋକାନଟି ହେଉଛି ଏକ locery ଦୋକାନ କିଛିଥାକରେ କିଛି ବି biscuit କିଛି chocolate ବା କିଛି କୁରୁକରି ରଖାଯାଏ"
+    },
+    {
+      "key": "vaani/or/test/IISc_VaaniProject_M_Odisha_Malkangiri_nira45013d6b32d2_45013034247000081440_Malkangiri-SPECIFIC_00277_9310_17007",
+      "constrained": "ଏହି photo ରେ ଗୋଟିଏ chair ବା table ଅଛି table ଉପରେ କିଛିତିନୋଟି ବଡ଼ ବଡ଼ ବହି ରଖାଯାଇଛି",
+      "unconstrained": "এই photo ରେ ଗୋଟିଏ chair ବା table ଅଛି table ଉପରେ କିଛିତିନୋଟି ବଡ଼ ବଡ଼ ବହି ରଖାଯାଇଛି",
+      "hinted": "ଏହି photo ରେ ଗୋଟିଏ chair ବା table ଅଛି table ଉପରେ କିଛିତିନୋଟି ବଡ଼ ବଡ଼ ବହି ରଖାଯାଇଛି"
+    },
+    {
+      "key": "vaani/or/test/IISc_VaaniProject_M_Odisha_Malkangiri_nira45013d6b32d2_45013040913000081440_Malkangiri-SPECIFIC_01870_20011_24485",
+      "constrained": "ro ରଖା ଯାଇଛି ଏଠାରେ ଗୋଟିଏ bathroom ଅଛି ବା athroomରେ ଗୋ",
+      "unconstrained": "ro ରଖା ଯାଇଛି ଏଠାରେ ଗୋଟିଏ bathroom ଅଛି ବାathroomରେ ଗୋ",
+      "hinted": "ro ରଖା ଯାଇଛି ଏଠାରେ ଗୋଟିଏ bathroom ଅଛି ବା athroomରେ ଗୋ"
+    }
+  ]
+}

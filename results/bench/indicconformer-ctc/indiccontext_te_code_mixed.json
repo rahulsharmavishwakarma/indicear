@@ -1,0 +1,42 @@
+{
+  "kind": "eval",
+  "system": "indicconformer-ctc",
+  "set": "indiccontext_te_code_mixed",
+  "condition": null,
+  "notes": "rows with the source's code_mixing flag",
+  "utterances": 218,
+  "hours": 0.838,
+  "metrics": {
+    "ctc": {
+      "te": {
+        "wer": 16.88,
+        "cer": 4.01,
+        "utterances": 218,
+        "words": 4253,
+        "script_error_rate": 0.0,
+        "wer_script_normalised": 16.88,
+        "cer_script_normalised": 4.01,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 1,
+        "cm_spans": 3,
+        "cm_span_accuracy": 66.67,
+        "cm_span_cer_mean": 50.0,
+        "cm_span_accuracy_by_lang": {
+          "en": 0.0,
+          "te": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "hours": 0.838
+      }
+    }
+  },
+  "baseline": {
+    "repo": "ai4bharat/indic-conformer-600m-multilingual",
+    "revision": "2a77d305038dfc502fd9464e7d028b90381976cb",
+    "decoder": "ctc",
+    "notes": "ONNX via the repo's model_onnx.py; English unsupported",
+    "languages_scored": [
+      "te"
+    ]
+  }
+}

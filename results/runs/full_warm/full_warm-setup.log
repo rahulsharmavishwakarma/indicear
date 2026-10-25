@@ -1,0 +1,13 @@
+full_warm setup: started 2026-10-24 14:26:43
+Downloading cpython-3.14.8+freethreaded-linux-x86_64-gnu (download) (34.8MiB)
+ Downloaded cpython-3.14.8+freethreaded-linux-x86_64-gnu (download)
+Installed Python 3.14.8 in 550ms
+ + cpython-3.14.8+freethreaded-linux-x86_64-gnu (python3.14t)
+Using CPython 3.14.8+freethreaded
+Creating virtual environment at: /content/venv314t
+Activate with: source /content/venv314t/bin/activate
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.07
+overlay         236G   50G  187G  21% /
+3.14.8 GIL enabled: False | torch 2.14.1+cu130 CUDA 13.0 True NVIDIA RTX PRO 6000 Blackwell Server Edition capability (12, 0) bf16 True
+ffmpeg codecs: ['gsm', 'opus']
+full_warm setup: DONE

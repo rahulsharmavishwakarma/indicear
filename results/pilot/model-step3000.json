@@ -1,0 +1,169 @@
+{
+  "format": "sangam-model/1",
+  "name": "v4+lid",
+  "variant": "v4+lid",
+  "decoder": "ctc",
+  "decoders": [
+    "ctc"
+  ],
+  "languages": [
+    "bn",
+    "en",
+    "gu",
+    "hi",
+    "kn",
+    "ml",
+    "mr",
+    "or",
+    "pa",
+    "ta",
+    "te",
+    "ur"
+  ],
+  "encoder": {
+    "repo": "google/embeddinggemma-2",
+    "revision": "914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "component": "audio_tower",
+    "frozen": true,
+    "hidden_size": 1024,
+    "layers": 12,
+    "cached_layers": 6,
+    "license": "Apache-2.0",
+    "note": "Only the audio tower of the pinned checkpoint is used; it is downloaded from the Hugging Face Hub at load time and never modified. Not included in this package."
+  },
+  "audio": {
+    "sample_rate": 16000,
+    "frame_rate": 25,
+    "window_seconds": 30.0
+  },
+  "tokenizer": {
+    "dir": "tokenizer",
+    "vocab_size": 4449,
+    "order": [
+      "deva",
+      "beng",
+      "guru",
+      "gujr",
+      "orya",
+      "taml",
+      "telu",
+      "knda",
+      "mlym",
+      "arab",
+      "latn"
+    ]
+  },
+  "lid": {
+    "languages": [
+      "bn",
+      "en",
+      "gu",
+      "hi",
+      "kn",
+      "ml",
+      "mr",
+      "or",
+      "pa",
+      "ta",
+      "te",
+      "ur"
+    ],
+    "utterance": true,
+    "frame": true,
+    "only": false
+  },
+  "weights": {
+    "checkpoint": "best.pt",
+    "step": 3000,
+    "best_metric": 18.4675
+  },
+  "training": {
+    "run": "v4+lid",
+    "config_hash": "34ad89478fc81611",
+    "git": "607fcaf906d15ecc044ecc3f51e27dd666605c0a",
+    "mixture": "unknown",
+    "steps": 3000,
+    "audio_hours": null,
+    "environment": null
+  },
+  "eval": null,
+  "created_at": "2026-10-24T02:59:11Z",
+  "files": {
+    "README.md": {
+      "sha256": "63754747be85072f5fb63e379dd5526877fbd82f3dd3b57ae5dd5dcfe43d0d8a",
+      "size": 3782
+    },
+    "adapters.safetensors": {
+      "sha256": "c09866777afa1db478f541534cf360dd86f6dd67575507de758c4065803499f3",
+      "size": 6371584
+    },
+    "heads.safetensors": {
+      "sha256": "16d2568db12c625c233769bcd7df0b97a4d5b5ec49826b84165ca17ca0a0610c",
+      "size": 22321196
+    },
+    "lid.json": {
+      "sha256": "c3dbfc956e1a578e6804bdea74496edaf0f563009040567459d05abade58efe1",
+      "size": 418
+    },
+    "tokenizer/aggregate.json": {
+      "sha256": "0e8dc4b702855e8cf2a9f5ffd344b343e865175e73880cb4c8544aefe29b8fea",
+      "size": 1075
+    },
+    "tokenizer/arab.model": {
+      "sha256": "55d6707534c16dcd7079825d04f9fe067ec78ebe2f9743c5dd4c4c02bada9df8",
+      "size": 3203
+    },
+    "tokenizer/beng.model": {
+      "sha256": "c979a5f35064d048d17617a08a03e260b87fb40c98b0ab3193f60e713617f8e2",
+      "size": 1597
+    },
+    "tokenizer/deva.model": {
+      "sha256": "57b01c525a2b0594bcb149aff5819a6d09265fc26f676819c4c35d4ffee4f6b0",
+      "size": 21827
+    },
+    "tokenizer/gujr.model": {
+      "sha256": "07b4bcb7ab557bbbabb11f6db9c7584c8e3e1769bc0a616489779f76d74828b0",
+      "size": 1612
+    },
+    "tokenizer/guru.model": {
+      "sha256": "e37df6d32437cf95731555583944ae8326f6f1c9efd464096ac58c5223620321",
+      "size": 1372
+    },
+    "tokenizer/knda.model": {
+      "sha256": "cb5e5ff3d9c2258708b1ad94a4857942f629df68d41d89bfa34093f820e99235",
+      "size": 16757
+    },
+    "tokenizer/latn.model": {
+      "sha256": "1d047da97a1cc6f3bf945b1bb7c9b62cc1f7ac4215c2417d45f7500efb3602e9",
+      "size": 16552
+    },
+    "tokenizer/mlym.model": {
+      "sha256": "ed795f0f25e4da4339e6fb061defaf4780a2978f7a3d33b7729e9fe5f5f58e58",
+      "size": 2018
+    },
+    "tokenizer/orya.model": {
+      "sha256": "8d41861286746f8fd3d6c7acf7ec6c24e3a239c5149cbfd430bf38c175d9ab4d",
+      "size": 1597
+    },
+    "tokenizer/taml.model": {
+      "sha256": "596dd738f20893688a3dec32a19b71164610fab96d101f7249d62467ac8cdce7",
+      "size": 17939
+    },
+    "tokenizer/telu.model": {
+      "sha256": "492bd335ac85094dfd550f07ac5ac455c883931e895a2a0e65d067ccfc8769c1",
+      "size": 1747
+    },
+    "training/command.sh": {
+      "sha256": "cafda268c3468651241f2fe521f5360310f2e04c38aefe7427328f826776fc93",
+      "size": 474
+    },
+    "training/config.json": {
+      "sha256": "a41d91cd5421e50a09757e93ca1034170dcfa71282df696a81fbd840e4995e92",
+      "size": 2575
+    },
+    "variant.json": {
+      "sha256": "c04aa68e1c6586e788c40fa425b8b6a7888b7b8e85bab8506919223542becb9c",
+      "size": 315
+    }
+  }
+}

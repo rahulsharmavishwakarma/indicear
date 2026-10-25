@@ -1,0 +1,133 @@
+{
+  "ta": {
+    "wer": 59.77,
+    "cer": 16.44,
+    "utterances": 300,
+    "words": 3167,
+    "script_error_rate": 1.95,
+    "wer_script_normalised": 59.52,
+    "cer_script_normalised": 16.17,
+    "rows_with_alternative_ref": 19,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.531
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.67,
+    "macro_f1": 99.83,
+    "per_lang": {
+      "ta": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ta": {
+        "ta": 299,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 64,
+        "accuracy": 98.44
+      },
+      "5-10s": {
+        "utterances": 227,
+        "accuracy": 100.0
+      },
+      "10-20s": {
+        "utterances": 9,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "kathbath_clean_test_known_ta",
+  "utterances": 300,
+  "hours": 0.53,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 134,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ta/clean_test_known/844424930462951-794-f",
+      "constrained": "doலா பகுதியில் இருந்துாணுவத்தையாப்பஸ் பெற இரு நாடுகளும்ும் முடிவு",
+      "unconstrained": "డోక్ల परயில் இருந்துாணுவத்தையாப்பஸ் பெற இரு நாடுகளும்ும் முடிவு",
+      "hinted": "doலா பகுதியில் இருந்துாணுவத்தையாப்பஸ் பெற இரு நாடுகளும்ும் முடிவு"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_known/844424931146576-302-m",
+      "constrained": "coron ஓரணங்க எங்களைக் கட்டுப்படுத்தப்படுத்தது என மிறட்டல் கந்துவட்டிக்காரர்கள் கொடுமையால் கதரம் கொடியாத்தம் தொடலாளர்கள்",
+      "unconstrained": "করোনাon ஓரணங்க எங்களைக் கட்டுப்படுத்தப்படுத்தது என மிறட்டல் கந்துவட்டிக்காரர்கள் கொடுமையால் கதரம் கொடியாத்தம் தொடலாளர்கள்",
+      "hinted": "coron ஓரணங்க எங்களைக் கட்டுப்படுத்தப்படுத்தது என மிறட்டல் கந்துவட்டிக்காரர்கள் கொடுமையால் கதரம் கொடியாத்தம் தொடலாளர்கள்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_known/844424931398862-837-f",
+      "constrained": "கல் மற்றும் புத்தக கண்காாட்சிகளில் குழந்தைகள் புத்தக சந்தை அறிவு",
+      "unconstrained": "కర్పీతల్ மற்றும் புத்தக கண்காாட்சிகளில் குழந்தைகள் புத்தக சந்தை அறிவு",
+      "hinted": "கல் மற்றும் புத்தக கண்காாட்சிகளில் குழந்தைகள் புத்தக சந்தை அறிவு"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_known/844424930530584-794-f",
+      "constrained": "என்ற கையரியேசு ஓடு இணைந்திருப்பதால் நாம் எவ்கயான பிரச்சனையில் மாட்டிருந்தாலும் இருந்தாலும் ஏசிங்களை காத்துொள்வார்",
+      "unconstrained": "विश्वసం என்ற கையரியேசு ஓடு இணைந்திருப்பதால் நாம் எவ்கயான பிரச்சனையில் மாட்டிருந்தாலும் இருந்தாலும் ஏசிங்களை காத்துொள்வார்",
+      "hinted": "என்ற கையரியேசு ஓடு இணைந்திருப்பதால் நாம் எவ்கயான பிரச்சனையில் மாட்டிருந்தாலும் இருந்தாலும் ஏசிங்களை காத்துொள்வார்"
+    },
+    {
+      "key": "kathbath_test/ta/clean_test_known/844424931349105-807-f",
+      "constrained": "ஆத்திமுகின் திட்டங்களை எடுத்து கூறறி திருச்சி கிழக்கு தொகுதியில் வேட்பாளர்ர் வெள்ளமமண்டி நடஜன் வாக்கு செய்கிறகரிப்பு",
+      "unconstrained": "ஆতিமுகின் திட்டங்களை எடுத்து கூறறி திருச்சி கிழக்கு தொகுதியில் வேட்பாளர்ர் வெள்ளமமண்டி நடஜன் வாக்கு செய்கிறகரிப்பு",
+      "hinted": "ஆத்திமுகின் திட்டங்களை எடுத்து கூறறி திருச்சி கிழக்கு தொகுதியில் வேட்பாளர்ர் வெள்ளமமண்டி நடஜன் வாக்கு செய்கிறகரிப்பு"
+    }
+  ]
+}

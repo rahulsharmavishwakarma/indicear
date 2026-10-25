@@ -1,0 +1,494 @@
+{
+  "all": {
+    "wer": 54.92,
+    "cer": 25.0,
+    "utterances": 3440,
+    "words": 61869,
+    "script_error_rate": 9.7,
+    "wer_script_normalised": 54.92,
+    "cer_script_normalised": 25.0,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 179,
+    "cm_spans": 577,
+    "cm_span_accuracy": 51.99,
+    "cm_span_cer_mean": 77.25,
+    "cm_span_accuracy_by_lang": {
+      "bn": 83.33,
+      "en": 17.17,
+      "gu": 88.89,
+      "hi": 57.14,
+      "kn": 78.95,
+      "ml": 50.0,
+      "mr": 66.67,
+      "or": 60.0,
+      "ta": 93.1,
+      "te": 81.58,
+      "ur": 66.67
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 10.327
+  },
+  "bn": {
+    "wer": 49.13,
+    "cer": 19.04,
+    "utterances": 300,
+    "words": 5207,
+    "script_error_rate": 5.17,
+    "wer_script_normalised": 49.13,
+    "cer_script_normalised": 19.04,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 12,
+    "cm_spans": 30,
+    "cm_span_accuracy": 53.33,
+    "cm_span_cer_mean": 57.81,
+    "cm_span_accuracy_by_lang": {
+      "bn": 83.33,
+      "en": 8.33
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.997
+  },
+  "en": {
+    "wer": 37.97,
+    "cer": 17.24,
+    "utterances": 300,
+    "words": 6086,
+    "script_error_rate": 0.0,
+    "wer_script_normalised": 37.97,
+    "cer_script_normalised": 17.24,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.769
+  },
+  "gu": {
+    "wer": 54.59,
+    "cer": 29.05,
+    "utterances": 300,
+    "words": 5816,
+    "script_error_rate": 10.76,
+    "wer_script_normalised": 54.59,
+    "cer_script_normalised": 29.05,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 9,
+    "cm_spans": 27,
+    "cm_span_accuracy": 77.78,
+    "cm_span_cer_mean": 30.14,
+    "cm_span_accuracy_by_lang": {
+      "en": 55.56,
+      "gu": 88.89
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.791
+  },
+  "hi": {
+    "wer": 42.57,
+    "cer": 26.13,
+    "utterances": 234,
+    "words": 5210,
+    "script_error_rate": 9.92,
+    "wer_script_normalised": 42.57,
+    "cer_script_normalised": 26.13,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 6,
+    "cm_spans": 25,
+    "cm_span_accuracy": 40.0,
+    "cm_span_cer_mean": 71.99,
+    "cm_span_accuracy_by_lang": {
+      "en": 18.18,
+      "hi": 57.14
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.68
+  },
+  "kn": {
+    "wer": 53.54,
+    "cer": 17.54,
+    "utterances": 300,
+    "words": 4158,
+    "script_error_rate": 6.99,
+    "wer_script_normalised": 53.54,
+    "cer_script_normalised": 17.54,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 21,
+    "cm_spans": 61,
+    "cm_span_accuracy": 52.46,
+    "cm_span_cer_mean": 79.25,
+    "cm_span_accuracy_by_lang": {
+      "en": 8.7,
+      "kn": 78.95
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.977
+  },
+  "ml": {
+    "wer": 78.94,
+    "cer": 27.84,
+    "utterances": 300,
+    "words": 3884,
+    "script_error_rate": 16.75,
+    "wer_script_normalised": 78.94,
+    "cer_script_normalised": 27.84,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 2,
+    "cm_spans": 6,
+    "cm_span_accuracy": 33.33,
+    "cm_span_cer_mean": 104.51,
+    "cm_span_accuracy_by_lang": {
+      "en": 0.0,
+      "ml": 50.0
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 1.028
+  },
+  "mr": {
+    "wer": 58.73,
+    "cer": 22.87,
+    "utterances": 300,
+    "words": 5142,
+    "script_error_rate": 5.37,
+    "wer_script_normalised": 58.73,
+    "cer_script_normalised": 22.87,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 21,
+    "cm_spans": 84,
+    "cm_span_accuracy": 46.43,
+    "cm_span_cer_mean": 96.27,
+    "cm_span_accuracy_by_lang": {
+      "en": 15.15,
+      "mr": 66.67
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.995
+  },
+  "or": {
+    "wer": 60.7,
+    "cer": 27.46,
+    "utterances": 300,
+    "words": 5259,
+    "script_error_rate": 7.8,
+    "wer_script_normalised": 60.7,
+    "cer_script_normalised": 27.46,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 33,
+    "cm_spans": 97,
+    "cm_span_accuracy": 42.27,
+    "cm_span_cer_mean": 85.2,
+    "cm_span_accuracy_by_lang": {
+      "en": 19.05,
+      "or": 60.0
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.892
+  },
+  "pa": {
+    "wer": 49.11,
+    "cer": 29.16,
+    "utterances": 245,
+    "words": 5516,
+    "script_error_rate": 9.03,
+    "wer_script_normalised": 49.11,
+    "cer_script_normalised": 29.16,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.707
+  },
+  "ta": {
+    "wer": 61.92,
+    "cer": 22.53,
+    "utterances": 300,
+    "words": 4357,
+    "script_error_rate": 5.27,
+    "wer_script_normalised": 61.92,
+    "cer_script_normalised": 22.53,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 19,
+    "cm_spans": 48,
+    "cm_span_accuracy": 64.58,
+    "cm_span_cer_mean": 49.22,
+    "cm_span_accuracy_by_lang": {
+      "en": 21.05,
+      "ta": 93.1
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.91
+  },
+  "te": {
+    "wer": 58.5,
+    "cer": 20.58,
+    "utterances": 300,
+    "words": 4677,
+    "script_error_rate": 5.99,
+    "wer_script_normalised": 58.5,
+    "cer_script_normalised": 20.58,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 53,
+    "cm_spans": 193,
+    "cm_span_accuracy": 53.37,
+    "cm_span_cer_mean": 81.9,
+    "cm_span_accuracy_by_lang": {
+      "en": 12.66,
+      "te": 81.58
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.86
+  },
+  "ur": {
+    "wer": 62.07,
+    "cer": 44.28,
+    "utterances": 261,
+    "words": 6557,
+    "script_error_rate": 31.06,
+    "wer_script_normalised": 62.07,
+    "cer_script_normalised": 44.28,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 3,
+    "cm_spans": 6,
+    "cm_span_accuracy": 83.33,
+    "cm_span_cer_mean": 41.16,
+    "cm_span_accuracy_by_lang": {
+      "en": 100.0,
+      "ur": 66.67
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.72
+  },
+  "lid": {
+    "utterances": 3440,
+    "accuracy": 97.41,
+    "macro_f1": 97.07,
+    "per_lang": {
+      "bn": {
+        "precision": 99.67,
+        "recall": 100.0,
+        "f1": 99.83,
+        "support": 300
+      },
+      "en": {
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1": 100.0,
+        "support": 300
+      },
+      "gu": {
+        "precision": 97.7,
+        "recall": 99.33,
+        "f1": 98.51,
+        "support": 300
+      },
+      "hi": {
+        "precision": 76.55,
+        "recall": 94.87,
+        "f1": 84.73,
+        "support": 234
+      },
+      "kn": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      },
+      "ml": {
+        "precision": 99.66,
+        "recall": 99.0,
+        "f1": 99.33,
+        "support": 300
+      },
+      "mr": {
+        "precision": 98.36,
+        "recall": 100.0,
+        "f1": 99.17,
+        "support": 300
+      },
+      "or": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      },
+      "pa": {
+        "precision": 100.0,
+        "recall": 97.96,
+        "f1": 98.97,
+        "support": 245
+      },
+      "ta": {
+        "precision": 100.0,
+        "recall": 99.67,
+        "f1": 99.83,
+        "support": 300
+      },
+      "te": {
+        "precision": 98.68,
+        "recall": 100.0,
+        "f1": 99.34,
+        "support": 300
+      },
+      "ur": {
+        "precision": 98.5,
+        "recall": 75.48,
+        "f1": 85.47,
+        "support": 261
+      }
+    },
+    "confusion": {
+      "bn": {
+        "bn": 300
+      },
+      "en": {
+        "en": 300
+      },
+      "gu": {
+        "gu": 298,
+        "hi": 1,
+        "mr": 1
+      },
+      "hi": {
+        "gu": 6,
+        "hi": 222,
+        "mr": 3,
+        "ur": 3
+      },
+      "kn": {
+        "bn": 1,
+        "kn": 299
+      },
+      "ml": {
+        "ml": 297,
+        "te": 3
+      },
+      "mr": {
+        "mr": 300
+      },
+      "or": {
+        "mr": 1,
+        "or": 299
+      },
+      "pa": {
+        "gu": 1,
+        "hi": 3,
+        "pa": 240,
+        "te": 1
+      },
+      "ta": {
+        "ml": 1,
+        "ta": 299
+      },
+      "te": {
+        "te": 300
+      },
+      "ur": {
+        "hi": 64,
+        "ur": 197
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 3,
+        "ur->hi": 64,
+        "hi_utterances": 234,
+        "ur_utterances": 261,
+        "hi_as_ur_rate": 1.28,
+        "ur_as_hi_rate": 24.52
+      },
+      "hi/mr": {
+        "hi->mr": 3,
+        "mr->hi": 0,
+        "hi_utterances": 234,
+        "mr_utterances": 300,
+        "hi_as_mr_rate": 1.28,
+        "mr_as_hi_rate": 0.0
+      },
+      "pa/hi": {
+        "pa->hi": 3,
+        "hi->pa": 0,
+        "pa_utterances": 245,
+        "hi_utterances": 234,
+        "pa_as_hi_rate": 1.22,
+        "hi_as_pa_rate": 0.0
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 1,
+        "accuracy": 100.0
+      },
+      "2-5s": {
+        "utterances": 107,
+        "accuracy": 91.59
+      },
+      "5-10s": {
+        "utterances": 1412,
+        "accuracy": 95.96
+      },
+      "10-20s": {
+        "utterances": 1920,
+        "accuracy": 98.8
+      }
+    }
+  },
+  "eval_set": "fleurs_dev",
+  "utterances": 3440,
+  "hours": 10.33,
+  "seconds": 319,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 2394,
+  "changed_examples": [
+    {
+      "key": "fleurs/bn/dev/16955747957993030398",
+      "constrained": "এটি tকে মঙ্গলড় কেটে ফেলার কথা ছিল তবে আদালতে জরুরি রায় আসার পরে এটি বাঁচানো হয়",
+      "unconstrained": "এটিटी के मंगলलबाळ কেটে ফেলার কথা ছিল তবে আদালতে জরুরি রায় আসার পরে এটি বাঁচানো হয়",
+      "hinted": "এটি tকে মঙ্গলড় কেটে ফেলার কথা ছিল তবে আদালতে জরুরি রায় আসার পরে এটি বাঁচানো হয়"
+    },
+    {
+      "key": "fleurs/bn/dev/1229814173981427347",
+      "constrained": "চান্ত বিশলেশন করে ফলাফল একটি পাবিকয়েবইটের প্রকাশ করা হবে",
+      "unconstrained": "ଚান্ত বিশলেশন করে ফলাফল একটি পাবিকয়েবইটের প্রকাশ করা হবে",
+      "hinted": "চান্ত বিশলেশন করে ফলাফল একটি পাবিকয়েবইটের প্রকাশ করা হবে"
+    },
+    {
+      "key": "fleurs/bn/dev/366832706965766873",
+      "constrained": "চক্রত বিশলেশন করে ফলাাল একটি পা publicয়ে bব sইটে post করা হবে",
+      "unconstrained": "চক্রত বিশলেশন করে ফলাাল একটি পা publicয়েbবsইটে post করা হবে",
+      "hinted": "চক্রত বিশলেশন করে ফলাাল একটি পা publicয়ে bব sইটে post করা হবে"
+    },
+    {
+      "key": "fleurs/bn/dev/4357318287744549874",
+      "constrained": "চক্রান্ত বিশলেশন করে ফাফল একটি পা publicয়েইটে post করা হবে",
+      "unconstrained": "ଚক্রান্ত বিশলেশন করে ফাফল একটি পা publicয়েইটে post করা হবে",
+      "hinted": "চক্রান্ত বিশলেশন করে ফাফল একটি পা publicয়েইটে post করা হবে"
+    },
+    {
+      "key": "fleurs/bn/dev/7315268769860290594",
+      "constrained": "marketকিন যুক্তরাষ্ট্র জুড়েে প্রায় চার লাখ সংখকক multiple ইস্কসি isসের m s পরি পরিচিত ঘটনা রয়েছে যেটিকে অল্প বয়স ও মধ্য বয়স্ককদের মাঝে প্রথম সারের স্ননায়বিক রোগ হিসেবে দেখা হচ্ছে",
+      "unconstrained": "माকিன் যুক্তরাষ্ট্র জুড়েে প্রায় চার লাখ সংখকক multiple ইস্কসিisসের m s পরি পরিচিত ঘটনা রয়েছে যেটিকে অল্প বয়স ও মধ্য বয়স্ককদের মাঝে প্রথম সারের স্ননায়বিক রোগ হিসেবে দেখা হচ্ছে",
+      "hinted": "marketকিন যুক্তরাষ্ট্র জুড়েে প্রায় চার লাখ সংখকক multiple ইস্কসি isসের m s পরি পরিচিত ঘটনা রয়েছে যেটিকে অল্প বয়স ও মধ্য বয়স্ককদের মাঝে প্রথম সারের স্ননায়বিক রোগ হিসেবে দেখা হচ্ছে"
+    }
+  ]
+}

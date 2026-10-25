@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "indicear"
+version = "0.1.0"
+description = "Speech recognition for 11 Indian languages and English from a frozen EmbeddingGemma 2 audio encoder with small trained adapters and heads (research release)"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "indicear/resources/SCOWL-LICENSE.txt"]
+requires-python = ">=3.12"
+authors = [{ name = "Rahul Sharma" }]
+keywords = ["asr", "speech-recognition", "indic", "ctc", "adapters", "embeddinggemma", "language-identification"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Lower bounds are the versions every result was produced with; uv.lock pins them exactly.
+# transformers is pinned: indicear.encoder reproduces Gemma4AudioModel.forward's call path of 5.20.2.
+dependencies = [
+  "huggingface-hub>=2.3.0",
+  "jiwer>=4.0.0",
+  "numpy>=2.5.4",
+  "pyarrow>=26.0.0",
+  "safetensors>=0.8.0",
+  "sentencepiece>=0.2.2",
+  "soundfile>=0.14.0",
+  "soxr>=1.1.0",
+  "torch>=2.14.1",
+  "transformers==5.20.2",
+]
+
+[project.scripts]
+indicear-transcribe = "indicear.transcribe:main"
+indicear-export = "indicear.export:main"
+indicear-decode = "indicear.decoding:main"
+
+[project.urls]
+Repository = "https://github.com/rahulsharmavishwakarma/indicear"
+
+[dependency-groups]
+# torchaudio is test-only: it cross-checks the pure-PyTorch RNN-T loss. It has no 2.14 release;
+# 2.11.0 is its last (maintenance-mode) release, stable-ABI, and runs with torch 2.14.1 on CPU.
+dev = ["pytest==9.1.1", "torchaudio==2.11.0"]
+figures = [
+    "matplotlib>=3.10",
+]
+# Other ASR systems on the same clips (indicear.baselines, scripts/baselines.sh). onnxruntime has no
+# free-threaded wheels, so this group installs only on standard CPython 3.13 (see tool.uv below).
+baselines = [
+  "onnxruntime-gpu==1.31.0; sys_platform == 'linux'",
+  "onnxruntime==1.31.0; sys_platform == 'darwin'",
+  "scipy==1.18.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["indicear"]
+
+[tool.hatch.build.targets.sdist]
+include = ["indicear", "tests", "README.md", "LICENSE", "NOTICE"]
+
+[tool.uv]
+prerelease = "if-necessary"
+
+[tool.uv.dependency-groups]
+baselines = { requires-python = "==3.13.*" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

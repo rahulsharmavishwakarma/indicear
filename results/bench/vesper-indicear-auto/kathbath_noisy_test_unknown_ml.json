@@ -1,0 +1,134 @@
+{
+  "ml": {
+    "wer": 85.6,
+    "cer": 32.54,
+    "utterances": 300,
+    "words": 3320,
+    "script_error_rate": 15.99,
+    "wer_script_normalised": 83.98,
+    "cer_script_normalised": 31.02,
+    "rows_with_alternative_ref": 64,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.851
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 99.33,
+    "macro_f1": 99.67,
+    "per_lang": {
+      "ml": {
+        "precision": 100.0,
+        "recall": 99.33,
+        "f1": 99.67,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ml": {
+        "ml": 298,
+        "ta": 1,
+        "te": 1
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 1,
+        "accuracy": 100.0
+      },
+      "5-10s": {
+        "utterances": 137,
+        "accuracy": 99.27
+      },
+      "10-20s": {
+        "utterances": 162,
+        "accuracy": 99.38
+      }
+    }
+  },
+  "eval_set": "kathbath_noisy_test_unknown_ml",
+  "utterances": 300,
+  "hours": 0.85,
+  "seconds": 27,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 276,
+  "changed_examples": [
+    {
+      "key": "kathbath_test/ml/noisy_test_unknown/844424931178856-940-m",
+      "constrained": "തരത്തിലുള്ള സാവും ശക്്തിയും അത അതിൻ്റെ പ്രമുഖ സ്ഥാനം അടിസ്ഥാനാക്കി ചിിട്ടപ്പെടുത്തിയ",
+      "unconstrained": "ఆదిరത്തിലുള്ള സാവും ശക്്തിയും അത അതിൻ്റെ പ്രമുഖ സ്ഥാനം അടിസ്ഥാനാക്കി ചിിട്ടപ്പെടുത്തിയ",
+      "hinted": "തരത്തിലുള്ള സാവും ശക്്തിയും അത അതിൻ്റെ പ്രമുഖ സ്ഥാനം അടിസ്ഥാനാക്കി ചിിട്ടപ്പെടുത്തിയ"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_unknown/844424931333628-940-m",
+      "constrained": "താരജമ്യം ഈ നായകകൾ നിങ്ങളുടെുടെ കുട്ടി മതി വലിയ ആു",
+      "unconstrained": "மத்தி തரജമ്യം ഈ നായകകൾ നിങ്ങളുടെുടെ കുട്ടി മതി വലിയ ആു",
+      "hinted": "താരജമ്യം ഈ നായകകൾ നിങ്ങളുടെുടെ കുട്ടി മതി വലിയ ആു"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_unknown/844424930928107-663-m",
+      "constrained": "മത്സരിച്ച സുരേഷിന് പ്രസിഡ n സ്ഥാനം വാഗ്ദാനം ചെയ്താണ് വലത് ഭക്ഷണക്ഷം ന നിൽക്കുന്നിക്കുന്നങ്ങൾ നടത്ത",
+      "unconstrained": "విదనಾಯಿ മത്സരിച്ച സുരേഷിന് പ്രസിഡn സ്ഥാനം വാഗ്ദാനം ചെയ്താണ് വലത് ഭക്ഷണക്ഷം ന നിൽക്കുന്നിക്കുന്നങ്ങൾ നടത്ത",
+      "hinted": "മത്സരിച്ച സുരേഷിന് പ്രസിഡ n സ്ഥാനം വാഗ്ദാനം ചെയ്താണ് വലത് ഭക്ഷണക്ഷം ന നിൽക്കുന്നിക്കുന്നങ്ങൾ നടത്ത"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_unknown/844424931333623-940-m",
+      "constrained": "കളും കഴിഞ്ഞ dress കാണാൻ നല്ലംുണ്ട് എന്ന്ുമ്പോൾ തന്നെക്കാളും സന്തോഷം അമ്മയ്ക്കാണ് എന്നും്രേയ പറയ",
+      "unconstrained": "పరిపాകളും കഴിഞ്ഞ dress കാണാൻ നല്ലംുണ്ട് എന്ന്ുമ്പോൾ തന്നെക്കാളും സന്തോഷം അമ്മയ്ക്കാണ് എന്നും്രേയ പറയ",
+      "hinted": "കളും കഴിഞ്ഞ dress കാണാൻ നല്ലംുണ്ട് എന്ന്ുമ്പോൾ തന്നെക്കാളും സന്തോഷം അമ്മയ്ക്കാണ് എന്നും്രേയ പറയ"
+    },
+    {
+      "key": "kathbath_test/ml/noisy_test_unknown/844424931333575-940-m",
+      "constrained": "ണഫലം ഒരു മു ആരോഗ്യ ഉള്ളു ഉദ്ോര അറിയിക്കാതെ ബുന്ുക്കൾ അ ദരബാദ്ിലെിലേക്ക് മാറ്റിയത് bശനംിണിച്ചു വരത്തി",
+      "unconstrained": "ಪరీక్షಣ పొలం ഒരു മുೆ ആരോഗ്യ ഉള്ളു ഉദ്ോര അറിയിക്കാതെ ബുന്ുക്കൾ അ ൈദരബാദ്ിലെിലേക്ക് മാറ്റിയത് bശനംിണിച്ചു വരത്തി",
+      "hinted": "ണഫലം ഒരു മു ആരോഗ്യ ഉള്ളു ഉദ്ോര അറിയിക്കാതെ ബുന്ുക്കൾ അ ദരബാദ്ിലെിലേക്ക് മാറ്റിയത് bശനംിണിച്ചു വരത്തി"
+    }
+  ]
+}

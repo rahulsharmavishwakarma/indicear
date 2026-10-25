@@ -1,0 +1,103 @@
+{
+  "ur": {
+    "wer": 59.2,
+    "cer": 48.17,
+    "utterances": 168,
+    "words": 3529,
+    "script_error_rate": 24.72,
+    "wer_script_normalised": 59.2,
+    "cer_script_normalised": 48.17,
+    "rows_with_alternative_ref": 0,
+    "cm_utterances": 0,
+    "cm_spans": 0,
+    "cm_span_accuracy": null,
+    "cm_span_cer_mean": null,
+    "cm_span_accuracy_by_lang": {},
+    "span_cer_threshold": 0.5,
+    "hours": 0.573
+  },
+  "lid": {
+    "utterances": 168,
+    "accuracy": 82.74,
+    "macro_f1": 90.55,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 82.74,
+        "f1": 90.55,
+        "support": 168
+      }
+    },
+    "confusion": {
+      "ur": {
+        "hi": 21,
+        "mr": 1,
+        "pa": 2,
+        "te": 5,
+        "ur": 139
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 21,
+        "hi_utterances": 0,
+        "ur_utterances": 168,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 12.5
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "2-5s": {
+        "utterances": 7,
+        "accuracy": 57.14
+      },
+      "5-10s": {
+        "utterances": 45,
+        "accuracy": 75.56
+      },
+      "10-20s": {
+        "utterances": 116,
+        "accuracy": 87.07
+      }
+    }
+  },
+  "eval_set": "indiccontext_ur_code_mixed",
+  "utterances": 168,
+  "hours": 0.57,
+  "seconds": 17,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": "the row's language"
+  }
+}

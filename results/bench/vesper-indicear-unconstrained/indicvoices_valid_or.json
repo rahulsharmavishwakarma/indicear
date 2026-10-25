@@ -1,0 +1,110 @@
+{
+  "or": {
+    "wer": 58.3,
+    "cer": 30.72,
+    "utterances": 300,
+    "words": 2916,
+    "script_error_rate": 10.82,
+    "wer_script_normalised": 58.23,
+    "cer_script_normalised": 30.64,
+    "rows_with_alternative_ref": 76,
+    "cm_utterances": 75,
+    "cm_spans": 303,
+    "cm_span_accuracy": 67.33,
+    "cm_span_cer_mean": 42.48,
+    "cm_span_accuracy_by_lang": {
+      "en": 61.48,
+      "or": 71.27
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.383
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 91.67,
+    "macro_f1": 95.65,
+    "per_lang": {
+      "or": {
+        "precision": 100.0,
+        "recall": 91.67,
+        "f1": 95.65,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "or": {
+        "bn": 4,
+        "gu": 3,
+        "hi": 4,
+        "kn": 2,
+        "ml": 2,
+        "or": 275,
+        "pa": 2,
+        "ta": 2,
+        "te": 4,
+        "ur": 2
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 0,
+        "hi_utterances": 0,
+        "ur_utterances": 0,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": null
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 121,
+        "accuracy": 81.82
+      },
+      "2-5s": {
+        "utterances": 82,
+        "accuracy": 97.56
+      },
+      "5-10s": {
+        "utterances": 53,
+        "accuracy": 98.11
+      },
+      "10-20s": {
+        "utterances": 44,
+        "accuracy": 100.0
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_or",
+  "utterances": 300,
+  "hours": 0.38,
+  "seconds": 20,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": false,
+    "lid_script_set": false,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [],
+    "lang_hint": null
+  }
+}

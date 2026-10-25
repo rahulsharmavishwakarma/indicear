@@ -1,0 +1,225 @@
+{
+  "kind": "eval",
+  "system": "v4+lid",
+  "set": "fleurs_dev",
+  "condition": null,
+  "notes": "",
+  "utterances": 1314,
+  "hours": 3.877,
+  "metrics": {
+    "ctc": {
+      "all": {
+        "wer": 47.97,
+        "cer": 18.61,
+        "utterances": 1314,
+        "words": 23173,
+        "script_error_rate": 4.71,
+        "wer_script_normalised": 47.97,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 46,
+        "cm_spans": 134,
+        "cm_span_accuracy": 57.46,
+        "cm_span_cer_mean": 63.45,
+        "cm_span_accuracy_by_lang": {
+          "en": 11.32,
+          "hi": 78.57,
+          "kn": 81.58,
+          "ta": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "oov_recall": 18.18,
+        "oov_words": 2981,
+        "hours": 3.877
+      },
+      "en": {
+        "wer": 36.97,
+        "cer": 16.74,
+        "utterances": 388,
+        "words": 8015,
+        "script_error_rate": 0.51,
+        "wer_script_normalised": 36.97,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 0,
+        "cm_spans": 0,
+        "cm_span_accuracy": null,
+        "cm_span_cer_mean": null,
+        "cm_span_accuracy_by_lang": {},
+        "span_cer_threshold": 0.5,
+        "oov_recall": 7.45,
+        "oov_words": 416,
+        "hours": 1.004
+      },
+      "hi": {
+        "wer": 39.14,
+        "cer": 19.39,
+        "utterances": 234,
+        "words": 5210,
+        "script_error_rate": 5.19,
+        "wer_script_normalised": 39.14,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 6,
+        "cm_spans": 25,
+        "cm_span_accuracy": 52.0,
+        "cm_span_cer_mean": 59.78,
+        "cm_span_accuracy_by_lang": {
+          "en": 18.18,
+          "hi": 78.57
+        },
+        "span_cer_threshold": 0.5,
+        "oov_recall": 8.05,
+        "oov_words": 261,
+        "hours": 0.68
+      },
+      "kn": {
+        "wer": 58.29,
+        "cer": 17.52,
+        "utterances": 342,
+        "words": 4826,
+        "script_error_rate": 9.24,
+        "wer_script_normalised": 58.29,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 21,
+        "cm_spans": 61,
+        "cm_span_accuracy": 54.1,
+        "cm_span_cer_mean": 72.91,
+        "cm_span_accuracy_by_lang": {
+          "en": 8.7,
+          "kn": 81.58
+        },
+        "span_cer_threshold": 0.5,
+        "oov_recall": 26.13,
+        "oov_words": 1175,
+        "hours": 1.126
+      },
+      "ta": {
+        "wer": 64.47,
+        "cer": 21.03,
+        "utterances": 350,
+        "words": 5122,
+        "script_error_rate": 6.06,
+        "wer_script_normalised": 64.47,
+        "rows_with_alternative_ref": 0,
+        "cm_utterances": 19,
+        "cm_spans": 48,
+        "cm_span_accuracy": 64.58,
+        "cm_span_cer_mean": 53.35,
+        "cm_span_accuracy_by_lang": {
+          "en": 10.53,
+          "ta": 100.0
+        },
+        "span_cer_threshold": 0.5,
+        "oov_recall": 16.21,
+        "oov_words": 1129,
+        "hours": 1.068
+      }
+    }
+  },
+  "lid": {
+    "utterance": {
+      "utterances": 1314,
+      "accuracy": 99.85,
+      "macro_f1": 99.84,
+      "per_lang": {
+        "en": {
+          "precision": 100.0,
+          "recall": 100.0,
+          "f1": 100.0,
+          "support": 388
+        },
+        "hi": {
+          "precision": 100.0,
+          "recall": 99.57,
+          "f1": 99.79,
+          "support": 234
+        },
+        "kn": {
+          "precision": 99.71,
+          "recall": 99.71,
+          "f1": 99.71,
+          "support": 342
+        },
+        "ta": {
+          "precision": 99.72,
+          "recall": 100.0,
+          "f1": 99.86,
+          "support": 350
+        }
+      },
+      "confusion": {
+        "en": {
+          "en": 388
+        },
+        "hi": {
+          "hi": 233,
+          "kn": 1
+        },
+        "kn": {
+          "kn": 341,
+          "ta": 1
+        },
+        "ta": {
+          "ta": 350
+        }
+      },
+      "pairs": {
+        "hi/ur": {
+          "hi->ur": 0,
+          "ur->hi": 0,
+          "hi_utterances": 234,
+          "ur_utterances": 0,
+          "hi_as_ur_rate": 0.0,
+          "ur_as_hi_rate": null
+        },
+        "hi/mr": {
+          "hi->mr": 0,
+          "mr->hi": 0,
+          "hi_utterances": 234,
+          "mr_utterances": 0,
+          "hi_as_mr_rate": 0.0,
+          "mr_as_hi_rate": null
+        },
+        "pa/hi": {
+          "pa->hi": 0,
+          "hi->pa": 0,
+          "pa_utterances": 0,
+          "hi_utterances": 234,
+          "pa_as_hi_rate": null,
+          "hi_as_pa_rate": 0.0
+        }
+      },
+      "by_duration": {
+        "0-2s": {
+          "utterances": 1,
+          "accuracy": 100.0
+        },
+        "2-5s": {
+          "utterances": 48,
+          "accuracy": 97.92
+        },
+        "5-10s": {
+          "utterances": 565,
+          "accuracy": 99.82
+        },
+        "10-20s": {
+          "utterances": 700,
+          "accuracy": 100.0
+        }
+      }
+    },
+    "spans": {
+      "utterances": 46,
+      "spans": 134,
+      "span_accuracy": 44.78,
+      "sequence_accuracy": 0.0,
+      "frame_accuracy": null
+    }
+  },
+  "environment": {
+    "runtime": "python 3.14.8, GIL off",
+    "torch": "2.14.1+cu130",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "encoder": "google/embeddinggemma-2@914f7f89142e33e77833254d9c9b90c3cef7303b",
+    "fleurs": "google/fleurs@70bb2e84b976b7e960aa89f1c648e09c59f894dd"
+  },
+  "frame_budget": 67045
+}

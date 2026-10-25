@@ -1,0 +1,144 @@
+{
+  "ur": {
+    "wer": 39.82,
+    "cer": 27.07,
+    "utterances": 300,
+    "words": 5459,
+    "script_error_rate": 15.29,
+    "wer_script_normalised": 39.81,
+    "cer_script_normalised": 26.97,
+    "rows_with_alternative_ref": 72,
+    "cm_utterances": 69,
+    "cm_spans": 321,
+    "cm_span_accuracy": 73.21,
+    "cm_span_cer_mean": 33.21,
+    "cm_span_accuracy_by_lang": {
+      "en": 76.52,
+      "ur": 70.9
+    },
+    "span_cer_threshold": 0.5,
+    "hours": 0.578
+  },
+  "lid": {
+    "utterances": 300,
+    "accuracy": 75.67,
+    "macro_f1": 86.15,
+    "per_lang": {
+      "ur": {
+        "precision": 100.0,
+        "recall": 75.67,
+        "f1": 86.15,
+        "support": 300
+      }
+    },
+    "confusion": {
+      "ur": {
+        "gu": 4,
+        "hi": 58,
+        "or": 2,
+        "pa": 7,
+        "te": 2,
+        "ur": 227
+      }
+    },
+    "pairs": {
+      "hi/ur": {
+        "hi->ur": 0,
+        "ur->hi": 58,
+        "hi_utterances": 0,
+        "ur_utterances": 300,
+        "hi_as_ur_rate": null,
+        "ur_as_hi_rate": 19.33
+      },
+      "hi/mr": {
+        "hi->mr": 0,
+        "mr->hi": 0,
+        "hi_utterances": 0,
+        "mr_utterances": 0,
+        "hi_as_mr_rate": null,
+        "mr_as_hi_rate": null
+      },
+      "pa/hi": {
+        "pa->hi": 0,
+        "hi->pa": 0,
+        "pa_utterances": 0,
+        "hi_utterances": 0,
+        "pa_as_hi_rate": null,
+        "hi_as_pa_rate": null
+      }
+    },
+    "by_duration": {
+      "0-2s": {
+        "utterances": 61,
+        "accuracy": 45.9
+      },
+      "2-5s": {
+        "utterances": 60,
+        "accuracy": 71.67
+      },
+      "5-10s": {
+        "utterances": 96,
+        "accuracy": 81.25
+      },
+      "10-20s": {
+        "utterances": 83,
+        "accuracy": 93.98
+      }
+    }
+  },
+  "eval_set": "indicvoices_valid_ur",
+  "utterances": 300,
+  "hours": 0.58,
+  "seconds": 23,
+  "model": "~/workspace/indicear-models/indicear-12",
+  "decoding": {
+    "decoder": "ctc",
+    "beam": 1,
+    "script_rules": true,
+    "lid_script_set": true,
+    "lid_topk": 2,
+    "lid_threshold": 0.15,
+    "lid_frame_share": 0.0,
+    "latin_split": true,
+    "exclusive": [
+      [
+        "deva",
+        "arab"
+      ]
+    ],
+    "lang_hint": null
+  },
+  "changed_utterances": 215,
+  "changed_examples": [
+    {
+      "key": "indicvoices/ur/valid/5910974511083767_chunk_1",
+      "constrained": "پانچ aug دو ہزار پاہ charge چت دو ہزار ت چھ جذور تو ہزار پ آٹھ دی ce ہزار ic چوبیس sepmber دو ہزار انیس",
+      "unconstrained": "پانچ aug دو ہزار پاہ charge چت दो ہزارे چھ جذور تو ہزار पत्र आठिce ہزارic چوبیس sepmber دو ہزار انیس",
+      "hinted": "پانچ aug دو ہزار پاہ charge چت دو ہزار ت چھ جذور تو ہزار پ آٹھ دی ce ہزار ic چوبیس sepmber دو ہزار انیس"
+    },
+    {
+      "key": "indicvoices/ur/valid/5910974511088115_chunk_1",
+      "constrained": "نہیں ہم نے کبھی چولہ پر کھانا تو نہیں پکایا ہے پر ہماری امی کر ہے کہ جب وہ چھوٹ تھی توول پر کھاناایا کرتی تھی",
+      "unconstrained": "نہیں ہم نے कभी चूले पर खाना तो नहीं पकाया है पर ہماری अम्मी बताया کر ہے کہ जब वो छोटी थी तो जूल् पर खाना बना बनाया करती थी",
+      "hinted": "نہیں ہم نے کبھی چولہ پر کھانا تو نہیں پکایا ہے پر ہماری امی کر ہے کہ جب وہ چھوٹ تھی توول پر کھاناایا کرتی تھی"
+    },
+    {
+      "key": "indicvoices/ur/valid/5910974511088115_chunk_2",
+      "constrained": "اور بہت اچھاایا کرتی تھی یہ لیکن چولے پر کھانا بنانے سے",
+      "unconstrained": "ଓ और बहुत अच्छा बनाया करती थी یہ لیکن چूल्ے पर کھانا बनाने سے",
+      "hinted": "اور بہت اچھاایا کرتی تھی یہ لیکن چولے پر کھانا بنانے سے"
+    },
+    {
+      "key": "indicvoices/ur/valid/5910974511088115_chunk_3",
+      "constrained": "یہ ہوتا ہے کہ برت بہت زیادہ گندے ہوتے ہیں اور جب ان دھونا پڑتا ہے تو پھر بہت زیادہ محنت لگتی ہے اس کونے میں کیونکہ سارے بھت کا ہو چکے ہوتے ہیں",
+      "unconstrained": "ये होता ہے कि बर्तन بہت زیادہ گندے ہوتے ہیں और जब उनको धोना पड़ता है तो फिर بہت زیادہ محنت لگتی ہے اس کونے میں کیونکہ सारे बर्तनन काले हो चکے होते हैं",
+      "hinted": "یہ ہوتا ہے کہ برت بہت زیادہ گندے ہوتے ہیں اور جب ان دھونا پڑتا ہے تو پھر بہت زیادہ محنت لگتی ہے اس کونے میں کیونکہ سارے بھت کا ہو چکے ہوتے ہیں"
+    },
+    {
+      "key": "indicvoices/ur/valid/5910974511088115_chunk_4",
+      "constrained": "پہلے ہر کوئی چہ پر کھاناایا کرتا تھا اور آج بھی آج کل بھی کبھی ہمارے گھر میں پائے وغیرہ بنتے ہیں تو",
+      "unconstrained": "ിലേക്കൻ پہلے ہر कोई चूल्े पर खाना बनाया करता था और आज भी آج कल भी कभी हमारे घरों में पाए وغیرہ بنتے ہیں تو",
+      "hinted": "پہلے ہر کوئی چہ پر کھاناایا کرتا تھا اور آج بھی آج کل بھی کبھی ہمارے گھر میں پائے وغیرہ بنتے ہیں تو"
+    }
+  ]
+}
