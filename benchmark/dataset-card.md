@@ -23,11 +23,25 @@ tags:
 - code-switching
 - vesper
 size_categories:
-- 10K<n<100K
+- 100K<n<1M
+configs:
+- config_name: clips
+  default: true
+  data_files:
+  - split: test
+    path: data/clips.jsonl
+- config_name: transcripts
+  data_files:
+  - split: test
+    path: data/transcripts.jsonl
+- config_name: vesper_asr_benchmark_slice
+  data_files:
+  - split: test
+    path: data/vesper_asr_benchmark_slice.jsonl
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rahulsharmavishwakarma/indicear/main/docs/assets/vesper-banner.png" alt="Vesper" width="720">
+  <img src="assets/vesper-banner.png" alt="Vesper" width="720">
 </p>
 
 <h1 align="center">Vesper Indic Bench</h1>
@@ -49,7 +63,7 @@ Vesper Indic Bench is the evaluation behind [Vesper-IndicEAR](https://huggingfac
 | IndicConformer 600M multilingual (`ai4bharat/indic-conformer-600m-multilingual@2a77d305`) | CTC, repository code | given |
 | SraVaani-1.0 (`ARTPARK-IISc/SraVaani-1.0@f5dd5358`) | TDT greedy, repository code | automatic; no Urdu |
 
-Each baseline runs its own repository's inference code at the pinned revision. SraVaani has no rows for Urdu, which it does not support.
+Each baseline runs its own repository's inference code at the pinned revision. SraVaani has no rows for Urdu and IndicConformer none for English, which they do not support.
 
 ## Results
 
@@ -91,7 +105,7 @@ Text is normalised before scoring (lowercase, no punctuation, NFKC, native digit
 
 | Set family | Source | Reference text |
 |---|---|---|
-| Kathbath clean / noisy test (known and unseen speakers) | AI4Bharat IndicSUPERB, CC BY 4.0 | published |
+| Kathbath clean / noisy test (known and unseen speakers) | AI4Bharat IndicSUPERB, CC BY 4.0 (Hub tag; see below) | published |
 | IndicVoices valid | `ai4bharat/IndicVoices`, CC BY 4.0 | published |
 | Vaani test | `ARTPARK-IISc/Vaani-transcription-part`, CC BY 4.0 | published |
 | IndicContext (with code-mixed subsets) | `ai4bharat/IndicContextEval`, CC BY 4.0 | published |
@@ -99,7 +113,9 @@ Text is normalised before scoring (lowercase, no punctuation, NFKC, native digit
 | LibriSpeech test-clean / test-other | `openslr/librispeech_asr`, CC BY 4.0 | published |
 | VoxPopuli English test | `facebook/voxpopuli`, CC0 | published |
 | MUCS 2021 Hindi-English / Bengali-English test | OpenSLR SLR104, CC BY-SA 4.0 | withheld (share-alike) |
-| Svarah | `ai4bharat/Svarah` (gated; CC BY 4.0 in the card text, no licence tag) | withheld, as in Vesper's ASR benchmark (gated, no licence tag) |
+| Svarah | `ai4bharat/Svarah` (gated; CC BY 4.0 only in its card text, no licence tag) | withheld, as in Vesper's ASR benchmark |
+
+Kathbath's licence is stated two ways: its Hub tag says CC BY 4.0 and its card text says CC0. Its read sentences come from the IndicCorp web-text corpus. The references are republished here under CC BY 4.0 with attribution to AI4Bharat.
 
 To get the audio, load each source at the listed revision and match `key`; the code repository's `indicear.sources` and `indicear.ingest` do this for every source. This dataset (ids, transcripts, scores and published references) is CC BY 4.0; references keep their source's licence and attribution.
 
