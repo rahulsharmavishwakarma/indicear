@@ -79,6 +79,7 @@ The framework streams training audio from the Hugging Face Hub (no corpus downlo
 - [Model card](docs/model-card.md) · [Training recipe](docs/training-recipe.md) · [Full run](docs/full-run.md) · [Pilot](docs/pilot.md) · [Experiments log](docs/experiments.md)
 - [Architecture](docs/architecture.md) · [Framework / code guide](docs/framework.md) · [Original plan](docs/PLAN.md)
 - [Data licences](docs/data-licenses.md) · [Loanword normaliser](docs/loanwords.md)
+- [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Citation](CITATION.cff)
 
 The project was called Sangam until 25 October 2026; run logs and records under `results/` and the model package's `training/` files keep that name.
 

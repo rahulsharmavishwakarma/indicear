@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: If you use IndicEAR or the Vesper-IndicEAR model, please cite it as below.
+title: "Vesper-IndicEAR: Indic speech recognition from a frozen embedding-model audio encoder"
+type: software
+authors:
+  - family-names: Sharma
+    given-names: Rahul
+version: 0.1.0
+license: Apache-2.0
+repository-code: https://github.com/rahulsharmavishwakarma/indicear
+url: https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR
+keywords:
+  - speech recognition
+  - Indic languages
+  - CTC
+  - adapters
+  - language identification
