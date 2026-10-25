@@ -106,7 +106,7 @@ IndicContext · 7.6 s · CER 18.3 (set median 27.8) · detected language: Hindi 
 |---|---|
 | अब ये **forces** market को काफ़ी **complete** बनाती है जहाँ **differentiation** और cost **का leadership** दोनों **पे pressure होता** है | अब ये **foodurces** market को काफ़ी **comp** बनाती है जहाँ **differenceiiation** और cost **leadersship** दोनों **पर presure** है |
 
-Sources: Kathbath (AI4Bharat), IndicVoices (AI4Bharat), Vaani (ARTPARK-IISc), IndicContextEval (AI4Bharat); all CC BY 4.0. The clips are cut from the originals and re-encoded as MP3.
+Sources: Kathbath (AI4Bharat), IndicVoices (AI4Bharat), Vaani (ARTPARK-IISc), IndicContextEval (AI4Bharat); all CC BY 4.0. The clips are cut from the originals and re-encoded as MP3; the outputs shown are on the original audio, so transcribing the MP3s can differ by a word or two.
 
 ## Use
 
