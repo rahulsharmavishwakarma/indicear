@@ -64,51 +64,47 @@ English: 7.2 / 13.0 CER on LibriSpeech test-clean / test-other. Language identif
 
 ## Examples
 
-Hindi test clips the model never trained on (public, CC BY 4.0), with its raw output and automatic language detection. CER is that clip's character error rate; the median over each test set's 3–9 s clips is given for comparison. Most errors are misspelled rare words or English words.
+Hindi test clips the model never trained on (public, CC BY 4.0), with the model's raw output in automatic language mode. **Bold** marks words that differ from the reference. CER is the clip's character error rate; the set median is over each test set's 3–9 s clips. Most errors are misspelled rare words and English words.
 
-**Read speech** · Kathbath · CER 9.0 (set median 14.3)
+### 1. Read speech
 
-<audio controls src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_read_kathbath.mp3"></audio>
+Kathbath · 7.5 s · CER 9.0 (set median 14.3) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_read_kathbath.mp3)
 
-[Listen (mp3)](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_read_kathbath.mp3)
+<audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_read_kathbath.mp3"></audio>
 
-| | |
+| Reference | Vesper-IndicEAR |
 |---|---|
-| Reference | रामलाल कहते हैं किसी तरह पीड़िता को मदद मिल गई इसका उन्हें संतोष है |
-| Output | रामल कहते हैं किसी तरह पीढ़ता को मदद मिल गई इसका उन्हेंने संतोष है |
+| **रामलाल** कहते हैं किसी तरह **पीड़िता** को मदद मिल गई इसका **उन्हें** संतोष है | **रामल** कहते हैं किसी तरह **पीढ़ता** को मदद मिल गई इसका **उन्हेंने** संतोष है |
 
-**Spontaneous speech** · IndicVoices · CER 10.4 (set median 15.3)
+### 2. Spontaneous speech
 
-<audio controls src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3"></audio>
+IndicVoices · 8.0 s · CER 10.4 (set median 15.3) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3)
 
-[Listen (mp3)](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3)
+<audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3"></audio>
 
-| | |
+| Reference | Vesper-IndicEAR |
 |---|---|
-| Reference | इसका मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता है इस वजह से ये भी एक अपराध ही है |
-| Output | मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता इस वजह से ये भी एक अपधी है |
+| **इसका** मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता **है** इस वजह से ये भी एक **अपराध ही** है | मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता इस वजह से ये भी एक **अपधी** है |
 
-**Hindi with English words, describing a photo** · Vaani · CER 7.3 (set median 12.5)
+### 3. Hindi with English words, describing a photo
 
-<audio controls src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3"></audio>
+Vaani · 6.4 s · CER 7.3 (set median 12.5) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3)
 
-[Listen (mp3)](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3)
+<audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3"></audio>
 
-| | |
+| Reference | Vesper-IndicEAR |
 |---|---|
-| Reference | इस फोटो के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे पहिए बने हुए हैं |
-| Output | इस photo के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे पइिया बने हुए हैं |
+| इस **फोटो** के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे **पहिए** बने हुए हैं | इस **photo** के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे **पइिया** बने हुए हैं |
 
-**Technical Hindi-English** · IndicContext · CER 18.3 (set median 28.7)
+### 4. Technical Hindi-English
 
-<audio controls src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3"></audio>
+IndicContext · 7.6 s · CER 18.3 (set median 28.7) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3)
 
-[Listen (mp3)](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3)
+<audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3"></audio>
 
-| | |
+| Reference | Vesper-IndicEAR |
 |---|---|
-| Reference | अब ये forces market को काफ़ी complete बनाती है जहाँ differentiation और cost का leadership दोनों पे pressure होता है |
-| Output | अब ये foodurces market को काफ़ी comp बनाती है जहाँ differenceiiation और cost leadersship दोनों पर presure है |
+| अब ये **forces** market को काफ़ी **complete** बनाती है जहाँ **differentiation** और cost **का leadership** दोनों **पे pressure होता** है | अब ये **foodurces** market को काफ़ी **comp** बनाती है जहाँ **differenceiiation** और cost **leadersship** दोनों **पर presure** है |
 
 Sources: Kathbath (AI4Bharat), IndicVoices (AI4Bharat), Vaani (ARTPARK-IISc), IndicContextEval (AI4Bharat); all CC BY 4.0.
 
