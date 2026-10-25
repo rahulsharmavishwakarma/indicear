@@ -16,7 +16,7 @@ Pieces:
   Background threads prefetch each stream's next shard; a shard is deleted as soon as its stream has
   read it (its rows then live in the shuffle buffer, in memory). A blocking request evicts unopened
   prefetches first and may overshoot the bound by one shard rather than deadlock. Logs MB/s.
-  `keep=True` (a host with disk but little bandwidth, e.g. the Mac) keeps every finished shard on
+  `keep=True` (a host with disk but little bandwidth, e.g. a workstation) keeps every finished shard on
   disk instead, across epochs and restarts: the pool is downloaded once (the pilot's: 68 GiB), and
   `hub_fetch` returns a complete local copy without touching the network. `download_pool` fills it
   ahead of training.

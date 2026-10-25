@@ -1178,7 +1178,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     train.add_argument("--ckpt-every-steps", type=int, default=500)
     train.add_argument("--ckpt-every-seconds", type=float, default=600.0)
     train.add_argument("--drive-copy", default=None,
-                       help="optional second copy of runs/ (e.g. a Drive mount); the primary copy is pulled to the Mac")
+                       help="optional second copy of runs/ (e.g. a Drive mount); the primary copy is pulled to the workstation")
     train.add_argument("--force-new-run", action="store_true")
     train.add_argument("--no-compile", action="store_true")
     train.add_argument("--device", choices=DEVICE_CHOICES, default=None,

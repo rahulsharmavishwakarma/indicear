@@ -396,7 +396,7 @@ def test_worker_augmentation_is_deterministic_under_resume(tmp_path, hub, which)
 def test_restore_on_a_host_whose_filters_reject_buffered_rows(tmp_path, hub):
     """A prep root rebuilt on another host may exclude other dev speakers: strict restore stops,
     lenient restore leaves those buffered rows out, logs them and continues from the same stream
-    positions (the Mac resume of the pilot)."""
+    positions (the workstation resume of the pilot)."""
     first = setup(tmp_path / "a", hub)
     for _ in range(4):
         _, state = first.planner.next_batch()
@@ -426,7 +426,7 @@ def test_restore_on_a_host_whose_filters_reject_buffered_rows(tmp_path, hub):
 
 
 def test_keep_shards_downloads_the_pool_once(tmp_path, hub):
-    """keep_shards (the Mac): consumed shards stay on disk across epochs and restarts, and
+    """keep_shards (a workstation): consumed shards stay on disk across epochs and restarts, and
     download_pool fetches the whole pool ahead of training."""
     from indicear.stream import download_pool, hub_fetch, local_copy
 

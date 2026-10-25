@@ -185,7 +185,7 @@ nohup nice -n 10 bash -c "${prefetch:+$prefetch || exit \$?; }exec $(printf '%q 
   >> "$OUT" 2>&1 &
 pid=$!
 echo "$pid" > "$PID_FILE"
-nohup caffeinate -i -w "$pid" >/dev/null 2>&1 &   # keep the Mac awake (lid open or on power) while it runs
+nohup caffeinate -i -w "$pid" >/dev/null 2>&1 &   # keep a macOS workstation awake (lid open or on power) while it runs
 # Host sampler: Apple GPU utilization and memory (ioreg), trainer RSS and swap, every 10 s.
 nohup bash -c '
   pid=$1; out=$2

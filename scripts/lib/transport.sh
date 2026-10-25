@@ -1,4 +1,4 @@
-# Shared transport for the Mac-side scripts (bash). Source it, then call transport_init SESSION.
+# Shared transport for the workstation-side scripts (bash). Source it, then call transport_init SESSION.
 #
 # Colab allows ONE SSH connection per runtime (more return HTTP 429), so every ssh/rsync goes
 # through one multiplexed control socket: ProxyCommand `colab ssh --proxy-mode -s SESSION`,

@@ -338,7 +338,7 @@ PREP_PACK=/content/full-prep.tar ROOT=/content/full bash scripts/full_warm.sh   
 
 ## Running on Colab over SSH
 
-Colab allows one SSH connection per runtime (a second gets HTTP 429). Every Mac-side script therefore goes through one multiplexed control socket that `scripts/lib/transport.sh` generates in `~/.config/indicear/ssh-<session>.conf`: `ProxyCommand colab ssh --proxy-mode -s <session>`, `ControlMaster auto`, `ControlPersist 10m`.
+Colab allows one SSH connection per runtime (a second gets HTTP 429). Every workstation-side script therefore goes through one multiplexed control socket that `scripts/lib/transport.sh` generates in `~/.config/indicear/ssh-<session>.conf`: `ProxyCommand colab ssh --proxy-mode -s <session>`, `ControlMaster auto`, `ControlPersist 10m`.
 
 ```bash
 # On a workstation (S = Colab session name)

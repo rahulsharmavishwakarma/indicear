@@ -110,7 +110,7 @@ def test_corrupt_latest_falls_back_and_config_change_refused(tmp_path, tiny_towe
 
 
 def test_resume_from_synced_local_copy_into_fresh_run_dir(tmp_path, tiny_tower, monkeypatch):
-    """VM lost: the run continues from the copy pulled to the Mac, uploaded to a fresh run dir."""
+    """VM lost: the run continues from the copy pulled to the workstation, uploaded to a fresh run dir."""
     import subprocess
     from pathlib import Path
 
