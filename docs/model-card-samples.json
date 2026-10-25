@@ -1,5 +1,5 @@
 {
- "note": "Audio examples on the Hugging Face model card (samples/<name>.mp3, 16 kHz mono 48 kb/s, cut from the listed Vesper Indic Bench clips; no audio is stored in this repository). output and cer are Vesper-IndicEAR's, automatic language.",
+ "note": "Audio examples on the Hugging Face model card (samples/<name>.mp3, cut from the listed Vesper Indic Bench clips and re-encoded as 16 kHz mono 48 kb/s MP3; no audio is stored in this repository). output and cer are Vesper-IndicEAR's, automatic language; cer is script-normalised (equal to plain CER on these clips). set_median is the median script-normalised CER of the same system over that set's 3-9 s clips in Vesper Indic Bench.",
  "hi_read_kathbath": {
   "set": "kathbath_clean_test_unknown_hi",
   "key": "kathbath_test/hi/clean_test_unknown/844424930927698-574-f",
@@ -9,7 +9,8 @@
   "reference": "रामलाल कहते हैं किसी तरह पीड़िता को मदद मिल गई इसका उन्हें संतोष है",
   "output": "रामल कहते हैं किसी तरह पीढ़ता को मदद मिल गई इसका उन्हेंने संतोष है",
   "language": "hi",
-  "cer": 8.96
+  "cer": 8.96,
+  "set_median": 14.3
  },
  "hi_spontaneous_indicvoices": {
   "set": "indicvoices_valid_hi",
@@ -20,7 +21,8 @@
   "reference": "इसका मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता है इस वजह से ये भी एक अपराध ही है",
   "output": "मतलब police भी है जो पैसा ही खाता है वो लोग का वो लोग भी उसके पीछे पीछे रहता इस वजह से ये भी एक अपधी है",
   "language": "hi",
-  "cer": 10.43
+  "cer": 10.43,
+  "set_median": 15.2
  },
  "hi_en_photo_vaani": {
   "set": "vaani_test_hi",
@@ -31,7 +33,8 @@
   "reference": "इस फोटो के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे पहिए बने हुए हैं",
   "output": "इस photo के अंदर एक बड़ी सी table लगी हुई है जिसके ऊपर कुछ golden colour का colour है और नीचे पइिया बने हुए हैं",
   "language": "hi",
-  "cer": 7.34
+  "cer": 7.34,
+  "set_median": 12.4
  },
  "hi_en_technical_indiccontext": {
   "set": "indiccontext_hi_code_mixed",
@@ -42,6 +45,7 @@
   "reference": "अब ये forces market को काफ़ी complete बनाती है जहाँ differentiation और cost का leadership दोनों पे pressure होता है",
   "output": "अब ये foodurces market को काफ़ी comp बनाती है जहाँ differenceiiation और cost leadersship दोनों पर presure है",
   "language": "hi",
-  "cer": 18.26
+  "cer": 18.26,
+  "set_median": 27.8
  }
 }

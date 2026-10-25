@@ -236,7 +236,7 @@ Detail in [full-run.md](full-run.md) and the [model card](model-card.md). Script
 | Kathbath noisy | 24.9 | 4.3 | 4.4 |
 | IndicVoices | 24.3 | 7.7 | 7.4 |
 | Vaani | 24.8 | 10.9 | 8.4 |
-| IndicContext (code-mixed) | 32.4 | 5.2 | 5.3 |
+| IndicContext | 32.4 | 5.2 | 5.3 |
 | MUCS (Hindi, Bengali) | 43.5 | 49.0 | 49.3 |
 
 - **Works:** a frozen embedding encoder plus 45 MB of trained weights transcribes 12 languages with built-in LID (FLEURS dev 24.8 CER, LID 97.8%; LibriSpeech 7.2/13.0 CER).

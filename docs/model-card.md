@@ -11,7 +11,7 @@ Speech recognition for 11 Indian languages and English, part of the Vesper proje
 | | |
 |---|---|
 | Languages | Bengali, English, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu, Urdu |
-| Encoder | `google/embeddinggemma-2` audio tower, 305M parameters, frozen (included, unchanged) |
+| Encoder | `google/embeddinggemma-2` audio tower, 305M parameters, frozen (included, tensor values unchanged) |
 | Trained | 11.8M parameters: adapters on layers 7–12, phonetic CTC, script-factored CTC, language ID |
 | Output | Lowercase text without punctuation, language, code-switch spans, word times |
 | Download | 627 MiB |
@@ -47,7 +47,7 @@ So mixed speech such as *"mujhe ye phone bahut pasand hai"* is written as **म�
 
 ## Results
 
-Script-normalised character error rate (CER, lower is better). Every system transcribes the same 300 clips per language per set; values are means over the 10 Indic languages all three systems support (Urdu excluded), and the Kathbath sets use their unseen-speaker split. Vesper-IndicEAR never saw these sets' speakers in training; the baselines may have trained on some of these sources (IndicConformer on Kathbath's training speakers, SraVaani on Vaani).
+Script-normalised character error rate (CER, lower is better). Every system transcribes the same 300 clips per language per set; values are means over the languages in each set that all three systems support (Urdu excluded): 10 for Kathbath, IndicVoices and Vaani, 7 for IndicContext and 2 for MUCS. The Kathbath sets use their unseen-speaker split. Vesper-IndicEAR never saw these sets' speakers in training; the baselines may have trained on some of these sources (IndicConformer on Kathbath's training speakers, SraVaani on Vaani).
 
 <p align="center"><img src="figures/fig05_heldout_comparison.png" width="100%"></p>
 
@@ -57,14 +57,14 @@ Script-normalised character error rate (CER, lower is better). Every system tran
 | Kathbath noisy | 24.9 | 4.3 | 4.4 |
 | IndicVoices | 24.3 | 7.7 | 7.4 |
 | Vaani | 24.8 | 10.9 | 8.4 |
-| IndicContext (code-mixed) | 32.4 | 5.2 | 5.3 |
+| IndicContext | 32.4 | 5.2 | 5.3 |
 | MUCS (Hindi, Bengali) | 43.5 | 49.0 | 49.3 |
 
-English: 7.2 / 13.0 CER on LibriSpeech test-clean / test-other. Language identification: 97.8% of FLEURS utterances. Per-clip transcripts for every system are in [Vesper Indic Bench](https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench).
+English: 7.2 / 13.0 CER on the full LibriSpeech test-clean / test-other sets. Language identification: 97.8% of FLEURS dev utterances. Per-clip transcripts for every system are in [Vesper Indic Bench](https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench).
 
 ## Examples
 
-Hindi test clips the model never trained on (public, CC BY 4.0), with the model's raw output in automatic language mode. **Bold** marks words that differ from the reference. CER is the clip's character error rate; the set median is over each test set's 3–9 s clips. Most errors are misspelled rare words and English words.
+Hindi test clips the model never trained on (public, CC BY 4.0), with the model's raw output in automatic language mode. **Bold** marks words that differ from the reference. CER is the clip's script-normalised character error rate, as in Results; the set median is the model's median over that test set's 3–9 s clips in Vesper Indic Bench. Most errors are misspelled rare words and English words.
 
 ### 1. Read speech
 
@@ -78,7 +78,7 @@ Kathbath · 7.5 s · CER 9.0 (set median 14.3) · detected language: Hindi · [m
 
 ### 2. Spontaneous speech
 
-IndicVoices · 8.0 s · CER 10.4 (set median 15.3) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3)
+IndicVoices · 8.0 s · CER 10.4 (set median 15.2) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3)
 
 <audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_spontaneous_indicvoices.mp3"></audio>
 
@@ -88,7 +88,7 @@ IndicVoices · 8.0 s · CER 10.4 (set median 15.3) · detected language: Hindi �
 
 ### 3. Hindi with English words, describing a photo
 
-Vaani · 6.4 s · CER 7.3 (set median 12.5) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3)
+Vaani · 6.4 s · CER 7.3 (set median 12.4) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3)
 
 <audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3"></audio>
 
@@ -98,7 +98,7 @@ Vaani · 6.4 s · CER 7.3 (set median 12.5) · detected language: Hindi · [mp3]
 
 ### 4. Technical Hindi-English
 
-IndicContext · 7.6 s · CER 18.3 (set median 28.7) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3)
+IndicContext · 7.6 s · CER 18.3 (set median 27.8) · detected language: Hindi · [mp3](https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3)
 
 <audio controls preload="none" src="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_technical_indiccontext.mp3"></audio>
 
@@ -106,7 +106,7 @@ IndicContext · 7.6 s · CER 18.3 (set median 28.7) · detected language: Hindi 
 |---|---|
 | अब ये **forces** market को काफ़ी **complete** बनाती है जहाँ **differentiation** और cost **का leadership** दोनों **पे pressure होता** है | अब ये **foodurces** market को काफ़ी **comp** बनाती है जहाँ **differenceiiation** और cost **leadersship** दोनों **पर presure** है |
 
-Sources: Kathbath (AI4Bharat), IndicVoices (AI4Bharat), Vaani (ARTPARK-IISc), IndicContextEval (AI4Bharat); all CC BY 4.0.
+Sources: Kathbath (AI4Bharat), IndicVoices (AI4Bharat), Vaani (ARTPARK-IISc), IndicContextEval (AI4Bharat); all CC BY 4.0. The clips are cut from the originals and re-encoded as MP3.
 
 ## Use
 
@@ -115,6 +115,8 @@ pip install indicear
 indicear-transcribe --model rahulsharmavishwakarma/vesper-indicEAR audio.wav
 indicear-transcribe --model rahulsharmavishwakarma/vesper-indicEAR --json audio.m4a   # words, times, language
 ```
+
+WAV, FLAC and other formats libsndfile reads work directly; MP3/M4A and video files need `ffmpeg` on the PATH.
 
 ```python
 from indicear.transcribe import Transcriber
@@ -143,7 +145,7 @@ The training code, recipe and a Colab notebook are in the [IndicEAR repository](
 
 ## Licence and citation
 
-Apache-2.0. The included EmbeddingGemma 2 audio tower is Google's, Apache-2.0, unchanged. Training data are CC BY (2.0–4.0) and CC0; see the repository's `NOTICE` and `docs/data-licenses.md`.
+Apache-2.0 ([LICENSE](https://github.com/rahulsharmavishwakarma/indicear/blob/main/LICENSE)). The included EmbeddingGemma 2 audio tower is Google's, under Apache-2.0: `encoder/model.safetensors` holds every audio-tower tensor of the checkpoint with values unchanged and the `audio_tower.` name prefix removed ([NOTICE](https://github.com/rahulsharmavishwakarma/indicear/blob/main/NOTICE)). Google asks that deployments adhere to the [Gemma Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy). Training data are CC BY (2.0–4.0) and CC0; see the repository's [data licences](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/data-licenses.md).
 
 ```bibtex
 @misc{vesper_indicear_2026,
