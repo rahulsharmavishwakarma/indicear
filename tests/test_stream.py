@@ -330,6 +330,17 @@ def test_ablate_prep_stream_end_to_end(tmp_path, hub, monkeypatch):
     monkeypatch.setattr(indicear.ingest, "download_hf", hub.downloader)
     monkeypatch.setattr(indicear.stream, "hub_fetch", fetcher(hub))
     monkeypatch.setattr(indicear.stream, "open_remote", lambda shard: open(shard["_local"], "rb"))  # noqa: SIM115
+    import soundfile as sf
+
+    import indicear.data
+
+    def fake_fleurs(root, locale, split):  # one synthetic FLEURS dev clip per language, no download
+        wav = tmp_path / f"fleurs_{locale}.wav"
+        sf.write(wav, torch.zeros(16000).numpy(), 16000)
+        raw = {"hi_in": "नमस्ते दुनिया", "en_us": "hello world"}[locale]
+        return [{"sentence_id": "1", "file": wav.name, "audio": str(wav), "raw": raw}]
+
+    monkeypatch.setattr(indicear.data, "fetch_fleurs", fake_fleurs)
     mixture = {**MIXTURE, "dev": {"fraction": 0.5, "max_hours_per_lang": 0.002},
                "eval": [{"name": "kb_valid", "source": "kathbath", "lang": "hi", "split": "valid"}]}
     path = tmp_path / "stream.json"
@@ -348,6 +359,8 @@ def test_ablate_prep_stream_end_to_end(tmp_path, hub, monkeypatch):
     assert len(flacs) == len(dev) + len(evals)  # only the fixed sets are on disk
     assert not list((root / "downloads").rglob("*.parquet")) and not list((root / "stream-cache").rglob("*.parquet"))
     assert (root / "tok" / "aggregate.json").exists()
+    fleurs = [json.loads(line) for line in (root / "manifests" / "eval_fleurs_dev.jsonl").read_text().splitlines()]
+    assert sorted(r["lang"] for r in fleurs) == ["en", "hi"]
 
 
 @pytest.mark.parametrize("which", ["policy", "codec"])
