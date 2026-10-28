@@ -19,7 +19,7 @@ Weights and checkpoints are not in git. The released model is [`rahulsharmavishw
 
 | Run | Date | Hardware | Data | Variant | Batch (frames/step) | Steps | Peak LR (schedule) | Audio processed | Wall time | Key result |
 |---|---|---|---|---|---:|---:|---|---:|---|---|
-| Encoder probes (`results/probe-*`) | 23 Oct | Colab L4 | FLEURS train → dev, ~7 h/lang, 12 langs | Per-layer linear CTC, BPE-256 per language | 100 s of audio | 6 epochs | 2e-3 | — | — | Best-layer CER 16–29% Indic, 29.4% en |
+| Encoder probes (`results/probe-*`) | 23 Oct | Colab L4 | FLEURS train → dev, ~7 h/lang, 12 langs | Per-layer linear CTC, SentencePiece unigram (256 pieces) per language | 100 s of audio | 6 epochs | 2e-3 | — | — | Best-layer CER 16.1–27.1% Indic, 29.4% en |
 | `fleurs-v1` | 23 Oct | L4 (24 GB) | FLEURS, 12 langs, 88 h | v1: frozen + linear CTC | 111,806 | 880 | 2.36e-3 (warmup 300, cosine to 5%) | 880 h (10 epochs) | 40 min | Dev CER 29–55% |
 | Robustness probe | 23 Oct | L4 | FLEURS dev, 200/lang × 17 conditions | v1 heads | — | — | — | — | 15 min | Reverb collapses (`results/pilot-fleurs/robustness-v1`) |
 | `fleurs-v2` | 23 Oct | A100 80 GB (3 runs sharing) | Same | v2: + adapters (rank 128, layers 7–12) | 24,226 | 3,540 | 1.10e-3 | 880 h | 79 min | Mean CER 27.67 (ex-ur) |

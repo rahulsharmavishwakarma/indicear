@@ -82,7 +82,7 @@ flowchart LR
 | Gemini 3 Pro | 6.0 | 15.7 | 19.9 | 21.7 |
 | IndicConformer 600M | 8.2 | 19.9 | 21.4 | 26.0 |
 
-**Vaani Hindi benchmark, single reference:** Gemma 4 E2B-IT, which is our encoder with Google's LLM decoder, scores 26.2, against 20.0 for IndicConformer. So the encoder isn't the limit; the decoder and Indic training data are. (The released results point the other way for a frozen encoder with adapters: closing the gap to dedicated models likely needs encoder changes; see `docs/full-run.md`.)
+**Vaani Hindi benchmark, single reference:** Gemma 4 E2B-IT, which is our encoder with Google's LLM decoder, scores 26.2, against 20.0 for IndicConformer. So the encoder isn't the limit; the decoder and Indic training data are. (The released frozen-encoder model is far behind both, so its gap lies mainly in how much small CTC layers extract from frozen encoder states, not in what the encoder holds; see `docs/full-run.md`.)
 
 **Known failures to avoid:**
 - LLM hallucination: 13.2% of Gemma-3N outputs with entity prompts; Whisper produced text for 40.3% of non-speech inputs.
