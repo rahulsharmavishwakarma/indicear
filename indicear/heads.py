@@ -1,6 +1,6 @@
 """Output heads for design A.
 
-- `SelfConditionedCTC`: intermediate CTC with self-conditioning (InterCTC, arXiv 2104.02724;
+- `SelfConditionedCTC`: intermediate CTC (InterCTC, arXiv 2102.03216) with self-conditioning (arXiv 2104.02724;
   LUPET-style phonetic units, arXiv 2401.03689): logits = W LN(x), and x' = x + B softmax(logits)
   feeds the next encoder layer. B is zero-initialized so training starts from the frozen encoder.
 - `ScriptFactoredOutput`: the two-level output, log p(token) = log p(script(token) | h) +
