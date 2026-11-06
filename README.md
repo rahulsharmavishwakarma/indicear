@@ -70,12 +70,14 @@ The framework streams training audio from the Hugging Face Hub (no corpus downlo
 | `benchmark/` | Benchmark dataset builder and the Vesper ASR benchmark scorer |
 | `scripts/` | Stage scripts for a GPU VM and helpers for pulling runs to a workstation |
 | `notebooks/` | Quickstart, Colab training, and the first ablation |
+| `site/` | The technical report as a static web page with its figures and PDF, published to GitHub Pages by `.github/workflows/pages.yml` |
 | `docs/` | Model card, recipe, run reports, design, data licences; `docs/figures/make_figures.py` regenerates every figure |
 | `results/` | Run configs, training curves, logs and evaluation summaries |
 | `tests/` | CPU test suite (`uv run --locked pytest`) |
 
 ## Documentation
 
+- [Technical report](https://rahulsharmavishwakarma.github.io/indicear/) (web page and [PDF](https://rahulsharmavishwakarma.github.io/indicear/vesper-indicear.pdf))
 - [Model card](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/model-card.md) · [Training recipe](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/training-recipe.md) · [Full run](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/full-run.md) · [Pilot](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/pilot.md) · [Experiments log](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/experiments.md)
 - [Architecture](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/architecture.md) · [Framework / code guide](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/framework.md) · [Original plan](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/PLAN.md)
 - [Data licences](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/data-licenses.md) · [Loanword normaliser](https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/loanwords.md)

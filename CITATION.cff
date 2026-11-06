@@ -15,3 +15,13 @@ keywords:
   - CTC
   - adapters
   - language identification
+preferred-citation:
+  type: report
+  title: "Vesper-IndicEAR: Multilingual Indic Speech Recognition from a Frozen Embedding-Model Audio Encoder"
+  authors:
+    - family-names: Sharma
+      given-names: Rahul
+      affiliation: Independent Researcher
+  year: 2026
+  month: 11
+  url: https://rahulsharmavishwakarma.github.io/indicear/
