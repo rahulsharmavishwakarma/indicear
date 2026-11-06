@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vesper-IndicEAR Technical Report</title>
+<meta name="description" content="How far a frozen embedding-model audio encoder can be turned into a multilingual Indic speech recogniser: model, data, training recipe, results and limits.">
+<link rel="canonical" href="https://rahulsharmavishwakarma.github.io/indicear/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%226%22 fill=%22%23e84d17%22/%3E%3C/svg%3E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vesper-IndicEAR Technical Report">
+<meta property="og:description" content="How far a frozen embedding-model audio encoder can be turned into a multilingual Indic speech recogniser: model, data, training recipe, results and limits.">
+<meta property="og:url" content="https://rahulsharmavishwakarma.github.io/indicear/">
+<meta name="author" content="Rahul Sharma">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Sans+Devanagari:wght@400;600&amp;display=swap">
+<style>
+/* Layout: long-form technical report; a sticky contents rail on wide screens, a 44rem reading column, figures break out to the full main column on white plates. */
+:root {
+  --bg: #fcfcfa;
+  --surface: #f6f5f2;
+  --ink: #12110f;
+  --muted: #6b6962;
+  --line: #e8e6e0;
+  --rule: #12110f;
+  --accent: #e84d17;
+  --accent-ink: #b5400f;
+  --tint: #fdede8;
+  --plate: #ffffff;
+  --plate-line: #e8e6e0;
+  --latn: #1f63b5;
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Helvetica Neue", sans-serif;
+  --f-body: "Source Serif 4", "Iowan Old Style", Georgia, "Noto Sans Devanagari", serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --f-indic: "Noto Sans Devanagari", "Kohinoor Devanagari", "Mangal", sans-serif;
+  --measure: 44rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0b0a; --surface: #161513; --ink: #fff5ee; --muted: #a39a91; --line: #2b2926; --rule: #fff5ee;
+    --accent: #ff6b3d; --accent-ink: #ff8a5c; --tint: #2a140b; --plate: #ffffff; --plate-line: #2b2926; --latn: #79b0f2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c0b0a; --surface: #161513; --ink: #fff5ee; --muted: #a39a91; --line: #2b2926; --rule: #fff5ee;
+  --accent: #ff6b3d; --accent-ink: #ff8a5c; --tint: #2a140b; --plate: #ffffff; --plate-line: #2b2926; --latn: #79b0f2;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--f-body); font-size: 1.0625rem; line-height: 1.65;
+  font-optical-sizing: auto; -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+.shell {
+  max-width: 76rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* top bar */
+.topbar { border-bottom: 1px solid var(--line); }
+.topbar .shell { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem; padding-block: 0.85rem; }
+.brand { font-family: var(--f-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 0.55rem; }
+.brand .dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: var(--accent); }
+.brand small { font-weight: 400; color: var(--muted); font-size: 0.9rem; }
+.toplinks { display: flex; flex-wrap: wrap; gap: 0.25rem 1.1rem; font-family: var(--f-display); font-size: 0.92rem; }
+.toplinks a { color: var(--ink); text-decoration: none; }
+.toplinks a:hover { color: var(--accent-ink); }
+
+/* hero */
+.hero { padding-block: 3.25rem 2rem; }
+.eyebrow { font-family: var(--f-display); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; }
+.eyebrow span:not(:last-child)::after { content: "·"; margin-left: 0.9rem; color: var(--muted); }
+h1 {
+  font-family: var(--f-display); font-weight: 700; letter-spacing: -0.025em; line-height: 1.04;
+  font-size: clamp(2.1rem, 1.2rem + 3.6vw, 3.9rem); margin: 0.9rem 0 0; max-width: 23ch; text-wrap: balance;
+}
+h1 .name { color: var(--accent); }
+.byline { font-family: var(--f-display); margin-top: 1.1rem; font-size: 1rem; }
+.byline b { font-weight: 600; }
+.byline span { color: var(--muted); }
+.lead { max-width: var(--measure); font-size: 1.16rem; line-height: 1.6; margin: 1.6rem 0 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+.btn {
+  font-family: var(--f-display); font-weight: 600; font-size: 0.93rem; text-decoration: none;
+  padding: 0.55rem 0.95rem; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); background: var(--bg);
+}
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* at a glance */
+.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr)); gap: 0; margin: 2.4rem 0 0; border-top: 2px solid var(--rule); border-bottom: 1px solid var(--line); }
+.glance div { padding: 0.95rem 1rem 1rem 0; }
+.glance dt { font-family: var(--f-display); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.glance dd { margin: 0.25rem 0 0; font-family: var(--f-display); font-size: 1.5rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.glance dd small { display: block; font-size: 0.84rem; font-weight: 400; color: var(--muted); letter-spacing: 0; margin-top: 0.2rem; line-height: 1.35; }
+.glance dd.warn { color: var(--accent-ink); }
+
+/* specimen */
+.specimen { margin-top: 2.2rem; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 1.1rem 1.25rem 1.2rem; max-width: 58rem; }
+.specimen-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1rem; font-family: var(--f-display); font-size: 0.84rem; color: var(--muted); }
+.specimen-head b { color: var(--ink); font-weight: 600; }
+.lines { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.55rem 1rem; margin-top: 0.8rem; align-items: baseline; }
+.lines .k { font-family: var(--f-display); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.lines .v { font-family: var(--f-indic); font-size: 1.22rem; line-height: 1.6; }
+.latn { color: var(--latn); font-family: var(--f-display); font-weight: 600; }
+.diff { text-decoration: underline wavy var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.3em; }
+.specimen p { font-size: 0.9rem; color: var(--muted); margin: 0.8rem 0 0; font-family: var(--f-display); line-height: 1.45; }
+
+/* main grid */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-block: 1rem 4rem; }
+@media (min-width: 1100px) { .layout { grid-template-columns: 13.5rem minmax(0, 1fr); gap: 3.5rem; } }
+.toc { font-family: var(--f-display); font-size: 0.9rem; }
+.toc-inner { border-top: 2px solid var(--rule); padding-top: 0.75rem; }
+@media (min-width: 1100px) { .toc-inner { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 1.5rem); max-height: calc(100vh - 3rem); overflow-y: auto; } }
+.toc h2 { font-size: 0.74rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.6rem; font-weight: 600; }
+.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; }
+@media (max-width: 1099px) { .toc ol { grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); } }
+.toc a { display: flex; gap: 0.55rem; color: var(--ink); text-decoration: none; padding: 0.22rem 0; line-height: 1.3; }
+.toc a span { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 1.3rem; }
+.toc a:hover { color: var(--accent-ink); }
+
+article { min-width: 0; }
+article > section { border-top: 1px solid var(--line); padding-top: 2.2rem; margin-top: 2.6rem; }
+article > section:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+article p, article ul, article ol, article .note, article h3, article h4, article .eq, article .algo, article dl.terms { max-width: var(--measure); }
+h2.sec { font-family: var(--f-display); font-weight: 700; font-size: clamp(1.6rem, 1.2rem + 1.3vw, 2.15rem); letter-spacing: -0.02em; line-height: 1.12; margin: 0 0 1rem; text-wrap: balance; display: flex; gap: 0.75rem; align-items: baseline; }
+h2.sec .n { color: var(--accent); font-variant-numeric: tabular-nums; font-size: 0.7em; font-weight: 600; }
+h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.28rem; letter-spacing: -0.01em; margin: 2.1rem 0 0.5rem; line-height: 1.25; text-wrap: balance; }
+h4 { font-family: var(--f-display); font-weight: 600; font-size: 1.02rem; margin: 1.5rem 0 0.3rem; }
+article p { margin: 0 0 1rem; }
+article li { margin-bottom: 0.4rem; }
+article li::marker { color: var(--muted); }
+strong { font-weight: 600; }
+code, kbd { font-family: var(--f-mono); font-size: 0.86em; background: var(--surface); border: 1px solid var(--line); padding: 0.05em 0.3em; border-radius: 4px; }
+.cite { font-family: var(--f-display); font-size: 0.82em; white-space: nowrap; }
+.cite a { text-decoration: none; color: var(--accent-ink); }
+.xref { font-family: var(--f-display); font-size: 0.95em; }
+
+.qa { display: grid; gap: 0.9rem; margin: 1.2rem 0 1.5rem; max-width: var(--measure); padding: 0; list-style: none; counter-reset: q; }
+.qa li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0.25rem 0.6rem; margin: 0; counter-increment: q; }
+.qa li::before { content: counter(q); font-family: var(--f-display); font-weight: 700; color: var(--accent); font-size: 1.2rem; line-height: 1.4; }
+.qa b { font-family: var(--f-display); font-weight: 600; }
+.qa .a { grid-column: 2; color: var(--muted); font-style: italic; }
+
+.note { border-left: 3px solid var(--accent); background: var(--tint); padding: 0.85rem 1.1rem; border-radius: 0 10px 10px 0; margin: 1.4rem 0; }
+.note p:last-child { margin-bottom: 0; }
+
+/* equations and algorithm */
+.eq { display: flex; align-items: center; gap: 1rem; margin: 1.1rem 0 1.3rem; overflow-x: auto; }
+.eq math { font-size: 1.15rem; flex: 1; min-width: max-content; }
+.eq .no { font-family: var(--f-display); color: var(--muted); font-size: 0.9rem; }
+math { font-family: "STIX Two Math", "Cambria Math", "Latin Modern Math", math; }
+.algo { border-top: 2px solid var(--rule); border-bottom: 1px solid var(--line); margin: 1.4rem 0 1.6rem; font-size: 0.93rem; }
+.algo .cap { font-family: var(--f-display); font-weight: 600; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
+.algo ol { font-family: var(--f-mono); font-size: 0.83rem; line-height: 1.6; margin: 0.6rem 0; padding-left: 2.2rem; overflow-x: auto; }
+.algo li { margin: 0.1rem 0; }
+.algo li::marker { color: var(--muted); }
+.algo .in { padding-left: 1.4rem; }
+.algo .cm { color: var(--muted); }
+.algo .req { font-family: var(--f-body); font-size: 0.93rem; padding-top: 0.5rem; }
+
+/* figures */
+figure { margin: 2rem 0; }
+figure .plate { background: var(--plate); border: 1px solid var(--plate-line); border-radius: 12px; padding: clamp(0.6rem, 2vw, 1.4rem); overflow-x: auto; }
+figure img { display: block; width: 100%; height: auto; max-width: 100%; margin: 0 auto; }
+figure.narrow .plate img { max-width: 34rem; }
+figure.mid .plate img { max-width: 46rem; }
+.scroll-min img { min-width: 36rem; }
+figcaption { font-family: var(--f-display); font-size: 0.9rem; line-height: 1.5; color: var(--muted); margin-top: 0.7rem; max-width: var(--measure); }
+figcaption b { color: var(--ink); font-weight: 600; }
+.duo { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.2rem; align-items: start; }
+.duo figure { margin: 0; }
+
+/* tables */
+.tbl { margin: 1.8rem 0; }
+.tbl .cap { font-family: var(--f-display); font-size: 0.9rem; line-height: 1.5; color: var(--muted); margin-bottom: 0.6rem; max-width: var(--measure); }
+.tbl .cap b { color: var(--ink); font-weight: 600; }
+.tscroll { overflow-x: auto; }
+table { border-collapse: collapse; font-family: var(--f-display); font-size: 0.92rem; font-variant-numeric: tabular-nums; width: 100%; border-top: 2px solid var(--rule); border-bottom: 2px solid var(--rule); }
+table.fit { width: auto; min-width: min(100%, 30rem); }
+th, td { padding: 0.45rem 0.75rem; text-align: left; vertical-align: top; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; }
+thead th { font-weight: 600; border-bottom: 1px solid var(--rule); vertical-align: bottom; line-height: 1.3; }
+thead tr.grp th { border-bottom: 1px solid var(--line); text-align: center; color: var(--muted); font-weight: 600; }
+td.r, th.r { text-align: right; }
+tbody tr + tr td { border-top: 1px solid var(--line); }
+tbody tr.sep td { border-top: 1px solid var(--rule); }
+td b { font-weight: 700; }
+td.me { color: var(--accent-ink); }
+table.dense { font-size: 0.82rem; }
+table.dense th, table.dense td { padding: 0.32rem 0.45rem; }
+table.text td { line-height: 1.4; }
+table.text { min-width: 44rem; }
+
+/* code */
+pre { font-family: var(--f-mono); font-size: 0.82rem; line-height: 1.6; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem; overflow-x: auto; margin: 1rem 0 1.4rem; max-width: 52rem; }
+pre code { background: none; border: 0; padding: 0; font-size: 1em; }
+pre .c { color: var(--muted); }
+
+dl.terms { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.5rem 1.2rem; margin: 1rem 0 1.4rem; }
+dl.terms dt { font-family: var(--f-display); font-weight: 600; }
+dl.terms dd { margin: 0; }
+@media (max-width: 560px) { dl.terms { grid-template-columns: minmax(0, 1fr); } dl.terms dd { margin-bottom: 0.6rem; } }
+
+/* references */
+ol.refs { font-size: 0.88rem; line-height: 1.5; padding-left: 2.4rem; max-width: 52rem; }
+ol.refs li { margin-bottom: 0.45rem; scroll-margin-top: 2rem; }
+ol.refs li:target { background: var(--tint); border-radius: 4px; }
+ol.refs li::marker { font-family: var(--f-display); color: var(--muted); font-variant-numeric: tabular-nums; }
+ol.refs a { overflow-wrap: anywhere; }
+
+footer { border-top: 1px solid var(--line); font-family: var(--f-display); font-size: 0.88rem; color: var(--muted); }
+footer .shell { padding-block: 1.6rem 2.4rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }
+footer a { color: var(--muted); }
+
+@media (max-width: 560px) {
+  body { font-size: 1rem; }
+  .lead { font-size: 1.06rem; }
+  .lines { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  .lines .v { margin-bottom: 0.5rem; font-size: 1.1rem; }
+  .glance dd { font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="shell">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>IndicEAR <small>Technical report</small></a>
+    <nav class="toplinks" aria-label="Project links">
+      <a href="vesper-indicear.pdf">PDF</a>
+      <a href="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR">Model</a>
+      <a href="https://github.com/rahulsharmavishwakarma/indicear">Code</a>
+      <a href="https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench">Benchmark</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="shell hero">
+  <div class="eyebrow"><span>Technical report</span><span>Release 0.1</span><span>November 2026</span></div>
+  <h1><span class="name">Vesper-IndicEAR</span>: Multilingual Indic speech recognition from a frozen embedding-model audio encoder</h1>
+  <div class="byline"><b>Rahul Sharma</b> <span>· Independent Researcher</span></div>
+  <p class="lead">EmbeddingGemma&nbsp;2, a multimodal embedding model, shares its 305M-parameter audio encoder with Gemma&nbsp;4&nbsp;E2B, whose language model reads the encoder's outputs to transcribe speech. We ask how far this encoder, left completely frozen and without the language model, can be turned into a multilingual CTC recogniser by small trained layers. The answer: a working recogniser for 11 Indian languages and English with language identification, from 11.8M trained parameters. It is not a competitive one: on the Indic test sets its error is 3 to 7 times that of the better dedicated recogniser, and it leads only on the code-switched MUCS set.</p>
+  <div class="actions">
+    <a class="btn primary" href="#method">Read the report</a>
+    <a class="btn" href="#recipe">Training recipe</a>
+    <a class="btn" href="vesper-indicear.pdf">PDF (16 pages)</a>
+    <a class="btn" href="https://github.com/rahulsharmavishwakarma/indicear">Code on GitHub</a>
+  </div>
+
+  <dl class="glance">
+    <div><dt>Trained</dt><dd>11.8M <small>parameters (45&nbsp;MB) on a frozen 305M encoder</small></dd></div>
+    <div><dt>Coverage</dt><dd>12 languages <small>11 scripts, code-switching, no language picker</small></dd></div>
+    <div><dt>Language ID</dt><dd>97.8% <small>of FLEURS dev utterances, 97.1 macro-F1</small></dd></div>
+    <div><dt>Compute</dt><dd>≈10 GPU-h <small>4.3 A100-h pilot + 6 h full run, 8,356 h audio in the full run</small></dd></div>
+    <div><dt>Held-out sn-CER</dt><dd class="warn">21–32% <small>against 3–11% for dedicated Indic models</small></dd></div>
+  </dl>
+
+  <div class="specimen" aria-label="Example transcript">
+    <div class="specimen-head"><span><b>Hindi–English speech</b>, Vaani test · 6.4&nbsp;s · detected language: Hindi</span><a href="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR/resolve/main/samples/hi_en_photo_vaani.mp3">Listen (mp3)</a></div>
+    <div class="lines">
+      <span class="k">Reference</span>
+      <span class="v" lang="hi">इस फोटो के अंदर एक बड़ी सी <span class="latn" lang="en">table</span> लगी हुई है जिसके ऊपर कुछ <span class="latn" lang="en">golden colour</span> का <span class="latn" lang="en">colour</span> है और नीचे पहिए बने हुए हैं</span>
+      <span class="k">Output</span>
+      <span class="v" lang="hi">इस <span class="latn diff" lang="en">photo</span> के अंदर एक बड़ी सी <span class="latn" lang="en">table</span> लगी हुई है जिसके ऊपर कुछ <span class="latn" lang="en">golden colour</span> का <span class="latn" lang="en">colour</span> है और नीचे <span class="diff">पइिया</span> बने हुए हैं</span>
+    </div>
+    <p>One output layer writes every word in its own script: English words in Latin, the rest in Devanagari. Differences from the reference are underlined. This clip scores 7.3% CER. The median over this set's 3–9&nbsp;s clips is 12.4%, so the example is better than typical.</p>
+  </div>
+</div>
+
+<div class="shell layout">
+  <nav class="toc" aria-label="Contents">
+    <div class="toc-inner">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#intro"><span>1</span>Introduction</a></li>
+        <li><a href="#related"><span>2</span>Related work</a></li>
+        <li><a href="#method"><span>3</span>Model</a></li>
+        <li><a href="#training"><span>4</span>Data and training</a></li>
+        <li><a href="#setup"><span>5</span>Evaluation protocol</a></li>
+        <li><a href="#results"><span>6</span>Results</a></li>
+        <li><a href="#analysis"><span>7</span>Analysis</a></li>
+        <li><a href="#recipe"><span>8</span>Training recipe</a></li>
+        <li><a href="#limitations"><span>9</span>Limitations</a></li>
+        <li><a href="#conclusion"><span>10</span>Conclusion and release</a></li>
+        <li><a href="#perlang"><span>A</span>Per-language results</a></li>
+        <li><a href="#vesper"><span>B</span>Public benchmark clips</a></li>
+        <li><a href="#cite"><span>·</span>Cite</a></li>
+        <li><a href="#references"><span>·</span>References</a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <article>
+
+<section id="intro">
+  <h2 class="sec"><span class="n">1</span>Introduction</h2>
+  <p>Speech recognisers are usually built on encoders trained for recognition, either supervised on transcribed speech&nbsp;<span class="cite">[<a href="#ref-radford2023whisper">1</a>, <a href="#ref-rekesh2023fastconformer">2</a>]</span> or self-supervised and then fine-tuned&nbsp;<span class="cite">[<a href="#ref-baevski2020wav2vec2">3</a>, <a href="#ref-hsu2021hubert">4</a>, <a href="#ref-chung2021w2vbert">5</a>]</span>. A different kind of audio encoder has recently become widely available: the audio towers of multimodal <em>embedding</em> models. EmbeddingGemma&nbsp;2&nbsp;<span class="cite">[<a href="#ref-vera2026embeddinggemma2">6</a>, <a href="#ref-google2026embeddinggemma2hf">7</a>]</span> embeds speech, text and images into one space so that a spoken query can retrieve a passage by meaning.</p>
+  <p>Its audio tower is the 305M-parameter encoder of Gemma&nbsp;4&nbsp;E2B, a Conformer based on the Universal Speech Model whose continuous outputs Gemma&nbsp;4's language model reads for speech tasks&nbsp;<span class="cite">[<a href="#ref-gemmateam2026gemma4">8</a>, <a href="#ref-zhang2023usm">9</a>]</span>. In a sampled comparison of the released weights, the tower's tensors are identical in the two models except the output projection. The encoder therefore carries speech information. The question is whether it can be read without the language model, by small layers on top of an encoder that an application may already run for retrieval. If so, one frozen encoder could serve retrieval, language identification and transcription together, and adding a language would mean training a few tens of megabytes of output layers rather than a new model.</p>
+  <p>Indian languages are a demanding test of this idea. The eleven languages we target use ten writing systems (nine Brahmic scripts and Perso-Arabic), plus Latin for English. Speakers switch between their language and English within a sentence, and transcription conventions differ on whether those English words are written in Latin or native script. Hindi and Urdu are largely one spoken language written in two scripts. Most public transcribed speech comes from a few large collections of read, prompted and extempore speech&nbsp;<span class="cite">[<a href="#ref-javed2024indicvoices">10</a>, <a href="#ref-javed2023indicsuperb">11</a>, <a href="#ref-pulikodan2026vaani">12</a>]</span>.</p>
+  <p>We set three questions:</p>
+  <ol class="qa">
+    <li><span><b>Feasibility.</b> Can a frozen embedding-model audio tower, with only small trained layers, transcribe 11 Indian languages and English?</span><span class="a">Yes.</span></li>
+    <li><span><b>Script and language.</b> Can a single output layer write each word in its correct script, and report the language, without a language picker in front of the recogniser?</span><span class="a">Mostly, with Hindi–Urdu the main exception.</span></li>
+    <li><span><b>Gap.</b> How far is the result from dedicated Indic recognisers on the same clips, and where does the gap come from?</span><span class="a">Far: on the Indic test sets its error is 3 to 7 times that of the better dedicated model.</span></li>
+  </ol>
+  <h4>Contributions</h4>
+  <ul>
+    <li><strong>A recipe for ASR on a frozen embedding encoder</strong> (<a class="xref" href="#method">§3</a>): staged execution of the unmodified tower with residual adapters, self-conditioned phonetic CTC, a script-factored CTC output over 11 scripts, LID heads that report but do not route, and decode-time script rules.</li>
+    <li><strong>An account of what each part adds</strong>: linear probes of the frozen tower layer by layer and against two other encoders (<a class="xref" href="#probe">§6.1</a>), an ablation of the trained components on a fixed 12-language set (<a class="xref" href="#ablation">§6.2</a>), and the effect of the decode-time rules (<a class="xref" href="#decoding-rules">§6.3</a>).</li>
+    <li><strong>A speaker-disjoint comparison on identical clips</strong> with two dedicated Indic recognisers under one script-normalised metric (<a class="xref" href="#heldout">§6.4</a>), released with every system's per-clip output as a benchmark.</li>
+    <li><strong>A streaming training framework</strong> that trains on 53 Hub-hosted streams without downloading the corpora, and a record of the failure modes we met: input-pipeline starvation, side effects of speaker exclusion, Hindi–Urdu script competition, and a scoring artefact that briefly made an early model look competitive (<a class="xref" href="#analysis">§7</a>, <a class="xref" href="#engineering">§8.4</a>).</li>
+  </ul>
+  <p>We are not the first to train recognisers on this encoder (<a class="xref" href="#related">§2</a>). What this work adds is a single multilingual, multi-script model with language ID on the fully frozen tower and without its language model, an explicit factorisation of the output by script, and a careful measurement of how far that approach goes.</p>
+</section>
+
+<section id="related">
+  <h2 class="sec"><span class="n">2</span>Related work</h2>
+  <h4>Frozen encoders and parameter-efficient adaptation</h4>
+  <p>Self-supervised speech encoders are routinely evaluated frozen, with light task heads reading their layers&nbsp;<span class="cite">[<a href="#ref-yang2021superb">13</a>]</span>, and their layers differ markedly in how much phonetic information they expose. Bottleneck adapters&nbsp;<span class="cite">[<a href="#ref-houlsby2019adapters">14</a>]</span> and low-rank updates&nbsp;<span class="cite">[<a href="#ref-hu2022lora">15</a>]</span> adapt a frozen network with few parameters; in speech, per-language adapters were used for large-scale multilingual recognition&nbsp;<span class="cite">[<a href="#ref-kannan2019multilingual">16</a>]</span>, and adapters on a frozen Universal Speech Model come within a fraction of a point of full fine-tuning&nbsp;<span class="cite">[<a href="#ref-zhang2023usm">9</a>]</span>. Our encoder is also USM-based&nbsp;<span class="cite">[<a href="#ref-gemmateam2026gemma4">8</a>]</span>, but its released form is part of an embedding model, and in Gemma&nbsp;4 its outputs are read by a language model rather than a CTC layer; we measure how far a CTC reader gets without that model.</p>
+  <h4>Recognition on the EmbeddingGemma&nbsp;2 audio tower</h4>
+  <p>In October 2026, community models fine-tuned or probed its audio tower for single-language recognition, among them Hindi, Malayalam and Bangla CTC models on the Hugging Face Hub&nbsp;<span class="cite">[<a href="#ref-epochdiscovery2026ephindiasr">17</a>, <a href="#ref-whiletruelearn2026dulu">18</a>, <a href="#ref-nehsan2026kothagemma">19</a>]</span>, and a study on Saudi and Gulf Arabic compared frozen and adapted variants&nbsp;<span class="cite">[<a href="#ref-abdelkhalik2026frozengemma4">20</a>]</span>. These works establish that the tower can be adapted to one language at a time. We study the fully frozen tower across 12 languages and 11 scripts in one model, with language identification and code-switching, and compare it on identical clips with dedicated Indic recognisers.</p>
+  <h4>Multilingual and code-switched output layers</h4>
+  <p>A single end-to-end model over nine Indian languages was shown to work, but on artificially concatenated Tamil–Hindi utterances it "picks one of the two scripts and sticks with it"&nbsp;<span class="cite">[<a href="#ref-toshniwal2018multilingual">21</a>]</span>. For bilingual Mandarin–English code-switching, outputs have been factorised by language with language-aware encoders and conditional factorisation&nbsp;<span class="cite">[<a href="#ref-tian2022lae">22</a>, <a href="#ref-yan2022condfactorization">23</a>]</span>, auxiliary CTC objectives conditioned on language identity have improved massively multilingual recognition&nbsp;<span class="cite">[<a href="#ref-chen2023auxctc">24</a>]</span>, and bilingual streaming recognisers have been trained jointly with language identification&nbsp;<span class="cite">[<a href="#ref-punjabi2020bilingual">25</a>]</span>. For Indian languages, a common label set maps the Brahmic scripts to one phonetic inventory&nbsp;<span class="cite">[<a href="#ref-kumar2021dualscript">26</a>, <a href="#ref-arunkumar2022dude">27</a>, <a href="#ref-gangwar2025madasr">28</a>]</span>, and reduced, shared target sets have been studied for Hindi–English code-switching&nbsp;<span class="cite">[<a href="#ref-dhawan2020targetset">29</a>]</span>. IndicConformer&nbsp;<span class="cite">[<a href="#ref-javed2024indicvoices">10</a>, <a href="#ref-ai4bharat2025indicconformer">30</a>]</span> uses one output head per language, selected by a language identifier given at inference. Our output layer predicts <i>p</i>(script)&thinsp;<i>p</i>(piece&nbsp;|&nbsp;script) over all 11 scripts at every frame, with no language picker, which is a class-factored softmax&nbsp;<span class="cite">[<a href="#ref-goodman2001classes">31</a>]</span> applied to scripts. We use the shared phonetic inventory only as an intermediate target, with self-conditioning&nbsp;<span class="cite">[<a href="#ref-lee2021interctc">32</a>, <a href="#ref-nozaki2021selfcond">33</a>]</span> as in hierarchical multilingual CTC&nbsp;<span class="cite">[<a href="#ref-liu2024lupet">34</a>]</span>.</p>
+  <h4>Indic speech recognition</h4>
+  <p>Dedicated Indic recognisers have improved quickly with large transcribed collections: IndicWav2Vec&nbsp;<span class="cite">[<a href="#ref-javed2022indicwav2vec">35</a>]</span>, the IndicVoices corpus and IndicConformer models&nbsp;<span class="cite">[<a href="#ref-javed2024indicvoices">10</a>]</span>, and SraVaani&nbsp;<span class="cite">[<a href="#ref-pulikodan2026sravaani">36</a>]</span>, a 430M-parameter FastConformer model with a TDT decoder&nbsp;<span class="cite">[<a href="#ref-rekesh2023fastconformer">2</a>, <a href="#ref-xu2023tdt">37</a>]</span>. Evaluation is complicated by script conventions for English words; script-normalised scoring has been proposed to separate script choice from recognition errors&nbsp;<span class="cite">[<a href="#ref-pattnayak2026snwer">38</a>]</span>, and IndicContextEval evaluates how audio language models use context on speech in eight Indian languages&nbsp;<span class="cite">[<a href="#ref-joshi2026indiccontexteval">39</a>]</span>; we use its audio and references as one of our test sets. We adopt a script-normalised CER (<a class="xref" href="#metric">§5</a>) after finding that strict scoring had inflated an early comparison in our favour.</p>
+</section>
+
+<section id="method">
+  <h2 class="sec"><span class="n">3</span>Model</h2>
+  <figure id="fig-architecture">
+    <div class="plate scroll-min"><img src="figures/architecture.svg" alt="Architecture diagram. 16 kHz audio passes through a frozen log-mel and convolutional subsampler at 25 frames per second, frozen Conformer layers 1 to 6, then layers 7 to 9 and 10 to 12 with residual adapters, into a trained script-factored CTC output and parameter-free decode-time script rules, producing text with each word in its own script plus language spans. Phonetic CTC heads after layers 6 and 9 feed back into the stream. A learned mix of layers 6 and 12, under stop-gradient, feeds utterance and frame language-ID heads; the utterance posterior drives the script rules."></div>
+    <figcaption><b>Figure 1.</b> Vesper-IndicEAR. The EmbeddingGemma&nbsp;2 audio tower runs unchanged (grey). Trained parts (orange) are residual adapters inside layers 7–12, self-conditioned phonetic CTC heads after layers 6 and 9, the script-factored CTC output on layer 12, and two language-ID heads reading stop-gradient states of layers 6 and 12. Decode-time rules (dashed) use the utterance-LID posterior to restrict which scripts may appear; they have no parameters and can be switched off.</figcaption>
+  </figure>
+  <p>Figure&nbsp;1 shows the model. The only trained parts are the 11.8M parameters in orange; Table&nbsp;1 lists them.</p>
+
+  <h3 id="encoder">3.1 Frozen encoder</h3>
+  <p>The encoder is the audio tower of <code>google/embeddinggemma-2</code> at revision <code>914f7f89</code>&nbsp;<span class="cite">[<a href="#ref-vera2026embeddinggemma2">6</a>, <a href="#ref-google2026embeddinggemma2hf">7</a>]</span>: a USM-based Conformer&nbsp;<span class="cite">[<a href="#ref-gemmateam2026gemma4">8</a>, <a href="#ref-zhang2023usm">9</a>, <a href="#ref-gulati2020conformer">40</a>]</span> with two downsampling convolutions to 25 frames per second (40&nbsp;ms), 12 layers of width 1,024 with 8 attention heads, and chunked attention with chunk size 12, left context 13 and <em>no right context</em>. It has 305M parameters. The tower's output projection to the 1,536-dimensional embedding space and the model's text and vision parts are not used.</p>
+  <p>We run the tower in two stages with its own modules and mask functions, so nothing in it is re-implemented: layers 1–6 without gradient, and layers 7–12 with adapters attached by forward hooks. Padded input frames are zeroed and padded attention keys are masked, so batched computation is exact per utterance; attention sees nothing beyond the current 12-frame chunk, so long audio can be transcribed in overlapping windows.</p>
+
+  <h3>3.2 Trained components</h3>
+  <div class="tbl" id="tab-params">
+    <div class="cap"><b>Table 1.</b> Trained parameters. The 305M-parameter encoder is frozen.</div>
+    <div class="tscroll"><table class="fit">
+      <thead><tr><th>Component</th><th class="r">Parameters</th></tr></thead>
+      <tbody>
+        <tr><td>Residual adapters, layers 7–12 (rank 128)</td><td class="r">1.59M</td></tr>
+        <tr><td>Phonetic CTC + self-conditioning, layers 6, 9</td><td class="r">0.34M</td></tr>
+        <tr><td>Script-factored output (11 scripts, 8,964 pieces)</td><td class="r">9.20M</td></tr>
+        <tr><td>Utterance LID (12 languages)</td><td class="r">0.40M</td></tr>
+        <tr><td>Frame LID (13 classes)</td><td class="r">0.27M</td></tr>
+        <tr class="sep"><td><b>Total</b></td><td class="r"><b>11.8M (45&nbsp;MB)</b></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <h4>Residual adapters</h4>
+  <p>In each of layers 7–12, a bottleneck adapter&nbsp;<span class="cite">[<a href="#ref-houlsby2019adapters">14</a>]</span> reads the block's second half-step feed-forward output <i>z</i> and adds</p>
+  <div class="eq"><math display="block"><mrow><msub><mi>A</mi><mi>ℓ</mi></msub><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mi>W</mi><mi>ℓ</mi><mo>↑</mo></msubsup><mspace width="0.2em"></mspace><mi>SiLU</mi><mo>(</mo><msubsup><mi>W</mi><mi>ℓ</mi><mo>↓</mo></msubsup><mspace width="0.2em"></mspace><mi>LN</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><mo>)</mo></mrow></math><span class="no">(1)</span></div>
+  <p>to it, before the block's clamp and output normalisation (Figure&nbsp;2a), with <math><msubsup><mi>W</mi><mi>ℓ</mi><mo>↓</mo></msubsup><mo>∈</mo><msup><mi>ℝ</mi><mrow><mn>128</mn><mo>×</mo><mn>1024</mn></mrow></msup></math>. <math><msubsup><mi>W</mi><mi>ℓ</mi><mo>↑</mo></msubsup></math> is zero-initialised, so training starts from the exact frozen encoder. Adapters go only on the upper half because the probes of <a class="xref" href="#probe">§6.1</a> show the transcription-relevant information growing towards the top of the tower.</p>
+
+  <h4>Self-conditioned phonetic CTC</h4>
+  <p>After layers <i>k</i>&nbsp;∈&nbsp;{6,&nbsp;9}, an intermediate CTC head&nbsp;<span class="cite">[<a href="#ref-lee2021interctc">32</a>]</span> predicts a shared inventory of 80 phonetic units (82 outputs with blank and a word boundary), and its posterior is fed back into the residual stream&nbsp;<span class="cite">[<a href="#ref-nozaki2021selfcond">33</a>]</span>:</p>
+  <div class="eq"><math display="block"><mrow><msub><mi>p</mi><mi>k</mi></msub><mo>=</mo><mi>softmax</mi><mo>(</mo><msub><mi>W</mi><mi>k</mi></msub><mspace width="0.2em"></mspace><mi>LN</mi><mo stretchy="false">(</mo><msup><mi>h</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo><mo>)</mo><mo>,</mo><mspace width="2em"></mspace><msup><mi>h</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo>←</mo><msup><mi>h</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo>+</mo><msub><mi>B</mi><mi>k</mi></msub><mspace width="0.15em"></mspace><msub><mi>p</mi><mi>k</mi></msub></mrow></math><span class="no">(2)</span></div>
+  <p>with <i>B</i><sub>k</sub> zero-initialised. The units are ISO&nbsp;15919-style labels shared by the Brahmic scripts through their common ISCII block layout&nbsp;<span class="cite">[<a href="#ref-iso15919">41</a>, <a href="#ref-iscii1991">42</a>]</span>, Indian-accent spelling rules for English (retroflex t/d, w→v), and a lossy consonant-skeleton romanisation for Urdu. Sharing one inventory lets related languages share acoustic targets in the middle of the encoder, as in hierarchical multilingual CTC&nbsp;<span class="cite">[<a href="#ref-liu2024lupet">34</a>]</span>. The phonetic units are never the output: a shared inventory can merge words that sound alike but are spelled differently, so the transcript always comes from the script-factored output.</p>
+
+  <h4>Script-factored CTC output</h4>
+  <p>Each script has its own SentencePiece unigram model&nbsp;<span class="cite">[<a href="#ref-kudo2018sentencepiece">43</a>, <a href="#ref-kudo2018subword">44</a>]</span>: 1,024 pieces for Devanagari and Latin and 768 for each of the other nine scripts, trained with the script's full character inventory as required characters so that any word in it can be spelled. The output layer reads <math><msub><mi>h</mi><mi>t</mi></msub><mo>=</mo><mi>LN</mi><mo stretchy="false">(</mo><msubsup><mi>h</mi><mi>t</mi><mrow><mo stretchy="false">(</mo><mn>12</mn><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">)</mo></math> and factorises each piece <i>y</i> through its script <i>s</i>(<i>y</i>) (Figure&nbsp;2b):</p>
+  <div class="eq" id="eq-factored"><math display="block"><mrow><mi>log</mi><mo>&#x2061;</mo><mi>p</mi><mo stretchy="false">(</mo><mi>y</mi><mo>∣</mo><msub><mi>h</mi><mi>t</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mi>log</mi><mo>&#x2061;</mo><mi>p</mi><mo>(</mo><mi>s</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>∣</mo><msub><mi>h</mi><mi>t</mi></msub><mo>)</mo><mo>+</mo><mi>log</mi><mo>&#x2061;</mo><mi>p</mi><mo>(</mo><mi>y</mi><mo>∣</mo><mi>s</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>,</mo><msub><mi>h</mi><mi>t</mi></msub><mo>)</mo></mrow></math><span class="no">(3)</span></div>
+  <p>where <i>p</i>(<i>s</i>&nbsp;|&nbsp;<i>h</i><sub>t</sub>) is a softmax over the CTC blank (script class 0) and the 11 scripts, and <i>p</i>(<i>y</i>&nbsp;|&nbsp;<i>s</i>,&nbsp;<i>h</i><sub>t</sub>) is a softmax over the pieces of script <i>s</i> only. The result is one normalised distribution over blank and all 8,960 pieces (8,964 outputs including blank and three special tokens that are never emitted), trained with ordinary CTC&nbsp;<span class="cite">[<a href="#ref-graves2006ctc">45</a>]</span>. Compared with a flat softmax, scripts do not compete for probability mass piece by piece, the script of every emitted piece is explicit (which the decode-time rules use), and a script can be added with its own rows without touching the others.</p>
+
+  <figure id="fig-components" class="mid">
+    <div class="plate"><img src="figures/components.svg" alt="Two panels. (a) A frozen Conformer block of layers 7 to 12: half-step feed-forward, chunked self-attention with chunk 12, left context 13 and right context 0, causal convolution, second half-step feed-forward; the adapter (LayerNorm, 1024 to 128, SiLU, 128 to 1024, zero-initialised) reads the second feed-forward output and adds to it before clamp and output norm. (b) The script-factored output: the LayerNorm of layer 12 feeds a script softmax over blank and 11 scripts and piece logits split into per-script softmax blocks, combined into one CTC distribution."></div>
+    <figcaption><b>Figure 2.</b> (a) Adapter placement in a frozen Conformer block of layers 7–12: the adapter reads the second half-step feed-forward output and adds to it before the block's clamp and output norm. (b) The script-factored output: a script softmax and per-script piece softmaxes combine into one CTC distribution (Eq.&nbsp;3).</figcaption>
+  </figure>
+
+  <h4>Language identification as an output, not a router</h4>
+  <p>Two LID heads each read their own learned softmax-weighted mix of the layer-normalised states of layers 6 and 12, taken under stop-gradient, so they cannot change transcription training. The utterance head applies attentive statistics pooling&nbsp;<span class="cite">[<a href="#ref-okabe2018attentive">46</a>]</span> and a two-layer MLP (hidden size 256) to predict one of 12 languages; for code-mixed rows the target is the matrix language. The frame head predicts, per 40&nbsp;ms frame, non-speech or one of the 12 languages. On monolingual rows every valid frame gets the utterance language; on code-mixed rows with word-level language labels, the head is trained with CTC over the sequence of language runs (blank = non-speech), so it learns where switches occur without forced alignment. The transcript never depends on these heads except through the optional script rules below.</p>
+
+  <h3>3.3 Training objective</h3>
+  <p>The loss is</p>
+  <div class="eq"><math display="block"><mrow><mi>ℒ</mi><mo>=</mo><mn>0.85</mn><mspace width="0.1em"></mspace><msub><mi>ℒ</mi><mtext>CTC</mtext></msub><mo>+</mo><mn>0.15</mn><mspace width="0.1em"></mspace><msub><mi>ℒ</mi><mtext>phon</mtext></msub><mo>+</mo><mn>0.1</mn><mspace width="0.1em"></mspace><msub><mi>ℒ</mi><mtext>utt</mtext></msub><mo>+</mo><mn>0.2</mn><mspace width="0.1em"></mspace><msub><mi>ℒ</mi><mtext>frame</mtext></msub></mrow></math><span class="no">(4)</span></div>
+  <p>where ℒ<sub>phon</sub> is the mean of the two intermediate CTC losses. The utterance-LID loss uses label smoothing 0.1&nbsp;<span class="cite">[<a href="#ref-szegedy2016labelsmoothing">47</a>]</span> and class-balance weights proportional to <i>h</i><sub>c</sub><sup>−1/2</sup> for <i>h</i><sub>c</sub> planned training hours of language <i>c</i>; the frame-LID loss is unweighted. The pilot stage (<a class="xref" href="#training">§4</a>) used weights 0.3 for the phonetic and 0.1 for the frame-LID loss. Time and feature masks in the style of SpecAugment&nbsp;<span class="cite">[<a href="#ref-park2019specaugment">48</a>]</span> are applied to the layer-6 states during training (masked values take the utterance mean), on top of the waveform augmentation of <a class="xref" href="#training">§4</a>.</p>
+
+  <h3 id="rules">3.4 Decode-time script rules</h3>
+  <p>Greedy and prefix-beam&nbsp;<span class="cite">[<a href="#ref-hannun2014prefix">49</a>]</span> CTC decoding can apply three rules without retraining (Algorithm&nbsp;1).</p>
+  <dl class="terms">
+    <dt>(a) Word boundary</dt><dd>Within a word, the script may change only from Latin into a piece that starts with a full Indic letter (an English stem with an Indic suffix), and a combining mark may never follow a piece of another script; a Latin piece glued to an Indic word is treated as a missed word boundary and starts a new word.</dd>
+    <dt>(b) LID script set</dt><dd>Only Latin, the script of the most likely utterance-LID language, and up to two further Indic scripts whose languages have posterior above 0.15 are allowed.</dd>
+    <dt>(c) Exclusive scripts</dt><dd>Devanagari and Perso-Arabic never mix in one utterance: the script whose languages have the larger total LID posterior is kept, with ties broken by the decoded evidence for each script.</dd>
+  </dl>
+  <p>A caller who knows the language can pass it as a hint, which replaces the LID posterior in (b) and (c). Latin always stays allowed, so code-switching into English is never removed by the rules.</p>
+  <div class="algo" id="alg-rules">
+    <div class="cap">Algorithm 1. Decode-time script rules (greedy CTC)</div>
+    <div class="req"><b>Require:</b> frame log-probs log&nbsp;<i>p</i>(<i>y</i>&nbsp;|&nbsp;<i>h</i><sub>t</sub>), utterance LID posterior <i>q</i>(ℓ), optional language hint ℓ̂</div>
+    <ol>
+      <li><b>if</b> ℓ̂ given <b>then</b> q ← onehot(ℓ̂)</li>
+      <li>S ← {Latin, script(argmax<sub>ℓ</sub> q)} ∪ {script(ℓ) : ℓ ∈ top₂ Indic scripts of q, q(ℓ) &gt; 0.15} <span class="cm">▷ rule (b)</span></li>
+      <li><b>if</b> Devanagari ∈ S <b>and</b> Perso-Arabic ∈ S <b>then</b> <span class="cm">▷ rule (c)</span></li>
+      <li class="in">drop the one with smaller Σ<sub>ℓ: script(ℓ)=·</sub> q(ℓ)</li>
+      <li>mask every piece whose script ∉ S</li>
+      <li><b>for</b> t = 1, …, T <b>do</b> <span class="cm">▷ rule (a)</span></li>
+      <li class="in">y<sub>t</sub> ← argmax<sub>y</sub> log p(y | h<sub>t</sub>) over pieces allowed after the current word's script</li>
+      <li><b>return</b> collapse repeats, remove blanks, detokenise</li>
+    </ol>
+  </div>
+</section>
+
+<section id="training">
+  <h2 class="sec"><span class="n">4</span>Data and training</h2>
+  <h3>4.1 Training data</h3>
+  <p>All training data is CC&nbsp;BY or CC0 and is streamed from the Hugging Face Hub at pinned revisions (Table&nbsp;2). Only development and evaluation sets are downloaded. MUCS&nbsp;2021&nbsp;<span class="cite">[<a href="#ref-diwan2021mucs">50</a>]</span> (CC&nbsp;BY-SA) is used for evaluation only, and no non-commercial data is used.</p>
+  <div class="tbl" id="tab-data">
+    <div class="cap"><b>Table 2.</b> Training sources and planned hours before speaker exclusion. All stream from the Hub at pinned revisions.</div>
+    <div class="tscroll"><table class="fit">
+      <thead><tr><th>Source</th><th>Languages, licence</th><th class="r">Hours</th></tr></thead>
+      <tbody>
+        <tr><td>IndicVoices&nbsp;<span class="cite">[<a href="#ref-javed2024indicvoices">10</a>]</span></td><td>11 Indic, CC BY 4.0</td><td class="r">3,300</td></tr>
+        <tr><td>Kathbath&nbsp;<span class="cite">[<a href="#ref-javed2023indicsuperb">11</a>]</span></td><td>11 Indic, CC BY 4.0</td><td class="r">1,345</td></tr>
+        <tr><td>Vaani, transcribed&nbsp;<span class="cite">[<a href="#ref-pulikodan2026vaani">12</a>]</span></td><td>10 Indic + en, CC BY 4.0</td><td class="r">599</td></tr>
+        <tr><td>LibriSpeech&nbsp;<span class="cite">[<a href="#ref-panayotov2015librispeech">51</a>]</span></td><td>en, CC BY 4.0</td><td class="r">120</td></tr>
+        <tr><td>People's Speech&nbsp;<span class="cite">[<a href="#ref-galvez2021peoplesspeech">52</a>]</span></td><td>en, CC BY 2.0–4.0 subsets</td><td class="r">80</td></tr>
+        <tr><td>VoxPopuli&nbsp;<span class="cite">[<a href="#ref-wang2021voxpopuli">53</a>]</span></td><td>en, CC0</td><td class="r">60</td></tr>
+        <tr class="sep"><td><b>Total (53 streams)</b></td><td></td><td class="r"><b>5,504</b></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <h4>Transcript conventions</h4>
+  <p>Indic words are written in their native script and English words in Latin script. IndicVoices <code>[gloss]</code> and Vaani <code>{gloss}</code> English annotations replace the native-script word only when the native word sounds like the English gloss. Kathbath writes English loanwords in native script, so its transcripts go through a loanword normaliser that rewrites them in Latin.</p>
+  <h4>Mixture</h4>
+  <p>The mixture has 53 streams, one per source and language plus code-mixed-only streams. Rows of 0.5–20&nbsp;s are drawn by temperature sampling&nbsp;<span class="cite">[<a href="#ref-arivazhagan2019massively">54</a>]</span> (α&nbsp;=&nbsp;0.5) within pinned per-language shares (Figure&nbsp;11); code-mixed rows are 15% of draws and non-speech negatives a fixed 2%.</p>
+  <h4>Speaker-disjoint protocol</h4>
+  <p>Every speaker of every development and evaluation set is removed from training. For Kathbath, whose "test-known" speakers are by design also training speakers, this removes 49% (Bengali) to 100% (Odia) of training rows. Our Kathbath scores are therefore speaker-disjoint, unlike those of models trained on Kathbath's training speakers.</p>
+
+  <h3>4.2 Two-stage training</h3>
+  <dl class="terms">
+    <dt>Pilot</dt><dd>Hindi, Tamil, Kannada and English, from the frozen encoder with newly initialised heads: 7,423 steps over 2,664&nbsp;h of audio in about 4.3 A100-hours. Its CER on its own speaker-disjoint development set fell from 22.9 to 16.2.</dd>
+    <dt>Full run, warm-started</dt><dd>All 12 languages, starting from the pilot's final weights: 13,394 steps over 8,356&nbsp;h of audio in about 6 GPU-hours on one RTX PRO 6000 (96&nbsp;GB). The pilot's Devanagari, Latin, Tamil and Kannada tokenizers and their output rows are kept unchanged; the seven new scripts get their own tokenizers and new output rows initialised with bias −2 and trained at three times the base learning rate. Adapters, phonetic and LID heads continue from the pilot; the optimiser and schedule restart.</dd>
+  </dl>
+  <h4>Optimisation</h4>
+  <p>AdamW&nbsp;<span class="cite">[<a href="#ref-loshchilov2019adamw">55</a>]</span>, weight decay 0.001, gradient clipping 1.0, bfloat16 autocast; a step whose gradient norm is not finite is skipped. The full run used peak learning rate 6×10<sup>−4</sup> with 300 warm-up steps and cosine decay to 5×10<sup>−5</sup>. Batches have a dynamic budget of 71,676 encoder frames (about 48 minutes of padded audio), chosen by an autotuner that targets 85% of GPU memory on probe batches. Half of the rows are augmented on the GPU before the log-mel: additive noise, babble, reverberation (RT60 0.3–0.9&nbsp;s from 128 synthetic room impulse responses), speed perturbation (0.9/1.1)&nbsp;<span class="cite">[<a href="#ref-ko2015speedperturb">56</a>]</span>, 8&nbsp;kHz band-limiting, and GSM, Opus or AMR codecs on 15% of clips. Table&nbsp;8 lists every setting for both stages.</p>
+
+  <h3>4.3 Streaming input pipeline</h3>
+  <p>The mixture is 0.7–1.1&nbsp;TB of audio against about 190&nbsp;GB of free disk on the training machine, so nothing is downloaded in advance (Figure&nbsp;3). Each stream reads Parquet shards from the Hub through a bounded shard cache and parses, length-checks and filters rows on its own read-ahead thread. A planner draws from the streams by temperature into a shuffle buffer and duration-bucketed batches. Rows are decoded in parallel on free-threaded CPython&nbsp;3.14&nbsp;<span class="cite">[<a href="#ref-gross2023pep703">57</a>]</span>, without the global interpreter lock; training uses PyTorch&nbsp;<span class="cite">[<a href="#ref-paszke2019pytorch">58</a>]</span> and the encoder implementation of Hugging Face Transformers&nbsp;<span class="cite">[<a href="#ref-wolf2020transformers">59</a>]</span>. The input state is part of every checkpoint, so a resumed run sees exactly the rows it would have seen. After the fixes described in <a class="xref" href="#engineering">§8.4</a>, the GPU was 93–99% busy at about 35,000 encoder frames per second, or about 1,390 hours of audio per GPU-hour.</p>
+  <figure id="fig-pipeline">
+    <div class="plate scroll-min"><img src="figures/pipeline.svg" alt="Pipeline diagram: Hugging Face Hub Parquet shards at pinned revisions, a bounded 100 GB shard cache, 53 stream readers with one thread each and 64-row read-ahead, a temperature planner with alpha 0.5, a shuffle buffer of about 3 hours of audio into duration buckets, parallel row decoding on free-threaded CPython, GPU augmentation and log-mel, then the frozen tower and trained layers with a dynamic frame budget of about 48 minutes of audio per step. Checkpoints every 500 steps or 10 minutes store weights, optimiser and full input state for exact resume."></div>
+    <figcaption><b>Figure 3.</b> Streaming training input. 53 (source, language) streams read Hub-hosted Parquet shards through a bounded cache; a temperature planner mixes them into a shuffle buffer and duration buckets, and rows are decoded on parallel threads and augmented on the GPU. The full input state is checkpointed with the weights.</figcaption>
+  </figure>
+</section>
+
+<section id="setup">
+  <h2 class="sec"><span class="n">5</span>Evaluation protocol</h2>
+  <h4>Held-out sets</h4>
+  <p>Kathbath clean and noisy test (unseen-speaker and test-known splits)&nbsp;<span class="cite">[<a href="#ref-javed2023indicsuperb">11</a>]</span>, IndicVoices validation&nbsp;<span class="cite">[<a href="#ref-javed2024indicvoices">10</a>]</span>, Vaani test&nbsp;<span class="cite">[<a href="#ref-pulikodan2026vaani">12</a>]</span>, IndicContextEval&nbsp;<span class="cite">[<a href="#ref-joshi2026indiccontexteval">39</a>]</span>, MUCS&nbsp;2021 Hindi and Bengali test&nbsp;<span class="cite">[<a href="#ref-diwan2021mucs">50</a>]</span>, LibriSpeech test-clean and test-other&nbsp;<span class="cite">[<a href="#ref-panayotov2015librispeech">51</a>]</span>, VoxPopuli English test&nbsp;<span class="cite">[<a href="#ref-wang2021voxpopuli">53</a>]</span>, Svarah (Indian-accented English)&nbsp;<span class="cite">[<a href="#ref-javed2023svarah">60</a>]</span>, and FLEURS development&nbsp;<span class="cite">[<a href="#ref-conneau2023fleurs">61</a>]</span>, with six acoustic corruptions of it. FLEURS test was never read during development. No speaker of these sets appears in training (<a class="xref" href="#training">§4</a>).</p>
+  <h4>Compared systems</h4>
+  <p>IndicConformer 600M multilingual&nbsp;<span class="cite">[<a href="#ref-ai4bharat2025indicconformer">30</a>]</span> (revision <code>2a77d305</code>, CTC decoder, given the language as it requires) and SraVaani-1.0&nbsp;<span class="cite">[<a href="#ref-pulikodan2026sravaani">36</a>, <a href="#ref-artpark2026sravaanihf">62</a>]</span> (revision <code>f5dd5358</code>, automatic language; it does not support Urdu). Each runs its repository's own inference code at the pinned revision. Vesper-IndicEAR is run in two modes: <em>automatic</em>, where its own LID drives the script rules, and <em>language given</em>, where the clip's language is passed as a hint, matching IndicConformer's input. Both use greedy decoding with the rules of <a class="xref" href="#rules">§3.4</a>. MUCS results in Table&nbsp;4 are on the full test sets; all comparisons with the baselines are on the 300-clip subsets below. For the comparison, every system decodes the same first 300 clips per language of each set, and we release the clip list, the references where their licences allow, and every system's per-clip transcript.</p>
+  <h4 id="metric">Script-normalised CER</h4>
+  <p>IndicVoices and Vaani references write English words in Latin script, whereas IndicConformer and SraVaani write them in native script. Strict CER counts that as an error. Our script-normalised CER (sn-CER) accepts an English word in either script, scoring each hypothesis against the closest whole-reference variant, in the spirit of SN-WER&nbsp;<span class="cite">[<a href="#ref-pattnayak2026snwer">38</a>]</span>. Before scoring, a fold removes spelling conventions that are not recognition errors: Malayalam chillus, Bengali khanda ta, the Marathi eyelash ra, Urdu heh variants, tatweel and short-vowel marks, NFKC presentation forms, and native digits. For English-only sets sn-CER equals CER.</p>
+</section>
+
+<section id="results">
+  <h2 class="sec"><span class="n">6</span>Results</h2>
+
+  <h3 id="probe">6.1 What the frozen tower already encodes</h3>
+  <p>Before training anything larger, we trained a linear CTC probe on each layer of the frozen tower, one language at a time, on 3–10 hours (7 on average) of FLEURS training speech per language (a LayerNorm and linear layer over a 256-piece SentencePiece unigram vocabulary per language, 6 epochs), and scored it on FLEURS development (Figure&nbsp;4). The best Indic probe reaches 16.1–27.1% CER (median 22.7) and English 29.4%. For all languages the best layer is 11 or 12: the information a CTC reader can use grows towards the top of the tower, which motivated adapters on the upper half.</p>
+  <p>On English we ran the same probe on two other encoders: the best layer of the encoder of Parakeet-TDT-0.6B-v3&nbsp;<span class="cite">[<a href="#ref-rekesh2023fastconformer">2</a>, <a href="#ref-xu2023tdt">37</a>, <a href="#ref-hf_parakeetv3">63</a>]</span>, an ASR-trained FastConformer, reaches 18.2% and that of w2v-BERT&nbsp;2.0&nbsp;<span class="cite">[<a href="#ref-seamless2023seamless">64</a>]</span> 39.3%. The EmbeddingGemma&nbsp;2 tower thus sits between a self-supervised encoder and an ASR-trained CTC encoder: its states carry the content, but less of it is linearly decodable (11 CER points behind on English), which bears on the gap discussed in <a class="xref" href="#gap">§7.2</a>.</p>
+  <figure id="fig-probe" class="mid">
+    <div class="plate scroll-min"><img src="figures/probe.svg" alt="Two line charts of linear CTC probe CER on FLEURS dev. Left: EmbeddingGemma 2 layers 1 to 12 for 11 Indic languages in grey and English in orange; error falls from about 70 to 90 percent at layer 1 to about 16 to 30 percent at layers 11 and 12. Right: English by relative depth for three encoders; best-layer CER is 18.2 for Parakeet v3, 29.4 for EmbeddingGemma 2 and 39.3 for w2v-BERT 2.0." loading="lazy"></div>
+    <figcaption><b>Figure 4.</b> Linear CTC probes on frozen encoders, FLEURS development. (a) EmbeddingGemma&nbsp;2 layers 1–12 for 11 Indic languages (grey) and English. (b) English on three encoders by relative depth; the legend gives each encoder's best-layer CER.</figcaption>
+  </figure>
+
+  <h3 id="ablation">6.2 What each trained component adds</h3>
+  <p>On a fixed 12-language set (FLEURS training, 88&nbsp;h, 10 epochs; FLEURS development for scoring) we added the trained components one at a time to the frozen tower (Table&nbsp;3). Adapters bring the largest gain, from 36.2 to 27.7 mean CER over 11 languages. Self-conditioned phonetic CTC did not lower CER at this data scale but reduced script errors; the script-factored output had the lowest CER (27.6) and the fewest script errors (10.0% of words in the wrong script).</p>
+  <div class="tbl" id="tab-ablation">
+    <div class="cap"><b>Table 3.</b> Ablation on FLEURS (12 languages, 88&nbsp;h). Mean CER and script-error rate (share of words in the wrong script) over 11 languages excluding Urdu; synthetic code-switch: CER over six concatenated language pairs (Urdu–English excluded).</div>
+    <div class="tscroll"><table>
+      <thead><tr><th></th><th>Variant (cumulative)</th><th class="r">CER</th><th class="r">Script err.</th><th class="r">Urdu CER</th><th class="r">Code-switch</th></tr></thead>
+      <tbody>
+        <tr><td>v1</td><td>linear CTC on layer 12</td><td class="r">36.2</td><td class="r">13.9</td><td class="r">55.3</td><td class="r">33.9</td></tr>
+        <tr><td>v2</td><td>+ adapters, layers 7–12</td><td class="r">27.7</td><td class="r">11.2</td><td class="r">76.7</td><td class="r"><b>27.3</b></td></tr>
+        <tr><td>v3</td><td>+ phonetic self-conditioning</td><td class="r">28.2</td><td class="r">10.5</td><td class="r">75.7</td><td class="r">28.5</td></tr>
+        <tr><td>v4</td><td>+ script-factored output</td><td class="r"><b>27.6</b></td><td class="r"><b>10.0</b></td><td class="r">81.7</td><td class="r">27.4</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p>Each variant ran with one seed and with its own autotuned batch and learning rate (from 111,806 frames, 2.4×10<sup>−3</sup> and 880 steps for v1 to about 20,000–24,000 frames, 1.0–1.1×10<sup>−3</sup> and 3,540–4,390 steps for v2–v4, all 10 epochs), so differences of under one point between v2 and v4 should not be read as significant; the script-error reduction guided the choice more than CER. We chose v4 and added the LID heads. Urdu is excluded from the means because, once adapters are added, it is mostly written in Devanagari: Hindi and Urdu share their acoustics and their scripts compete (<a class="xref" href="#hindi-urdu">§7.1</a>). Two further variants, CR-CTC consistency regularisation&nbsp;<span class="cite">[<a href="#ref-yao2025crctc">65</a>]</span> and a factored transducer head, are implemented in the released framework but were not evaluated in this study.</p>
+
+  <h3 id="decoding-rules">6.3 Decode-time script rules</h3>
+  <p>The final model makes many script errors when decoded without constraints: on FLEURS development 20.2% of words over all 12 languages are in the wrong script, 64.8% for Urdu. The rules of <a class="xref" href="#rules">§3.4</a> halve that and lower CER from 28.7 to 24.8 (Table&nbsp;4), with the largest effect on Urdu, Hindi and Gujarati. English is unaffected.</p>
+  <div class="tbl" id="tab-rules">
+    <div class="cap"><b>Table 4.</b> Effect of the decode-time script rules on the final model (FLEURS development unless noted; CER, and script-error rate in parentheses).</div>
+    <div class="tscroll"><table class="fit">
+      <thead><tr><th></th><th class="r">Unconstrained</th><th class="r">Rules (a)–(c)</th></tr></thead>
+      <tbody>
+        <tr><td>All 12 languages</td><td class="r">28.7 (20.2)</td><td class="r"><b>24.8</b> (9.4)</td></tr>
+        <tr><td>Hindi</td><td class="r">31.7 (21.0)</td><td class="r"><b>26.2</b> (9.8)</td></tr>
+        <tr><td>Urdu</td><td class="r">63.5 (64.8)</td><td class="r"><b>44.4</b> (31.1)</td></tr>
+        <tr><td>Gujarati</td><td class="r">36.4 (28.3)</td><td class="r"><b>29.6</b> (11.6)</td></tr>
+        <tr><td>English</td><td class="r">17.2 (0.4)</td><td class="r">17.2 (0.0)</td></tr>
+        <tr class="sep"><td>MUCS Hindi test</td><td class="r">49.6</td><td class="r"><b>45.6</b></td></tr>
+        <tr><td>MUCS Bengali test</td><td class="r">43.9</td><td class="r"><b>41.9</b></td></tr>
+        <tr><td>Synthetic Hindi+English pairs</td><td class="r"><b>16.7</b></td><td class="r">30.8</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p>On a synthetic set of concatenated sentences in two languages, however, the rules raise CER (for Hindi+English from 16.7 to 30.8). A likely cause, which we have not analysed further, is that rule (b) is decided once per utterance from a single LID posterior, so on these artificial inter-sentential pairs it can remove the script of one of the two halves. Natural intra-sentential code-switching into English is not affected in the same way, because Latin is always allowed; on MUCS the rules lower CER for both Hindi (49.6→45.6) and Bengali (43.9→41.9). Per-frame use of the frame-LID head is the natural fix and is left to future work.</p>
+
+  <h3 id="heldout">6.4 Held-out comparison with dedicated recognisers</h3>
+  <div class="tbl" id="tab-heldout">
+    <div class="cap"><b>Table 5.</b> Held-out script-normalised CER (%), mean over the languages every system supports (Urdu excluded, as SraVaani has no Urdu). Every system decodes the same 300 clips per language per set; lower is better, best in bold. Vesper-IndicEAR never saw these sets' speakers; the baselines may have trained on some of these sources. Per-language results are in <a class="xref" href="#perlang">Appendix A</a>.</div>
+    <div class="tscroll"><table>
+      <thead>
+        <tr class="grp"><th></th><th colspan="2">Vesper-IndicEAR</th><th>IndicConformer</th><th>SraVaani</th><th></th></tr>
+        <tr><th>Test set</th><th class="r">automatic</th><th class="r">language given</th><th class="r">600M</th><th class="r">1.0</th><th class="r">Languages</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Kathbath clean, unseen speakers</td><td class="r me">21.0</td><td class="r me">20.9</td><td class="r">3.4</td><td class="r"><b>3.2</b></td><td class="r">10</td></tr>
+        <tr><td>Kathbath clean, test-known speakers</td><td class="r me">20.5</td><td class="r me">20.4</td><td class="r">3.3</td><td class="r"><b>3.1</b></td><td class="r">10</td></tr>
+        <tr><td>Kathbath noisy, unseen speakers</td><td class="r me">24.9</td><td class="r me">24.6</td><td class="r"><b>4.3</b></td><td class="r">4.4</td><td class="r">10</td></tr>
+        <tr><td>IndicVoices validation</td><td class="r me">24.3</td><td class="r me">23.9</td><td class="r">7.7</td><td class="r"><b>7.4</b></td><td class="r">10</td></tr>
+        <tr><td>Vaani test</td><td class="r me">24.8</td><td class="r me">24.1</td><td class="r">10.9</td><td class="r"><b>8.4</b></td><td class="r">10</td></tr>
+        <tr><td>IndicContext</td><td class="r me">32.4</td><td class="r me">31.6</td><td class="r"><b>5.2</b></td><td class="r">5.3</td><td class="r">7</td></tr>
+        <tr><td>MUCS 2021 (Hindi, Bengali)</td><td class="r me">43.5</td><td class="r me"><b>42.9</b></td><td class="r">49.0</td><td class="r">49.3</td><td class="r">2</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <figure id="fig-heldout">
+    <div class="plate"><img src="figures/heldout-comparison.svg" alt="Grouped bar chart of held-out script-normalised CER by evaluation family for Vesper-IndicEAR automatic and language-given, IndicConformer 600M and SraVaani 1.0. Vesper-IndicEAR bars sit at about 20 to 32 percent on Kathbath, IndicVoices, Vaani and IndicContext, against 3 to 11 percent for the baselines; on MUCS all systems are between about 43 and 49 percent, with Vesper-IndicEAR lowest." loading="lazy"></div>
+    <figcaption><b>Figure 5.</b> Held-out sn-CER by evaluation family, as in Table&nbsp;5.</figcaption>
+  </figure>
+  <p>Table&nbsp;5 and Figure&nbsp;5 compare the systems on identical clips. Vesper-IndicEAR reaches 21–32% sn-CER on the Indic sets, three to seven times the error of the better dedicated model, and leads only on the MUCS mean, a set of code-switched lecture and tutorial speech on which all systems score poorly; per language it leads on MUCS Bengali (34.2 against 46.4) but trails slightly on MUCS Hindi (52.9 against 51.7). Of 65 (set, language) pairs it is better than the better baseline in one, in both modes (MUCS Bengali).</p>
+  <p>Passing the language helps mainly where the automatic LID is wrong: Urdu (<a class="xref" href="#hindi-urdu">§7.1</a>), Hindi on IndicContext (28.7→23.9) and Punjabi on Vaani (29.8→24.1). Errors vary widely by language (Figure&nbsp;6). On Kathbath, Gujarati, Malayalam and Odia are clearly harder than Hindi, Bengali, Tamil and Telugu, but the ranking changes across sets (Gujarati is among the easiest on IndicVoices and Vaani), so it reflects the data as much as the language.</p>
+  <figure id="fig-heatmap" class="mid">
+    <div class="plate"><img src="figures/per-language-heatmap.svg" alt="Heatmap of Vesper-IndicEAR automatic-language sn-CER per language (rows) and evaluation family (columns). Most cells are between 15 and 35 percent; Urdu on Kathbath and Vaani and MUCS Hindi are the darkest, above 50 percent." loading="lazy"></div>
+    <figcaption><b>Figure 6.</b> Vesper-IndicEAR (automatic language) sn-CER per language and evaluation family.</figcaption>
+  </figure>
+
+  <h3>6.5 English, language identification and robustness</h3>
+  <div class="tbl" id="tab-english">
+    <div class="cap"><b>Table 6.</b> English recognition and utterance language identification.</div>
+    <div class="tscroll"><table class="fit">
+      <thead><tr><th>English test set</th><th class="r">CER (%)</th></tr></thead>
+      <tbody>
+        <tr><td>LibriSpeech test-clean / test-other (full)</td><td class="r">7.2 / 13.0</td></tr>
+        <tr><td>VoxPopuli test</td><td class="r">12.8</td></tr>
+        <tr><td>FLEURS development</td><td class="r">17.2</td></tr>
+        <tr><td>Vaani English test</td><td class="r">16.9</td></tr>
+        <tr><td>Svarah (Indian-accented English)</td><td class="r">25.6</td></tr>
+        <tr class="sep"><td><b>Utterance LID, FLEURS development</b></td><td></td></tr>
+        <tr><td>accuracy / macro-F1 (12 languages)</td><td class="r">97.8 / 97.1</td></tr>
+        <tr><td>F1 Hindi / Urdu / all others</td><td class="r">84.7 / 85.5 / ≥98.9</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p>English is recognised at 7.2/13.0% CER on the full LibriSpeech test sets, but more weakly on accented and spontaneous speech (Table&nbsp;6). The utterance LID is correct on 97.8% of FLEURS development utterances; its only material confusion is Urdu speech labelled Hindi (Figure&nbsp;7), which bounds the automatic script choice for Urdu. Acoustic corruption degrades the model steeply, and reverberation most of all (Figure&nbsp;8): with RT60 0.9&nbsp;s CER rises from 24.8 to 46.2, and with RT60 0.6&nbsp;s reverberation plus point noise at 10&nbsp;dB to 53.2. Reverberation augmentation in training, which can only shape the adapters and heads, did not remove this weakness.</p>
+  <div class="duo">
+    <figure id="fig-lid">
+      <div class="plate"><img src="figures/lid-confusion.svg" alt="Row-normalised utterance LID confusion matrix on FLEURS dev for 12 languages. The diagonal is near 100 percent except Urdu, a quarter of which is labelled Hindi." loading="lazy"></div>
+      <figcaption><b>Figure 7.</b> Utterance-LID confusion on FLEURS development (row-normalised, %).</figcaption>
+    </figure>
+    <figure id="fig-robustness">
+      <div class="plate"><img src="figures/robustness.svg" alt="Bar chart of CER under acoustic corruptions of FLEURS dev: clean 24.8, rising under noise and codecs, and highest under reverberation, 46.2 at RT60 0.9 seconds and 53.2 with reverberation plus point noise." loading="lazy"></div>
+      <figcaption><b>Figure 8.</b> CER under acoustic corruption of FLEURS development (all 12 languages, decode-time rules on).</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="analysis">
+  <h2 class="sec"><span class="n">7</span>Analysis</h2>
+  <h3 id="hindi-urdu">7.1 Hindi and Urdu: one spoken language, two scripts</h3>
+  <p>Hindi and Urdu speech differ mostly in vocabulary register, and our training data separates them only by the script its transcribers used. The full-run mixture initially gave Urdu 7.5% of draws and Hindi 4.5%, since Hindi had already been trained in the pilot. After step 2,000 the model began writing Hindi speech in Urdu script: Hindi CER on the run's development set rose from 24.8 to 44.5 by step 3,000 while Urdu fell from 49.0 to 29.6 (Figure&nbsp;9); on 30 Hindi clips, 11 utterances mixed both scripts.</p>
+  <p>Two fixes followed. Decode rules (a) and (b) lowered Hindi CER on those clips from 50.7 to 41.0, and rule (c), which forbids mixing the two scripts in one utterance, to 39.7. From step 3,427, Hindi's share of draws was raised to Urdu's; Hindi recovered to 23.3 by step 4,000 and the balance tipped back towards Devanagari.</p>
+  <figure id="fig-devlang">
+    <div class="plate"><img src="figures/dev-cer-by-language.svg" alt="Small multiples of full-run development CER per language from step 2,000 to 13,000. Hindi rises sharply between steps 2,000 and 3,000 while Urdu falls, then Hindi recovers after the rebalance at step 3,427." loading="lazy"></div>
+    <figcaption><b>Figure 9.</b> Full-run CER per language on the run's own development set (unconstrained decoding) (orange) against the other languages (grey), from step 2,000; titles give the value at step 13,000. Hindi and Urdu move in opposite directions between steps 2,000 and 5,000; the dotted line marks the Hindi rebalance at step 3,427.</figcaption>
+  </figure>
+  <p>For the final model, the utterance LID recognises 95% of FLEURS Hindi utterances but labels 25% of Urdu ones as Hindi (Figure&nbsp;7), which bounds the automatic script choice: in automatic mode Urdu reaches 54–74% sn-CER on Kathbath and Vaani, and passing the language brings it to 32–50% (<a class="xref" href="#perlang">Appendix A</a>). A model that is meant to serve both scripts needs either a script preference from the user or a stronger, register-aware language decision.</p>
+
+  <h3 id="gap">7.2 Why the gap to dedicated models</h3>
+  <p>The gap is large and consistent across test families (Table&nbsp;5). In our judgement the causes are, roughly by weight:</p>
+  <ol>
+    <li><strong>Reading the frozen encoder without its language model.</strong> The encoder carries much more than our reader extracts: read by Gemma&nbsp;4&nbsp;E2B's language model, it reports 10.1% WER on FLEURS Hindi&nbsp;<span class="cite">[<a href="#ref-gemmateam2026gemma4">8</a>]</span>, whereas Vesper-IndicEAR reaches 40.8% WER with the language given on 84 FLEURS Hindi test clips (<a class="xref" href="#vesper">Appendix B</a>; the text normalisation differs, so the comparison is indicative only). Its states are also less linearly decodable than those of an ASR-trained CTC encoder: the best linear probe trails Parakeet's by 11 CER points on English (<a class="xref" href="#probe">§6.1</a>). Six rank-128 adapters and CTC heads recover part of this; a deeper or autoregressive reader, or adapting the upper encoder layers, are the natural next steps.</li>
+    <li><strong>Training data.</strong> About 8,400 hours of audio were processed, much of it seen more than once, whereas SraVaani was pre-trained on 31,255 hours of unlabelled Vaani audio, aligned with images, and fine-tuned on 31,263 hours of labelled speech from 24 datasets&nbsp;<span class="cite">[<a href="#ref-pulikodan2026sravaani">36</a>]</span>, and IndicConformer on the IndicVoices collection and other corpora&nbsp;<span class="cite">[<a href="#ref-javed2024indicvoices">10</a>]</span>.</li>
+    <li><strong>Speaker-disjoint Kathbath.</strong> Our training saw few Kathbath speakers (<a class="xref" href="#training">§4</a>); dedicated models typically train on Kathbath's training speakers, and its test-known split shares them by design. Kathbath is nevertheless where the gap is widest, so this explains only part of it.</li>
+    <li><strong>Tokenisation.</strong> Marathi averages about 3.4 Devanagari pieces per word, against 1.4 for Hindi, because the Devanagari tokenizer was trained in the pilot on Hindi text only and kept for the warm start.</li>
+  </ol>
+  <p>MUCS is the exception: it is code-switched lecture and tutorial speech on which all systems score poorly. Our training on code-mixed IndicVoices and Vaani rows may help there, but we have not isolated the cause.</p>
+
+  <h3>7.3 A scoring artefact we nearly reported</h3>
+  <p>An early comparison of the pilot model scored strict CER and showed it ahead of IndicConformer on Vaani and MUCS. Almost all of that lead came from IndicConformer writing English words in native script while our references write them in Latin; over the same ten languages, IndicConformer's IndicVoices and Vaani errors are 16.4 and 24.9 under strict CER against 7.7 and 10.9 under sn-CER. Script-normalised scoring removed the lead.</p>
+  <div class="note"><p>Comparisons between Indic recognisers trained with different conventions for English words should report a script-normalised metric beside strict CER or WER.</p></div>
+
+  <h3>7.4 Training dynamics and cost</h3>
+  <p>Each run was monitored on its own speaker-disjoint development set with unconstrained decoding (not FLEURS). The pilot's development CER fell from 22.9 to 16.2 over 7,423 steps. The full run added eight languages and seven scripts and reached a macro development CER of 25.1 at step 13,000, most of the gain coming in its first 4,000 steps (Figure&nbsp;10). Most lost time came from the input pipeline, not the model: before per-stream read-ahead and parallel decoding, the GPU was about 15% busy; afterwards 93–99% (<a class="xref" href="#engineering">§8.4</a>).</p>
+  <div class="tbl" id="tab-compute">
+    <div class="cap"><b>Table 7.</b> Compute for the two training stages.</div>
+    <div class="tscroll"><table class="fit">
+      <thead><tr><th></th><th>Pilot</th><th>Full run</th></tr></thead>
+      <tbody>
+        <tr><td>GPU</td><td>A100 80&nbsp;GB</td><td>RTX PRO 6000, 96&nbsp;GB</td></tr>
+        <tr><td>Training time</td><td>≈4.3 GPU-h</td><td>≈6 GPU-h (6.9&nbsp;h wall)</td></tr>
+        <tr><td>Compute units (Colab)</td><td>≈55</td><td>≈67 (incl. prep, eval)</td></tr>
+        <tr><td>Audio per GPU-hour</td><td>≈620&nbsp;h</td><td>≈1,390&nbsp;h</td></tr>
+        <tr><td>Peak GPU memory</td><td>≈76&nbsp;GB</td><td>≈95&nbsp;GiB</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <p>The whole project used about 55 Colab compute units for the pilot and about 67 for the full run including data preparation, restarts and evaluation (Table&nbsp;7); per hour of audio processed, the RTX PRO 6000 was about 40% cheaper than the A100 once the pipeline kept it busy.</p>
+</section>
+
+<section id="recipe">
+  <h2 class="sec"><span class="n">8</span>Training recipe</h2>
+  <p>This section is the practical companion to <a class="xref" href="#training">§4</a>: how to rerun the two stages with the released framework, every setting both stages used, what the run looked like, and the problems that cost time. The full guide, with the code layout, is <a href="https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/training-recipe.md">docs/training-recipe.md</a> in the repository; each run's exact command and per-step logs are in its run records.</p>
+
+  <h3>8.1 Reproducing the run</h3>
+  <p>All commands run from the repository root. A run's exact command is saved as <code>results/runs/&lt;run&gt;/command.sh</code>; rerunning it resumes. On a GPU machine the stages are setup → prep → train → eval → report, each queued with <code>launch.sh</code> and marked done or failed on disk.</p>
+<pre><code><span class="c"># on a workstation: upload the finished pilot run (weights, configs, tokenizer) as the warm-start source</span>
+bash scripts/push_init.sh SESSION ~/path/to/pilot/v4+lid /content/full/init/v4+lid
+
+<span class="c"># on the GPU machine (HF_TOKEN in the environment, or a saved Hugging Face login)</span>
+ROOT=/content/full INIT_FROM=/content/full/init/v4+lid \
+TRAIN_EXTRA="--new-script-bias -2 --cache-gb 100 --readahead 64" \
+  bash scripts/full_warm.sh            <span class="c"># queues every unfinished stage; rerun to resume</span>
+bash scripts/status.sh                 <span class="c"># progress; logs in $ROOT/logs/full_warm-&lt;stage&gt;.log</span></code></pre>
+  <p><code>SMOKE=1</code> runs the same chain on a CPU in about 20&nbsp;s with a tiny tower and synthetic shards. The train stage runs the following (the last two flags were added mid-run, see <a class="xref" href="#steering">§8.3</a>):</p>
+<pre><code>python -m indicear.ablate --root /content/full train --lower live --variants v4+lid \
+  --init-from /content/full/init/v4+lid --train-hours 8000 --packing 0.75 --buffer-seconds 10800 \
+  --peak-lr 6e-4 --final-lr 5e-5 --warmup-steps 300 --new-lr-mult 3 --inter-weight 0.15 \
+  --lid-frame-weight 0.2 \
+  --augment reverb=0.3,reverb_pointnoise=0.175,noise=0.2,babble=0.15,speed=0.125,tel8k=0.05 \
+  --new-script-bias -2 --cache-gb 100 \
+  --zero-streams kathbath/ml,kathbath/or,kathbath/ur,kathbath/gu \
+  --stream-scale indicvoices/hi=2.24,vaani/hi=2.24</code></pre>
+  <p>Its prep stage keeps the pilot's four tokenizers and trains the seven new ones:</p>
+<pre><code>--mixture full_warm --stream --tok-from /content/full/init/v4+lid/tok --tok-keep deva,latn,taml,knda</code></pre>
+  <p>Evaluation, baselines, export and decoding:</p>
+<pre><code>bash scripts/full_warm.sh --stage eval           <span class="c"># every eval set, ctc and ctc_constrained</span>
+bash scripts/full_warm.sh --stage report         <span class="c"># results/eval_summary.md</span>
+bash scripts/baselines.sh --systems indicconformer-ctc --max-per-lang 300 --robust-conditions ""
+
+bash scripts/sync_runs.sh --keep-all SESSION /content/full/runs/v4+lid LOCAL_DIR   <span class="c"># sha256-verified pulls</span>
+python -m indicear.export --run LOCAL_DIR --tok LOCAL_DIR/tok --out PKG --with-encoder
+python -m indicear.export --verify PKG
+python -m indicear.transcribe --model PKG talk.wav
+python -m indicear.decoding eval --model PKG --manifests ROOT/manifests --per-lang 300 \
+  --out OUT/auto --baseline-out OUT/unconstrained --hint-out OUT/hinted</code></pre>
+
+  <h4>Resuming</h4>
+  <ul>
+    <li>A run resumes from its newest checkpoint only when its <strong>config hash</strong> matches; <code>--force-new-run</code> starts over.</li>
+    <li>The hash covers the variant, trainer settings, mixture name and file sha256, seed, buffer size, augmentation and the warm-start source. Editing the mixture file therefore blocks a resume.</li>
+    <li>Host settings (<code>--device</code>, <code>--splits</code>, <code>--precision</code>, <code>--stream-workers</code>, <code>--readahead</code>) and the data-steering flags <code>--zero-streams</code> and <code>--stream-scale</code> are not hashed, so they can change on resume; they are logged and kept in <code>command.sh</code>.</li>
+    <li>The stream state (each stream's epoch, shard and row; the shuffle buffer; every RNG) is in the checkpoint, so a resumed run sees the same rows without repeats or gaps.</li>
+  </ul>
+
+  <h3 id="hyper">8.2 Settings for both stages</h3>
+  <div class="tbl" id="tab-hyper">
+    <div class="cap"><b>Table 8.</b> Training settings of the two stages. Batches are dynamic frame budgets at 25 encoder frames per second of audio.</div>
+    <div class="tscroll"><table class="text">
+      <thead><tr><th></th><th>Pilot (<code>pilot-v4lid</code>)</th><th>Full run (<code>full_warm</code>)</th></tr></thead>
+      <tbody>
+        <tr><td>Languages</td><td>hi, ta, kn, en</td><td>11 Indic + en</td></tr>
+        <tr><td>Initialisation</td><td>frozen encoder, new heads</td><td>pilot final (step 7,423)</td></tr>
+        <tr><td>Batch</td><td>67,045 frames (≈45 min padded audio)</td><td>71,676 frames (≈48 min), 2 micro-batches from step ≈350</td></tr>
+        <tr><td>Packing (real/padded frames)</td><td>0.48</td><td>0.784</td></tr>
+        <tr><td>Steps / audio processed</td><td>7,423 / 2,664&nbsp;h</td><td>13,394 / 8,356&nbsp;h</td></tr>
+        <tr><td>Learning rate</td><td>1.83×10<sup>−3</sup>, 300 warm-up, cosine to 5%</td><td>6×10<sup>−4</sup>, 300 warm-up, cosine to 5×10<sup>−5</sup></td></tr>
+        <tr><td>New output rows</td><td>–</td><td>learning rate ×3, bias −2</td></tr>
+        <tr><td>Loss weights (phon., utt. LID, frame LID)</td><td>0.3, 0.1, 0.1</td><td>0.15, 0.1, 0.2</td></tr>
+        <tr><td>Optimiser</td><td colspan="2">AdamW, weight decay 0.001, gradient clip 1.0, seed 0; non-finite gradient norm skips the step (full run)</td></tr>
+        <tr><td>Precision</td><td colspan="2">bfloat16 autocast (a 21-step resume on an Apple GPU used float16 with gradient scaling)</td></tr>
+        <tr><td>Augmentation weights (50% of rows clean)</td><td>noise .25, babble .20, reverb .175, reverb + point noise .175, speed .15, 8&nbsp;kHz .05</td><td>reverb .30, reverb + point noise .175, noise .20, babble .15, speed .125, 8&nbsp;kHz .05</td></tr>
+        <tr><td>Augmentation detail</td><td colspan="2">SNR 5–20&nbsp;dB; RT60 0.3–0.9&nbsp;s, 128 synthetic RIRs; speed 0.9/1.1; GSM/Opus/AMR on 15% of clips; on the GPU, seeded per row</td></tr>
+        <tr><td>Hidden-state masking</td><td colspan="2">2 time masks per 100 frames (width ≤10), 2 feature masks (width ≤64) on layer-6 states</td></tr>
+        <tr><td>Checkpoints</td><td colspan="2">every 500 steps or 10 minutes; development evaluation every 1,000 steps</td></tr>
+        <tr><td>Hardware</td><td>A100-SXM4 80&nbsp;GB</td><td>RTX PRO 6000 Blackwell Server Edition, 96&nbsp;GB, 48 vCPU</td></tr>
+        <tr><td>Software</td><td colspan="2">CPython 3.14 free-threaded, PyTorch 2.14.1 (CUDA 13.0), transformers 5.20.2</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <h3 id="steering">8.3 What the run looked like</h3>
+  <figure id="fig-curves">
+    <div class="plate scroll-min"><img src="figures/training-curves.svg" alt="Six panels of training curves for the pilot and the full run: CTC training loss falling steadily, macro development CER falling with most of the full-run gain in the first 4,000 steps, and learning-rate schedules with warm-up and cosine decay. Dotted lines mark two mid-run data changes." loading="lazy"></div>
+    <figcaption><b>Figure 10.</b> Training curves. (a, b) CTC training loss (thin: per 25-step log; thick: moving average). (c, d) Macro development CER every 1,000 steps; the pilot's development set covers four languages and the full run's twelve, so the two are not comparable. (e, f) Learning rate. Dotted lines mark the two mid-run data changes of the full run.</figcaption>
+  </figure>
+  <figure id="fig-mixture">
+    <div class="plate scroll-min"><img src="figures/data-mixture.svg" alt="Two charts of the full-run mixture: pinned share of drawn rows per language, smaller for Hindi, Tamil and Kannada, and planned hours per language split by source." loading="lazy"></div>
+    <figcaption><b>Figure 11.</b> Full-run mixture. (a) Pinned share of drawn rows per language; Hindi, Tamil and Kannada have a smaller share because the pilot already trained them. (b) Planned hours per language and source, before speaker exclusion.</figcaption>
+  </figure>
+  <p>Two data-steering changes were applied during the full run without changing its configuration, so it resumed rather than restarted: from step 1,079 the Kathbath Malayalam, Odia, Urdu and Gujarati streams were no longer drawn (after speaker exclusion, Malayalam would have been repeated about 310 times), and from step 3,427 Hindi's share was raised from 4.5% to about 7.5%, equal to Urdu's (<a class="xref" href="#hindi-urdu">§7.1</a>).</p>
+
+  <h3 id="engineering">8.4 Engineering record</h3>
+  <p>Every problem that cost time or compute is listed in Table&nbsp;9, and Figure&nbsp;12 shows the effect on throughput. Most would recur on a new run.</p>
+  <figure id="fig-throughput">
+    <div class="plate scroll-min"><img src="figures/throughput-gpu.svg" alt="Two time series for the full run: throughput in encoder frames per second rising from about 13,000 to 35,000 once the input-pipeline fixes landed, and GPU utilisation rising to 93 to 99 percent, with grey bands for stops and resumes." loading="lazy"></div>
+    <figcaption><b>Figure 12.</b> (a) Full-run throughput in encoder frames per second, which rose from about 13,000 to 35,000 once the input-pipeline fixes landed. (b) GPU utilisation (2-minute mean); grey bands are stops for code deployment and resumes.</figcaption>
+  </figure>
+  <div class="tbl" id="tab-engineering">
+    <div class="cap"><b>Table 9.</b> Problems met during training, with cause and fix.</div>
+    <div class="tscroll"><table class="text dense">
+      <thead><tr><th>When</th><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead>
+      <tbody>
+        <tr><td>Pilot</td><td>cuFFT out of memory in GPU augmentation</td><td>band-limiting by large FFTs</td><td>power-of-two FIR convolution; retry on cuFFT memory errors</td></tr>
+        <tr><td>Pilot</td><td>compute balance ran out; machine and disk lost</td><td>billing lapse</td><td>checkpoints were already synced; the tokenizer was not, and was rebuilt and verified; the sync now includes it</td></tr>
+        <tr><td>Pilot</td><td>model reported ahead of IndicConformer</td><td>strict CER counted native-script English as errors</td><td>script-normalised CER (<a class="xref" href="#metric">§5</a>)</td></tr>
+        <tr><td>Full, prep</td><td>load average 620 on 48 vCPUs</td><td>each ffmpeg call spawned 66 threads</td><td>one thread per ffmpeg call</td></tr>
+        <tr><td>Full, prep</td><td>a killed preparation stage was marked done</td><td>graceful SIGTERM exits with status 0</td><td>a stage is done only if its report is newer than its start</td></tr>
+        <tr><td>Full, prep</td><td>text pass took about 2&nbsp;h</td><td>one serial pass over every stream</td><td>parallel text pass, sampled shards for the tokenizer: 13 min</td></tr>
+        <tr><td>Full, step 0</td><td>loss stuck at about 29.7</td><td>new-script bias −40; Adam moves a bias by about the learning rate per step</td><td>bias −2</td></tr>
+        <tr><td>Full, step 0</td><td>GPU idle</td><td>one thread read rows for all 53 streams at ≈266× real time, ≈740× needed</td><td>per-stream read-ahead threads</td></tr>
+        <tr><td>Full, steps 0–99</td><td>GPU about 15% busy</td><td>each batch decoded on one thread</td><td>rows decoded and augmented in parallel</td></tr>
+        <tr><td>Full, step 99</td><td>resume took 4.5 min</td><td>streams restored one by one</td><td>parallel restore, eager read-ahead</td></tr>
+        <tr><td>Full, steps 99–1,079</td><td>GPU 60–90% busy; Hub rate-limit errors</td><td>speaker exclusion left Kathbath Malayalam with 6% of its rows; the stream looped and re-downloaded shards</td><td>stop drawing those streams; a stream that accepts no row in a full pass stops</td></tr>
+        <tr><td>Full, step 3,000</td><td>Hindi development CER 24.8→44.5</td><td>Urdu drew 7.5% of rows, Hindi 4.5%</td><td>decode rule (c); Hindi rebalanced from step 3,427</td></tr>
+        <tr><td>Full, any step</td><td>risk of a non-finite step in bfloat16</td><td>no guard without gradient scaling</td><td>a non-finite gradient norm skips the step</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  <div class="note"><p>The main lesson is to load-test a streaming loader on the target machine, with every stream and the real speaker exclusion, before a long run.</p></div>
+</section>
+
+<section id="limitations">
+  <h2 class="sec"><span class="n">9</span>Limitations and responsible use</h2>
+  <ul>
+    <li>Vesper-IndicEAR has several times the error of dedicated Indic recognisers and is not suitable for production transcription, captions with legal or medical weight, or any decision about a person.</li>
+    <li>Automatic LID labels much of the Urdu speech as Hindi, so it is written in Devanagari unless the language is given.</li>
+    <li>Reverberant and far-field audio degrade it sharply.</li>
+    <li>The decode-time script rules are chosen once per utterance, so they hurt when a clip switches language between sentences: on synthetic Hindi+English sentence pairs they raise CER from 16.7 to 30.8. Switching into English within a sentence is not affected.</li>
+    <li>Its training data comes from a few collections of read, prompted and extempore speech, so other domains, accents and recording conditions will be worse than the numbers here.</li>
+    <li>Output has no punctuation, casing or inverse text normalisation, and word times are approximate (40&nbsp;ms frames, no forced alignment).</li>
+    <li>Accuracy varies widely by language and likely by dialect, gender and recording conditions, which we did not measure.</li>
+    <li>Our comparison uses 300 clips per language per set and the baselines' public checkpoints at pinned revisions; the baselines may have trained on some of the test sources, while Vesper-IndicEAR never saw their speakers.</li>
+    <li>The encoder is used under its licence (Apache-2.0); Google's model card asks that deployments follow the Gemma Prohibited Use Policy.</li>
+  </ul>
+</section>
+
+<section id="conclusion">
+  <h2 class="sec"><span class="n">10</span>Conclusion and release</h2>
+  <p>The audio encoder of a multimodal embedding model, left frozen and read without the language model it was built to feed, supports a working multilingual recogniser for 11 Indian languages and English with 11.8M trained parameters, a single script-factored output and language identification that reports without routing. It does not come close to dedicated Indic recognisers: its error is three to seven times theirs on speaker-disjoint test sets.</p>
+  <p>The same encoder read by Gemma&nbsp;4's language model does far better on Hindi, and its layers are less linearly decodable than an ASR-trained CTC encoder's, so the limit lies mainly in how much a small reader on frozen states can extract rather than in what the encoder holds. For an application that already runs such an embedding model, the result is a cheap multilingual transcription and language-ID capability from one shared encoder. For competitive accuracy, the next steps are a stronger reader on the same encoder or adaptation of its upper layers, measured at matched data.</p>
+  <h4>Release</h4>
+  <dl class="terms">
+    <dt>Model</dt><dd>Frozen tower, trained weights, tokenizers and a checksummed manifest: <a href="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR">huggingface.co/rahulsharmavishwakarma/vesper-indicEAR</a></dd>
+    <dt>Code</dt><dd>Training framework, recipe and run records: <a href="https://github.com/rahulsharmavishwakarma/indicear">github.com/rahulsharmavishwakarma/indicear</a></dd>
+    <dt>Benchmark</dt><dd>Every system's per-clip output: <a href="https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench">huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench</a></dd>
+  </dl>
+  <p>All are Apache-2.0, with dataset attributions in the repositories. To try the model:</p>
+<pre><code>pip install indicear
+indicear-transcribe --model rahulsharmavishwakarma/vesper-indicEAR talk.wav
+indicear-transcribe --model rahulsharmavishwakarma/vesper-indicEAR --json call.m4a   <span class="c"># words, times, language, spans</span></code></pre>
+  <h4>Acknowledgements</h4>
+  <p>We thank Google for releasing EmbeddingGemma&nbsp;2 under an open licence; AI4Bharat for IndicVoices, Kathbath, IndicContextEval, Svarah and IndicConformer; ARTPARK and IISc for Vaani and SraVaani; and the creators of LibriSpeech, The People's Speech, VoxPopuli, FLEURS and MUCS&nbsp;2021.</p>
+</section>
+
+<section id="perlang">
+  <h2 class="sec"><span class="n">A</span>Per-language results</h2>
+  <p>Table&nbsp;10 gives every (set, language) pair behind Table&nbsp;5. A: Vesper-IndicEAR automatic; G: language given; IC: IndicConformer 600M (language given); SV: SraVaani-1.0 (no Urdu). Best per row in bold; 300 clips per language per set.</p>
+  <div class="tbl" id="tab-perlang"><div class="cap"><b>Table 10.</b> Per-language held-out sn-CER (%).</div><div style="display:grid;gap:1.4rem"><div class="tscroll"><table class="dense"><thead><tr class="grp"><th></th><th colspan="4">Kathbath clean</th><th colspan="4">Kathbath clean, known</th><th colspan="4">Kathbath noisy</th><th colspan="4">IndicVoices</th></tr><tr><th>Language</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th></tr></thead><tbody><tr><td>Hindi</td><td class="r">16.9</td><td class="r">16.6</td><td class="r">2.5</td><td class="r"><b>2.2</b></td><td class="r">16.9</td><td class="r">16.7</td><td class="r">2.4</td><td class="r"><b>2.2</b></td><td class="r">21.4</td><td class="r">20.6</td><td class="r">3.3</td><td class="r"><b>3.2</b></td><td class="r">18.4</td><td class="r">17.0</td><td class="r">4.9</td><td class="r"><b>4.7</b></td></tr><tr><td>Bengali</td><td class="r">16.2</td><td class="r">16.2</td><td class="r">2.2</td><td class="r"><b>1.9</b></td><td class="r">19.9</td><td class="r">19.7</td><td class="r">2.2</td><td class="r"><b>2.0</b></td><td class="r">20.1</td><td class="r">20.0</td><td class="r"><b>3.0</b></td><td class="r">3.1</td><td class="r">19.2</td><td class="r">18.9</td><td class="r"><b>3.4</b></td><td class="r">3.5</td></tr><tr><td>Telugu</td><td class="r">18.5</td><td class="r">18.5</td><td class="r">3.7</td><td class="r"><b>3.5</b></td><td class="r">17.6</td><td class="r">17.6</td><td class="r">3.8</td><td class="r"><b>3.6</b></td><td class="r">23.8</td><td class="r">23.8</td><td class="r"><b>4.4</b></td><td class="r">4.6</td><td class="r">33.8</td><td class="r">33.5</td><td class="r"><b>10.7</b></td><td class="r">11.3</td></tr><tr><td>Malayalam</td><td class="r">28.4</td><td class="r">28.4</td><td class="r">3.6</td><td class="r"><b>3.2</b></td><td class="r">29.4</td><td class="r">29.4</td><td class="r">3.2</td><td class="r"><b>2.8</b></td><td class="r">31.0</td><td class="r">30.8</td><td class="r">3.6</td><td class="r"><b>3.4</b></td><td class="r">29.1</td><td class="r">29.0</td><td class="r">10.2</td><td class="r"><b>9.6</b></td></tr><tr><td>Marathi</td><td class="r">17.7</td><td class="r">17.7</td><td class="r">4.3</td><td class="r"><b>4.0</b></td><td class="r">17.0</td><td class="r">17.0</td><td class="r">4.8</td><td class="r"><b>4.5</b></td><td class="r">19.7</td><td class="r">19.4</td><td class="r"><b>4.2</b></td><td class="r">4.3</td><td class="r">27.7</td><td class="r">27.3</td><td class="r">6.9</td><td class="r"><b>6.2</b></td></tr><tr><td>Gujarati</td><td class="r">32.2</td><td class="r">31.9</td><td class="r"><b>3.2</b></td><td class="r"><b>3.2</b></td><td class="r">28.0</td><td class="r">27.9</td><td class="r">2.9</td><td class="r"><b>2.8</b></td><td class="r">36.1</td><td class="r">35.5</td><td class="r"><b>4.7</b></td><td class="r">5.3</td><td class="r">22.1</td><td class="r">21.8</td><td class="r"><b>6.4</b></td><td class="r">7.3</td></tr><tr><td>Punjabi</td><td class="r">19.6</td><td class="r">18.9</td><td class="r"><b>3.7</b></td><td class="r"><b>3.7</b></td><td class="r">17.8</td><td class="r">17.3</td><td class="r"><b>3.5</b></td><td class="r"><b>3.5</b></td><td class="r">24.4</td><td class="r">23.8</td><td class="r"><b>5.3</b></td><td class="r">5.9</td><td class="r">16.3</td><td class="r">16.2</td><td class="r">5.5</td><td class="r"><b>5.3</b></td></tr><tr><td>Odia</td><td class="r">25.3</td><td class="r">25.3</td><td class="r">3.6</td><td class="r"><b>3.5</b></td><td class="r">25.2</td><td class="r">25.2</td><td class="r"><b>3.6</b></td><td class="r"><b>3.6</b></td><td class="r">30.0</td><td class="r">30.0</td><td class="r"><b>4.4</b></td><td class="r">4.5</td><td class="r">28.5</td><td class="r">28.1</td><td class="r">9.7</td><td class="r"><b>9.0</b></td></tr><tr><td>Urdu</td><td class="r">53.9</td><td class="r">32.5</td><td class="r"><b>2.6</b></td><td class="r">–</td><td class="r">57.0</td><td class="r">34.4</td><td class="r"><b>2.6</b></td><td class="r">–</td><td class="r">68.0</td><td class="r">41.8</td><td class="r"><b>2.4</b></td><td class="r">–</td><td class="r">27.0</td><td class="r">20.4</td><td class="r"><b>2.7</b></td><td class="r">–</td></tr><tr><td>Tamil</td><td class="r">17.3</td><td class="r">17.2</td><td class="r">4.2</td><td class="r"><b>3.8</b></td><td class="r">16.2</td><td class="r">16.1</td><td class="r">3.8</td><td class="r"><b>3.3</b></td><td class="r">18.6</td><td class="r">18.4</td><td class="r">4.5</td><td class="r"><b>4.1</b></td><td class="r">24.1</td><td class="r">24.1</td><td class="r">9.1</td><td class="r"><b>8.3</b></td></tr><tr><td>Kannada</td><td class="r">18.0</td><td class="r">17.8</td><td class="r"><b>2.7</b></td><td class="r">2.9</td><td class="r">17.1</td><td class="r">17.1</td><td class="r">3.0</td><td class="r"><b>2.9</b></td><td class="r">24.3</td><td class="r">24.1</td><td class="r"><b>5.2</b></td><td class="r"><b>5.2</b></td><td class="r">23.8</td><td class="r">23.7</td><td class="r">10.4</td><td class="r"><b>9.1</b></td></tr></tbody></table></div><div class="tscroll"><table class="dense"><thead><tr class="grp"><th></th><th colspan="4">Vaani</th><th colspan="4">IndicContext</th><th colspan="4">MUCS</th></tr><tr><th>Language</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th><th class="r">A</th><th class="r">G</th><th class="r">IC</th><th class="r">SV</th></tr></thead><tbody><tr><td>Hindi</td><td class="r">14.7</td><td class="r">14.2</td><td class="r">6.4</td><td class="r"><b>3.8</b></td><td class="r">28.7</td><td class="r">23.9</td><td class="r"><b>5.9</b></td><td class="r">6.2</td><td class="r">52.9</td><td class="r">52.0</td><td class="r"><b>51.7</b></td><td class="r">51.9</td></tr><tr><td>Bengali</td><td class="r">22.9</td><td class="r">22.5</td><td class="r">8.7</td><td class="r"><b>4.5</b></td><td class="r">25.5</td><td class="r">25.4</td><td class="r">3.4</td><td class="r"><b>3.2</b></td><td class="r">34.2</td><td class="r"><b>33.9</b></td><td class="r">46.4</td><td class="r">46.8</td></tr><tr><td>Telugu</td><td class="r">21.2</td><td class="r">21.2</td><td class="r">7.3</td><td class="r"><b>6.6</b></td><td class="r">26.6</td><td class="r">26.6</td><td class="r"><b>3.6</b></td><td class="r"><b>3.6</b></td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Malayalam</td><td class="r">28.7</td><td class="r">28.7</td><td class="r">9.9</td><td class="r"><b>9.0</b></td><td class="r">38.1</td><td class="r">38.1</td><td class="r"><b>7.1</b></td><td class="r">7.5</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Marathi</td><td class="r">26.7</td><td class="r">26.5</td><td class="r">11.1</td><td class="r"><b>9.4</b></td><td class="r">38.4</td><td class="r">38.0</td><td class="r"><b>5.2</b></td><td class="r">5.5</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Gujarati</td><td class="r">17.8</td><td class="r">17.7</td><td class="r">5.1</td><td class="r"><b>3.5</b></td><td class="r">34.7</td><td class="r">34.3</td><td class="r">2.4</td><td class="r"><b>2.2</b></td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Punjabi</td><td class="r">29.8</td><td class="r">24.1</td><td class="r"><b>8.9</b></td><td class="r">10.6</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Odia</td><td class="r">24.5</td><td class="r">24.5</td><td class="r">12.9</td><td class="r"><b>10.3</b></td><td class="r">34.7</td><td class="r">34.7</td><td class="r"><b>9.0</b></td><td class="r">9.2</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Urdu</td><td class="r">74.2</td><td class="r">50.2</td><td class="r"><b>19.2</b></td><td class="r">–</td><td class="r">47.2</td><td class="r">43.4</td><td class="r"><b>13.1</b></td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Tamil</td><td class="r">28.0</td><td class="r">27.9</td><td class="r">18.4</td><td class="r"><b>8.3</b></td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr><tr><td>Kannada</td><td class="r">33.3</td><td class="r">33.3</td><td class="r">20.2</td><td class="r"><b>18.7</b></td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td><td class="r">–</td></tr></tbody></table></div></div></div>
+</section>
+
+<section id="vesper">
+  <h2 class="sec"><span class="n">B</span>Additional comparison on public benchmark clips</h2>
+  <p>The public Vesper ASR benchmark&nbsp;<span class="cite">[<a href="#ref-hf_vesperasrbench">66</a>]</span> records transcripts of other speech models on public clips. We decoded the clips it shares with our languages and scored every system with one scorer (same normalisation, strict script), each on the clips all systems cover (Figure&nbsp;13). On FLEURS Hindi, Nemotron&nbsp;3.5 ASR&nbsp;<span class="cite">[<a href="#ref-hf_nemotronasr">67</a>]</span> and Qwen3-ASR&nbsp;<span class="cite">[<a href="#ref-qwen3asr">68</a>]</span> are two to three times more accurate; on English, Vesper-IndicEAR is far behind every model in the benchmark; on 16 MUCS Hindi–English clips it has the lowest CER, consistent with <a class="xref" href="#heldout">§6.4</a>, but 16 clips are too few to rank systems.</p>
+  <figure id="fig-vesper">
+    <div class="plate scroll-min"><img src="figures/vesper-benchmark.svg" alt="Bar charts of CER on Vesper ASR benchmark clips shared with the model's languages, with Vesper-IndicEAR in orange and other models in grey: behind on FLEURS Hindi and English, lowest on 16 MUCS Hindi-English clips." loading="lazy"></div>
+    <figcaption><b>Figure 13.</b> CER on the Vesper ASR benchmark clips shared with our languages. Vesper-IndicEAR in orange; other models in grey, each in the runtime and precision recorded by the benchmark.</figcaption>
+  </figure>
+</section>
+
+<section id="cite">
+  <h2 class="sec">Cite this report</h2>
+<pre id="bibtex"><code>@misc{sharma2026vesperindicear,
+  title        = {Vesper-IndicEAR: Multilingual Indic Speech Recognition
+                  from a Frozen Embedding-Model Audio Encoder},
+  author       = {Sharma, Rahul},
+  year         = {2026},
+  month        = nov,
+  howpublished = {Technical report},
+  url          = {https://rahulsharmavishwakarma.github.io/indicear/}
+}</code></pre>
+</section>
+
+<section id="references">
+  <h2 class="sec">References</h2>
+  <ol class="refs">
+<li id="ref-radford2023whisper">Alec Radford, Jong&nbsp;Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and Ilya Sutskever.
+Robust Speech Recognition via Large-Scale Weak Supervision.
+In <em>Proceedings of the 40th International Conference on Machine Learning (ICML)</em>, volume 202 of Proceedings of Machine Learning Research, 28492–28518. PMLR, 2023.
+<a href="https://arxiv.org/abs/2212.04356">arXiv:2212.04356</a>.</li>
+<li id="ref-rekesh2023fastconformer">Dima Rekesh, Nithin&nbsp;Rao Koluguri, Samuel Kriman, Somshubra Majumdar, Vahid Noroozi, He&nbsp;Huang, Oleksii Hrinchuk, Krishna Puvvada, and others.
+Fast Conformer with Linearly Scalable Attention for Efficient Speech Recognition.
+In <em>Proc. IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)</em>, 1–8. 2023.
+<a href="https://arxiv.org/abs/2305.05084">arXiv:2305.05084</a>, <a href="https://doi.org/10.1109/ASRU57964.2023.10389701">doi:10.1109/ASRU57964.2023.10389701</a>.</li>
+<li id="ref-baevski2020wav2vec2">Alexei Baevski, Yuhao Zhou, Abdelrahman Mohamed, and Michael Auli.
+wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations.
+In <em>Advances in Neural Information Processing Systems</em>, volume&nbsp;33, 12449–12460. 2020.
+<a href="https://arxiv.org/abs/2006.11477">arXiv:2006.11477</a>.</li>
+<li id="ref-hsu2021hubert">Wei-Ning Hsu, Benjamin Bolte, Yao-Hung&nbsp;Hubert Tsai, Kushal Lakhotia, Ruslan Salakhutdinov, and Abdelrahman Mohamed.
+HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units.
+<em>IEEE/ACM Transactions on Audio, Speech, and Language Processing</em>, 29:3451–3460, 2021.
+<a href="https://arxiv.org/abs/2106.07447">arXiv:2106.07447</a>, <a href="https://doi.org/10.1109/TASLP.2021.3122291">doi:10.1109/TASLP.2021.3122291</a>.</li>
+<li id="ref-chung2021w2vbert">Yu-An Chung, Yu&nbsp;Zhang, Wei Han, Chung-Cheng Chiu, James Qin, Ruoming Pang, and Yonghui Wu.
+w2v-BERT: Combining Contrastive Learning and Masked Language Modeling for Self-Supervised Speech Pre-Training.
+In <em>Proc. IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)</em>, 244–250. 2021.
+<a href="https://arxiv.org/abs/2108.06209">arXiv:2108.06209</a>, <a href="https://doi.org/10.1109/ASRU51503.2021.9688253">doi:10.1109/ASRU51503.2021.9688253</a>.</li>
+<li id="ref-vera2026embeddinggemma2">Henrique Schechter Vera, Sahil Dua, Jovan Andonov, Sara Smoot, Sebastian Russo, Ivan Llanos, Max Matveev, Jae&nbsp;Hyeon Yoo, and others.
+EmbeddingGemma 2: Unified and Efficient Multimodal Representations.
+2026.
+<a href="https://arxiv.org/abs/2610.37364">arXiv:2610.37364</a>.</li>
+<li id="ref-google2026embeddinggemma2hf">Google.
+EmbeddingGemma 2 (google/embeddinggemma-2).
+<a href="https://huggingface.co/google/embeddinggemma-2">https://huggingface.co/google/embeddinggemma-2</a>, 2026.
+Hugging Face model; revision 914f7f89142e33e77833254d9c9b90c3cef7303b.</li>
+<li id="ref-gemmateam2026gemma4">Gemma Team.
+Gemma 4 Technical Report.
+2026.
+<a href="https://arxiv.org/abs/2607.02770">arXiv:2607.02770</a>.</li>
+<li id="ref-zhang2023usm">Yu&nbsp;Zhang, Wei Han, James Qin, Yongqiang Wang, Ankur Bapna, Zhehuai Chen, Nanxin Chen, Bo&nbsp;Li, and others.
+Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages.
+2023.
+<a href="https://arxiv.org/abs/2303.01037">arXiv:2303.01037</a>.</li>
+<li id="ref-javed2024indicvoices">Tahir Javed, Janki Nawale, Eldho George, Sakshi Joshi, Kaushal Bhogale, Deovrat Mehendale, Ishvinder Sethi, Aparna Ananthanarayanan, and others.
+IndicVoices: Towards Building an Inclusive Multilingual Speech Dataset for Indian Languages.
+In <em>Findings of the Association for Computational Linguistics: ACL 2024</em>, 10740–10782. Association for Computational Linguistics, 2024.
+<a href="https://arxiv.org/abs/2403.01926">arXiv:2403.01926</a>, <a href="https://doi.org/10.18653/v1/2024.findings-acl.639">doi:10.18653/v1/2024.findings-acl.639</a>.</li>
+<li id="ref-javed2023indicsuperb">Tahir Javed, Kaushal Bhogale, Abhigyan Raman, Pratyush Kumar, Anoop Kunchukuttan, and Mitesh&nbsp;M. Khapra.
+IndicSUPERB: A Speech Processing Universal Performance Benchmark for Indian Languages.
+In <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, volume&nbsp;37, 12942–12950. 2023.
+Introduces the Kathbath dataset.
+<a href="https://arxiv.org/abs/2208.11761">arXiv:2208.11761</a>, <a href="https://doi.org/10.1609/aaai.v37i11.26521">doi:10.1609/aaai.v37i11.26521</a>.</li>
+<li id="ref-pulikodan2026vaani">Sujith Pulikodan, Abhayjeet Singh, Agneedh Basu, Nihar Desai, Pavan&nbsp;Kumar J, Pranav&nbsp;D Bhat, Raghu Dharmaraju, Ritika Gupta, and others.
+VAANI: Capturing the Language Landscape for an Inclusive Digital India.
+2026.
+<a href="https://arxiv.org/abs/2603.28714">arXiv:2603.28714</a>.</li>
+<li id="ref-yang2021superb">Shu-Wen Yang, Po-Han Chi, Yung-Sung Chuang, Cheng-I&nbsp;Jeff Lai, Kushal Lakhotia, Yist&nbsp;Y. Lin, Andy&nbsp;T. Liu, Jiatong Shi, and others.
+SUPERB: Speech Processing Universal PERformance Benchmark.
+In <em>Proc. Interspeech</em>, 1194–1198. 2021.
+<a href="https://arxiv.org/abs/2105.01051">arXiv:2105.01051</a>, <a href="https://doi.org/10.21437/Interspeech.2021-1775">doi:10.21437/Interspeech.2021-1775</a>.</li>
+<li id="ref-houlsby2019adapters">Neil Houlsby, Andrei Giurgiu, Stanislaw Jastrzebski, Bruna Morrone, Quentin de&nbsp;Laroussilhe, Andrea Gesmundo, Mona Attariyan, and Sylvain Gelly.
+Parameter-Efficient Transfer Learning for NLP.
+In <em>Proceedings of the 36th International Conference on Machine Learning (ICML)</em>, volume&nbsp;97 of Proceedings of Machine Learning Research, 2790–2799. PMLR, 2019.
+<a href="https://arxiv.org/abs/1902.00751">arXiv:1902.00751</a>.</li>
+<li id="ref-hu2022lora">Edward&nbsp;J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu&nbsp;Wang, and Weizhu Chen.
+LoRA: Low-Rank Adaptation of Large Language Models.
+In <em>International Conference on Learning Representations (ICLR)</em>. 2022.
+<a href="https://arxiv.org/abs/2106.09685">arXiv:2106.09685</a>.</li>
+<li id="ref-kannan2019multilingual">Anjuli Kannan, Arindrima Datta, Tara&nbsp;N. Sainath, Eugene Weinstein, Bhuvana Ramabhadran, Yonghui Wu, Ankur Bapna, Zhifeng Chen, and Seungji Lee.
+Large-Scale Multilingual Speech Recognition with a Streaming End-to-End Model.
+In <em>Proc. Interspeech</em>, 2130–2134. 2019.
+<a href="https://arxiv.org/abs/1909.05330">arXiv:1909.05330</a>, <a href="https://doi.org/10.21437/Interspeech.2019-2858">doi:10.21437/Interspeech.2019-2858</a>.</li>
+<li id="ref-epochdiscovery2026ephindiasr">epoch-discovery.
+ep-hindi-asr.
+<a href="https://huggingface.co/epoch-discovery/ep-hindi-asr">https://huggingface.co/epoch-discovery/ep-hindi-asr</a>, 2026.
+Hugging Face model; accessed 2026-10-29 at revision 1d0c3db1f9c3c3f03d9faf031a15d682785ab761.</li>
+<li id="ref-whiletruelearn2026dulu">whiletruelearn.
+dulu-malayalam-ctc-778h.
+<a href="https://huggingface.co/whiletruelearn/dulu-malayalam-ctc-778h">https://huggingface.co/whiletruelearn/dulu-malayalam-ctc-778h</a>, 2026.
+Hugging Face model; accessed 2026-10-29 at revision d6a6b905c24696ec82f187ba89142f15355c6522.</li>
+<li id="ref-nehsan2026kothagemma">nehsan.
+KothaGemma.
+<a href="https://huggingface.co/nehsan/KothaGemma">https://huggingface.co/nehsan/KothaGemma</a>, 2026.
+Hugging Face model; accessed 2026-10-29 at revision c0e92637ce8ee78bf831610482bf4cebe500f5dc.</li>
+<li id="ref-abdelkhalik2026frozengemma4">Amr Abdelkhalik.
+How Far Can the Gemma 4 Speech Encoder Go Without Changing Its Weights? Saudi and Gulf Arabic Speech Recognition with a Frozen and an Adapter-Augmented Encoder.
+2026.
+<a href="https://arxiv.org/abs/2610.28673">arXiv:2610.28673</a>.</li>
+<li id="ref-toshniwal2018multilingual">Shubham Toshniwal, Tara&nbsp;N. Sainath, Ron&nbsp;J. Weiss, Bo&nbsp;Li, Pedro Moreno, Eugene Weinstein, and Kanishka Rao.
+Multilingual Speech Recognition with a Single End-to-End Model.
+In <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 4904–4908. 2018.
+<a href="https://arxiv.org/abs/1711.01694">arXiv:1711.01694</a>, <a href="https://doi.org/10.1109/ICASSP.2018.8461972">doi:10.1109/ICASSP.2018.8461972</a>.</li>
+<li id="ref-tian2022lae">Jinchuan Tian, Jianwei Yu, Chunlei Zhang, Yuexian Zou, and Dong Yu.
+LAE: Language-Aware Encoder for Monolingual and Multilingual ASR.
+In <em>Proc. Interspeech</em>, 3178–3182. 2022.
+<a href="https://arxiv.org/abs/2206.02093">arXiv:2206.02093</a>, <a href="https://doi.org/10.21437/Interspeech.2022-923">doi:10.21437/Interspeech.2022-923</a>.</li>
+<li id="ref-yan2022condfactorization">Brian Yan, Chunlei Zhang, Meng Yu, Shi-Xiong Zhang, Siddharth Dalmia, Dan Berrebbi, Chao Weng, Shinji Watanabe, and Dong Yu.
+Joint Modeling of Code-Switched and Monolingual ASR via Conditional Factorization.
+In <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 6412–6416. 2022.
+<a href="https://arxiv.org/abs/2111.15016">arXiv:2111.15016</a>, <a href="https://doi.org/10.1109/ICASSP43922.2022.9747537">doi:10.1109/ICASSP43922.2022.9747537</a>.</li>
+<li id="ref-chen2023auxctc">William Chen, Brian Yan, Jiatong Shi, Yifan Peng, Soumi Maiti, and Shinji Watanabe.
+Improving Massively Multilingual ASR with Auxiliary CTC Objectives.
+In <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 1–5. 2023.
+<a href="https://arxiv.org/abs/2302.12829">arXiv:2302.12829</a>, <a href="https://doi.org/10.1109/ICASSP49357.2023.10095326">doi:10.1109/ICASSP49357.2023.10095326</a>.</li>
+<li id="ref-punjabi2020bilingual">Surabhi Punjabi, Harish Arsikere, Zeynab Raeesy, Chander Chandak, Nikhil Bhave, Ankish Bansal, Markus Müller, Sergio Murillo, and others.
+Streaming End-to-End Bilingual ASR Systems with Joint Language Identification.
+2020.
+<a href="https://arxiv.org/abs/2007.03900">arXiv:2007.03900</a>.</li>
+<li id="ref-kumar2021dualscript">Mari&nbsp;Ganesh Kumar, Jom Kuriakose, Anand Thyagachandran, Arun&nbsp;Kumar A, Ashish Seth, Lodagala V. S. V.&nbsp;Durga Prasad, Saish Jaiswal, Anusha Prakash, and Hema&nbsp;A. Murthy.
+Dual Script E2E Framework for Multilingual and Code-Switching ASR.
+In <em>Proc. Interspeech</em>, 2441–2445. 2021.
+<a href="https://arxiv.org/abs/2106.01400">arXiv:2106.01400</a>, <a href="https://doi.org/10.21437/Interspeech.2021-978">doi:10.21437/Interspeech.2021-978</a>.</li>
+<li id="ref-arunkumar2022dude">Arunkumar A, Mudit Batra, and Umesh S.
+DuDe: Dual-Decoder Multilingual ASR for Indian Languages using Common Label Set.
+2022.
+<a href="https://arxiv.org/abs/2210.16739">arXiv:2210.16739</a>.</li>
+<li id="ref-gangwar2025madasr">Arjun Gangwar, Kaousheik Jayakumar, and S.&nbsp;Umesh.
+Building Robust and Scalable Multilingual ASR for Indian Languages.
+2025.
+IIT Madras SPRING Lab system description for the ASRU MADASR 2.0 challenge.
+<a href="https://arxiv.org/abs/2511.15418">arXiv:2511.15418</a>.</li>
+<li id="ref-dhawan2020targetset">Kunal Dhawan, Ganji Sreeram, Kumar Priyadarshi, and Rohit Sinha.
+Investigating Target Set Reduction for End-to-End Speech Recognition of Hindi-English Code-Switching Data.
+In <em>Proc. National Conference on Communications (NCC)</em>, 1–5. 2020.
+<a href="https://arxiv.org/abs/1907.08293">arXiv:1907.08293</a>, <a href="https://doi.org/10.1109/NCC48643.2020.9056083">doi:10.1109/NCC48643.2020.9056083</a>.</li>
+<li id="ref-ai4bharat2025indicconformer">AI4Bharat.
+IndicConformer 600M Multilingual (ai4bharat/indic-conformer-600m-multilingual).
+<a href="https://huggingface.co/ai4bharat/indic-conformer-600m-multilingual">https://huggingface.co/ai4bharat/indic-conformer-600m-multilingual</a>, 2025.
+Hugging Face model; revision 2a77d305038dfc502fd9464e7d028b90381976cb.</li>
+<li id="ref-goodman2001classes">Joshua Goodman.
+Classes for Fast Maximum Entropy Training.
+In <em>Proc. IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)</em>, volume&nbsp;1, 561–564. 2001.
+<a href="https://doi.org/10.1109/ICASSP.2001.940893">doi:10.1109/ICASSP.2001.940893</a>.</li>
+<li id="ref-lee2021interctc">Jaesong Lee and Shinji Watanabe.
+Intermediate Loss Regularization for CTC-Based Speech Recognition.
+In <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 6224–6228. 2021.
+<a href="https://arxiv.org/abs/2102.03216">arXiv:2102.03216</a>, <a href="https://doi.org/10.1109/ICASSP39728.2021.9414594">doi:10.1109/ICASSP39728.2021.9414594</a>.</li>
+<li id="ref-nozaki2021selfcond">Jumon Nozaki and Tatsuya Komatsu.
+Relaxing the Conditional Independence Assumption of CTC-Based ASR by Conditioning on Intermediate Predictions.
+In <em>Proc. Interspeech</em>, 3735–3739. 2021.
+<a href="https://arxiv.org/abs/2104.02724">arXiv:2104.02724</a>, <a href="https://doi.org/10.21437/Interspeech.2021-911">doi:10.21437/Interspeech.2021-911</a>.</li>
+<li id="ref-liu2024lupet">Wei Liu, Jingyong Hou, Dong Yang, Muyong Cao, and Tan Lee.
+LUPET: Incorporating Hierarchical Information Path into Multilingual ASR.
+In <em>Proc. Interspeech</em>, 3979–3983. 2024.
+<a href="https://arxiv.org/abs/2401.03689">arXiv:2401.03689</a>, <a href="https://doi.org/10.21437/Interspeech.2024-1714">doi:10.21437/Interspeech.2024-1714</a>.</li>
+<li id="ref-javed2022indicwav2vec">Tahir Javed, Sumanth Doddapaneni, Abhigyan Raman, Kaushal&nbsp;Santosh Bhogale, Gowtham Ramesh, Anoop Kunchukuttan, Pratyush Kumar, and Mitesh&nbsp;M. Khapra.
+Towards Building ASR Systems for the Next Billion Users.
+In <em>Proceedings of the AAAI Conference on Artificial Intelligence</em>, volume&nbsp;36, 10813–10821. 2022.
+<a href="https://arxiv.org/abs/2111.03945">arXiv:2111.03945</a>, <a href="https://doi.org/10.1609/aaai.v36i10.21327">doi:10.1609/aaai.v36i10.21327</a>.</li>
+<li id="ref-pulikodan2026sravaani">Sujith Pulikodan, Agneedh Basu, Pavan&nbsp;Kumar J, Pranav&nbsp;D Bhat, Suryansh Shukla, Nihar Desai, and Prasanta&nbsp;Kumar Ghosh.
+SraVaani 1.0: Scaling Inclusive Speech Recognition for Indic Languages.
+2026.
+<a href="https://arxiv.org/abs/2608.08235">arXiv:2608.08235</a>.</li>
+<li id="ref-xu2023tdt">Hainan Xu, Fei Jia, Somshubra Majumdar, He&nbsp;Huang, Shinji Watanabe, and Boris Ginsburg.
+Efficient Sequence Transduction by Jointly Predicting Tokens and Durations.
+In <em>Proceedings of the 40th International Conference on Machine Learning (ICML)</em>, volume 202 of Proceedings of Machine Learning Research, 38462–38484. PMLR, 2023.
+<a href="https://arxiv.org/abs/2304.06795">arXiv:2304.06795</a>.</li>
+<li id="ref-pattnayak2026snwer">Priyaranjan Pattnayak.
+SN-WER: Script-Normalized WER for Multi-Script Indic ASR Evaluation.
+In <em>Proceedings of the 1st Workshop on Multilinguality in the Era of Large Language Models (MeLLM 2026)</em>, 249–256. Association for Computational Linguistics, 2026.
+<a href="https://arxiv.org/abs/2606.02548">arXiv:2606.02548</a>, <a href="https://doi.org/10.18653/v1/2026.mellm-1.24">doi:10.18653/v1/2026.mellm-1.24</a>.</li>
+<li id="ref-joshi2026indiccontexteval">Sakshi Joshi, Dhruv&nbsp;Subhash Rathi, Sanskar Singh, Eldho&nbsp;Ittan George, R.&nbsp;J. Hari, Kaushal Bhogale, and Mitesh&nbsp;M. Khapra.
+IndicContextEval: A Benchmark for Evaluating Context Utilisation in Audio Large Language Models Across 8 Indic Languages.
+2026.
+Accepted at Interspeech 2026 according to the arXiv comment.
+<a href="https://arxiv.org/abs/2606.19157">arXiv:2606.19157</a>.</li>
+<li id="ref-gulati2020conformer">Anmol Gulati, James Qin, Chung-Cheng Chiu, Niki Parmar, Yu&nbsp;Zhang, Jiahui Yu, Wei Han, Shibo Wang, and others.
+Conformer: Convolution-augmented Transformer for Speech Recognition.
+In <em>Proc. Interspeech</em>, 5036–5040. 2020.
+<a href="https://arxiv.org/abs/2005.08100">arXiv:2005.08100</a>, <a href="https://doi.org/10.21437/Interspeech.2020-3015">doi:10.21437/Interspeech.2020-3015</a>.</li>
+<li id="ref-iso15919">International Organization for Standardization.
+ISO 15919:2001 Information and Documentation – Transliteration of Devanagari and Related Indic Scripts into Latin Characters.
+<a href="https://www.iso.org/standard/28333.html">https://www.iso.org/standard/28333.html</a>, 2001.
+International Standard, edition 1, ISO/TC 46.</li>
+<li id="ref-iscii1991">Bureau of Indian Standards.
+IS 13194:1991 Indian Script Code for Information Interchange – ISCII.
+Bureau of Indian Standards, New Delhi, 1991.
+Indian Standard, December 1991.</li>
+<li id="ref-kudo2018sentencepiece">Taku Kudo and John Richardson.
+SentencePiece: A Simple and Language Independent Subword Tokenizer and Detokenizer for Neural Text Processing.
+In <em>Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing: System Demonstrations</em>, 66–71. Association for Computational Linguistics, 2018.
+<a href="https://arxiv.org/abs/1808.06226">arXiv:1808.06226</a>, <a href="https://doi.org/10.18653/v1/D18-2012">doi:10.18653/v1/D18-2012</a>.</li>
+<li id="ref-kudo2018subword">Taku Kudo.
+Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates.
+In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</em>, 66–75. Association for Computational Linguistics, 2018.
+<a href="https://arxiv.org/abs/1804.10959">arXiv:1804.10959</a>, <a href="https://doi.org/10.18653/v1/P18-1007">doi:10.18653/v1/P18-1007</a>.</li>
+<li id="ref-graves2006ctc">Alex Graves, Santiago Fernández, Faustino Gomez, and Jürgen Schmidhuber.
+Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks.
+In <em>Proceedings of the 23rd International Conference on Machine Learning (ICML)</em>, 369–376. ACM, 2006.
+<a href="https://doi.org/10.1145/1143844.1143891">doi:10.1145/1143844.1143891</a>.</li>
+<li id="ref-okabe2018attentive">Koji Okabe, Takafumi Koshinaka, and Koichi Shinoda.
+Attentive Statistics Pooling for Deep Speaker Embedding.
+In <em>Proc. Interspeech</em>, 2252–2256. 2018.
+<a href="https://arxiv.org/abs/1803.10963">arXiv:1803.10963</a>, <a href="https://doi.org/10.21437/Interspeech.2018-993">doi:10.21437/Interspeech.2018-993</a>.</li>
+<li id="ref-szegedy2016labelsmoothing">Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jon Shlens, and Zbigniew Wojna.
+Rethinking the Inception Architecture for Computer Vision.
+In <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2818–2826. 2016.
+<a href="https://arxiv.org/abs/1512.00567">arXiv:1512.00567</a>, <a href="https://doi.org/10.1109/CVPR.2016.308">doi:10.1109/CVPR.2016.308</a>.</li>
+<li id="ref-park2019specaugment">Daniel&nbsp;S. Park, William Chan, Yu&nbsp;Zhang, Chung-Cheng Chiu, Barret Zoph, Ekin&nbsp;D. Cubuk, and Quoc&nbsp;V. Le.
+SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition.
+In <em>Proc. Interspeech</em>, 2613–2617. 2019.
+<a href="https://arxiv.org/abs/1904.08779">arXiv:1904.08779</a>, <a href="https://doi.org/10.21437/Interspeech.2019-2680">doi:10.21437/Interspeech.2019-2680</a>.</li>
+<li id="ref-hannun2014prefix">Awni&nbsp;Y. Hannun, Andrew&nbsp;L. Maas, Daniel Jurafsky, and Andrew&nbsp;Y. Ng.
+First-Pass Large Vocabulary Continuous Speech Recognition using Bi-Directional Recurrent DNNs.
+2014.
+<a href="https://arxiv.org/abs/1408.2873">arXiv:1408.2873</a>.</li>
+<li id="ref-diwan2021mucs">Anuj Diwan, Rakesh Vaideeswaran, Sanket Shah, Ankita Singh, Srinivasa Raghavan, Shreya Khare, Vinit Unni, Saurabh Vyas, and others.
+MUCS 2021: Multilingual and Code-Switching ASR Challenges for Low Resource Indian Languages.
+In <em>Proc. Interspeech</em>, 2446–2450. 2021.
+<a href="https://arxiv.org/abs/2104.00235">arXiv:2104.00235</a>, <a href="https://doi.org/10.21437/Interspeech.2021-1339">doi:10.21437/Interspeech.2021-1339</a>.</li>
+<li id="ref-panayotov2015librispeech">Vassil Panayotov, Guoguo Chen, Daniel Povey, and Sanjeev Khudanpur.
+Librispeech: An ASR Corpus Based on Public Domain Audio Books.
+In <em>Proc. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)</em>, 5206–5210. 2015.
+<a href="https://doi.org/10.1109/ICASSP.2015.7178964">doi:10.1109/ICASSP.2015.7178964</a>.</li>
+<li id="ref-galvez2021peoplesspeech">Daniel Galvez, Greg Diamos, Juan Torres, Keith Achorn, Juan Cerón, Anjali Gopi, David Kanter, Max Lam, Mark Mazumder, and Vijay Janapa Reddi.
+The People's Speech: A Large-Scale Diverse English Speech Recognition Dataset for Commercial Usage.
+In <em>Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks</em>, volume&nbsp;1. 2021.
+<a href="https://arxiv.org/abs/2111.09344">arXiv:2111.09344</a>.</li>
+<li id="ref-wang2021voxpopuli">Changhan Wang, Morgane Rivière, Ann Lee, Anne Wu, Chaitanya Talnikar, Daniel Haziza, Mary Williamson, Juan Pino, and Emmanuel Dupoux.
+VoxPopuli: A Large-Scale Multilingual Speech Corpus for Representation Learning, Semi-Supervised Learning and Interpretation.
+In <em>Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)</em>, 993–1003. Association for Computational Linguistics, 2021.
+<a href="https://arxiv.org/abs/2101.00390">arXiv:2101.00390</a>, <a href="https://doi.org/10.18653/v1/2021.acl-long.80">doi:10.18653/v1/2021.acl-long.80</a>.</li>
+<li id="ref-arivazhagan2019massively">Naveen Arivazhagan, Ankur Bapna, Orhan Firat, Dmitry Lepikhin, Melvin Johnson, Maxim Krikun, Mia&nbsp;Xu Chen, Yuan Cao, and others.
+Massively Multilingual Neural Machine Translation in the Wild: Findings and Challenges.
+2019.
+<a href="https://arxiv.org/abs/1907.05019">arXiv:1907.05019</a>.</li>
+<li id="ref-loshchilov2019adamw">Ilya Loshchilov and Frank Hutter.
+Decoupled Weight Decay Regularization.
+In <em>International Conference on Learning Representations (ICLR)</em>. 2019.
+<a href="https://arxiv.org/abs/1711.05101">arXiv:1711.05101</a>.</li>
+<li id="ref-ko2015speedperturb">Tom Ko, Vijayaditya Peddinti, Daniel Povey, and Sanjeev Khudanpur.
+Audio Augmentation for Speech Recognition.
+In <em>Proc. Interspeech</em>, 3586–3589. 2015.
+<a href="https://doi.org/10.21437/Interspeech.2015-711">doi:10.21437/Interspeech.2015-711</a>.</li>
+<li id="ref-gross2023pep703">Sam Gross.
+PEP 703 – Making the Global Interpreter Lock Optional in CPython.
+<a href="https://peps.python.org/pep-0703/">https://peps.python.org/pep-0703/</a>, 2023.
+Python Enhancement Proposal, Standards Track; status Final.</li>
+<li id="ref-paszke2019pytorch">Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, and others.
+PyTorch: An Imperative Style, High-Performance Deep Learning Library.
+In <em>Advances in Neural Information Processing Systems</em>, volume&nbsp;32. 2019.
+<a href="https://arxiv.org/abs/1912.01703">arXiv:1912.01703</a>.</li>
+<li id="ref-wolf2020transformers">Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, and others.
+Transformers: State-of-the-Art Natural Language Processing.
+In <em>Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations</em>, 38–45. Association for Computational Linguistics, 2020.
+<a href="https://arxiv.org/abs/1910.03771">arXiv:1910.03771</a>, <a href="https://doi.org/10.18653/v1/2020.emnlp-demos.6">doi:10.18653/v1/2020.emnlp-demos.6</a>.</li>
+<li id="ref-javed2023svarah">Tahir Javed, Sakshi Joshi, Vignesh Nagarajan, Sai Sundaresan, Janki Nawale, Abhigyan Raman, Kaushal Bhogale, Pratyush Kumar, and Mitesh&nbsp;M. Khapra.
+Svarah: Evaluating English ASR Systems on Indian Accents.
+In <em>Proc. Interspeech</em>, 5087–5091. 2023.
+<a href="https://arxiv.org/abs/2305.15760">arXiv:2305.15760</a>, <a href="https://doi.org/10.21437/Interspeech.2023-2588">doi:10.21437/Interspeech.2023-2588</a>.</li>
+<li id="ref-conneau2023fleurs">Alexis Conneau, Min Ma, Simran Khanuja, Yu&nbsp;Zhang, Vera Axelrod, Siddharth Dalmia, Jason Riesa, Clara Rivera, and Ankur Bapna.
+FLEURS: Few-Shot Learning Evaluation of Universal Representations of Speech.
+In <em>Proc. IEEE Spoken Language Technology Workshop (SLT)</em>, 798–805. 2023.
+SLT 2022, held January 2023.
+<a href="https://arxiv.org/abs/2205.12446">arXiv:2205.12446</a>, <a href="https://doi.org/10.1109/SLT54892.2023.10023141">doi:10.1109/SLT54892.2023.10023141</a>.</li>
+<li id="ref-artpark2026sravaanihf">ARTPARK-IISc.
+SraVaani-1.0 (ARTPARK-IISc/SraVaani-1.0).
+<a href="https://huggingface.co/ARTPARK-IISc/SraVaani-1.0">https://huggingface.co/ARTPARK-IISc/SraVaani-1.0</a>, 2026.
+Hugging Face model; revision f5dd5358325a5208775b91dad98918e079ea2b27.</li>
+<li id="ref-hf_parakeetv3">NVIDIA.
+Parakeet TDT 0.6B v3 (nvidia/parakeet-tdt-0.6b-v3).
+<a href="https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3">https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3</a>, 2025.
+Hugging Face model; revision 541d1f99c6b0c3cd0b11a95167540bb8edefd82b.</li>
+<li id="ref-seamless2023seamless">Seamless Communication, Loïc Barrault, Yu-An Chung, Mariano&nbsp;Coria Meglioli, David Dale, Ning Dong, Mark Duppenthaler, Paul-Ambroise Duquenne, and others.
+Seamless: Multilingual Expressive and Streaming Speech Translation.
+2023.
+<a href="https://arxiv.org/abs/2312.05187">arXiv:2312.05187</a>.</li>
+<li id="ref-yao2025crctc">Zengwei Yao, Wei Kang, Xiaoyu Yang, Fangjun Kuang, Liyong Guo, Han Zhu, Zengrui Jin, Zhaoqing Li, Long Lin, and Daniel Povey.
+CR-CTC: Consistency Regularization on CTC for Improved Speech Recognition.
+In <em>International Conference on Learning Representations (ICLR)</em>. 2025.
+URL: <a href="https://openreview.net/forum?id=CIs9x2ZRgh">https://openreview.net/forum?id=CIs9x2ZRgh</a>, <a href="https://arxiv.org/abs/2410.05101">arXiv:2410.05101</a>.</li>
+<li id="ref-hf_vesperasrbench">Rahul Sharma.
+Vesper ASR Benchmark.
+Hugging Face dataset, <a href="https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-asr-benchmark">https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-asr-benchmark</a>, 2026.</li>
+<li id="ref-hf_nemotronasr">NVIDIA.
+Nemotron 3.5 ASR Streaming 0.6B (nvidia/nemotron-3.5-asr-streaming-0.6b).
+<a href="https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b">https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b</a>, 2026.
+Hugging Face model; accessed 2026-10-29 at revision ea30d66debe3740a08b573244286791d423d6b3e.</li>
+<li id="ref-qwen3asr">Xian Shi, Xiong Wang, Zhifang Guo, Yongqi Wang, Pei Zhang, Xinyu Zhang, Zishan Guo, Hongkun Hao, and others.
+Qwen3-ASR Technical Report.
+2026.
+<a href="https://arxiv.org/abs/2601.21337">arXiv:2601.21337</a>.</li>
+</ol>
+</section>
+
+  </article>
+</div>
+</main>
+
+<footer>
+  <div class="shell">
+    <span>© 2026 Rahul Sharma · Model, code and benchmark under Apache-2.0</span>
+    <span><a href="https://github.com/rahulsharmavishwakarma/indicear">IndicEAR on GitHub</a> · <a href="vesper-indicear.pdf">PDF</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
