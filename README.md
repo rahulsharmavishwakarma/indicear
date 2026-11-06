@@ -8,6 +8,7 @@
 Part of the Vesper project · research release v0.1</p>
 
 <p align="center">
+  <a href="https://rahulsharmavishwakarma.github.io/indicear/">Technical report</a> ·
   <a href="https://huggingface.co/rahulsharmavishwakarma/vesper-indicEAR">Model</a> ·
   <a href="https://huggingface.co/datasets/rahulsharmavishwakarma/vesper-indic-bench">Benchmark</a> ·
   <a href="https://github.com/rahulsharmavishwakarma/indicear/blob/main/docs/training-recipe.md">Training recipe</a> ·
@@ -15,6 +16,8 @@ Part of the Vesper project · research release v0.1</p>
 </p>
 
 IndicEAR turns the frozen audio encoder of an embedding model, EmbeddingGemma 2, into a speech recogniser. Its first model, **Vesper-IndicEAR**, transcribes 11 Indian languages and English, including code-switched speech, writes each word in its own script, and identifies the language. The encoder is never modified; only 11.8M parameters (45 MB) of adapters, CTC heads and language-ID heads are trained.
+
+The [technical report](https://rahulsharmavishwakarma.github.io/indicear/) ([PDF](https://rahulsharmavishwakarma.github.io/indicear/vesper-indicear.pdf)) covers the model, data, training recipe, evaluation, results and limitations in full.
 
 <p align="center"><img src="https://raw.githubusercontent.com/rahulsharmavishwakarma/indicear/main/docs/figures/fig01_architecture.png" width="100%"></p>
 
@@ -84,6 +87,22 @@ The framework streams training audio from the Hugging Face Hub (no corpus downlo
 - [Contributing](https://github.com/rahulsharmavishwakarma/indicear/blob/main/CONTRIBUTING.md) · [Security](https://github.com/rahulsharmavishwakarma/indicear/blob/main/SECURITY.md) · [Citation](https://github.com/rahulsharmavishwakarma/indicear/blob/main/CITATION.cff)
 
 The project was called Sangam until 25 October 2026; run logs and records under `results/` and the model package's `training/` files keep that name.
+
+## Citation
+
+If you use IndicEAR or Vesper-IndicEAR, please cite the [technical report](https://rahulsharmavishwakarma.github.io/indicear/):
+
+```bibtex
+@misc{sharma2026vesperindicear,
+  title        = {Vesper-IndicEAR: Multilingual Indic Speech Recognition
+                  from a Frozen Embedding-Model Audio Encoder},
+  author       = {Sharma, Rahul},
+  year         = {2026},
+  month        = nov,
+  howpublished = {Technical report},
+  url          = {https://rahulsharmavishwakarma.github.io/indicear/}
+}
+```
 
 ## Licence
 
